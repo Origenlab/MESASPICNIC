@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags Optimizados -->
+    <title>Nosotros | MESPIC - 30 Años de Experiencia en Renta de Mesas Picnic</title>
+    <meta name="description" content="Conoce MESPIC, empresa líder con más de 30 años de experiencia en renta de mesas picnic para eventos en México. Nuestra historia, misión, visión y valores.">
+    <meta name="keywords" content="MESPIC, nosotros, sobre nosotros, historia mesas picnic, empresa renta mesas picnic, 30 años experiencia, mesas picnic México">
+    <meta name="author" content="MESPIC - Renta de Mesas Picnic">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mesaspicnic.com/nosotros">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mesaspicnic.com/nosotros">
+    <meta property="og:title" content="Nosotros | MESPIC - 30 Años de Experiencia">
+    <meta property="og:description" content="Conoce la historia de MESPIC, empresa líder con más de 30 años en renta de mesas picnic para eventos en México.">
+    <meta property="og:image" content="https://mesaspicnic.com/images/og-nosotros.jpg">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="MESPIC - Renta de Mesas Picnic">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nosotros | MESPIC - 30 Años de Experiencia">
+    <meta name="twitter:description" content="Conoce la historia de MESPIC, empresa líder con más de 30 años en renta de mesas picnic.">
+    <meta name="twitter:image" content="https://mesaspicnic.com/images/twitter-nosotros.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
+    <meta name="theme-color" content="#2D5016">
+
+    <!-- Preconnect para optimización -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="css/components.css">
+
+    <!-- Schema.org - AboutPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "Sobre MESPIC",
+        "description": "Página sobre la empresa MESPIC, líder en renta de mesas picnic con más de 30 años de experiencia",
+        "url": "https://mesaspicnic.com/nosotros",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "MESPIC",
+            "foundingDate": "1994",
+            "description": "Empresa mexicana líder en renta de mesas picnic para eventos con más de 30 años de experiencia",
+            "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "minValue": 50,
+                "maxValue": 100
+            }
+        }
+    }
+    </script>
+
+    <!-- Schema.org - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://mesaspicnic.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Nosotros",
+                "item": "https://mesaspicnic.com/nosotros"
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        /* ============================================
+           CSS VARIABLES - DESIGN SYSTEM
+           ============================================ */
+        :root {
+            /* Colores principales */
+            --color-primary: #2D5016;
+            --color-primary-light: #4A7C23;
+            --color-primary-dark: #1E3610;
+            --color-secondary: #8B7355;
+            --color-accent: #D4A574;
+            --color-accent-light: #E8C9A8;
+
+            /* Neutros */
+            --color-white: #FFFFFF;
+            --color-off-white: #FAF8F5;
+            --color-cream: #F5F1EB;
+            --color-gray-100: #F7F7F7;
+            --color-gray-200: #E5E5E5;
+            --color-gray-300: #D4D4D4;
+            --color-gray-400: #A3A3A3;
+            --color-gray-500: #737373;
+            --color-gray-600: #525252;
+            --color-gray-700: #404040;
+            --color-gray-800: #262626;
+            --color-gray-900: #171717;
+            --color-black: #0A0A0A;
+
+            /* Semánticos */
+            --color-success: #22C55E;
+            --color-warning: #F59E0B;
+            --color-error: #EF4444;
+            --color-info: #3B82F6;
+
+            /* Gradientes */
+            --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            --gradient-hero: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 100%);
+
+            /* Tipografía */
+            --font-heading: 'Playfair Display', Georgia, serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+            /* Tamaños de fuente */
+            --text-xs: 0.75rem;
+            --text-sm: 0.875rem;
+            --text-base: 1rem;
+            --text-lg: 1.125rem;
+            --text-xl: 1.25rem;
+            --text-2xl: 1.5rem;
+            --text-3xl: 1.875rem;
+            --text-4xl: 2.25rem;
+            --text-5xl: 3rem;
+            --text-6xl: 3.75rem;
+            --text-7xl: 4.5rem;
+
+            /* Espaciado */
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --space-24: 6rem;
+            --space-32: 8rem;
+
+            /* Bordes */
+            --radius-sm: 0.25rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            --radius-2xl: 2rem;
+            --radius-full: 9999px;
+
+            /* Sombras */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+            /* Transiciones - deshabilitadas */
+            --transition-fast: 0ms;
+            --transition-base: 0ms;
+            --transition-slow: 0ms;
+
+            /* Z-index */
+            --z-dropdown: 100;
+            --z-sticky: 200;
+            --z-fixed: 300;
+            --z-modal-backdrop: 400;
+            --z-modal: 500;
+
+            /* Contenedor */
+            --container-max: 1280px;
+            --container-padding: 1.5rem;
+        }
+
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            line-height: 1.6;
+            color: var(--color-gray-800);
+            background-color: var(--color-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--color-gray-900);
+        }
+
+        /* ============================================
+           UTILITIES
+           ============================================ */
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .text-center { text-align: center; }
+        .text-primary { color: var(--color-primary); }
+        .text-accent { color: var(--color-accent); }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            padding: var(--space-4) var(--space-8);
+            font-size: var(--text-base);
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: var(--color-white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-primary-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: var(--color-white);
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: var(--color-white);
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+
+        .btn-lg {
+            padding: var(--space-5) var(--space-10);
+            font-size: var(--text-lg);
+        }
+
+        /* ============================================
+           HEADER & NAVIGATION
+           ============================================ */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: var(--z-fixed);
+            background: var(--color-white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-4) 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--color-primary);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            font-size: var(--text-xl);
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: var(--space-8);
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--color-gray-800);
+            position: relative;
+            padding: var(--space-2) 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-accent);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            color: var(--color-primary);
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: var(--space-3);
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: var(--space-2);
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--color-gray-800);
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            position: relative;
+            min-height: calc(100vh - 140px);
+            display: flex;
+            align-items: center;
+            background: var(--color-white);
+            padding: var(--space-12) 0;
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-16);
+            align-items: center;
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .hero-left {
+            text-align: left;
+        }
+
+        .hero-right {
+            padding: var(--space-8);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            background: var(--color-primary);
+            color: var(--color-white);
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: 600;
+            margin-bottom: var(--space-6);
+        }
+
+        .hero-badge i {
+            color: var(--color-accent);
+        }
+
+        .hero-title {
+            font-size: clamp(var(--text-4xl), 6vw, var(--text-6xl));
+            font-weight: 700;
+            color: var(--color-gray-900);
+            margin-bottom: var(--space-6);
+            line-height: 1.1;
+        }
+
+        .hero-title span {
+            color: var(--color-primary);
+        }
+
+        .hero-subtitle {
+            font-size: var(--text-lg);
+            color: var(--color-gray-600);
+            margin-bottom: var(--space-8);
+            line-height: 1.7;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-4);
+        }
+
+        .hero-intro-title {
+            font-size: var(--text-2xl);
+            color: var(--color-primary);
+            margin-bottom: var(--space-4);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .hero-intro-title i {
+            color: var(--color-accent);
+        }
+
+        .hero-intro-text {
+            font-size: var(--text-base);
+            color: var(--color-gray-700);
+            line-height: 1.8;
+            margin-bottom: var(--space-6);
+        }
+
+        .hero-intro-text:last-child {
+            margin-bottom: 0;
+        }
+
+        .hero-intro-highlight {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-3);
+            padding: var(--space-4);
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            margin-top: var(--space-6);
+        }
+
+        .hero-intro-highlight i {
+            color: var(--color-primary);
+            font-size: var(--text-xl);
+            margin-top: 2px;
+        }
+
+        .hero-intro-highlight p {
+            font-size: var(--text-sm);
+            color: var(--color-gray-600);
+            margin: 0;
+        }
+
+        .hero-intro-highlight strong {
+            color: var(--color-gray-800);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: var(--space-8);
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--color-primary);
+            opacity: 0.5;
+        }
+
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: var(--space-10);
+            }
+
+            .hero-left {
+                text-align: center;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .hero-right {
+                /* sin borde */
+            }
+        }
+
+        /* ============================================
+           BREADCRUMB
+           ============================================ */
+        .breadcrumb {
+            background: var(--color-white);
+            padding: var(--space-3) 0;
+            padding-top: calc(80px + var(--space-4));
+        }
+
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: var(--text-sm);
+        }
+
+        .breadcrumb-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            color: var(--color-gray-600);
+        }
+
+        .breadcrumb-item a:hover {
+            color: var(--color-primary);
+        }
+
+        .breadcrumb-item.active {
+            color: var(--color-primary);
+            font-weight: 500;
+        }
+
+        /* ============================================
+           SECTION COMMON STYLES
+           ============================================ */
+        .section {
+            padding: var(--space-24) 0;
+        }
+
+        .section--gray {
+            background: var(--color-gray-100);
+        }
+
+        .section--cream {
+            background: var(--color-cream);
+        }
+
+        .section--dark {
+            background: var(--color-gray-900);
+            color: var(--color-white);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--space-16);
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: var(--text-sm);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--color-primary);
+            margin-bottom: var(--space-4);
+        }
+
+        .section-title {
+            font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+            margin-bottom: var(--space-6);
+        }
+
+        .section-subtitle {
+            font-size: var(--text-lg);
+            color: var(--color-gray-600);
+        }
+
+        /* ============================================
+           ABOUT INTRO
+           ============================================ */
+        .about-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-16);
+            align-items: center;
+        }
+
+        .about-intro-image {
+            position: relative;
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .about-intro-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .about-intro-badge {
+            position: absolute;
+            bottom: var(--space-6);
+            left: var(--space-6);
+            background: var(--color-primary);
+            color: var(--color-white);
+            padding: var(--space-4) var(--space-6);
+            border-radius: var(--radius-xl);
+            text-align: center;
+        }
+
+        .about-intro-badge-number {
+            font-family: var(--font-heading);
+            font-size: var(--text-4xl);
+            font-weight: 700;
+            display: block;
+        }
+
+        .about-intro-badge-text {
+            font-size: var(--text-sm);
+            opacity: 0.9;
+        }
+
+        .about-intro-content h2 {
+            font-size: var(--text-4xl);
+            margin-bottom: var(--space-6);
+        }
+
+        .about-intro-content h2 span {
+            color: var(--color-primary);
+        }
+
+        .about-intro-text {
+            color: var(--color-gray-600);
+            line-height: 1.8;
+            margin-bottom: var(--space-6);
+        }
+
+        .about-intro-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4);
+            margin-top: var(--space-8);
+        }
+
+        .about-highlight-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .about-highlight-item i {
+            width: 40px;
+            height: 40px;
+            background: var(--color-cream);
+            color: var(--color-primary);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-highlight-item span {
+            font-weight: 500;
+            color: var(--color-gray-700);
+        }
+
+        /* ============================================
+           STATS SECTION
+           ============================================ */
+        .stats-section {
+            background: var(--gradient-primary);
+            padding: var(--space-16) 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-8);
+        }
+
+        .stat-item {
+            text-align: center;
+            color: var(--color-white);
+        }
+
+        .stat-icon {
+            font-size: var(--text-3xl);
+            color: var(--color-accent);
+            margin-bottom: var(--space-3);
+        }
+
+        .stat-number {
+            font-family: var(--font-heading);
+            font-size: var(--text-5xl);
+            font-weight: 700;
+            margin-bottom: var(--space-2);
+        }
+
+        .stat-label {
+            font-size: var(--text-base);
+            opacity: 0.9;
+        }
+
+        /* ============================================
+           MISSION VISION VALUES
+           ============================================ */
+        .mvv-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-8);
+        }
+
+        .mvv-card {
+            background: var(--color-white);
+            padding: var(--space-10);
+            border-radius: var(--radius-2xl);
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mvv-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .mvv-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--color-cream);
+            color: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-3xl);
+            margin: 0 auto var(--space-6);
+        }
+
+        .mvv-title {
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-4);
+            color: var(--color-primary);
+        }
+
+        .mvv-text {
+            color: var(--color-gray-600);
+            line-height: 1.8;
+        }
+
+        /* ============================================
+           TIMELINE / HISTORY
+           ============================================ */
+        .history-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+        }
+
+        .history-card {
+            background: var(--color-white);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .history-card-header {
+            background: var(--gradient-primary);
+            padding: var(--space-5);
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+        }
+
+        .history-year {
+            width: 60px;
+            height: 60px;
+            background: var(--color-white);
+            color: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: var(--text-lg);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .history-card-header h3 {
+            color: var(--color-white);
+            font-size: var(--text-lg);
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .history-card-body {
+            padding: var(--space-5);
+            flex-grow: 1;
+        }
+
+        .history-card-body p {
+            color: var(--color-gray-600);
+            font-size: var(--text-sm);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        @media (max-width: 968px) {
+            .history-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .history-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ============================================
+           VALUES GRID
+           ============================================ */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-6);
+        }
+
+        .value-card {
+            background: var(--color-white);
+            padding: var(--space-8);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+        }
+
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            color: var(--color-white);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-2xl);
+            margin: 0 auto var(--space-5);
+        }
+
+        .value-title {
+            font-size: var(--text-lg);
+            margin-bottom: var(--space-3);
+            color: var(--color-gray-800);
+        }
+
+        .value-text {
+            font-size: var(--text-sm);
+            color: var(--color-gray-600);
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           TEAM SECTION
+           ============================================ */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-8);
+        }
+
+        .team-card {
+            background: var(--color-white);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+        }
+
+        .team-image {
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-info {
+            padding: var(--space-6);
+        }
+
+        .team-name {
+            font-size: var(--text-xl);
+            margin-bottom: var(--space-1);
+        }
+
+        .team-role {
+            color: var(--color-primary);
+            font-weight: 500;
+            font-size: var(--text-sm);
+            margin-bottom: var(--space-4);
+        }
+
+        .team-bio {
+            font-size: var(--text-sm);
+            color: var(--color-gray-600);
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           CERTIFICATIONS
+           ============================================ */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-8);
+        }
+
+        .certification-card {
+            background: var(--color-white);
+            padding: var(--space-8);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            border: 2px solid var(--color-gray-200);
+        }
+
+        .certification-icon {
+            font-size: var(--text-4xl);
+            color: var(--color-primary);
+            margin-bottom: var(--space-4);
+        }
+
+        .certification-title {
+            font-size: var(--text-lg);
+            margin-bottom: var(--space-2);
+        }
+
+        .certification-desc {
+            font-size: var(--text-sm);
+            color: var(--color-gray-600);
+        }
+
+        /* ============================================
+           CTA SECTION
+           ============================================ */
+        .cta-section {
+            background: var(--gradient-primary);
+            padding: var(--space-20) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-size: var(--text-4xl);
+            color: var(--color-white);
+            margin-bottom: var(--space-4);
+        }
+
+        .cta-subtitle {
+            font-size: var(--text-lg);
+            color: rgba(255,255,255,0.9);
+            margin-bottom: var(--space-8);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-4);
+        }
+
+        .cta-buttons .btn-whatsapp {
+            background: #25D366;
+        }
+
+        .cta-buttons .btn-secondary {
+            background: transparent;
+            color: var(--color-white);
+            border-color: var(--color-white);
+        }
+
+        .cta-buttons .btn-secondary:hover {
+            background: var(--color-white);
+            color: var(--color-primary);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: var(--color-gray-900);
+            color: var(--color-gray-400);
+            padding: var(--space-16) 0 var(--space-8);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--space-12);
+            margin-bottom: var(--space-12);
+        }
+
+        .footer-brand p {
+            margin-top: var(--space-4);
+            line-height: 1.7;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: var(--space-3);
+            margin-top: var(--space-6);
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: var(--color-gray-800);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gray-400);
+        }
+
+        .footer-social a:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: var(--text-lg);
+            color: var(--color-white);
+            margin-bottom: var(--space-6);
+        }
+
+        .footer-links li {
+            margin-bottom: var(--space-3);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            margin-bottom: var(--space-4);
+        }
+
+        .footer-contact i {
+            color: var(--color-primary);
+        }
+
+        .footer-bottom {
+            padding-top: var(--space-8);
+            border-top: 1px solid var(--color-gray-800);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: var(--space-6);
+        }
+
+        .footer-legal a:hover {
+            color: var(--color-accent);
+        }
+
+        /* ============================================
+           WHATSAPP FLOAT BUTTON
+           ============================================ */
+        .whatsapp-float {
+            position: fixed;
+            bottom: var(--space-8);
+            right: var(--space-8);
+            z-index: var(--z-fixed);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .whatsapp-tooltip {
+            background: var(--color-white);
+            padding: var(--space-3) var(--space-5);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            font-size: var(--text-sm);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(10px);
+        }
+
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .whatsapp-btn {
+            width: 64px;
+            height: 64px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            font-size: var(--text-3xl);
+            box-shadow: var(--shadow-xl);
+            position: relative;
+        }
+
+        .whatsapp-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ff0000;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
+        @media (max-width: 1024px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .mvv-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .certifications-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 400px;
+                height: 100vh;
+                background: var(--color-white);
+                flex-direction: column;
+                justify-content: center;
+                gap: var(--space-6);
+                box-shadow: var(--shadow-2xl);
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .mobile-toggle {
+                display: flex;
+                z-index: 1000;
+            }
+
+            .about-intro {
+                grid-template-columns: 1fr;
+            }
+
+            .about-intro-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-6);
+            }
+
+            .stat-number {
+                font-size: var(--text-4xl);
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: var(--space-4);
+            }
+
+            .footer-legal {
+                flex-direction: column;
+                gap: var(--space-3);
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .whatsapp-float {
+                bottom: var(--space-4);
+                right: var(--space-4);
+            }
+
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ============================================
+         HEADER (Loaded via components.js)
+         ============================================ -->
+    <div id="header-placeholder"></div>
+
+    <!-- ============================================
+         BREADCRUMB
+         ============================================ -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                    <i class="fas fa-chevron-right" style="font-size: 10px; color: var(--color-gray-400);"></i>
+                </li>
+                <li class="breadcrumb-item active">Nosotros</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero">
+        <div class="hero-container">
+            <!-- Columna Izquierda -->
+            <div class="hero-left">
+                <span class="hero-badge">
+                    <i class="fas fa-award"></i>
+                    Más de 30 Años de Experiencia
+                </span>
+
+                <h1 class="hero-title">
+                    Conoce <span>MESPIC</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Somos la empresa líder en renta de mesas picnic en México. Tres décadas
+                    creando experiencias memorables para miles de familias y empresas.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="contacto.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-envelope"></i> Contáctanos
+                    </a>
+                    <a href="index.html#productos" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-th-large"></i> Ver Catálogo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna Derecha -->
+            <div class="hero-right">
+                <h3 class="hero-intro-title">
+                    <i class="fas fa-leaf"></i>
+                    Nuestra Historia
+                </h3>
+                <p class="hero-intro-text">
+                    Desde <strong>1994</strong>, MESPIC ha sido sinónimo de calidad y confianza en el mercado mexicano. Lo que comenzó como un pequeño negocio familiar con apenas 10 mesas, hoy se ha convertido en la <strong>empresa líder en renta de mesas picnic</strong> con presencia en todo el país.
+                </p>
+                <p class="hero-intro-text">
+                    Nuestra pasión por crear espacios perfectos para eventos al aire libre nos ha llevado a innovar constantemente, ofreciendo no solo <strong>mesas picnic de la más alta calidad</strong>, sino un servicio integral que incluye asesoría personalizada y entrega puntual.
+                </p>
+                <div class="hero-intro-highlight">
+                    <i class="fas fa-check-circle"></i>
+                    <p><strong>+50,000 eventos exitosos</strong> nos respaldan. Confía en la experiencia de más de 30 años en el mercado.</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#about" class="hero-scroll">
+            <i class="fas fa-chevron-down fa-2x"></i>
+        </a>
+    </section>
+
+    <!-- ============================================
+         ABOUT INTRO
+         ============================================ -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-intro">
+                <div class="about-intro-image">
+                    <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Equipo MESPIC - 30 años de experiencia en renta de mesas picnic">
+                    <div class="about-intro-badge">
+                        <span class="about-intro-badge-number">30+</span>
+                        <span class="about-intro-badge-text">Años de Experiencia</span>
+                    </div>
+                </div>
+
+                <div class="about-intro-content">
+                    <span class="section-label">Nuestra Historia</span>
+                    <h2>Una Tradición de <span>Excelencia</span> en México</h2>
+                    <p class="about-intro-text">
+                        Desde <strong>1994</strong>, MESPIC ha sido sinónimo de calidad y confianza en el mercado mexicano de renta de mesas picnic. Lo que comenzó como un pequeño negocio familiar con apenas 10 mesas, hoy se ha convertido en la empresa líder del sector con presencia en todo el país.
+                    </p>
+                    <p class="about-intro-text">
+                        Nuestra pasión por crear espacios perfectos para eventos al aire libre nos ha llevado a innovar constantemente, ofreciendo no solo mesas picnic de la más alta calidad, sino un servicio integral que incluye asesoría personalizada, entrega puntual y soporte durante tu evento.
+                    </p>
+                    <p class="about-intro-text">
+                        Hoy, con más de <strong>30 años de experiencia</strong> y más de <strong>50,000 eventos exitosos</strong>, seguimos comprometidos con nuestra misión original: hacer de cada celebración un momento inolvidable.
+                    </p>
+
+                    <div class="about-intro-highlights">
+                        <div class="about-highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Empresa 100% Mexicana</span>
+                        </div>
+                        <div class="about-highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Cobertura Nacional</span>
+                        </div>
+                        <div class="about-highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Atención Personalizada</span>
+                        </div>
+                        <div class="about-highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Calidad Garantizada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         STATS SECTION
+         ============================================ -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-glass-cheers"></i></div>
+                    <div class="stat-number">50,000+</div>
+                    <div class="stat-label">Eventos Realizados</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-chair"></i></div>
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Mesas en Inventario</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-smile"></i></div>
+                    <div class="stat-number">99%</div>
+                    <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         MISSION, VISION, VALUES
+         ============================================ -->
+    <section class="section section--cream">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Nuestra Esencia</span>
+                <h2 class="section-title">Misión, Visión y Propósito</h2>
+                <p class="section-subtitle">
+                    Los pilares que guían cada decisión y nos impulsan a ser mejores cada día
+                </p>
+            </div>
+
+            <div class="mvv-grid">
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="mvv-title">Misión</h3>
+                    <p class="mvv-text">
+                        Proporcionar soluciones integrales de mobiliario para eventos al aire libre,
+                        ofreciendo mesas picnic de la más alta calidad con un servicio excepcional
+                        que supere las expectativas de nuestros clientes, contribuyendo a crear
+                        momentos memorables en cada celebración.
+                    </p>
+                </div>
+
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="mvv-title">Visión</h3>
+                    <p class="mvv-text">
+                        Ser reconocidos como la empresa líder en renta de mesas picnic en
+                        Latinoamérica, expandiendo nuestra presencia mientras mantenemos los
+                        más altos estándares de calidad, innovación y servicio al cliente que
+                        nos han distinguido durante más de tres décadas.
+                    </p>
+                </div>
+
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="mvv-title">Propósito</h3>
+                    <p class="mvv-text">
+                        Creemos que los mejores momentos de la vida se viven al aire libre,
+                        rodeados de familia y amigos. Nuestro propósito es facilitar esos
+                        encuentros, proporcionando el escenario perfecto para que cada
+                        celebración se convierta en un recuerdo eterno.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         HISTORY TIMELINE
+         ============================================ -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Nuestra Trayectoria</span>
+                <h2 class="section-title">30 Años de Historia</h2>
+                <p class="section-subtitle">
+                    Un recorrido por los momentos más importantes de MESPIC
+                </p>
+            </div>
+
+            <div class="history-grid">
+                <div class="history-card">
+                    <div class="history-card-header">
+                        <div class="history-year">1994</div>
+                        <h3>El Inicio del Sueño</h3>
+                    </div>
+                    <div class="history-card-body">
+                        <p>Fundación de MESPIC en la Ciudad de México con apenas 10 mesas picnic y un sueño: revolucionar los eventos al aire libre en México.</p>
+                    </div>
+                </div>
+
+                <div class="history-card">
+                    <div class="history-card-header">
+                        <div class="history-year">2000</div>
+                        <h3>Expansión Regional</h3>
+                    </div>
+                    <div class="history-card-body">
+                        <p>Ampliamos operaciones a Estado de México y Querétaro. Alcanzamos las 100 mesas en inventario con logística profesional.</p>
+                    </div>
+                </div>
+
+                <div class="history-card">
+                    <div class="history-card-header">
+                        <div class="history-year">2008</div>
+                        <h3>Innovación en Diseño</h3>
+                    </div>
+                    <div class="history-card-body">
+                        <p>Lanzamos nuestra línea Premium con diseños exclusivos. Establecemos alianzas con organizadores de eventos corporativos.</p>
+                    </div>
+                </div>
+
+                <div class="history-card">
+                    <div class="history-card-header">
+                        <div class="history-year">2015</div>
+                        <h3>Cobertura Nacional</h3>
+                    </div>
+                    <div class="history-card-body">
+                        <p>Llegamos a Monterrey y Guadalajara, consolidando presencia nacional. Superamos los 25,000 eventos realizados.</p>
+                    </div>
+                </div>
+
+                <div class="history-card">
+                    <div class="history-card-header">
+                        <div class="history-year">2020</div>
+                        <h3>Transformación Digital</h3>
+                    </div>
+                    <div class="history-card-body">
+                        <p>Implementamos cotización en línea y atención 24/7 por WhatsApp. Protocolos de sanitización certificados.</p>
+                    </div>
+                </div>
+
+                <div class="history-card">
+                    <div class="history-card-header">
+                        <div class="history-year">2024</div>
+                        <h3>30 Años de Excelencia</h3>
+                    </div>
+                    <div class="history-card-body">
+                        <p>Celebramos tres décadas con más de 500 mesas, presencia en todo México y el reconocimiento como empresa #1.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         VALUES
+         ============================================ -->
+    <section class="section section--gray">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Lo Que Nos Define</span>
+                <h2 class="section-title">Nuestros Valores</h2>
+                <p class="section-subtitle">
+                    Los principios fundamentales que guían nuestro trabajo diario
+                </p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="value-title">Calidad</h3>
+                    <p class="value-text">
+                        Cada mesa pasa por rigurosos controles de calidad. Solo lo mejor para tu evento.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="value-title">Compromiso</h3>
+                    <p class="value-text">
+                        Tu evento es nuestra prioridad. Cumplimos lo que prometemos, siempre.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="value-title">Puntualidad</h3>
+                    <p class="value-text">
+                        Entendemos que cada minuto cuenta. Llegamos antes de tiempo, garantizado.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="value-title">Sustentabilidad</h3>
+                    <p class="value-text">
+                        Madera de fuentes responsables y procesos eco-amigables. Cuidamos el planeta.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="value-title">Innovación</h3>
+                    <p class="value-text">
+                        Constantemente mejoramos nuestros productos y servicios para ofrecerte más.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="value-title">Servicio</h3>
+                    <p class="value-text">
+                        Atención personalizada y calidez humana en cada interacción con nuestros clientes.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="value-title">Confianza</h3>
+                    <p class="value-text">
+                        30 años de trayectoria nos respaldan. Tu tranquilidad es nuestra responsabilidad.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="value-title">Excelencia</h3>
+                    <p class="value-text">
+                        No nos conformamos con lo bueno, buscamos lo extraordinario en cada detalle.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TEAM SECTION
+         ============================================ -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">El Equipo</span>
+                <h2 class="section-title">Nuestro Equipo Directivo</h2>
+                <p class="section-subtitle">
+                    Profesionales comprometidos con hacer de tu evento algo extraordinario
+                </p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Director General MESPIC">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Roberto Martínez</h3>
+                        <p class="team-role">Director General</p>
+                        <p class="team-bio">
+                            Fundador de MESPIC con más de 30 años liderando la industria de eventos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Directora de Operaciones MESPIC">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">María Elena Sánchez</h3>
+                        <p class="team-role">Directora de Operaciones</p>
+                        <p class="team-bio">
+                            15 años garantizando la excelencia en cada entrega y montaje.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Director Comercial MESPIC">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Carlos Hernández</h3>
+                        <p class="team-role">Director Comercial</p>
+                        <p class="team-bio">
+                            Experto en desarrollo de negocios con enfoque en experiencia al cliente.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Directora de Calidad MESPIC">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Ana Lucía Torres</h3>
+                        <p class="team-role">Directora de Calidad</p>
+                        <p class="team-bio">
+                            Responsable de mantener los más altos estándares en cada producto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CERTIFICATIONS
+         ============================================ -->
+    <section class="section section--cream">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Reconocimientos</span>
+                <h2 class="section-title">Certificaciones y Garantías</h2>
+                <p class="section-subtitle">
+                    Respaldados por certificaciones que avalan nuestra calidad y compromiso
+                </p>
+            </div>
+
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="certification-title">ISO 9001:2015</h3>
+                    <p class="certification-desc">Sistema de Gestión de Calidad certificado</p>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="certification-title">FSC Certified</h3>
+                    <p class="certification-desc">Madera de bosques manejados responsablemente</p>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3 class="certification-title">Sanitización Certificada</h3>
+                    <p class="certification-desc">Protocolos de limpieza avalados por COFEPRIS</p>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="certification-title">Premio Nacional</h3>
+                    <p class="certification-desc">Mejor empresa de renta de mobiliario 2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CTA SECTION
+         ============================================ -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">¿Listo para Conocernos?</h2>
+                <p class="cta-subtitle">
+                    Permítenos ser parte de tu próximo evento. Cotiza sin compromiso y
+                    descubre por qué miles de clientes confían en MESPIC.
+                </p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/5215512345678?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20MESPIC" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> <strong>WhatsApp</strong>
+                    </a>
+                    <a href="index.html#productos" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-th-large"></i> Ver Catálogo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER (Loaded via components.js)
+         ============================================ -->
+    <div id="footer-placeholder"></div>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    <!-- Components Loader -->
+    <script src="js/components.js"></script>
+</body>
+</html>
