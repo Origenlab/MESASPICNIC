@@ -78,7 +78,8 @@
                 this.setActiveNavLink();
 
             } catch (error) {
-                console.error('Error loading components:', error);
+                // Error silenciado en producción
+                // console.error('Error loading components:', error);
             }
         },
 
@@ -110,7 +111,7 @@
                 const element = document.querySelector(placeholder);
 
                 if (!element) {
-                    console.warn(`Placeholder ${placeholder} not found`);
+                    // Placeholder no encontrado - silenciado en producción
                     resolve();
                     return;
                 }
@@ -127,7 +128,7 @@
                         resolve();
                     })
                     .catch(error => {
-                        console.error(`Error loading ${url}:`, error);
+                        // Error silenciado en producción
                         reject(error);
                     });
             });

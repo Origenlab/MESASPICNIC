@@ -1,62 +1,436 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="es-MX">
 <head>
-  <meta charset="utf-8">
-  <title>Page Not Found</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    * {
-      line-height: 1.2;
-      margin: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    html {
-      color: #888;
-      display: table;
-      font-family: sans-serif;
-      height: 100%;
-      text-align: center;
-      width: 100%;
-    }
+    <!-- Security Meta Tags -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    body {
-      display: table-cell;
-      vertical-align: middle;
-      margin: 2em auto;
-    }
+    <!-- SEO Meta Tags -->
+    <title>Página No Encontrada | MESPIC - Renta de Mesas Picnic</title>
+    <meta name="description" content="La página que buscas no existe. Visita nuestro catálogo de mesas picnic para renta en México.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="author" content="MESPIC - Renta de Mesas Picnic">
 
-    h1 {
-      color: #555;
-      font-size: 2em;
-      font-weight: 400;
-    }
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mesaspicnic.com/404">
+    <meta property="og:title" content="Página No Encontrada | MESPIC">
+    <meta property="og:description" content="La página que buscas no existe. Visita nuestro catálogo de mesas picnic.">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="MESPIC - Renta de Mesas Picnic">
 
-    p {
-      margin: 0 auto;
-      width: 280px;
-    }
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
+    <meta name="theme-color" content="#2D5016">
 
-    @media only screen and (max-width: 280px) {
+    <!-- Preconnect para optimización -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-      body,
-      p {
-        width: 95%;
-      }
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-      h1 {
-        font-size: 1.5em;
-        margin: 0 0 0.3em;
-      }
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    }
-  </style>
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="css/components.min.css">
+
+    <style>
+        /* ============================================
+           CSS VARIABLES - DESIGN SYSTEM
+           ============================================ */
+        :root {
+            /* Colores principales */
+            --color-primary: #2D5016;
+            --color-primary-light: #4A7C23;
+            --color-primary-dark: #1E3610;
+            --color-secondary: #8B7355;
+            --color-accent: #D4A574;
+            --color-accent-light: #E8C9A8;
+
+            /* Neutros */
+            --color-white: #FFFFFF;
+            --color-off-white: #FAF8F5;
+            --color-cream: #F5F1EB;
+            --color-gray-100: #F7F7F7;
+            --color-gray-200: #E5E5E5;
+            --color-gray-300: #D4D4D4;
+            --color-gray-400: #A3A3A3;
+            --color-gray-500: #737373;
+            --color-gray-600: #525252;
+            --color-gray-700: #404040;
+            --color-gray-800: #262626;
+            --color-gray-900: #171717;
+            --color-black: #0A0A0A;
+
+            /* Gradientes */
+            --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+
+            /* Tipografía */
+            --font-heading: 'Playfair Display', Georgia, serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+            /* Tamaños de fuente */
+            --text-sm: 0.875rem;
+            --text-base: 1rem;
+            --text-lg: 1.125rem;
+            --text-xl: 1.25rem;
+            --text-2xl: 1.5rem;
+            --text-3xl: 1.875rem;
+            --text-4xl: 2.25rem;
+            --text-5xl: 3rem;
+            --text-6xl: 3.75rem;
+
+            /* Espaciado */
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+
+            /* Bordes */
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            --radius-2xl: 2rem;
+            --radius-full: 9999px;
+
+            /* Sombras */
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+            /* Contenedor */
+            --container-max: 1280px;
+            --container-padding: 1.5rem;
+        }
+
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            line-height: 1.6;
+            color: var(--color-gray-800);
+            background-color: var(--color-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--color-gray-900);
+        }
+
+        /* ============================================
+           UTILITIES
+           ============================================ */
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            padding: var(--space-4) var(--space-8);
+            font-size: var(--text-base);
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: var(--color-white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-primary-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: var(--color-white);
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .btn-lg {
+            padding: var(--space-5) var(--space-10);
+            font-size: var(--text-lg);
+        }
+
+        /* ============================================
+           404 PAGE STYLES
+           ============================================ */
+        .error-section {
+            min-height: calc(100vh - 200px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-16) 0;
+            padding-top: calc(80px + var(--space-16));
+            background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-white) 100%);
+        }
+
+        .error-content {
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .error-icon {
+            width: 150px;
+            height: 150px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-8);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .error-icon i {
+            font-size: 4rem;
+            color: var(--color-white);
+        }
+
+        .error-code {
+            font-family: var(--font-heading);
+            font-size: clamp(var(--text-6xl), 15vw, 10rem);
+            font-weight: 700;
+            color: var(--color-primary);
+            line-height: 1;
+            margin-bottom: var(--space-4);
+            opacity: 0.15;
+        }
+
+        .error-title {
+            font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+            color: var(--color-gray-900);
+            margin-bottom: var(--space-4);
+        }
+
+        .error-description {
+            font-size: var(--text-lg);
+            color: var(--color-gray-600);
+            margin-bottom: var(--space-8);
+            line-height: 1.7;
+        }
+
+        .error-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--space-4);
+            margin-bottom: var(--space-12);
+        }
+
+        .error-suggestions {
+            background: var(--color-white);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-lg);
+            text-align: left;
+        }
+
+        .error-suggestions h3 {
+            font-size: var(--text-xl);
+            color: var(--color-primary);
+            margin-bottom: var(--space-4);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .error-suggestions ul {
+            list-style: none;
+        }
+
+        .error-suggestions li {
+            padding: var(--space-3) 0;
+            border-bottom: 1px solid var(--color-gray-200);
+        }
+
+        .error-suggestions li:last-child {
+            border-bottom: none;
+        }
+
+        .error-suggestions a {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            color: var(--color-gray-700);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .error-suggestions a:hover {
+            color: var(--color-primary);
+        }
+
+        .error-suggestions a i {
+            color: var(--color-accent);
+            width: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .error-section {
+                padding: var(--space-8) 0;
+                padding-top: calc(80px + var(--space-8));
+            }
+
+            .error-icon {
+                width: 120px;
+                height: 120px;
+            }
+
+            .error-icon i {
+                font-size: 3rem;
+            }
+
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .error-suggestions {
+                padding: var(--space-6);
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <h1>Page Not Found</h1>
-  <p>Sorry, but the page you were trying to view does not exist.</p>
-</body>
+    <!-- ============================================
+         HEADER (Loaded via components.js)
+         ============================================ -->
+    <div id="header-placeholder"></div>
 
+    <!-- ============================================
+         404 ERROR SECTION
+         ============================================ -->
+    <section class="error-section">
+        <div class="container">
+            <div class="error-content">
+                <div class="error-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+
+                <div class="error-code">404</div>
+
+                <h1 class="error-title">Página No Encontrada</h1>
+
+                <p class="error-description">
+                    Lo sentimos, la página que buscas no existe o ha sido movida.
+                    Pero no te preocupes, tenemos muchas mesas picnic esperándote.
+                </p>
+
+                <div class="error-actions">
+                    <a href="index.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-home"></i> Ir al Inicio
+                    </a>
+                    <a href="contacto.html" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-envelope"></i> Contáctanos
+                    </a>
+                </div>
+
+                <div class="error-suggestions">
+                    <h3>
+                        <i class="fas fa-lightbulb"></i>
+                        Páginas Populares
+                    </h3>
+                    <ul>
+                        <li>
+                            <a href="index.html#productos">
+                                <i class="fas fa-chair"></i>
+                                Ver catálogo de mesas picnic
+                            </a>
+                        </li>
+                        <li>
+                            <a href="servicios.html">
+                                <i class="fas fa-concierge-bell"></i>
+                                Nuestros servicios de renta
+                            </a>
+                        </li>
+                        <li>
+                            <a href="servicios/mesas-picnic-para-bodas.html">
+                                <i class="fas fa-heart"></i>
+                                Mesas picnic para bodas
+                            </a>
+                        </li>
+                        <li>
+                            <a href="nosotros.html">
+                                <i class="fas fa-users"></i>
+                                Conoce nuestra historia
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blog.html">
+                                <i class="fas fa-newspaper"></i>
+                                Blog con ideas para tu evento
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER (Loaded via components.js)
+         ============================================ -->
+    <div id="footer-placeholder"></div>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    <!-- Components Loader -->
+    <script defer src="js/components.min.js"></script>
+</body>
 </html>
-<!-- IE needs 512+ bytes: https://docs.microsoft.com/archive/blogs/ieinternals/friendly-http-error-pages -->

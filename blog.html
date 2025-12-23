@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <!-- Security Meta Tags -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
     <!-- SEO Meta Tags -->
     <title>Blog de Mesas Picnic | Ideas, Consejos y Tendencias | MESPIC</title>
     <meta name="description" content="Blog de MESPIC con ideas, consejos y tendencias para eventos con mesas picnic. Guías para bodas, fiestas infantiles, eventos corporativos y más. Inspírate para tu próximo evento.">
@@ -20,11 +25,13 @@
     <meta property="og:description" content="Descubre ideas, consejos y tendencias para eventos con mesas picnic. Inspírate con nuestros artículos sobre bodas, fiestas y eventos al aire libre.">
     <meta property="og:image" content="https://mesaspicnic.com/img/blog-og-image.jpg">
     <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="MESPIC - Renta de Mesas Picnic">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Blog de Mesas Picnic | MESPIC">
     <meta name="twitter:description" content="Ideas, consejos y tendencias para eventos con mesas picnic.">
+    <meta name="twitter:image" content="https://mesaspicnic.com/img/blog-og-image.jpg">
 
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -34,14 +41,15 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/components.min.css">
+    <link rel="stylesheet" href="css/blog.min.css">
 
     <!-- Schema.org Blog -->
     <script type="application/ld+json">
@@ -61,10 +69,47 @@
         }
     }
     </script>
+
+    <!-- Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://mesaspicnic.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://mesaspicnic.com/blog"
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Header Placeholder -->
     <div id="header-placeholder"></div>
+
+    <!-- ============================================
+         BREADCRUMB
+         ============================================ -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                    <i class="fas fa-chevron-right" style="font-size: 10px; color: var(--color-gray-400);"></i>
+                </li>
+                <li class="breadcrumb-item active">Blog</li>
+            </ol>
+        </div>
+    </nav>
 
     <!-- ============================================
          BLOG HERO
@@ -95,7 +140,7 @@
         <div class="container">
             <div class="featured-post">
                 <div class="featured-post-image">
-                    <img src="img/mesa-picnic-boda-jardin-atardecer-01.webp" alt="Guía completa para bodas con mesas picnic - MESPIC" title="Artículo destacado sobre bodas con mesas picnic">
+                    <img loading="lazy" src="img/mesa-picnic-boda-jardin-atardecer-01.webp" alt="Guía completa para bodas con mesas picnic - MESPIC" title="Artículo destacado sobre bodas con mesas picnic">
                     <span class="featured-badge"><i class="fas fa-star"></i> Destacado</span>
                 </div>
                 <div class="featured-post-content">
@@ -114,7 +159,7 @@
                     </p>
                     <div class="featured-post-footer">
                         <div class="post-author">
-                            <img src="img/coordinadora-eventos-mesas-picnic-mexicana.webp" alt="Autora del blog MESPIC" class="author-avatar">
+                            <img loading="lazy" src="img/coordinadora-eventos-mesas-picnic-mexicana.webp" alt="Autora del blog MESPIC" class="author-avatar">
                             <div class="author-info">
                                 <span class="author-name">Ana Lucía Torres</span>
                                 <span class="author-role">Experta en Eventos</span>
@@ -177,7 +222,7 @@
                 <!-- Post 1 -->
                 <article class="blog-card" data-category="decoracion">
                     <div class="blog-card-image">
-                        <img src="img/mesa-picnic-boda-decoracion-rosas-rojas.webp" alt="10 ideas de decoración para mesas picnic - MESPIC" title="Ideas de decoración para mesas picnic">
+                        <img loading="lazy" src="img/mesa-picnic-boda-decoracion-rosas-rojas.webp" alt="10 ideas de decoración para mesas picnic - MESPIC" title="Ideas de decoración para mesas picnic">
                         <span class="blog-card-category">Decoración</span>
                     </div>
                     <div class="blog-card-content">
@@ -200,7 +245,7 @@
                 <!-- Post 2 -->
                 <article class="blog-card" data-category="corporativos">
                     <div class="blog-card-image">
-                        <img src="img/mesa-picnic-evento-corporativo-networking.webp" alt="Eventos corporativos al aire libre con mesas picnic - MESPIC" title="Eventos corporativos con mesas picnic">
+                        <img loading="lazy" src="img/mesa-picnic-evento-corporativo-networking.webp" alt="Eventos corporativos al aire libre con mesas picnic - MESPIC" title="Eventos corporativos con mesas picnic">
                         <span class="blog-card-category">Corporativos</span>
                     </div>
                     <div class="blog-card-content">
@@ -223,7 +268,7 @@
                 <!-- Post 3 -->
                 <article class="blog-card" data-category="infantiles">
                     <div class="blog-card-image">
-                        <img src="img/mesa-picnic-cumpleanos-ninos-globos.webp" alt="Fiesta infantil perfecta con mesas picnic - MESPIC" title="Fiestas infantiles con mesas picnic">
+                        <img loading="lazy" src="img/mesa-picnic-cumpleanos-ninos-globos.webp" alt="Fiesta infantil perfecta con mesas picnic - MESPIC" title="Fiestas infantiles con mesas picnic">
                         <span class="blog-card-category">Fiestas Infantiles</span>
                     </div>
                     <div class="blog-card-content">
@@ -246,7 +291,7 @@
                 <!-- Post 4 -->
                 <article class="blog-card" data-category="tendencias">
                     <div class="blog-card-image">
-                        <img src="img/mesa-picnic-romantica-vinedo-champagne.webp" alt="Tendencias bodas 2025 mesas picnic - MESPIC" title="Tendencias de bodas 2025">
+                        <img loading="lazy" src="img/mesa-picnic-romantica-vinedo-champagne.webp" alt="Tendencias bodas 2025 mesas picnic - MESPIC" title="Tendencias de bodas 2025">
                         <span class="blog-card-category">Tendencias</span>
                     </div>
                     <div class="blog-card-content">
@@ -269,7 +314,7 @@
                 <!-- Post 5 -->
                 <article class="blog-card" data-category="familiares">
                     <div class="blog-card-image">
-                        <img src="img/mesa-picnic-reunion-familiar-mexicana.webp" alt="Reuniones familiares al aire libre - MESPIC" title="Reuniones familiares con mesas picnic">
+                        <img loading="lazy" src="img/mesa-picnic-reunion-familiar-mexicana.webp" alt="Reuniones familiares al aire libre - MESPIC" title="Reuniones familiares con mesas picnic">
                         <span class="blog-card-category">Reuniones Familiares</span>
                     </div>
                     <div class="blog-card-content">
@@ -292,7 +337,7 @@
                 <!-- Post 6 -->
                 <article class="blog-card" data-category="bodas">
                     <div class="blog-card-image">
-                        <img src="img/mesa-picnic-boda-elegante-luces.webp" alt="Iluminación para bodas al aire libre - MESPIC" title="Iluminación en bodas con mesas picnic">
+                        <img loading="lazy" src="img/mesa-picnic-boda-elegante-luces.webp" alt="Iluminación para bodas al aire libre - MESPIC" title="Iluminación en bodas con mesas picnic">
                         <span class="blog-card-category">Bodas</span>
                     </div>
                     <div class="blog-card-content">
@@ -315,7 +360,7 @@
                 <!-- Post 7 -->
                 <article class="blog-card" data-category="decoracion">
                     <div class="blog-card-image">
-                        <img src="img/mesa-picnic-decoracion-elegante-champagne.webp" alt="Centros de mesa para mesas picnic - MESPIC" title="Centros de mesa para picnic">
+                        <img loading="lazy" src="img/mesa-picnic-decoracion-elegante-champagne.webp" alt="Centros de mesa para mesas picnic - MESPIC" title="Centros de mesa para picnic">
                         <span class="blog-card-category">Decoración</span>
                     </div>
                     <div class="blog-card-content">
@@ -338,7 +383,7 @@
                 <!-- Post 8 -->
                 <article class="blog-card" data-category="tendencias">
                     <div class="blog-card-image">
-                        <img src="img/mesa-picnic-festival-masivo-luces.webp" alt="Festivales gastronómicos con mesas picnic - MESPIC" title="Festivales con mesas picnic">
+                        <img loading="lazy" src="img/mesa-picnic-festival-masivo-luces.webp" alt="Festivales gastronómicos con mesas picnic - MESPIC" title="Festivales con mesas picnic">
                         <span class="blog-card-category">Tendencias</span>
                     </div>
                     <div class="blog-card-content">
@@ -361,7 +406,7 @@
                 <!-- Post 9 -->
                 <article class="blog-card" data-category="bodas">
                     <div class="blog-card-image">
-                        <img src="img/mesa-picnic-boda-hacienda-mexicana.webp" alt="Bodas en haciendas mexicanas - MESPIC" title="Bodas en haciendas con mesas picnic">
+                        <img loading="lazy" src="img/mesa-picnic-boda-hacienda-mexicana.webp" alt="Bodas en haciendas mexicanas - MESPIC" title="Bodas en haciendas con mesas picnic">
                         <span class="blog-card-category">Bodas</span>
                     </div>
                     <div class="blog-card-content">
@@ -474,7 +519,7 @@
     <div id="footer-placeholder"></div>
 
     <!-- Scripts -->
-    <script src="js/components.js"></script>
+    <script defer src="js/components.min.js"></script>
     <script>
         // Blog Category Filter
         document.querySelectorAll('.category-btn').forEach(btn => {

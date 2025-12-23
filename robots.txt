@@ -1,5 +1,17 @@
 # https://www.robotstxt.org/
+# MESPIC - Renta de Mesas Picnic
 
 # Allow crawling of all content
 User-agent: *
-Disallow:
+Allow: /
+
+# Disallow admin and private directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+
+# Sitemap location
+Sitemap: https://mesaspicnic.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

@@ -1,12 +1,43 @@
 {
-  "short_name": "",
-  "name": "",
-  "icons": [{
-    "src": "icon.png",
-    "type": "image/png",
-    "sizes": "192x192"
-  }],
-  "start_url": "/?utm_source=homescreen",
-  "background_color": "#fafafa",
-  "theme_color": "#fafafa"
+  "name": "MESPIC - Renta de Mesas Picnic",
+  "short_name": "MESPIC",
+  "description": "Renta de mesas picnic para eventos en México. Bodas, fiestas, corporativos.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#2D5016",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "es-MX",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "lifestyle"],
+  "shortcuts": [
+    {
+      "name": "Cotizar Ahora",
+      "short_name": "Cotizar",
+      "description": "Solicita una cotización rápida",
+      "url": "/contacto.html",
+      "icons": [{ "src": "icon.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Ver Servicios",
+      "short_name": "Servicios",
+      "description": "Explora nuestros servicios",
+      "url": "/servicios.html",
+      "icons": [{ "src": "icon.png", "sizes": "192x192" }]
+    }
+  ]
 }

@@ -6,6 +6,30 @@
  */
 
 /* ============================================
+   SKIP TO CONTENT - Accessibility
+   ============================================ */
+.skip-to-content {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-primary, #2D5016);
+    color: var(--color-white, #FFFFFF);
+    padding: var(--space-3, 0.75rem) var(--space-6, 1.5rem);
+    border-radius: var(--radius-md, 0.5rem);
+    font-weight: 600;
+    z-index: 10000;
+    transition: top 0.3s ease;
+    text-decoration: none;
+}
+
+.skip-to-content:focus {
+    top: var(--space-4, 1rem);
+    outline: 3px solid var(--color-accent, #D4A574);
+    outline-offset: 2px;
+}
+
+/* ============================================
    HEADER & NAVIGATION
    ============================================ */
 .header {
