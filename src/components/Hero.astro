@@ -1,0 +1,99 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  ctaPrimary?: { label: string; href: string };
+  ctaSecondary?: { label: string; href: string };
+  seoParagraph1: string;
+  seoParagraph2: string;
+}
+
+const {
+  title,
+  description,
+  ctaPrimary = { label: "Cotizar ahora →", href: "/cotizar/" },
+  ctaSecondary = { label: "Ver servicios", href: "/servicios/" },
+  seoParagraph1,
+  seoParagraph2,
+} = Astro.props;
+---
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-col1">
+      <h1 class="hero-title">{title}</h1>
+      <p class="hero-desc">{description}</p>
+      <div class="hero-ctas">
+        <a href={ctaPrimary.href} class="btn btn-primary">{ctaPrimary.label}</a>
+        <a href={ctaSecondary.href} class="btn btn-outline">{ctaSecondary.label}</a>
+      </div>
+    </div>
+    <div class="hero-col2">
+      <p class="hero-seo">{seoParagraph1}</p>
+      <p class="hero-seo">{seoParagraph2}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding-top: calc(var(--header-height, 70px) + 4rem);
+    padding-bottom: 4rem;
+    background: var(--c-bg-alt, #FAF8F5);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    color: var(--c-primary, #2D5016);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+
+  .hero-desc {
+    font-size: 1.125rem;
+    color: var(--c-text-muted, #6b7280);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-col2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hero-seo {
+    font-size: 1rem;
+    color: var(--c-text, #1a1a1a);
+    line-height: 1.8;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: var(--radius-md, 12px);
+    border-left: 4px solid var(--c-accent, #D4A574);
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding-top: calc(var(--header-height, 70px) + 2rem);
+      padding-bottom: 2.5rem;
+    }
+
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>

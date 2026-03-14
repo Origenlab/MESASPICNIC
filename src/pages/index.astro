@@ -1,0 +1,458 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+---
+
+<BaseLayout
+  title="Renta de Mesas Picnic para Eventos | MESPIC — CDMX y Edomex"
+  description="Renta de mesas picnic para bodas, eventos corporativos, fiestas infantiles y temáticas en CDMX y Estado de México. Entrega, montaje y recolección incluidos. Cotiza gratis."
+>
+
+<!-- Hero canónico 2 columnas -->
+<Hero
+  title="Renta de Mesas Picnic para tu Evento Perfecto"
+  description="Mobiliario de madera natural para bodas, corporativos, fiestas infantiles y eventos temáticos en CDMX y Estado de México. Entrega, montaje y recolección incluidos."
+  ctaPrimary={{ label: "Cotizar ahora →", href: "/cotizar/" }}
+  ctaSecondary={{ label: "Ver servicios", href: "/servicios/" }}
+  seoParagraph1="MESPIC es la empresa líder en renta de mesas picnic con más de 8 años de experiencia en CDMX y Estado de México. Hemos sido parte de más de 500 eventos: bodas al aire libre, reuniones corporativas, fiestas infantiles, picnics románticos y celebraciones temáticas de todo tipo."
+  seoParagraph2="Nuestras mesas están fabricadas en madera natural de la más alta calidad. Incluimos entrega, montaje profesional y recolección sin costo adicional, sin límite de tiempo durante tu evento. Cada mesa se entrega impecable, lijada y barnizada, lista para crear el ambiente perfecto."
+/>
+
+<!-- Stats bar -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat">
+        <span class="stat-number">+500</span>
+        <span class="stat-label">Eventos realizados</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">+8</span>
+        <span class="stat-label">Años de experiencia</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">CDMX</span>
+        <span class="stat-label">y Estado de México</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">Incluida</span>
+        <span class="stat-label">Entrega y montaje</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Servicios -->
+<section class="section" id="servicios">
+  <div class="container">
+    <h2 class="section-title">Nuestros Servicios</h2>
+    <p class="section-subtitle">Mesas picnic para cada tipo de evento. Encuentra la opción perfecta para tu celebración.</p>
+    <div class="services-grid">
+      <ServiceCard
+        title="Bodas"
+        description="Mesas picnic elegantes para bodas al aire libre. Crea un ambiente romántico y único con madera natural."
+        image="/img/mesa-picnic-boda-elegante-decoracion.webp"
+        href="/servicios/bodas/"
+      />
+      <ServiceCard
+        title="Eventos Corporativos"
+        description="Mobiliario profesional para team buildings, conferencias y comidas empresariales al aire libre."
+        image="/img/mesa-picnic-evento-corporativo-networking.webp"
+        href="/servicios/eventos-corporativos/"
+      />
+      <ServiceCard
+        title="Fiestas Infantiles"
+        description="Mesas picnic coloridas y seguras para cumpleaños y fiestas infantiles. Los niños las aman."
+        image="/img/mesa-picnic-fiesta-infantil-globos-colores.webp"
+        href="/servicios/fiestas-infantiles/"
+      />
+      <ServiceCard
+        title="Fiestas Temáticas"
+        description="Mesas picnic versátiles para picnics románticos, fiestas mexicanas, ferias gastronómicas y más."
+        image="/img/mesa-picnic-fiesta-tematica-20.webp"
+        href="/servicios/fiestas-tematicas/"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- Galería -->
+<section class="section section-alt" id="galeria">
+  <div class="container">
+    <h2 class="section-title">Galería de Eventos</h2>
+    <p class="section-subtitle">Momentos especiales creados con nuestras mesas picnic.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item gallery-tall">
+        <img src="/img/mesa-picnic-boda-novios-romantica.webp" alt="Mesa picnic boda romántica" loading="lazy" width="600" height="800" />
+      </div>
+      <div class="gallery-item">
+        <img src="/img/mesa-picnic-comida-corporativa-empresas.webp" alt="Mesa picnic evento corporativo" loading="lazy" width="600" height="400" />
+      </div>
+      <div class="gallery-item">
+        <img src="/img/mesa-picnic-infantil-colores-cumpleanos.webp" alt="Mesa picnic fiesta infantil" loading="lazy" width="600" height="400" />
+      </div>
+      <div class="gallery-item gallery-tall">
+        <img src="/img/mesa-picnic-romantica-velas-rosas.webp" alt="Mesa picnic romántica con velas" loading="lazy" width="600" height="800" />
+      </div>
+      <div class="gallery-item">
+        <img src="/img/mesa-picnic-feria-gastronomica-multitud.webp" alt="Mesas picnic feria gastronómica" loading="lazy" width="600" height="400" />
+      </div>
+      <div class="gallery-item">
+        <img src="/img/mesa-picnic-reunion-familiar-comida.webp" alt="Mesa picnic reunión familiar" loading="lazy" width="600" height="400" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Por qué elegirnos -->
+<section class="section" id="por-que">
+  <div class="container">
+    <h2 class="section-title">¿Por qué elegir MESPIC?</h2>
+    <p class="section-subtitle">Nos distingue la calidad de nuestro servicio y mobiliario.</p>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2D5016" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="feature-title">Madera 100% Natural</h3>
+        <p class="feature-desc">Mesas fabricadas en madera de pino de alta calidad, lijadas y barnizadas a mano. Sin plásticos ni materiales sintéticos.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2D5016" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 4v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3 class="feature-title">Entrega y Montaje Incluidos</h3>
+        <p class="feature-desc">Llevamos, armamos y recogemos las mesas en tu evento. Sin costos ocultos ni sorpresas. Tú solo disfruta.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2D5016" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 class="feature-title">Sin Límite de Tiempo</h3>
+        <p class="feature-desc">Usa las mesas todo el tiempo que necesites durante tu evento. No cobramos por hora. Relájate y disfruta.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2D5016" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h3 class="feature-title">+500 Eventos Exitosos</h3>
+        <p class="feature-desc">Más de 8 años creando momentos especiales. Bodas, corporativos, infantiles: cada evento es nuestra prioridad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonios -->
+<section class="section section-alt" id="testimonios">
+  <div class="container">
+    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+    <p class="section-subtitle">Historias reales de eventos inolvidables.</p>
+    <div class="testimonials-grid">
+      <TestimonialCard
+        name="Carolina Mendoza"
+        event="Boda en Jardín — Coyoacán"
+        quote="Las mesas fueron el complemento perfecto para nuestra boda al aire libre. La madera natural le dio un toque rústico y elegante que todos nuestros invitados amaron. El equipo de MESPIC fue puntual y profesional."
+      />
+      <TestimonialCard
+        name="Roberto Sánchez"
+        event="Team Building — Corporativo"
+        quote="Organizamos un evento corporativo para 200 personas y MESPIC nos resolvió todo. Las mesas llegaron impecables, el montaje fue rápido y el servicio excelente. Definitivamente los volveremos a contratar."
+      />
+      <TestimonialCard
+        name="María José Torres"
+        event="Cumpleaños infantil — Polanco"
+        quote="Mi hija quedó fascinada con las mesas picnic. Los niños comieron, jugaron y se divirtieron alrededor de ellas toda la tarde. Muy recomendable para fiestas infantiles al aire libre."
+      />
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <h2 class="section-title">Preguntas Frecuentes</h2>
+    <p class="section-subtitle">Todo lo que necesitas saber sobre nuestra renta de mesas picnic.</p>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-question">¿Qué incluye el servicio de renta de mesas picnic?</summary>
+        <div class="faq-answer">
+          <p>Nuestro servicio incluye la entrega en tu ubicación, montaje profesional de las mesas, uso sin límite de tiempo durante tu evento, y recolección al finalizar. No hay costos ocultos ni cargos adicionales.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">¿En qué zonas realizan entregas?</summary>
+        <div class="faq-answer">
+          <p>Cubrimos toda la Ciudad de México y el Estado de México. Esto incluye todas las alcaldías de CDMX y los municipios más importantes del Edomex como Naucalpan, Tlalnepantla, Huixquilucan, Atizapán, entre otros.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">¿Con cuánta anticipación debo reservar?</summary>
+        <div class="faq-answer">
+          <p>Recomendamos reservar con al menos 1 semana de anticipación para asegurar disponibilidad, especialmente en temporada alta (noviembre-febrero). Sin embargo, podemos atender solicitudes de último momento según disponibilidad.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">¿Las mesas son seguras para niños?</summary>
+        <div class="faq-answer">
+          <p>Sí, todas nuestras mesas están perfectamente lijadas, sin astillas ni bordes filosos. Son ideales para eventos infantiles. Además contamos con mesas de tamaño especial para niños.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">¿Puedo decorar las mesas a mi gusto?</summary>
+        <div class="faq-answer">
+          <p>¡Por supuesto! Nuestras mesas de madera natural son el lienzo perfecto para cualquier decoración. Puedes agregar manteles, flores, velas, centros de mesa o cualquier elemento decorativo que desees.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">¿Cuántas personas caben en cada mesa?</summary>
+        <div class="faq-answer">
+          <p>Nuestras mesas picnic estándar acomodan cómodamente de 6 a 8 personas. También contamos con mesas grandes para 8-10 personas y mesas infantiles para los más pequeños.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Final -->
+<section class="cta-final">
+  <div class="container cta-final-inner">
+    <h2 class="cta-final-title">¿Listo para hacer tu evento inolvidable?</h2>
+    <p class="cta-final-desc">Cotiza sin compromiso por WhatsApp. Te respondemos en minutos.</p>
+    <a href="https://wa.me/5215512345678?text=Hola%2C%20me%20interesa%20cotizar%20mesas%20picnic%20para%20mi%20evento" class="btn btn-wa" target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Cotizar por WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- Schema.org -->
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "MESPIC — Renta de Mesas Picnic",
+    "description": "Servicio profesional de renta de mesas picnic para eventos en CDMX y Estado de México.",
+    "url": "https://mesaspicnic.com",
+    "telephone": "+52-55-1234-5678",
+    "email": "mesaspicnick@gmail.com",
+    "priceRange": "$$",
+    "areaServed": { "@type": "Country", "name": "México" },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ciudad de México",
+      "addressRegion": "CDMX",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "500"
+    }
+  })} />
+</Fragment>
+
+</BaseLayout>
+
+<style>
+  /* Stats bar */
+  .stats-bar {
+    background: var(--c-primary);
+    padding: 2.5rem 0;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    display: block;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .stat-label {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9375rem;
+    margin-top: 0.25rem;
+  }
+
+  /* Services grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Gallery masonry */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    grid-auto-rows: 220px;
+  }
+
+  .gallery-item {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s var(--ease);
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+
+  .gallery-tall {
+    grid-row: span 2;
+  }
+
+  /* Features */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .feature {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .feature-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--c-bg-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+  }
+
+  .feature-title {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: var(--c-primary);
+  }
+
+  .feature-desc {
+    color: var(--c-text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* FAQ */
+  .faq-list {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .faq-item {
+    background: #fff;
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+
+  .faq-question {
+    padding: 1.25rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--c-text);
+    transition: background 0.2s;
+  }
+
+  .faq-question::-webkit-details-marker { display: none; }
+
+  .faq-question::after {
+    content: '+';
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--c-accent);
+    transition: transform 0.3s var(--ease);
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+
+  .faq-item[open] .faq-question::after {
+    content: '−';
+  }
+
+  .faq-item[open] .faq-question {
+    background: var(--c-bg-alt);
+  }
+
+  .faq-answer {
+    padding: 0 1.5rem 1.25rem;
+    color: var(--c-text-muted);
+    line-height: 1.7;
+  }
+
+  /* CTA final */
+  .cta-final {
+    background: var(--c-primary);
+    padding: 5rem 0;
+  }
+
+  .cta-final-inner {
+    text-align: center;
+  }
+
+  .cta-final-title {
+    color: #fff;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .cta-final-desc {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 1024px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .features-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 480px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; }
+    .gallery-tall { grid-row: span 1; }
+  }
+</style>

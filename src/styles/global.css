@@ -1,0 +1,154 @@
+:root {
+  --c-primary: #2D5016;
+  --c-secondary: #8B7355;
+  --c-accent: #D4A574;
+  --c-bg: #ffffff;
+  --c-bg-alt: #FAF8F5;
+  --c-text: #1a1a1a;
+  --c-text-muted: #6b7280;
+  --c-border: #e5e7eb;
+  --header-height: 70px;
+  --topbar-height: 0px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--c-text);
+  background: var(--c-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-alt {
+  background: var(--c-bg-alt);
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  text-align: center;
+  margin-bottom: 0.75rem;
+  color: var(--c-text);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--c-text-muted);
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s var(--ease);
+  text-align: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--c-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1e3a0e;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  border: 2px solid var(--c-primary);
+  color: var(--c-primary);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--c-primary);
+  color: #fff;
+}
+
+.btn-wa {
+  background: #25D366;
+  color: #fff;
+}
+
+.btn-wa:hover {
+  background: #1fb855;
+  transform: translateY(-1px);
+}
+
+.btn-accent {
+  background: var(--c-accent);
+  color: #fff;
+}
+
+.btn-accent:hover {
+  background: #c4955e;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+}

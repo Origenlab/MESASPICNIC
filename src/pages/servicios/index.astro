@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+---
+
+<BaseLayout
+  title="Servicios de Renta de Mesas Picnic | MESPIC"
+  description="Conoce todos nuestros servicios de renta de mesas picnic: bodas, eventos corporativos, fiestas infantiles y fiestas temáticas en CDMX y Edomex."
+>
+
+<Hero
+  title="Servicios de Renta de Mesas Picnic"
+  description="Tenemos la mesa perfecta para cada tipo de evento. Descubre nuestras opciones y cotiza sin compromiso."
+  ctaPrimary={{ label: "Cotizar ahora →", href: "/cotizar/" }}
+  ctaSecondary={{ label: "Contacto", href: "/contacto/" }}
+  seoParagraph1="En MESPIC ofrecemos servicios especializados de renta de mesas picnic para todo tipo de celebraciones. Desde bodas íntimas hasta grandes eventos corporativos, nuestras mesas de madera natural se adaptan a cualquier ambiente y estilo decorativo."
+  seoParagraph2="Cada servicio incluye entrega puntual, montaje profesional y recolección sin costo adicional. Trabajamos con los mejores materiales y un equipo comprometido con hacer de tu evento una experiencia memorable."
+/>
+
+<section class="section">
+  <div class="container">
+    <div class="services-grid">
+      <ServiceCard
+        title="Bodas"
+        description="Mesas picnic elegantes para bodas al aire libre. Ambiente romántico y natural con madera de la mejor calidad."
+        image="/img/mesa-picnic-boda-elegante-decoracion.webp"
+        href="/servicios/bodas/"
+      />
+      <ServiceCard
+        title="Eventos Corporativos"
+        description="Mobiliario profesional para team buildings, conferencias y comidas empresariales al aire libre."
+        image="/img/mesa-picnic-evento-corporativo-networking.webp"
+        href="/servicios/eventos-corporativos/"
+      />
+      <ServiceCard
+        title="Fiestas Infantiles"
+        description="Mesas picnic coloridas y seguras para cumpleaños y fiestas infantiles que los niños aman."
+        image="/img/mesa-picnic-fiesta-infantil-globos-colores.webp"
+        href="/servicios/fiestas-infantiles/"
+      />
+      <ServiceCard
+        title="Fiestas Temáticas"
+        description="Mesas versátiles para picnics románticos, fiestas mexicanas, ferias gastronómicas y eventos especiales."
+        image="/img/mesa-picnic-fiesta-tematica-20.webp"
+        href="/servicios/fiestas-tematicas/"
+      />
+    </div>
+  </div>
+</section>
+
+</BaseLayout>
+
+<style>
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  @media (max-width: 640px) {
+    .services-grid { grid-template-columns: 1fr; }
+  }
+</style>

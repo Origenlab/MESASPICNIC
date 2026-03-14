@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout
+  title="Contacto — MESPIC | Renta de Mesas Picnic"
+  description="Contáctanos para cotizar tu renta de mesas picnic. WhatsApp, email o formulario. Atención personalizada para tu evento."
+>
+
+<Hero
+  title="Contáctanos"
+  description="Estamos listos para ayudarte a planear tu evento. Escríbenos por WhatsApp, email o llena nuestro formulario y te respondemos en minutos."
+  ctaPrimary={{ label: "WhatsApp directo →", href: "https://wa.me/5215512345678" }}
+  ctaSecondary={{ label: "Cotizar", href: "/cotizar/" }}
+  seoParagraph1="En MESPIC la comunicación con nuestros clientes es prioridad. Puedes contactarnos por WhatsApp para atención inmediata, por correo electrónico para solicitudes formales, o a través de nuestro formulario de contacto. Te respondemos en minutos durante horario de atención."
+  seoParagraph2="Nuestro equipo de ventas está capacitado para asesorarte sobre la cantidad de mesas ideales para tu evento, resolver dudas sobre logística y entrega, y proporcionarte una cotización personalizada sin compromiso."
+/>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Información de contacto</h2>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2D5016" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <h3>WhatsApp</h3>
+            <a href="https://wa.me/5215512345678" target="_blank" rel="noopener">+52 55 1234 5678</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2D5016" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <h3>Email</h3>
+            <a href="mailto:mesaspicnick@gmail.com">mesaspicnick@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2D5016" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <h3>Horario</h3>
+            <p>Lunes a viernes: 9:00 – 18:00</p>
+            <p>Sábados: 9:00 – 14:00</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2D5016" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h3>Cobertura</h3>
+            <p>CDMX y Estado de México</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <h2>Envíanos un mensaje</h2>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" name="name" required placeholder="Tu nombre" />
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required placeholder="tu@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Teléfono / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" placeholder="55 1234 5678" />
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Cuéntanos sobre tu evento..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .contact-info h2, .contact-form-wrap h2 {
+    font-size: 1.5rem;
+    color: var(--c-primary);
+    margin-bottom: 2rem;
+  }
+
+  .contact-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--c-bg-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contact-item h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .contact-item a, .contact-item p {
+    color: var(--c-text-muted);
+    font-size: 0.9375rem;
+  }
+
+  .contact-item a:hover { color: var(--c-primary); }
+
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--c-text);
+  }
+
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+    background: #fff;
+  }
+
+  .form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--c-primary);
+  }
+
+  @media (max-width: 768px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+  }
+</style>

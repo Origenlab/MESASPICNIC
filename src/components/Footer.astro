@@ -1,0 +1,136 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">MesPic<span class="footer-dot">·</span></a>
+        <p class="footer-tagline">Renta de mesas picnic para eventos en CDMX y Estado de México. Calidad, puntualidad y servicio profesional.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Servicios</h4>
+        <ul>
+          <li><a href="/servicios/bodas/">Bodas</a></li>
+          <li><a href="/servicios/eventos-corporativos/">Corporativos</a></li>
+          <li><a href="/servicios/fiestas-infantiles/">Infantiles</a></li>
+          <li><a href="/servicios/fiestas-tematicas/">Temáticas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Empresa</h4>
+        <ul>
+          <li><a href="/nosotros/">Nosotros</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contacto/">Contacto</a></li>
+          <li><a href="/cotizar/">Cotizar</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Legal</h4>
+        <ul>
+          <li><a href="/aviso-de-privacidad/">Aviso de privacidad</a></li>
+        </ul>
+        <h4 class="footer-heading" style="margin-top:1.5rem">Contacto</h4>
+        <ul>
+          <li><a href="https://wa.me/5215512345678" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:mesaspicnick@gmail.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {year} MESPIC. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--c-primary, #2D5016);
+    color: #fff;
+    padding: 4rem 0 2rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-dot {
+    color: var(--c-accent, #D4A574);
+  }
+
+  .footer-tagline {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    max-width: 300px;
+  }
+
+  .footer-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    color: var(--c-accent, #D4A574);
+  }
+
+  .footer-col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-col a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover {
+    color: #fff;
+  }
+
+  .footer-bottom {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
