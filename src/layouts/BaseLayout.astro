@@ -54,6 +54,8 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toStri
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <slot name="head" />
+  <!-- DMChamp Chat Widget -->
+  <script is:inline src="https://api.dmchamp.com/v1/chat-widget/1YB1OxPSRFXvOPTjrFsq"></script>
 </head>
 <body>
   <TopBar />
@@ -65,7 +67,5 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toStri
     <slot />
   </main>
   <Footer />
-<!-- DMChamp WhatsApp Chat Widget -->
-<script src="https://api.dmchamp.com/v1/chat-widget/1YB1OxPSRFXvOPTjrFsq"></script>
 </body>
 </html>
