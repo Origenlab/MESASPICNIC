@@ -214,8 +214,9 @@ const waHref = `https://wa.me/${whatsapp}?text=${encodeURIComponent(waMessage)}`
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background: var(--c-primary, #2C5530);
-    color: #fff;
+    background: #F0F5F0;
+    border: 2px solid var(--c-primary, #2C5530);
+    color: var(--c-primary, #2C5530);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -260,19 +261,20 @@ const waHref = `https://wa.me/${whatsapp}?text=${encodeURIComponent(waMessage)}`
     gap: 0.5rem;
     width: 100%;
     padding: 0.85rem 1rem;
-    background: var(--c-primary, #2C5530);
-    color: #fff;
+    background: #fff;
+    color: var(--c-primary, #2C5530);
     font-size: 0.9375rem;
     font-weight: 600;
-    border: none;
+    border: 2px solid var(--c-primary, #2C5530);
     border-radius: var(--radius-sm, 8px);
     cursor: pointer;
     font-family: var(--font-body, 'Inter', sans-serif);
-    transition: background 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
   }
 
   .faq-chat-btn:hover {
-    background: #3a6e40;
+    background: var(--c-primary, #2C5530);
+    color: #fff;
   }
 
   /* ── Responsive ── */
