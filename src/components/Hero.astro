@@ -1,12 +1,13 @@
 ---
 /**
- * Hero Component — OrigenLab Standard v2
- * ───────────────────────────────────────
+ * Hero Component — OrigenLab Standard v3
+ * ────────────────────────────────────────
  * 2 columnas obligatorias:
- *   Col 1: Badge + H1 + descripción + CTAs
+ *   Col 1: Badge + H1 + descripción + CTAs + métricas opcionales
  *   Col 2: 2 párrafos SEO (SOLO TEXTO, sin imágenes)
- * Diseño moderno: tipografía fluida, gradientes suaves,
- * decoración sutil, microinteracciones.
+ * Variante oscura: prop dark={true} activa gradiente forestal
+ * Métricas opcionales debajo de los CTAs
+ * Sin animaciones. Código limpio.
  */
 interface Props {
   badge?: string;
@@ -16,6 +17,8 @@ interface Props {
   ctaSecondary?: { label: string; href: string };
   seoParagraph1: string;
   seoParagraph2: string;
+  dark?: boolean;
+  metrics?: Array<{ value: string; label: string }>;
 }
 
 const {
@@ -26,10 +29,12 @@ const {
   ctaSecondary = { label: "Ver servicios", href: "/servicios/" },
   seoParagraph1,
   seoParagraph2,
+  dark = false,
+  metrics,
 } = Astro.props;
 ---
 
-<section class="hero" aria-label="Sección principal">
+<section class:list={["hero", { "hero--dark": dark }]} aria-label="Sección principal">
   <div class="container hero__grid">
     <!-- ═══ COLUMNA 1: Título + CTAs ═══ -->
     <div class="hero__col1">
@@ -51,6 +56,17 @@ const {
           {ctaSecondary.label}
         </a>
       </div>
+
+      {metrics && metrics.length > 0 && (
+        <div class="hero__metrics">
+          {metrics.map((m) => (
+            <div class="hero__metric">
+              <span class="hero__metric-value">{m.value}</span>
+              <span class="hero__metric-label">{m.label}</span>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
 
     <!-- ═══ COLUMNA 2: Párrafos SEO (SOLO TEXTO) ═══ -->
@@ -63,7 +79,7 @@ const {
 
 <style>
   /* ══════════════════════════════════════
-     Hero — Layout
+     Hero — Base (variante clara)
      ══════════════════════════════════════ */
   .hero {
     padding-top: calc(var(--topbar-height, 0px) + var(--header-height, 70px) + 5rem);
@@ -76,6 +92,13 @@ const {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+  }
+
+  /* ══════════════════════════════════════
+     Variante oscura — gradiente forestal
+     ══════════════════════════════════════ */
+  .hero--dark {
+    background: linear-gradient(155deg, #1B3B20 0%, #2C5530 50%, #1D4A25 100%);
   }
 
   /* ══════════════════════════════════════
@@ -102,6 +125,12 @@ const {
     text-transform: uppercase;
   }
 
+  .hero--dark .hero__badge {
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
   .hero__title {
     font-size: clamp(2.25rem, 5vw, 3.5rem);
     color: var(--c-primary-dark, #1B3B20);
@@ -111,12 +140,20 @@ const {
     max-width: 520px;
   }
 
+  .hero--dark .hero__title {
+    color: #ffffff;
+  }
+
   .hero__desc {
     font-size: 1.0625rem;
     color: var(--c-text-muted);
     line-height: 1.7;
     margin-bottom: 2.5rem;
     max-width: 480px;
+  }
+
+  .hero--dark .hero__desc {
+    color: rgba(255, 255, 255, 0.8);
   }
 
   .hero__ctas {
@@ -130,9 +167,72 @@ const {
     font-size: 1rem;
   }
 
+  .hero--dark .hero__cta-primary {
+    background: #ffffff;
+    color: var(--c-primary-dark, #1B3B20);
+  }
+
+  .hero--dark .hero__cta-primary:hover {
+    background: rgba(255, 255, 255, 0.9);
+  }
+
   .hero__cta-secondary {
     padding: 1rem 2rem;
     font-size: 1rem;
+  }
+
+  .hero--dark .hero__cta-secondary {
+    border-color: rgba(255, 255, 255, 0.45);
+    color: #ffffff;
+  }
+
+  .hero--dark .hero__cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.7);
+  }
+
+  /* ══════════════════════════════════════
+     Métricas
+     ══════════════════════════════════════ */
+  .hero__metrics {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--c-border, #E7E0D8);
+  }
+
+  .hero--dark .hero__metrics {
+    border-top-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .hero__metric {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .hero__metric-value {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--c-primary-dark, #1B3B20);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .hero--dark .hero__metric-value {
+    color: #ffffff;
+  }
+
+  .hero__metric-label {
+    font-size: 0.8125rem;
+    color: var(--c-text-muted, #78716C);
+    line-height: 1.3;
+  }
+
+  .hero--dark .hero__metric-label {
+    color: rgba(255, 255, 255, 0.65);
   }
 
   /* ══════════════════════════════════════
@@ -151,6 +251,12 @@ const {
     background: rgba(255, 255, 255, 0.5);
     padding: 1.5rem 1.75rem;
     border-radius: var(--radius-md, 12px);
+  }
+
+  .hero--dark .hero__seo-text {
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   /* ══════════════════════════════════════
@@ -198,6 +304,10 @@ const {
     .hero__seo-text {
       padding: 1.25rem 1.5rem;
     }
+
+    .hero__metrics {
+      gap: 1.25rem;
+    }
   }
 
   @media (max-width: 480px) {
@@ -207,6 +317,14 @@ const {
 
     .hero__seo-text {
       font-size: 0.875rem;
+    }
+
+    .hero__metrics {
+      gap: 1rem;
+    }
+
+    .hero__metric-value {
+      font-size: 1.125rem;
     }
   }
 </style>

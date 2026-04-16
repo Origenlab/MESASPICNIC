@@ -29,6 +29,11 @@
 
   /* ── Easing (solo botones y menú) ── */
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Tokens utilitarios ── */
+  --c-star: #F59E0B;
+  --c-success: #22C55E;
+  --section-gap: 5rem;
 }
 
 *, *::before, *::after {

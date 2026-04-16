@@ -17,8 +17,8 @@ interface Props {
 const {
   headline = "¿Listo para tu evento?",
   subtext = "Cotiza sin compromiso. Te respondemos en minutos.",
-  phone = "55 3128 1706",
-  whatsapp = "5531281706",
+  phone = "55 6432 8954",
+  whatsapp = "5564328954",
   waMessage = "Hola, quiero cotizar mesas picnic para mi evento.",
   cotizarHref = "/cotizar/",
 } = Astro.props;
@@ -50,8 +50,8 @@ const waHref = `https://wa.me/${whatsapp}?text=${encodeURIComponent(waMessage)}`
 
 <style>
   .ctaf {
-    background: var(--c-primary, #2C5530);
-    padding: 3rem 0;
+    background: linear-gradient(135deg, #1B3B20 0%, var(--c-primary, #2C5530) 55%, #1D4A25 100%);
+    padding: 3.5rem 0;
   }
 
   .ctaf__inner {

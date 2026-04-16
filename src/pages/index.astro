@@ -36,6 +36,13 @@ const galeriaIndex = [
   ctaSecondary={{ label: "Conocer más", href: "/nosotros/" }}
   seoParagraph1="Desde 2017, MESPIC se dedica a la renta de mobiliario de madera para eventos al aire libre en la Ciudad de México y zona metropolitana. Hemos participado en más de 500 bodas, reuniones corporativas, cumpleaños y picnics románticos con bancas de pino natural lijadas y barnizadas a mano. Cada pieza mide 2.4 metros de largo y acomoda cómodamente de 6 a 8 personas."
   seoParagraph2="El servicio incluye entrega en tu ubicación, montaje profesional y recolección al terminar, sin cargos extra ni límite de tiempo. Operamos los 7 días de la semana y llegamos en un máximo de 3 horas a cualquier alcaldía de CDMX y municipios del Edomex como Naucalpan, Huixquilucan y Atizapán. El precio que cotizamos es el precio final: sin sorpresas."
+  dark={true}
+  metrics={[
+    { value: "+500", label: "Eventos realizados" },
+    { value: "8 años", label: "de experiencia" },
+    { value: "4.9 ★", label: "calificación Google" },
+    { value: "CDMX", label: "+ Edomex" },
+  ]}
 />
 
 <!-- CtaBar -->
@@ -81,10 +88,10 @@ const galeriaIndex = [
   />
   <div class="container">
     <div class="grid-4">
-      <FeatureCard title="Madera 100% Natural" description="Pino nacional seleccionado, lijado a grano fino y barnizado a mano. Sin plásticos ni materiales sintéticos. La textura y el color de la madera real no se pueden imitar." />
-      <FeatureCard title="Entrega y Montaje Incluidos" description="Nuestro equipo lleva el mobiliario a tu ubicación, lo monta donde tú indiques y lo recoge al terminar. El precio que cotizamos es el precio final, sin cargos por traslado ni maniobras." />
-      <FeatureCard title="Sin Límite de Tiempo" description="El mobiliario queda en tu evento hasta que termine. No cobramos por hora ni por tiempo extra. Si tu boda acaba a las 3 am, recogemos a las 3 am." />
-      <FeatureCard title="+500 Eventos desde 2017" description="Bodas, corporativos, cumpleaños, posadas, XV años y festivales. Después de 8 años conocemos la logística y anticipamos lo que cada tipo de evento necesita." />
+      <FeatureCard index={0} title="Madera 100% Natural" description="Pino nacional seleccionado, lijado a grano fino y barnizado a mano. Sin plásticos ni materiales sintéticos. La textura y el color de la madera real no se pueden imitar." />
+      <FeatureCard index={1} title="Entrega y Montaje Incluidos" description="Nuestro equipo lleva el mobiliario a tu ubicación, lo monta donde tú indiques y lo recoge al terminar. El precio que cotizamos es el precio final, sin cargos por traslado ni maniobras." />
+      <FeatureCard index={2} title="Sin Límite de Tiempo" description="El mobiliario queda en tu evento hasta que termine. No cobramos por hora ni por tiempo extra. Si tu boda acaba a las 3 am, recogemos a las 3 am." />
+      <FeatureCard index={3} title="+500 Eventos desde 2017" description="Bodas, corporativos, cumpleaños, posadas, XV años y festivales. Después de 8 años conocemos la logística y anticipamos lo que cada tipo de evento necesita." />
     </div>
   </div>
 </section>
@@ -114,8 +121,8 @@ const galeriaIndex = [
 <!-- Galería -->
 <section class="section" id="galeria">
   <div class="container">
-    <h2 style="text-align:center; margin-bottom:0.5rem;">Nuestro Mobiliario en Acción</h2>
-    <p style="text-align:center; color:var(--text-muted); margin-bottom:2rem;">Bodas, corporativos, fiestas infantiles y eventos temáticos — la madera se adapta a cualquier ocasión.</p>
+    <h2 class="gallery__heading">Nuestro Mobiliario en Acción</h2>
+    <p class="gallery__sub">Bodas, corporativos, fiestas infantiles y eventos temáticos — la madera se adapta a cualquier ocasión.</p>
   </div>
   <GallerySection images={galeriaIndex} id="galeria-fotos" />
 </section>
@@ -129,8 +136,8 @@ const galeriaIndex = [
     paragraph2="Toda la información de precios, tiempos de entrega, zonas de cobertura y especificaciones del mobiliario está en las respuestas."
   />
   <FaqSection
-    phone="55 3128 1706"
-    whatsapp="5531281706"
+    phone="55 6432 8954"
+    whatsapp="5564328954"
     schedule="Lun–Dom 8:00–20:00"
     items={[
       { question: "¿Qué incluye el servicio de renta?", answer: "Entrega en tu ubicación, montaje profesional, uso sin límite de tiempo y recolección al terminar. El precio que cotizamos es el precio final: sin cargos por traslado, maniobras ni tiempo extra." },
@@ -149,8 +156,8 @@ const galeriaIndex = [
 <CtaBarFinal
   headline="¿Listo para tu evento?"
   subtext="Cotiza sin compromiso. Te respondemos en minutos."
-  phone="55 3128 1706"
-  whatsapp="5531281706"
+  phone="55 6432 8954"
+  whatsapp="5564328954"
   waMessage="Hola, quiero cotizar mesas picnic para mi evento."
   cotizarHref="/cotizar/"
 />
@@ -163,7 +170,7 @@ const galeriaIndex = [
     "name": "MESPIC — Renta de Mesas Picnic",
     "description": "Renta de mobiliario de madera para eventos al aire libre en Ciudad de México y Estado de México.",
     "url": "https://mesaspicnic.com",
-    "telephone": "+52-55-3128-1706",
+    "telephone": "+52-55-6432-8954",
     "priceRange": "$$",
     "areaServed": [
       { "@type": "City", "name": "Ciudad de México" },
@@ -209,5 +216,21 @@ const galeriaIndex = [
 
   @media (max-width: 640px) {
     .grid-4 { grid-template-columns: 1fr; }
+  }
+
+  .gallery__heading {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--c-text, #1C1917);
+    letter-spacing: -0.02em;
+  }
+
+  .gallery__sub {
+    text-align: center;
+    color: var(--c-text-muted, #78716C);
+    font-size: 0.9375rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
   }
 </style>
