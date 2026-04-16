@@ -1,15 +1,17 @@
 ---
 /**
- * CtaBar Component — OrigenLab Standard
- * ─────────────────────────────────────
- * Barra de navegación por categorías debajo del Hero.
- * Objetivo: guiar al usuario a explorar antes de contactar.
+ * CtaBar Component — OrigenLab Standard v3
+ * ──────────────────────────────────────────
+ * Sección de categorías debajo del Hero.
+ * Fondo crema cálido — contraste total vs hero oscuro.
+ * Tarjetas con número, ícono, título y descripción corta.
  * Sin animaciones. Código limpio.
  */
 interface CtaItem {
   label: string;
   href: string;
   icon?: string;
+  desc?: string;
 }
 
 interface Props {
@@ -23,23 +25,30 @@ const {
 } = Astro.props;
 
 const icons: Record<string, string> = {
-  boda: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>',
-  corporativo: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>',
-  fiesta: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
-  picnic: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>',
+  boda: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>`,
+  corporativo: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>`,
+  fiesta: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`,
+  picnic: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>`,
 };
+
+const arrow = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>`;
 ---
 
 <section class="ctabar" aria-label="Tipos de evento">
   <div class="container">
     <p class="ctabar__headline">{headline}</p>
     <div class="ctabar__grid">
-      {items.map((item) => (
-        <a href={item.href} class="ctabar__item">
-          {item.icon && icons[item.icon] && (
-            <span class="ctabar__icon" set:html={icons[item.icon]} />
-          )}
+      {items.map((item, i) => (
+        <a href={item.href} class="ctabar__card">
+          <div class="ctabar__card-top">
+            <span class="ctabar__num" aria-hidden="true">0{i + 1}</span>
+            {item.icon && icons[item.icon] && (
+              <span class="ctabar__icon" set:html={icons[item.icon]} />
+            )}
+          </div>
           <span class="ctabar__label">{item.label}</span>
+          {item.desc && <span class="ctabar__desc">{item.desc}</span>}
+          <span class="ctabar__arrow" set:html={arrow} aria-hidden="true" />
         </a>
       ))}
     </div>
@@ -47,70 +56,155 @@ const icons: Record<string, string> = {
 </section>
 
 <style>
+  /* ══════════════════════════════════════
+     Wrapper
+     ══════════════════════════════════════ */
   .ctabar {
-    background: var(--c-primary, #2C5530);
-    padding: 2rem 0;
+    background: var(--c-bg-alt, #F7F4F0);
+    border-top: 3px solid var(--c-accent, #C8956C);
+    padding: 3rem 0 3.5rem;
   }
 
+  /* ══════════════════════════════════════
+     Headline
+     ══════════════════════════════════════ */
   .ctabar__headline {
     text-align: center;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9375rem;
-    font-weight: 500;
-    margin-bottom: 1.25rem;
-    letter-spacing: 0.01em;
+    color: var(--c-text-muted, #78716C);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
   }
 
+  /* ══════════════════════════════════════
+     Grid de tarjetas
+     ══════════════════════════════════════ */
   .ctabar__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.75rem;
+    gap: 1rem;
   }
 
-  .ctabar__item {
+  /* ══════════════════════════════════════
+     Tarjeta individual
+     ══════════════════════════════════════ */
+  .ctabar__card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.75rem 1.5rem 1.5rem;
+    background: #fff;
+    border: 1px solid var(--c-border, #E7E0D8);
+    border-radius: var(--radius-md, 12px);
+    color: var(--c-text, #1C1917);
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s var(--ease, ease), box-shadow 0.2s var(--ease, ease), transform 0.2s var(--ease, ease);
+  }
+
+  .ctabar__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--c-primary, #2C5530);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s var(--ease, ease);
+  }
+
+  .ctabar__card:hover {
+    border-color: var(--c-primary, #2C5530);
+    box-shadow: 0 8px 24px rgba(44, 85, 48, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .ctabar__card:hover::before {
+    transform: scaleX(1);
+  }
+
+  /* ══════════════════════════════════════
+     Número + ícono
+     ══════════════════════════════════════ */
+  .ctabar__card-top {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.875rem 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: var(--radius-md, 12px);
-    color: #fff;
-    font-size: 0.9375rem;
-    font-weight: 600;
-    text-align: center;
-    transition: background 0.2s var(--ease, ease), border-color 0.2s var(--ease, ease);
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
   }
 
-  .ctabar__item:hover {
-    background: rgba(255, 255, 255, 0.18);
-    border-color: rgba(255, 255, 255, 0.3);
+  .ctabar__num {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--c-accent, #C8956C);
+    letter-spacing: 0.05em;
+    font-variant-numeric: tabular-nums;
   }
 
   .ctabar__icon {
     display: flex;
-    flex-shrink: 0;
-    opacity: 0.85;
+    color: var(--c-primary, #2C5530);
+    opacity: 0.7;
   }
 
+  /* ══════════════════════════════════════
+     Texto
+     ══════════════════════════════════════ */
   .ctabar__label {
-    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--c-text, #1C1917);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
   }
 
-  @media (max-width: 768px) {
+  .ctabar__desc {
+    font-size: 0.8125rem;
+    color: var(--c-text-muted, #78716C);
+    line-height: 1.55;
+    flex: 1;
+  }
+
+  /* ══════════════════════════════════════
+     Flecha
+     ══════════════════════════════════════ */
+  .ctabar__arrow {
+    display: flex;
+    margin-top: 0.75rem;
+    color: var(--c-primary, #2C5530);
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .ctabar__card:hover .ctabar__arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* ══════════════════════════════════════
+     Responsive
+     ══════════════════════════════════════ */
+  @media (max-width: 900px) {
     .ctabar__grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 480px) {
+    .ctabar {
+      padding: 2.5rem 0 3rem;
+    }
     .ctabar__grid {
       grid-template-columns: 1fr;
+      gap: 0.75rem;
     }
-
-    .ctabar__item {
-      padding: 0.75rem 1rem;
+    .ctabar__card {
+      padding: 1.25rem;
     }
   }
 </style>
