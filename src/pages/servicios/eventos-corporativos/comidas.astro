@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import Hero from '../../../components/Hero.astro';
+import CtaBar from '../../../components/CtaBar.astro';
 import SectionHeader from '../../../components/SectionHeader.astro';
 import FeatureCard from '../../../components/FeatureCard.astro';
 import ServiceCard from '../../../components/ServiceCard.astro';
@@ -28,10 +29,15 @@ import WaBubble from '../../../components/WaBubble.astro';
   ctaSecondary={{ label: "Ver catálogo", href: "/catalogo/" }}
   seoParagraph1="Las comidas empresariales al aire libre con bancas de madera cambian la experiencia: tus colaboradores comen a gusto sin la rigidez de un salón de banquetes, el ambiente se siente más cercano y las conversaciones fluyen entre áreas que normalmente no conviven. Hemos montado desde almuerzos de equipo para 50 personas hasta cenas de cierre anual para 300."
   seoParagraph2="El mobiliario de madera reemplaza las mesas redondas de hotel con algo más natural y memorable. Cada banca sienta 6-8 personas con espacio para plato, cubiertos, vaso y centro de mesa. El montaje incluye distribución según el espacio, pasillos de servicio para meseros y zona de buffet o barra si la necesitas."
+  dark={true}
 />
 
+<!-- CtaBar -->
+<CtaBar />
+
 <section class="section" id="montajes">
-  <SectionHeader tag="h2" title="Comidas Empresariales al Aire Libre" paragraph1="Montajes para almuerzos, cenas y convivios corporativos. Jardines, terrazas y espacios abiertos en la Ciudad de México." paragraph2="Desde 50 hasta 300 personas con distribuciones que incluyen zona de buffet y barra." />
+  <SectionHeader
+    badge="En detalle" tag="h2" title="Comidas Empresariales al Aire Libre" paragraph1="Montajes para almuerzos, cenas y convivios corporativos. Jardines, terrazas y espacios abiertos en la Ciudad de México." paragraph2="Desde 50 hasta 300 personas con distribuciones que incluyen zona de buffet y barra." />
   <ProductGallery
     images={[
       { src: "/img/mesa-picnic-evento-corporativo-networking.avif", alt: "Comida de fin de año con 30 bancas en jardín corporativo" },
@@ -55,7 +61,8 @@ import WaBubble from '../../../components/WaBubble.astro';
 </section>
 
 <section class="section section-alt" id="tipos">
-  <SectionHeader tag="h2" title="Tipos de Comida Empresarial" paragraph1="Cada ocasión tiene su propia logística. No es lo mismo un almuerzo de 50 que una cena de cierre para 300." paragraph2="Dinos el tipo de evento y el número de personas, y te proponemos la distribución ideal." />
+  <SectionHeader
+    badge="Nuestras opciones" tag="h2" title="Tipos de Comida Empresarial" paragraph1="Cada ocasión tiene su propia logística. No es lo mismo un almuerzo de 50 que una cena de cierre para 300." paragraph2="Dinos el tipo de evento y el número de personas, y te proponemos la distribución ideal." />
   <div class="container">
     <div class="grid-4">
       <FeatureCard title="Cierre Anual" description="Cena o comida para 100-300 personas. El evento más grande del año. Requiere reserva con 2-3 semanas de anticipación y plano de distribución con tu equipo." />
@@ -67,7 +74,8 @@ import WaBubble from '../../../components/WaBubble.astro';
 </section>
 
 <section class="section" id="incluye">
-  <SectionHeader tag="h2" title="Qué Incluye" paragraph1="Logística completa para que tu comida empresarial esté lista. Solo preocúpate por el menú y los invitados." paragraph2="Facturamos CFDI. Coordinamos con tu servicio de catering." />
+  <SectionHeader
+    badge="Servicio incluido" tag="h2" title="Qué Incluye" paragraph1="Logística completa para que tu comida empresarial esté lista. Solo preocúpate por el menú y los invitados." paragraph2="Facturamos CFDI. Coordinamos con tu servicio de catering." />
   <div class="container">
     <div class="grid-4">
       <FeatureCard title="Distribución con Pasillos de Servicio" description="Dejamos pasillos de 1.2 m entre bancas para que los meseros circulen con charolas. No es solo poner bancas — es planificar el flujo del servicio." />
@@ -79,7 +87,8 @@ import WaBubble from '../../../components/WaBubble.astro';
 </section>
 
 <section class="section section-alt" id="relacionados">
-  <SectionHeader tag="h2" title="Otros Servicios Corporativos" paragraph1="Combina la comida con dinámicas o conferencia en el mismo evento." paragraph2="El mobiliario es el mismo — solo cambia la distribución." />
+  <SectionHeader
+    badge="También te puede interesar" tag="h2" title="Otros Servicios Corporativos" paragraph1="Combina la comida con dinámicas o conferencia en el mismo evento." paragraph2="El mobiliario es el mismo — solo cambia la distribución." />
   <div class="container">
     <div class="grid-4">
       <ServiceCard title="Team Building" description="Bancas agrupadas en estaciones de 6-8 personas para dinámicas de integración." image="/img/mesa-picnic-evento-corporativo-networking.avif" href="/servicios/eventos-corporativos/team-building/" btnLabel="Team building" />
@@ -91,7 +100,8 @@ import WaBubble from '../../../components/WaBubble.astro';
 </section>
 
 <section class="section" id="faq">
-  <SectionHeader tag="h2" title="Preguntas sobre Comidas Empresariales" paragraph1="Dudas de coordinadores de eventos y departamentos de logística." paragraph2="Cotización formal por correo disponible." />
+  <SectionHeader
+    badge="Preguntas frecuentes" tag="h2" title="Preguntas sobre Comidas Empresariales" paragraph1="Dudas de coordinadores de eventos y departamentos de logística." paragraph2="Cotización formal por correo disponible." />
   <FaqSection phone="55 6432 8954" whatsapp="5564328954" schedule="Lun–Dom 8:00–20:00"
     items={[
       { question: "¿Cuántas bancas para 200 personas?", answer: "28-34 bancas estándar, dependiendo de si usas mesas de buffet. Te mandamos un plano con la distribución si nos das las medidas del espacio." },

@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Hero from '../../components/Hero.astro';
+import CtaBar from '../../components/CtaBar.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
 import FeatureCard from '../../components/FeatureCard.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
@@ -32,10 +33,15 @@ import WaBubble from '../../components/WaBubble.astro';
   ctaSecondary={{ label: "Ver paquetes", href: "/paquetes/" }}
   seoParagraph1="Las fiestas temáticas necesitan mobiliario que no compita con la decoración. La madera de pino natural funciona como lienzo en blanco: absorbe el color de una fiesta mexicana con cempasúchil, el minimalismo de un garden party escandinavo o la opulencia de unos XV años con centro de mesa alto. No necesitas forrar las bancas — la madera ya aporta textura y calidez."
   seoParagraph2="Hemos montado fiestas temáticas para 20 hasta 200 personas en jardines, haciendas, terrazas y salones con área exterior en CDMX y Edomex. Cada temática tiene su propia lógica de distribución: una fiesta mexicana no se monta igual que un brunch — y nosotros sabemos la diferencia porque lo hacemos cada semana."
+  dark={true}
 />
+
+<!-- CtaBar -->
+<CtaBar />
 
 <section class="section" id="montajes">
   <SectionHeader
+    badge="Nuestras temáticas"
     tag="h2"
     title="La Madera se Adapta a tu Concepto"
     paragraph1="No importa si es una fiesta mexicana, un garden party, unos XV años o un brunch dominical. La madera natural complementa cualquier paleta de colores y estilo decorativo."
@@ -66,6 +72,7 @@ import WaBubble from '../../components/WaBubble.astro';
 
 <section class="section section-alt" id="tematicas">
   <SectionHeader
+    badge="Nuestras temáticas"
     tag="h2"
     title="Temáticas que Montamos Cada Semana"
     paragraph1="Estas no son ideas sacadas de Pinterest — son fiestas reales que montamos regularmente. Conocemos la logística de cada una porque las hacemos una y otra vez."
@@ -83,6 +90,7 @@ import WaBubble from '../../components/WaBubble.astro';
 
 <section class="section" id="por-que-madera">
   <SectionHeader
+    badge="Por qué elegirnos"
     tag="h2"
     title="Por Qué la Madera Funciona para Cualquier Temática"
     paragraph1="Un mantel rojo convierte la banca en fiesta mexicana. Uno blanco la convierte en garden party. Uno dorado en XV años. La madera no tiene identidad propia — toma la de tu decoración."
@@ -100,6 +108,7 @@ import WaBubble from '../../components/WaBubble.astro';
 
 <section class="section section-alt" id="incluye">
   <SectionHeader
+    badge="Servicio incluido"
     tag="h2"
     title="Qué Incluye"
     paragraph1="Entrega, montaje y recolección. El servicio es el mismo para cualquier temática — lo que cambia es la distribución que hacemos según tu concepto."
@@ -117,6 +126,7 @@ import WaBubble from '../../components/WaBubble.astro';
 
 <section class="section" id="referencias">
   <SectionHeader
+    badge="Guía de cantidades"
     tag="h2"
     title="Referencia de Cantidad por Evento"
     paragraph1="Cada temática tiene su propia distribución. Aquí tienes referencias rápidas para los formatos más comunes."
@@ -132,8 +142,59 @@ import WaBubble from '../../components/WaBubble.astro';
   </div>
 </section>
 
+
+<!-- Proceso paso a paso — Template L3: proceso-cards -->
+<section class="section section" id="proceso">
+  <SectionHeader
+    badge="Cómo trabajamos"
+    tag="h2"
+    title="De Tu Concepto al Montaje Final"
+    paragraph1="La madera no compite con tu decoración — es la base sobre la que se construye el concepto visual. Por eso dedicamos tiempo real a entender tu temática antes de proponer cualquier pieza de mobiliario."
+    paragraph2="Trabajamos con decoradoras y coordinadoras de eventos en CDMX que ya conocen nuestro mobiliario. Si tienes equipo de decoración contratado, los conectamos directamente para que coordinen sin intermediarios."
+  />
+  <div class="container">
+    <div class="proceso-cards">
+      <div class="paso-card">
+        <span class="paso-card__num">01</span>
+        <div class="paso-card__body">
+          <h3 class="paso-card__title">Cuéntanos tu concepto y paleta de colores</h3>
+          <p class="paso-card__text">XV años, garden party, mexicana, vintage, minimalista, tropical, boho — dinos el estilo y la paleta de colores que tienen en mente. Cuanta más información nos des sobre la inspiración visual del evento, más precisa será nuestra recomendación de modelo y acabado.</p>
+        </div>
+      </div>
+      <div class="paso-card">
+        <span class="paso-card__num">02</span>
+        <div class="paso-card__body">
+          <h3 class="paso-card__title">Asesoría de mobiliario sin costo</h3>
+          <p class="paso-card__text">Antes de cotizar, te decimos qué modelo funciona mejor para tu temática específica. No es lo mismo la mesa rústica para un evento mexicano que la mesa estándar barnizada para un garden party formal. Te orientamos sin compromiso para que elijas con criterio.</p>
+        </div>
+      </div>
+      <div class="paso-card">
+        <span class="paso-card__num">03</span>
+        <div class="paso-card__body">
+          <h3 class="paso-card__title">Cotización clara y fecha bloqueada</h3>
+          <p class="paso-card__text">Propuesta detallada con piezas, costo de traslado y condiciones del servicio. Con el anticipo nadie más puede reservar ese inventario para tu fecha — tu evento queda protegido. Si necesitas factura o comprobante para la sede del evento, lo gestionamos.</p>
+        </div>
+      </div>
+      <div class="paso-card">
+        <span class="paso-card__num">04</span>
+        <div class="paso-card__body">
+          <h3 class="paso-card__title">Medidas exactas para tu decoradora</h3>
+          <p class="paso-card__text">Enviamos las dimensiones de cada pieza con suficiente anticipación para que tu decoradora o coordinadora planifique centros de mesa, manteles y accesorios al milímetro. También coordinamos el horario de entrega para llegar antes del equipo de decoración y no pisarnos.</p>
+        </div>
+      </div>
+      <div class="paso-card">
+        <span class="paso-card__num">05</span>
+        <div class="paso-card__body">
+          <h3 class="paso-card__title">Tu espacio, listo para que empiece la magia</h3>
+          <p class="paso-card__text">El día del evento llegamos primero. Colocamos cada pieza en su posición exacta y dejamos el espacio listo para que tu equipo de decoración trabaje directamente sobre el mobiliario. Al terminar la fiesta, recogemos todo sin interrumpir la celebración ni el desmontaje de decoración.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section section-alt" id="faq">
   <SectionHeader
+    badge="Preguntas frecuentes"
     tag="h2"
     title="Preguntas sobre Fiestas Temáticas"
     paragraph1="Dudas de personas que están organizando fiestas con concepto específico y quieren saber si el mobiliario de madera funciona para su idea."
@@ -178,6 +239,77 @@ import WaBubble from '../../components/WaBubble.astro';
 </BaseLayout>
 
 <style>
+  /* ═══════════════════════════════════════════
+     Template L3 — proceso-cards
+     Layout: 3 tarjetas fila 1 + 2 tarjetas fila 2
+     ═══════════════════════════════════════════ */
+  .proceso-cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.25rem;
+  }
+  .paso-card:nth-child(1),
+  .paso-card:nth-child(2),
+  .paso-card:nth-child(3) { grid-column: span 2; }
+  .paso-card:nth-child(4),
+  .paso-card:nth-child(5) { grid-column: span 3; }
+  .paso-card {
+    background: #fff;
+    border: 1px solid var(--c-border, #E7E0D8);
+    border-top: 3px solid var(--c-accent, #C8956C);
+    border-radius: var(--radius-md, 12px);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .paso-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(44, 85, 48, 0.03) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .paso-card__num {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--c-primary, #2C5530);
+    opacity: 0.12;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    align-self: flex-start;
+  }
+  .paso-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    flex: 1;
+  }
+  .paso-card__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--c-text, #1C1917);
+    line-height: 1.3;
+    margin: 0;
+  }
+  .paso-card__text {
+    font-size: 0.875rem;
+    color: var(--c-text-muted, #78716C);
+    line-height: 1.7;
+    margin: 0;
+  }
+  @media (max-width: 1024px) {
+    .proceso-cards { grid-template-columns: repeat(2, 1fr); }
+    .paso-card:nth-child(1),.paso-card:nth-child(2),
+    .paso-card:nth-child(3),.paso-card:nth-child(4),
+    .paso-card:nth-child(5) { grid-column: span 1; }
+  }
+  @media (max-width: 640px) {
+    .proceso-cards { grid-template-columns: 1fr; }
+  }
+
   :global(.hero) { padding-top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2.5rem + 3rem); }
   .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
   @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }

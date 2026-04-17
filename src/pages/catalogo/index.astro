@@ -4,7 +4,6 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Hero from '../../components/Hero.astro';
 import CtaBar from '../../components/CtaBar.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
-import ServiceCard from '../../components/ServiceCard.astro';
 import FeatureCard from '../../components/FeatureCard.astro';
 import GallerySection from '../../components/GallerySection.astro';
 import FaqSection from '../../components/FaqSection.astro';
@@ -20,6 +19,99 @@ const galeriaCatalogo = [
   { src: "/img/tema-mexicana-1.avif",                                 alt: "Mesa picnic rústica con acabado campestre para fiesta temática mexicana" },
   { src: "/img/mesa-picnic-pedida-mano-romantica.webp",               alt: "Set picnic completo montado para pedida de mano con decoración romántica" },
   { src: "/img/mesa-picnic-feria-gastronomica-multitud.avif",         alt: "Múltiples mesas picnic grandes para feria gastronómica con asistentes" },
+];
+
+const modelos = [
+  {
+    id: "estandar",
+    href: "/catalogo/mesa-picnic-estandar/",
+    image: "/img/mesa-picnic-boda-elegante-decoracion.avif",
+    alt: "Mesa picnic estándar de pino natural para 6 personas en boda al aire libre",
+    badge: "El más solicitado",
+    tipo: "Estándar",
+    nombre: "Mesa Picnic Estándar",
+    capacidad: "6",
+    unidad: "personas",
+    specs: ["1.80 × 1.50 m", "Pino barnizado", "Bancas incluidas"],
+    descripcion: "El modelo base del catálogo. Capacidad para 6 personas, acabado liso y uniforme que combina con cualquier estilo de decoración: rústico, boho, clásico o corporativo.",
+    cta: "Ver Mesa Estándar",
+    acento: "primary",
+  },
+  {
+    id: "grande",
+    href: "/catalogo/mesa-picnic-grande/",
+    image: "/img/mesa-picnic-evento-corporativo-networking.avif",
+    alt: "Mesa picnic grande de 2.40 m para 10-12 personas en evento corporativo",
+    badge: "Mayor capacidad",
+    tipo: "Grande",
+    nombre: "Mesa Picnic Grande",
+    capacidad: "10–12",
+    unidad: "personas",
+    specs: ["2.40 × 1.50 m", "Pino barnizado", "Reforzada"],
+    descripcion: "El modelo de mayor superficie del catálogo. Ideal para corporativos, festivales y mesa principal de boda. 10 a 12 personas en una sola pieza.",
+    cta: "Ver Mesa Grande",
+    acento: "primary",
+  },
+  {
+    id: "infantil",
+    href: "/catalogo/mesa-picnic-infantil/",
+    image: "/img/infantil-cumple-1.avif",
+    alt: "Mesa picnic infantil con altura reducida y acabado sin astillas para niños",
+    badge: "Para niños",
+    tipo: "Infantil",
+    nombre: "Mesa Picnic Infantil",
+    capacidad: "8–10",
+    unidad: "niños",
+    specs: ["1.20 × 1.00 m", "Sin astillas", "3–10 años"],
+    descripcion: "Diseñada desde cero para niños: altura reducida, bordes redondeados y lijado ultrafino. El modelo más seguro del catálogo.",
+    cta: "Ver Mesa Infantil",
+    acento: "kids",
+  },
+  {
+    id: "premium",
+    href: "/catalogo/mesa-picnic-premium/",
+    image: "/img/mesa-picnic-boda-elegante-luces.avif",
+    alt: "Mesa picnic premium con pino sin nudos y 4 manos de barniz para bodas VIP",
+    badge: "Bodas VIP",
+    tipo: "Premium",
+    nombre: "Mesa Picnic Premium",
+    capacidad: "6",
+    unidad: "personas",
+    specs: ["1.80 × 1.50 m", "Sin nudos", "4 manos barniz"],
+    descripcion: "Pino seleccionado sin nudos y cuatro manos de barniz de primer nivel. El acabado que marca la diferencia en fotografia profesional y eventos de alto perfil.",
+    cta: "Ver Mesa Premium",
+    acento: "premium",
+  },
+  {
+    id: "set-completo",
+    href: "/catalogo/set-picnic-completo/",
+    image: "/img/mesa-picnic-pedida-mano-romantica.webp",
+    alt: "Set picnic completo con mesa, mantelería, cojines y decoración para pedida de mano",
+    badge: "Todo incluido",
+    tipo: "Set Completo",
+    nombre: "Set Picnic Completo",
+    capacidad: "2–6",
+    unidad: "personas",
+    specs: ["Mesa + mantelería", "Cojines + centro", "Ambientación básica"],
+    descripcion: "Mesa, mantelería de algodón, cojines y ambientación en un solo paquete. Para picnics románticos, pedidas de mano y aniversarios sin necesidad de decoradora.",
+    cta: "Ver Set Completo",
+    acento: "primary",
+  },
+  {
+    id: "rustica",
+    href: "/catalogo/mesa-picnic-rustica/",
+    image: "/img/tema-mexicana-1.avif",
+    alt: "Mesa picnic rústica con veta de pino visible para boda boho y eventos vintage",
+    badge: "Boho & Vintage",
+    tipo: "Rústica",
+    nombre: "Mesa Picnic Rústica",
+    capacidad: "6",
+    unidad: "personas",
+    specs: ["1.80 × 1.50 m", "Veta visible", "Boho · Campestre"],
+    descripcion: "Barniz que resalta la veta y los nudos naturales del pino. La mesa que se convierte en elemento decorativo en sí misma para bodas rústicas, haciendas y festivales.",
+    cta: "Ver Mesa Rústica",
+    acento: "primary",
+  },
 ];
 ---
 
@@ -43,7 +135,7 @@ const galeriaCatalogo = [
   title="Catálogo de Mesas Picnic de Pino Natural"
   description="Seis modelos de mobiliario para renta: desde la banca estándar de 6 personas hasta el set picnic completo con decoración. Todos elaborados en pino nacional, lijados y barnizados a mano."
   ctaPrimary={{ label: "Cotizar ahora →", href: "/cotizar/" }}
-  ctaSecondary={{ label: "Ver paquetes", href: "/paquetes/" }}
+  ctaSecondary={{ label: "Ver servicios", href: "/servicios/" }}
   seoParagraph1="MESPIC cuenta con más de 120 piezas en bodega, disponibles los 7 días de la semana para la Ciudad de México y el Estado de México. Todos los modelos están fabricados en pino nacional seleccionado: lijado a grano fino, sellado y barnizado a tres manos para resistencia al exterior. La misma pieza que va a una boda en Coyoacán va al día siguiente a un festival en Roma Norte."
   seoParagraph2="El precio de renta incluye traslado, montaje profesional en tu locación y recolección al finalizar el evento. No hay cargos por maniobras, tiempo extra ni distancia dentro de nuestra zona de cobertura. Puedes combinar modelos en una misma cotización —por ejemplo, mesas estándar para adultos y mesas infantiles para zona de niños— y todo llega en la misma entrega."
   dark={true}
@@ -53,77 +145,89 @@ const galeriaCatalogo = [
 <CtaBar />
 
 <!-- ═══════════════════════════════════════════════════════
-     6 MODELOS EN CATÁLOGO
+     VER TODOS LOS MODELOS
 ═══════════════════════════════════════════════════════ -->
 <section class="section" id="modelos">
   <SectionHeader
     tag="h2"
-    badge="Todos los modelos"
+    badge="Ver todos los modelos"
     title="6 Modelos de Mesa Picnic"
     paragraph1="Cada modelo tiene un uso recomendado, capacidad específica y acabado adaptado al tipo de evento. Selecciona el que se ajuste a tu ocasión o cotiza varios para el mismo evento."
     paragraph2="¿No sabes cuál elegir? Mándanos el número de invitados y el tipo de evento por WhatsApp y te recomendamos el modelo y la cantidad exacta. Respondemos en menos de 5 minutos."
     stats={[
-      { value: '6',          label: 'modelos en catálogo' },
-      { value: '6–12',       label: 'personas por pieza' },
+      { value: '6',             label: 'modelos en catálogo' },
+      { value: '6–12',          label: 'personas por pieza' },
       { value: 'pino nacional', label: 'madera 100% natural' },
     ]}
   />
+
   <div class="container">
-    <div class="grid-3">
-      <ServiceCard
-        title="Mesa Picnic Estándar"
-        description="El modelo más solicitado. 1.80 × 1.50 m, acomoda 6 personas. Pino lijado y barnizado a mano, acabado liso y uniforme. Ideal para bodas, reuniones familiares, corporativos y fiestas en jardín."
-        image="/img/mesa-picnic-boda-elegante-decoracion.avif"
-        href="/catalogo/mesa-picnic-estandar/"
-        btnLabel="Ver Mesa Estándar →"
-        badge="Estándar · 6 personas"
-        icon="🪵"
-      />
-      <ServiceCard
-        title="Mesa Picnic Grande"
-        description="2.40 × 1.50 m, acomoda 10 a 12 personas. El modelo preferido para eventos corporativos, festivales y bodas con mesa principal de pareja. Resistencia estructural para uso intensivo."
-        image="/img/mesa-picnic-evento-corporativo-networking.avif"
-        href="/catalogo/mesa-picnic-grande/"
-        btnLabel="Ver Mesa Grande →"
-        badge="Grande · 10-12 personas"
-        icon="🌳"
-      />
-      <ServiceCard
-        title="Mesa Picnic Infantil"
-        description="1.20 × 1.00 m, diseñada para niños de 3 a 10 años. Altura reducida, bordes redondeados y pino lijado a grano ultrafino. Sin astillas ni aristas. Acomoda hasta 10 niños cómodamente."
-        image="/img/infantil-cumple-1.avif"
-        href="/catalogo/mesa-picnic-infantil/"
-        btnLabel="Ver Mesa Infantil →"
-        badge="Infantil · 3-10 años"
-        icon="🧸"
-      />
-      <ServiceCard
-        title="Mesa Picnic Premium"
-        description="Mesa de acabado superior para bodas de alto perfil y eventos de lujo. Barniz de primera calidad, pino seleccionado sin nudos visibles. Para cuando la estética del mobiliario es parte central del evento."
-        image="/img/mesa-picnic-boda-elegante-luces.avif"
-        href="/catalogo/mesa-picnic-premium/"
-        btnLabel="Ver Mesa Premium →"
-        badge="Premium · Lujo"
-        icon="✨"
-      />
-      <ServiceCard
-        title="Set Picnic Completo"
-        description="Mesa estándar con mantelería, cojines, centro decorativo y ambientación básica incluidos. Un paquete llave en mano para picnics románticos, aniversarios y pedidas de mano. Sin necesidad de decoradora."
-        image="/img/mesa-picnic-pedida-mano-romantica.webp"
-        href="/catalogo/set-picnic-completo/"
-        btnLabel="Ver Set Completo →"
-        badge="Set Completo · Todo incluido"
-        icon="🎁"
-      />
-      <ServiceCard
-        title="Mesa Picnic Rústica"
-        description="Acabado campestre: pino con barniz rústico que resalta la veta y los nudos naturales de la madera. Estilo boho, vintage y rústico-chic. Perfecta para bodas en bosques, viñedos y haciendas."
-        image="/img/tema-mexicana-1.avif"
-        href="/catalogo/mesa-picnic-rustica/"
-        btnLabel="Ver Mesa Rústica →"
-        badge="Rústica · Boho & Vintage"
-        icon="🌿"
-      />
+    <div class="cat-grid">
+      {modelos.map((m) => (
+        <article class={`cat-card cat-card--${m.acento}`} id={`modelo-${m.id}`}>
+
+          <!-- Imagen -->
+          <a href={m.href} class="cat-card__img-link" tabindex="-1" aria-hidden="true">
+            <div class="cat-card__img-wrap">
+              <img
+                src={m.image}
+                alt={m.alt}
+                loading="lazy"
+                width="600"
+                height="450"
+                class="cat-card__img"
+              />
+              <!-- Badge flotante -->
+              <span class="cat-card__badge">{m.badge}</span>
+              <!-- Capacidad flotante -->
+              <div class="cat-card__cap">
+                <span class="cat-card__cap-num">{m.capacidad}</span>
+                <span class="cat-card__cap-unit">{m.unidad}</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Cuerpo -->
+          <div class="cat-card__body">
+            <!-- Tipo chip -->
+            <span class="cat-card__tipo">{m.tipo}</span>
+
+            <!-- Nombre -->
+            <h3 class="cat-card__title">
+              <a href={m.href}>{m.nombre}</a>
+            </h3>
+
+            <!-- Specs row -->
+            <ul class="cat-card__specs" role="list" aria-label="Especificaciones principales">
+              {m.specs.map((s) => (
+                <li class="cat-card__spec">{s}</li>
+              ))}
+            </ul>
+
+            <!-- Descripción -->
+            <p class="cat-card__desc">{m.descripcion}</p>
+
+            <!-- CTA -->
+            <a href={m.href} class="cat-card__cta">
+              {m.cta} <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- CTA de cotizar debajo del grid -->
+    <div class="cat-bottom-cta">
+      <p class="cat-bottom-cta__text">¿Necesitas combinar varios modelos en un mismo evento?</p>
+      <a href="/cotizar/" class="btn btn-primary">Cotizar ahora →</a>
+      <a
+        href={`https://wa.me/5564328954?text=${encodeURIComponent('Hola, vi el catálogo y quiero cotizar mesas picnic para mi evento.')}`}
+        class="btn btn-wa"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        WhatsApp · respuesta en 5 min
+      </a>
     </div>
   </div>
 </section>
@@ -154,13 +258,16 @@ const galeriaCatalogo = [
             <th scope="col">Capacidad</th>
             <th scope="col">Acabado</th>
             <th scope="col">Uso principal</th>
-            <th scope="col">Detalles</th>
+            <th scope="col">Ficha</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="model-name"><strong>Estándar</strong></td>
-            <td>1.80 × 1.50 m</td>
+            <td class="model-name">
+              <strong>Estándar</strong>
+              <span class="model-tag">Más solicitado</span>
+            </td>
+            <td class="dim-cell">1.80 × 1.50 m</td>
             <td><span class="cap-badge">6 personas</span></td>
             <td>Liso barnizado</td>
             <td>Bodas · Reuniones · Corporativos</td>
@@ -168,7 +275,7 @@ const galeriaCatalogo = [
           </tr>
           <tr>
             <td class="model-name"><strong>Grande</strong></td>
-            <td>2.40 × 1.50 m</td>
+            <td class="dim-cell">2.40 × 1.50 m</td>
             <td><span class="cap-badge">10–12 personas</span></td>
             <td>Liso barnizado</td>
             <td>Corporativos · Festivales · Bodas</td>
@@ -176,34 +283,37 @@ const galeriaCatalogo = [
           </tr>
           <tr>
             <td class="model-name"><strong>Infantil</strong></td>
-            <td>1.20 × 1.00 m</td>
+            <td class="dim-cell">1.20 × 1.00 m</td>
             <td><span class="cap-badge cap-badge--kids">8–10 niños</span></td>
-            <td>Ultra fino sin astillas</td>
+            <td>Ultra fino · Sin astillas</td>
             <td>Fiestas infantiles · Baby showers</td>
             <td><a href="/catalogo/mesa-picnic-infantil/" class="tbl-link">Ver →</a></td>
           </tr>
           <tr>
-            <td class="model-name"><strong>Premium</strong></td>
-            <td>1.80 × 1.50 m</td>
+            <td class="model-name">
+              <strong>Premium</strong>
+              <span class="model-tag model-tag--premium">VIP</span>
+            </td>
+            <td class="dim-cell">1.80 × 1.50 m</td>
             <td><span class="cap-badge cap-badge--premium">6 personas</span></td>
-            <td>Premium sin nudos</td>
+            <td>Sin nudos · 4 manos barniz</td>
             <td>Bodas de lujo · Eventos VIP</td>
-            <td><a href="/catalogo/mesa-picnic-premium/" class="tbl-link">Ver →</a></td>
+            <td><a href="/catalogo/mesa-picnic-premium/" class="tbl-link tbl-link--premium">Ver →</a></td>
           </tr>
           <tr>
             <td class="model-name"><strong>Set Completo</strong></td>
-            <td>1.80 × 1.50 m</td>
+            <td class="dim-cell">1.80 × 1.50 m</td>
             <td><span class="cap-badge">2–6 personas</span></td>
-            <td>Liso + decoración</td>
+            <td>Liso + decoración incluida</td>
             <td>Picnics románticos · Aniversarios</td>
             <td><a href="/catalogo/set-picnic-completo/" class="tbl-link">Ver →</a></td>
           </tr>
           <tr>
             <td class="model-name"><strong>Rústica</strong></td>
-            <td>1.80 × 1.50 m</td>
+            <td class="dim-cell">1.80 × 1.50 m</td>
             <td><span class="cap-badge">6 personas</span></td>
-            <td>Veta rústica barnizada</td>
-            <td>Bodas boho · Fiestas vintage</td>
+            <td>Barniz veta rústica</td>
+            <td>Bodas boho · Haciendas · Vintage</td>
             <td><a href="/catalogo/mesa-picnic-rustica/" class="tbl-link">Ver →</a></td>
           </tr>
         </tbody>
@@ -264,7 +374,7 @@ const galeriaCatalogo = [
     title="Los 6 Modelos en Eventos Reales"
     paragraph1="Así se ve el mobiliario de MESPIC en bodas, corporativos, festivales, fiestas infantiles y picnics románticos. La madera natural se adapta a cualquier estilo de decoración."
     stats={[
-      { value: '6 modelos',      label: 'en una sola bodega' },
+      { value: '6 modelos',       label: 'en una sola bodega' },
       { value: 'cualquier estilo', label: 'rústico, boho, premium…' },
       { value: 'CDMX + Edomex',   label: 'zona de cobertura' },
     ]}
@@ -345,42 +455,12 @@ const galeriaCatalogo = [
     "url": "https://mesaspicnic.com/catalogo/",
     "numberOfItems": 6,
     "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Mesa Picnic Estándar",
-        "url": "https://mesaspicnic.com/catalogo/mesa-picnic-estandar/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Mesa Picnic Grande",
-        "url": "https://mesaspicnic.com/catalogo/mesa-picnic-grande/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Mesa Picnic Infantil",
-        "url": "https://mesaspicnic.com/catalogo/mesa-picnic-infantil/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "name": "Mesa Picnic Premium",
-        "url": "https://mesaspicnic.com/catalogo/mesa-picnic-premium/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "name": "Set Picnic Completo",
-        "url": "https://mesaspicnic.com/catalogo/set-picnic-completo/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "name": "Mesa Picnic Rústica",
-        "url": "https://mesaspicnic.com/catalogo/mesa-picnic-rustica/"
-      }
+      { "@type": "ListItem", "position": 1, "name": "Mesa Picnic Estándar", "url": "https://mesaspicnic.com/catalogo/mesa-picnic-estandar/" },
+      { "@type": "ListItem", "position": 2, "name": "Mesa Picnic Grande", "url": "https://mesaspicnic.com/catalogo/mesa-picnic-grande/" },
+      { "@type": "ListItem", "position": 3, "name": "Mesa Picnic Infantil", "url": "https://mesaspicnic.com/catalogo/mesa-picnic-infantil/" },
+      { "@type": "ListItem", "position": 4, "name": "Mesa Picnic Premium", "url": "https://mesaspicnic.com/catalogo/mesa-picnic-premium/" },
+      { "@type": "ListItem", "position": 5, "name": "Set Picnic Completo", "url": "https://mesaspicnic.com/catalogo/set-picnic-completo/" },
+      { "@type": "ListItem", "position": 6, "name": "Mesa Picnic Rústica", "url": "https://mesaspicnic.com/catalogo/mesa-picnic-rustica/" }
     ]
   })} />
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -390,26 +470,17 @@ const galeriaCatalogo = [
       {
         "@type": "Question",
         "name": "¿Cuál es la diferencia entre la Mesa Estándar y la Grande?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "La Mesa Estándar mide 1.80 × 1.50 m y acomoda 6 personas. La Mesa Grande mide 2.40 × 1.50 m y acomoda 10 a 12 personas."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "La Mesa Estándar mide 1.80 × 1.50 m y acomoda 6 personas. La Mesa Grande mide 2.40 × 1.50 m y acomoda 10 a 12 personas." }
       },
       {
         "@type": "Question",
         "name": "¿Puedo combinar diferentes modelos en un mismo evento?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sí. Puedes combinar modelos en una sola cotización y una sola entrega. Por ejemplo, mesas estándar para adultos y mesas infantiles para zona de niños."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Puedes combinar modelos en una sola cotización y una sola entrega. Por ejemplo, mesas estándar para adultos y mesas infantiles para zona de niños." }
       },
       {
         "@type": "Question",
         "name": "¿Cuántas piezas pueden entregar para un mismo evento?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "MESPIC cuenta con más de 120 piezas en bodega para atender eventos de 100 o más personas. Para eventos masivos, se recomienda reservar con al menos 2 semanas de anticipación."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "MESPIC cuenta con más de 120 piezas en bodega para atender eventos de 100 o más personas. Para eventos masivos, se recomienda reservar con al menos 2 semanas de anticipación." }
       }
     ]
   })} />
@@ -418,30 +489,300 @@ const galeriaCatalogo = [
 </BaseLayout>
 
 <style>
-  /* ── Grids ── */
-  .grid-3 {
+  /* ══════════════════════════════════════════
+     CATALOG GRID — Layout editorial 3 columnas
+  ══════════════════════════════════════════ */
+  .cat-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
   }
 
-  .grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.25rem;
+  /* ══════════════════════════════════════════
+     CATALOG CARD
+  ══════════════════════════════════════════ */
+  .cat-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--c-border, #E7E0D8);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.22s ease, transform 0.22s ease;
+    position: relative;
   }
 
-  @media (max-width: 1024px) {
-    .grid-3 { grid-template-columns: repeat(2, 1fr); }
-    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .cat-card:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
   }
 
-  @media (max-width: 640px) {
-    .grid-3 { grid-template-columns: 1fr; }
-    .grid-4 { grid-template-columns: 1fr; }
+  /* ── Imagen ── */
+  .cat-card__img-link {
+    display: block;
+    text-decoration: none;
   }
 
-  /* ── Tabla de especificaciones ── */
+  .cat-card__img-wrap {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--c-bg-alt, #FAF8F5);
+  }
+
+  .cat-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .cat-card:hover .cat-card__img {
+    transform: scale(1.04);
+  }
+
+  /* ── Badge flotante (esquina sup-izq) ── */
+  .cat-card__badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(255, 255, 255, 0.96);
+    color: var(--c-primary, #2C5530);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    pointer-events: none;
+  }
+
+  /* Premium badge en dorado */
+  .cat-card--premium .cat-card__badge {
+    background: var(--c-accent, #D4A574);
+    color: #fff;
+  }
+
+  /* ── Capacidad (esquina inf-der) ── */
+  .cat-card__cap {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: var(--c-primary, #2C5530);
+    color: #fff;
+    border-radius: 10px;
+    padding: 6px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    pointer-events: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .cat-card--premium .cat-card__cap {
+    background: var(--c-accent, #D4A574);
+  }
+
+  .cat-card--kids .cat-card__cap {
+    background: #92400E;
+  }
+
+  .cat-card__cap-num {
+    font-size: 1.1875rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .cat-card__cap-unit {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.9;
+    margin-top: 1px;
+  }
+
+  /* ── Cuerpo ── */
+  .cat-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.375rem 1.5rem 1.625rem;
+    border-top: 3px solid var(--c-primary, #2C5530);
+  }
+
+  .cat-card--premium .cat-card__body {
+    border-top-color: var(--c-accent, #D4A574);
+  }
+
+  /* ── Chip de tipo ── */
+  .cat-card__tipo {
+    display: inline-block;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--c-primary, #2C5530);
+    margin-bottom: 0.5rem;
+  }
+
+  .cat-card--premium .cat-card__tipo {
+    color: var(--c-accent, #D4A574);
+  }
+
+  /* ── Nombre ── */
+  .cat-card__title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--c-text, #1C1917);
+    line-height: 1.25;
+    margin-bottom: 0.875rem;
+  }
+
+  .cat-card__title a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .cat-card__title a:hover {
+    color: var(--c-primary, #2C5530);
+  }
+
+  /* ── Specs row ── */
+  .cat-card__specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    list-style: none;
+    margin-bottom: 0.875rem;
+    padding: 0;
+  }
+
+  .cat-card__spec {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--c-text-muted, #78716C);
+    background: var(--c-bg-alt, #F5F1EC);
+    padding: 3px 9px;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  /* ── Descripción ── */
+  .cat-card__desc {
+    font-size: 0.8375rem;
+    color: var(--c-text-muted, #78716C);
+    line-height: 1.7;
+    flex: 1;
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── CTA ── */
+  .cat-card__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    background: var(--c-primary, #2C5530);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 0.7rem 1.25rem;
+    border-radius: 8px;
+    transition: background 0.18s ease;
+    width: 100%;
+    text-align: center;
+  }
+
+  .cat-card__cta:hover {
+    background: #224228;
+  }
+
+  .cat-card--premium .cat-card__cta {
+    background: var(--c-accent, #D4A574);
+  }
+
+  .cat-card--premium .cat-card__cta:hover {
+    background: #b8834c;
+  }
+
+  /* ══════════════════════════════════════════
+     CTA BAR DEBAJO DEL GRID
+  ══════════════════════════════════════════ */
+  .cat-bottom-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background: var(--c-bg-alt, #FAF8F5);
+    border: 1px solid var(--c-border, #E7E0D8);
+    border-radius: 16px;
+  }
+
+  .cat-bottom-cta__text {
+    font-size: 0.9375rem;
+    color: var(--c-text-muted, #78716C);
+    margin: 0;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: 0.7rem 1.375rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.18s ease, color 0.18s ease;
+    white-space: nowrap;
+  }
+
+  .btn-primary {
+    background: var(--c-primary, #2C5530);
+    color: #fff;
+  }
+
+  .btn-primary:hover {
+    background: #224228;
+  }
+
+  .btn-wa {
+    background: #25D366;
+    color: #fff;
+  }
+
+  .btn-wa:hover {
+    background: #1da855;
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--c-primary, #2C5530);
+    border: 2px solid var(--c-primary, #2C5530);
+  }
+
+  .btn-secondary:hover {
+    background: var(--c-primary, #2C5530);
+    color: #fff;
+  }
+
+  /* ══════════════════════════════════════════
+     TABLA DE ESPECIFICACIONES
+  ══════════════════════════════════════════ */
   .spec-table-wrap {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -453,7 +794,7 @@ const galeriaCatalogo = [
   .spec-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     background: #fff;
   }
 
@@ -466,8 +807,8 @@ const galeriaCatalogo = [
     padding: 0.875rem 1.25rem;
     text-align: left;
     font-weight: 700;
-    font-size: 0.8125rem;
-    letter-spacing: 0.04em;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     white-space: nowrap;
   }
@@ -477,13 +818,8 @@ const galeriaCatalogo = [
     transition: background 0.15s ease;
   }
 
-  .spec-table tbody tr:last-child {
-    border-bottom: none;
-  }
-
-  .spec-table tbody tr:hover {
-    background: var(--c-bg-alt, #FAF8F5);
-  }
+  .spec-table tbody tr:last-child { border-bottom: none; }
+  .spec-table tbody tr:hover { background: var(--c-bg-alt, #FAF8F5); }
 
   .spec-table tbody td {
     padding: 0.875rem 1.25rem;
@@ -492,9 +828,41 @@ const galeriaCatalogo = [
     vertical-align: middle;
   }
 
+  .model-name {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
   .model-name strong {
     color: var(--c-text, #1C1917);
     font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .model-tag {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--c-primary, #2C5530);
+    background: color-mix(in srgb, var(--c-primary, #2C5530) 10%, transparent);
+    padding: 2px 7px;
+    border-radius: 4px;
+    width: fit-content;
+  }
+
+  .model-tag--premium {
+    color: #7C4A1A;
+    background: color-mix(in srgb, var(--c-accent, #D4A574) 15%, transparent);
+  }
+
+  .dim-cell {
+    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+    font-size: 0.8125rem;
+    color: var(--c-text, #1C1917) !important;
+    font-weight: 600;
   }
 
   /* Badges de capacidad */
@@ -520,8 +888,8 @@ const galeriaCatalogo = [
     color: #7C4A1A;
   }
 
-  /* Link en tabla */
   .tbl-link {
+    display: inline-block;
     font-size: 0.8125rem;
     font-weight: 700;
     color: var(--c-primary, #2C5530);
@@ -530,11 +898,48 @@ const galeriaCatalogo = [
     border: 1.5px solid var(--c-primary, #2C5530);
     border-radius: 6px;
     transition: background 0.15s ease, color 0.15s ease;
-    display: inline-block;
   }
 
   .tbl-link:hover {
     background: var(--c-primary, #2C5530);
     color: #fff;
+  }
+
+  .tbl-link--premium {
+    color: var(--c-accent, #D4A574);
+    border-color: var(--c-accent, #D4A574);
+  }
+
+  .tbl-link--premium:hover {
+    background: var(--c-accent, #D4A574);
+    color: #fff;
+  }
+
+  /* ══════════════════════════════════════════
+     GRID GENÉRICO
+  ══════════════════════════════════════════ */
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* ══════════════════════════════════════════
+     RESPONSIVE
+  ══════════════════════════════════════════ */
+  @media (max-width: 1100px) {
+    .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 1024px) {
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 640px) {
+    .cat-grid { grid-template-columns: 1fr; }
+    .grid-4 { grid-template-columns: 1fr; }
+    .cat-bottom-cta { flex-direction: column; text-align: center; }
+    .cat-bottom-cta__text { min-width: unset; }
+    .btn { width: 100%; }
   }
 </style>

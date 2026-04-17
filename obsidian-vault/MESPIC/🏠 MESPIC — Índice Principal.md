@@ -94,6 +94,7 @@ mesaspicnic.com/
 - [[Empresas Aliadas]] — Directorio de los 8 aliados del sector
 - [[Componente - Card Empresa Aliada]] — HTML, CSS y tokens del componente B2B
 - [[Galería de Imágenes]] — Inventario de assets visuales
+- [[Template L3 — Proceso Cards]] — Patrón de sección para procesos N pasos: grid 3+2, tarjetas con acento terracota
 
 ---
 

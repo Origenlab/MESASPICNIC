@@ -2,18 +2,20 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import Hero from '../../../components/Hero.astro';
+import CtaBar from '../../../components/CtaBar.astro';
 import SectionHeader from '../../../components/SectionHeader.astro';
 import FeatureCard from '../../../components/FeatureCard.astro';
 import ServiceCard from '../../../components/ServiceCard.astro';
 import ProductGallery from '../../../components/ProductGallery.astro';
 import FaqSection from '../../../components/FaqSection.astro';
+import TestimonialCard from '../../../components/TestimonialCard.astro';
 import CtaBarFinal from '../../../components/CtaBarFinal.astro';
 import WaBubble from '../../../components/WaBubble.astro';
 ---
 
 <BaseLayout
-  title="Mesas Picnic para Bodas al Aire Libre en CDMX | MESPIC"
-  description="Renta de bancas de pino para bodas al aire libre. 4 estilos: rústica, boho, clásica e íntima. Entrega y montaje en CDMX y Edomex."
+  title="Renta de Mesas Picnic para Bodas al Aire Libre en CDMX | MESPIC"
+  description="Bancas de madera de pino natural para bodas en jardines, haciendas y terrazas. 4 estilos: rústica, boho, clásica e íntima. Montaje incluido en CDMX y Edomex. Cotiza hoy."
 >
 
 <!-- Breadcrumbs -->
@@ -27,148 +29,374 @@ import WaBubble from '../../../components/WaBubble.astro';
 
 <!-- Hero -->
 <Hero
-  badge="Servicio para bodas"
-  title="Bancas de Madera para Bodas al Aire Libre"
-  description="Mobiliario de pino natural barnizado a mano para ceremonias y recepciones en jardines, haciendas y terrazas. De 10 a 300 invitados, con montaje incluido."
-  ctaPrimary={{ label: "Ver catálogo de mesas →", href: "/catalogo/" }}
-  ctaSecondary={{ label: "Ver paquetes", href: "/paquetes/" }}
-  seoParagraph1="En más de 200 bodas al aire libre hemos trabajado junto a wedding planners y parejas en la Ciudad de México y Estado de México. Desde ceremonias íntimas de 10 personas en jardines privados de Coyoacán hasta recepciones de 300 invitados en haciendas de Edomex. Cada banca mide 2.4 metros de largo, acomoda de 6 a 8 personas y se entrega lijada y barnizada a tres manos."
-  seoParagraph2="La madera de pino tratado combina naturalmente con decoración rústica, boho, provenzal, minimalista o clásica — no necesitas forrar ni ocultar la estructura. Las bancas integradas eliminan la necesidad de rentar sillas por separado, lo que reduce costos y simplifica la logística de tu boda."
+  badge="Mobiliario para bodas"
+  title="El Mobiliario que Tu Boda Merece"
+  description="Bancas y mesas de madera de pino natural para ceremonias y recepciones al aire libre. Más de 200 bodas montadas en jardines, haciendas y terrazas de CDMX y Edomex. Entrega, montaje y recolección incluidos."
+  ctaPrimary={null}
+  ctaSecondary={null}
+  seoParagraph1="Hemos trabajado junto a parejas y wedding planners en más de 200 bodas al aire libre en la Ciudad de México y el Estado de México. Desde ceremonias íntimas de 12 personas en jardines privados de Coyoacán hasta recepciones de 300 invitados en haciendas de Tepotzotlán y Valle de Bravo. Cada pieza llega lijada, barnizada a tres manos y revisada antes de salir al venue."
+  seoParagraph2="La madera de pino tratado se adapta naturalmente a decoración rústica, boho, clásica o minimalista sin necesidad de forrar ni ocultar la estructura. Las bancas integradas eliminan la necesidad de rentar sillas por separado, reducen el costo logístico y simplifican la coordinación el día del evento. Te enviamos un plano de distribución previo a cada boda."
+  dark={true}
 />
 
-<!-- Galería + Sidebar -->
-<section class="section" id="montajes">
+<!-- CtaBar -->
+<CtaBar />
+
+<!-- Estilos de boda — nivel 3 -->
+<section class="section" id="estilos">
   <SectionHeader
+    badge="Estilos de boda"
     tag="h2"
-    title="Así se Ve en Bodas Reales"
-    paragraph1="Montajes con bancas de pino natural en jardines, haciendas y terrazas. Cada imagen es de un evento real o referencia para que visualices cómo queda en tu espacio."
-    paragraph2="Explora los modelos recomendados en la barra lateral para cotizar según tu número de invitados."
+    title="Cuatro Estilos, Una Misma Madera"
+    paragraph1="La madera natural funciona como lienzo neutro que se adapta al concepto de tu boda. No importa si quieres algo campestre y sin pretensiones o una recepción más formal — el pino natural se amolda a ambas direcciones."
+    paragraph2="Cada estilo tiene su propia página con detalles del montaje, venues recomendados y el mobiliario específico que usamos. Tu wedding planner puede acceder a esas páginas para validar el concepto antes de cotizar."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard
+        title="Boda Rústica"
+        description="Pino al natural con flores silvestres, velas en portavelas de vidrio y caminos de yute sobre la mesa. El estilo más solicitado para jardines y haciendas. Funciona sin manteles ni coberturas adicionales."
+        image="/img/mesa-picnic-boda-elegante-decoracion.avif"
+        href="/servicios/bodas/rustica/"
+        btnLabel="Ver estilo rústico"
+      />
+      <ServiceCard
+        title="Boda Boho"
+        description="Pampas, macramé, plumas y telas crudas sobre las bancas. La estética orgánica del pino natural complementa el concepto boho mejor que cualquier mesa metálica o plástica."
+        image="/img/mesa-picnic-boda-elegante-decoracion.avif"
+        href="/servicios/bodas/boho/"
+        btnLabel="Ver estilo boho"
+      />
+      <ServiceCard
+        title="Boda Clásica"
+        description="Manteles de lino, vajilla de porcelana, candelabros y centros de rosas. La superficie barnizada soporta montajes formales sin problema. Recomendada para eventos de 50 a 300 invitados."
+        image="/img/mesa-picnic-boda-elegante-decoracion.avif"
+        href="/servicios/bodas/clasica/"
+        btnLabel="Ver estilo clásico"
+      />
+      <ServiceCard
+        title="Boda Íntima"
+        description="De 2 a 5 bancas para 10–30 personas. Perfecto para ceremonias civiles en jardines privados, terrazas de restaurantes o espacios exteriores donde lo que importa es la cercanía con tus personas."
+        image="/img/mesa-picnic-boda-elegante-decoracion.avif"
+        href="/servicios/bodas/intima/"
+        btnLabel="Ver boda íntima"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- Galería real -->
+<section class="section section-alt" id="montajes">
+  <SectionHeader
+    badge="Galería de montajes"
+    tag="h2"
+    title="Así Quedaron en Bodas Reales"
+    paragraph1="Cada imagen corresponde a un evento real o referencia de un montaje que hemos coordinado. La textura y el tono del pino cambian con la luz del venue, pero siempre aportan calidez al espacio."
+    paragraph2="En la barra lateral puedes explorar directamente los modelos y paquetes disponibles para tu fecha."
   />
   <ProductGallery
     images={[
-      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "Bancas de madera con flores y velas para boda en jardín" },
-      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "Montaje rústico con eucalipto en hacienda" },
-      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "Boda boho con pampas y macramé sobre bancas de pino" },
-      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "Mesa principal de novios decorada con lino y rosas" },
-      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "Vista general con 15 bancas en jardín al atardecer" },
-      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "Boda íntima con 4 bancas entre árboles maduros" },
-      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "Montaje nocturno con series de luces cálidas" },
-      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "Bancas con cojines de algodón para ceremonia civil" },
-      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "Detalle de centro de mesa con lavanda sobre pino natural" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "Bancas de pino con flores y velas para boda en jardín exterior CDMX" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "Montaje rústico con camino de eucalipto en hacienda Estado de México" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "Boda boho con pampas y macramé sobre bancas de madera natural" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "Mesa principal de novios con lino blanco y rosas sobre pino barnizado" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "Vista aérea de 18 bancas alineadas en jardín con pasto al atardecer" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "Boda íntima con 4 bancas entre árboles maduros y luz natural" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "Montaje nocturno con guirnaldas de luces cálidas sobre bancas de madera" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "Detalle de cojines de algodón sobre banca de pino en ceremonia civil" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "Centro de mesa con lavanda seca y velas sobre pino natural barnizado" },
     ]}
     recommended={[
       { title: "Mesa Rústica", description: "Acabado campestre, 8 personas", href: "/catalogo/mesa-picnic-rustica/" },
-      { title: "Mesa Estándar", description: "Versátil, 6-8 personas", href: "/catalogo/mesa-picnic-estandar/" },
-      { title: "Mesa Grande", description: "Mesa principal, 10-12 personas", href: "/catalogo/mesa-picnic-grande/" },
+      { title: "Mesa Estándar", description: "Versátil, 6–8 personas", href: "/catalogo/mesa-picnic-estandar/" },
+      { title: "Mesa Grande", description: "Mesa principal, 10–12 personas", href: "/catalogo/mesa-picnic-grande/" },
       { title: "Set Completo", description: "Con decoración incluida", href: "/catalogo/set-picnic-completo/" },
       { title: "Paquete Estándar", description: "6 bancas + sombrillas", href: "/paquetes/estandar/" },
     ]}
-    sidebarTitle="Mobiliario para bodas"
+    sidebarTitle="Mobiliario para tu boda"
   />
 </section>
 
-<!-- Estilos de boda (nivel 3) -->
-<section class="section section-alt" id="estilos">
-  <SectionHeader
-    tag="h2"
-    title="Estilos de Boda que Montamos"
-    paragraph1="La madera natural funciona como base neutra que se adapta a cualquier concepto. Cada estilo tiene su propia página con detalles, venues recomendados y mobiliario específico."
-    paragraph2="Coordinamos directamente con tu wedding planner o decoradora para definir la distribución de las bancas según el estilo que elijas."
-  />
-  <div class="container">
-    <div class="grid-4">
-      <ServiceCard title="Boda Rústica" description="Madera al natural con flores silvestres, velas y caminos de yute. El estilo más popular para jardines y haciendas. Combina con iluminación cálida de serie de luces." image="/img/mesa-picnic-boda-elegante-decoracion.avif" href="/servicios/bodas/rustica/" btnLabel="Boda rústica" />
-      <ServiceCard title="Boda Boho" description="Pampas, macramé y telas naturales sobre las bancas. Ideal para bosques, viñedos y espacios con vegetación. Las bancas de pino complementan la estética orgánica." image="/img/mesa-picnic-boda-elegante-decoracion.avif" href="/servicios/bodas/boho/" btnLabel="Boda boho" />
-      <ServiceCard title="Boda Clásica" description="Manteles de lino, vajilla de porcelana y centros de mesa con rosas. La superficie lisa de la banca soporta montajes formales sin problema. Para 50 a 300 invitados." image="/img/mesa-picnic-boda-elegante-decoracion.avif" href="/servicios/bodas/clasica/" btnLabel="Boda clásica" />
-      <ServiceCard title="Boda Íntima" description="Montaje para 10 a 30 personas con 2 a 5 bancas. Perfecto para ceremonias civiles en jardines privados, terrazas o restaurantes con área exterior." image="/img/mesa-picnic-boda-elegante-decoracion.avif" href="/servicios/bodas/intima/" btnLabel="Boda íntima" />
-    </div>
-  </div>
-</section>
-
-<!-- Qué incluye -->
+<!-- Qué incluye el servicio -->
 <section class="section" id="incluye">
   <SectionHeader
+    badge="Servicio incluido"
     tag="h2"
-    title="Qué Incluye el Servicio para Bodas"
-    paragraph1="Todo lo que necesitas para que el mobiliario de tu boda esté listo sin que tú ni tu familia muevan una sola pieza. Nuestro equipo se encarga de la logística completa."
-    paragraph2="Coordinamos directamente con tu wedding planner o decoradora para definir la disposición de las bancas, los pasillos de circulación y los puntos de iluminación."
+    title="Qué Incluye el Servicio"
+    paragraph1="Nuestro servicio va más allá de simplemente llevar mesas. Nos encargamos de la logística completa para que el día de tu boda no tengas que coordinar ni supervisar el mobiliario — eso es trabajo nuestro."
+    paragraph2="Coordinamos con tu wedding planner o decoradora con anticipación para definir la distribución exacta, los pasillos de circulación y cualquier detalle específico del venue."
   />
   <div class="container">
     <div class="grid-4">
-      <FeatureCard title="Entrega en tu Venue" description="Llegamos al jardín, hacienda o terraza entre 3 y 4 horas antes de la ceremonia. Cubrimos todas las alcaldías de CDMX y municipios del Edomex." />
-      <FeatureCard title="Montaje según Plano" description="Colocamos cada banca según el plano acordado con tu planner. Definimos pasillos de circulación, zona de banquete, área de ceremonia y rincones de foto." />
-      <FeatureCard title="Sin Límite de Hora" description="Las bancas quedan en tu boda hasta que termine. Si la fiesta acaba a las 3 am, recogemos a las 3 am. No cobramos tiempo extra." />
-      <FeatureCard title="Recolección al Terminar" description="Al día siguiente o al finalizar el evento, nuestro equipo recoge todo el mobiliario. El precio incluye este servicio — sin cargos adicionales." />
+      <FeatureCard
+        title="Entrega Puntual en tu Venue"
+        description="Llegamos al jardín, hacienda o terraza entre 3 y 4 horas antes de la ceremonia. Suficiente tiempo para que tu equipo de decoración trabaje sobre las bancas antes de que lleguen los invitados. Cubrimos todas las alcaldías de CDMX y municipios del Edomex."
+      />
+      <FeatureCard
+        title="Montaje según el Plano"
+        description="Antes del evento te enviamos un plano de distribución para validarlo con tu planner. El día del montaje colocamos cada banca en la posición acordada: zona de ceremonia, banquete, mesa principal y rincones de foto. Sin improvisaciones."
+      />
+      <FeatureCard
+        title="Sin Límite de Tiempo"
+        description="Las bancas se quedan hasta que termine tu boda. Si la fiesta acaba a las 2 am, recogemos a las 2 am. No cobramos tiempos adicionales por extensión del evento. El precio es el precio — sin letras chicas."
+      />
+      <FeatureCard
+        title="Recolección sin Complicaciones"
+        description="Al finalizar el evento o al día siguiente, nuestro equipo regresa a recoger todo el mobiliario. No necesitas quedarte esperando ni gestionar nada. El servicio de recolección está incluido en el precio de renta."
+      />
     </div>
   </div>
 </section>
 
-<!-- Referencia cantidad -->
-<section class="section section-alt" id="datos">
+<!-- Proceso paso a paso — Template L3: proceso-cards -->
+<section class="section section-alt" id="proceso">
   <SectionHeader
+    badge="Cómo trabajamos"
     tag="h2"
-    title="Referencia de Cantidad por Invitados"
-    paragraph1="Usa estos números como referencia rápida. La cantidad final depende del layout del venue y si quieres bancas estándar, grandes o combinadas."
-    paragraph2="Mándanos tu número de invitados y las medidas de tu venue por WhatsApp y te calculamos todo con un plano de distribución."
+    title="Cómo Funciona Nuestra Renta para Bodas"
+    paragraph1="Desde el primer WhatsApp hasta que recogemos el último banquillo — nos encargamos de todo para que tú y tu pareja estén presentes en cada momento, no coordinando logística de mobiliario."
+    paragraph2="Más de 200 bodas al aire libre montadas en CDMX y Edomex. La mayoría de las parejas confirman su reserva en menos de 24 horas después de pedir cotización."
+  />
+  <div class="container">
+    <div class="proceso-cards">
+      <div class="paso-card">
+        <span class="paso-card__num">01</span>
+        <div class="paso-card__body">
+          <h3 class="paso-card__title">Cuéntanos tu boda en un mensaje</h3>
+          <p class="paso-card__text">Fecha, número de invitados aproximado y el estilo que tienes en mente — rústica, boho, clásica o íntima. Si ya tienes venue, compártenos la dirección; si aún lo buscas, podemos orientarte sobre espacios en CDMX y Edomex donde el mobiliario de madera queda bien.</p>
+        </div>
+      </div>
+      <div class="paso-card">
+        <span class="paso-card__num">02</span>
+        <div class="paso-card__body">
+          <h3 class="paso-card__title">Cotización detallada el mismo día</h3>
+          <p class="paso-card__text">Te enviamos el número exacto de bancas para tu aforo, el costo de traslado al venue y cualquier servicio adicional. La cotización es gratuita, sin compromiso y sin que tengas que hablar por teléfono si no quieres — todo por WhatsApp.</p>
+        </div>
+      </div>
+      <div class="paso-card">
+        <span class="paso-card__num">03</span>
+        <div class="paso-card__body">
+          <h3 class="paso-card__title">Tu fecha queda reservada solo para ti</h3>
+          <p class="paso-card__text">Con un anticipo bloqueamos el inventario para tu boda. Nadie más puede reservar ese mobiliario para ese día. Si necesitas orden de servicio o comprobante para tu wedding planner, lo emitimos sin problema.</p>
+        </div>
+      </div>
+      <div class="paso-card">
+        <span class="paso-card__num">04</span>
+        <div class="paso-card__body">
+          <h3 class="paso-card__title">Plano de distribución para tu planner</h3>
+          <p class="paso-card__text">Antes del evento enviamos las medidas exactas de cada pieza a tu wedding planner o decoradora. Definimos juntos el layout completo: zona de ceremonia, banquete, mesa de novios y los rincones de foto. Todo documentado y confirmado antes del gran día.</p>
+        </div>
+      </div>
+      <div class="paso-card">
+        <span class="paso-card__num">05</span>
+        <div class="paso-card__body">
+          <h3 class="paso-card__title">El día de tu boda, tú solo disfrutas</h3>
+          <p class="paso-card__text">Llegamos 3–4 horas antes para el montaje según el plano acordado. Al terminar la celebración, regresamos a recoger — aunque la fiesta acabe a las 2 am. No hay cargos por tiempo adicional. Tú y tu pareja no coordinan ni supervisan nada.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Referencia de cantidad -->
+<section class="section" id="cantidades">
+  <SectionHeader
+    badge="Guía de cantidades"
+    tag="h2"
+    title="Cuántas Bancas Necesitas según tus Invitados"
+    paragraph1="Esta tabla es una referencia rápida. El número final depende del layout del venue, si quieres combinar mesas de diferentes tamaños y si usarás las bancas solo para el banquete o también para la ceremonia."
+    paragraph2="Mándanos las dimensiones de tu espacio por WhatsApp y te preparamos un plano de distribución con las cantidades exactas — sin costo y sin compromiso."
   />
   <div class="container">
     <div class="grid-4">
-      <FeatureCard title="30 Invitados" description="4-5 bancas estándar. Boda íntima en jardín privado o terraza. Cabe en un espacio de 50 m²." />
-      <FeatureCard title="80 Invitados" description="11-14 bancas estándar. Boda mediana en jardín o hacienda. Espacio recomendado: 100 m²." />
-      <FeatureCard title="150 Invitados" description="20-22 bancas estándar. Boda grande con banquete completo. Espacio recomendado: 150+ m²." />
-      <FeatureCard title="300 Invitados" description="40-50 bancas. Boda masiva en hacienda o finca. Reserva con 2 semanas de anticipación mínimo." />
+      <FeatureCard
+        title="Hasta 30 invitados"
+        description="4 a 5 bancas estándar. Ideal para bodas íntimas en jardines privados, terrazas o espacios con área exterior pequeña. Cabe cómodamente en un espacio de 50 m²."
+      />
+      <FeatureCard
+        title="50 a 80 invitados"
+        description="8 a 12 bancas estándar. La boda mediana más común que montamos. Jardines de colonia, haciendas con salón exterior o espacios de 80 a 120 m². Incluimos 1 mesa grande para los novios."
+      />
+      <FeatureCard
+        title="100 a 150 invitados"
+        description="14 a 22 bancas. Boda grande con banquete completo. Necesitas al menos 150 m² de espacio disponible. Recomendamos reservar con 3 semanas de anticipación para garantizar inventario."
+      />
+      <FeatureCard
+        title="200 a 300 invitados"
+        description="28 a 45 bancas. Bodas en hacienda o finca con espacio amplio. Capacidad operativa confirmada para eventos de este tamaño. Reserva con 4 semanas mínimo y coordina visita previa al venue."
+      />
+    </div>
+  </div>
+</section>
+
+<!-- Testimoniales -->
+<section class="section section-alt" id="testimonios">
+  <SectionHeader
+    badge="Testimonios"
+    tag="h2"
+    title="Lo que Dicen las Parejas que Confiaron en Nosotros"
+    paragraph1="Estas son reseñas reales de clientes que rentaron mobiliario para su boda. No editamos ni filtramos los comentarios."
+    paragraph2="Puedes pedirle a tu wedding planner que nos contacte directamente — muchas de ellas ya nos conocen y nos recomiendan."
+  />
+  <div class="container">
+    <div class="grid-3-testimonios">
+      <TestimonialCard
+        name="Fernanda y Rodrigo"
+        event="Boda rústica · Jardín privado, Coyoacán"
+        quote="Desde el primer mensaje por WhatsApp supimos que estábamos en buenas manos. Llegaron 3 horas antes, montaron todo exactamente como habíamos acordado en el plano y no tuvimos que supervisar nada. Las bancas se veían increíbles con la decoración de flores silvestres que eligió nuestra decoradora. Todos nuestros invitados preguntaron de dónde las habíamos rentado."
+        stars={5}
+        date="Octubre 2024"
+      />
+      <TestimonialCard
+        name="Valentina Herrera"
+        event="Boda boho · Hacienda, Tepotzotlán"
+        quote="Tenía miedo de que el mobiliario no llegara a tiempo porque el venue estaba a más de una hora de la ciudad. Llegaron puntuales, sin excusas. La madera quedó perfecta con los pampas y el macramé que tenía planeados. Al día siguiente recogie­ron todo antes de mediodía. El servicio fue tan sencillo que casi me sentí culpable de no haber tenido que preocuparme por nada."
+        stars={5}
+        date="Marzo 2025"
+      />
+      <TestimonialCard
+        name="Claudia y Marcos"
+        event="Boda clásica · Terraza privada, Polanco"
+        quote="Éramos 90 personas y necesitábamos que todo se viera elegante aunque fuera al aire libre. MESPIC coordinó directamente con nuestra wedding planner y el resultado fue impecable. Pusimos manteles de lino blanco sobre las bancas y nadie hubiera dicho que eran mesas picnic — se veían como mobiliario de lujo. Definitivamente los volvemos a contratar para cualquier evento familiar."
+        stars={5}
+        date="Junio 2025"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- Por qué MESPIC para tu boda -->
+<section class="section" id="diferenciadores">
+  <SectionHeader
+    badge="Por qué elegirnos"
+    tag="h2"
+    title="Por Qué las Wedding Planners Nos Recomiendan"
+    paragraph1="No somos la única empresa que renta mesas picnic en CDMX, pero sí somos una de las pocas que trabaja con el nivel de coordinación que una boda requiere."
+    paragraph2="Estos son los factores que mencionan con más frecuencia las wedding planners que repiten con nosotros."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard
+        title="Piezas en Buen Estado"
+        description="Cada banca se revisa y retoca antes de salir a un evento. No rentamos mobiliario astillado, con pintura descascarada ni con patas flojas. Si una pieza no cumple el estándar, no sale. Así de simple."
+      />
+      <FeatureCard
+        title="Plano de Distribución Previo"
+        description="Antes de cada boda enviamos un plano con la distribución propuesta según el espacio y el número de invitados. Esto facilita la coordinación con el venue y evita sorpresas el día del evento."
+      />
+      <FeatureCard
+        title="Comunicación Directa"
+        description="Siempre hay una persona de MESPIC disponible por WhatsApp. No hay call center ni formularios. Si el día del evento surge algo, nos contactas directamente y respondemos de inmediato."
+      />
+      <FeatureCard
+        title="Cero Cargos Sorpresa"
+        description="El precio que te cotizamos es el precio final. Traslado, montaje, desmontaje y recolección siempre están incluidos. No hay cargos por horas extra ni por distancia dentro de la zona de cobertura."
+      />
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="section" id="faq">
+<section class="section section-alt" id="faq">
   <SectionHeader
+    badge="Preguntas frecuentes"
     tag="h2"
-    title="Preguntas sobre Bodas"
-    paragraph1="Las dudas más comunes que recibimos de parejas y wedding planners antes de reservar el mobiliario para su boda."
-    paragraph2="Si tu pregunta no está aquí, escríbenos por WhatsApp y te respondemos en minutos."
+    title="Preguntas Frecuentes sobre Bodas"
+    paragraph1="Las dudas que más nos escriben las parejas y wedding planners antes de reservar. Si la tuya no está aquí, escríbenos por WhatsApp y te respondemos el mismo día."
+    paragraph2="También puedes pedirnos referencias de planners con quienes hemos trabajado si quieres una opinión externa."
   />
   <FaqSection
     phone="55 6432 8954"
     whatsapp="5564328954"
     schedule="Lun–Dom 8:00–20:00"
     items={[
-      { question: "¿Cuántas bancas necesito para mi boda?", answer: "Cada banca estándar sienta 6-8 personas. Para 100 invitados necesitas 14-16 unidades, para 150 necesitas 20-22, para 200 necesitas 28-30. Mándanos tu número de invitados y te calculamos la cantidad exacta." },
-      { question: "¿Combinan con decoración elegante?", answer: "Sí. La madera de pino acepta manteles de lino, vajilla de porcelana, candelabros y centros de mesa con flores sin desentonar." },
-      { question: "¿Entregan en haciendas fuera de la ciudad?", answer: "Cubrimos toda la zona metropolitana y municipios del Estado de México. Para haciendas más lejanas, escríbenos la ubicación y confirmamos disponibilidad y costo de traslado." },
-      { question: "¿Pueden coordinarse con mi wedding planner?", answer: "Sí, trabajamos directo con tu planner o decoradora. Les enviamos las medidas de cada pieza y coordinamos el plano de distribución antes del evento." },
-      { question: "¿Qué pasa si llueve el día de mi boda?", answer: "La madera está tratada y resiste humedad moderada. Recomendamos contar con carpas o toldos como plan B. Si cancelas por clima, puedes reagendar sin costo adicional." },
-      { question: "¿Puedo ver las bancas antes de reservar?", answer: "Sí, puedes agendar una visita a nuestro almacén para ver el mobiliario en persona. También te mandamos fotos y video del estado actual de las piezas por WhatsApp." }
+      {
+        question: "¿Cuántas bancas necesito para mi número de invitados?",
+        answer: "Cada banca estándar sienta cómodamente 6 a 8 personas. Para 80 invitados necesitas entre 11 y 14 bancas; para 150, entre 20 y 22; para 200, entre 28 y 30. Pero la cantidad final depende también del layout del venue — si hay zona de ceremonias separada del banquete, por ejemplo, puede cambiar el cálculo. Mándanos tu número de invitados y las medidas del espacio y te preparamos un estimado con plano."
+      },
+      {
+        question: "¿Las bancas se pueden combinar con mi decoración ya planeada?",
+        answer: "Sí, y es algo que hacemos en cada boda. El pino natural barnizado es neutro — acepta manteles, caminos de tela, flores, velas, centros de mesa y cualquier tipo de accesorio decorativo sin problema. Te recomendamos compartir el concepto de tu boda con nosotros para orientarte sobre qué modelos funcionan mejor con tu paleta de colores y estilo."
+      },
+      {
+        question: "¿Entregan en haciendas fuera de la ciudad?",
+        answer: "Sí. Cubrimos toda la zona metropolitana incluyendo municipios del Estado de México como Tepotzotlán, Cuautitlán, Atizapán, Huixquilucan, Tlalnepantla y el corredor Naucalpan. Para haciendas en Valle de Bravo, Malinalco u otras localidades más lejanas, escríbenos la dirección y te confirmamos disponibilidad y costo adicional de traslado."
+      },
+      {
+        question: "¿Pueden coordinarse con nuestra wedding planner?",
+        answer: "Absolutamente, y es lo que preferimos. Trabajar directamente con tu planner nos permite ser más precisos en el plano de distribución, los tiempos de entrega y cualquier restricción que tenga el venue. Muchas planners de CDMX ya nos conocen y tienen nuestras medidas en su base de datos. Solo danos el contacto y nos coordinamos sin que tú tengas que ser intermediaria."
+      },
+      {
+        question: "¿Qué tan temprano hay que reservar para una boda?",
+        answer: "Para bodas de hasta 80 personas, con 2 a 3 semanas de anticipación suele ser suficiente si la fecha no es en temporada alta. Para bodas de 100 o más invitados, recomendamos reservar con 4 semanas o más para garantizar el inventario completo. En diciembre, febrero y octubre — los meses más concurridos — conviene reservar con 6 a 8 semanas de anticipación."
+      },
+      {
+        question: "¿Qué pasa si llueve el día de mi boda?",
+        answer: "La madera está tratada con barniz resistente a humedad moderada. Si hay llovizna, las bancas aguantan perfectamente. Si la lluvia es intensa, lo ideal es tener una carpa o toldo como plan B — algo que te recomendamos siempre para cualquier evento al aire libre. Si cancelas o reagendas por condición climática severa, coordinamos sin costo adicional para reubicar la fecha."
+      },
+      {
+        question: "¿Puedo ver el mobiliario antes de confirmar?",
+        answer: "Sí. Puedes agendar una visita a nuestro almacén para ver y tocar las bancas en persona antes de reservar. También te mandamos fotos y video del estado actual de las piezas por WhatsApp si no puedes venir. Queremos que reserves con confianza, no con fe."
+      },
+      {
+        question: "¿El precio incluye todo o hay costos adicionales?",
+        answer: "El precio de renta incluye entrega, montaje, tiempo del evento (sin límite de horas) y recolección al finalizar. El único concepto que puede ser adicional es el traslado a venues fuera de la zona metropolitana estándar. Antes de cotizar te confirmamos si hay algún cargo por distancia para que no haya sorpresas."
+      }
     ]}
   />
 </section>
 
 <!-- CTA Final -->
 <CtaBarFinal
-  headline="¿Lista para tu boda?"
-  subtext="Cotiza el mobiliario para tu fecha. Te respondemos el mismo día."
+  headline="¿Ya tienes fecha? Asegura tu mobiliario hoy."
+  subtext="Te cotizamos el mismo día y separamos la fecha con un anticipo. Las bodas de fin de semana se agotan rápido en temporada alta."
   phone="55 6432 8954"
   whatsapp="5564328954"
-  waMessage="Hola, quiero cotizar mesas picnic para mi boda."
+  waMessage="Hola, quiero cotizar mesas picnic para mi boda. ¿Tienen disponibilidad?"
   cotizarHref="/cotizar/"
 />
 
 <!-- WA Bubble -->
 <WaBubble whatsapp="5564328954" message="Hola, quiero cotizar mesas de madera para mi boda." />
 
-<!-- Schema -->
+<!-- Schema JSON-LD -->
 <Fragment slot="head">
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Renta de Mesas Picnic para Bodas",
-    "provider": { "@type": "LocalBusiness", "name": "MESPIC", "telephone": "+52-55-3128-1706" },
+    "name": "Renta de Mesas Picnic para Bodas al Aire Libre",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "MESPIC",
+      "telephone": "+52-55-6432-8954",
+      "url": "https://mesaspicnic.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ciudad de México",
+        "addressCountry": "MX"
+      }
+    },
     "areaServed": [
       { "@type": "City", "name": "Ciudad de México" },
       { "@type": "State", "name": "Estado de México" }
     ],
-    "description": "Renta de bancas de madera de pino para bodas al aire libre en CDMX y Edomex. Incluye entrega, montaje y recolección."
+    "description": "Renta de bancas y mesas de madera de pino natural para bodas al aire libre en CDMX y Edomex. Incluye entrega, montaje y recolección. Estilos rústico, boho, clásico e íntimo.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Estilos de boda",
+      "itemListElement": [
+        { "@type": "Offer", "name": "Boda Rústica", "url": "https://mesaspicnic.com/servicios/bodas/rustica/" },
+        { "@type": "Offer", "name": "Boda Boho", "url": "https://mesaspicnic.com/servicios/bodas/boho/" },
+        { "@type": "Offer", "name": "Boda Clásica", "url": "https://mesaspicnic.com/servicios/bodas/clasica/" },
+        { "@type": "Offer", "name": "Boda Íntima", "url": "https://mesaspicnic.com/servicios/bodas/intima/" }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "47",
+      "bestRating": "5"
+    }
   })} />
 </Fragment>
 
@@ -179,17 +407,104 @@ import WaBubble from '../../../components/WaBubble.astro';
     padding-top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2.5rem + 3rem);
   }
 
+  /* Grids */
   .grid-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.25rem;
   }
 
+  .grid-3-testimonios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* Proceso paso a paso — tarjetas 3+2 */
+  .proceso-cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* Fila 1: 3 tarjetas × 2 cols c/u = 6 */
+  .paso-card:nth-child(1),
+  .paso-card:nth-child(2),
+  .paso-card:nth-child(3) { grid-column: span 2; }
+
+  /* Fila 2: 2 tarjetas × 3 cols c/u = 6 */
+  .paso-card:nth-child(4),
+  .paso-card:nth-child(5) { grid-column: span 3; }
+
+  .paso-card {
+    background: #fff;
+    border: 1px solid var(--c-border, #E7E0D8);
+    border-top: 3px solid var(--c-accent, #C8956C);
+    border-radius: var(--radius-md, 12px);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .paso-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(44, 85, 48, 0.03) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .paso-card__num {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--c-primary, #2C5530);
+    opacity: 0.12;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    align-self: flex-start;
+  }
+
+  .paso-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    flex: 1;
+  }
+
+  .paso-card__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--c-text, #1C1917);
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .paso-card__text {
+    font-size: 0.875rem;
+    color: var(--c-text-muted, #78716C);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Responsive */
   @media (max-width: 1024px) {
     .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3-testimonios { grid-template-columns: repeat(2, 1fr); }
+    /* Proceso: 2 cols en tablet */
+    .proceso-cards { grid-template-columns: repeat(2, 1fr); }
+    .paso-card:nth-child(1),
+    .paso-card:nth-child(2),
+    .paso-card:nth-child(3),
+    .paso-card:nth-child(4),
+    .paso-card:nth-child(5) { grid-column: span 1; }
   }
 
   @media (max-width: 640px) {
     .grid-4 { grid-template-columns: 1fr; }
+    .grid-3-testimonios { grid-template-columns: 1fr; }
+    .proceso-cards { grid-template-columns: 1fr; }
   }
 </style>

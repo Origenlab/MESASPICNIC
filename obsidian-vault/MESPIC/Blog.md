@@ -1,43 +1,53 @@
 # 📝 Blog
 
 > Parte de → [[🏠 MESPIC — Índice Principal]] | [[SEO y Palabras Clave]]
+> Actualizado: 2026-04-17
 
 **URL:** `https://mesaspicnic.com/blog/`
 
 ---
 
-## Artículos Existentes (3 publicados)
+## Layout del Blog
 
-### 1. Guía Completa: Mesas Picnic para Bodas en CDMX
-- **Archivo:** `renta-mesas-picnic-bodas-cdmx.mdx`
-- **URL:** `/blog/renta-mesas-picnic-bodas-cdmx/`
-- **Tema:** Guía para usar mesas picnic en bodas
+Todos los artículos usan **[[BlogLayout — Template]]** — layout homologado con el resto del sitio.
 
-### 2. Decoración de Mesas Picnic para Fiestas Infantiles
-- **Archivo:** `decoracion-mesas-picnic-fiestas-infantiles.mdx`
-- **URL:** `/blog/decoracion-mesas-picnic-fiestas-infantiles/`
-- **Tema:** Ideas de decoración para fiestas de niños
-
-### 3. Mesas Picnic para Eventos Corporativos
-- **Archivo:** `mesas-picnic-eventos-corporativos.mdx`
-- **URL:** `/blog/mesas-picnic-eventos-corporativos/`
-- **Tema:** Uso corporativo del mobiliario
+Patrón: `BaseLayout → Hero(dark) → CtaBar → Artículo + Sidebar → CtaBarFinal`
 
 ---
 
-## Artículos en HTML (dist)
+## Artículos Publicados (4 artículos — formato .astro)
 
-| Archivo | Tema |
-|---|---|
-| `10-ideas-decoracion-mesas-picnic.html` | 10 ideas de decoración |
-| `fiesta-infantil-perfecta-mesas-picnic.html` | Fiesta infantil perfecta |
-| `guia-completa-bodas-mesas-picnic.html` | Guía bodas |
+### 1. Mesas Picnic para Bodas en CDMX: Guía Completa
+- **Archivo:** `renta-mesas-picnic-bodas-cdmx.astro`
+- **URL:** `/blog/renta-mesas-picnic-bodas-cdmx/`
+- **Categoría:** Bodas al aire libre
+- **Layout:** BlogLayout ✅
+- **Secciones:** Lead → Feature cards → Tabla invitados → 4 estilos → Pasos decoración → Galería → Servicios incluidos → Comparativa → Cobertura → FAQ → CTA final
+
+### 2. Cuántas Mesas Picnic Necesitas Según el Número de Invitados
+- **Archivo:** `cuantas-mesas-picnic-necesitas-segun-invitados.astro`
+- **URL:** `/blog/cuantas-mesas-picnic-necesitas-segun-invitados/`
+- **Categoría:** Guías y cálculo
+- **Layout:** BlogLayout ✅
+- **Secciones:** Lead → Feature cards → Tabla de cálculo → Por tipo de evento → Ejemplos reales → Errores comunes → FAQ → CTA final
+
+### 3. Decoración de Mesas Picnic para Fiestas Infantiles
+- **Archivo:** `decoracion-mesas-picnic-fiestas-infantiles.astro`
+- **URL:** `/blog/decoracion-mesas-picnic-fiestas-infantiles/`
+- **Categoría:** Fiestas infantiles
+- **Layout:** BlogLayout ✅
+- **Secciones:** Lead → 5 temáticas → Materiales → Distribución por cantidad → Consejos de montaje → Galería → FAQ → CTA final
+
+### 4. Mobiliario Rústico para Eventos Corporativos
+- **Archivo:** `mesas-picnic-eventos-corporativos.astro`
+- **URL:** `/blog/mesas-picnic-eventos-corporativos/`
+- **Categoría:** Eventos corporativos
+- **Layout:** BlogLayout ✅
+- **Secciones:** Lead → Tipos de eventos → Beneficios → Tabla de cálculo → Logística empresarial → Casos reales → Comparativa → FAQ → CTA final
 
 ---
 
 ## Artículos Planificados (SEO Strategy)
-
-Según [[SEO y Palabras Clave]], los artículos prioritarios son:
 
 | Keyword objetivo | Artículo sugerido | Prioridad |
 |---|---|---|
@@ -51,9 +61,29 @@ Según [[SEO y Palabras Clave]], los artículos prioritarios son:
 
 ---
 
+## Sidebar — Widgets fijos
+
+Todos los artículos comparten el mismo sidebar con 5 widgets:
+1. CTA WhatsApp (verde oscuro)
+2. Servicios relacionados (links limpios, sin iconos)
+3. Catálogo de productos (2 thumbnails)
+4. Artículos relacionados (3 thumbnails)
+5. Cobertura CDMX + Edomex
+
+---
+
+## Cómo crear un nuevo artículo
+
+1. Crear `src/pages/blog/[slug].astro`
+2. Usar `BlogLayout` — ver [[BlogLayout — Template]] para props y estructura
+3. Nunca usar `.mdx` con `BaseLayout` — el patrón legacy está descontinuado
+4. Ejecutar `npm run build` y copiar a `blog/[slug]/`
+
+---
+
 ## Frecuencia Objetivo
 - 1–2 artículos/semana (según plan SEO)
-- Enlace interno desde cada artículo → páginas de servicios
+- Enlace interno desde cada artículo → páginas de servicios correspondientes
 
 ---
 

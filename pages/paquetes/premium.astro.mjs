@@ -1,0 +1,89 @@
+import { c as createComponent, r as renderComponent, a as renderTemplate, F as Fragment, u as unescapeHTML, m as maybeRenderHead } from '../../chunks/astro/server_C6AFCjSs.mjs';
+import 'kleur/colors';
+import { $ as $$BaseLayout } from '../../chunks/BaseLayout_CKYJJsIr.mjs';
+import { $ as $$Breadcrumbs } from '../../chunks/Breadcrumbs_DnPvbfSR.mjs';
+import { $ as $$Hero, a as $$CtaBar } from '../../chunks/CtaBar_BVSMSHmm.mjs';
+import { $ as $$SectionHeader } from '../../chunks/SectionHeader_CxAVDIGG.mjs';
+import { $ as $$FeatureCard, a as $$FaqSection } from '../../chunks/FaqSection_DsOaJ6r-.mjs';
+import { $ as $$ServiceCard } from '../../chunks/ServiceCard_DC6JjJ3j.mjs';
+import { $ as $$ProductGallery } from '../../chunks/ProductGallery_HLrT4Day.mjs';
+import { $ as $$CtaBarFinal } from '../../chunks/CtaBarFinal_BKXqK_qM.mjs';
+import { $ as $$WaBubble } from '../../chunks/WaBubble_ByMWnQ5I.mjs';
+/* empty css                                    */
+export { renderers } from '../../renderers.mjs';
+
+var __freeze = Object.freeze;
+var __defProp = Object.defineProperty;
+var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(cooked.slice()) }));
+var _a;
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Paquete Premium de Mesas Picnic \u2014 60 Personas | MESPIC CDMX", "description": "Paquete Premium de MESPIC: 10 bancas de pino natural para eventos de hasta 60 personas en CDMX y Edomex. Combinaci\xF3n de modelos seg\xFAn el evento. Precio final con traslado, montaje y recolecci\xF3n incluidos.", "ogImage": "/img/mesa-picnic-feria-gastronomica-multitud.avif", "data-astro-cid-grq7b3mx": true }, { "breadcrumbs": ($$result2) => renderTemplate`${renderComponent($$result2, "Fragment", Fragment, { "slot": "breadcrumbs" }, { "default": ($$result3) => renderTemplate` ${renderComponent($$result3, "Breadcrumbs", $$Breadcrumbs, { "items": [
+    { label: "Inicio", href: "/" },
+    { label: "Paquetes", href: "/paquetes/" },
+    { label: "Paquete Premium" }
+  ], "data-astro-cid-grq7b3mx": true })} ` })}`, "default": ($$result2) => renderTemplate`    ${renderComponent($$result2, "Hero", $$Hero, { "badge": "Paquete Premium", "title": "Paquete Premium \u2014 10 Bancas para Hasta 60 Personas", "description": "El paquete de mayor escala del cat\xE1logo. Diez bancas en combinaci\xF3n de modelos est\xE1ndar y/o grande, seg\xFAn el layout y el tipo de evento. Para bodas medianas, corporativos de grupo y festivales de escala completa.", "ctaPrimary": { label: "Cotizar ahora \u2192", href: "/cotizar/" }, "ctaSecondary": { label: "Ver todos los paquetes", href: "/paquetes/" }, "seoParagraph1": "El Paquete Premium est\xE1 dise\xF1ado para eventos donde el n\xFAmero de invitados supera la capacidad del Est\xE1ndar pero donde el cliente quiere seguir trabajando con un paquete predefinido en lugar de cotizar por volumen. Las 10 bancas cubren c\xF3modamente hasta 60 personas y se distribuyen en aproximadamente 90 m\xB2 de espacio \xFAtil.", "seoParagraph2": "La composici\xF3n del Paquete Premium es la m\xE1s flexible de los tres: la combinaci\xF3n de bancas est\xE1ndar y grandes se define seg\xFAn el tipo de evento y el layout del espacio. Para una boda, t\xEDpicamente incluimos una proporci\xF3n mayor de bancas est\xE1ndar con 1 o 2 grandes para la mesa principal. Para un corporativo o festival, la combinaci\xF3n puede ser distinta. Esto se acuerda en la cotizaci\xF3n sin costo adicional. El precio final incluye traslado, montaje, uso ilimitado y recolecci\xF3n.", "dark": true, "data-astro-cid-grq7b3mx": true })}  ${renderComponent($$result2, "CtaBar", $$CtaBar, { "data-astro-cid-grq7b3mx": true })}  ${maybeRenderHead()}<section class="section" id="galeria" data-astro-cid-grq7b3mx> ${renderComponent($$result2, "SectionHeader", $$SectionHeader, { "tag": "h2", "badge": "El Premium en eventos", "title": "10 Bancas en Bodas Medianas, Corporativos y Festivales", "paragraph1": "60 personas es el umbral donde el evento deja de ser \xEDntimo y se convierte en una celebraci\xF3n de escala completa. As\xED se ve el Paquete Premium distribuido en diferentes eventos.", "paragraph2": "\xBFTus invitados son m\xE1s de 60? Cotizamos por volumen con capacidad para 100 o m\xE1s personas. Escr\xEDbenos con tu n\xFAmero de invitados y fecha.", "data-astro-cid-grq7b3mx": true })} ${renderComponent($$result2, "ProductGallery", $$ProductGallery, { "images": [
+    { src: "/img/mesa-picnic-feria-gastronomica-multitud.avif", alt: "Paquete premium con 10 bancas picnic para festival gastron\xF3mico de 60 personas CDMX" },
+    { src: "/img/mesa-picnic-boda-elegante-decoracion.avif", alt: "10 bancas est\xE1ndar distribuidas para boda mediana de 55 personas en jard\xEDn" },
+    { src: "/img/corp-teambuilding-1.avif", alt: "Paquete premium corporativo con 10 mesas picnic para team building de empresa" },
+    { src: "/img/mesa-picnic-evento-corporativo-networking.avif", alt: "10 mesas picnic para convivencia corporativa de \xE1rea completa al aire libre" },
+    { src: "/img/mesa-picnic-boda-elegante-luces.avif", alt: "Paquete premium con iluminaci\xF3n para boda de 60 personas en jard\xEDn nocturno" },
+    { src: "/img/tema-mexicana-1.avif", alt: "10 bancas con decoraci\xF3n para fiesta de XV a\xF1os o graduaci\xF3n de 60 invitados" }
+  ], "recommended": [
+    { title: "Paquete B\xE1sico", description: "4 bancas \xB7 24 personas", href: "/paquetes/basico/", image: "/img/mesa-picnic-reunion-familiar-comida.avif" },
+    { title: "Paquete Est\xE1ndar", description: "6 bancas \xB7 36 personas", href: "/paquetes/estandar/", image: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
+    { title: "Mesa Grande", description: "Pieza individual \xB7 10\u201312 pax", href: "/catalogo/mesa-picnic-grande/", image: "/img/mesa-picnic-evento-corporativo-networking.avif" },
+    { title: "Mesa Est\xE1ndar", description: "Pieza individual \xB7 6 pax", href: "/catalogo/mesa-picnic-estandar/", image: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
+    { title: "Cotizar volumen", description: "+60 personas", href: "/cotizar/", image: "/img/mesa-picnic-feria-gastronomica-multitud.avif" }
+  ], "sidebarTitle": "Otros paquetes disponibles", "data-astro-cid-grq7b3mx": true })} </section>  <section class="section section-alt" id="composicion" data-astro-cid-grq7b3mx> ${renderComponent($$result2, "SectionHeader", $$SectionHeader, { "tag": "h2", "badge": "Composici\xF3n del paquete", "title": "Qu\xE9 Incluye el Paquete Premium", "paragraph1": "El Premium es el paquete con mayor flexibilidad en composici\xF3n. La combinaci\xF3n de modelos se define seg\xFAn el formato del evento y el layout del espacio.", "stats": [
+    { value: "10", label: "bancas incluidas" },
+    { value: "60", label: "personas cubiertas" },
+    { value: "~90 m\xB2", label: "espacio requerido" }
+  ], "data-astro-cid-grq7b3mx": true })} <div class="container" data-astro-cid-grq7b3mx> <div class="spec-grid" data-astro-cid-grq7b3mx> <div class="spec-card" data-astro-cid-grq7b3mx> <h3 class="spec-card__title" data-astro-cid-grq7b3mx>Composición Base</h3> <ul class="spec-list" role="list" data-astro-cid-grq7b3mx> <li class="spec-list__item" data-astro-cid-grq7b3mx> <span class="spec-list__label" data-astro-cid-grq7b3mx>Bancas incluidas</span> <span class="spec-list__value" data-astro-cid-grq7b3mx>10 bancas</span> </li> <li class="spec-list__item" data-astro-cid-grq7b3mx> <span class="spec-list__label" data-astro-cid-grq7b3mx>Composición</span> <span class="spec-list__value" data-astro-cid-grq7b3mx>Combinación de modelos</span> </li> <li class="spec-list__item" data-astro-cid-grq7b3mx> <span class="spec-list__label" data-astro-cid-grq7b3mx>Capacidad total</span> <span class="spec-list__value" data-astro-cid-grq7b3mx>Hasta 60 personas</span> </li> <li class="spec-list__item" data-astro-cid-grq7b3mx> <span class="spec-list__label" data-astro-cid-grq7b3mx>Traslado</span> <span class="spec-list__value spec-list__value--ok" data-astro-cid-grq7b3mx>Incluido</span> </li> <li class="spec-list__item" data-astro-cid-grq7b3mx> <span class="spec-list__label" data-astro-cid-grq7b3mx>Montaje</span> <span class="spec-list__value spec-list__value--ok" data-astro-cid-grq7b3mx>Incluido</span> </li> <li class="spec-list__item" data-astro-cid-grq7b3mx> <span class="spec-list__label" data-astro-cid-grq7b3mx>Tiempo de uso</span> <span class="spec-list__value spec-list__value--ok" data-astro-cid-grq7b3mx>Sin límite</span> </li> <li class="spec-list__item" data-astro-cid-grq7b3mx> <span class="spec-list__label" data-astro-cid-grq7b3mx>Recolección</span> <span class="spec-list__value spec-list__value--ok" data-astro-cid-grq7b3mx>Incluida</span> </li> </ul> <a href="/cotizar/" class="spec-card__cta" data-astro-cid-grq7b3mx>Cotizar Paquete Premium →</a> </div> <div class="spec-features" data-astro-cid-grq7b3mx> ${renderComponent($$result2, "FeatureCard", $$FeatureCard, { "index": 0, "title": "Composici\xF3n Flexible por Evento", "description": "El Premium es el \xFAnico paquete donde la combinaci\xF3n de bancas est\xE1ndar y grandes se define seg\xFAn el evento. Para una boda, m\xE1s est\xE1ndar con 1\u20132 grandes para mesa principal. Para un festival, m\xE1s grandes para maximizar capacidad por pieza.", "data-astro-cid-grq7b3mx": true })} ${renderComponent($$result2, "FeatureCard", $$FeatureCard, { "index": 1, "title": "Escala Completa \u2014 60 Personas", "description": "60 personas es el umbral donde un evento requiere una operaci\xF3n log\xEDstica m\xE1s coordinada. El equipo de MESPIC llega con tiempo suficiente para distribuir 10 bancas seg\xFAn el plano acordado antes de que lleguen los invitados.", "data-astro-cid-grq7b3mx": true })} ${renderComponent($$result2, "FeatureCard", $$FeatureCard, { "index": 2, "title": "~90 m\xB2 de Espacio \xDAtil", "description": "10 bancas requieren aproximadamente 90 m\xB2 de espacio \xFAtil incluyendo circulaci\xF3n. Jardines de hacienda, terrazas amplias, parques y espacios exteriores de salones son los venues m\xE1s frecuentes para este paquete.", "data-astro-cid-grq7b3mx": true })} ${renderComponent($$result2, "FeatureCard", $$FeatureCard, { "index": 3, "title": "Reserva con Anticipaci\xF3n", "description": "El Paquete Premium mueve m\xE1s inventario y requiere coordinaci\xF3n log\xEDstica mayor. Recomendamos reservar con al menos 2 semanas de anticipaci\xF3n, especialmente en temporada alta (noviembre a febrero).", "data-astro-cid-grq7b3mx": true })} </div> </div> </div> </section>  <section class="section" id="usos" data-astro-cid-grq7b3mx> ${renderComponent($$result2, "SectionHeader", $$SectionHeader, { "tag": "h2", "badge": "Ideal para", "title": "Para Qu\xE9 Tipo de Evento es el Paquete Premium", "paragraph1": "El Paquete Premium est\xE1 pensado para eventos de escala completa donde el n\xFAmero de invitados justifica la log\xEDstica de 10 piezas y la coordinaci\xF3n de un montaje de mayor alcance.", "data-astro-cid-grq7b3mx": true })} <div class="container" data-astro-cid-grq7b3mx> <div class="grid-4" data-astro-cid-grq7b3mx> ${renderComponent($$result2, "ServiceCard", $$ServiceCard, { "title": "Bodas Medianas", "description": "Para bodas de 40 a 60 invitados con banquete completo al aire libre. Las 10 bancas permiten una distribuci\xF3n clara entre zona de ceremonia y zona de recepci\xF3n, con espacio para circulaci\xF3n y fotograf\xEDa.", "image": "/img/mesa-picnic-boda-elegante-decoracion.avif", "href": "/servicios/bodas/", "btnLabel": "Bodas", "badge": "Bodas", "data-astro-cid-grq7b3mx": true })} ${renderComponent($$result2, "ServiceCard", $$ServiceCard, { "title": "Corporativos de \xC1rea", "description": "Convivencias anuales, celebraciones de cierre de a\xF1o o team buildings de \xE1rea completa para 40 a 60 colaboradores. El mobiliario crea un espacio informal y funcional que favorece la integraci\xF3n.", "image": "/img/mesa-picnic-evento-corporativo-networking.avif", "href": "/servicios/eventos-corporativos/", "btnLabel": "Corporativos", "badge": "Corporativo", "data-astro-cid-grq7b3mx": true })} ${renderComponent($$result2, "ServiceCard", $$ServiceCard, { "title": "Festivales y Ferias", "description": "Food markets, bazares y ferias gastron\xF3micas con aforo de 50 a 60 personas simult\xE1neas. Las 10 bancas crean zonas de comida definidas que organizan el flujo de asistentes.", "image": "/img/mesa-picnic-feria-gastronomica-multitud.avif", "href": "/servicios/festivales/", "btnLabel": "Festivales", "badge": "Festivales", "data-astro-cid-grq7b3mx": true })} ${renderComponent($$result2, "ServiceCard", $$ServiceCard, { "title": "XV A\xF1os y Graduaciones", "description": "Celebraciones familiares amplias donde los 60 invitados incluyen familia extendida, compa\xF1eros y amigos. El Premium da el espacio suficiente para un banquete completo con \xE1rea de baile o actividades.", "image": "/img/tema-mexicana-1.avif", "href": "/servicios/fiestas-tematicas/", "btnLabel": "XV a\xF1os", "badge": "Celebraciones", "data-astro-cid-grq7b3mx": true })} </div> </div> </section>  <section class="section section-alt" id="faq" data-astro-cid-grq7b3mx> ${renderComponent($$result2, "SectionHeader", $$SectionHeader, { "tag": "h2", "badge": "Preguntas frecuentes", "title": "Preguntas sobre el Paquete Premium", "paragraph1": "Las dudas m\xE1s comunes sobre el paquete de mayor escala del cat\xE1logo.", "data-astro-cid-grq7b3mx": true })} ${renderComponent($$result2, "FaqSection", $$FaqSection, { "phone": "55 6432 8954", "whatsapp": "5564328954", "schedule": "Lun\u2013Dom 8:00\u201320:00", "waMessage": "Hola, quiero cotizar el Paquete Premium de mesas picnic para mi evento.", "items": [
+    {
+      question: "\xBFC\xF3mo se decide la combinaci\xF3n de bancas est\xE1ndar y grandes?",
+      answer: "Lo definimos en la cotizaci\xF3n seg\xFAn el tipo de evento y el layout del espacio. Para bodas, solemos usar 7\u20138 est\xE1ndar y 1\u20132 grandes para la mesa principal de novios y padrinos. Para festivales, m\xE1s grandes para maximizar la capacidad por pieza. Para corporativos, seg\xFAn si necesitan agrupaci\xF3n en equipos o un solo espacio abierto."
+    },
+    {
+      question: "\xBFEl Paquete Premium puede cubrir m\xE1s de 60 personas?",
+      answer: "La composici\xF3n base cubre hasta 60 personas. Si tus invitados son entre 60 y 70, podemos agregar bancas sueltas al paquete. Para m\xE1s de 70 personas, recomendamos cotizar por volumen: te enviamos una propuesta personalizada con la cantidad exacta de bancas seg\xFAn el n\xFAmero de invitados y el espacio disponible."
+    },
+    {
+      question: "\xBFCu\xE1nto tiempo toma montar 10 bancas?",
+      answer: "El montaje de 10 bancas toma entre 45 y 60 minutos. El equipo llega con al menos 1 hora y media de anticipaci\xF3n al inicio del evento para garantizar que todo est\xE9 distribuido, nivelado y listo antes de que lleguen los primeros invitados."
+    },
+    {
+      question: "\xBFNecesito contratar coordinaci\xF3n adicional para eventos de 60 personas?",
+      answer: "No. Nuestro equipo maneja el montaje de forma aut\xF3noma. Si tienes wedding planner, decoradora o coordinador de evento, trabajamos directo con ellos para coordinar la distribuci\xF3n del mobiliario seg\xFAn el plano del evento. No necesitas un punto de contacto adicional de nuestra parte."
+    },
+    {
+      question: "\xBFCon cu\xE1nto tiempo de anticipaci\xF3n debo reservar el Paquete Premium?",
+      answer: "Recomendamos al menos 2 semanas para el Paquete Premium. En temporada alta (octubre a febrero), los fines de semana con eventos de esta escala se agotan r\xE1pido \u2014 reservar con 3 o 4 semanas de anticipaci\xF3n garantiza disponibilidad de los modelos espec\xEDficos que necesitas."
+    }
+  ], "data-astro-cid-grq7b3mx": true })} </section> ${renderComponent($$result2, "CtaBarFinal", $$CtaBarFinal, { "headline": "\xBFTu evento es para 40 a 60 personas?", "subtext": "El Paquete Premium tiene la escala que necesitas. Cotiza y confirma tu fecha.", "phone": "55 6432 8954", "whatsapp": "5564328954", "waMessage": "Hola, quiero cotizar el Paquete Premium de mesas picnic para mi evento.", "cotizarHref": "/cotizar/", "data-astro-cid-grq7b3mx": true })} ${renderComponent($$result2, "WaBubble", $$WaBubble, { "whatsapp": "5564328954", "message": "Hola, quiero cotizar el Paquete Premium de mesas picnic.", "data-astro-cid-grq7b3mx": true })}  `, "head": ($$result2) => renderTemplate`${renderComponent($$result2, "Fragment", Fragment, { "slot": "head" }, { "default": ($$result3) => renderTemplate(_a || (_a = __template([' <script type="application/ld+json">', "<\/script> "])), unescapeHTML(JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Paquete Premium \u2014 Renta de Mesas Picnic MESPIC",
+    "description": "10 bancas de pino natural en combinaci\xF3n de modelos para eventos de hasta 60 personas en CDMX y Edomex. Incluye traslado, montaje, uso sin l\xEDmite y recolecci\xF3n. Precio final.",
+    "brand": { "@type": "Brand", "name": "MESPIC" },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "MXN",
+      "availability": "https://schema.org/InStock",
+      "seller": { "@type": "LocalBusiness", "name": "MESPIC", "telephone": "+52-55-6432-8954" }
+    }
+  }))) })}` })} `;
+}, "/sessions/nifty-hopeful-archimedes/mnt/MESASPICNIC/src/pages/paquetes/premium/index.astro", void 0);
+
+const $$file = "/sessions/nifty-hopeful-archimedes/mnt/MESASPICNIC/src/pages/paquetes/premium/index.astro";
+const $$url = "/paquetes/premium";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

@@ -3,7 +3,7 @@
     "project": "MESPIC — mesaspicnic.com",
     "description": "Mapa de conocimiento del sitio web de renta de mesas picnic para eventos en CDMX",
     "updated": "2026-04-17",
-    "version": "1.2"
+    "version": "1.6"
   },
   "nodes": [
     {
@@ -162,6 +162,194 @@
       "url": "https://mesaspicnic.com/servicios/sesiones-fotograficas/"
     },
     {
+      "id": "layout-blog",
+      "label": "BlogLayout",
+      "type": "layout",
+      "group": "componentes",
+      "status": "producción",
+      "description": "Layout maestro del blog: Hero dark + CtaBar + grid artículo/sidebar + CtaBarFinal. Homologado con el sitio.",
+      "file": "src/layouts/BlogLayout.astro"
+    },
+    {
+      "id": "comp-hero",
+      "label": "Hero",
+      "type": "componente",
+      "group": "componentes",
+      "status": "producción",
+      "description": "Hero estándar APROBADO — dark={true} en TODO el sitio. 2 columnas: izq (badge + H1 + desc + CTAs) | der (seoParagraph1 + seoParagraph2). Gradiente forestal oscuro. Homologado en 18 páginas el 2026-04-17.",
+      "file": "src/components/Hero.astro",
+      "spec": {
+        "variante_aprobada": "dark={true}",
+        "referencia_url": "https://mesaspicnic.com/",
+        "props_obligatorias": [
+          "badge",
+          "title",
+          "description",
+          "seoParagraph1",
+          "seoParagraph2"
+        ],
+        "props_opcionales": [
+          "ctaPrimary",
+          "ctaSecondary",
+          "metrics"
+        ],
+        "cta_labels_aprobados": [
+          "Cotizar ahora →",
+          "Ver servicios",
+          "Ver todos los servicios",
+          "Ver artículos →",
+          "Cotizar ahora"
+        ],
+        "cta_labels_PROHIBIDOS": [
+          "Ver catálogo de mesas →",
+          "Ver paquetes",
+          "Ver catálogo →",
+          "Ver catálogo completo →"
+        ],
+        "defaults_ctaPrimary": {
+          "label": "Cotizar ahora →",
+          "href": "/cotizar/"
+        },
+        "defaults_ctaSecondary": {
+          "label": "Ver servicios",
+          "href": "/servicios/"
+        },
+        "reglas": [
+          "SIEMPRE usar dark={true}. Nunca omitir. Sin excepciones.",
+          "NUNCA usar 'Ver catálogo de mesas →' ni 'Ver paquetes' como CTA en el hero. Aplica a TODAS las páginas.",
+          "Referencia de homologación: hero del index /. Los CTAs del hero del index son el estándar."
+        ]
+      },
+      "updated": "2026-04-17"
+    },
+    {
+      "id": "comp-ctabar",
+      "label": "CtaBar",
+      "type": "componente",
+      "group": "componentes",
+      "status": "producción",
+      "description": "Barra de navegación rápida por tipo de evento (Bodas, Corporativo, Infantiles, Romántico, Cotizar).",
+      "file": "src/components/CtaBar.astro"
+    },
+    {
+      "id": "comp-ctabarfinal",
+      "label": "CtaBarFinal",
+      "type": "componente",
+      "group": "componentes",
+      "status": "producción",
+      "description": "Sección CTA final con headline, subtext, teléfono, WhatsApp y link a cotizar.",
+      "file": "src/components/CtaBarFinal.astro"
+    },
+    {
+      "id": "comp-breadcrumbs",
+      "label": "Breadcrumbs",
+      "type": "componente",
+      "group": "componentes",
+      "status": "producción",
+      "description": "Migas de pan con schema.org BreadcrumbList. Posición: slot breadcrumbs del hdr-stack (fijo, bajo el header).",
+      "file": "src/components/Breadcrumbs.astro"
+    },
+    {
+      "id": "comp-sidebar-cta",
+      "label": "Sidebar: CTA WhatsApp",
+      "type": "widget",
+      "group": "sidebar-widgets",
+      "status": "producción",
+      "description": "Widget verde oscuro con CTA a WhatsApp y formulario de cotización."
+    },
+    {
+      "id": "comp-sidebar-servicios",
+      "label": "Sidebar: Servicios",
+      "type": "widget",
+      "group": "sidebar-widgets",
+      "status": "producción",
+      "description": "Lista de 4 links de servicios con nombre, subtítulo y flecha. Sin iconos/emojis."
+    },
+    {
+      "id": "comp-sidebar-catalogo",
+      "label": "Sidebar: Catálogo",
+      "type": "widget",
+      "group": "sidebar-widgets",
+      "status": "producción",
+      "description": "2 productos con imagen thumbnail y link al catálogo completo."
+    },
+    {
+      "id": "comp-sidebar-articulos",
+      "label": "Sidebar: Artículos",
+      "type": "widget",
+      "group": "sidebar-widgets",
+      "status": "producción",
+      "description": "3 artículos relacionados con thumbnail cuadrado, título y meta."
+    },
+    {
+      "id": "comp-sidebar-cobertura",
+      "label": "Sidebar: Cobertura",
+      "type": "widget",
+      "group": "sidebar-widgets",
+      "status": "producción",
+      "description": "Zonas de entrega CDMX + Edomex con link a cotizar."
+    },
+    {
+      "id": "comp-card-aliada",
+      "label": "Card Empresa Aliada",
+      "type": "componente",
+      "group": "componentes",
+      "status": "producción",
+      "description": "Componente HTML+CSS para reseñas B2B con badge, estrellas, blockquote y footer con link"
+    },
+    {
+      "id": "art-bodas",
+      "label": "Blog: Bodas CDMX",
+      "type": "articulo",
+      "group": "blog-articulos",
+      "status": "publicado",
+      "url": "https://mesaspicnic.com/blog/renta-mesas-picnic-bodas-cdmx/",
+      "file": "src/pages/blog/renta-mesas-picnic-bodas-cdmx.astro",
+      "categoria": "Bodas al aire libre"
+    },
+    {
+      "id": "art-cuantas",
+      "label": "Blog: Cuántas Mesas",
+      "type": "articulo",
+      "group": "blog-articulos",
+      "status": "publicado",
+      "url": "https://mesaspicnic.com/blog/cuantas-mesas-picnic-necesitas-segun-invitados/",
+      "file": "src/pages/blog/cuantas-mesas-picnic-necesitas-segun-invitados.astro",
+      "categoria": "Guías y cálculo"
+    },
+    {
+      "id": "art-infantil",
+      "label": "Blog: Decoración Infantil",
+      "type": "articulo",
+      "group": "blog-articulos",
+      "status": "publicado",
+      "url": "https://mesaspicnic.com/blog/decoracion-mesas-picnic-fiestas-infantiles/",
+      "file": "src/pages/blog/decoracion-mesas-picnic-fiestas-infantiles.astro",
+      "categoria": "Fiestas infantiles"
+    },
+    {
+      "id": "art-corporativo",
+      "label": "Blog: Eventos Corporativos",
+      "type": "articulo",
+      "group": "blog-articulos",
+      "status": "publicado",
+      "url": "https://mesaspicnic.com/blog/mesas-picnic-eventos-corporativos/",
+      "file": "src/pages/blog/mesas-picnic-eventos-corporativos.astro",
+      "categoria": "Eventos corporativos"
+    },
+    {
+      "id": "tech-astro",
+      "label": "Astro",
+      "type": "tecnologia",
+      "group": "stack"
+    },
+    {
+      "id": "tech-html",
+      "label": "HTML / CSS",
+      "type": "tecnologia",
+      "group": "stack"
+    },
+    {
       "id": "ali-eventech",
       "label": "Eventech MX",
       "type": "empresa-aliada",
@@ -234,80 +422,467 @@
       "initials": "RS"
     },
     {
-      "id": "comp-card-aliada",
-      "label": "Card Empresa Aliada",
-      "type": "componente",
+      "id": "estandar-hero",
+      "label": "Estándar Hero ✓",
+      "type": "estandar",
       "group": "componentes",
-      "status": "producción",
-      "description": "Componente HTML+CSS para reseñas B2B con badge, estrellas, blockquote y footer con link"
+      "status": "aprobado",
+      "description": "Regla: todos los heroes del sitio usan dark={true} y NUNCA incluyen 'Ver catálogo de mesas →' ni 'Ver paquetes' como CTAs. Referencia: homepage /. Homologado 2026-04-17.",
+      "reglas": [
+        "dark={true} obligatorio en todo hero del sitio",
+        "CTAs prohibidos en hero: 'Ver catálogo de mesas →', 'Ver paquetes'",
+        "CTAs permitidos: 'Cotizar ahora →', 'Ver servicios', variantes contextuales equivalentes",
+        "Referencia canónica: hero del index /"
+      ],
+      "paginas_aplicadas": 18,
+      "updated": "2026-04-17"
     },
     {
-      "id": "tech-astro",
-      "label": "Astro",
-      "type": "tecnologia",
-      "group": "stack"
+      "id": "estandar-section-header",
+      "label": "Estándar SectionHeader ✓",
+      "type": "estandar",
+      "group": "componentes",
+      "status": "aprobado",
+      "description": "Regla: todos los SectionHeader del sitio llevan badge=. Sin badge el título aparece sin el pill verde aprobado. Homologado en 89 instancias / 32 páginas el 2026-04-17.",
+      "paginas_aplicadas": 32,
+      "updated": "2026-04-17"
     },
     {
-      "id": "tech-html",
-      "label": "HTML / CSS",
-      "type": "tecnologia",
-      "group": "stack"
+      "id": "tmpl-proceso-cards",
+      "label": "Template L3: Proceso Cards",
+      "type": "template",
+      "level": "L3",
+      "group": "templates-l3",
+      "status": "aprobado",
+      "description": "Patrón de sección para procesos paso a paso. Grid 6 cols — fila 1: 3 tarjetas (span 2 c/u), fila 2: 2 tarjetas (span 3 c/u). Tarjetas blancas con borde terracota superior, número fantasma verde y gradiente sutil. Responsive: 2 cols en tablet, 1 col en móvil.",
+      "file_referencia": "src/pages/servicios/bodas/index.astro#proceso",
+      "obsidian_doc": "obsidian-vault/MESPIC/Template L3 — Proceso Cards.md",
+      "spec": {
+        "clases_css": [
+          ".proceso-cards",
+          ".paso-card",
+          ".paso-card__num",
+          ".paso-card__body",
+          ".paso-card__title",
+          ".paso-card__text"
+        ],
+        "tokens": {
+          "border": "var(--c-border, #E7E0D8)",
+          "acento_top": "var(--c-accent, #C8956C)",
+          "numero_color": "var(--c-primary, #2C5530)",
+          "numero_opacity": "0.12",
+          "border_radius": "var(--radius-md, 12px)",
+          "padding": "1.75rem",
+          "gap": "1.25rem"
+        },
+        "grid": {
+          "desktop": "repeat(6, 1fr) — pasos 1-3: span 2, pasos 4-5: span 3",
+          "tablet_1024": "repeat(2, 1fr) — todos span 1",
+          "mobile_640": "1fr"
+        },
+        "pasos_optimos": 5,
+        "variantes_validas": [3, 4, 5, 6],
+        "seccion_padre_recomendada": "section.section.section-alt",
+        "requiere_section_header": true,
+        "badge_section_header": "Cómo trabajamos",
+        "sin_animaciones": true
+      },
+      "paginas_implementadas": [
+        "/servicios/bodas/#proceso",
+        "/servicios/eventos-corporativos/#proceso",
+        "/servicios/fiestas-infantiles/#proceso",
+        "/servicios/picnic-romantico/#proceso",
+        "/servicios/fiestas-tematicas/#proceso",
+        "/servicios/reuniones-familiares/#proceso",
+        "/servicios/festivales/#proceso",
+        "/servicios/sesiones-fotograficas/#como-funciona"
+      ],
+      "updated": "2026-04-17"
     }
   ],
   "edges": [
-    { "source": "mespic", "target": "home", "label": "tiene página" },
-    { "source": "mespic", "target": "servicios", "label": "tiene página" },
-    { "source": "mespic", "target": "nosotros", "label": "tiene página" },
-    { "source": "mespic", "target": "cotizar", "label": "tiene página" },
-    { "source": "mespic", "target": "blog", "label": "tiene página" },
-
-    { "source": "home", "target": "sec-hero", "label": "contiene sección" },
-    { "source": "home", "target": "sec-servicios", "label": "contiene sección" },
-    { "source": "home", "target": "sec-porque", "label": "contiene sección" },
-    { "source": "home", "target": "sec-testimonios", "label": "contiene sección" },
-    { "source": "home", "target": "sec-galeria", "label": "contiene sección" },
-    { "source": "home", "target": "sec-faq", "label": "contiene sección" },
-    { "source": "home", "target": "sec-cta", "label": "contiene sección" },
-
-    { "source": "servicios", "target": "srv-bodas", "label": "incluye" },
-    { "source": "servicios", "target": "srv-corporativo", "label": "incluye" },
-    { "source": "servicios", "target": "srv-infantil", "label": "incluye" },
-    { "source": "servicios", "target": "srv-picnic", "label": "incluye" },
-    { "source": "servicios", "target": "srv-tematico", "label": "incluye" },
-    { "source": "servicios", "target": "srv-familiar", "label": "incluye" },
-    { "source": "servicios", "target": "srv-festivales", "label": "incluye" },
-    { "source": "servicios", "target": "srv-fotos", "label": "incluye" },
-
-    { "source": "sec-testimonios", "target": "ali-eventech", "label": "muestra reseña de" },
-    { "source": "sec-testimonios", "target": "ali-iluminacion", "label": "muestra reseña de" },
-    { "source": "sec-testimonios", "target": "ali-avantexpo", "label": "muestra reseña de" },
-    { "source": "sec-testimonios", "target": "ali-podiumex", "label": "muestra reseña de" },
-    { "source": "sec-testimonios", "target": "ali-pantallaLed", "label": "muestra reseña de" },
-    { "source": "sec-testimonios", "target": "ali-inflables", "label": "muestra reseña de" },
-    { "source": "sec-testimonios", "target": "ali-sonido", "label": "muestra reseña de" },
-    { "source": "sec-testimonios", "target": "ali-sonidoIluminacion", "label": "muestra reseña de" },
-
-    { "source": "sec-testimonios", "target": "comp-card-aliada", "label": "usa componente" },
-
-    { "source": "ali-eventech", "target": "mespic", "label": "aliado de" },
-    { "source": "ali-iluminacion", "target": "mespic", "label": "aliado de" },
-    { "source": "ali-avantexpo", "target": "mespic", "label": "aliado de" },
-    { "source": "ali-podiumex", "target": "mespic", "label": "aliado de" },
-    { "source": "ali-pantallaLed", "target": "mespic", "label": "aliado de" },
-    { "source": "ali-inflables", "target": "mespic", "label": "aliado de" },
-    { "source": "ali-sonido", "target": "mespic", "label": "aliado de" },
-    { "source": "ali-sonidoIluminacion", "target": "mespic", "label": "aliado de" },
-
-    { "source": "comp-card-aliada", "target": "tech-astro", "label": "construido con" },
-    { "source": "comp-card-aliada", "target": "tech-html", "label": "construido con" }
+    {
+      "source": "mespic",
+      "target": "home",
+      "label": "tiene página"
+    },
+    {
+      "source": "mespic",
+      "target": "servicios",
+      "label": "tiene página"
+    },
+    {
+      "source": "mespic",
+      "target": "nosotros",
+      "label": "tiene página"
+    },
+    {
+      "source": "mespic",
+      "target": "cotizar",
+      "label": "tiene página"
+    },
+    {
+      "source": "mespic",
+      "target": "blog",
+      "label": "tiene página"
+    },
+    {
+      "source": "home",
+      "target": "sec-hero",
+      "label": "contiene sección"
+    },
+    {
+      "source": "home",
+      "target": "sec-servicios",
+      "label": "contiene sección"
+    },
+    {
+      "source": "home",
+      "target": "sec-porque",
+      "label": "contiene sección"
+    },
+    {
+      "source": "home",
+      "target": "sec-testimonios",
+      "label": "contiene sección"
+    },
+    {
+      "source": "home",
+      "target": "sec-galeria",
+      "label": "contiene sección"
+    },
+    {
+      "source": "home",
+      "target": "sec-faq",
+      "label": "contiene sección"
+    },
+    {
+      "source": "home",
+      "target": "sec-cta",
+      "label": "contiene sección"
+    },
+    {
+      "source": "servicios",
+      "target": "srv-bodas",
+      "label": "incluye"
+    },
+    {
+      "source": "servicios",
+      "target": "srv-corporativo",
+      "label": "incluye"
+    },
+    {
+      "source": "servicios",
+      "target": "srv-infantil",
+      "label": "incluye"
+    },
+    {
+      "source": "servicios",
+      "target": "srv-picnic",
+      "label": "incluye"
+    },
+    {
+      "source": "servicios",
+      "target": "srv-tematico",
+      "label": "incluye"
+    },
+    {
+      "source": "servicios",
+      "target": "srv-familiar",
+      "label": "incluye"
+    },
+    {
+      "source": "servicios",
+      "target": "srv-festivales",
+      "label": "incluye"
+    },
+    {
+      "source": "servicios",
+      "target": "srv-fotos",
+      "label": "incluye"
+    },
+    {
+      "source": "blog",
+      "target": "art-bodas",
+      "label": "contiene artículo"
+    },
+    {
+      "source": "blog",
+      "target": "art-cuantas",
+      "label": "contiene artículo"
+    },
+    {
+      "source": "blog",
+      "target": "art-infantil",
+      "label": "contiene artículo"
+    },
+    {
+      "source": "blog",
+      "target": "art-corporativo",
+      "label": "contiene artículo"
+    },
+    {
+      "source": "art-bodas",
+      "target": "layout-blog",
+      "label": "usa layout"
+    },
+    {
+      "source": "art-cuantas",
+      "target": "layout-blog",
+      "label": "usa layout"
+    },
+    {
+      "source": "art-infantil",
+      "target": "layout-blog",
+      "label": "usa layout"
+    },
+    {
+      "source": "art-corporativo",
+      "target": "layout-blog",
+      "label": "usa layout"
+    },
+    {
+      "source": "layout-blog",
+      "target": "comp-hero",
+      "label": "contiene componente"
+    },
+    {
+      "source": "layout-blog",
+      "target": "comp-ctabar",
+      "label": "contiene componente"
+    },
+    {
+      "source": "layout-blog",
+      "target": "comp-ctabarfinal",
+      "label": "contiene componente"
+    },
+    {
+      "source": "layout-blog",
+      "target": "comp-breadcrumbs",
+      "label": "contiene componente"
+    },
+    {
+      "source": "layout-blog",
+      "target": "comp-sidebar-cta",
+      "label": "contiene widget"
+    },
+    {
+      "source": "layout-blog",
+      "target": "comp-sidebar-servicios",
+      "label": "contiene widget"
+    },
+    {
+      "source": "layout-blog",
+      "target": "comp-sidebar-catalogo",
+      "label": "contiene widget"
+    },
+    {
+      "source": "layout-blog",
+      "target": "comp-sidebar-articulos",
+      "label": "contiene widget"
+    },
+    {
+      "source": "layout-blog",
+      "target": "comp-sidebar-cobertura",
+      "label": "contiene widget"
+    },
+    {
+      "source": "art-bodas",
+      "target": "srv-bodas",
+      "label": "enlaza a servicio"
+    },
+    {
+      "source": "art-infantil",
+      "target": "srv-infantil",
+      "label": "enlaza a servicio"
+    },
+    {
+      "source": "art-corporativo",
+      "target": "srv-corporativo",
+      "label": "enlaza a servicio"
+    },
+    {
+      "source": "art-cuantas",
+      "target": "srv-bodas",
+      "label": "enlaza a servicio"
+    },
+    {
+      "source": "art-cuantas",
+      "target": "srv-corporativo",
+      "label": "enlaza a servicio"
+    },
+    {
+      "source": "art-cuantas",
+      "target": "srv-infantil",
+      "label": "enlaza a servicio"
+    },
+    {
+      "source": "sec-testimonios",
+      "target": "ali-eventech",
+      "label": "muestra reseña de"
+    },
+    {
+      "source": "sec-testimonios",
+      "target": "ali-iluminacion",
+      "label": "muestra reseña de"
+    },
+    {
+      "source": "sec-testimonios",
+      "target": "ali-avantexpo",
+      "label": "muestra reseña de"
+    },
+    {
+      "source": "sec-testimonios",
+      "target": "ali-podiumex",
+      "label": "muestra reseña de"
+    },
+    {
+      "source": "sec-testimonios",
+      "target": "ali-pantallaLed",
+      "label": "muestra reseña de"
+    },
+    {
+      "source": "sec-testimonios",
+      "target": "ali-inflables",
+      "label": "muestra reseña de"
+    },
+    {
+      "source": "sec-testimonios",
+      "target": "ali-sonido",
+      "label": "muestra reseña de"
+    },
+    {
+      "source": "sec-testimonios",
+      "target": "ali-sonidoIluminacion",
+      "label": "muestra reseña de"
+    },
+    {
+      "source": "sec-testimonios",
+      "target": "comp-card-aliada",
+      "label": "usa componente"
+    },
+    {
+      "source": "ali-eventech",
+      "target": "mespic",
+      "label": "aliado de"
+    },
+    {
+      "source": "ali-iluminacion",
+      "target": "mespic",
+      "label": "aliado de"
+    },
+    {
+      "source": "ali-avantexpo",
+      "target": "mespic",
+      "label": "aliado de"
+    },
+    {
+      "source": "ali-podiumex",
+      "target": "mespic",
+      "label": "aliado de"
+    },
+    {
+      "source": "ali-pantallaLed",
+      "target": "mespic",
+      "label": "aliado de"
+    },
+    {
+      "source": "ali-inflables",
+      "target": "mespic",
+      "label": "aliado de"
+    },
+    {
+      "source": "ali-sonido",
+      "target": "mespic",
+      "label": "aliado de"
+    },
+    {
+      "source": "ali-sonidoIluminacion",
+      "target": "mespic",
+      "label": "aliado de"
+    },
+    {
+      "source": "comp-card-aliada",
+      "target": "tech-astro",
+      "label": "construido con"
+    },
+    {
+      "source": "comp-card-aliada",
+      "target": "tech-html",
+      "label": "construido con"
+    },
+    {
+      "source": "layout-blog",
+      "target": "tech-astro",
+      "label": "construido con"
+    },
+    {
+      "source": "tmpl-proceso-cards",
+      "target": "srv-bodas",
+      "label": "primera implementación en"
+    },
+    {
+      "source": "tmpl-proceso-cards",
+      "target": "estandar-section-header",
+      "label": "requiere"
+    },
+    {
+      "source": "tmpl-proceso-cards",
+      "target": "tech-html",
+      "label": "construido con"
+    },
+    {
+      "source": "srv-bodas",
+      "target": "tmpl-proceso-cards",
+      "label": "usa template L3"
+    },
+    {
+      "source": "estandar-section-header",
+      "target": "estandar-hero",
+      "label": "par de estándar con"
+    }
   ],
   "groups": {
-    "core": { "label": "Marca", "color": "#2C5530" },
-    "paginas": { "label": "Páginas del Sitio", "color": "#4a7c59" },
-    "home-secciones": { "label": "Secciones del Home", "color": "#6b9e7a" },
-    "servicios": { "label": "Servicios", "color": "#8aba99" },
-    "aliados": { "label": "Empresas Aliadas", "color": "#D4A574" },
-    "componentes": { "label": "Componentes UI", "color": "#94a3b8" },
-    "stack": { "label": "Stack Técnico", "color": "#cbd5e1" }
+    "core": {
+      "label": "Marca",
+      "color": "#2C5530"
+    },
+    "paginas": {
+      "label": "Páginas del Sitio",
+      "color": "#4a7c59"
+    },
+    "home-secciones": {
+      "label": "Secciones del Home",
+      "color": "#6b9e7a"
+    },
+    "servicios": {
+      "label": "Servicios",
+      "color": "#8aba99"
+    },
+    "blog-articulos": {
+      "label": "Artículos del Blog",
+      "color": "#C8956C"
+    },
+    "sidebar-widgets": {
+      "label": "Sidebar Widgets",
+      "color": "#D4A574"
+    },
+    "aliados": {
+      "label": "Empresas Aliadas",
+      "color": "#D4A574"
+    },
+    "componentes": {
+      "label": "Componentes UI",
+      "color": "#94a3b8"
+    },
+    "stack": {
+      "label": "Stack Técnico",
+      "color": "#cbd5e1"
+    },
+    "templates-l3": {
+      "label": "Templates L3 (Patrones de Sección)",
+      "color": "#f59e0b",
+      "description": "Patrones reutilizables de layout y CSS para el interior de secciones. Se instancian en páginas concretas. Nivel 3 del sistema de diseño MESPIC."
+    }
   }
 }

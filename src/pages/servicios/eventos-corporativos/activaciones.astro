@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import Hero from '../../../components/Hero.astro';
+import CtaBar from '../../../components/CtaBar.astro';
 import SectionHeader from '../../../components/SectionHeader.astro';
 import FeatureCard from '../../../components/FeatureCard.astro';
 import ServiceCard from '../../../components/ServiceCard.astro';
@@ -28,10 +29,15 @@ import WaBubble from '../../../components/WaBubble.astro';
   ctaSecondary={{ label: "Ver catálogo", href: "/catalogo/" }}
   seoParagraph1="Las activaciones de marca al aire libre necesitan mobiliario que se vea bien en cámara. La madera de pino natural tiene una textura y un tono que fotografían mucho mejor que las mesas de plástico o metal. Hemos montado lanzamientos de producto, ferias internas, bazares de empleados y eventos de employer branding para empresas en CDMX."
   seoParagraph2="Cada banca funciona como estación de exhibición, zona de degustación, punto de registro o área de networking. La madera es lo suficientemente resistente para soportar displays, samples, equipos de sonido y decoración de marca sin problema. Facturamos CFDI y coordinamos con tu agencia de producción."
+  dark={true}
 />
 
+<!-- CtaBar -->
+<CtaBar />
+
 <section class="section" id="montajes">
-  <SectionHeader tag="h2" title="Activaciones con Mobiliario de Madera" paragraph1="Lanzamientos, ferias internas y eventos de marca con bancas de pino natural. La madera aporta una estética orgánica que contrasta con el branding corporativo." paragraph2="Explora los modelos recomendados para tu activación." />
+  <SectionHeader
+    badge="En detalle" tag="h2" title="Activaciones con Mobiliario de Madera" paragraph1="Lanzamientos, ferias internas y eventos de marca con bancas de pino natural. La madera aporta una estética orgánica que contrasta con el branding corporativo." paragraph2="Explora los modelos recomendados para tu activación." />
   <ProductGallery
     images={[
       { src: "/img/mesa-picnic-evento-corporativo-networking.avif", alt: "Lanzamiento de producto con mobiliario de madera al aire libre" },
@@ -55,7 +61,8 @@ import WaBubble from '../../../components/WaBubble.astro';
 </section>
 
 <section class="section section-alt" id="tipos">
-  <SectionHeader tag="h2" title="Tipos de Activación" paragraph1="Cada formato de activación necesita una configuración diferente. La madera funciona como base neutra que acepta cualquier branding." paragraph2="Dinos qué tipo de activación planeas y proponemos la distribución." />
+  <SectionHeader
+    badge="Nuestras opciones" tag="h2" title="Tipos de Activación" paragraph1="Cada formato de activación necesita una configuración diferente. La madera funciona como base neutra que acepta cualquier branding." paragraph2="Dinos qué tipo de activación planeas y proponemos la distribución." />
   <div class="container">
     <div class="grid-4">
       <FeatureCard title="Lanzamiento de Producto" description="Bancas como estaciones de exhibición y degustación. Display del producto sobre madera natural para fotos y redes. Funciona indoor y outdoor." />
@@ -67,7 +74,8 @@ import WaBubble from '../../../components/WaBubble.astro';
 </section>
 
 <section class="section" id="incluye">
-  <SectionHeader tag="h2" title="Qué Incluye" paragraph1="Montaje profesional para activaciones de marca. Coordinamos con tu agencia de producción o equipo de marketing." paragraph2="La madera es resistente para displays, equipos y decoración de marca." />
+  <SectionHeader
+    badge="Servicio incluido" tag="h2" title="Qué Incluye" paragraph1="Montaje profesional para activaciones de marca. Coordinamos con tu agencia de producción o equipo de marketing." paragraph2="La madera es resistente para displays, equipos y decoración de marca." />
   <div class="container">
     <div class="grid-4">
       <FeatureCard title="Superficie para Branding" description="La madera acepta manteles con logo, banners laterales, displays y material POP. Sin necesidad de forrar — la madera al natural ya aporta estética." />
@@ -79,7 +87,8 @@ import WaBubble from '../../../components/WaBubble.astro';
 </section>
 
 <section class="section section-alt" id="relacionados">
-  <SectionHeader tag="h2" title="Otros Servicios Corporativos" paragraph1="Combina la activación con comida o dinámicas en el mismo evento." paragraph2="El mobiliario es el mismo — solo cambia la distribución." />
+  <SectionHeader
+    badge="También te puede interesar" tag="h2" title="Otros Servicios Corporativos" paragraph1="Combina la activación con comida o dinámicas en el mismo evento." paragraph2="El mobiliario es el mismo — solo cambia la distribución." />
   <div class="container">
     <div class="grid-4">
       <ServiceCard title="Team Building" description="Bancas agrupadas en estaciones de 6-8 personas para dinámicas de integración." image="/img/mesa-picnic-evento-corporativo-networking.avif" href="/servicios/eventos-corporativos/team-building/" btnLabel="Team building" />
@@ -91,7 +100,8 @@ import WaBubble from '../../../components/WaBubble.astro';
 </section>
 
 <section class="section" id="faq">
-  <SectionHeader tag="h2" title="Preguntas sobre Activaciones" paragraph1="Dudas de equipos de marketing y agencias de producción." paragraph2="Cotización formal por correo disponible." />
+  <SectionHeader
+    badge="Preguntas frecuentes" tag="h2" title="Preguntas sobre Activaciones" paragraph1="Dudas de equipos de marketing y agencias de producción." paragraph2="Cotización formal por correo disponible." />
   <FaqSection phone="55 6432 8954" whatsapp="5564328954" schedule="Lun–Dom 8:00–20:00"
     items={[
       { question: "¿Puedo poner branding sobre las bancas?", answer: "Sí. Puedes colocar manteles con logo, banners laterales o displays sobre la madera. No pintamos las bancas, pero aceptan cualquier material POP encima." },

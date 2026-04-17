@@ -13,20 +13,11 @@ import SectionHeader from '../../components/SectionHeader.astro';
   heroDescription="Todo lo que necesitas saber para elegir, planear y rentar mobiliario de madera para tu boda en la Ciudad de México y zona metropolitana. Más de 400 bodas de experiencia."
   heroSeo1="En MESPIC hemos participado en más de 400 bodas al aire libre en jardines, haciendas y terrazas de la CDMX y el Estado de México. A lo largo de estos años hemos aprendido exactamente qué funciona y qué no cuando se trata de mobiliario rústico de madera: qué modelos aguantan la intemperie, cuál es la distribución óptima según el número de invitados, y qué errores cometen la mayoría de las parejas al cotizar."
   heroSeo2="Esta guía concentra ese conocimiento. Aquí encontrarás tablas de capacidad por número de invitados, estilos de decoración probados, consejos de coordinadoras de bodas, y todo lo que incluye el servicio de renta de principio a fin. Si estás planeando una boda al aire libre en CDMX, esta es la guía más completa que encontrarás."
-  heroMetrics={[
-    { value: "400+", label: "bodas realizadas" },
-    { value: "2.4 m", label: "largo por mesa" },
-    { value: "6–8", label: "personas por pieza" },
-    { value: "24/7", label: "atención express" },
-  ]}
   breadcrumbs={[
     { label: "Inicio", href: "/" },
     { label: "Blog", href: "/blog/" },
     { label: "Renta de Mesas Picnic para Bodas en CDMX" },
   ]}
-  publishDate="Abril 2025"
-  category="Guía de bodas"
-  readTime="12 min lectura"
 >
 
 <!-- ═══════════════════════════════════════════
@@ -50,22 +41,18 @@ import SectionHeader from '../../components/SectionHeader.astro';
 
     <div class="art__feature-grid">
       <div class="art__feature-card">
-        <div class="art__feature-icon">🌿</div>
         <h3>Estética cálida y versátil</h3>
         <p>El tono natural de la madera funciona como lienzo neutro para cualquier paleta de color. Funciona igual para un estilo boho, provenzal, rústico o minimalista sin necesidad de cubrirla completamente.</p>
       </div>
       <div class="art__feature-card">
-        <div class="art__feature-icon">💰</div>
         <h3>Ahorro de hasta 20% en logística</h3>
         <p>Al integrar mesa y banca en una sola pieza, reduces el número de elementos a transportar y montar. Eso se traduce directamente en menos costos de flete y montaje frente al sistema de sillas separadas.</p>
       </div>
       <div class="art__feature-card">
-        <div class="art__feature-icon">👥</div>
         <h3>Capacidad real y comprobada</h3>
         <p>Cada mesa acomoda cómodamente 6 personas adultas, y hasta 8 en configuraciones ajustadas. No hay improvisar sillas extras al último momento ni filas desalineadas en las fotos.</p>
       </div>
       <div class="art__feature-card">
-        <div class="art__feature-icon">⚡</div>
         <h3>Montaje rápido y preciso</h3>
         <p>Nuestro equipo puede montar una configuración de 100 personas en menos de 90 minutos. Una boda con sistema mixto de sillas y tablones puede tomar el doble de tiempo.</p>
       </div>
@@ -310,32 +297,26 @@ import SectionHeader from '../../components/SectionHeader.astro';
 
     <div class="art__service-cards">
       <div class="art__service-item">
-        <div class="art__service-icon">🚚</div>
         <h3>Transporte y entrega</h3>
         <p>Llegamos a tu venue 3 horas antes del inicio del evento, o en el horario que coordine tu wedding planner. Cubrimos toda la CDMX y municipios del Estado de México sin cargo adicional.</p>
       </div>
       <div class="art__service-item">
-        <div class="art__service-icon">🏗️</div>
         <h3>Montaje profesional</h3>
         <p>Nuestro equipo instala, nivela y distribuye cada pieza según el plano del evento. Si hay cambios de último minuto, nos adaptamos en el momento.</p>
       </div>
       <div class="art__service-item">
-        <div class="art__service-icon">⏱️</div>
         <h3>Uso sin límite de tiempo</h3>
         <p>El mobiliario queda en tu venue durante toda la celebración. Si el evento se extiende, no hay cargos extra por hora.</p>
       </div>
       <div class="art__service-item">
-        <div class="art__service-icon">🌙</div>
         <h3>Recolección flexible</h3>
         <p>Recogemos al día siguiente si el evento termina después de medianoche. Coordinamos el horario directamente con el encargado del venue.</p>
       </div>
       <div class="art__service-item">
-        <div class="art__service-icon">📋</div>
         <h3>Coordinación con tu equipo</h3>
         <p>Trabajamos directamente con tu wedding planner, coordinadora de eventos o el responsable del lugar. Tú no tienes que intermediar en la logística.</p>
       </div>
       <div class="art__service-item">
-        <div class="art__service-icon">🔧</div>
         <h3>Mobiliario en perfecto estado</h3>
         <p>Cada pieza sale de nuestro almacén limpia, nivelada y revisada. El acabado de pino tratado resiste la intemperie, la humedad y el sol directo.</p>
       </div>
@@ -518,7 +499,7 @@ import SectionHeader from '../../components/SectionHeader.astro';
 <style>
   /* ── Contenedor principal ── */
   .art {
-    max-width: 760px;
+    width: 100%;
   }
 
   .art__lead {

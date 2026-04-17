@@ -1,5 +1,5 @@
 ---
-tags: [componente, hero, sección]
+tags: [componente, hero, sección, estandar]
 archivo: src/components/Hero.astro
 tipo: Sección principal
 created: 2026-04-17
@@ -32,18 +32,38 @@ updated: 2026-04-17
 
 ---
 
+## ⚠️ Reglas de Estándar Global (2026-04-17)
+
+> Estas reglas aplican a **TODAS** las páginas del sitio sin excepción. Son un estándar firmado.
+
+### Regla 1 — `dark={true}` obligatorio
+Todos los heroes del sitio deben usar `dark={true}`. La variante clara (`dark={false}`) está **descontinuada**. Referencia: homepage `/`.
+
+### Regla 2 — CTAs prohibidos en el hero
+Los siguientes labels de CTA están **PROHIBIDOS** en cualquier hero del sitio:
+- ❌ `"Ver catálogo de mesas →"`
+- ❌ `"Ver paquetes"`
+- ❌ `"Ver catálogo →"`
+
+Los CTAs permitidos son:
+- ✅ `"Cotizar ahora →"` → `/cotizar/`
+- ✅ `"Ver servicios"` → `/servicios/`
+- ✅ Variantes contextuales equivalentes (ej. `"Ver artículos →"` en blog)
+
+**Why:** El hero del index es la referencia canónica. Mezclar links al catálogo y paquetes dentro del hero rompe el flujo de conversión y la consistencia visual del sitio.
+
+---
+
 ## Variantes
 
-### Variante oscura (`dark={true}`)
+### Variante oscura (`dark={true}`) ← **ÚNICA VARIANTE APROBADA**
 - Fondo: `linear-gradient(155deg, #1B3B20, #2C5530, #1D4A25)`
 - Texto: blanco
 - Badge: fondo blanco translúcido
-- Usada en: [[L1 — Home]], [[L2 — Servicios]]
+- Usada en: todas las páginas del sitio
 
-### Variante clara (`dark={false}` — default)
-- Fondo: `#F2EDE7` (crema)
-- Texto: `--c-primary-dark`
-- Usada en: [[L3 — Bodas]], [[L3 — Eventos Corporativos]] y todas las L3/L4
+### Variante clara (`dark={false}`) ← **DESCONTINUADA**
+- No usar. Existía antes del homologado del 2026-04-17.
 
 ---
 

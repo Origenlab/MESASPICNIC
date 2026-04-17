@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import Hero from '../../../components/Hero.astro';
+import CtaBar from '../../../components/CtaBar.astro';
 import SectionHeader from '../../../components/SectionHeader.astro';
 import FeatureCard from '../../../components/FeatureCard.astro';
 import ServiceCard from '../../../components/ServiceCard.astro';
@@ -33,10 +34,15 @@ import WaBubble from '../../../components/WaBubble.astro';
   ctaSecondary={{ label: "Ver catálogo", href: "/catalogo/" }}
   seoParagraph1="No todas las bodas son para 200 personas. Muchas parejas prefieren una ceremonia civil con familia cercana y amigos íntimos — 10, 15 o 30 personas máximo. Para esos eventos tenemos montajes pequeños con 2 a 5 bancas de pino natural que transforman un jardín privado, una terraza o un restaurante en un espacio especial sin la producción de una boda grande."
   seoParagraph2="El servicio es el mismo que para bodas grandes: entrega, montaje según tu distribución y recolección al terminar. La diferencia es el volumen — menos piezas, logística más ágil, y la posibilidad de reservar con menos anticipación. Operamos en toda la CDMX y Edomex, incluso para montajes de solo 2 bancas."
+  dark={true}
 />
+
+<!-- CtaBar -->
+<CtaBar />
 
 <section class="section" id="montajes">
   <SectionHeader
+    badge="Galería de montajes"
     tag="h2"
     title="Montajes para Pocos Invitados"
     paragraph1="Bodas íntimas con 2 a 5 bancas. Una mesa larga para todos o varias distribuidas en un jardín. La madera hace que un espacio pequeño se sienta especial."
@@ -66,6 +72,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 
 <section class="section section-alt" id="espacios">
   <SectionHeader
+    badge="Dónde montamos"
     tag="h2"
     title="Espacios Ideales para Bodas Íntimas"
     paragraph1="Una boda de 10-30 personas no necesita una hacienda ni un jardín de eventos. Estos son los espacios donde mejor funcionan los montajes pequeños."
@@ -83,6 +90,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 
 <section class="section" id="incluye">
   <SectionHeader
+    badge="Servicio incluido"
     tag="h2"
     title="Qué Incluye el Servicio"
     paragraph1="El servicio para bodas íntimas es el mismo que para bodas grandes — la diferencia es el volumen. Entrega, montaje y recolección incluidos incluso para 2 bancas."
@@ -100,6 +108,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 
 <section class="section section-alt" id="configuraciones">
   <SectionHeader
+    badge="Configuraciones populares"
     tag="h2"
     title="Configuraciones Populares"
     paragraph1="Estas son las combinaciones más comunes para bodas íntimas. La elección depende del número de invitados y si quieres una mesa larga o varias separadas."
@@ -118,6 +127,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 <!-- Estilos relacionados -->
 <section class="section section-alt" id="relacionados">
   <SectionHeader
+    badge="Estilos de boda"
     tag="h2"
     title="Otros Estilos de Boda"
     paragraph1="Si quieres una boda íntima pero con un estilo decorativo definido, explora estas opciones. Todas funcionan con montajes pequeños de 2 a 5 bancas."
@@ -135,6 +145,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 
 <section class="section" id="faq">
   <SectionHeader
+    badge="Preguntas frecuentes"
     tag="h2"
     title="Preguntas sobre Bodas Íntimas"
     paragraph1="Dudas de parejas que quieren una ceremonia pequeña sin la producción de una boda grande."

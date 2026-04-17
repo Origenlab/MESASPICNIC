@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import Hero from '../../../components/Hero.astro';
+import CtaBar from '../../../components/CtaBar.astro';
 import SectionHeader from '../../../components/SectionHeader.astro';
 import FeatureCard from '../../../components/FeatureCard.astro';
 import ServiceCard from '../../../components/ServiceCard.astro';
@@ -35,11 +36,16 @@ import WaBubble from '../../../components/WaBubble.astro';
   ctaSecondary={{ label: "Ver paquetes", href: "/paquetes/" }}
   seoParagraph1="La boda rústica es el estilo que más montamos en MESPIC. La madera de pino al natural tiene la textura y el tono exacto que buscan las parejas que quieren una ceremonia campestre sin que se vea improvisada. No necesitas manteles, carpas decorativas ni estructuras adicionales — la banca es el elemento decorativo en sí."
   seoParagraph2="Este estilo funciona especialmente bien en jardines con pasto, haciendas con arcos de piedra, viñedos y espacios con árboles maduros. Hemos montado bodas rústicas desde 20 hasta 250 invitados en zonas como Coyoacán, Tlalpan, Tepotzotlán, Valle de Bravo y haciendas del corredor Naucalpan-Huixquilucan."
+  dark={true}
 />
+
+<!-- CtaBar -->
+<CtaBar />
 
 <!-- Mobiliario para boda rústica -->
 <section class="section" id="mobiliario-rustico">
   <SectionHeader
+    badge="Galería de montajes"
     tag="h2"
     title="Así se Ve el Mobiliario en una Boda Rústica"
     paragraph1="Montajes con bancas de pino natural en jardines, haciendas y terrazas. Cada imagen es de un evento real o de referencia para que visualices cómo queda en tu espacio."
@@ -72,6 +78,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 <!-- Qué hace rústico a este montaje -->
 <section class="section" id="elementos">
   <SectionHeader
+    badge="Detalles del estilo"
     tag="h2"
     title="Elementos de una Boda Rústica"
     paragraph1="El estilo rústico no es solo poner mesas de madera — es una combinación de materiales naturales, iluminación cálida y detalles que se sienten auténticos, no forzados."
@@ -90,6 +97,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 <!-- Venues ideales -->
 <section class="section section-alt" id="venues">
   <SectionHeader
+    badge="Dónde montamos"
     tag="h2"
     title="Venues Ideales para Boda Rústica"
     paragraph1="No todos los espacios funcionan igual para una boda rústica. Estos son los tipos de venue donde el mobiliario de madera natural se ve mejor y hemos tenido los mejores resultados."
@@ -108,6 +116,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 <!-- Mobiliario recomendado -->
 <section class="section" id="mobiliario">
   <SectionHeader
+    badge="Nuestro catálogo"
     tag="h2"
     title="Mobiliario Recomendado"
     paragraph1="Para una boda rústica recomendamos combinar estos modelos según el tamaño de tu evento y la distribución del espacio."
@@ -126,6 +135,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 <!-- Estilos relacionados -->
 <section class="section section-alt" id="relacionados">
   <SectionHeader
+    badge="Estilos de boda"
     tag="h2"
     title="Otros Estilos de Boda"
     paragraph1="Si la boda rústica no es exactamente lo que buscas, explora los otros estilos que montamos. Todos usan el mismo mobiliario de pino natural con diferente decoración."
@@ -144,6 +154,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 <!-- FAQ boda rústica -->
 <section class="section section-alt" id="faq">
   <SectionHeader
+    badge="Preguntas frecuentes"
     tag="h2"
     title="Preguntas sobre Bodas Rústicas"
     paragraph1="Dudas específicas que recibimos de parejas que están planeando una boda con estilo rústico o campestre."

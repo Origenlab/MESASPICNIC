@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import Hero from '../../../components/Hero.astro';
+import CtaBar from '../../../components/CtaBar.astro';
 import SectionHeader from '../../../components/SectionHeader.astro';
 import FeatureCard from '../../../components/FeatureCard.astro';
 import ServiceCard from '../../../components/ServiceCard.astro';
@@ -35,11 +36,16 @@ import WaBubble from '../../../components/WaBubble.astro';
   ctaSecondary={{ label: "Ver paquetes", href: "/paquetes/" }}
   seoParagraph1="Desde 2017, MESPIC trabaja con empresas en la Ciudad de México y zona metropolitana montando mobiliario para eventos corporativos al aire libre. Team buildings en parques, conferencias en jardines, comidas de cierre anual y activaciones de marca en espacios abiertos. Cada banca sienta de 6 a 8 personas frente a frente, lo que rompe jerarquías y facilita la conversación entre áreas."
   seoParagraph2="Facturamos CFDI con los datos fiscales que tu empresa necesite. Manejamos flotilla propia de transporte y coordinamos directamente con tu equipo de logística o agencia de eventos. Entrega, montaje según plano y recolección incluidos en el precio."
+  dark={true}
 />
+
+<!-- CtaBar -->
+<CtaBar />
 
 <!-- Galería + Sidebar -->
 <section class="section" id="montajes">
   <SectionHeader
+    badge="Galería de montajes"
     tag="h2"
     title="Así se Ve en Eventos de Empresa"
     paragraph1="Montajes de mobiliario de madera en team buildings, conferencias y comidas corporativas. Terrazas, jardines, parques y espacios abiertos en la Ciudad de México."
@@ -71,6 +77,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 <!-- Tipos de evento corporativo -->
 <section class="section section-alt" id="tipos">
   <SectionHeader
+    badge="Nuestras opciones"
     tag="h2"
     title="Tipos de Evento que Montamos"
     paragraph1="No es lo mismo un team building para 30 personas que una comida de cierre anual para 300. Cada formato tiene su propia configuración de mobiliario."
@@ -89,6 +96,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 <!-- Qué incluye -->
 <section class="section" id="incluye">
   <SectionHeader
+    badge="Servicio incluido"
     tag="h2"
     title="Qué Incluye el Servicio Corporativo"
     paragraph1="Todo el servicio viene resuelto para que tu equipo de logística no tenga que preocuparse por el mobiliario. Coordinamos directo con tu agencia de eventos si la tienes."
@@ -107,6 +115,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 <!-- Datos para cotizar -->
 <section class="section section-alt" id="datos">
   <SectionHeader
+    badge="Guía de cantidades"
     tag="h2"
     title="Referencia de Cantidad por Asistentes"
     paragraph1="Usa esta tabla como referencia rápida para estimar cuántas bancas necesitas. El número final depende de la distribución del espacio y el formato del evento."
@@ -123,8 +132,59 @@ import WaBubble from '../../../components/WaBubble.astro';
 </section>
 
 <!-- FAQ -->
+
+<!-- Proceso paso a paso — Template L3: proceso-cards -->
+<section class="section section-alt" id="proceso">
+  <SectionHeader
+    badge="Cómo trabajamos"
+    tag="h2"
+    title="Nuestro Proceso de Servicio Corporativo"
+    paragraph1="Operamos con el mismo nivel de exigencia que cualquier proveedor corporativo profesional: confirmaciones por escrito, horarios cumplidos y un responsable disponible durante todo el evento. Sin improvisaciones."
+    paragraph2="Trabajamos con áreas de compras, agencias de producción y coordinadoras de eventos. Emitimos factura con RFC, orden de servicio y cualquier documentación que tu proceso interno requiera."
+  />
+  <div class="container">
+    <div class="proceso-cards">
+      <div class="paso-card">
+        <span class="paso-card__num">01</span>
+        <div class="paso-card__body">
+          <h3 class="paso-card__title">Compártenos el brief de tu evento</h3>
+          <p class="paso-card__text">Fecha, aforo, tipo de evento y espacio disponible. Si tienes brief o concepto visual de la marca, compártelo — nos ayuda a proponer el mobiliario más alineado con la imagen corporativa que quieren proyectar y a evitar propuestas que no encajan con el concepto.</p>
+        </div>
+      </div>
+      <div class="paso-card">
+        <span class="paso-card__num">02</span>
+        <div class="paso-card__body">
+          <h3 class="paso-card__title">Propuesta formal en el mismo día</h3>
+          <p class="paso-card__text">Cantidad de piezas, distribución por zonas, costo de traslado y servicios adicionales. Todo por escrito. Podemos enviar la cotización en PDF con membrete para procesos de aprobación interna, validación de presupuesto o alta de proveedor.</p>
+        </div>
+      </div>
+      <div class="paso-card">
+        <span class="paso-card__num">03</span>
+        <div class="paso-card__body">
+          <h3 class="paso-card__title">Orden de servicio y confirmación</h3>
+          <p class="paso-card__text">Con el anticipo bloqueamos el inventario y emitimos orden de servicio. Para empresas que requieren proceso de compras formal, alta de proveedor o factura anticipada, nos adaptamos al flujo administrativo de cada organización sin demoras.</p>
+        </div>
+      </div>
+      <div class="paso-card">
+        <span class="paso-card__num">04</span>
+        <div class="paso-card__body">
+          <h3 class="paso-card__title">Coordinación técnica con producción</h3>
+          <p class="paso-card__text">Compartimos planos de distribución y dimensiones exactas con el coordinador o agencia de producción. Acordamos horarios de entrega para no interferir con el catering, AV ni otros proveedores. Todo documentado antes del evento.</p>
+        </div>
+      </div>
+      <div class="paso-card">
+        <span class="paso-card__num">05</span>
+        <div class="paso-card__body">
+          <h3 class="paso-card__title">Montaje impecable, recolección sin rastros</h3>
+          <p class="paso-card__text">Llegamos en el horario acordado, colocamos cada pieza según el plano aprobado y dejamos el espacio listo. Al finalizar el evento, retiramos el mobiliario de forma ordenada y sin generar interrupciones. Tu equipo no coordina ningún aspecto logístico del mobiliario.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section" id="faq">
   <SectionHeader
+    badge="Preguntas frecuentes"
     tag="h2"
     title="Preguntas sobre Eventos Corporativos"
     paragraph1="Las dudas más comunes que recibimos de departamentos de logística, agencias de eventos y coordinadores de recursos humanos."
@@ -176,6 +236,77 @@ import WaBubble from '../../../components/WaBubble.astro';
 </BaseLayout>
 
 <style>
+  /* ═══════════════════════════════════════════
+     Template L3 — proceso-cards
+     Layout: 3 tarjetas fila 1 + 2 tarjetas fila 2
+     ═══════════════════════════════════════════ */
+  .proceso-cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.25rem;
+  }
+  .paso-card:nth-child(1),
+  .paso-card:nth-child(2),
+  .paso-card:nth-child(3) { grid-column: span 2; }
+  .paso-card:nth-child(4),
+  .paso-card:nth-child(5) { grid-column: span 3; }
+  .paso-card {
+    background: #fff;
+    border: 1px solid var(--c-border, #E7E0D8);
+    border-top: 3px solid var(--c-accent, #C8956C);
+    border-radius: var(--radius-md, 12px);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .paso-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(44, 85, 48, 0.03) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .paso-card__num {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--c-primary, #2C5530);
+    opacity: 0.12;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    align-self: flex-start;
+  }
+  .paso-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    flex: 1;
+  }
+  .paso-card__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--c-text, #1C1917);
+    line-height: 1.3;
+    margin: 0;
+  }
+  .paso-card__text {
+    font-size: 0.875rem;
+    color: var(--c-text-muted, #78716C);
+    line-height: 1.7;
+    margin: 0;
+  }
+  @media (max-width: 1024px) {
+    .proceso-cards { grid-template-columns: repeat(2, 1fr); }
+    .paso-card:nth-child(1),.paso-card:nth-child(2),
+    .paso-card:nth-child(3),.paso-card:nth-child(4),
+    .paso-card:nth-child(5) { grid-column: span 1; }
+  }
+  @media (max-width: 640px) {
+    .proceso-cards { grid-template-columns: 1fr; }
+  }
+
   :global(.hero) {
     padding-top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2.5rem + 3rem);
   }

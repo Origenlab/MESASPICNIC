@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import Hero from '../../../components/Hero.astro';
+import CtaBar from '../../../components/CtaBar.astro';
 import SectionHeader from '../../../components/SectionHeader.astro';
 import FeatureCard from '../../../components/FeatureCard.astro';
 import ServiceCard from '../../../components/ServiceCard.astro';
@@ -33,10 +34,15 @@ import WaBubble from '../../../components/WaBubble.astro';
   ctaSecondary={{ label: "Ver paquetes", href: "/paquetes/" }}
   seoParagraph1="La boda boho es el segundo estilo más solicitado en MESPIC después del rústico. La diferencia está en los textiles: donde el rústico usa yute y flores silvestres, el boho lleva pampas secas, macramé tejido a mano, cojines de algodón y telas caídas en tonos crema y terracota. La madera de pino al natural complementa esa estética orgánica sin competir."
   seoParagraph2="Este estilo funciona mejor en espacios con vegetación natural: bosques de Edomex, viñedos en Tepotzotlán, jardines con árboles maduros en Coyoacán y Tlalpan, o incluso playas para bodas destino. Hemos montado bodas boho desde 15 hasta 200 invitados con configuraciones que incluyen arcos de pampas sobre las bancas."
+  dark={true}
 />
+
+<!-- CtaBar -->
+<CtaBar />
 
 <section class="section" id="montajes">
   <SectionHeader
+    badge="Galería de montajes"
     tag="h2"
     title="Así se Ve una Boda Boho"
     paragraph1="Montajes con bancas de pino natural combinadas con pampas, macramé, telas orgánicas y vegetación. Espacios al aire libre en la Ciudad de México y Estado de México."
@@ -67,6 +73,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 
 <section class="section section-alt" id="elementos">
   <SectionHeader
+    badge="Detalles del estilo"
     tag="h2"
     title="Elementos Clave del Estilo Boho"
     paragraph1="El boho se distingue del rústico por los textiles y las texturas. No es solo madera — es la combinación de materiales orgánicos que crean un ambiente que se siente libre y natural."
@@ -84,6 +91,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 
 <section class="section" id="venues">
   <SectionHeader
+    badge="Dónde montamos"
     tag="h2"
     title="Venues Ideales para Boda Boho"
     paragraph1="El boho necesita un espacio que ya tenga naturaleza — el venue hace la mitad del trabajo. Estos son los tipos de espacio donde hemos tenido los mejores resultados."
@@ -101,6 +109,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 
 <section class="section section-alt" id="mobiliario">
   <SectionHeader
+    badge="Nuestro catálogo"
     tag="h2"
     title="Mobiliario Recomendado"
     paragraph1="Para una boda boho recomendamos combinar bancas estándar con la mesa grande como mesa principal. El set completo es ideal si no quieres coordinar decoración por separado."
@@ -119,6 +128,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 <!-- Estilos relacionados -->
 <section class="section" id="relacionados">
   <SectionHeader
+    badge="Estilos de boda"
     tag="h2"
     title="Otros Estilos de Boda"
     paragraph1="Si el boho no es exactamente lo que buscas, explora los otros estilos que montamos. Todos usan el mismo mobiliario de pino natural con diferente decoración."
@@ -136,6 +146,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 
 <section class="section section-alt" id="faq">
   <SectionHeader
+    badge="Preguntas frecuentes"
     tag="h2"
     title="Preguntas sobre Bodas Boho"
     paragraph1="Dudas específicas de parejas que quieren una boda con estilo boho o bohemio."

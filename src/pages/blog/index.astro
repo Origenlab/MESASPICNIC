@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Hero from '../../components/Hero.astro';
+import CtaBar from '../../components/CtaBar.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
 import CtaBarFinal from '../../components/CtaBarFinal.astro';
 import WaBubble from '../../components/WaBubble.astro';
@@ -25,6 +26,41 @@ const allPosts: Post[] = [
     featured: true,
   },
   {
+    title: "Mesas Picnic en Polanco, Lomas de Chapultepec y Santa Fe CDMX",
+    description: "Servicio premium de renta de mesas picnic para eventos en las colonias más exclusivas de CDMX: Polanco, Lomas de Chapultepec, Santa Fe y Bosques de las Lomas.",
+    image: "/img/mesa-picnic-evento-polanco-cdmx.avif",
+    href: "/blog/renta-mesas-picnic-polanco-lomas-santa-fe/",
+    category: "Zonas Premium",
+  },
+  {
+    title: "Mesas Picnic Corporativas en Interlomas, Huixquilucan y Satélite",
+    description: "Renta de mesas picnic para team buildings, desayunos ejecutivos y activaciones de empresa en las zonas corporativas más importantes del Estado de México.",
+    image: "/img/mesa-picnic-team-building-corporativo.avif",
+    href: "/blog/mesas-picnic-eventos-corporativos-interlomas-huixquilucan/",
+    category: "Corporativo",
+  },
+  {
+    title: "Picnic de Lujo en CDMX: Experiencias Premium para Parejas",
+    description: "Cómo crear un picnic de lujo en Ciudad de México para pedidas de mano, aniversarios y celebraciones íntimas con mobiliario premium y decoración curada.",
+    image: "/img/picnic-lujo-romantico-cdmx-mespic.avif",
+    href: "/blog/picnic-lujo-experiencias-premium-cdmx/",
+    category: "Experiencias",
+  },
+  {
+    title: "Mesas Picnic en Coyoacán, San Ángel, Roma Norte y Del Valle",
+    description: "Guía completa de renta de mesas picnic para eventos en las colonias más culturales y bohemias de CDMX. Estilos, cobertura y logística en zona histórica.",
+    image: "/img/mesa-picnic-evento-coyoacan-cdmx.avif",
+    href: "/blog/renta-mesas-picnic-coyoacan-san-angel-roma-norte/",
+    category: "Zonas Premium",
+  },
+  {
+    title: "Mesas Picnic en Metepec, Zona Esmeralda y Bosque Real",
+    description: "Renta de mesas picnic para fiestas privadas, bodas y eventos de alto nivel en las zonas residenciales más exclusivas del Estado de México.",
+    image: "/img/mesa-picnic-fiesta-privada-metepec.avif",
+    href: "/blog/mesas-picnic-fiestas-privadas-metepec-zona-esmeralda-bosque-real/",
+    category: "Estado de México",
+  },
+  {
     title: "Cuántas Mesas Picnic Necesitas Según el Número de Invitados",
     description: "Guía práctica para calcular cuántas mesas picnic rentar según invitados, tipo de evento y espacio disponible.",
     image: "/img/mesa-picnic-grande-evento-16.avif",
@@ -37,13 +73,6 @@ const allPosts: Post[] = [
     image: "/img/mesa-picnic-evento-corporativo-networking.avif",
     href: "/blog/mesas-picnic-eventos-corporativos/",
     category: "Corporativo",
-  },
-  {
-    title: "Ideas de Decoración para Mesas Picnic en Fiestas Infantiles",
-    description: "Consejos profesionales para decorar mesas picnic infantiles con mejor estética, orden y funcionalidad. Temáticas, colores y materiales.",
-    image: "/img/mesa-picnic-fiesta-infantil-globos-colores.avif",
-    href: "/blog/ideas-decoracion-mesas-picnic-fiestas-infantiles/",
-    category: "Infantiles",
   },
   {
     title: "Decoración de Mesas Picnic para Fiestas Infantiles",
@@ -77,10 +106,13 @@ const sidebarCatalog = [
 ];
 
 const catColor: Record<string, string> = {
-  Bodas:       "#9B6B4E",
-  Guías:       "#2C5530",
-  Corporativo: "#3B5998",
-  Infantiles:  "#C75C6A",
+  Bodas:            "#9B6B4E",
+  Guías:            "#2C5530",
+  Corporativo:      "#3B5998",
+  Infantiles:       "#C75C6A",
+  "Zonas Premium":  "#7B5EA7",
+  Experiencias:     "#B45309",
+  "Estado de México": "#0F766E",
 };
 ---
 
@@ -107,6 +139,9 @@ const catColor: Record<string, string> = {
   seoParagraph2="Toda la información está basada en nuestra experiencia real montando más de 500 eventos en Ciudad de México y Estado de México. Sin relleno: solo datos y consejos que funcionan."
 />
 
+<!-- CtaBar -->
+<CtaBar />
+
 <section class="section" id="articulos">
 
   <SectionHeader
@@ -116,8 +151,8 @@ const catColor: Record<string, string> = {
     paragraph2="Navega por categoría o consulta la barra lateral para encontrar exactamente lo que necesitas."
     badge="Contenido especializado"
     stats={[
-      { value: "5", label: "Artículos" },
-      { value: "4", label: "Categorías" },
+      { value: "9", label: "Artículos" },
+      { value: "7", label: "Categorías" },
     ]}
   />
 

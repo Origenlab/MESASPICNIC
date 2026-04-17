@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import Hero from '../../../components/Hero.astro';
+import CtaBar from '../../../components/CtaBar.astro';
 import SectionHeader from '../../../components/SectionHeader.astro';
 import FeatureCard from '../../../components/FeatureCard.astro';
 import ServiceCard from '../../../components/ServiceCard.astro';
@@ -28,10 +29,15 @@ import WaBubble from '../../../components/WaBubble.astro';
   ctaSecondary={{ label: "Ver paquetes", href: "/paquetes/" }}
   seoParagraph1="Las conferencias al aire libre cambian la dinámica: la luz natural reduce la fatiga, el espacio abierto mejora la concentración y el formato de banca agrupa a los asistentes en mesas de discusión en vez de filas de sillas. Cada banca funciona como estación de trabajo donde cada persona tiene superficie suficiente para laptop, libreta y vaso sin estorbarse."
   seoParagraph2="Hemos montado seminarios de hasta 120 personas en jardines corporativos, parques empresariales y terrazas de oficinas en CDMX. El formato funciona para talleres técnicos, workshops creativos, presentaciones de resultados y mesas redondas. Coordinamos con tu equipo de logística o agencia de eventos."
+  dark={true}
 />
 
+<!-- CtaBar -->
+<CtaBar />
+
 <section class="section" id="montajes">
-  <SectionHeader tag="h2" title="Conferencias sobre Madera" paragraph1="Seminarios, talleres y mesas de discusión con bancas como estaciones de trabajo. Jardines corporativos y terrazas en CDMX." paragraph2="Cada banca agrupa 6-8 asistentes con espacio personal de trabajo." />
+  <SectionHeader
+    badge="En detalle" tag="h2" title="Conferencias sobre Madera" paragraph1="Seminarios, talleres y mesas de discusión con bancas como estaciones de trabajo. Jardines corporativos y terrazas en CDMX." paragraph2="Cada banca agrupa 6-8 asistentes con espacio personal de trabajo." />
   <ProductGallery
     images={[
       { src: "/img/mesa-picnic-evento-corporativo-networking.avif", alt: "Conferencia al aire libre con bancas como estaciones de trabajo" },
@@ -55,7 +61,8 @@ import WaBubble from '../../../components/WaBubble.astro';
 </section>
 
 <section class="section section-alt" id="formatos">
-  <SectionHeader tag="h2" title="Formatos de Conferencia" paragraph1="Cada tipo de conferencia necesita una distribución diferente. Estas son las configuraciones más comunes que montamos." paragraph2="Si tu evento tiene un formato específico, nos adaptamos. Mándanos el programa y proponemos la distribución." />
+  <SectionHeader
+    badge="Nuestras opciones" tag="h2" title="Formatos de Conferencia" paragraph1="Cada tipo de conferencia necesita una distribución diferente. Estas son las configuraciones más comunes que montamos." paragraph2="Si tu evento tiene un formato específico, nos adaptamos. Mándanos el programa y proponemos la distribución." />
   <div class="container">
     <div class="grid-4">
       <FeatureCard title="Seminario con Ponente" description="Bancas en semicírculo o filas con vista al frente. Cada asistente tiene espacio para laptop. Funciona para 30-120 personas con presentación central." />
@@ -67,7 +74,8 @@ import WaBubble from '../../../components/WaBubble.astro';
 </section>
 
 <section class="section" id="incluye">
-  <SectionHeader tag="h2" title="Qué Incluye" paragraph1="Montaje profesional según el formato de tu conferencia. Coordinamos tiempos con tu equipo de logística o producción." paragraph2="Facturamos CFDI. Aceptamos orden de compra corporativa." />
+  <SectionHeader
+    badge="Servicio incluido" tag="h2" title="Qué Incluye" paragraph1="Montaje profesional según el formato de tu conferencia. Coordinamos tiempos con tu equipo de logística o producción." paragraph2="Facturamos CFDI. Aceptamos orden de compra corporativa." />
   <div class="container">
     <div class="grid-4">
       <FeatureCard title="Superficie para Laptops" description="Cada persona tiene 60-70 cm lineales de mesa. Espacio suficiente para laptop 15 pulgadas, libreta, vaso y celular sin estorbarse." />
@@ -79,7 +87,8 @@ import WaBubble from '../../../components/WaBubble.astro';
 </section>
 
 <section class="section section-alt" id="relacionados">
-  <SectionHeader tag="h2" title="Otros Servicios Corporativos" paragraph1="Si tu evento combina conferencia con comida o dinámicas, explora los otros formatos." paragraph2="Puedes combinar: conferencia por la mañana, team building al mediodía y comida de integración en la tarde." />
+  <SectionHeader
+    badge="También te puede interesar" tag="h2" title="Otros Servicios Corporativos" paragraph1="Si tu evento combina conferencia con comida o dinámicas, explora los otros formatos." paragraph2="Puedes combinar: conferencia por la mañana, team building al mediodía y comida de integración en la tarde." />
   <div class="container">
     <div class="grid-4">
       <ServiceCard title="Team Building" description="Bancas agrupadas en estaciones de 6-8 personas para dinámicas de integración." image="/img/mesa-picnic-evento-corporativo-networking.avif" href="/servicios/eventos-corporativos/team-building/" btnLabel="Team building" />
@@ -91,7 +100,8 @@ import WaBubble from '../../../components/WaBubble.astro';
 </section>
 
 <section class="section" id="faq">
-  <SectionHeader tag="h2" title="Preguntas sobre Conferencias" paragraph1="Dudas de organizadores de eventos corporativos y agencias de producción." paragraph2="Si necesitas cotización formal, escríbenos y te la enviamos por correo." />
+  <SectionHeader
+    badge="Preguntas frecuentes" tag="h2" title="Preguntas sobre Conferencias" paragraph1="Dudas de organizadores de eventos corporativos y agencias de producción." paragraph2="Si necesitas cotización formal, escríbenos y te la enviamos por correo." />
   <FaqSection phone="55 6432 8954" whatsapp="5564328954" schedule="Lun–Dom 8:00–20:00"
     items={[
       { question: "¿Cabe una laptop en cada lugar?", answer: "Sí. Cada persona tiene 60-70 cm lineales. Cabe laptop de 15 pulgadas, libreta, vaso y celular. La mesa estándar acomoda 6 personas con laptop, la grande 10." },

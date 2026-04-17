@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
+import CtaBar from '../components/CtaBar.astro';
 ---
 
 <BaseLayout
@@ -15,7 +16,11 @@ import Hero from '../components/Hero.astro';
   ctaSecondary={{ label: "Ver servicios", href: "/servicios/" }}
   seoParagraph1="Reservar mobiliario con nosotros toma menos de cinco minutos. Llena el formulario o mándanos un WhatsApp con la fecha, la ubicación y el número de personas. Con eso calculamos cuántas piezas necesitas y te mandamos el desglose completo."
   seoParagraph2="El precio que ves es el precio que pagas: incluye traslado, armado en tu ubicación y recolección al terminar. No cobramos por tiempo de uso ni agregamos cargos de última hora. Aceptamos efectivo, transferencia y tarjeta."
+  dark={true}
 />
+
+<!-- CtaBar -->
+<CtaBar />
 
 <section class="section">
   <div class="container">

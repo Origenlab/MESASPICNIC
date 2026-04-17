@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import Hero from '../../../components/Hero.astro';
+import CtaBar from '../../../components/CtaBar.astro';
 import SectionHeader from '../../../components/SectionHeader.astro';
 import FeatureCard from '../../../components/FeatureCard.astro';
 import ServiceCard from '../../../components/ServiceCard.astro';
@@ -28,10 +29,15 @@ import WaBubble from '../../../components/WaBubble.astro';
   ctaSecondary={{ label: "Ver paquetes", href: "/paquetes/" }}
   seoParagraph1="El team building funciona mejor cuando sacas a la gente de la sala de juntas. Las bancas de madera agrupan equipos de 6-8 personas frente a frente, lo que genera conversación natural entre áreas que normalmente no conviven. Hemos montado dinámicas para empresas de 20 hasta 400 colaboradores en parques, jardines corporativos y espacios deportivos."
   seoParagraph2="Cada banca funciona como una estación de trabajo o de dinámica independiente. Los equipos rotan entre bancas según la actividad. Al estar al aire libre con luz natural y espacio abierto, la participación y la energía del grupo aumentan significativamente comparado con un salón cerrado."
+  dark={true}
 />
 
+<!-- CtaBar -->
+<CtaBar />
+
 <section class="section" id="montajes">
-  <SectionHeader tag="h2" title="Así se Ve un Team Building" paragraph1="Montajes de bancas agrupadas en estaciones para dinámicas de equipo. Parques, jardines corporativos y espacios abiertos en CDMX." paragraph2="Explora los modelos recomendados para tu evento en la barra lateral." />
+  <SectionHeader
+    badge="Galería de montajes" tag="h2" title="Así se Ve un Team Building" paragraph1="Montajes de bancas agrupadas en estaciones para dinámicas de equipo. Parques, jardines corporativos y espacios abiertos en CDMX." paragraph2="Explora los modelos recomendados para tu evento en la barra lateral." />
   <ProductGallery
     images={[
       { src: "/img/mesa-picnic-evento-corporativo-networking.avif", alt: "Estaciones de team building con bancas de madera en parque" },
@@ -55,7 +61,8 @@ import WaBubble from '../../../components/WaBubble.astro';
 </section>
 
 <section class="section section-alt" id="formatos">
-  <SectionHeader tag="h2" title="Formatos de Team Building" paragraph1="Cada dinámica requiere una configuración diferente. Estas son las que más montamos y cómo distribuimos las bancas para cada una." paragraph2="Si tu empresa tiene un formato propio, nos adaptamos. Mándanos la dinámica y te proponemos la distribución." />
+  <SectionHeader
+    badge="Nuestras opciones" tag="h2" title="Formatos de Team Building" paragraph1="Cada dinámica requiere una configuración diferente. Estas son las que más montamos y cómo distribuimos las bancas para cada una." paragraph2="Si tu empresa tiene un formato propio, nos adaptamos. Mándanos la dinámica y te proponemos la distribución." />
   <div class="container">
     <div class="grid-4">
       <FeatureCard title="Estaciones Rotativas" description="4-8 bancas distribuidas como estaciones. Los equipos rotan cada 15-20 minutos. Cada banca tiene una actividad diferente. El formato más popular para 40-80 personas." />
@@ -67,7 +74,8 @@ import WaBubble from '../../../components/WaBubble.astro';
 </section>
 
 <section class="section" id="incluye">
-  <SectionHeader tag="h2" title="Qué Incluye" paragraph1="El servicio para team building es rápido y directo. Llegamos, montamos las estaciones según tu dinámica y recogemos al terminar." paragraph2="Facturamos CFDI. Coordinamos con tu equipo de RH o tu agencia de eventos." />
+  <SectionHeader
+    badge="Servicio incluido" tag="h2" title="Qué Incluye" paragraph1="El servicio para team building es rápido y directo. Llegamos, montamos las estaciones según tu dinámica y recogemos al terminar." paragraph2="Facturamos CFDI. Coordinamos con tu equipo de RH o tu agencia de eventos." />
   <div class="container">
     <div class="grid-4">
       <FeatureCard title="Factura CFDI" description="Para tu departamento de compras. RFC, razón social y uso de CFDI configurables." />
@@ -80,7 +88,8 @@ import WaBubble from '../../../components/WaBubble.astro';
 
 <!-- Relacionados -->
 <section class="section section-alt" id="relacionados">
-  <SectionHeader tag="h2" title="Otros Servicios Corporativos" paragraph1="Si tu evento combina dinámicas con comida o conferencia, explora los otros formatos. Todos usan el mismo mobiliario." paragraph2="También puedes combinar formatos: team building por la mañana y comida de integración al mediodía." />
+  <SectionHeader
+    badge="También te puede interesar" tag="h2" title="Otros Servicios Corporativos" paragraph1="Si tu evento combina dinámicas con comida o conferencia, explora los otros formatos. Todos usan el mismo mobiliario." paragraph2="También puedes combinar formatos: team building por la mañana y comida de integración al mediodía." />
   <div class="container">
     <div class="grid-4">
       <ServiceCard title="Team Building" description="Bancas agrupadas en estaciones de 6-8 personas para dinámicas de integración." image="/img/mesa-picnic-evento-corporativo-networking.avif" href="/servicios/eventos-corporativos/team-building/" btnLabel="Team building" />
@@ -92,7 +101,8 @@ import WaBubble from '../../../components/WaBubble.astro';
 </section>
 
 <section class="section" id="faq">
-  <SectionHeader tag="h2" title="Preguntas sobre Team Building" paragraph1="Dudas de coordinadores de RH y agencias que organizan dinámicas de integración." paragraph2="Si necesitas una cotización formal, escríbenos y te la enviamos por correo." />
+  <SectionHeader
+    badge="Preguntas frecuentes" tag="h2" title="Preguntas sobre Team Building" paragraph1="Dudas de coordinadores de RH y agencias que organizan dinámicas de integración." paragraph2="Si necesitas una cotización formal, escríbenos y te la enviamos por correo." />
   <FaqSection phone="55 6432 8954" whatsapp="5564328954" schedule="Lun–Dom 8:00–20:00"
     items={[
       { question: "¿Cuántas bancas para un team building de 60 personas?", answer: "8-10 bancas estándar, agrupadas en estaciones de 6-8 personas. Si la dinámica usa equipos más grandes, 5-6 bancas grandes de 10-12 personas." },

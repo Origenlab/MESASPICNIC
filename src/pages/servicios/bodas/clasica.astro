@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import Hero from '../../../components/Hero.astro';
+import CtaBar from '../../../components/CtaBar.astro';
 import SectionHeader from '../../../components/SectionHeader.astro';
 import FeatureCard from '../../../components/FeatureCard.astro';
 import ServiceCard from '../../../components/ServiceCard.astro';
@@ -33,10 +34,15 @@ import WaBubble from '../../../components/WaBubble.astro';
   ctaSecondary={{ label: "Ver paquetes", href: "/paquetes/" }}
   seoParagraph1="La boda clásica al aire libre combina lo mejor de dos mundos: la elegancia de un banquete formal con la experiencia de estar en un jardín o terraza. Las bancas de pino tienen una superficie lisa y barnizada que soporta manteles de lino, vajilla de porcelana, copas de cristal y candelabros sin problema."
   seoParagraph2="Hemos montado bodas clásicas en haciendas de Edomex, jardines de Coyoacán, terrazas de Polanco y salones con área exterior en toda la Ciudad de México. El formato funciona para bodas de 50 hasta 300 invitados. La clave está en la distribución: pasillos amplios, mesa principal elevada y zonas de coctel separadas."
+  dark={true}
 />
+
+<!-- CtaBar -->
+<CtaBar />
 
 <section class="section" id="montajes">
   <SectionHeader
+    badge="El estilo en detalle"
     tag="h2"
     title="Elegancia sobre Madera Natural"
     paragraph1="Montajes formales con bancas de pino barnizado. Manteles, vajilla y decoración clásica que demuestran que la madera al aire libre puede ser tan elegante como un salón."
@@ -67,6 +73,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 
 <section class="section section-alt" id="elementos">
   <SectionHeader
+    badge="Detalles del estilo"
     tag="h2"
     title="Elementos de una Boda Clásica al Aire Libre"
     paragraph1="El estilo clásico requiere atención al detalle en la mesa: cada lugar debe tener espacio para plato base, copas, cubiertos y tarjeta de nombre. Nuestras bancas lo permiten."
@@ -84,6 +91,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 
 <section class="section" id="mobiliario">
   <SectionHeader
+    badge="Nuestro catálogo"
     tag="h2"
     title="Mobiliario Recomendado"
     paragraph1="Para bodas clásicas recomendamos la mesa grande como mesa principal de novios y las estándar para invitados. El paquete premium incluye coordinador de evento."
@@ -102,6 +110,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 <!-- Estilos relacionados -->
 <section class="section" id="relacionados">
   <SectionHeader
+    badge="Estilos de boda"
     tag="h2"
     title="Otros Estilos de Boda"
     paragraph1="Si el estilo clásico no es exactamente lo que buscas, explora las otras opciones que montamos. Todos usan el mismo mobiliario de pino natural con diferente ambientación."
@@ -119,6 +128,7 @@ import WaBubble from '../../../components/WaBubble.astro';
 
 <section class="section section-alt" id="faq">
   <SectionHeader
+    badge="Preguntas frecuentes"
     tag="h2"
     title="Preguntas sobre Bodas Clásicas"
     paragraph1="Dudas de parejas que quieren un montaje formal sobre madera al aire libre."

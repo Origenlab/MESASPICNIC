@@ -1,0 +1,385 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+---
+
+<BlogLayout
+  title="¿Cuántas Mesas Picnic Necesitas Según tus Invitados? | MESPIC"
+  description="Guía práctica para calcular cuántas mesas picnic rentar según el número de invitados, tipo de evento y espacio disponible. Tablas, ejemplos y recomendaciones de MESPIC CDMX."
+  ogImage="/img/mesa-picnic-grande-evento-16.avif"
+  heroTitle="¿Cuántas Mesas Picnic Necesitas para tu Evento?"
+  heroBadge="Blog · Guías y cálculo"
+  heroDescription="La guía más completa para calcular el número exacto de mesas picnic según tus invitados, el tipo de evento y el espacio disponible. Basada en más de 500 eventos en CDMX."
+  heroSeo1="Una de las preguntas que más recibimos cada semana es: ¿cuántas mesas picnic necesito para mi evento? La respuesta depende de más factores de los que parece. El número de invitados es solo el punto de partida — el tipo de evento, el espacio disponible, el formato de servicio y el estilo de montaje son igual de importantes para llegar a un número correcto."
+  heroSeo2="En MESPIC llevamos más de 8 años calculando montajes para bodas, eventos corporativos, cumpleaños infantiles y reuniones familiares en la Ciudad de México y el Estado de México. Esta guía concentra todo lo que aprendimos. Aquí encontrarás tablas de cálculo, ejemplos reales y las reglas prácticas que usamos nosotros mismos en cada cotización."
+  heroCta={{ label: "Cotizar sin compromiso →", href: "/cotizar/" }}
+  heroCtaSecondary={{ label: "Ver catálogo de mesas", href: "/catalogo/" }}
+  breadcrumbs={[
+    { label: "Inicio", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "¿Cuántas mesas picnic necesitas?" },
+  ]}
+>
+
+<div class="art">
+
+  <p class="art__lead">
+    Si calculas mal la cantidad de mesas, tu evento lo resiente de dos formas: invitados apretados e incómodos, o espacio sobrante que hace que el montaje se vea vacío. Ninguna de las dos opciones es aceptable. Esta guía te da las herramientas para llegar al número correcto desde la primera cotización.
+  </p>
+
+  <!-- ─── SECCIÓN 1: La regla base ─── -->
+  <section class="art__section">
+    <h2 class="art__h2">La regla base para calcular mesas picnic</h2>
+
+    <p>Antes de entrar a las tablas, conviene entender la lógica detrás del cálculo. Una mesa picnic estándar tiene 1.80 m de largo y 1.50 m de ancho. Las bancas integradas acomodan personas en ambos lados. El número final depende de qué tan cómodo quieres que esté cada invitado.</p>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>6 personas por mesa</h3>
+        <p>La configuración cómoda. Espacio suficiente para platos, vasos, centros de mesa y conversación sin apretarse. Recomendada para bodas, comidas formales y eventos donde la estética importa.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>8 personas por mesa</h3>
+        <p>La configuración ajustada. Funciona para eventos informales, convivencias casuales o cuando el espacio del venue es limitado. No recomendada si habrá decoración amplia sobre la mesa.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>4–5 personas por mesa</h3>
+        <p>La configuración de trabajo. Ideal cuando cada persona necesita espacio para laptop, materiales, carpetas o herramientas. Común en workshops, team buildings y talleres al aire libre.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>10–12 personas por mesa</h3>
+        <p>Solo en la Mesa Grande (2.40 m). Para eventos de alta capacidad donde la densidad se prioriza. Requiere pasillos amplios y no es recomendable con vajilla formal o decoración elaborada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TABLA PRINCIPAL ─── -->
+  <section class="art__section">
+    <h2 class="art__h2">Tabla de cálculo: mesas según número de invitados</h2>
+
+    <p>Esta es nuestra tabla de referencia estándar, basada en más de 500 eventos. Usa la columna "cómodo" para bodas y eventos formales; usa "ajustado" solo para reuniones informales o cuando el espacio manda.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Invitados</th>
+            <th class="th-accent">Mesas (cómodo · 6/mesa)</th>
+            <th>Mesas (ajustado · 8/mesa)</th>
+            <th>Espacio mínimo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>20</strong></td>
+            <td class="td-accent">4 mesas</td>
+            <td>3 mesas</td>
+            <td>40 – 50 m²</td>
+          </tr>
+          <tr>
+            <td><strong>30</strong></td>
+            <td class="td-accent">5 mesas</td>
+            <td>4 mesas</td>
+            <td>55 – 65 m²</td>
+          </tr>
+          <tr>
+            <td><strong>50</strong></td>
+            <td class="td-accent">9 mesas</td>
+            <td>7 mesas</td>
+            <td>85 – 100 m²</td>
+          </tr>
+          <tr>
+            <td><strong>80</strong></td>
+            <td class="td-accent">14 mesas</td>
+            <td>10 mesas</td>
+            <td>130 – 160 m²</td>
+          </tr>
+          <tr>
+            <td><strong>100</strong></td>
+            <td class="td-accent">17 mesas</td>
+            <td>13 mesas</td>
+            <td>160 – 190 m²</td>
+          </tr>
+          <tr>
+            <td><strong>150</strong></td>
+            <td class="td-accent">25 mesas</td>
+            <td>19 mesas</td>
+            <td>230 – 270 m²</td>
+          </tr>
+          <tr>
+            <td><strong>200</strong></td>
+            <td class="td-accent">34 mesas</td>
+            <td>25 mesas</td>
+            <td>300+ m²</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="art__tip">
+      <div class="art__tip-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </div>
+      <div>
+        <strong>Regla de oro:</strong> El espacio mínimo incluye las mesas pero no considera pasillos de servicio, zona de buffet, pista de baile ni área de coctelería. Si tu evento tiene alguna de estas zonas, suma entre 30% y 50% adicional al espacio total calculado.
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── IMAGEN ─── -->
+  <figure class="art__figure">
+    <img
+      src="/img/mesa-picnic-grande-evento-16.avif"
+      alt="Vista aérea de mesas picnic de madera distribuidas en un jardín para evento al aire libre en CDMX"
+      loading="lazy"
+      width="900"
+      height="560"
+    />
+    <figcaption>Distribución de mesas picnic para evento de 80 personas en jardín privado · MESPIC CDMX</figcaption>
+  </figure>
+
+  <!-- ─── SECCIÓN 2: Por tipo de evento ─── -->
+  <section class="art__section">
+    <h2 class="art__h2">Cómo cambia el cálculo según el tipo de evento</h2>
+
+    <p>El número de invitados es el punto de partida, pero el tipo de evento determina el factor de cálculo que debes aplicar. Estos son los cuatro escenarios más frecuentes:</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table art__table--compare">
+        <thead>
+          <tr>
+            <th>Tipo de evento</th>
+            <th class="th-accent">Personas por mesa</th>
+            <th>Razón</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Boda al aire libre</td>
+            <td class="td-accent">6 personas</td>
+            <td>Decoración, vajilla, copas y centros de mesa ocupan espacio. La estética manda.</td>
+          </tr>
+          <tr>
+            <td>Comida corporativa</td>
+            <td class="td-accent">6 personas</td>
+            <td>Espacio para platos, vasos y conversación fluida entre colaboradores.</td>
+          </tr>
+          <tr>
+            <td>Team building / taller</td>
+            <td class="td-accent">4–5 personas</td>
+            <td>Laptops, materiales y dinámica de trabajo requieren más superficie por persona.</td>
+          </tr>
+          <tr>
+            <td>Fiesta infantil</td>
+            <td class="td-accent">6–8 niños</td>
+            <td>Los niños ocupan menos espacio pero necesitan zona para actividades y juegos.</td>
+          </tr>
+          <tr>
+            <td>Networking / cocktail</td>
+            <td class="td-accent">8–10 personas</td>
+            <td>La gente rota entre mesas y no está sentada el 100% del tiempo.</td>
+          </tr>
+          <tr>
+            <td>Reunión familiar casual</td>
+            <td class="td-accent">6–8 personas</td>
+            <td>Mezcla de adultos y niños. Configuración relajada pero cómoda.</td>
+          </tr>
+          <tr>
+            <td>Activación de marca / feria</td>
+            <td class="td-accent">8–12 personas</td>
+            <td>Alta rotación. Más densidad es válida porque los asistentes circulan.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ─── SECCIÓN 3: Distribución ─── -->
+  <section class="art__section">
+    <h2 class="art__h2">Distribución del espacio: el factor que más se olvida</h2>
+
+    <p>Un error muy frecuente es calcular mesas sin considerar el espacio entre ellas. Puedes tener el número correcto de mesas y aun así tener un montaje incómodo si los pasillos son demasiado estrechos.</p>
+
+    <ol class="art__steps">
+      <li class="art__step">
+        <span class="art__step-num">01</span>
+        <div class="art__step-body">
+          <h3>Pasillos principales: mínimo 1.5 m</h3>
+          <p>El pasillo central por donde circulan los invitados y los meseros debe tener al menos 1.5 metros. En eventos de más de 100 personas, considera 2 m para que los flujos de entrada y salida no choquen.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">02</span>
+        <div class="art__step-body">
+          <h3>Entre hileras de mesas: mínimo 1.2 m</h3>
+          <p>Este espacio permite que los invitados se levanten de la banca, los meseros circulen con charolas y haya paso en caso de emergencia. Con menos de 1.2 m el evento se siente apretado aunque las mesas estén bien dimensionadas.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">03</span>
+        <div class="art__step-body">
+          <h3>Separación de bordes: 1 m desde la pared o límite</h3>
+          <p>No pegues las mesas directamente a muros, jardineras, bardas o postes. Deja al menos 1 metro de margen para que los invitados de los extremos tengan espacio suficiente.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">04</span>
+        <div class="art__step-body">
+          <h3>Zona de buffet o coctelería: reserva aparte</h3>
+          <p>Si habrá estaciones de comida, barra de bebidas o mesa de postres, estas zonas no forman parte del área de mesas. Reserva entre 15 y 25 m² adicionales según el formato del servicio.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">05</span>
+        <div class="art__step-body">
+          <h3>Configuraciones especiales: en U, L o islas</h3>
+          <p>En eventos corporativos o de trabajo, las islas de 3–4 mesas generan grupos de conversación naturales. En bodas, la disposición en U con mesa de honor al frente es la más fotogénica y funcional.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ─── CTA INTERMEDIO ─── -->
+  <div class="art__cta-inline">
+    <div class="art__cta-inline-content">
+      <h3>¿Ya tienes el número de invitados?</h3>
+      <p>Dinos cuántos invitados, el tipo de evento y la fecha tentativa. En menos de 30 minutos te enviamos una cotización con el número exacto de mesas y la disponibilidad confirmada.</p>
+      <div class="art__cta-inline-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+calcular+cu%C3%A1ntas+mesas+picnic+necesito+para+mi+evento." target="_blank" rel="noopener" class="art__btn art__btn--wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Calcular por WhatsApp
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--outline">Formulario de cotización →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SECCIÓN 4: Ejemplos reales ─── -->
+  <section class="art__section">
+    <h2 class="art__h2">Tres ejemplos reales de cálculo</h2>
+
+    <p>Para que el cálculo sea más concreto, aquí van tres escenarios con los que trabajamos frecuentemente. Cada uno tiene sus propias variables que afectan el número final:</p>
+
+    <div class="art__service-cards">
+      <div class="art__service-item">
+        <h3>Ejemplo 1 — Boda para 60 personas en jardín</h3>
+        <p>Formato: servicio de alimentos sentados, decoración floral, copas de cristal y centros de mesa. Cálculo: 10 mesas a 6 personas. Distribución: 2 filas de 5 mesas, pasillo central de 2 m, espacio adicional para mesa de pastel y zona de coctelería. Espacio total necesario: aproximadamente 120 m².</p>
+      </div>
+      <div class="art__service-item">
+        <h3>Ejemplo 2 — Team building corporativo para 120 personas</h3>
+        <p>Formato: estaciones de trabajo en grupos de 4, dinámica de retos por equipo, laptops sobre la mesa. Cálculo: 30 mesas a 4 personas en 6 islas de 5 mesas cada una. Pasillos de 1.5 m entre islas. Espacio total necesario: aproximadamente 240 m².</p>
+      </div>
+      <div class="art__service-item">
+        <h3>Ejemplo 3 — Cumpleaños infantil para 35 niños</h3>
+        <p>Formato: 25 niños de 4 a 8 años más 10 adultos. Zona diferenciada: 4 mesas infantiles para los niños (mesas pequeñas a 6 niños) + 2 mesas estándar para adultos + 1 mesa para pastel. Espacio total necesario: 60–70 m².</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECCIÓN 5: Errores comunes ─── -->
+  <section class="art__section">
+    <h2 class="art__h2">Los 4 errores más frecuentes al calcular mesas</h2>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Error</th>
+            <th class="th-accent">Consecuencia</th>
+            <th>Cómo evitarlo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Calcular a 8 personas en boda formal</td>
+            <td class="td-accent">Invitados apretados, decoración aplastada, fotos incómodas</td>
+            <td>Siempre calcular a 6 personas en bodas con decoración</td>
+          </tr>
+          <tr>
+            <td>No reservar espacio para buffet</td>
+            <td class="td-accent">La zona de comida invade el área de mesas o queda sin espacio</td>
+            <td>Separar 15–25 m² adicionales para servicio de alimentos</td>
+          </tr>
+          <tr>
+            <td>Rentar de más "por si acaso"</td>
+            <td class="td-accent">El evento se ve vacío y el presupuesto se dispara</td>
+            <td>Calcular con la tabla y confiar en los rangos recomendados</td>
+          </tr>
+          <tr>
+            <td>Ignorar los pasillos de circulación</td>
+            <td class="td-accent">Montaje que funciona en papel pero no en el espacio real</td>
+            <td>Medir el venue antes de cotizar y diseñar el layout con pasillos de 1.2–1.5 m</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ─── GALERÍA ─── -->
+  <section class="art__section">
+    <h2 class="art__h2">Ejemplos de distribución en eventos reales</h2>
+    <div class="art__gallery-strip">
+      <img src="/img/mesa-picnic-boda-invitados-atardecer.avif" alt="Mesas picnic distribuidas en jardín para boda al atardecer" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-evento-corporativo-networking.avif" alt="Mesas picnic en configuración corporativa para networking" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-fiesta-infantil-globos-colores.avif" alt="Mesas picnic decoradas para fiesta infantil con globos" loading="lazy" width="350" height="220" />
+      <img src="/img/corp-teambuilding-1.avif" alt="Distribución de mesas picnic para team building empresarial" loading="lazy" width="350" height="220" />
+    </div>
+  </section>
+
+  <!-- ─── SECCIÓN 6: FAQ ─── -->
+  <section class="art__section">
+    <h2 class="art__h2">Preguntas frecuentes sobre el cálculo de mesas</h2>
+
+    <div class="art__faqs">
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué pasa si me faltan mesas el día del evento?</summary>
+        <p class="art__faq-a">En MESPIC los cambios de hasta ±2 mesas se pueden gestionar con 48 horas de anticipación sin costo extra. Para cambios mayores el día del evento, depende de nuestro inventario disponible. Por eso recomendamos cotizar con un margen del 10% y confirmar el número definitivo 72 horas antes.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Hay diferencia entre la Mesa Estándar y la Mesa Grande para el cálculo?</summary>
+        <p class="art__faq-a">Sí. La Mesa Estándar mide 1.80 m y acomoda 6 personas. La Mesa Grande mide 2.40 m y puede acomodar 10–12. Si tu evento es grande y el espacio lo permite, una mezcla de Grandes y Estándar puede reducir el número de piezas y optimizar la distribución. Podemos asesorarte en el mix ideal.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuántas mesas entran en 100 m²?</summary>
+        <p class="art__faq-a">Aproximadamente 10–12 mesas estándar con pasillos de 1.2 m, lo que equivale a 60–72 personas cómodas. Si el espacio es irregular (L, U o con obstáculos), el número puede bajar. Recomendamos compartir el plano del venue para hacer un layout antes de cotizar.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Tienen servicio para más de 200 personas?</summary>
+        <p class="art__faq-a">Sí. Contamos con más de 120 piezas en inventario activo. Para eventos de 200+ personas coordinamos la logística con tu equipo o el del venue con anticipación. El tiempo de montaje de 34 piezas es de aproximadamente 2.5 horas con nuestro equipo completo.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Puedo mezclar mesas estándar con mesas infantiles en el mismo evento?</summary>
+        <p class="art__faq-a">Absolutamente. Es la configuración más frecuente en reuniones familiares y cumpleaños con niños. Las mesas infantiles (1.20 m, asiento a 30 cm) se colocan en una zona separada y delimitada. Se calcula de forma independiente: 6–8 niños por mesa infantil.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Ofrecen asesoría en el layout del evento?</summary>
+        <p class="art__faq-a">Sí. Si nos compartes las dimensiones del espacio y el número de invitados, te enviamos una propuesta de distribución antes de confirmar. Este servicio es sin costo para clientes que cotizan con nosotros.</p>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- ─── CTA FINAL ─── -->
+  <div class="art__cta-final">
+    <div class="art__cta-final-inner">
+      <h2>¿Ya tienes el número de mesas que necesitas?</h2>
+      <p>Cuéntanos cuántos invitados tendrás, el tipo de evento y el venue. Te calculamos el layout y te damos un presupuesto en menos de 30 minutos.</p>
+      <div class="art__cta-final-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+calcular+cu%C3%A1ntas+mesas+picnic+necesito+para+mi+evento." target="_blank" rel="noopener" class="art__btn art__btn--wa art__btn--lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Calcular por WhatsApp ahora
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--primary art__btn--lg">Formulario de cotización →</a>
+        <a href="/servicios/" class="art__btn art__btn--ghost art__btn--lg">Ver todos los servicios</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</BlogLayout>
