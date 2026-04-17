@@ -1,0 +1,264 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import CtaBar from '../../../components/CtaBar.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import FeatureCard from '../../../components/FeatureCard.astro';
+import ServiceCard from '../../../components/ServiceCard.astro';
+import ProductGallery from '../../../components/ProductGallery.astro';
+import FaqSection from '../../../components/FaqSection.astro';
+import CtaBarFinal from '../../../components/CtaBarFinal.astro';
+import WaBubble from '../../../components/WaBubble.astro';
+---
+
+<BaseLayout
+  title="Set Picnic Completo para Renta — Mesa + Decoración Incluida | MESPIC CDMX"
+  description="Set Picnic Completo de MESPIC: mesa de pino + mantelería + cojines + centro decorativo + ambientación básica. Paquete llave en mano para picnics románticos, pedidas de mano y aniversarios en CDMX y Edomex."
+  ogImage="/img/mesa-picnic-pedida-mano-romantica.webp"
+>
+
+<!-- Breadcrumbs -->
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Catálogo", href: "/catalogo/" },
+    { label: "Set Picnic Completo" }
+  ]} />
+</Fragment>
+
+<!-- Hero -->
+<Hero
+  badge="Set Picnic Completo"
+  title="Set Picnic Completo — Mesa + Decoración, Todo Incluido"
+  description="Un paquete llave en mano: mesa de pino estándar, mantelería de algodón, cojines decorativos, centro de mesa y ambientación básica. Todo en una sola renta, sin necesidad de contratar decoradora. Para picnics románticos, pedidas de mano y aniversarios especiales."
+  ctaPrimary={{ label: "Cotizar ahora →", href: "/cotizar/" }}
+  ctaSecondary={{ label: "Ver todos los modelos", href: "/catalogo/" }}
+  seoParagraph1="El Set Picnic Completo nace de una pregunta que recibimos con frecuencia: ¿puedo rentar la mesa con decoración ya incluida? La respuesta es sí. El set incluye la mesa de pino estándar (1.80 × 1.50 m) con sus bancas integradas, más todos los elementos decorativos básicos que transforman la mesa en una experiencia picnic completa: mantelería, cojines, centro de mesa y ambientación básica del área."
+  seoParagraph2="Es la opción ideal para parejas que quieren una experiencia de picnic romántico sin tener que coordinar múltiples proveedores. Un solo punto de contacto, una sola entrega, una sola cotización. Nuestro equipo llega a la locación elegida (parque, jardín, terraza o campo), monta todo el set y lo recoge al terminar. El cliente solo tiene que aparecer. Si quieres agregar flores frescas, cesta de picnic con alimentos o decoración temática específica, lo cotizamos por separado de forma personalizada."
+  dark={true}
+  metrics={[
+    { value: "todo",       label: "incluido en un set" },
+    { value: "sin",        label: "decoradora adicional" },
+    { value: "1 entrega",  label: "todo en una sola visita" },
+  ]}
+/>
+
+<!-- CtaBar -->
+<CtaBar />
+
+<!-- GALERÍA -->
+<section class="section" id="galeria">
+  <SectionHeader
+    tag="h2"
+    badge="Set en eventos reales"
+    title="El Set Picnic Completo en Pedidas de Mano y Aniversarios"
+    paragraph1="El set montado en parques, jardines y terrazas de la Ciudad de México. Cada montaje incluye mesa, mantelería, cojines y centro decorativo. Así se ve cuando llegamos a montar."
+    paragraph2="¿Tienes una fecha especial? La reserva mínima es con 48 horas de anticipación. Para fechas muy especiales (San Valentín, Año Nuevo, aniversarios importantes), reserva con al menos 1 semana."
+  />
+  <ProductGallery
+    images={[
+      { src: "/img/mesa-picnic-pedida-mano-romantica.webp",       alt: "Set picnic completo montado para pedida de mano con flores y velas en jardín CDMX" },
+      { src: "/img/mesa-picnic-pedida-mano-romantica.webp",       alt: "Set picnic con mantelería de algodón y cojines para aniversario al aire libre" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.avif",    alt: "Set completo para picnic romántico con decoración floral en parque de la ciudad" },
+      { src: "/img/mesa-picnic-pedida-mano-romantica.webp",       alt: "Mesa picnic con centro decorativo y velas para celebración íntima de pareja" },
+      { src: "/img/mesa-picnic-boda-elegante-luces.avif",         alt: "Set picnic nocturno con iluminación cálida para cena romántica en jardín privado" },
+      { src: "/img/mesa-picnic-pedida-mano-romantica.webp",       alt: "Detalle del mantel de algodón y centro decorativo del set picnic completo de MESPIC" },
+    ]}
+    recommended={[
+      { title: "Mesa Estándar",    description: "Solo la mesa · 6 personas",   href: "/catalogo/mesa-picnic-estandar/",   image: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
+      { title: "Mesa Premium",     description: "Acabado superior · Lujo",     href: "/catalogo/mesa-picnic-premium/",    image: "/img/mesa-picnic-boda-elegante-luces.avif" },
+      { title: "Picnic Romántico", description: "Servicio para parejas",       href: "/servicios/picnic-romantico/",      image: "/img/mesa-picnic-pedida-mano-romantica.webp" },
+      { title: "Mesa Rústica",     description: "Boho & vintage · 6 personas", href: "/catalogo/mesa-picnic-rustica/",    image: "/img/tema-mexicana-1.avif" },
+      { title: "Mesa Grande",      description: "2.40 m · 10–12 personas",     href: "/catalogo/mesa-picnic-grande/",     image: "/img/mesa-picnic-evento-corporativo-networking.avif" },
+    ]}
+    sidebarTitle="También te puede interesar"
+  />
+</section>
+
+<!-- QUÉ INCLUYE -->
+<section class="section section-alt" id="incluye">
+  <SectionHeader
+    tag="h2"
+    badge="¿Qué incluye el set?"
+    title="Todo lo que Viene en el Set Picnic Completo"
+    paragraph1="Una lista clara de lo que incluye el set estándar. Sin letra chica, sin sorpresas. Si quieres personalizar con elementos adicionales, lo cotizamos aparte."
+    paragraph2="El precio del set es fijo. Cualquier adición (flores frescas, cesta de picnic, champagne, decoración temática) se cotiza por separado según disponibilidad."
+    stats={[
+      { value: '5',          label: 'elementos incluidos' },
+      { value: '1 precio',   label: 'todo sin extras' },
+      { value: 'personalizable', label: 'con adiciones opcionales' },
+    ]}
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard
+        index={0}
+        title="Mesa de Pino + Bancas"
+        description="Mesa estándar de 1.80 × 1.50 m con dos bancas integradas de pino natural, lijada y barnizada a mano. La misma pieza que se usa en el catálogo estándar, como base del set completo."
+      />
+      <FeatureCard
+        index={1}
+        title="Mantelería de Algodón"
+        description="Mantel principal de algodón natural en tono neutro (blanco roto o crema), seleccionado para combinar con el tono de la madera y cualquier decoración adicional que el cliente quiera incorporar."
+      />
+      <FeatureCard
+        index={2}
+        title="Cojines Decorativos"
+        description="Cojines de tela natural para las bancas: aportan comodidad durante la estancia y un elemento decorativo suave que complementa la estética del set. Disponibles en tonos neutros y tierra."
+      />
+      <FeatureCard
+        index={3}
+        title="Centro de Mesa + Ambientación"
+        description="Centro decorativo básico sobre la mesa (ramas secas, flores deshidratadas o elemento de temporada) y ambientación del área inmediata. El equipo de MESPIC monta el set completo y cuida la composición visual antes de retirarse."
+      />
+    </div>
+  </div>
+</section>
+
+<!-- PERSONALIZACIONES -->
+<section class="section" id="personalizacion">
+  <SectionHeader
+    tag="h2"
+    badge="Adiciones opcionales"
+    title="Personaliza tu Set Picnic"
+    paragraph1="El set incluye los elementos base. Si quieres ir más allá del estándar, podemos agregar flores frescas, canastas de picnic o decoración temática según el tipo de celebración."
+    paragraph2="Todas las adiciones se cotizan por separado. Indícanos qué tienes en mente y preparamos un presupuesto personalizado."
+    stats={[
+      { value: 'flores',     label: 'frescas o secas disponibles' },
+      { value: 'cesta',      label: 'de picnic con alimentos' },
+      { value: 'temático',   label: 'personalizado por evento' },
+    ]}
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard index={0} title="Flores Frescas" description="Arreglo floral con flores de temporada en tonos seleccionados por el cliente. Rosas, peonías, eucalipto, lavanda o composición mixta. Se cotiza según la complejidad del arreglo." />
+      <FeatureCard index={1} title="Cesta de Picnic" description="Canasta de mimbre con elementos para el picnic: tablas de quesos, frutas, pan artesanal o menú personalizado. Coordinada con proveedores de alimentos seleccionados." />
+      <FeatureCard index={2} title="Iluminación Romántica" description="Serie de luces cálidas, velas o faroles para crear ambiente nocturno. Ideal para picnics al atardecer, pedidas de mano y cenas románticas en jardines con poca iluminación natural." />
+      <FeatureCard index={3} title="Decoración Temática" description="Elementos decorativos específicos para la temática del evento: boho, floral, minimalista, bohemio, rústico o personalizado. Se coordina con base en el brief del cliente." />
+    </div>
+  </div>
+</section>
+
+<!-- USOS -->
+<section class="section section-alt" id="usos">
+  <SectionHeader
+    tag="h2"
+    badge="Para qué tipo de ocasión"
+    title="Para Qué Momento es el Set Picnic Completo"
+    paragraph1="El Set Completo está pensado para celebraciones íntimas y momentos especiales donde la experiencia importa más que la escala."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard
+        title="Pedida de Mano"
+        description="El set montado en el lugar favorito de la pareja, con flores y velas si se desea. Nuestro equipo monta todo antes de que la pareja llegue y se retira discretamente. El momento es completamente de ellos."
+        image="/img/mesa-picnic-pedida-mano-romantica.webp"
+        href="/servicios/picnic-romantico/"
+        btnLabel="Picnic romántico"
+        badge="Romántico"
+      />
+      <ServiceCard
+        title="Aniversario"
+        description="Para el primer aniversario, el décimo o cualquier número que importa. Una experiencia diferente a un restaurante, en la locación exacta que tiene significado para la pareja."
+        image="/img/mesa-picnic-boda-elegante-luces.avif"
+        href="/servicios/picnic-romantico/"
+        btnLabel="Aniversario"
+        badge="Aniversario"
+      />
+      <ServiceCard
+        title="Cumpleaños Especial"
+        description="Para celebrar los 30, los 50 o cualquier cumpleaños que merece más que una cena en restaurante. El set crea un espacio íntimo y personalizado en cualquier jardín o parque de la ciudad."
+        image="/img/mesa-picnic-boda-elegante-decoracion.avif"
+        href="/servicios/reuniones-familiares/"
+        btnLabel="Cumpleaños"
+        badge="Cumpleaños"
+      />
+      <ServiceCard
+        title="San Valentín / Día Especial"
+        description="El set es la alternativa al restaurante lleno para San Valentín, Día de las Madres o cualquier fecha especial. Reserva con anticipación en temporada alta."
+        image="/img/mesa-picnic-pedida-mano-romantica.webp"
+        href="/servicios/picnic-romantico/"
+        btnLabel="Día especial"
+        badge="Especial"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <SectionHeader
+    tag="h2"
+    badge="Preguntas frecuentes"
+    title="Preguntas sobre el Set Picnic Completo"
+    paragraph1="Todo lo que necesitas saber antes de reservar el Set Picnic para tu celebración especial."
+  />
+  <FaqSection
+    phone="55 6432 8954"
+    whatsapp="5564328954"
+    schedule="Lun–Dom 8:00–20:00"
+    waMessage="Hola, quiero cotizar el Set Picnic Completo para una ocasión especial."
+    items={[
+      {
+        question: "¿Dónde pueden montar el set? ¿Solo en jardines privados?",
+        answer: "Montamos en jardines privados, terrazas, parques públicos (con permiso de ser necesario), azoteas y cualquier espacio exterior con acceso vehicular. Si quieres montarlo en un parque específico, escríbenos la ubicación y te confirmamos viabilidad y cualquier requerimiento especial."
+      },
+      {
+        question: "¿Con cuánto tiempo de anticipación hay que reservar?",
+        answer: "El tiempo mínimo de reserva es 48 horas. Para fechas especiales como San Valentín, Año Nuevo, Día de las Madres o aniversarios en temporada alta, recomendamos reservar con al menos 1 semana de anticipación. Para pedidas de mano donde la fecha es muy específica, cuanto antes mejor."
+      },
+      {
+        question: "¿Pueden estar presentes cuando lleguen a montar o tienen que retirarse?",
+        answer: "Tú decides. Podemos montar con el cliente presente o ausente. Para pedidas de mano, lo más frecuente es que el organizador coordine la llegada de nuestro equipo antes de que llegue la persona sorprendida. Nuestro equipo se retira discretamente una vez que el set está listo."
+      },
+      {
+        question: "¿El set incluye flores o solo decoración seca?",
+        answer: "El set estándar incluye decoración seca o de temporada (ramas, flores deshidratadas, elementos naturales). Las flores frescas son una adición opcional que se cotiza por separado. Si quieres flores frescas específicas (rosas, peonías, etc.), indícalo al cotizar y te preparamos el presupuesto completo."
+      },
+      {
+        question: "¿Qué pasa si llueve el día del picnic?",
+        answer: "Si el pronóstico es de lluvia intensa, te contactamos con anticipación para coordinar una fecha alternativa sin costo adicional. Para lluvia ligera o probabilidad menor, dejamos el montaje en pie si el cliente así lo decide — la madera y los elementos resistentes están protegidos. Para mayor seguridad, podemos recomendar locaciones techadas o semi-abiertas."
+      }
+    ]}
+  />
+</section>
+
+<CtaBarFinal
+  headline="¿Tienes una ocasión especial próxima?"
+  subtext="Cotiza el Set Picnic Completo para tu fecha. Reserva con anticipación para garantizar disponibilidad."
+  phone="55 6432 8954"
+  whatsapp="5564328954"
+  waMessage="Hola, quiero cotizar el Set Picnic Completo para una celebración especial."
+  cotizarHref="/cotizar/"
+/>
+
+<WaBubble whatsapp="5564328954" message="Hola, quiero cotizar el Set Picnic Completo para una ocasión especial." />
+
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Set Picnic Completo — Renta MESPIC",
+    "description": "Set picnic para renta en CDMX y Edomex. Incluye mesa de pino estándar, mantelería de algodón, cojines decorativos, centro de mesa y ambientación básica. Ideal para picnics románticos, pedidas de mano y aniversarios.",
+    "brand": { "@type": "Brand", "name": "MESPIC" },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "MXN",
+      "availability": "https://schema.org/InStock",
+      "seller": { "@type": "LocalBusiness", "name": "MESPIC", "telephone": "+52-55-6432-8954" }
+    }
+  })} />
+</Fragment>
+
+</BaseLayout>
+
+<style>
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+  @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid-4 { grid-template-columns: 1fr; } }
+</style>

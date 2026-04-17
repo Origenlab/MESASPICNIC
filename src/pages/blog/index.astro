@@ -1,134 +1,841 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Hero from '../../components/Hero.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import CtaBarFinal from '../../components/CtaBarFinal.astro';
+import WaBubble from '../../components/WaBubble.astro';
 
-const allPosts = [
+interface Post {
+  title: string;
+  description: string;
+  image: string;
+  href: string;
+  category: string;
+  featured?: boolean;
+}
+
+const allPosts: Post[] = [
   {
-    title: "Ideas de Decoración para Mesas Picnic en Fiestas Infantiles",
-    description: "Consejos profesionales para decorar mesas picnic infantiles con mejor estética, orden y funcionalidad.",
-    image: "/img/mesa-picnic-fiesta-infantil-globos-colores.avif",
-    href: "/blog/ideas-decoracion-mesas-picnic-fiestas-infantiles/",
+    title: "Renta de Mesas Picnic para Bodas en CDMX: Guía Completa",
+    description: "Todo lo que necesitas saber sobre la renta de mesas picnic para bodas al aire libre en Ciudad de México y Estado de México. Estilos, capacidades y logística.",
+    image: "/img/mesa-picnic-boda-elegante-decoracion.avif",
+    href: "/blog/renta-mesas-picnic-bodas-cdmx/",
+    category: "Bodas",
+    featured: true,
   },
   {
     title: "Cuántas Mesas Picnic Necesitas Según el Número de Invitados",
     description: "Guía práctica para calcular cuántas mesas picnic rentar según invitados, tipo de evento y espacio disponible.",
     image: "/img/mesa-picnic-grande-evento-16.avif",
     href: "/blog/cuantas-mesas-picnic-necesitas-segun-invitados/",
-  },
-  {
-    title: "Renta de Mesas Picnic para Bodas en CDMX: Guía Completa",
-    description: "Todo lo que necesitas saber sobre la renta de mesas picnic para bodas al aire libre en Ciudad de México y Estado de México.",
-    image: "/img/mesa-picnic-boda-elegante-decoracion.avif",
-    href: "/blog/renta-mesas-picnic-bodas-cdmx/",
+    category: "Guías",
   },
   {
     title: "Mesas Picnic para Eventos Corporativos: Guía para Empresas",
     description: "Cómo elegir mesas picnic para tu evento corporativo. Team buildings, conferencias y comidas empresariales al aire libre.",
     image: "/img/mesa-picnic-evento-corporativo-networking.avif",
     href: "/blog/mesas-picnic-eventos-corporativos/",
+    category: "Corporativo",
+  },
+  {
+    title: "Ideas de Decoración para Mesas Picnic en Fiestas Infantiles",
+    description: "Consejos profesionales para decorar mesas picnic infantiles con mejor estética, orden y funcionalidad. Temáticas, colores y materiales.",
+    image: "/img/mesa-picnic-fiesta-infantil-globos-colores.avif",
+    href: "/blog/ideas-decoracion-mesas-picnic-fiestas-infantiles/",
+    category: "Infantiles",
   },
   {
     title: "Decoración de Mesas Picnic para Fiestas Infantiles",
-    description: "Ideas creativas para decorar mesas picnic en cumpleaños y fiestas infantiles. Temáticas, colores y consejos prácticos.",
+    description: "Ideas creativas para decorar mesas picnic en cumpleaños y fiestas infantiles. Temáticas, colores y consejos prácticos paso a paso.",
     image: "/img/mesa-picnic-fiesta-infantil-globos-colores.avif",
     href: "/blog/decoracion-mesas-picnic-fiestas-infantiles/",
+    category: "Infantiles",
   },
 ];
+
+const featuredPost = allPosts.find(p => p.featured)!;
+const gridPosts = allPosts.filter(p => !p.featured);
+
+const categories = [...new Set(allPosts.map(p => p.category))];
+
+const sidebarServices = [
+  { label: "Renta para Bodas",       href: "/servicios/bodas/" },
+  { label: "Eventos Corporativos",   href: "/servicios/eventos-corporativos/" },
+  { label: "Fiestas Infantiles",     href: "/servicios/fiestas-infantiles/" },
+  { label: "Picnic Romántico",       href: "/servicios/picnic-romantico/" },
+  { label: "Fiestas Temáticas",      href: "/servicios/fiestas-tematicas/" },
+  { label: "Reuniones Familiares",   href: "/servicios/reuniones-familiares/" },
+];
+
+const sidebarCatalog = [
+  { label: "Mesa Picnic Estándar", desc: "6–8 personas",           href: "/catalogo/mesa-picnic-estandar/",  image: "/img/mesa-picnic-area-verde-19.avif" },
+  { label: "Mesa Picnic Grande",   desc: "10–12 personas",         href: "/catalogo/mesa-picnic-grande/",    image: "/img/mesa-picnic-grande-evento-16.avif" },
+  { label: "Mesa Picnic Infantil", desc: "Niños 3–8 años",         href: "/catalogo/mesa-picnic-infantil/",  image: "/img/mesa-picnic-fiesta-infantil-globos-colores.avif" },
+  { label: "Mesa Picnic Premium",  desc: "Acabado premium",        href: "/catalogo/mesa-picnic-premium/",   image: "/img/mesa-picnic-premium-23.avif" },
+  { label: "Set Picnic Completo",  desc: "Con decoración incluida",href: "/catalogo/set-picnic-completo/",   image: "/img/mesa-picnic-boda-invitados-atardecer.avif" },
+];
+
+const catColor: Record<string, string> = {
+  Bodas:       "#9B6B4E",
+  Guías:       "#2C5530",
+  Corporativo: "#3B5998",
+  Infantiles:  "#C75C6A",
+};
 ---
 
 <BaseLayout
   title="Blog — MESPIC | Tips y Guías de Mesas Picnic"
-  description="Artículos, guías y consejos sobre renta de mesas picnic para eventos. Bodas, corporativos, infantiles y más."
+  description="Artículos, guías y consejos sobre renta de mesas picnic para eventos en CDMX. Bodas, corporativos, infantiles y más."
 >
 
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Blog" }
+  ]} />
+</Fragment>
+
 <Hero
-  title="Blog MESPIC"
-  description="Guías, consejos y tendencias sobre mesas picnic para eventos. Aprende a crear el evento perfecto."
-  ctaPrimary={{ label: "Cotizar ahora →", href: "/cotizar/" }}
-  ctaSecondary={{ label: "Servicios", href: "/servicios/" }}
+  dark={true}
+  badge="Blog de MESPIC"
+  title="Guías y Consejos de Mesas Picnic para Eventos"
+  description="Artículos escritos con base en más de 8 años organizando eventos. Bodas, corporativos, infantiles y celebraciones al aire libre."
+  ctaPrimary={{ label: "Ver artículos →", href: "#articulos" }}
+  ctaSecondary={{ label: "Cotizar ahora", href: "/cotizar/" }}
   seoParagraph1="En el blog de MESPIC compartimos guías completas, consejos prácticos y tendencias sobre renta de mesas picnic para eventos. Desde cómo elegir la cantidad correcta de mesas para tu boda, hasta ideas de decoración para fiestas infantiles."
-  seoParagraph2="Nuestros artículos están escritos con base en nuestra experiencia de más de 8 años organizando eventos con mesas picnic. Información real y práctica para que tu evento sea un éxito total."
+  seoParagraph2="Toda la información está basada en nuestra experiencia real montando más de 500 eventos en Ciudad de México y Estado de México. Sin relleno: solo datos y consejos que funcionan."
 />
 
-<section class="section">
+<section class="section" id="articulos">
+
+  <SectionHeader
+    tag="h2"
+    title="Artículos del Blog"
+    paragraph1="Guías prácticas para que tu evento con mesas picnic sea un éxito. Cada artículo resuelve una duda real de nuestros clientes."
+    paragraph2="Navega por categoría o consulta la barra lateral para encontrar exactamente lo que necesitas."
+    badge="Contenido especializado"
+    stats={[
+      { value: "5", label: "Artículos" },
+      { value: "4", label: "Categorías" },
+    ]}
+  />
+
   <div class="container">
-    <div class="blog-grid">
-      {allPosts.map((post) => (
-        <a href={post.href} class="blog-card">
-          <div class="blog-card-img">
-            <img src={post.image} alt={post.title} loading="lazy" width="400" height="250" />
-          </div>
-          <div class="blog-card-body">
-            <h2 class="blog-card-title">{post.title}</h2>
-            <p class="blog-card-desc">{post.description}</p>
-            <span class="blog-card-link">Leer artículo →</span>
-          </div>
-        </a>
+
+    <!-- Filtros de categoría -->
+    <div class="cat-filters" aria-label="Filtrar por categoría">
+      <span class="cat-filter cat-filter--active">Todos</span>
+      {categories.map(cat => (
+        <span class="cat-filter">{cat}</span>
       ))}
+    </div>
+
+    <!-- Artículo destacado -->
+    <a href={featuredPost.href} class="feat-card" aria-label={`Leer: ${featuredPost.title}`}>
+      <div class="feat-card__img">
+        <img src={featuredPost.image} alt={featuredPost.title} loading="eager" width="860" height="480" />
+        <div class="feat-card__img-overlay" aria-hidden="true"></div>
+        <span class="feat-card__badge">Artículo destacado</span>
+      </div>
+      <div class="feat-card__body">
+        <span class="feat-card__cat" style={`color:${catColor[featuredPost.category] ?? 'var(--c-accent)'}`}>
+          {featuredPost.category}
+        </span>
+        <h3 class="feat-card__title">{featuredPost.title}</h3>
+        <p class="feat-card__desc">{featuredPost.description}</p>
+        <span class="feat-card__cta">
+          Leer artículo completo
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </div>
+    </a>
+
+    <!-- Grid + Sidebar -->
+    <div class="blog-layout">
+
+      <div class="blog-main">
+        <div class="blog-main__header">
+          <h3 class="blog-main__heading">Todos los artículos</h3>
+          <span class="blog-main__count">{allPosts.length} artículos</span>
+        </div>
+        <div class="blog-grid">
+          {gridPosts.map((post) => (
+            <a href={post.href} class="blog-card" aria-label={`Leer: ${post.title}`}>
+              <div class="blog-card__img">
+                <img src={post.image} alt={post.title} loading="lazy" width="480" height="280" />
+                <span class="blog-card__cat-badge">{post.category}</span>
+              </div>
+              <div class="blog-card__body">
+                <span
+                  class="blog-card__cat-text"
+                  style={`color:${catColor[post.category] ?? 'var(--c-accent)'}`}
+                >
+                  {post.category}
+                </span>
+                <h3 class="blog-card__title">{post.title}</h3>
+                <p class="blog-card__desc">{post.description}</p>
+                <span class="blog-card__link">
+                  Leer artículo
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="blog-sidebar" aria-label="Recursos relacionados">
+
+        <!-- CTA -->
+        <div class="sb-cta">
+          <p class="sb-cta__eyebrow">¿Tienes un evento próximo?</p>
+          <p class="sb-cta__title">Cotiza tus mesas picnic</p>
+          <p class="sb-cta__text">Sin compromiso. Respondemos en menos de 30 min.</p>
+          <a href="/cotizar/" class="sb-cta__btn sb-cta__btn--primary">Cotizar ahora →</a>
+          <a
+            href="https://wa.me/5564328954?text=Hola%2C%20quiero%20cotizar%20mesas%20picnic%20para%20mi%20evento."
+            target="_blank"
+            rel="noopener"
+            class="sb-cta__btn sb-cta__btn--wa"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp directo
+          </a>
+        </div>
+
+        <!-- Artículos recientes -->
+        <div class="sb-block">
+          <h3 class="sb-block__title">Artículos recientes</h3>
+          <div class="sb-list">
+            {allPosts.map((post) => (
+              <a href={post.href} class="sb-post">
+                <div
+                  class="sb-post__thumb"
+                  style={`background-image:url(${post.image})`}
+                  role="img"
+                  aria-label={post.title}
+                ></div>
+                <div class="sb-post__info">
+                  <span class="sb-post__title">{post.title}</span>
+                  <span class="sb-post__cat">{post.category}</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <!-- Nuestros servicios -->
+        <div class="sb-block">
+          <h3 class="sb-block__title">Nuestros servicios</h3>
+          <div class="sb-list">
+            {sidebarServices.map((item) => (
+              <a href={item.href} class="sb-service">
+                <span class="sb-service__icon" aria-hidden="true">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                </span>
+                <span class="sb-service__label">{item.label}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <!-- Catálogo de mesas -->
+        <div class="sb-block">
+          <h3 class="sb-block__title">Catálogo de mesas</h3>
+          <div class="sb-list">
+            {sidebarCatalog.map((item) => (
+              <a href={item.href} class="sb-catalog-item">
+                <div
+                  class="sb-catalog-item__img"
+                  style={`background-image:url(${item.image})`}
+                  role="img"
+                  aria-label={item.label}
+                ></div>
+                <div class="sb-catalog-item__info">
+                  <span class="sb-catalog-item__name">{item.label}</span>
+                  <span class="sb-catalog-item__desc">{item.desc}</span>
+                </div>
+                <svg class="sb-catalog-item__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+              </a>
+            ))}
+            <a href="/catalogo/" class="sb-see-all">Ver catálogo completo →</a>
+          </div>
+        </div>
+
+        <!-- Zonas de cobertura -->
+        <div class="sb-block sb-block--coverage">
+          <h3 class="sb-block__title">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Zonas de cobertura
+          </h3>
+          <ul class="sb-coverage">
+            <li>Ciudad de México (todas las alcaldías)</li>
+            <li>Naucalpan · Huixquilucan</li>
+            <li>Atizapán · Tlalnepantla</li>
+            <li>Toluca · Metepec</li>
+            <li>Texcoco · Chalco</li>
+          </ul>
+        </div>
+
+      </aside>
     </div>
   </div>
 </section>
 
+<CtaBarFinal
+  headline="¿Listo para tu evento?"
+  subtext="Cotiza sin compromiso. Te respondemos en minutos."
+  phone="55 6432 8954"
+  whatsapp="5564328954"
+  waMessage="Hola, quiero cotizar mesas picnic para mi evento."
+  cotizarHref="/cotizar/"
+/>
+
+<WaBubble whatsapp="5564328954" message="Hola, quiero cotizar mesas picnic para mi evento." />
+
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog MESPIC",
+    "description": "Guías y consejos sobre renta de mesas picnic para eventos en CDMX.",
+    "url": "https://mesaspicnic.com/blog/",
+    "publisher": {
+      "@type": "LocalBusiness",
+      "name": "MESPIC",
+      "telephone": "+52-55-6432-8954",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ciudad de México",
+        "addressCountry": "MX"
+      }
+    }
+  })} />
+</Fragment>
+
 </BaseLayout>
 
 <style>
-  .blog-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
+/* ══════════════════════════════════════
+   FILTROS DE CATEGORÍA
+══════════════════════════════════════ */
+.cat-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
 
-  .blog-card {
-    display: block;
-    background: #fff;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
-  }
+.cat-filter {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--c-text-muted);
+  background: var(--c-bg-alt, #F7F4F0);
+  border: 1px solid var(--c-border);
+  padding: 0.35rem 1rem;
+  border-radius: 100px;
+  user-select: none;
+}
 
-  .blog-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-  }
+.cat-filter--active {
+  background: var(--c-primary);
+  color: #fff;
+  border-color: var(--c-primary);
+}
 
-  .blog-card-img {
-    aspect-ratio: 16/10;
-    overflow: hidden;
-  }
+/* ══════════════════════════════════════
+   ARTÍCULO DESTACADO
+══════════════════════════════════════ */
+.feat-card {
+  display: grid;
+  grid-template-columns: 55% 1fr;
+  background: #fff;
+  border-radius: var(--radius-lg, 16px);
+  border: 1px solid var(--c-border);
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  margin-bottom: 3rem;
+  text-decoration: none;
+}
+.feat-card:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
 
-  .blog-card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s var(--ease);
-  }
+.feat-card__img {
+  position: relative;
+  overflow: hidden;
+  min-height: 360px;
+}
+.feat-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
-  .blog-card:hover .blog-card-img img { transform: scale(1.05); }
+.feat-card__img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.15) 0%, transparent 65%);
+  pointer-events: none;
+}
 
-  .blog-card-body { padding: 1.5rem; }
+.feat-card__badge {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  background: var(--c-primary);
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.875rem;
+  border-radius: 100px;
+}
 
-  .blog-card-title {
-    font-size: 1.125rem;
-    color: var(--c-primary);
-    margin-bottom: 0.5rem;
-    line-height: 1.3;
-  }
+.feat-card__body {
+  padding: 2.75rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
 
-  .blog-card-desc {
-    color: var(--c-text-muted);
-    font-size: 0.9375rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
+.feat-card__cat {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
 
-  .blog-card-link {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--c-accent);
-  }
+.feat-card__title {
+  font-size: clamp(1.375rem, 2vw, 1.875rem);
+  font-weight: 800;
+  color: var(--c-primary);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
 
-  @media (max-width: 768px) {
-    .blog-grid { grid-template-columns: 1fr; }
-  }
+.feat-card__desc {
+  font-size: 0.9375rem;
+  color: var(--c-text-muted);
+  line-height: 1.75;
+}
+
+.feat-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--c-accent);
+  margin-top: 0.25rem;
+}
+
+/* ══════════════════════════════════════
+   BLOG LAYOUT
+══════════════════════════════════════ */
+.blog-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2.25rem;
+  align-items: start;
+}
+
+.blog-main__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--c-border);
+}
+
+.blog-main__heading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--c-text);
+}
+
+.blog-main__count {
+  font-size: 0.8125rem;
+  color: var(--c-text-muted);
+  background: var(--c-bg-alt);
+  border: 1px solid var(--c-border);
+  padding: 0.2rem 0.75rem;
+  border-radius: 100px;
+}
+
+/* ══════════════════════════════════════
+   GRID DE ARTÍCULOS
+══════════════════════════════════════ */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: var(--radius-md, 12px);
+  border: 1px solid var(--c-border);
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  text-decoration: none;
+}
+.blog-card:hover {
+  border-color: var(--c-primary);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.blog-card__img {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+.blog-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-card__cat-badge {
+  position: absolute;
+  top: 0.625rem;
+  left: 0.625rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: rgba(27,59,32,0.85);
+  padding: 0.2rem 0.625rem;
+  border-radius: 100px;
+}
+
+.blog-card__body {
+  padding: 1.375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.blog-card__cat-text {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.blog-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--c-text);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.blog-card__desc {
+  font-size: 0.875rem;
+  color: var(--c-text-muted);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.blog-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--c-accent);
+  margin-top: 0.375rem;
+}
+
+/* ══════════════════════════════════════
+   SIDEBAR
+══════════════════════════════════════ */
+.blog-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: sticky;
+  top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2rem);
+}
+
+.sb-block {
+  background: #fff;
+  border: 1px solid var(--c-border, #E7E0D8);
+  border-radius: var(--radius-md, 12px);
+  padding: 1.25rem;
+}
+
+.sb-block__title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--c-text-muted, #78716C);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.sb-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* CTA */
+.sb-cta {
+  background: linear-gradient(145deg, #1B3B20 0%, var(--c-primary, #2C5530) 100%);
+  border-radius: var(--radius-md, 12px);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  text-align: center;
+}
+
+.sb-cta__eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.55);
+}
+
+.sb-cta__title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.25;
+}
+
+.sb-cta__text {
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.5;
+}
+
+.sb-cta__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-sm, 8px);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.sb-cta__btn--primary { background: var(--c-accent, #C8956C); color: #fff; }
+.sb-cta__btn--wa      { background: #25D366; color: #fff; }
+
+/* Artículos recientes */
+.sb-post {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm, 8px);
+  text-decoration: none;
+}
+.sb-post:hover { background: var(--c-bg-alt, #F7F4F0); }
+
+.sb-post__thumb {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 6px;
+  background-color: var(--c-bg-alt);
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.sb-post__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.sb-post__title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--c-text);
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sb-post__cat {
+  font-size: 0.6875rem;
+  color: var(--c-text-muted);
+}
+
+/* Servicios */
+.sb-service {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 0.625rem;
+  border-radius: var(--radius-sm, 8px);
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+.sb-service:hover {
+  border-color: var(--c-border);
+  background: var(--c-bg-alt, #F7F4F0);
+}
+
+.sb-service__icon {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--c-primary, #2C5530) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--c-primary, #2C5530) 18%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-primary);
+  flex-shrink: 0;
+}
+
+.sb-service__label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--c-text);
+  line-height: 1.3;
+}
+
+/* Catálogo */
+.sb-catalog-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm, 8px);
+  border: 1px solid var(--c-border);
+  text-decoration: none;
+}
+.sb-catalog-item:hover {
+  border-color: var(--c-primary);
+}
+
+.sb-catalog-item__img {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 6px;
+  background-color: var(--c-bg-alt);
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.sb-catalog-item__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.sb-catalog-item__name {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--c-text);
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sb-catalog-item__desc {
+  font-size: 0.6875rem;
+  color: var(--c-text-muted);
+}
+
+.sb-catalog-item__arrow {
+  color: var(--c-text-muted);
+  flex-shrink: 0;
+}
+
+.sb-see-all {
+  display: block;
+  text-align: center;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--c-accent);
+  padding-top: 0.625rem;
+  margin-top: 0.25rem;
+  border-top: 1px solid var(--c-border);
+  text-decoration: none;
+}
+
+/* Cobertura */
+.sb-block--coverage {
+  background: color-mix(in srgb, var(--c-primary, #2C5530) 5%, #fff);
+  border-color: color-mix(in srgb, var(--c-primary, #2C5530) 15%, transparent);
+}
+
+.sb-coverage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sb-coverage li {
+  font-size: 0.8125rem;
+  color: var(--c-text);
+  padding-left: 1.125rem;
+  position: relative;
+  line-height: 1.45;
+}
+.sb-coverage li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--c-primary);
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .blog-layout { grid-template-columns: 1fr 270px; }
+}
+
+@media (max-width: 900px) {
+  .feat-card { grid-template-columns: 1fr; }
+  .feat-card__img { min-height: 260px; }
+  .feat-card__body { padding: 2rem; }
+  .blog-layout { grid-template-columns: 1fr; }
+  .blog-sidebar { position: static; }
+}
+
+@media (max-width: 600px) {
+  .blog-grid { grid-template-columns: 1fr; }
+  .feat-card__body { padding: 1.5rem; }
+}
 </style>

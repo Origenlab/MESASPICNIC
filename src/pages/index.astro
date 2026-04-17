@@ -6,6 +6,7 @@ import SectionHeader from '../components/SectionHeader.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import FeatureCard from '../components/FeatureCard.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
+import TestimonialCardEmpresa from '../components/TestimonialCardEmpresa.astro';
 import FaqSection from '../components/FaqSection.astro';
 import CtaBarFinal from '../components/CtaBarFinal.astro';
 import GallerySection from '../components/GallerySection.astro';
@@ -44,9 +45,15 @@ const galeriaIndex = [
 <section class="section" id="servicios">
   <SectionHeader
     tag="h2"
+    badge="Nuestros Servicios"
     title="Servicios de Renta de Mobiliario"
     paragraph1="Cada tipo de evento tiene necesidades distintas. No es lo mismo montar una boda para 150 personas en un jardín que un cumpleaños infantil en una terraza. Por eso ofrecemos configuraciones específicas para cada ocasión."
     paragraph2="Todas las opciones incluyen entrega, montaje y recolección. Tú eliges el tipo de evento, nosotros nos encargamos de que el mobiliario llegue listo y a tiempo."
+    stats={[
+      { value: '8+', label: 'tipos de eventos cubiertos' },
+      { value: '500+', label: 'eventos realizados' },
+      { value: '7 días', label: 'atención sin excepciones' },
+    ]}
   />
   <div class="container">
     <div class="grid-4">
@@ -62,13 +69,96 @@ const galeriaIndex = [
   </div>
 </section>
 
+<!-- Catálogo de Productos -->
+<section class="section section-alt" id="catalogo">
+  <SectionHeader
+    tag="h2"
+    badge="Catálogo de productos"
+    title="6 Modelos de Mesa Picnic para Elegir"
+    paragraph1="Cada modelo tiene un uso y capacidad distintos. Desde la estándar para bodas y reuniones hasta la infantil con acabado ultrafino, pasando por el Set Completo con decoración incluida. Elige el que se adapte a tu evento."
+    paragraph2="¿Tienes dudas sobre cuál modelo rentar? Mándanos tu número de invitados por WhatsApp y te recomendamos la configuración ideal en minutos."
+    stats={[
+      { value: '6', label: 'modelos en catálogo' },
+      { value: '6–12', label: 'personas por pieza' },
+      { value: '+120 pzas', label: 'inventario disponible' },
+    ]}
+  />
+  <div class="container">
+    <div class="grid-3">
+      <ServiceCard
+        title="Mesa Picnic Estándar"
+        description="El modelo más solicitado. 1.80 × 1.50 m para 6 personas. Pino lijado y barnizado a mano. Ideal para bodas, reuniones familiares y corporativos."
+        image="/img/mesa-picnic-boda-elegante-decoracion.avif"
+        href="/catalogo/mesa-picnic-estandar/"
+        btnLabel="Ver ficha técnica →"
+        badge="6 personas"
+        icon="🪵"
+      />
+      <ServiceCard
+        title="Mesa Picnic Grande"
+        description="2.40 × 1.50 m para 10 a 12 personas. Preferida para eventos corporativos, festivales y mesa principal de bodas. Resistencia estructural reforzada."
+        image="/img/mesa-picnic-evento-corporativo-networking.avif"
+        href="/catalogo/mesa-picnic-grande/"
+        btnLabel="Ver ficha técnica →"
+        badge="10-12 personas"
+        icon="🌳"
+      />
+      <ServiceCard
+        title="Mesa Picnic Infantil"
+        description="1.20 × 1.00 m con altura reducida, bordes redondeados y lijado ultrafino sin astillas. Para cumpleaños y baby showers con 8-10 niños."
+        image="/img/infantil-cumple-1.avif"
+        href="/catalogo/mesa-picnic-infantil/"
+        btnLabel="Ver ficha técnica →"
+        badge="3-10 años"
+        icon="🧸"
+      />
+      <ServiceCard
+        title="Mesa Picnic Premium"
+        description="Pino seleccionado sin nudos, 4 manos de barniz de acabado fino. Para bodas de alto perfil, eventos VIP y sesiones fotográficas profesionales."
+        image="/img/mesa-picnic-boda-elegante-luces.avif"
+        href="/catalogo/mesa-picnic-premium/"
+        btnLabel="Ver ficha técnica →"
+        badge="Bodas VIP"
+        icon="✨"
+      />
+      <ServiceCard
+        title="Set Picnic Completo"
+        description="Mesa estándar con mantelería, cojines, centro decorativo y ambientación incluida. Llave en mano para picnics románticos y pedidas de mano."
+        image="/img/mesa-picnic-pedida-mano-romantica.webp"
+        href="/catalogo/set-picnic-completo/"
+        btnLabel="Ver ficha técnica →"
+        badge="Todo incluido"
+        icon="🎁"
+      />
+      <ServiceCard
+        title="Mesa Picnic Rústica"
+        description="Acabado campestre con barniz que resalta la veta y los nudos naturales. Estilo boho, vintage y rústico-chic para bodas en bosques y haciendas."
+        image="/img/tema-mexicana-1.avif"
+        href="/catalogo/mesa-picnic-rustica/"
+        btnLabel="Ver ficha técnica →"
+        badge="Boho & Vintage"
+        icon="🌿"
+      />
+    </div>
+    <div class="catalog-cta-wrap">
+      <a href="/catalogo/" class="btn btn-secondary">Ver catálogo completo con tabla comparativa →</a>
+    </div>
+  </div>
+</section>
+
 <!-- ¿Por qué MESPIC? -->
 <section class="section" id="por-que">
   <SectionHeader
     tag="h2"
+    badge="Por qué elegirnos"
     title="¿Por qué elegir MESPIC?"
     paragraph1="Después de 8 años y más de 500 eventos, hay cosas que solo se aprenden con experiencia: cómo proteger la madera del clima, cuántas bancas necesitas según tus invitados, o cómo distribuir el mobiliario para que todos estén cómodos."
     paragraph2="Trabajamos con pino nacional seleccionado, lijado a grano fino y barnizado a mano. No subcontratamos: nuestro equipo se encarga desde la carga hasta el último detalle del montaje."
+    stats={[
+      { value: '8 años', label: 'de experiencia operativa' },
+      { value: '100%', label: 'madera de pino natural' },
+      { value: 'equipo propio', label: 'sin subcontratistas' },
+    ]}
   />
   <div class="container">
     <div class="grid-4">
@@ -84,30 +174,91 @@ const galeriaIndex = [
 <section class="section section-alt" id="testimonios">
   <SectionHeader
     tag="h2"
-    title="Lo que dicen nuestros clientes"
-    paragraph1="No lo decimos nosotros. Estas son experiencias de personas que contrataron el servicio para bodas, cumpleaños y eventos corporativos en la Ciudad de México."
-    paragraph2="Puedes verificar más opiniones en nuestro perfil de Google. Aquí publicamos las que nos parecen más representativas del servicio."
+    badge="Empresas que confían en nosotros"
+    title="Lo que dicen nuestros aliados"
+    paragraph1="Empresas del sector eventos que trabajan junto a MESPIC en cada producción — desde corporativos de gran formato hasta festivales y fiestas infantiles en la Ciudad de México."
+    paragraph2="Estas alianzas nos permiten ser parte de eventos integrales donde el mobiliario se combina con iluminación, sonido, pantallas y producción profesional."
+    stats={[
+      { value: '8', label: 'empresas aliadas' },
+      { value: '5★', label: 'calificación unánime' },
+      { value: 'CDMX + Edomex', label: 'zona de cobertura' },
+    ]}
   />
   <div class="container">
     <div class="grid-4">
-      <TestimonialCard name="Carolina Mendoza" event="Boda en jardín — Coyoacán" quote="Las bancas quedaron perfectas con la decoración de flores que teníamos pensada. El equipo llegó dos horas antes de la ceremonia y montó todo sin que yo tuviera que estar encima. Al final recogieron después de las 2 am sin ningún problema." stars={5} date="Feb 2026" />
-      <TestimonialCard name="Roberto Sánchez" event="Team building — Polanco" quote="Contratamos 15 bancas para un evento de integración de 120 personas. Todo llegó puntual. Lo único que sugeriría es confirmar la hora de recolección con más anticipación porque tardaron un poco en recoger, pero el mobiliario estuvo impecable." stars={4} date="Ene 2026" />
-      <TestimonialCard name="María José Torres" event="Cumpleaños infantil — Santa Fe" quote="Mi hija cumplió 7 años y las mesas infantiles fueron un acierto. Los niños comieron, pintaron y jugaron ahí toda la tarde. Me preocupaban las astillas pero la madera estaba perfectamente lijada. Repetiría sin duda." stars={5} date="Dic 2025" />
-      <TestimonialCard name="Andrés Villarreal" event="Picnic romántico — Chapultepec" quote="Le hice una sorpresa a mi novia con el montaje de picnic romántico. La banca decorada con las flores y la mantelería se veía increíble. Ella no se lo esperaba. El único detalle es que la entrega fue 20 minutos tarde, pero valió la pena." stars={4} date="Feb 2026" />
-      <TestimonialCard name="Lucía Herrera" event="Posada familiar — Naucalpan" quote="Rentamos 8 bancas para la posada de la familia. Cabíamos todos, incluidos los abuelos que pudieron sentarse cómodos. La madera es bonita y resistente. Ya las aparté también para el Día de las Madres." stars={5} date="Dic 2025" />
-      <TestimonialCard name="Fernanda Ríos" event="Feria gastronómica — Roma Norte" quote="Usamos las bancas grandes para un bazar de comida con 8 puestos. Aguantaron todo el día con mucho movimiento de gente. Nos cobraron un poco más por ser evento de todo el día pero el servicio fue correcto y profesional." stars={4} date="Nov 2025" />
-      <TestimonialCard name="Diego Paredes" event="Sesión de fotos — Condesa" quote="Soy fotógrafo y renté dos bancas como escenografía para un catálogo de ropa. La madera tiene una textura que se ve muy bien en cámara. El servicio por hora me pareció justo. Ya los tengo guardados para futuras producciones." stars={5} date="Ene 2026" />
-      <TestimonialCard name="Patricia Gómez" event="XV años — Tlalpan" quote="Las mesas quedaron bien para el coctel antes de la fiesta. Tuvimos un malentendido con la cantidad (pedimos 10, llegaron 8) pero lo resolvieron rápido y mandaron las que faltaban en 40 minutos. Al final todo salió bien." stars={4} date="Oct 2025" />
+      <TestimonialCardEmpresa
+        name="Eventech MX"
+        sector="Tecnología para Eventos"
+        url="https://eventech.mx/"
+        initials="ET"
+        quote="Llevamos más de dos años trabajando con MESPIC en nuestros eventos corporativos. La puntualidad, la calidad del mobiliario y el profesionalismo del equipo son consistentes en cada servicio. Para nosotros es un proveedor de confianza que seguimos recomendando sin dudarlo."
+      />
+      <TestimonialCardEmpresa
+        name="Renta de Iluminación"
+        sector="Iluminación para Eventos"
+        url="https://rentadeiluminacion.com/"
+        initials="RI"
+        quote="Trabajamos con MESPIC en varios eventos donde combinamos iluminación y mobiliario. La coordinación es fluida, siempre llegan a tiempo y el mobiliario está en perfectas condiciones. Es una alianza natural que ya recomendamos a nuestros propios clientes."
+      />
+      <TestimonialCardEmpresa
+        name="Avant Expo"
+        sector="Stands y Exposiciones"
+        url="https://avantexpo.com.mx/"
+        initials="AE"
+        quote="Integramos el mobiliario de MESPIC en varios de nuestros montajes para exposiciones y eventos corporativos. La madera natural encaja perfecto con stands de diseño y el servicio logístico es impecable. Un proveedor confiable que nos facilita el trabajo."
+      />
+      <TestimonialCardEmpresa
+        name="Podiumex"
+        sector="Producción de Eventos"
+        url="https://podiumex.com/"
+        initials="PX"
+        quote="En Podiumex hemos contado con MESPIC como proveedor de mobiliario en producciones de eventos de gran formato. Su capacidad de respuesta, la calidad de las piezas y la seriedad del equipo los hacen un aliado indispensable en cualquier producción."
+      />
+      <TestimonialCardEmpresa
+        name="Pantalla LED"
+        sector="Renta de Pantallas LED"
+        url="https://pantalla-led.com/"
+        initials="PL"
+        quote="Combinamos nuestras pantallas LED con el mobiliario de MESPIC en eventos al aire libre y el resultado visual es muy impactante. Son puntuales, organizados y el estado de las piezas siempre es excelente. Los recomendamos como parte de nuestro ecosistema de proveedores."
+      />
+      <TestimonialCardEmpresa
+        name="Inflables para Fiestas"
+        sector="Entretenimiento Infantil"
+        url="https://inflablesparafiestas.com.mx/"
+        initials="IF"
+        quote="Llevamos eventos infantiles donde nuestros inflables y el mobiliario de MESPIC se complementan de maravilla. Los niños tienen dónde jugar y dónde sentarse a comer, todo en el mismo espacio. El equipo de MESPIC siempre coordinado y sin complicaciones."
+      />
+      <TestimonialCardEmpresa
+        name="Sonido para Eventos"
+        sector="Audio y Sonido para Eventos"
+        url="https://sonidoparaeventos.com.mx/"
+        initials="SE"
+        quote="Hemos coincidido con MESPIC en eventos al aire libre donde nosotros ponemos el sonido y ellos el mobiliario. La logística de su equipo es ágil y no interfiere con nuestros montajes. Una empresa seria con la que es fácil trabajar en paralelo."
+      />
+      <TestimonialCardEmpresa
+        name="Renta de Sonido e Iluminación"
+        sector="Sonido e Iluminación"
+        url="https://rentadesonidoeiluminacion.com.mx/"
+        initials="RS"
+        quote="Cuando ofrecemos paquetes integrales de sonido e iluminación, MESPIC es nuestra primera opción para el mobiliario. Su servicio cierra el círculo: el cliente recibe todo resuelto en un solo evento. Profesionales de principio a fin."
+      />
     </div>
   </div>
 </section>
 
 <!-- Galería -->
 <section class="section" id="galeria">
-  <div class="container">
-    <h2 class="gallery__heading">Nuestro Mobiliario en Acción</h2>
-    <p class="gallery__sub">Bodas, corporativos, fiestas infantiles y eventos temáticos — la madera se adapta a cualquier ocasión.</p>
-  </div>
+  <SectionHeader
+    tag="h2"
+    badge="Galería de eventos"
+    title="Nuestro Mobiliario en Acción"
+    paragraph1="Bodas, corporativos, fiestas infantiles y eventos temáticos — la madera se adapta a cualquier ocasión y estilo de decoración."
+    stats={[
+      { value: '3 modelos', label: 'estándar, grande e infantil' },
+      { value: 'pino natural', label: 'lijado y barnizado a mano' },
+      { value: 'cualquier estilo', label: 'rústico, boho, minimalista…' },
+    ]}
+  />
   <GallerySection images={galeriaIndex} id="galeria-fotos" />
 </section>
 
@@ -115,9 +266,15 @@ const galeriaIndex = [
 <section class="section" id="faq">
   <SectionHeader
     tag="h2"
+    badge="Preguntas frecuentes"
     title="Preguntas Frecuentes"
     paragraph1="Estas son las dudas más comunes que recibimos por WhatsApp antes de cada evento. Si no encuentras tu respuesta, usa el formulario de al lado y te respondemos en minutos."
     paragraph2="Toda la información de precios, tiempos de entrega, zonas de cobertura y especificaciones del mobiliario está en las respuestas."
+    stats={[
+      { value: '8', label: 'preguntas con respuesta inmediata' },
+      { value: '< 5 min', label: 'tiempo de respuesta por WhatsApp' },
+      { value: 'lun–dom', label: '8:00 a 20:00 hrs' },
+    ]}
   />
   <FaqSection
     phone="55 6432 8954"
@@ -194,27 +351,25 @@ const galeriaIndex = [
     gap: 1.25rem;
   }
 
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .catalog-cta-wrap {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
   @media (max-width: 1024px) {
     .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (max-width: 640px) {
     .grid-4 { grid-template-columns: 1fr; }
+    .grid-3 { grid-template-columns: 1fr; }
   }
 
-  .gallery__heading {
-    text-align: center;
-    margin-bottom: 0.5rem;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    color: var(--c-text, #1C1917);
-    letter-spacing: -0.02em;
-  }
-
-  .gallery__sub {
-    text-align: center;
-    color: var(--c-text-muted, #78716C);
-    font-size: 0.9375rem;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-  }
 </style>

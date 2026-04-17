@@ -1,0 +1,9 @@
+{
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "promptDelete": false,
+  "useMarkdownLinks": false,
+  "showUnsupportedFiles": false,
+  "defaultViewMode": "preview",
+  "livePreview": true
+}

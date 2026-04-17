@@ -1,0 +1,540 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Hero from '../../components/Hero.astro';
+import CtaBar from '../../components/CtaBar.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import GallerySection from '../../components/GallerySection.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import CtaBarFinal from '../../components/CtaBarFinal.astro';
+import WaBubble from '../../components/WaBubble.astro';
+
+const galeriaCatalogo = [
+  { src: "/img/mesa-picnic-boda-elegante-decoracion.avif",            alt: "Mesa picnic estándar de pino natural decorada para boda al aire libre" },
+  { src: "/img/mesa-picnic-evento-corporativo-networking.avif",       alt: "Mesa picnic grande para evento corporativo con networking al exterior" },
+  { src: "/img/infantil-cumple-1.avif",                               alt: "Mesa picnic infantil decorada para cumpleaños de niños en jardín" },
+  { src: "/img/mesa-picnic-boda-elegante-luces.avif",                 alt: "Mesa picnic premium con iluminación de luces para boda nocturna elegante" },
+  { src: "/img/corp-teambuilding-1.avif",                             alt: "Set de mesas picnic en parque para team building corporativo" },
+  { src: "/img/tema-mexicana-1.avif",                                 alt: "Mesa picnic rústica con acabado campestre para fiesta temática mexicana" },
+  { src: "/img/mesa-picnic-pedida-mano-romantica.webp",               alt: "Set picnic completo montado para pedida de mano con decoración romántica" },
+  { src: "/img/mesa-picnic-feria-gastronomica-multitud.avif",         alt: "Múltiples mesas picnic grandes para feria gastronómica con asistentes" },
+];
+---
+
+<BaseLayout
+  title="Catálogo de Mesas Picnic para Renta — 6 Modelos | MESPIC CDMX"
+  description="Catálogo completo de mesas picnic de pino natural para renta en CDMX y Edomex. 6 modelos: estándar, grande, infantil, premium, rústica y set completo. Capacidad para 6 a 12 personas. Entrega y montaje incluidos."
+  ogImage="/img/mesa-picnic-boda-elegante-decoracion.avif"
+>
+
+<!-- Breadcrumbs -->
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Catálogo" }
+  ]} />
+</Fragment>
+
+<!-- Hero -->
+<Hero
+  badge="6 modelos disponibles"
+  title="Catálogo de Mesas Picnic de Pino Natural"
+  description="Seis modelos de mobiliario para renta: desde la banca estándar de 6 personas hasta el set picnic completo con decoración. Todos elaborados en pino nacional, lijados y barnizados a mano."
+  ctaPrimary={{ label: "Cotizar ahora →", href: "/cotizar/" }}
+  ctaSecondary={{ label: "Ver paquetes", href: "/paquetes/" }}
+  seoParagraph1="MESPIC cuenta con más de 120 piezas en bodega, disponibles los 7 días de la semana para la Ciudad de México y el Estado de México. Todos los modelos están fabricados en pino nacional seleccionado: lijado a grano fino, sellado y barnizado a tres manos para resistencia al exterior. La misma pieza que va a una boda en Coyoacán va al día siguiente a un festival en Roma Norte."
+  seoParagraph2="El precio de renta incluye traslado, montaje profesional en tu locación y recolección al finalizar el evento. No hay cargos por maniobras, tiempo extra ni distancia dentro de nuestra zona de cobertura. Puedes combinar modelos en una misma cotización —por ejemplo, mesas estándar para adultos y mesas infantiles para zona de niños— y todo llega en la misma entrega."
+  dark={true}
+/>
+
+<!-- CtaBar -->
+<CtaBar />
+
+<!-- ═══════════════════════════════════════════════════════
+     6 MODELOS EN CATÁLOGO
+═══════════════════════════════════════════════════════ -->
+<section class="section" id="modelos">
+  <SectionHeader
+    tag="h2"
+    badge="Todos los modelos"
+    title="6 Modelos de Mesa Picnic"
+    paragraph1="Cada modelo tiene un uso recomendado, capacidad específica y acabado adaptado al tipo de evento. Selecciona el que se ajuste a tu ocasión o cotiza varios para el mismo evento."
+    paragraph2="¿No sabes cuál elegir? Mándanos el número de invitados y el tipo de evento por WhatsApp y te recomendamos el modelo y la cantidad exacta. Respondemos en menos de 5 minutos."
+    stats={[
+      { value: '6',          label: 'modelos en catálogo' },
+      { value: '6–12',       label: 'personas por pieza' },
+      { value: 'pino nacional', label: 'madera 100% natural' },
+    ]}
+  />
+  <div class="container">
+    <div class="grid-3">
+      <ServiceCard
+        title="Mesa Picnic Estándar"
+        description="El modelo más solicitado. 1.80 × 1.50 m, acomoda 6 personas. Pino lijado y barnizado a mano, acabado liso y uniforme. Ideal para bodas, reuniones familiares, corporativos y fiestas en jardín."
+        image="/img/mesa-picnic-boda-elegante-decoracion.avif"
+        href="/catalogo/mesa-picnic-estandar/"
+        btnLabel="Ver Mesa Estándar →"
+        badge="Estándar · 6 personas"
+        icon="🪵"
+      />
+      <ServiceCard
+        title="Mesa Picnic Grande"
+        description="2.40 × 1.50 m, acomoda 10 a 12 personas. El modelo preferido para eventos corporativos, festivales y bodas con mesa principal de pareja. Resistencia estructural para uso intensivo."
+        image="/img/mesa-picnic-evento-corporativo-networking.avif"
+        href="/catalogo/mesa-picnic-grande/"
+        btnLabel="Ver Mesa Grande →"
+        badge="Grande · 10-12 personas"
+        icon="🌳"
+      />
+      <ServiceCard
+        title="Mesa Picnic Infantil"
+        description="1.20 × 1.00 m, diseñada para niños de 3 a 10 años. Altura reducida, bordes redondeados y pino lijado a grano ultrafino. Sin astillas ni aristas. Acomoda hasta 10 niños cómodamente."
+        image="/img/infantil-cumple-1.avif"
+        href="/catalogo/mesa-picnic-infantil/"
+        btnLabel="Ver Mesa Infantil →"
+        badge="Infantil · 3-10 años"
+        icon="🧸"
+      />
+      <ServiceCard
+        title="Mesa Picnic Premium"
+        description="Mesa de acabado superior para bodas de alto perfil y eventos de lujo. Barniz de primera calidad, pino seleccionado sin nudos visibles. Para cuando la estética del mobiliario es parte central del evento."
+        image="/img/mesa-picnic-boda-elegante-luces.avif"
+        href="/catalogo/mesa-picnic-premium/"
+        btnLabel="Ver Mesa Premium →"
+        badge="Premium · Lujo"
+        icon="✨"
+      />
+      <ServiceCard
+        title="Set Picnic Completo"
+        description="Mesa estándar con mantelería, cojines, centro decorativo y ambientación básica incluidos. Un paquete llave en mano para picnics románticos, aniversarios y pedidas de mano. Sin necesidad de decoradora."
+        image="/img/mesa-picnic-pedida-mano-romantica.webp"
+        href="/catalogo/set-picnic-completo/"
+        btnLabel="Ver Set Completo →"
+        badge="Set Completo · Todo incluido"
+        icon="🎁"
+      />
+      <ServiceCard
+        title="Mesa Picnic Rústica"
+        description="Acabado campestre: pino con barniz rústico que resalta la veta y los nudos naturales de la madera. Estilo boho, vintage y rústico-chic. Perfecta para bodas en bosques, viñedos y haciendas."
+        image="/img/tema-mexicana-1.avif"
+        href="/catalogo/mesa-picnic-rustica/"
+        btnLabel="Ver Mesa Rústica →"
+        badge="Rústica · Boho & Vintage"
+        icon="🌿"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     TABLA COMPARATIVA DE ESPECIFICACIONES
+═══════════════════════════════════════════════════════ -->
+<section class="section section-alt" id="comparativa">
+  <SectionHeader
+    tag="h2"
+    badge="Comparativa técnica"
+    title="Especificaciones por Modelo"
+    paragraph1="Consulta las medidas, capacidad y características de cada modelo en una tabla de referencia rápida. Todos los modelos son de pino nacional con tratamiento para exteriores."
+    paragraph2="Las medidas son estándar. Si necesitas algo específico o una combinación de modelos para el mismo evento, cotiza por WhatsApp y te preparamos un presupuesto a la medida."
+    stats={[
+      { value: '1.20–2.40 m', label: 'rango de longitud' },
+      { value: '100%',        label: 'madera de pino natural' },
+      { value: '+120 pzas',   label: 'inventario disponible' },
+    ]}
+  />
+  <div class="container">
+    <div class="spec-table-wrap">
+      <table class="spec-table" role="table" aria-label="Comparativa de modelos de mesa picnic">
+        <thead>
+          <tr>
+            <th scope="col">Modelo</th>
+            <th scope="col">Medidas</th>
+            <th scope="col">Capacidad</th>
+            <th scope="col">Acabado</th>
+            <th scope="col">Uso principal</th>
+            <th scope="col">Detalles</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="model-name"><strong>Estándar</strong></td>
+            <td>1.80 × 1.50 m</td>
+            <td><span class="cap-badge">6 personas</span></td>
+            <td>Liso barnizado</td>
+            <td>Bodas · Reuniones · Corporativos</td>
+            <td><a href="/catalogo/mesa-picnic-estandar/" class="tbl-link">Ver →</a></td>
+          </tr>
+          <tr>
+            <td class="model-name"><strong>Grande</strong></td>
+            <td>2.40 × 1.50 m</td>
+            <td><span class="cap-badge">10–12 personas</span></td>
+            <td>Liso barnizado</td>
+            <td>Corporativos · Festivales · Bodas</td>
+            <td><a href="/catalogo/mesa-picnic-grande/" class="tbl-link">Ver →</a></td>
+          </tr>
+          <tr>
+            <td class="model-name"><strong>Infantil</strong></td>
+            <td>1.20 × 1.00 m</td>
+            <td><span class="cap-badge cap-badge--kids">8–10 niños</span></td>
+            <td>Ultra fino sin astillas</td>
+            <td>Fiestas infantiles · Baby showers</td>
+            <td><a href="/catalogo/mesa-picnic-infantil/" class="tbl-link">Ver →</a></td>
+          </tr>
+          <tr>
+            <td class="model-name"><strong>Premium</strong></td>
+            <td>1.80 × 1.50 m</td>
+            <td><span class="cap-badge cap-badge--premium">6 personas</span></td>
+            <td>Premium sin nudos</td>
+            <td>Bodas de lujo · Eventos VIP</td>
+            <td><a href="/catalogo/mesa-picnic-premium/" class="tbl-link">Ver →</a></td>
+          </tr>
+          <tr>
+            <td class="model-name"><strong>Set Completo</strong></td>
+            <td>1.80 × 1.50 m</td>
+            <td><span class="cap-badge">2–6 personas</span></td>
+            <td>Liso + decoración</td>
+            <td>Picnics románticos · Aniversarios</td>
+            <td><a href="/catalogo/set-picnic-completo/" class="tbl-link">Ver →</a></td>
+          </tr>
+          <tr>
+            <td class="model-name"><strong>Rústica</strong></td>
+            <td>1.80 × 1.50 m</td>
+            <td><span class="cap-badge">6 personas</span></td>
+            <td>Veta rústica barnizada</td>
+            <td>Bodas boho · Fiestas vintage</td>
+            <td><a href="/catalogo/mesa-picnic-rustica/" class="tbl-link">Ver →</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     MATERIAL Y PROCESO
+═══════════════════════════════════════════════════════ -->
+<section class="section" id="material">
+  <SectionHeader
+    tag="h2"
+    badge="Calidad del producto"
+    title="Pino Nacional Seleccionado, Elaborado a Mano"
+    paragraph1="Todo el mobiliario de MESPIC está fabricado en pino nacional de primera calidad. El proceso de preparación de cada pieza tarda más de lo que parece: selección de tabla, secado, lijado, aplicación de sellador y tres manos de barniz para exteriores."
+    paragraph2="Antes de cada entrega, cada pieza pasa por una inspección visual y estructural. Si una banca tiene una astilla, una grieta o un barniz deteriorado, no sale del almacén. Por eso nuestros clientes reciben mobiliario en condiciones impecables, evento tras evento."
+    stats={[
+      { value: '3 manos',    label: 'de barniz para exteriores' },
+      { value: 'grano fino', label: 'lijado sin astillas' },
+      { value: '100%',       label: 'inspección antes de entrega' },
+    ]}
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard
+        index={0}
+        title="Pino Nacional de Primera"
+        description="Seleccionamos tablas de pino con veta uniforme, sin defectos estructurales. La madera pasa por un proceso de secado natural antes de ser trabajada, lo que reduce deformaciones por humedad y temperatura."
+      />
+      <FeatureCard
+        index={1}
+        title="Lijado a Grano Fino"
+        description="Cada pieza se lija en dos etapas: desbaste grueso para eliminar irregularidades y acabado fino para lograr una superficie suave al tacto. El modelo infantil tiene una tercera pasada ultrafina para eliminar cualquier posibilidad de astilla."
+      />
+      <FeatureCard
+        index={2}
+        title="Sellador + 3 Manos de Barniz"
+        description="Aplicamos un sellador de poros antes del barniz para garantizar adherencia y protección profunda. Las tres manos de barniz de exterior protegen la madera de humedad, lluvia y variaciones de temperatura."
+      />
+      <FeatureCard
+        index={3}
+        title="Inspección Antes de Cada Entrega"
+        description="El día de la entrega, cada pieza es revisada: verificamos estructura, barniz, uniones y estado general. Si alguna pieza no cumple, se sustituye. Este proceso garantiza que lo que llega a tu evento siempre se ve impecable."
+      />
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     GALERÍA
+═══════════════════════════════════════════════════════ -->
+<section class="section section-alt" id="galeria">
+  <SectionHeader
+    tag="h2"
+    badge="Galería del catálogo"
+    title="Los 6 Modelos en Eventos Reales"
+    paragraph1="Así se ve el mobiliario de MESPIC en bodas, corporativos, festivales, fiestas infantiles y picnics románticos. La madera natural se adapta a cualquier estilo de decoración."
+    stats={[
+      { value: '6 modelos',      label: 'en una sola bodega' },
+      { value: 'cualquier estilo', label: 'rústico, boho, premium…' },
+      { value: 'CDMX + Edomex',   label: 'zona de cobertura' },
+    ]}
+  />
+  <GallerySection images={galeriaCatalogo} id="galeria-catalogo" />
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FAQ
+═══════════════════════════════════════════════════════ -->
+<section class="section" id="faq-catalogo">
+  <SectionHeader
+    tag="h2"
+    badge="Preguntas frecuentes"
+    title="Preguntas sobre el Catálogo"
+    paragraph1="Las dudas más comunes sobre los modelos, las medidas y la disponibilidad. Respuestas directas y sin rodeos."
+    paragraph2="¿Tienes una pregunta que no está aquí? Escríbenos por WhatsApp y te respondemos en minutos."
+    stats={[
+      { value: '6',       label: 'respuestas inmediatas' },
+      { value: '< 5 min', label: 'respuesta por WhatsApp' },
+      { value: 'lun–dom', label: '8:00 a 20:00 hrs' },
+    ]}
+  />
+  <FaqSection
+    phone="55 6432 8954"
+    whatsapp="5564328954"
+    schedule="Lun–Dom 8:00–20:00"
+    waMessage="Hola, quiero cotizar mesas picnic para mi evento."
+    items={[
+      {
+        question: "¿Cuál es la diferencia entre la Mesa Estándar y la Grande?",
+        answer: "La Mesa Estándar mide 1.80 × 1.50 m y acomoda 6 personas. La Mesa Grande mide 2.40 × 1.50 m y acomoda 10 a 12. La Grande es ideal como mesa principal de una boda o para eventos corporativos donde se necesita espacio de trabajo o servicio de comida para grupos grandes. Para la mayoría de los eventos con invitados mixtos, la combinación óptima es 70% estándar y 30% grande."
+      },
+      {
+        question: "¿Qué diferencia la Mesa Premium de la Estándar?",
+        answer: "La Premium usa pino seleccionado sin nudos visibles y recibe una capa de barniz adicional de acabado fino. El resultado es una superficie más uniforme y un aspecto más elegante. Recomendamos el modelo Premium para bodas de alto perfil donde el mobiliario es un elemento visual protagonista, y para sesiones fotográficas profesionales."
+      },
+      {
+        question: "¿El Set Picnic Completo incluye todos los accesorios?",
+        answer: "Sí. El Set Picnic Completo incluye mesa estándar, mantelería de algodón, cojines decorativos, centro de mesa y ambientación básica. Es un paquete llave en mano para parejas que no quieren contratar por separado una decoradora. Si quieres agregar flores frescas, cesta de picnic con comida o decoración temática, lo cotizamos por separado."
+      },
+      {
+        question: "¿Puedo combinar diferentes modelos en un mismo evento?",
+        answer: "Sí, y de hecho es lo más común. Si tu evento tiene una zona de adultos y una zona de niños, llevamos mesas estándar e infantiles en la misma entrega. Si quieres una mesa grande como mesa principal y estándares para el resto de los invitados, también. Todo entra en una sola cotización y una sola entrega."
+      },
+      {
+        question: "¿Cuántas piezas pueden entregar para un mismo evento?",
+        answer: "Contamos con más de 120 piezas en bodega, lo que nos permite atender eventos de 100 o más personas sin problema. Para eventos masivos de 200+ asistentes, recomendamos reservar con al menos 2 semanas de anticipación para garantizar disponibilidad de todos los modelos que necesitas."
+      },
+      {
+        question: "¿La madera resiste el exterior y la intemperie?",
+        answer: "Sí. Todos los modelos tienen acabado con barniz de exterior que resiste humedad moderada, variaciones de temperatura y exposición al sol. Para lluvia intensa o eventos en zonas de alta humedad, recomendamos contar con carpas o toldos como respaldo. La madera no se daña con humedad moderada, pero una lluvia sostenida puede afectar el barniz a largo plazo si la pieza no está cubierta."
+      }
+    ]}
+  />
+</section>
+
+<!-- CTA Final -->
+<CtaBarFinal
+  headline="¿Ya sabes qué modelo necesitas?"
+  subtext="Cotiza por WhatsApp o en línea. Te respondemos con disponibilidad y precio el mismo día."
+  phone="55 6432 8954"
+  whatsapp="5564328954"
+  waMessage="Hola, quiero cotizar mesas picnic para mi evento. Vi el catálogo en la web."
+  cotizarHref="/cotizar/"
+/>
+
+<!-- WA Bubble -->
+<WaBubble whatsapp="5564328954" message="Hola, vi el catálogo de mesas picnic y quiero cotizar." />
+
+<!-- Schema.org -->
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Catálogo de Mesas Picnic para Renta — MESPIC",
+    "description": "6 modelos de mesas picnic de pino natural para renta en CDMX y Edomex. Estándar, grande, infantil, premium, rústica y set completo.",
+    "url": "https://mesaspicnic.com/catalogo/",
+    "numberOfItems": 6,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Mesa Picnic Estándar",
+        "url": "https://mesaspicnic.com/catalogo/mesa-picnic-estandar/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Mesa Picnic Grande",
+        "url": "https://mesaspicnic.com/catalogo/mesa-picnic-grande/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Mesa Picnic Infantil",
+        "url": "https://mesaspicnic.com/catalogo/mesa-picnic-infantil/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Mesa Picnic Premium",
+        "url": "https://mesaspicnic.com/catalogo/mesa-picnic-premium/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Set Picnic Completo",
+        "url": "https://mesaspicnic.com/catalogo/set-picnic-completo/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "Mesa Picnic Rústica",
+        "url": "https://mesaspicnic.com/catalogo/mesa-picnic-rustica/"
+      }
+    ]
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuál es la diferencia entre la Mesa Estándar y la Grande?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La Mesa Estándar mide 1.80 × 1.50 m y acomoda 6 personas. La Mesa Grande mide 2.40 × 1.50 m y acomoda 10 a 12 personas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo combinar diferentes modelos en un mismo evento?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Puedes combinar modelos en una sola cotización y una sola entrega. Por ejemplo, mesas estándar para adultos y mesas infantiles para zona de niños."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuántas piezas pueden entregar para un mismo evento?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MESPIC cuenta con más de 120 piezas en bodega para atender eventos de 100 o más personas. Para eventos masivos, se recomienda reservar con al menos 2 semanas de anticipación."
+        }
+      }
+    ]
+  })} />
+</Fragment>
+
+</BaseLayout>
+
+<style>
+  /* ── Grids ── */
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 1024px) {
+    .grid-3 { grid-template-columns: repeat(2, 1fr); }
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 640px) {
+    .grid-3 { grid-template-columns: 1fr; }
+    .grid-4 { grid-template-columns: 1fr; }
+  }
+
+  /* ── Tabla de especificaciones ── */
+  .spec-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius-md, 12px);
+    border: 1px solid var(--c-border, #E7E0D8);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background: #fff;
+  }
+
+  .spec-table thead {
+    background: var(--c-primary, #2C5530);
+    color: #fff;
+  }
+
+  .spec-table thead th {
+    padding: 0.875rem 1.25rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .spec-table tbody tr {
+    border-bottom: 1px solid var(--c-border, #E7E0D8);
+    transition: background 0.15s ease;
+  }
+
+  .spec-table tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  .spec-table tbody tr:hover {
+    background: var(--c-bg-alt, #FAF8F5);
+  }
+
+  .spec-table tbody td {
+    padding: 0.875rem 1.25rem;
+    color: var(--c-text-muted, #78716C);
+    font-size: 0.875rem;
+    vertical-align: middle;
+  }
+
+  .model-name strong {
+    color: var(--c-text, #1C1917);
+    font-weight: 700;
+  }
+
+  /* Badges de capacidad */
+  .cap-badge {
+    display: inline-flex;
+    align-items: center;
+    background: color-mix(in srgb, var(--c-primary, #2C5530) 10%, transparent);
+    color: var(--c-primary, #2C5530);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.625rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .cap-badge--kids {
+    background: color-mix(in srgb, #F59E0B 12%, transparent);
+    color: #92400E;
+  }
+
+  .cap-badge--premium {
+    background: color-mix(in srgb, var(--c-accent, #D4A574) 18%, transparent);
+    color: #7C4A1A;
+  }
+
+  /* Link en tabla */
+  .tbl-link {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--c-primary, #2C5530);
+    text-decoration: none;
+    padding: 0.3rem 0.75rem;
+    border: 1.5px solid var(--c-primary, #2C5530);
+    border-radius: 6px;
+    transition: background 0.15s ease, color 0.15s ease;
+    display: inline-block;
+  }
+
+  .tbl-link:hover {
+    background: var(--c-primary, #2C5530);
+    color: #fff;
+  }
+</style>

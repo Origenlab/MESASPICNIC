@@ -1,0 +1,313 @@
+{
+  "meta": {
+    "project": "MESPIC — mesaspicnic.com",
+    "description": "Mapa de conocimiento del sitio web de renta de mesas picnic para eventos en CDMX",
+    "updated": "2026-04-17",
+    "version": "1.2"
+  },
+  "nodes": [
+    {
+      "id": "mespic",
+      "label": "MESPIC",
+      "type": "brand",
+      "group": "core",
+      "description": "Empresa mexicana de renta de mesas picnic y mobiliario de madera para eventos al aire libre en CDMX y Edomex.",
+      "url": "https://mesaspicnic.com",
+      "color": "#2C5530"
+    },
+    {
+      "id": "home",
+      "label": "Home /",
+      "type": "page",
+      "group": "paginas",
+      "status": "publicado",
+      "url": "https://mesaspicnic.com/"
+    },
+    {
+      "id": "servicios",
+      "label": "Servicios",
+      "type": "page",
+      "group": "paginas",
+      "status": "publicado",
+      "url": "https://mesaspicnic.com/servicios/"
+    },
+    {
+      "id": "nosotros",
+      "label": "Nosotros",
+      "type": "page",
+      "group": "paginas",
+      "status": "publicado",
+      "url": "https://mesaspicnic.com/nosotros/"
+    },
+    {
+      "id": "cotizar",
+      "label": "Cotizar",
+      "type": "page",
+      "group": "paginas",
+      "status": "publicado",
+      "url": "https://mesaspicnic.com/cotizar/"
+    },
+    {
+      "id": "blog",
+      "label": "Blog",
+      "type": "page",
+      "group": "paginas",
+      "status": "publicado",
+      "url": "https://mesaspicnic.com/blog/"
+    },
+    {
+      "id": "sec-hero",
+      "label": "Hero",
+      "type": "seccion",
+      "group": "home-secciones",
+      "status": "completado"
+    },
+    {
+      "id": "sec-servicios",
+      "label": "Servicios Grid",
+      "type": "seccion",
+      "group": "home-secciones",
+      "status": "completado"
+    },
+    {
+      "id": "sec-porque",
+      "label": "¿Por qué MESPIC?",
+      "type": "seccion",
+      "group": "home-secciones",
+      "status": "completado"
+    },
+    {
+      "id": "sec-testimonios",
+      "label": "Empresas Aliadas",
+      "type": "seccion",
+      "group": "home-secciones",
+      "status": "completado",
+      "note": "Actualizado 2026-04-17: reseñas individuales → B2B empresas aliadas"
+    },
+    {
+      "id": "sec-galeria",
+      "label": "Galería",
+      "type": "seccion",
+      "group": "home-secciones",
+      "status": "completado"
+    },
+    {
+      "id": "sec-faq",
+      "label": "FAQ",
+      "type": "seccion",
+      "group": "home-secciones",
+      "status": "completado"
+    },
+    {
+      "id": "sec-cta",
+      "label": "CTA Final",
+      "type": "seccion",
+      "group": "home-secciones",
+      "status": "completado"
+    },
+    {
+      "id": "srv-bodas",
+      "label": "Bodas",
+      "type": "servicio",
+      "group": "servicios",
+      "url": "https://mesaspicnic.com/servicios/bodas/"
+    },
+    {
+      "id": "srv-corporativo",
+      "label": "Corporativo",
+      "type": "servicio",
+      "group": "servicios",
+      "url": "https://mesaspicnic.com/servicios/eventos-corporativos/"
+    },
+    {
+      "id": "srv-infantil",
+      "label": "Fiestas Infantiles",
+      "type": "servicio",
+      "group": "servicios",
+      "url": "https://mesaspicnic.com/servicios/fiestas-infantiles/"
+    },
+    {
+      "id": "srv-picnic",
+      "label": "Picnic Romántico",
+      "type": "servicio",
+      "group": "servicios",
+      "url": "https://mesaspicnic.com/servicios/picnic-romantico/"
+    },
+    {
+      "id": "srv-tematico",
+      "label": "Fiestas Temáticas",
+      "type": "servicio",
+      "group": "servicios",
+      "url": "https://mesaspicnic.com/servicios/fiestas-tematicas/"
+    },
+    {
+      "id": "srv-familiar",
+      "label": "Reuniones Familiares",
+      "type": "servicio",
+      "group": "servicios",
+      "url": "https://mesaspicnic.com/servicios/reuniones-familiares/"
+    },
+    {
+      "id": "srv-festivales",
+      "label": "Festivales y Ferias",
+      "type": "servicio",
+      "group": "servicios",
+      "url": "https://mesaspicnic.com/servicios/festivales/"
+    },
+    {
+      "id": "srv-fotos",
+      "label": "Sesiones Fotográficas",
+      "type": "servicio",
+      "group": "servicios",
+      "url": "https://mesaspicnic.com/servicios/sesiones-fotograficas/"
+    },
+    {
+      "id": "ali-eventech",
+      "label": "Eventech MX",
+      "type": "empresa-aliada",
+      "group": "aliados",
+      "sector": "Tecnología para Eventos",
+      "url": "https://eventech.mx/",
+      "initials": "ET"
+    },
+    {
+      "id": "ali-iluminacion",
+      "label": "Renta de Iluminación",
+      "type": "empresa-aliada",
+      "group": "aliados",
+      "sector": "Iluminación para Eventos",
+      "url": "https://rentadeiluminacion.com/",
+      "initials": "RI"
+    },
+    {
+      "id": "ali-avantexpo",
+      "label": "Avant Expo",
+      "type": "empresa-aliada",
+      "group": "aliados",
+      "sector": "Stands y Exposiciones",
+      "url": "https://avantexpo.com.mx/",
+      "initials": "AE"
+    },
+    {
+      "id": "ali-podiumex",
+      "label": "Podiumex",
+      "type": "empresa-aliada",
+      "group": "aliados",
+      "sector": "Producción de Eventos",
+      "url": "https://podiumex.com/",
+      "initials": "PX"
+    },
+    {
+      "id": "ali-pantallaLed",
+      "label": "Pantalla LED",
+      "type": "empresa-aliada",
+      "group": "aliados",
+      "sector": "Renta de Pantallas LED",
+      "url": "https://pantalla-led.com/",
+      "initials": "PL"
+    },
+    {
+      "id": "ali-inflables",
+      "label": "Inflables para Fiestas",
+      "type": "empresa-aliada",
+      "group": "aliados",
+      "sector": "Entretenimiento Infantil",
+      "url": "https://inflablesparafiestas.com.mx/",
+      "initials": "IF"
+    },
+    {
+      "id": "ali-sonido",
+      "label": "Sonido para Eventos",
+      "type": "empresa-aliada",
+      "group": "aliados",
+      "sector": "Audio y Sonido",
+      "url": "https://sonidoparaeventos.com.mx/",
+      "initials": "SE"
+    },
+    {
+      "id": "ali-sonidoIluminacion",
+      "label": "Renta de Sonido e Iluminación",
+      "type": "empresa-aliada",
+      "group": "aliados",
+      "sector": "Sonido e Iluminación",
+      "url": "https://rentadesonidoeiluminacion.com.mx/",
+      "initials": "RS"
+    },
+    {
+      "id": "comp-card-aliada",
+      "label": "Card Empresa Aliada",
+      "type": "componente",
+      "group": "componentes",
+      "status": "producción",
+      "description": "Componente HTML+CSS para reseñas B2B con badge, estrellas, blockquote y footer con link"
+    },
+    {
+      "id": "tech-astro",
+      "label": "Astro",
+      "type": "tecnologia",
+      "group": "stack"
+    },
+    {
+      "id": "tech-html",
+      "label": "HTML / CSS",
+      "type": "tecnologia",
+      "group": "stack"
+    }
+  ],
+  "edges": [
+    { "source": "mespic", "target": "home", "label": "tiene página" },
+    { "source": "mespic", "target": "servicios", "label": "tiene página" },
+    { "source": "mespic", "target": "nosotros", "label": "tiene página" },
+    { "source": "mespic", "target": "cotizar", "label": "tiene página" },
+    { "source": "mespic", "target": "blog", "label": "tiene página" },
+
+    { "source": "home", "target": "sec-hero", "label": "contiene sección" },
+    { "source": "home", "target": "sec-servicios", "label": "contiene sección" },
+    { "source": "home", "target": "sec-porque", "label": "contiene sección" },
+    { "source": "home", "target": "sec-testimonios", "label": "contiene sección" },
+    { "source": "home", "target": "sec-galeria", "label": "contiene sección" },
+    { "source": "home", "target": "sec-faq", "label": "contiene sección" },
+    { "source": "home", "target": "sec-cta", "label": "contiene sección" },
+
+    { "source": "servicios", "target": "srv-bodas", "label": "incluye" },
+    { "source": "servicios", "target": "srv-corporativo", "label": "incluye" },
+    { "source": "servicios", "target": "srv-infantil", "label": "incluye" },
+    { "source": "servicios", "target": "srv-picnic", "label": "incluye" },
+    { "source": "servicios", "target": "srv-tematico", "label": "incluye" },
+    { "source": "servicios", "target": "srv-familiar", "label": "incluye" },
+    { "source": "servicios", "target": "srv-festivales", "label": "incluye" },
+    { "source": "servicios", "target": "srv-fotos", "label": "incluye" },
+
+    { "source": "sec-testimonios", "target": "ali-eventech", "label": "muestra reseña de" },
+    { "source": "sec-testimonios", "target": "ali-iluminacion", "label": "muestra reseña de" },
+    { "source": "sec-testimonios", "target": "ali-avantexpo", "label": "muestra reseña de" },
+    { "source": "sec-testimonios", "target": "ali-podiumex", "label": "muestra reseña de" },
+    { "source": "sec-testimonios", "target": "ali-pantallaLed", "label": "muestra reseña de" },
+    { "source": "sec-testimonios", "target": "ali-inflables", "label": "muestra reseña de" },
+    { "source": "sec-testimonios", "target": "ali-sonido", "label": "muestra reseña de" },
+    { "source": "sec-testimonios", "target": "ali-sonidoIluminacion", "label": "muestra reseña de" },
+
+    { "source": "sec-testimonios", "target": "comp-card-aliada", "label": "usa componente" },
+
+    { "source": "ali-eventech", "target": "mespic", "label": "aliado de" },
+    { "source": "ali-iluminacion", "target": "mespic", "label": "aliado de" },
+    { "source": "ali-avantexpo", "target": "mespic", "label": "aliado de" },
+    { "source": "ali-podiumex", "target": "mespic", "label": "aliado de" },
+    { "source": "ali-pantallaLed", "target": "mespic", "label": "aliado de" },
+    { "source": "ali-inflables", "target": "mespic", "label": "aliado de" },
+    { "source": "ali-sonido", "target": "mespic", "label": "aliado de" },
+    { "source": "ali-sonidoIluminacion", "target": "mespic", "label": "aliado de" },
+
+    { "source": "comp-card-aliada", "target": "tech-astro", "label": "construido con" },
+    { "source": "comp-card-aliada", "target": "tech-html", "label": "construido con" }
+  ],
+  "groups": {
+    "core": { "label": "Marca", "color": "#2C5530" },
+    "paginas": { "label": "Páginas del Sitio", "color": "#4a7c59" },
+    "home-secciones": { "label": "Secciones del Home", "color": "#6b9e7a" },
+    "servicios": { "label": "Servicios", "color": "#8aba99" },
+    "aliados": { "label": "Empresas Aliadas", "color": "#D4A574" },
+    "componentes": { "label": "Componentes UI", "color": "#94a3b8" },
+    "stack": { "label": "Stack Técnico", "color": "#cbd5e1" }
+  }
+}

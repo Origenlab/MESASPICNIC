@@ -1,0 +1,156 @@
+---
+/**
+ * TestimonialCardEmpresa — OrigenLab Standard
+ * Card de reseña B2B para empresas aliadas.
+ * Badge "Empresa aliada", siempre 5 estrellas, sin fecha, link externo al sitio.
+ */
+interface Props {
+  name: string;
+  sector: string;
+  url: string;
+  quote: string;
+  initials: string;
+}
+
+const { name, sector, url, quote, initials } = Astro.props;
+---
+
+<div class="tce">
+
+  <!-- Fila superior: Badge + Estrellas -->
+  <div class="tce__top">
+    <span class="tce__badge">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      Empresa aliada
+    </span>
+    <div class="tce__stars" aria-label="5 de 5 estrellas">
+      <span class="tce__star">★</span>
+      <span class="tce__star">★</span>
+      <span class="tce__star">★</span>
+      <span class="tce__star">★</span>
+      <span class="tce__star">★</span>
+    </div>
+  </div>
+
+  <!-- Texto de reseña -->
+  <blockquote class="tce__quote">{quote}</blockquote>
+
+  <!-- Footer: Logo + Nombre + Sector -->
+  <div class="tce__author">
+    <div class="tce__logo" aria-hidden="true">{initials}</div>
+    <div class="tce__info">
+      <a href={url} target="_blank" rel="noopener noreferrer" class="tce__name">
+        {name}
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="opacity:0.55">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+      </a>
+      <span class="tce__sector">{sector} · CDMX</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .tce {
+    background: #fff;
+    border: 1px solid var(--c-border, #E7E0D8);
+    border-top: 3px solid #2C5530;
+    border-radius: var(--radius-md, 12px);
+    padding: 1.75rem;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .tce__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tce__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: #eef4ee;
+    color: #2C5530;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    padding: 0.3rem 0.65rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+  }
+
+  .tce__stars {
+    display: flex;
+    gap: 1px;
+  }
+
+  .tce__star {
+    color: var(--c-star, #F59E0B);
+    font-size: 1rem;
+  }
+
+  .tce__quote {
+    font-size: 0.9375rem;
+    color: var(--c-text, #1C1917);
+    line-height: 1.7;
+    flex: 1;
+  }
+
+  .tce__author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(44, 85, 48, 0.1);
+  }
+
+  .tce__logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    background: #2C5530;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    letter-spacing: 0.03em;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .tce__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  .tce__name {
+    color: #2C5530;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .tce__name:hover {
+    text-decoration: underline;
+  }
+
+  .tce__sector {
+    font-size: 0.8125rem;
+    color: var(--c-text-muted, #78716C);
+  }
+</style>

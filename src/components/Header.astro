@@ -56,7 +56,15 @@ function isActive(href: string, children?: { href: string }[]): boolean {
   <div class="hdr__inner">
     {/* ── Logo ── */}
     <a href={logoHref} class="hdr__logo" aria-label={`${brand} — Inicio`}>
-      {brand}<span class="hdr__logo-dot">{brandAccent}</span>
+      <img
+        src="/img/mespic.webp"
+        alt={`${brand} — Renta de Mesas Picnic CDMX`}
+        class="hdr__logo-img"
+        width="232"
+        height="65"
+        loading="eager"
+        decoding="async"
+      />
     </a>
 
     {/* ── Desktop Navigation ── */}
@@ -122,7 +130,7 @@ function isActive(href: string, children?: { href: string }[]): boolean {
 {/* ── Mobile panel ── */}
 <nav class="hdr__panel" id="hdrPanel" aria-label="Menú móvil" aria-hidden="true">
   <div class="hdr__panel-head">
-    <span class="hdr__panel-brand">{brand}<span class="hdr__logo-dot">{brandAccent}</span></span>
+    <img src="/img/mespic.webp" alt={`${brand} — Inicio`} class="hdr__panel-logo" width="120" height="33" loading="lazy" />
     <button class="hdr__panel-close" id="hdrClose" type="button" aria-label="Cerrar menú">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
         <path d="M1 1l14 14M15 1L1 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
@@ -208,23 +216,16 @@ function isActive(href: string, children?: { href: string }[]): boolean {
 
   /* ── Logo ── */
   .hdr__logo {
-    font-family: var(--font-head, 'Plus Jakarta Sans', sans-serif);
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--c-primary, #2C5530);
-    letter-spacing: -0.01em;
     flex-shrink: 0;
-    line-height: 1;
     display: flex;
     align-items: center;
     height: 100%;
   }
 
-  .hdr__logo:hover { opacity: 0.8; }
-
-  .hdr__logo-dot {
-    color: var(--c-accent, #D4A574);
-    margin-left: 1px;
+  .hdr__logo-img {
+    height: 65px;
+    width: auto;
+    display: block;
   }
 
   /* ── Desktop Nav ── */
@@ -421,11 +422,10 @@ function isActive(href: string, children?: { href: string }[]): boolean {
     flex-shrink: 0;
   }
 
-  .hdr__panel-brand {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--c-primary, #2D5016);
+  .hdr__panel-logo {
+    height: 32px;
+    width: auto;
+    display: block;
   }
 
   .hdr__panel-close {

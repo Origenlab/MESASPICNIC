@@ -3,16 +3,23 @@
  * SectionHeader Component — OrigenLab Standard
  * ─────────────────────────────────────────────
  * Título de sección en 2 columnas:
- *   Col 1: Heading (H2-H6 configurable)
- *   Col 2: Dos párrafos descriptivos
+ *   Col 1: Badge (opcional) + Heading (H2-H6 configurable) + Acento decorativo
+ *   Col 2: Dos párrafos descriptivos + Stats opcionales
  * Respeta jerarquía SEO: H1 solo en Hero, secciones usan H2+
  * Sin animaciones. Código limpio.
  */
+interface Stat {
+  value: string;
+  label: string;
+}
+
 interface Props {
   tag?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   title: string;
   paragraph1: string;
-  paragraph2: string;
+  paragraph2?: string;
+  badge?: string;
+  stats?: Stat[];
 }
 
 const {
@@ -20,6 +27,8 @@ const {
   title,
   paragraph1,
   paragraph2,
+  badge,
+  stats,
 } = Astro.props;
 
 const Tag = tag;
@@ -27,39 +36,113 @@ const Tag = tag;
 
 <div class="sh">
   <div class="container sh__grid">
+
+    <!-- Columna 1: Badge + Título + acento -->
     <div class="sh__col1">
+      {badge && (
+        <span class="sh__badge">
+          <span class="sh__badge-dot" aria-hidden="true"></span>
+          {badge}
+        </span>
+      )}
       <Tag class="sh__title">{title}</Tag>
+      <span class="sh__accent" aria-hidden="true"></span>
     </div>
+
+    <!-- Columna 2: Textos + Stats -->
     <div class="sh__col2">
       <p class="sh__text">{paragraph1}</p>
-      <p class="sh__text">{paragraph2}</p>
+      {paragraph2 && <p class="sh__text">{paragraph2}</p>}
+
+      {stats && stats.length > 0 && (
+        <div class="sh__stats" role="list" aria-label="Datos destacados">
+          {stats.map(s => (
+            <div class="sh__stat" role="listitem">
+              <strong class="sh__stat-value">{s.value}</strong>
+              <span class="sh__stat-label">{s.label}</span>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
+
   </div>
 </div>
 
 <style>
+  /* ── Wrapper ── */
   .sh {
     padding-bottom: 2.5rem;
   }
 
+  /* ── Grid ── */
   .sh__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    align-items: center;
+    align-items: start;
   }
 
+  /* ════════════════════════════════
+     COLUMNA 1
+  ════════════════════════════════ */
+
+  /* Badge pill */
+  .sh__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--c-primary, #2C5530);
+    background: color-mix(in srgb, var(--c-primary, #2C5530) 8%, transparent);
+    border: 1px solid color-mix(in srgb, var(--c-primary, #2C5530) 20%, transparent);
+    padding: 0.35rem 0.8rem 0.35rem 0.6rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+  }
+
+  .sh__badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--c-primary, #2C5530);
+    flex-shrink: 0;
+  }
+
+  /* Título */
   .sh__title {
     font-size: clamp(1.75rem, 3.5vw, 2.5rem);
     color: var(--c-text, #1C1917);
     line-height: 1.15;
     letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
   }
+
+  /* Línea decorativa bajo el título */
+  .sh__accent {
+    display: block;
+    width: 3.5rem;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(
+      90deg,
+      var(--c-primary, #2C5530) 0%,
+      var(--c-accent, #C8956C) 100%
+    );
+  }
+
+  /* ════════════════════════════════
+     COLUMNA 2
+  ════════════════════════════════ */
 
   .sh__col2 {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding-top: 0.25rem;
   }
 
   .sh__text {
@@ -68,10 +151,79 @@ const Tag = tag;
     line-height: 1.75;
   }
 
+  /* ── Stats ── */
+  .sh__stats {
+    display: flex;
+    gap: 0;
+    margin-top: 0.75rem;
+    border-top: 1px solid var(--c-border, #E7E0D8);
+    padding-top: 1.25rem;
+  }
+
+  .sh__stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding-right: 1.25rem;
+    position: relative;
+  }
+
+  /* Separador entre stats */
+  .sh__stat + .sh__stat {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .sh__stat + .sh__stat::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.25rem;
+    bottom: 0.25rem;
+    width: 1px;
+    background: var(--c-border, #E7E0D8);
+  }
+
+  .sh__stat:last-child {
+    padding-right: 0;
+  }
+
+  .sh__stat-value {
+    font-family: var(--font-head, 'Plus Jakarta Sans', sans-serif);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--c-primary, #2C5530);
+    line-height: 1;
+  }
+
+  .sh__stat-label {
+    font-size: 0.78rem;
+    color: var(--c-text-muted, #78716C);
+    line-height: 1.4;
+  }
+
+  /* ════════════════════════════════
+     RESPONSIVE
+  ════════════════════════════════ */
   @media (max-width: 768px) {
     .sh__grid {
       grid-template-columns: 1fr;
-      gap: 1.25rem;
+      gap: 1.5rem;
+    }
+
+    .sh__stats {
+      gap: 0;
+    }
+
+    .sh__stat + .sh__stat {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .sh__stat:last-child {
+      padding-right: 0;
     }
   }
 </style>

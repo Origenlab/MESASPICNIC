@@ -1,0 +1,517 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Hero from '../../components/Hero.astro';
+import CtaBar from '../../components/CtaBar.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import GallerySection from '../../components/GallerySection.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import CtaBarFinal from '../../components/CtaBarFinal.astro';
+import WaBubble from '../../components/WaBubble.astro';
+
+const galeriaPaquetes = [
+  { src: "/img/mesa-picnic-boda-elegante-decoracion.avif",           alt: "Paquete de mesas picnic para boda íntima con 24 personas en jardín CDMX" },
+  { src: "/img/corp-teambuilding-1.avif",                            alt: "Paquete estándar de bancas de pino para team building corporativo en parque" },
+  { src: "/img/mesa-picnic-feria-gastronomica-multitud.avif",        alt: "Paquete premium de mesas picnic para festival gastronómico con 60 personas" },
+  { src: "/img/infantil-cumple-1.avif",                              alt: "Paquete básico de mesas picnic para fiesta de cumpleaños familiar en jardín" },
+  { src: "/img/mesa-picnic-evento-corporativo-networking.avif",      alt: "Paquete de mesas picnic para evento corporativo networking al aire libre" },
+  { src: "/img/mesa-picnic-boda-elegante-luces.avif",                alt: "Paquete premium montado para boda elegante nocturna con iluminación cálida" },
+  { src: "/img/tema-mexicana-1.avif",                                alt: "Paquete estándar con mesas rústicas para fiesta temática en hacienda mexicana" },
+  { src: "/img/mesa-picnic-reunion-familiar-comida.avif",            alt: "Paquete básico de mesas picnic para reunión familiar dominical en jardín" },
+];
+---
+
+<BaseLayout
+  title="Paquetes de Renta de Mesas Picnic — 24, 36 y 60 Personas | MESPIC CDMX"
+  description="3 paquetes de renta de mesas picnic para eventos en CDMX y Edomex: Básico (24 personas), Estándar (36 personas) y Premium (60 personas). Precio final sin extras. Traslado, montaje y recolección incluidos."
+  ogImage="/img/mesa-picnic-boda-elegante-decoracion.avif"
+>
+
+<!-- Breadcrumbs -->
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Paquetes" }
+  ]} />
+</Fragment>
+
+<!-- Hero -->
+<Hero
+  badge="3 paquetes disponibles"
+  title="Paquetes de Mesas Picnic por Número de Invitados"
+  description="Tres paquetes pensados para que no tengas que calcular piezas: elige el que se acerca al número de invitados de tu evento. Precio final, sin cargos extra. Traslado, montaje y recolección incluidos."
+  ctaPrimary={{ label: "Cotizar ahora →", href: "/cotizar/" }}
+  ctaSecondary={{ label: "Ver catálogo de modelos", href: "/catalogo/" }}
+  seoParagraph1="Los paquetes de MESPIC están diseñados para clientes que quieren simplicidad: en lugar de calcular cuántas bancas de qué modelo necesitan, eligen un paquete según el número de invitados y listo. El Paquete Básico cubre hasta 24 personas, el Estándar hasta 36 y el Premium hasta 60. Para eventos más grandes, cotizamos por volumen directamente."
+  seoParagraph2="Todos los paquetes incluyen exactamente lo mismo en términos de servicio: traslado a la locación elegida en CDMX o Edomex, montaje profesional por el equipo de MESPIC, uso sin límite de horas durante el evento y recolección completa al terminar. El precio que aparece en la cotización es el precio final — sin cargos por maniobras, distancia ni tiempo extra. Aceptamos efectivo, transferencia y tarjeta de crédito."
+  dark={true}
+/>
+
+<!-- CtaBar -->
+<CtaBar />
+
+<!-- ═══════════════════════════════════════════════════════
+     3 PAQUETES
+═══════════════════════════════════════════════════════ -->
+<section class="section" id="paquetes">
+  <SectionHeader
+    tag="h2"
+    badge="Todos los paquetes"
+    title="Elige el Paquete según tu Número de Invitados"
+    paragraph1="Tres opciones de capacidad. El modelo de bancas de cada paquete se ajusta al formato del evento. Si tu número de invitados cae entre dos paquetes, te recomendamos el superior para que nadie esté apretado."
+    paragraph2="¿Tu evento tiene más de 60 invitados? Cotizamos volumen personalizado por WhatsApp con el número exacto de bancas, combinación de modelos y distribución según el espacio."
+    stats={[
+      { value: '3',          label: 'paquetes disponibles' },
+      { value: '24–60',      label: 'personas por paquete' },
+      { value: 'precio final', label: 'sin extras ni sorpresas' },
+    ]}
+  />
+  <div class="container">
+    <div class="grid-3">
+      <ServiceCard
+        title="Paquete Básico"
+        description="Para eventos de hasta 24 personas. 4 bancas estándar de pino natural (1.80 × 1.50 m), con capacidad de 6 personas por banca. Ideal para reuniones familiares, cumpleaños íntimos y eventos corporativos pequeños."
+        image="/img/mesa-picnic-reunion-familiar-comida.avif"
+        href="/paquetes/basico/"
+        btnLabel="Ver Paquete Básico →"
+        badge="Básico · 24 personas"
+        icon="🌿"
+      />
+      <ServiceCard
+        title="Paquete Estándar"
+        description="Para eventos de hasta 36 personas. 6 bancas estándar de pino. El paquete más solicitado: cubre cumpleaños medianos, baby showers, posadas y corporativos de tamaño medio sin sobredimensionar el presupuesto."
+        image="/img/mesa-picnic-boda-elegante-decoracion.avif"
+        href="/paquetes/estandar/"
+        btnLabel="Ver Paquete Estándar →"
+        badge="Estándar · 36 personas"
+        icon="🪵"
+      />
+      <ServiceCard
+        title="Paquete Premium"
+        description="Para eventos de hasta 60 personas. 10 bancas en combinación de modelos estándar y/o grande según el layout del evento. Bodas medianas, corporativos de grupo, graduaciones y celebraciones de escala completa."
+        image="/img/mesa-picnic-feria-gastronomica-multitud.avif"
+        href="/paquetes/premium/"
+        btnLabel="Ver Paquete Premium →"
+        badge="Premium · 60 personas"
+        icon="✨"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     TABLA COMPARATIVA
+═══════════════════════════════════════════════════════ -->
+<section class="section section-alt" id="comparativa">
+  <SectionHeader
+    tag="h2"
+    badge="Comparativa de paquetes"
+    title="Los 3 Paquetes en una Sola Vista"
+    paragraph1="Capacidad, composición y lo que incluye cada paquete de un vistazo. Todos tienen el mismo nivel de servicio — lo que varía es la cantidad de bancas y el rango de invitados que cubre."
+    paragraph2="¿Tu número de invitados es mayor a 60? Cotiza volumen personalizado. Tenemos más de 120 piezas en bodega para eventos de 100 o más personas."
+    stats={[
+      { value: '4–10',       label: 'bancas según paquete' },
+      { value: '100%',       label: 'precio final sin extras' },
+      { value: '+120 pzas',  label: 'inventario disponible' },
+    ]}
+  />
+  <div class="container">
+    <div class="pkg-table-wrap">
+      <table class="pkg-table" role="table" aria-label="Comparativa de paquetes de mesas picnic">
+        <thead>
+          <tr>
+            <th scope="col">Paquete</th>
+            <th scope="col">Personas</th>
+            <th scope="col">Bancas incluidas</th>
+            <th scope="col">Traslado</th>
+            <th scope="col">Montaje</th>
+            <th scope="col">Recolección</th>
+            <th scope="col">Detalles</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pkg-name"><strong>Básico</strong></td>
+            <td><span class="pkg-badge">Hasta 24</span></td>
+            <td>4 bancas estándar</td>
+            <td class="pkg-check">✓</td>
+            <td class="pkg-check">✓</td>
+            <td class="pkg-check">✓</td>
+            <td><a href="/paquetes/basico/" class="tbl-link">Ver →</a></td>
+          </tr>
+          <tr>
+            <td class="pkg-name"><strong>Estándar</strong></td>
+            <td><span class="pkg-badge pkg-badge--mid">Hasta 36</span></td>
+            <td>6 bancas estándar</td>
+            <td class="pkg-check">✓</td>
+            <td class="pkg-check">✓</td>
+            <td class="pkg-check">✓</td>
+            <td><a href="/paquetes/estandar/" class="tbl-link">Ver →</a></td>
+          </tr>
+          <tr>
+            <td class="pkg-name"><strong>Premium</strong></td>
+            <td><span class="pkg-badge pkg-badge--top">Hasta 60</span></td>
+            <td>10 bancas (combinación)</td>
+            <td class="pkg-check">✓</td>
+            <td class="pkg-check">✓</td>
+            <td class="pkg-check">✓</td>
+            <td><a href="/paquetes/premium/" class="tbl-link">Ver →</a></td>
+          </tr>
+          <tr class="pkg-row-vol">
+            <td class="pkg-name"><strong>Volumen</strong></td>
+            <td><span class="pkg-badge pkg-badge--vol">60+ personas</span></td>
+            <td>Según invitados</td>
+            <td class="pkg-check">✓</td>
+            <td class="pkg-check">✓</td>
+            <td class="pkg-check">✓</td>
+            <td><a href="/cotizar/" class="tbl-link">Cotizar →</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     QUÉ INCLUYE CADA PAQUETE
+═══════════════════════════════════════════════════════ -->
+<section class="section" id="incluye">
+  <SectionHeader
+    tag="h2"
+    badge="Qué incluye el precio"
+    title="Todo lo que Incluye Cualquier Paquete"
+    paragraph1="Sin importar qué paquete elijas, el servicio es completo de inicio a fin. El precio cubre todo lo que se necesita para que el mobiliario esté listo en tu evento sin que tú muevas una sola pieza."
+    paragraph2="No hay cargos adicionales por traslado, maniobras, tiempo extra ni distancia dentro de la zona de cobertura CDMX y Edomex. Lo que cotizamos es el precio final."
+    stats={[
+      { value: '4 pasos',    label: 'entrega → montaje → uso → recolección' },
+      { value: '7 días',     label: 'de la semana, 8:00–20:00' },
+      { value: 'sin límite', label: 'de tiempo en tu evento' },
+    ]}
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard
+        index={0}
+        title="Traslado a Tu Locación"
+        description="Llevamos las bancas directamente a donde sea tu evento: jardín, terraza, hacienda, parque o salón exterior. Cubrimos todas las alcaldías de CDMX y los principales municipios del Estado de México."
+      />
+      <FeatureCard
+        index={1}
+        title="Montaje Profesional"
+        description="Nuestro equipo arma y distribuye las bancas según el espacio y el número de invitados. Llegamos con anticipación suficiente para que todo esté listo antes de que empiece el evento."
+      />
+      <FeatureCard
+        index={2}
+        title="Uso Sin Límite de Horas"
+        description="Las bancas se quedan en tu evento hasta que termine — no cobramos por hora ni por tiempo extra. Si la celebración se extiende hasta la madrugada, recogemos cuando tú nos avises."
+      />
+      <FeatureCard
+        index={3}
+        title="Recolección Incluida"
+        description="Al finalizar el evento, nuestro equipo recoge todas las piezas. Tú no tienes que desmontar, acomodar ni preocuparte por nada. El precio del paquete ya incluye este servicio desde el inicio."
+      />
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     CALCULADORA / REFERENCIA DE INVITADOS
+═══════════════════════════════════════════════════════ -->
+<section class="section section-alt" id="calculadora">
+  <SectionHeader
+    tag="h2"
+    badge="¿Cuántas bancas necesito?"
+    title="Referencia Rápida por Número de Invitados"
+    paragraph1="Usa esta referencia para elegir el paquete correcto o para calcular si necesitas cotizar por volumen. La banca estándar acomoda 6 personas; la grande acomoda 10 a 12."
+    paragraph2="Si tu número de invitados cae entre dos rangos, siempre es mejor el paquete superior: más espacio significa más comodidad y mejor experiencia para tus invitados."
+    stats={[
+      { value: '6',     label: 'personas por banca estándar' },
+      { value: '10–12', label: 'personas por banca grande' },
+      { value: '1 sem', label: 'anticipación recomendada' },
+    ]}
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard
+        index={0}
+        title="Hasta 24 personas → Básico"
+        description="4 bancas estándar. Cumpleaños íntimos, reuniones familiares dominicales, baby showers pequeños, brunch con amigos. Ocupa aproximadamente 40 m² de espacio útil."
+      />
+      <FeatureCard
+        index={1}
+        title="Hasta 36 personas → Estándar"
+        description="6 bancas estándar. Cumpleaños medianos, posadas, graduaciones, convivencias corporativas de equipo. Ocupa aproximadamente 60 m² de espacio útil."
+      />
+      <FeatureCard
+        index={2}
+        title="Hasta 60 personas → Premium"
+        description="10 bancas (combinación de modelos). Bodas íntimas, corporativos de área completa, XV años, kermesses escolares. Requiere al menos 90 m² de espacio útil."
+      />
+      <FeatureCard
+        index={3}
+        title="Más de 60 personas → Volumen"
+        description="Cotización personalizada. Enviamos el número exacto de bancas según invitados, distribución del espacio y combinación de modelos. Tenemos capacidad para 100+ personas en un solo evento."
+      />
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     GALERÍA
+═══════════════════════════════════════════════════════ -->
+<section class="section" id="galeria">
+  <SectionHeader
+    tag="h2"
+    badge="Galería de paquetes"
+    title="Los 3 Paquetes en Eventos Reales"
+    paragraph1="Bodas, corporativos, cumpleaños, festivales y reuniones familiares — así se ve el mobiliario de MESPIC distribuido en eventos de diferentes escalas."
+    stats={[
+      { value: '3 escalas',    label: 'básico, estándar y premium' },
+      { value: 'pino natural', label: 'lijado y barnizado a mano' },
+      { value: 'CDMX + Edomex', label: 'zona de cobertura' },
+    ]}
+  />
+  <GallerySection images={galeriaPaquetes} id="galeria-paquetes" />
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FAQ
+═══════════════════════════════════════════════════════ -->
+<section class="section section-alt" id="faq">
+  <SectionHeader
+    tag="h2"
+    badge="Preguntas frecuentes"
+    title="Preguntas sobre los Paquetes"
+    paragraph1="Las dudas más comunes antes de reservar un paquete. Respuestas directas para que puedas decidir con información completa."
+    paragraph2="¿Tienes una pregunta que no está aquí? Escríbenos por WhatsApp y te respondemos en minutos."
+    stats={[
+      { value: '6',       label: 'respuestas inmediatas' },
+      { value: '< 5 min', label: 'respuesta por WhatsApp' },
+      { value: 'lun–dom', label: '8:00 a 20:00 hrs' },
+    ]}
+  />
+  <FaqSection
+    phone="55 6432 8954"
+    whatsapp="5564328954"
+    schedule="Lun–Dom 8:00–20:00"
+    waMessage="Hola, quiero cotizar un paquete de mesas picnic para mi evento."
+    items={[
+      {
+        question: "¿Puedo personalizar la composición de un paquete?",
+        answer: "Sí. Si prefieres combinar bancas estándar con bancas grandes, o agregar una mesa infantil para la zona de niños, lo cotizamos como un paquete personalizado. La composición base de cada paquete es una referencia orientativa — la ajustamos según el formato de tu evento."
+      },
+      {
+        question: "¿El precio incluye todo o hay cargos adicionales?",
+        answer: "El precio es final. Incluye traslado, montaje, uso sin límite de tiempo y recolección. No hay cargos adicionales por distancia dentro de CDMX y Edomex, por maniobras de carga y descarga, ni por extensión del tiempo del evento."
+      },
+      {
+        question: "¿Con cuánto tiempo de anticipación debo reservar?",
+        answer: "Recomendamos reservar con al menos 1 semana de anticipación para garantizar disponibilidad. En temporada alta (noviembre a febrero), los fines de semana se agotan rápido — en ese período recomendamos reservar con 2 semanas o más."
+      },
+      {
+        question: "¿Mis invitados son más de 60? ¿Pueden atenderme igual?",
+        answer: "Sí. Para eventos de más de 60 personas cotizamos por volumen. Tenemos más de 120 piezas en bodega y capacidad operativa para eventos de 100 o más personas. Solo indícanos el número de invitados, el tipo de evento y la fecha para preparar la cotización."
+      },
+      {
+        question: "¿Qué formas de pago aceptan?",
+        answer: "Aceptamos efectivo, transferencia bancaria y tarjeta de crédito o débito. El pago se coordina al momento de confirmar la reserva. No cobramos depósito adicional ni cargos por el método de pago."
+      },
+      {
+        question: "¿Puedo cambiar de paquete después de reservar?",
+        answer: "Sí, siempre que haya disponibilidad de las piezas adicionales en tu fecha. Si decides agregar más bancas al paquete original, solo notifícanos con al menos 48 horas de anticipación para confirmar que tenemos el inventario disponible."
+      }
+    ]}
+  />
+</section>
+
+<!-- CTA Final -->
+<CtaBarFinal
+  headline="¿Listo para reservar tu paquete?"
+  subtext="Cotiza sin compromiso. Te confirmamos disponibilidad y precio el mismo día."
+  phone="55 6432 8954"
+  whatsapp="5564328954"
+  waMessage="Hola, quiero cotizar un paquete de mesas picnic para mi evento."
+  cotizarHref="/cotizar/"
+/>
+
+<!-- WA Bubble -->
+<WaBubble whatsapp="5564328954" message="Hola, quiero cotizar un paquete de mesas picnic." />
+
+<!-- Schema.org -->
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Paquetes de Renta de Mesas Picnic — MESPIC",
+    "description": "3 paquetes de renta de mobiliario de madera para eventos en CDMX y Edomex: Básico (24 personas), Estándar (36 personas) y Premium (60 personas). Precio final con traslado, montaje y recolección.",
+    "url": "https://mesaspicnic.com/paquetes/",
+    "numberOfItems": 3,
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Paquete Básico — 24 personas", "url": "https://mesaspicnic.com/paquetes/basico/" },
+      { "@type": "ListItem", "position": 2, "name": "Paquete Estándar — 36 personas", "url": "https://mesaspicnic.com/paquetes/estandar/" },
+      { "@type": "ListItem", "position": 3, "name": "Paquete Premium — 60 personas", "url": "https://mesaspicnic.com/paquetes/premium/" }
+    ]
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿El precio del paquete incluye todo?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí. El precio es final e incluye traslado, montaje, uso sin límite de tiempo y recolección. Sin cargos adicionales." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Pueden atender eventos de más de 60 personas?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Para eventos de más de 60 personas cotizamos por volumen. Tenemos más de 120 piezas en bodega para eventos de 100 o más personas." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Con cuánto tiempo debo reservar?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Con al menos 1 semana de anticipación. En temporada alta (noviembre a febrero) se recomienda reservar con 2 semanas o más." }
+      }
+    ]
+  })} />
+</Fragment>
+
+</BaseLayout>
+
+<style>
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 1024px) {
+    .grid-3 { grid-template-columns: repeat(2, 1fr); }
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 640px) {
+    .grid-3 { grid-template-columns: 1fr; }
+    .grid-4 { grid-template-columns: 1fr; }
+  }
+
+  /* ── Tabla comparativa ── */
+  .pkg-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius-md, 12px);
+    border: 1px solid var(--c-border, #E7E0D8);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .pkg-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background: #fff;
+  }
+
+  .pkg-table thead {
+    background: var(--c-primary, #2C5530);
+    color: #fff;
+  }
+
+  .pkg-table thead th {
+    padding: 0.875rem 1.25rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .pkg-table tbody tr {
+    border-bottom: 1px solid var(--c-border, #E7E0D8);
+    transition: background 0.15s ease;
+  }
+
+  .pkg-table tbody tr:last-child { border-bottom: none; }
+  .pkg-table tbody tr:hover { background: var(--c-bg-alt, #FAF8F5); }
+
+  .pkg-table tbody td {
+    padding: 0.875rem 1.25rem;
+    color: var(--c-text-muted, #78716C);
+    font-size: 0.875rem;
+    vertical-align: middle;
+  }
+
+  .pkg-name strong {
+    color: var(--c-text, #1C1917);
+    font-weight: 700;
+  }
+
+  .pkg-check {
+    text-align: center;
+    color: var(--c-primary, #2C5530);
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  /* Fila de volumen — estilo diferenciado */
+  .pkg-row-vol td {
+    background: var(--c-bg-alt, #FAF8F5);
+    font-style: italic;
+  }
+
+  .pkg-row-vol:hover td {
+    background: #f0ece6 !important;
+  }
+
+  /* Badges de capacidad */
+  .pkg-badge {
+    display: inline-flex;
+    align-items: center;
+    background: color-mix(in srgb, var(--c-primary, #2C5530) 10%, transparent);
+    color: var(--c-primary, #2C5530);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.625rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .pkg-badge--mid {
+    background: color-mix(in srgb, #2563EB 10%, transparent);
+    color: #1d4ed8;
+  }
+
+  .pkg-badge--top {
+    background: color-mix(in srgb, var(--c-accent, #D4A574) 18%, transparent);
+    color: #7C4A1A;
+  }
+
+  .pkg-badge--vol {
+    background: color-mix(in srgb, #6b7280 12%, transparent);
+    color: #374151;
+  }
+
+  .tbl-link {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--c-primary, #2C5530);
+    text-decoration: none;
+    padding: 0.3rem 0.75rem;
+    border: 1.5px solid var(--c-primary, #2C5530);
+    border-radius: 6px;
+    transition: background 0.15s ease, color 0.15s ease;
+    display: inline-block;
+  }
+
+  .tbl-link:hover {
+    background: var(--c-primary, #2C5530);
+    color: #fff;
+  }
+</style>
