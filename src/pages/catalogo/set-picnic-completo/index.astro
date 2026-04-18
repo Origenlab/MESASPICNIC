@@ -224,6 +224,53 @@ import WaBubble from '../../../components/WaBubble.astro';
   />
 </section>
 
+<!-- ═══ DEL BLOG ═══ -->
+<section class="section section-alt" id="blog-relacionado">
+  <SectionHeader
+    tag="h2"
+    badge="Del blog"
+    title="Artículos sobre Picnic y Experiencias Románticas"
+    paragraph1="Guías para organizar un picnic perfecto: pedidas de mano, aniversarios, experiencias premium y celebraciones íntimas en CDMX."
+  />
+  <div class="container">
+    <div class="blog-cards">
+      <a href="/blog/picnic-lujo-experiencias-premium-cdmx/" class="blog-card">
+        <div class="blog-card__img-wrap">
+          <img src="/img/mesa-picnic-pedida-mano-romantica.webp" alt="Picnic de lujo y pedidas de mano en CDMX" loading="lazy" width="400" height="240" />
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__cat">Lujo · Romántico</span>
+          <h3 class="blog-card__title">Picnic de Lujo en CDMX: Experiencias Premium</h3>
+          <p class="blog-card__desc">El Set Picnic Completo es el paquete estrella para pedidas de mano, aniversarios y momentos que merecen algo especial. Así es como funciona.</p>
+          <span class="blog-card__cta">Leer artículo →</span>
+        </div>
+      </a>
+      <a href="/blog/renta-mesas-picnic-bodas-cdmx/" class="blog-card">
+        <div class="blog-card__img-wrap">
+          <img src="/img/mesa-picnic-boda-elegante-decoracion.avif" alt="Set picnic completo para bodas íntimas en CDMX" loading="lazy" width="400" height="240" />
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__cat">Bodas íntimas</span>
+          <h3 class="blog-card__title">Bodas Íntimas con Set Picnic Completo</h3>
+          <p class="blog-card__desc">Para bodas pequeñas y ceremonias íntimas, el Set Picnic Completo ofrece mesa, decoración y ambientación en un solo paquete sin necesidad de contratar decoradora.</p>
+          <span class="blog-card__cta">Leer guía →</span>
+        </div>
+      </a>
+      <a href="/blog/renta-mesas-picnic-polanco-lomas-santa-fe/" class="blog-card">
+        <div class="blog-card__img-wrap">
+          <img src="/img/mesa-picnic-boda-elegante-luces.avif" alt="Picnic romántico en Polanco y Lomas de Chapultepec" loading="lazy" width="400" height="240" />
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__cat">Zonas exclusivas</span>
+          <h3 class="blog-card__title">Polanco · Lomas · Santa Fe</h3>
+          <p class="blog-card__desc">El Set Picnic Completo es uno de los servicios más solicitados para experiencias románticas en jardines privados de las zonas más exclusivas de la CDMX.</p>
+          <span class="blog-card__cta">Leer artículo →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <CtaBarFinal
   headline="¿Tienes una ocasión especial próxima?"
   subtext="Cotiza el Set Picnic Completo para tu fecha. Reserva con anticipación para garantizar disponibilidad."
@@ -254,6 +301,96 @@ import WaBubble from '../../../components/WaBubble.astro';
 </BaseLayout>
 
 <style>
+  /* ── Blog cards ── */
+  .blog-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--c-border, #E7E0D8);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .blog-card:hover {
+    box-shadow: 0 8px 28px rgba(0,0,0,0.11);
+    transform: translateY(-3px);
+  }
+
+  .blog-card__img-wrap {
+    overflow: hidden;
+    aspect-ratio: 5/3;
+  }
+
+  .blog-card__img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .blog-card:hover .blog-card__img-wrap img {
+    transform: scale(1.04);
+  }
+
+  .blog-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.25rem 1.375rem 1.5rem;
+    border-top: 3px solid var(--c-primary, #2C5530);
+  }
+
+  .blog-card__cat {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--c-primary, #2C5530);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  .blog-card__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--c-text, #1C1917);
+    line-height: 1.3;
+    margin-bottom: 0.625rem;
+  }
+
+  .blog-card__desc {
+    font-size: 0.8125rem;
+    color: var(--c-text-muted, #78716C);
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: 1rem;
+  }
+
+  .blog-card__cta {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--c-primary, #2C5530);
+  }
+
+  @media (max-width: 900px) {
+    .blog-cards { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 600px) {
+    .blog-cards { grid-template-columns: 1fr; }
+  }
+
   .grid-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

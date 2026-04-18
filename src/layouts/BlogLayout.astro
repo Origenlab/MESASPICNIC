@@ -12,6 +12,10 @@ import CtaBar from '../components/CtaBar.astro';
 import CtaBarFinal from '../components/CtaBarFinal.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 
+interface SidebarProduct { name: string; cap: string; href: string; img: string; }
+interface SidebarArticle { title: string; meta: string; href: string; img: string; }
+interface SidebarService { name: string; desc: string; href: string; }
+
 interface Props {
   title: string;
   description?: string;
@@ -26,6 +30,13 @@ interface Props {
   heroCta?: { label: string; href: string };
   heroCtaSecondary?: { label: string; href: string };
   breadcrumbs?: Array<{ label: string; href?: string }>;
+  sidebarProducts?: SidebarProduct[];
+  sidebarArticles?: SidebarArticle[];
+  sidebarServices?: SidebarService[];
+  sidebarCtaTitle?: string;
+  sidebarCtaText?: string;
+  sidebarCtaWa?: string;
+  sidebarServicesTitle?: string;
 }
 
 const {
@@ -42,6 +53,25 @@ const {
   heroCta = { label: "Cotizar sin compromiso →", href: "/cotizar/" },
   heroCtaSecondary = { label: "Ver catálogo", href: "/catalogo/" },
   breadcrumbs = [],
+  sidebarProducts = [
+    { name: "Mesa Estándar",  cap: "1.80 m · 6 personas",        href: "/catalogo/mesa-picnic-estandar/",  img: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
+    { name: "Mesa Premium",   cap: "Sin nudos · Bodas VIP",       href: "/catalogo/mesa-picnic-premium/",   img: "/img/mesa-picnic-boda-elegante-luces.avif" },
+  ],
+  sidebarArticles = [
+    { title: "¿Cuántas mesas necesitas según tus invitados?",  meta: "Guía de cálculo · 5 min", href: "/blog/cuantas-mesas-picnic-necesitas-segun-invitados/",      img: "/img/mesa-picnic-boda-invitados-atardecer.avif" },
+    { title: "Mesas picnic para bodas en CDMX",                meta: "Bodas · 8 min",           href: "/blog/renta-mesas-picnic-bodas-cdmx/",                        img: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
+    { title: "Ideas de decoración para fiestas infantiles",    meta: "Decoración · 6 min",      href: "/blog/decoracion-mesas-picnic-fiestas-infantiles/",           img: "/img/mesa-picnic-fiesta-infantil-globos-colores.avif" },
+  ],
+  sidebarServices = [
+    { name: "Bodas al Aire Libre",    desc: "Jardines · Haciendas · Terrazas", href: "/servicios/bodas/" },
+    { name: "Picnic Romántico",       desc: "Pedidas · Aniversarios",           href: "/servicios/picnic-romantico/" },
+    { name: "Eventos Corporativos",   desc: "Team building · Conferencias",     href: "/servicios/eventos-corporativos/" },
+    { name: "Fiestas Infantiles",     desc: "Cumpleaños · Baby shower",         href: "/servicios/fiestas-infantiles/" },
+  ],
+  sidebarCtaTitle = "¿Planeas un evento?",
+  sidebarCtaText = "Cotiza sin compromiso. Te respondemos en menos de 30 minutos vía WhatsApp.",
+  sidebarCtaWa = "Hola%2C+quiero+cotizar+mesas+picnic+para+mi+evento.",
+  sidebarServicesTitle = "Servicios relacionados",
 } = Astro.props;
 
 const defaultBreadcrumbs = [
@@ -98,9 +128,9 @@ const crumbs = breadcrumbs.length > 0 ? breadcrumbs : defaultBreadcrumbs;
           <div class="sw-cta__icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
           </div>
-          <h3 class="sw-cta__title">¿Planeas una boda?</h3>
-          <p class="sw-cta__text">Cotiza sin compromiso. Te respondemos en menos de 30 minutos vía WhatsApp.</p>
-          <a href="https://wa.me/5564328954?text=Hola%2C+quiero+cotizar+mesas+picnic+para+mi+boda." target="_blank" rel="noopener" class="sw-cta__btn sw-cta__btn--wa">
+          <h3 class="sw-cta__title">{sidebarCtaTitle}</h3>
+          <p class="sw-cta__text">{sidebarCtaText}</p>
+          <a href={`https://wa.me/5564328954?text=${sidebarCtaWa}`} target="_blank" rel="noopener" class="sw-cta__btn sw-cta__btn--wa">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Cotizar por WhatsApp
           </a>
@@ -109,69 +139,37 @@ const crumbs = breadcrumbs.length > 0 ? breadcrumbs : defaultBreadcrumbs;
 
         <!-- Widget: Servicios relacionados -->
         <div class="sidebar-widget">
-          <h3 class="sidebar-widget__title">Servicios para bodas</h3>
+          <h3 class="sidebar-widget__title">{sidebarServicesTitle}</h3>
           <ul class="sw-links">
-            <li>
-              <a href="/servicios/bodas/" class="sw-link">
-                <span class="sw-link__text">
-                  <strong>Bodas al Aire Libre</strong>
-                  <small>Jardines · Haciendas · Terrazas</small>
-                </span>
-                <svg class="sw-link__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
-              </a>
-            </li>
-            <li>
-              <a href="/servicios/picnic-romantico/" class="sw-link">
-                <span class="sw-link__text">
-                  <strong>Picnic Romántico</strong>
-                  <small>Pedidas · Aniversarios</small>
-                </span>
-                <svg class="sw-link__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
-              </a>
-            </li>
-            <li>
-              <a href="/servicios/eventos-corporativos/" class="sw-link">
-                <span class="sw-link__text">
-                  <strong>Eventos Corporativos</strong>
-                  <small>Team building · Conferencias</small>
-                </span>
-                <svg class="sw-link__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
-              </a>
-            </li>
-            <li>
-              <a href="/servicios/fiestas-infantiles/" class="sw-link">
-                <span class="sw-link__text">
-                  <strong>Fiestas Infantiles</strong>
-                  <small>Cumpleaños · Baby shower</small>
-                </span>
-                <svg class="sw-link__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
-              </a>
-            </li>
+            {sidebarServices.map((s) => (
+              <li>
+                <a href={s.href} class="sw-link">
+                  <span class="sw-link__text">
+                    <strong>{s.name}</strong>
+                    <small>{s.desc}</small>
+                  </span>
+                  <svg class="sw-link__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
         <!-- Widget: Catálogo de productos -->
         <div class="sidebar-widget">
-          <h3 class="sidebar-widget__title">Catálogo de productos</h3>
+          <h3 class="sidebar-widget__title">Modelos del catálogo</h3>
           <div class="sw-products">
-            <a href="/catalogo/" class="sw-product">
-              <div class="sw-product__img-wrap">
-                <img src="/img/mesa-picnic-boda-elegante-decoracion.avif" alt="Mesa Picnic Estándar 2.4 m" loading="lazy" width="280" height="160" />
-              </div>
-              <div class="sw-product__info">
-                <span class="sw-product__name">Mesa Estándar 2.4 m</span>
-                <span class="sw-product__cap">6–8 personas</span>
-              </div>
-            </a>
-            <a href="/catalogo/" class="sw-product">
-              <div class="sw-product__img-wrap">
-                <img src="/img/mesa-picnic-boda-elegante-luces.avif" alt="Mesa Picnic Premium con decoración" loading="lazy" width="280" height="160" />
-              </div>
-              <div class="sw-product__info">
-                <span class="sw-product__name">Mesa Premium con Set</span>
-                <span class="sw-product__cap">Decoración incluida</span>
-              </div>
-            </a>
+            {sidebarProducts.map((p) => (
+              <a href={p.href} class="sw-product">
+                <div class="sw-product__img-wrap">
+                  <img src={p.img} alt={p.name} loading="lazy" width="280" height="160" />
+                </div>
+                <div class="sw-product__info">
+                  <span class="sw-product__name">{p.name}</span>
+                  <span class="sw-product__cap">{p.cap}</span>
+                </div>
+              </a>
+            ))}
             <a href="/catalogo/" class="sw-product-cta">Ver catálogo completo →</a>
           </div>
         </div>
@@ -180,39 +178,19 @@ const crumbs = breadcrumbs.length > 0 ? breadcrumbs : defaultBreadcrumbs;
         <div class="sidebar-widget">
           <h3 class="sidebar-widget__title">Artículos relacionados</h3>
           <ul class="sw-articles">
-            <li>
-              <a href="/blog/cuantas-mesas-picnic-necesitas-segun-invitados/" class="sw-article">
-                <div class="sw-article__img">
-                  <img src="/img/mesa-picnic-boda-invitados-atardecer.avif" alt="¿Cuántas mesas picnic necesitas?" loading="lazy" width="80" height="80" />
-                </div>
-                <div class="sw-article__text">
-                  <span class="sw-article__title">¿Cuántas mesas necesitas según tus invitados?</span>
-                  <span class="sw-article__meta">Guía de cálculo · 5 min</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/blog/decoracion-mesas-picnic-fiestas-infantiles/" class="sw-article">
-                <div class="sw-article__img">
-                  <img src="/img/mesa-picnic-fiesta-infantil-globos-colores.avif" alt="Decoración para fiestas infantiles" loading="lazy" width="80" height="80" />
-                </div>
-                <div class="sw-article__text">
-                  <span class="sw-article__title">Ideas de decoración para fiestas infantiles</span>
-                  <span class="sw-article__meta">Decoración · 6 min</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/blog/mesas-picnic-eventos-corporativos/" class="sw-article">
-                <div class="sw-article__img">
-                  <img src="/img/mesa-picnic-evento-corporativo-networking.avif" alt="Mesas picnic para eventos corporativos" loading="lazy" width="80" height="80" />
-                </div>
-                <div class="sw-article__text">
-                  <span class="sw-article__title">Mesas picnic para eventos corporativos</span>
-                  <span class="sw-article__meta">Corporativo · 7 min</span>
-                </div>
-              </a>
-            </li>
+            {sidebarArticles.map((a) => (
+              <li>
+                <a href={a.href} class="sw-article">
+                  <div class="sw-article__img">
+                    <img src={a.img} alt={a.title} loading="lazy" width="80" height="80" />
+                  </div>
+                  <div class="sw-article__text">
+                    <span class="sw-article__title">{a.title}</span>
+                    <span class="sw-article__meta">{a.meta}</span>
+                  </div>
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
