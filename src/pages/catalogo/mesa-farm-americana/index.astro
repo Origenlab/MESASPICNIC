@@ -1,0 +1,414 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import CtaBar from '../../../components/CtaBar.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import FeatureCard from '../../../components/FeatureCard.astro';
+import ServiceCard from '../../../components/ServiceCard.astro';
+import ProductGallery from '../../../components/ProductGallery.astro';
+import FaqSection from '../../../components/FaqSection.astro';
+import CtaBarFinal from '../../../components/CtaBarFinal.astro';
+import WaBubble from '../../../components/WaBubble.astro';
+---
+
+<BaseLayout
+  title="Mesa Farm Americana para Renta — 2.40m · 8-10 Personas | MESPIC CDMX"
+  description="Renta la Mesa Farm Americana de MESPIC: diseño campestre de pino nacional con 2.40 m de largo, ancho premium de 1.10 m, capacidad para 8-10 personas. Perfecta para bodas al aire libre, banquetes corporativos, quinceañeras y aniversarios en CDMX y Edomex. Entrega y montaje incluidos."
+  ogImage="/img/catalogo/mesa-farm-americana-madera-evento-jardin-01.webp"
+>
+
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Catálogo", href: "/catalogo/" },
+    { label: "Mesa Farm Americana" }
+  ]} />
+</Fragment>
+
+<Hero
+  badge="Mesa Farm Americana"
+  title="Mesa Farm Americana — 2.40 m para 8-10 Personas"
+  description="Estilo campestre americano con dimensiones premium. Pino nacional de 2.40 m de largo por 1.10 m de ancho: el ancho superior permite centros de mesa elaborados y vajilla de impacto. Sin bancas integradas, compatible con sillas Tiffany, Crossback o de madera."
+  ctaPrimary={null}
+  ctaSecondary={null}
+  seoParagraph1="La Mesa Farm Americana de MESPIC es la elección preferida de coordinadores de bodas formales y eventos corporativos que requieren elegancia rústica. Su largo de 2.40 metros acomoda entre 8 y 10 comensales en una configuración lineal tipo farm-to-table, mientras que su ancho de 1.10 metros —superior al de una mesa picnic estándar— ofrece espacio generoso para centros de mesa elaborados, vajilla premium y cristalería sin apreturas visuales. La madera de pino nacional lijada y barnizada tres manos realza la veta natural, funcionando como elemento decorativo propio en bodas rústicas, campestres y eventos de alto nivel en CDMX y Edomex."
+  seoParagraph2="Disponible para renta en toda la Ciudad de México y Estado de México, la Mesa Farm Americana se integra perfectamente a bodas al aire libre en jardines privados de Polanco, Santa Fe, Las Lomas y Coyoacán, así como banquetes corporativos en haciendas y salones con vista. Sin bancas integradas, se combina libremente con sillas Tiffany blancas, sillas Crossback naturales o de madera maciza para crear composiciones visuales de impacto. Cada mesa incluye el servicio completo de traslado, montaje profesional y recolección al finalizar tu evento."
+  dark={true}
+/>
+
+<CtaBar />
+
+<!-- ═══════════════════════════════════════════════════════
+     GALERÍA + SIDEBAR MODELOS
+═══════════════════════════════════════════════════════ -->
+<section class="section" id="galeria">
+  <SectionHeader
+    tag="h2"
+    badge="Mesa Farm en eventos"
+    title="La Mesa Farm Americana en Bodas Formales, Banquetes y Celebraciones Premium"
+    paragraph1="Su ancho de 1.10 metros y largo de 2.40 m crean una composición visual de lujo absoluto. Aquí, algunos de los eventos donde ha sido la pieza central de mesas de honor y head tables."
+    paragraph2="¿Necesitas una o varias mesas para tu boda o evento? Cotiza disponibilidad y distribución personalizada por WhatsApp. Respondemos el mismo día."
+  />
+  <ProductGallery
+    images={[
+      { src: "/img/catalogo/mesa-farm-americana-madera-evento-jardin-01.webp", alt: "Mesa farm americana de pino nacional en jardín privado para boda campestre CDMX" },
+      { src: "/img/catalogo/mesa-farm-americana-boda-campestre-02.webp", alt: "Mesa farm larga con decoración floral y vajilla premium en boda al aire libre" },
+      { src: "/img/catalogo/mesa-farm-americana-exterior-decorada-03.webp", alt: "Múltiples mesas farm dispuestas en jardín para banquete exterior con sillas crossback" },
+      { src: "/img/catalogo/mesa-farm-americana-detalle-madera-04.webp", alt: "Detalle de la veta de pino natural en mesa farm MESPIC con acabado artesanal" },
+      { src: "/img/catalogo/mesa-farm-americana-evento-premium-05.webp", alt: "Mesa farm americana en evento nocturno con iluminación cálida y centros de mesa florales" },
+      { src: "/img/catalogo/mesa-farm-americana-madera-evento-jardin-01.webp", alt: "Ficha detalle mesa farm americana — 2.40 m x 1.10 m" },
+    ]}
+    recommended={[
+      { title: "Mesa XL 3.00 m",       description: "Para 12-14 personas",             href: "/catalogo/mesa-picnic-xl/",         image: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
+      { title: "Mesa Premium",         description: "Acabado sin nudos · VIP",         href: "/catalogo/mesa-picnic-premium/",    image: "/img/mesa-picnic-boda-elegante-luces.avif" },
+      { title: "Set Lounge Exterior",  description: "Mobiliario garden premium",      href: "/catalogo/set-lounge-exterior/",    image: "/img/tema-mexicana-1.avif" },
+      { title: "Mesa Parota",          description: "Madera tropical exótica",        href: "/catalogo/mesa-picnic-parota/",     image: "/img/mesa-picnic-pedida-mano-romantica.webp" },
+      { title: "Set Picnic Completo",  description: "Mesa + decoración premium",      href: "/catalogo/set-picnic-completo/",    image: "/img/mesa-picnic-evento-corporativo-networking.avif" },
+    ]}
+    sidebarTitle="Otros modelos del catálogo"
+  />
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     ESPECIFICACIONES TÉCNICAS
+═══════════════════════════════════════════════════════ -->
+<section class="section section-alt" id="especificaciones">
+  <SectionHeader
+    tag="h2"
+    badge="Ficha técnica"
+    title="Especificaciones de la Mesa Farm Americana"
+    paragraph1="Dimensiones exactas, material, acabado y capacidad. Diseño premium con ancho generoso de 1.10 metros para eventos de alto nivel."
+    paragraph2="Si necesitas croquis de distribución o especificaciones para tu locación, escríbenos por WhatsApp y te enviamos la ficha técnica completa en PDF con compatibilidad de sillas."
+    stats={[
+      { value: '2.40 m',   label: 'largo' },
+      { value: '1.10 m',   label: 'ancho premium' },
+      { value: '8-10',     label: 'personas sentadas' },
+    ]}
+  />
+  <div class="container">
+    <div class="spec-grid">
+      <div class="spec-card">
+        <h3 class="spec-card__title">Ficha Técnica</h3>
+        <ul class="spec-list" role="list">
+          <li class="spec-list__item">
+            <span class="spec-list__label">Largo</span>
+            <span class="spec-list__value">2.40 m</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Ancho</span>
+            <span class="spec-list__value">1.10 m (premium)</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Alto de mesa</span>
+            <span class="spec-list__value">0.76 m</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Capacidad</span>
+            <span class="spec-list__value">8–10 personas</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Material</span>
+            <span class="spec-list__value">Pino nacional seleccionado</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Acabado</span>
+            <span class="spec-list__value">Aceite natural + barniz exterior 3 manos</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Uso recomendado</span>
+            <span class="spec-list__value">Exterior e interior ventilado</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Peso aproximado</span>
+            <span class="spec-list__value">38 kg</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Disponibilidad</span>
+            <span class="spec-list__value spec-list__value--ok">+30 piezas en bodega</span>
+          </li>
+        </ul>
+        <a href="/cotizar/" class="spec-card__cta">Cotizar disponibilidad →</a>
+      </div>
+
+      <div class="spec-features">
+        <FeatureCard
+          index={0}
+          title="Ancho Premium de 1.10 m"
+          description="El ancho superior permite montar centros de mesa elaborados, arreglos florales de envergadura y vajilla premium sin apreturas visuales. Los comensales tienen espacio real entre plato y vaso, y el personal de servicio circula con comodidad."
+        />
+        <FeatureCard
+          index={1}
+          title="Sin Bancas Integradas — Máxima Flexibilidad"
+          description="Compatible con sillas Tiffany blancas, Crossback naturales, Tolix o de madera maciza. Permite crear composiciones visuales personalizadas según tu concepto de evento sin limitaciones de diseño."
+        />
+        <FeatureCard
+          index={2}
+          title="Longitud Banquete — 2.40 m para 8-10 Comensales"
+          description="La configuración lineal tipo farm-to-table acomoda elegantemente a 8-10 personas en un formato que es la referencia internacional en bodas rústicas formales y banquetes corporativos de lujo."
+        />
+        <FeatureCard
+          index={3}
+          title="Versátil en Estética — Bodas Campestres a Eventos Corporativos"
+          description="Se adapta a estéticas rústicas, campestres, minimalistas, boho y corporativo-formal. La veta natural del pino actúa como elemento decorativo propio, funcionando en jardines, haciendas, salones y espacios al aire libre con igual impacto visual."
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     USOS RECOMENDADOS
+═══════════════════════════════════════════════════════ -->
+<section class="section" id="usos">
+  <SectionHeader
+    tag="h2"
+    badge="Usos recomendados"
+    title="Eventos Donde la Mesa Farm Americana es Protagonista"
+    paragraph1="Su ancho premium y longitud generosa la convierten en la pieza preferida para eventos que demandan elegancia rústica, formales en jardín y celebraciones de estatus. Estos son los contextos donde nuestros clientes la solicitan con mayor frecuencia."
+    paragraph2="Si tu evento tiene un concepto visual definido, escríbenos por WhatsApp y te asesoramos sobre distribución, compatibilidad de sillas y combinación con otros modelos del catálogo."
+    stats={[
+      { value: '2.40 m',   label: 'largo banquete' },
+      { value: '1.10 m',   label: 'ancho premium' },
+      { value: 'bodas',    label: 'uso principal' },
+    ]}
+  />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard
+        title="Bodas al Aire Libre y Jardín"
+        description="La Mesa Farm Americana es la elegida por novias que buscan un look campestre formal. Su ancho premium permite vajilla de impacto y flores de centro elaboradas. Disponible en jardines privados de CDMX norte, Lomas, Santa Fe y Polanco."
+        image="/img/catalogo/mesa-farm-americana-madera-evento-jardin-01.webp"
+        href="/servicios/bodas/"
+        btnLabel="Mesas para bodas"
+        badge="Bodas"
+      />
+      <ServiceCard
+        title="Eventos Corporativos y Banquetes"
+        description="Perfecta como head table en cenas de gala corporativas, lanzamientos de producto y eventos de networking. Su presencia transmite lujo accesible y sofisticación rústica en haciendas y salones empresariales."
+        image="/img/catalogo/mesa-farm-americana-boda-campestre-02.webp"
+        href="/servicios/eventos-corporativos/"
+        btnLabel="Eventos corporativos"
+        badge="Corporativo"
+      />
+      <ServiceCard
+        title="Quinceañeras y XV Años"
+        description="Como mesa de honor para la homenajeada y su corte de honor, la Mesa Farm Americana crea una entrada visual impactante. Su ancho permite flores elaboradas y una presentación de gala sin rivales en el mercado de mesas para renta."
+        image="/img/catalogo/mesa-farm-americana-exterior-decorada-03.webp"
+        href="/servicios/reuniones-familiares/"
+        btnLabel="XV años y quinceañeras"
+        badge="Celebración"
+      />
+      <ServiceCard
+        title="Sesiones Fotográficas Premium"
+        description="Directores de arte y fotógrafos especializados en lifestyle la eligen por su capacidad de crear composiciones editorialoides. Su ancho y proporciones son ideales para bodegones de lujo, editoriales de moda y producciones de alto nivel."
+        image="/img/catalogo/mesa-farm-americana-evento-premium-05.webp"
+        href="/servicios/sesiones-fotograficas/"
+        btnLabel="Producciones fotográficas"
+        badge="Fotografía"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FAQ
+═══════════════════════════════════════════════════════ -->
+<section class="section section-alt" id="faq">
+  <SectionHeader
+    tag="h2"
+    badge="Preguntas frecuentes"
+    title="Preguntas sobre la Mesa Farm Americana"
+    paragraph1="Las dudas más comunes antes de reservar la Mesa Farm Americana. Respondemos con detalle para que tomes la mejor decisión para tu evento."
+    paragraph2="¿Tu pregunta no está aquí? Escríbenos por WhatsApp — respondemos el mismo día."
+  />
+  <FaqSection
+    phone="55 3128 1706"
+    whatsapp="5531281706"
+    schedule="Lun–Dom 8:00–20:00"
+    waMessage="Hola, quiero cotizar la Mesa Farm Americana para mi evento."
+    items={[
+      {
+        question: "¿Cuál es la diferencia entre la Mesa Farm Americana y una mesa picnic estándar?",
+        answer: "La Mesa Farm Americana tiene 2.40 metros de largo (igual que la picnic estándar) pero su ancho es de 1.10 metros versus los 0.60 metros de una picnic estándar. Este ancho premium permite centros de mesa elaborados, arreglos florales envolventes y vajilla de impacto sin apreturas visuales. Además, se posiciona como una pieza de elegancia campestre pensada para eventos formales, bodas de lujo y banquetes corporativos."
+      },
+      {
+        question: "¿Qué sillas son compatibles con la Mesa Farm Americana?",
+        answer: "La Mesa Farm Americana es compatible con cualquier tipo de silla: Tiffany blancas (look minimalista), Crossback naturales (rústico campestre), Tolix (industrial moderno) o sillas de madera maciza (boho tradicional). No incluye bancas integradas, lo que te da total libertad para personalizar la composición visual según tu concepto de evento. Podemos asesorarte sobre las mejores opciones según tu estética."
+      },
+      {
+        question: "¿La Mesa Farm Americana incluye sillas en la renta?",
+        answer: "La renta de la Mesa Farm Americana NO incluye sillas. La mesa viene sin bancas integradas para que puedas elegir el tipo de silla que mejor se adapte a tu evento. Ofrecemos renta adicional de sillas Tiffany, Crossback y de madera — cotiza junto con tu mesa para obtener una propuesta integral."
+      },
+      {
+        question: "¿Cuántas mesas Farm necesito para mi boda o evento?",
+        answer: "Depende del número de invitados y la distribución que prefieras. Una Mesa Farm Americana acomoda 8-10 personas. Para una boda de 80 invitados con mesas de 8-10 personas, necesitarías entre 8-10 mesas. Te recomendamos cotizar con tu coordinador o enviarnos el número total de comensales para hacer un layout personalizado."
+      },
+      {
+        question: "¿La Mesa Farm Americana sirve para eventos bajo carpa o techados?",
+        answer: "Sí, absolutamente. Funciona perfectamente en eventos bajo carpa, salones con techos, haciendas cubiertas y espacios ventilados. El barniz de protección exterior no afecta su capacidad de permanecer en interiores. Recomendamos ventilación adecuada (especialmente en espacios cerrados) para que el acabado conserve su apariencia natural."
+      },
+      {
+        question: "¿Puedo rentar la Mesa Farm Americana sola o necesito contratar un paquete?",
+        answer: "Puedes rentar la Mesa Farm Americana de manera individual — no es obligatorio contratar un paquete. El servicio incluye entrega, montaje profesional y recolección sin costo adicional en toda la CDMX y Edomex. Si combinas con sillas, decoración o servicios complementarios, ofrecemos descuentos especiales. Cotiza sin compromiso por WhatsApp."
+      }
+    ]}
+  />
+</section>
+
+<!-- Blog relacionado -->
+<section class="section" id="blog-relacionado">
+  <SectionHeader
+    tag="h2"
+    badge="Del blog"
+    title="Guías para Eventos con Mesas Farm"
+    paragraph1="Artículos con ideas de decoración, distribución y estilos de evento donde la Mesa Farm Americana es la pieza central."
+  />
+  <div class="container">
+    <div class="blog-cards">
+      <a href="/blog/renta-mesas-picnic-bodas-cdmx/" class="blog-card">
+        <div class="blog-card__img-wrap">
+          <img src="/img/mesa-picnic-boda-elegante-decoracion.avif" alt="Renta de mesas farm americana para bodas en CDMX" loading="lazy" width="400" height="240" />
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__cat">Bodas</span>
+          <h3 class="blog-card__title">Renta de Mesas Farm para Bodas Campestres en CDMX</h3>
+          <p class="blog-card__desc">Guía completa: cómo distribuir mesas farm, estilos de decoración, compatibilidad de sillas y checklist para tu boda al aire libre.</p>
+          <span class="blog-card__cta">Leer guía →</span>
+        </div>
+      </a>
+      <a href="/blog/decoracion-mesas-picnic-fiestas-infantiles/" class="blog-card">
+        <div class="blog-card__img-wrap">
+          <img src="/img/mesa-picnic-fiesta-infantil-cupcakes.webp" alt="Decoración de mesas farm para eventos formales" loading="lazy" width="400" height="240" />
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__cat">Decoración</span>
+          <h3 class="blog-card__title">Decoración de Mesas Farm para Eventos de Lujo</h3>
+          <p class="blog-card__desc">Ideas profesionales para decorar mesas farm americana: flores elaboradas, paletas de color premium y centros de mesa impactantes.</p>
+          <span class="blog-card__cta">Leer artículo →</span>
+        </div>
+      </a>
+      <a href="/blog/picnic-lujo-experiencias-premium-cdmx/" class="blog-card">
+        <div class="blog-card__img-wrap">
+          <img src="/img/mesa-picnic-romantica-velas-rosas.webp" alt="Mesas farm para experiencias premium en CDMX" loading="lazy" width="400" height="240" />
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__cat">Premium</span>
+          <h3 class="blog-card__title">Mesas Farm para Experiencias Premium en CDMX</h3>
+          <p class="blog-card__desc">Cómo crear eventos de alto nivel: selección de mobiliario farm, catering compatible, decoración floral y detalles que marcan la diferencia.</p>
+          <span class="blog-card__cta">Leer artículo →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<CtaBarFinal
+  headline="¿Lista tu Mesa Farm Americana?"
+  subtext="Cotiza disponibilidad para tu fecha. Respondemos el mismo día con precio, distribución y confirmación de layout."
+  phone="55 3128 1706"
+  whatsapp="5531281706"
+  waMessage="Hola, quiero cotizar la Mesa Farm Americana para mi evento."
+  cotizarHref="/cotizar/"
+/>
+
+<WaBubble whatsapp="5531281706" message="Hola, me interesa rentar la Mesa Farm Americana." />
+
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Mesa Farm Americana — Renta MESPIC",
+    "description": "Mesa farm americana de pino nacional para renta. 2.40 m de largo, 1.10 m de ancho premium, capacidad para 8-10 personas. Acabado aceite + barniz. Sin bancas integradas. Compatible con sillas Tiffany, Crossback o madera. Ideal para bodas, banquetes corporativos y eventos de lujo en CDMX y Edomex.",
+    "brand": { "@type": "Brand", "name": "MESPIC" },
+    "category": "Mobiliario para eventos — Renta",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "MXN",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "LocalBusiness",
+        "name": "MESPIC — Renta de Mesas Picnic",
+        "telephone": "+52-55-3128-1706",
+        "url": "https://mesaspicnic.com",
+        "areaServed": [
+          { "@type": "City", "name": "Ciudad de México" },
+          { "@type": "State", "name": "Estado de México" }
+        ]
+      }
+    }
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuál es la diferencia entre la Mesa Farm Americana y una mesa picnic estándar?",
+        "acceptedAnswer": { "@type": "Answer", "text": "La Mesa Farm Americana tiene 1.10 m de ancho versus 0.60 m de la picnic estándar. Este ancho premium permite centros de mesa elaborados, arreglos florales envolventes y vajilla de impacto. Se posiciona como pieza de elegancia campestre para eventos formales y bodas de lujo." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué sillas son compatibles con la Mesa Farm Americana?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Compatible con sillas Tiffany blancas, Crossback naturales, Tolix o de madera maciza. No incluye bancas integradas, lo que permite total libertad para personalizar la composición visual según tu concepto de evento." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuántas mesas Farm necesito para mi evento?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Una Mesa Farm Americana acomoda 8-10 personas. Para 80 invitados necesitarías 8-10 mesas. Podemos ayudarte a hacer un layout personalizado según tu número total de comensales." }
+      }
+    ]
+  })} />
+</Fragment>
+
+</BaseLayout>
+
+<style>
+  .blog-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--c-border, #E7E0D8);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .blog-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.11); transform: translateY(-3px); }
+  .blog-card__img-wrap { overflow: hidden; aspect-ratio: 5/3; }
+  .blog-card__img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+  .blog-card:hover .blog-card__img-wrap img { transform: scale(1.04); }
+  .blog-card__body { display: flex; flex-direction: column; flex: 1; padding: 1.25rem 1.375rem 1.5rem; border-top: 3px solid var(--c-primary, #2C5530); }
+  .blog-card__cat { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--c-primary, #2C5530); margin-bottom: 0.5rem; display: block; }
+  .blog-card__title { font-size: 1rem; font-weight: 700; color: var(--c-text, #1C1917); line-height: 1.3; margin-bottom: 0.625rem; }
+  .blog-card__desc { font-size: 0.8125rem; color: var(--c-text-muted, #78716C); line-height: 1.65; flex: 1; margin-bottom: 1rem; }
+  .blog-card__cta { font-size: 0.8125rem; font-weight: 700; color: var(--c-primary, #2C5530); }
+  @media (max-width: 900px) { .blog-cards { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .blog-cards { grid-template-columns: 1fr; } }
+
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid-4 { grid-template-columns: 1fr; } }
+
+  .spec-grid { display: grid; grid-template-columns: 320px 1fr; gap: 2rem; align-items: start; }
+  .spec-card { background: #fff; border: 1px solid var(--c-border, #E7E0D8); border-radius: var(--radius-md, 12px); padding: 1.75rem; position: sticky; top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2rem); }
+  .spec-card__title { font-size: 1rem; font-weight: 700; color: var(--c-text, #1C1917); margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--c-primary, #2C5530); }
+  .spec-list { list-style: none; display: flex; flex-direction: column; gap: 0; margin-bottom: 1.5rem; }
+  .spec-list__item { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.625rem 0; border-bottom: 1px solid var(--c-border, #E7E0D8); }
+  .spec-list__item:last-child { border-bottom: none; }
+  .spec-list__label { font-size: 0.8125rem; color: var(--c-text-muted, #78716C); font-weight: 500; flex-shrink: 0; }
+  .spec-list__value { font-size: 0.8125rem; color: var(--c-text, #1C1917); font-weight: 600; text-align: right; }
+  .spec-list__value--ok { color: var(--c-primary, #2C5530); }
+  .spec-card__cta { display: flex; align-items: center; justify-content: center; background: var(--c-primary, #2C5530); color: #fff; padding: 0.75rem 1.25rem; border-radius: 8px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.18s ease; }
+  .spec-card__cta:hover { background: #224228; }
+  .spec-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  @media (max-width: 1024px) { .spec-grid { grid-template-columns: 1fr; } .spec-card { position: static; } }
+  @media (max-width: 640px) { .spec-features { grid-template-columns: 1fr; } }
+</style>

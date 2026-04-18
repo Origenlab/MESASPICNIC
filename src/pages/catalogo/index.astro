@@ -13,12 +13,16 @@ import WaBubble from '../../components/WaBubble.astro';
 const galeriaCatalogo = [
   { src: "/img/mesa-picnic-boda-elegante-decoracion.avif",                               alt: "Mesa picnic estándar de pino natural decorada para boda al aire libre" },
   { src: "/img/catalogo/mesa-picnic-hexagonal-madera-6-personas-jardin-01.webp",          alt: "Mesa picnic hexagonal de pino en boda boho al aire libre con decoración floral" },
+  { src: "/img/catalogo/mesa-farm-americana-madera-evento-jardin-01.webp",                alt: "Mesa farm americana de madera para evento al aire libre con decoración de jardín" },
+  { src: "/img/catalogo/mesa-redonda-madera-evento-boda-01.webp",                         alt: "Mesa redonda de madera natural para boda íntima en exterior" },
   { src: "/img/mesa-picnic-evento-corporativo-networking.avif",                           alt: "Mesa picnic grande para evento corporativo con networking al exterior" },
   { src: "/img/catalogo/mesa-alta-cocktail-madera-networking-03.webp",                    alt: "Mesas altas cocktail de madera en evento standing de lanzamiento de producto" },
+  { src: "/img/catalogo/mesa-biergarten-madera-festival-01.webp",                         alt: "Mesa biergarten de madera con bancas removibles en festival gastronómico exterior" },
+  { src: "/img/catalogo/mesa-madera-teka-premium-exterior-01.webp",                       alt: "Mesa de madera con acabado teka premium en terraza de evento VIP" },
+  { src: "/img/catalogo/barra-madera-eventos-cocktail-boda-03.webp",                      alt: "Barra de madera para cocktail en boda exterior con servicio de bebidas" },
+  { src: "/img/catalogo/set-comedor-exterior-formal-bodas-03.webp",                       alt: "Set comedor exterior con sillas crossback para cena formal en boda al aire libre" },
   { src: "/img/catalogo/mesa-picnic-xl-extra-larga-3m-16-personas-01.webp",               alt: "Mesa picnic XL de 3 metros para 16 personas en evento masivo al aire libre" },
   { src: "/img/catalogo/set-lounge-exterior-madera-vip-evento-01.webp",                   alt: "Set lounge exterior de madera con tapizado para zona VIP en evento de lujo" },
-  { src: "/img/catalogo/mesa-picnic-parota-madera-premium-vip-01.webp",                   alt: "Mesa picnic de parota maciza mexicana en evento VIP premium al aire libre" },
-  { src: "/img/catalogo/set-picnic-infantil-tematico-colores-01.webp",                    alt: "Set picnic infantil temático con colores para fiesta de cumpleaños de niños" },
 ];
 
 const modelos = [
@@ -233,12 +237,103 @@ const modelos = [
     cta: "Ver Set Infantil",
     acento: "kids",
   },
+  // ── Nuevos 6 modelos — investigación competidores US / España / México ──────
+  {
+    id: "farm-americana",
+    href: "/catalogo/mesa-farm-americana/",
+    image: "/img/catalogo/mesa-farm-americana-madera-evento-jardin-01.webp",
+    alt: "Mesa farm americana de madera para 8-10 personas en evento de jardín al aire libre",
+    badge: "Estilo US",
+    tipo: "Farm Americana",
+    nombre: "Mesa Farm Americana",
+    capacidad: "8–10",
+    unidad: "personas",
+    specs: ["2.40 × 1.10 m", "Sin bancas integradas", "Bodas campestres"],
+    descripcion: "La mesa rectangular de formato ancho importada del mercado estadounidense. Sin bancas integradas, diseñada para combinar con sillas de cualquier estilo. La preferida de bodas campestres, rústicas y decoraciones boho con sillas ghost o chiavari.",
+    cta: "Ver Mesa Farm",
+    acento: "primary",
+  },
+  {
+    id: "redonda-madera",
+    href: "/catalogo/mesa-redonda-madera/",
+    image: "/img/catalogo/mesa-redonda-madera-evento-boda-01.webp",
+    alt: "Mesa redonda de madera natural de 1.50 m de diámetro para 8-10 personas en boda exterior",
+    badge: "Conversación",
+    tipo: "Redonda",
+    nombre: "Mesa Redonda de Madera",
+    capacidad: "8–10",
+    unidad: "personas",
+    specs: ["Ø 1.50 m", "Sin cabecera", "Sillas opcionales"],
+    descripcion: "La mesa que elimina jerarquías. El formato circular facilita la conversación entre todos los comensales. Ideal para bodas íntimas, cenas de aniversario, mesas de sponsors y reuniones corporativas donde el diálogo es protagonista.",
+    cta: "Ver Mesa Redonda",
+    acento: "primary",
+  },
+  {
+    id: "biergarten",
+    href: "/catalogo/mesa-biergarten-madera/",
+    image: "/img/catalogo/mesa-biergarten-madera-festival-01.webp",
+    alt: "Mesa biergarten de pino con 2 bancas removibles para festival gastronómico y cervecería al aire libre",
+    badge: "Festivales",
+    tipo: "Biergarten",
+    nombre: "Mesa Biergarten",
+    capacidad: "8–10",
+    unidad: "personas",
+    specs: ["2.20 × 0.60 m", "2 bancas removibles", "Beer garden · Festival"],
+    descripcion: "El formato europeo de cervecería al aire libre. Mesa larga y estrecha con dos bancas removibles, diseñada para máxima densidad de personas. La opción más eficiente para food markets, ferias gastronómicas, festivales de cerveza y eventos en espacios abiertos.",
+    cta: "Ver Mesa Biergarten",
+    acento: "primary",
+  },
+  {
+    id: "teka",
+    href: "/catalogo/mesa-madera-teka/",
+    image: "/img/catalogo/mesa-madera-teka-premium-exterior-01.webp",
+    alt: "Mesa de madera con acabado de aceite teka premium en evento VIP de terraza con decoración de lujo",
+    badge: "Acabado VIP",
+    tipo: "Madera Teka",
+    nombre: "Mesa Madera Teka",
+    capacidad: "6–8",
+    unidad: "personas",
+    specs: ["2.00 × 1.00 m", "Aceite de teca", "Resistente UV"],
+    descripcion: "Acabado en aceite de teca que penetra la fibra de la madera y la protege sin crear una capa superficial. El resultado es una superficie que se ve y se siente como madera viva, resistente a UV y humedad. Para bodas de lujo, terraza corporativa y eventos VIP.",
+    cta: "Ver Mesa Teka",
+    acento: "premium",
+  },
+  {
+    id: "barra-madera",
+    href: "/catalogo/barra-madera-eventos/",
+    image: "/img/catalogo/barra-madera-eventos-bebidas-01.webp",
+    alt: "Barra de madera para eventos con servicio de bebidas en boda al aire libre con coctelería",
+    badge: "Único en catálogo",
+    tipo: "Barra",
+    nombre: "Barra de Madera para Eventos",
+    capacidad: "2–3",
+    unidad: "bartenders",
+    specs: ["2.00 × 0.60 × 1.10 m", "Altura barra", "Estante trasero incl."],
+    descripcion: "La primera barra del catálogo. Diseñada para bartenders profesionales: 2 metros de superficie de trabajo, altura ergonómica de 1.10 m y estante trasero para botellas. Convierte cualquier espacio en una coctelería premium. Complemento perfecto para bodas, cumpleaños y activaciones.",
+    cta: "Ver Barra Madera",
+    acento: "primary",
+  },
+  {
+    id: "comedor-exterior",
+    href: "/catalogo/set-comedor-exterior/",
+    image: "/img/catalogo/set-comedor-exterior-sillas-boda-01.webp",
+    alt: "Set comedor exterior con mesa rectangular y 6 sillas crossback para cena formal en boda al aire libre",
+    badge: "Con sillas",
+    tipo: "Set Comedor",
+    nombre: "Set Comedor Exterior",
+    capacidad: "6",
+    unidad: "personas",
+    specs: ["1.80 × 0.90 m", "6 sillas crossback", "Cena formal"],
+    descripcion: "La única propuesta del catálogo con sillas incluidas en lugar de bancas. Mesa rectangular de pino y 6 sillas crossback de haya lacada en blanco. El formato de cena formal más fotogénico del catálogo. Ideal para bodas románticas, aniversarios y eventos donde la elegancia importa.",
+    cta: "Ver Set Comedor",
+    acento: "primary",
+  },
 ];
 ---
 
 <BaseLayout
-  title="Catálogo de Mesas Picnic para Renta — 14 Modelos | MESPIC CDMX"
-  description="Catálogo completo de mesas picnic de pino natural para renta en CDMX y Edomex. 14 modelos: estándar, grande, XL, hexagonal, plegable, parota, infantil, premium, rústica, set completo, set lounge, banca individual, mesa cocktail y set infantil temático. Entrega y montaje incluidos."
+  title="Catálogo de Mesas Picnic para Renta — 20 Modelos | MESPIC CDMX"
+  description="Catálogo completo de mesas picnic de pino natural para renta en CDMX y Edomex. 20 modelos: estándar, grande, XL, hexagonal, plegable, parota, farm americana, redonda, biergarten, teka, barra madera, set comedor exterior, infantil, premium, rústica, set completo, set lounge, banca, cocktail y set infantil temático. Entrega y montaje incluidos."
   ogImage="/img/mesa-picnic-boda-elegante-decoracion.avif"
 >
 
@@ -252,13 +347,13 @@ const modelos = [
 
 <!-- Hero -->
 <Hero
-  badge="14 modelos disponibles"
+  badge="20 modelos disponibles"
   title="Catálogo de Mesas Picnic de Pino Natural"
-  description="Catorce modelos de mobiliario para renta: desde la banca individual hasta el set lounge VIP. Pino nacional, parota maciza, acabados premium. Entrega, montaje y recolección incluidos en CDMX y Edomex."
+  description="Veinte modelos de mobiliario para renta: desde la banca individual y la barra de coctelería hasta el set comedor exterior y el set lounge VIP. Pino nacional, parota maciza, acabados teka premium. Entrega, montaje y recolección incluidos en CDMX y Edomex."
   ctaPrimary={null}
   ctaSecondary={null}
   seoParagraph1="MESPIC cuenta con más de 120 piezas en bodega, disponibles los 7 días de la semana para la Ciudad de México y el Estado de México. Todos los modelos están fabricados en pino nacional seleccionado: lijado a grano fino, sellado y barnizado a tres manos para resistencia al exterior. La misma pieza que va a una boda en Coyoacán va al día siguiente a un festival en Roma Norte."
-  seoParagraph2="El precio de renta incluye traslado, montaje profesional en tu locación y recolección al finalizar el evento. No hay cargos por maniobras, tiempo extra ni distancia dentro de nuestra zona de cobertura. Puedes combinar modelos en una misma cotización —por ejemplo, mesas estándar para adultos y mesas infantiles para zona de niños— y todo llega en la misma entrega."
+  seoParagraph2="El precio de renta incluye traslado, montaje profesional en tu locación y recolección al finalizar el evento. No hay cargos por maniobras, tiempo extra ni distancia dentro de nuestra zona de cobertura. Puedes combinar modelos en una misma cotización —por ejemplo, mesas farm americana para adultos y mesas infantiles para zona de niños— y todo llega en la misma entrega."
   dark={true}
 />
 
@@ -272,13 +367,13 @@ const modelos = [
   <SectionHeader
     tag="h2"
     badge="Ver todos los modelos"
-    title="14 Modelos de Mesa Picnic y Mobiliario Premium"
-    paragraph1="Desde la Mesa Estándar de 6 personas hasta la Mesa XL de 14-16, pasando por la hexagonal boho, la plegable portátil, la parota maciza VIP y el Set Lounge Exterior. El catálogo más completo de mobiliario de madera para eventos en México."
+    title="20 Modelos de Mesa Picnic y Mobiliario Premium"
+    paragraph1="Desde la Banca Individual hasta el Set Lounge VIP, pasando por la Mesa Farm Americana, la Redonda de conversación, el Biergarten de festival, la Mesa Teka premium, la Barra de Coctelería y el Set Comedor Exterior con sillas. El catálogo más completo de mobiliario de madera para eventos en México, construido con investigación directa del mercado de Estados Unidos, España y México."
     paragraph2="¿No sabes cuál elegir? Mándanos el número de invitados y el tipo de evento por WhatsApp y te recomendamos el modelo y la cantidad exacta. Respondemos en menos de 5 minutos."
     stats={[
-      { value: '14',            label: 'modelos en catálogo' },
-      { value: '3–16',          label: 'personas por pieza' },
-      { value: 'pino · parota', label: 'maderas premium' },
+      { value: '20',                 label: 'modelos en catálogo' },
+      { value: '3–16',               label: 'personas por pieza' },
+      { value: 'pino · parota · teka', label: 'maderas premium' },
     ]}
   />
 
@@ -437,6 +532,63 @@ const modelos = [
             <td>Bodas boho · Haciendas · Vintage</td>
             <td><a href="/catalogo/mesa-picnic-rustica/" class="tbl-link">Ver →</a></td>
           </tr>
+          <tr>
+            <td class="model-name">
+              <strong>Farm Americana</strong>
+              <span class="model-tag">Estilo US</span>
+            </td>
+            <td class="dim-cell">2.40 × 1.10 m</td>
+            <td><span class="cap-badge">8–10 personas</span></td>
+            <td>Liso barnizado</td>
+            <td>Bodas campestres · Boho · Ghost chairs</td>
+            <td><a href="/catalogo/mesa-farm-americana/" class="tbl-link">Ver →</a></td>
+          </tr>
+          <tr>
+            <td class="model-name"><strong>Redonda Madera</strong></td>
+            <td class="dim-cell">Ø 1.50 m</td>
+            <td><span class="cap-badge">8–10 personas</span></td>
+            <td>Liso barnizado</td>
+            <td>Bodas íntimas · Corporativos · Cenas</td>
+            <td><a href="/catalogo/mesa-redonda-madera/" class="tbl-link">Ver →</a></td>
+          </tr>
+          <tr>
+            <td class="model-name"><strong>Biergarten</strong></td>
+            <td class="dim-cell">2.20 × 0.60 m</td>
+            <td><span class="cap-badge">8–10 personas</span></td>
+            <td>Pino barnizado</td>
+            <td>Festivales · Food markets · Ferias</td>
+            <td><a href="/catalogo/mesa-biergarten-madera/" class="tbl-link">Ver →</a></td>
+          </tr>
+          <tr>
+            <td class="model-name">
+              <strong>Teka Premium</strong>
+              <span class="model-tag model-tag--premium">VIP</span>
+            </td>
+            <td class="dim-cell">2.00 × 1.00 m</td>
+            <td><span class="cap-badge cap-badge--premium">6–8 personas</span></td>
+            <td>Aceite de teca · Resistente UV</td>
+            <td>Bodas de lujo · Terrazas · VIP</td>
+            <td><a href="/catalogo/mesa-madera-teka/" class="tbl-link tbl-link--premium">Ver →</a></td>
+          </tr>
+          <tr>
+            <td class="model-name">
+              <strong>Barra Madera</strong>
+              <span class="model-tag">Único</span>
+            </td>
+            <td class="dim-cell">2.00 × 0.60 × 1.10 m</td>
+            <td><span class="cap-badge">2–3 bartenders</span></td>
+            <td>Liso barnizado</td>
+            <td>Bodas · Cumpleaños · Activaciones</td>
+            <td><a href="/catalogo/barra-madera-eventos/" class="tbl-link">Ver →</a></td>
+          </tr>
+          <tr>
+            <td class="model-name"><strong>Set Comedor Exterior</strong></td>
+            <td class="dim-cell">1.80 × 0.90 m</td>
+            <td><span class="cap-badge">6 personas</span></td>
+            <td>Liso + sillas crossback</td>
+            <td>Bodas románticas · Aniversarios · VIP</td>
+            <td><a href="/catalogo/set-comedor-exterior/" class="tbl-link">Ver →</a></td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -492,11 +644,11 @@ const modelos = [
   <SectionHeader
     tag="h2"
     badge="Galería del catálogo"
-    title="Los 6 Modelos en Eventos Reales"
-    paragraph1="Así se ve el mobiliario de MESPIC en bodas, corporativos, festivales, fiestas infantiles y picnics románticos. La madera natural se adapta a cualquier estilo de decoración."
+    title="20 Modelos en Eventos Reales"
+    paragraph1="Así se ve el mobiliario de MESPIC en bodas, corporativos, festivales, fiestas infantiles, picnics románticos y activaciones de marca. Desde la mesa farm americana hasta la barra de coctelería — la madera natural se adapta a cualquier estilo de decoración."
     stats={[
-      { value: '6 modelos',       label: 'en una sola bodega' },
-      { value: 'cualquier estilo', label: 'rústico, boho, premium…' },
+      { value: '20 modelos',      label: 'en una sola bodega' },
+      { value: 'cualquier estilo', label: 'rústico, boho, farm, premium…' },
       { value: 'CDMX + Edomex',   label: 'zona de cobertura' },
     ]}
   />
@@ -514,7 +666,7 @@ const modelos = [
     paragraph1="Las dudas más comunes sobre los modelos, las medidas y la disponibilidad. Respuestas directas y sin rodeos."
     paragraph2="¿Tienes una pregunta que no está aquí? Escríbenos por WhatsApp y te respondemos en minutos."
     stats={[
-      { value: '6',       label: 'respuestas inmediatas' },
+      { value: '8',       label: 'respuestas inmediatas' },
       { value: '< 5 min', label: 'respuesta por WhatsApp' },
       { value: 'lun–dom', label: '8:00 a 20:00 hrs' },
     ]}
@@ -548,6 +700,14 @@ const modelos = [
       {
         question: "¿La madera resiste el exterior y la intemperie?",
         answer: "Sí. Todos los modelos tienen acabado con barniz de exterior que resiste humedad moderada, variaciones de temperatura y exposición al sol. Para lluvia intensa o eventos en zonas de alta humedad, recomendamos contar con carpas o toldos como respaldo. La madera no se daña con humedad moderada, pero una lluvia sostenida puede afectar el barniz a largo plazo si la pieza no está cubierta."
+      },
+      {
+        question: "¿Cuál es la diferencia entre la Mesa Farm Americana y la Mesa Picnic Estándar?",
+        answer: "La Mesa Farm Americana mide 2.40 × 1.10 m y no tiene bancas integradas: está diseñada para combinarse con sillas ghost, chiavari, crossback o cualquier otra silla de evento. La Mesa Picnic Estándar (1.80 × 1.50 m) incluye bancas fijas a los lados. La Farm es más ancha proporcionalmente y ofrece mayor libertad de estilización, lo que la hace favorita de bodas boho y sesiones fotográficas editoriales."
+      },
+      {
+        question: "¿La Barra de Madera para Eventos incluye servicio de bartender?",
+        answer: "No. La Barra de Madera es un elemento de mobiliario: estructura de pino barnizado de 2 metros con altura de trabajo de 1.10 m y estante trasero para botellas. El servicio de bar y bartenders es contratado por separado con el proveedor de bebidas de tu evento. Nosotros entregamos, instalamos y recogemos la barra; tú la decorás y operas según el concepto de tu evento."
       }
     ]}
   />
@@ -572,16 +732,30 @@ const modelos = [
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "Catálogo de Mesas Picnic para Renta — MESPIC",
-    "description": "6 modelos de mesas picnic de pino natural para renta en CDMX y Edomex. Estándar, grande, infantil, premium, rústica y set completo.",
+    "description": "20 modelos de mesas picnic de pino natural para renta en CDMX y Edomex. Estándar, grande, XL, hexagonal, plegable, parota, farm americana, redonda, biergarten, teka, barra madera, set comedor exterior, infantil, premium, rústica, set completo, set lounge, banca individual, cocktail y set infantil temático.",
     "url": "https://mesaspicnic.com/catalogo/",
-    "numberOfItems": 6,
+    "numberOfItems": 20,
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Mesa Picnic Estándar", "url": "https://mesaspicnic.com/catalogo/mesa-picnic-estandar/" },
-      { "@type": "ListItem", "position": 2, "name": "Mesa Picnic Grande", "url": "https://mesaspicnic.com/catalogo/mesa-picnic-grande/" },
-      { "@type": "ListItem", "position": 3, "name": "Mesa Picnic Infantil", "url": "https://mesaspicnic.com/catalogo/mesa-picnic-infantil/" },
-      { "@type": "ListItem", "position": 4, "name": "Mesa Picnic Premium", "url": "https://mesaspicnic.com/catalogo/mesa-picnic-premium/" },
-      { "@type": "ListItem", "position": 5, "name": "Set Picnic Completo", "url": "https://mesaspicnic.com/catalogo/set-picnic-completo/" },
-      { "@type": "ListItem", "position": 6, "name": "Mesa Picnic Rústica", "url": "https://mesaspicnic.com/catalogo/mesa-picnic-rustica/" }
+      { "@type": "ListItem", "position": 1,  "name": "Mesa Picnic Estándar",       "url": "https://mesaspicnic.com/catalogo/mesa-picnic-estandar/" },
+      { "@type": "ListItem", "position": 2,  "name": "Mesa Picnic Grande",         "url": "https://mesaspicnic.com/catalogo/mesa-picnic-grande/" },
+      { "@type": "ListItem", "position": 3,  "name": "Mesa Picnic Infantil",       "url": "https://mesaspicnic.com/catalogo/mesa-picnic-infantil/" },
+      { "@type": "ListItem", "position": 4,  "name": "Mesa Picnic Premium",        "url": "https://mesaspicnic.com/catalogo/mesa-picnic-premium/" },
+      { "@type": "ListItem", "position": 5,  "name": "Set Picnic Completo",        "url": "https://mesaspicnic.com/catalogo/set-picnic-completo/" },
+      { "@type": "ListItem", "position": 6,  "name": "Mesa Picnic Rústica",        "url": "https://mesaspicnic.com/catalogo/mesa-picnic-rustica/" },
+      { "@type": "ListItem", "position": 7,  "name": "Mesa Picnic Hexagonal",      "url": "https://mesaspicnic.com/catalogo/mesa-picnic-hexagonal/" },
+      { "@type": "ListItem", "position": 8,  "name": "Mesa Picnic Plegable",       "url": "https://mesaspicnic.com/catalogo/mesa-picnic-plegable/" },
+      { "@type": "ListItem", "position": 9,  "name": "Mesa Alta Cocktail",         "url": "https://mesaspicnic.com/catalogo/mesa-alta-cocktail/" },
+      { "@type": "ListItem", "position": 10, "name": "Banca Picnic Individual",    "url": "https://mesaspicnic.com/catalogo/banca-picnic-individual/" },
+      { "@type": "ListItem", "position": 11, "name": "Mesa Picnic XL",             "url": "https://mesaspicnic.com/catalogo/mesa-picnic-xl/" },
+      { "@type": "ListItem", "position": 12, "name": "Set Lounge Exterior",        "url": "https://mesaspicnic.com/catalogo/set-lounge-exterior/" },
+      { "@type": "ListItem", "position": 13, "name": "Mesa Picnic de Parota",      "url": "https://mesaspicnic.com/catalogo/mesa-picnic-parota/" },
+      { "@type": "ListItem", "position": 14, "name": "Set Infantil Temático",      "url": "https://mesaspicnic.com/catalogo/set-picnic-infantil-tematico/" },
+      { "@type": "ListItem", "position": 15, "name": "Mesa Farm Americana",        "url": "https://mesaspicnic.com/catalogo/mesa-farm-americana/" },
+      { "@type": "ListItem", "position": 16, "name": "Mesa Redonda de Madera",     "url": "https://mesaspicnic.com/catalogo/mesa-redonda-madera/" },
+      { "@type": "ListItem", "position": 17, "name": "Mesa Biergarten",            "url": "https://mesaspicnic.com/catalogo/mesa-biergarten-madera/" },
+      { "@type": "ListItem", "position": 18, "name": "Mesa Madera Teka",           "url": "https://mesaspicnic.com/catalogo/mesa-madera-teka/" },
+      { "@type": "ListItem", "position": 19, "name": "Barra de Madera para Eventos","url": "https://mesaspicnic.com/catalogo/barra-madera-eventos/" },
+      { "@type": "ListItem", "position": 20, "name": "Set Comedor Exterior",       "url": "https://mesaspicnic.com/catalogo/set-comedor-exterior/" }
     ]
   })} />
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -602,6 +776,11 @@ const modelos = [
         "@type": "Question",
         "name": "¿Cuántas piezas pueden entregar para un mismo evento?",
         "acceptedAnswer": { "@type": "Answer", "text": "MESPIC cuenta con más de 120 piezas en bodega para atender eventos de 100 o más personas. Para eventos masivos, se recomienda reservar con al menos 2 semanas de anticipación." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuál es la diferencia entre la Mesa Farm Americana y la Mesa Picnic Estándar?",
+        "acceptedAnswer": { "@type": "Answer", "text": "La Mesa Farm Americana mide 2.40 × 1.10 m sin bancas integradas, diseñada para combinarse con sillas ghost, chiavari o crossback. La Mesa Picnic Estándar incluye bancas fijas a los lados. La Farm es la favorita de bodas boho y sesiones fotográficas editoriales." }
       }
     ]
   })} />

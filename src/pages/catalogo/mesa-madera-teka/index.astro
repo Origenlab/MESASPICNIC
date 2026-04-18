@@ -1,0 +1,414 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import CtaBar from '../../../components/CtaBar.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import FeatureCard from '../../../components/FeatureCard.astro';
+import ServiceCard from '../../../components/ServiceCard.astro';
+import ProductGallery from '../../../components/ProductGallery.astro';
+import FaqSection from '../../../components/FaqSection.astro';
+import CtaBarFinal from '../../../components/CtaBarFinal.astro';
+import WaBubble from '../../../components/WaBubble.astro';
+---
+
+<BaseLayout
+  title="Mesa de Madera con Acabado Teka para Renta — 2.00m · VIP | MESPIC CDMX"
+  description="Renta la Mesa de Madera con Acabado Teka de MESPIC: pino nacional tratado con aceite de teca importado, 2.00 × 1.00 m, capacidad 6-8 personas. Acabado premium para bodas de lujo, eventos VIP y aniversarios especiales en CDMX. Entrega y montaje incluidos."
+  ogImage="/img/catalogo/mesa-madera-teka-premium-exterior-01.webp"
+>
+
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Catálogo", href: "/catalogo/" },
+    { label: "Mesa de Madera con Acabado Teka" }
+  ]} />
+</Fragment>
+
+<Hero
+  badge="Acabado Teka Premium"
+  title="Mesa de Madera con Acabado Teka — 2.00 × 1.00 m para Eventos VIP"
+  description="Lujo en cada fibra: pino nacional de primera calidad tratado con aceite de teca importado que penetra la madera, no la cubre. Tonalidad ámbar profunda, máxima resistencia UV y presencia premium absoluta. La mesa elegida para bodas de lujo, aniversarios especiales y eventos corporativos VIP donde la estética del mobiliario es parte central de la experiencia."
+  ctaPrimary={null}
+  ctaSecondary={null}
+  seoParagraph1="La Mesa de Madera con Acabado Teka de MESPIC representa la máxima expresión en mobiliario premium para bodas y eventos de lujo en la Ciudad de México. Su tratamiento con aceite de teca importado es una técnica superior al barniz convencional: el aceite penetra las fibras de la madera en lugar de cubrirla, resultando en una tonalidad ámbar profunda naturalmente acogedora, con durabilidad excepcional frente a la exposición solar y la humedad. Con dimensiones de 2.00 metros de largo por 1.00 metro de ancho, acomoda 6-8 personas con total elegancia."
+  seoParagraph2="Esta mesa es la preferida de coordinadores de bodas VIP en Polanco, Lomas de Chapultepec, Santa Fe y jardines privados de las mejores haciendas del Estado de México. El acabado en teca ámbar crea un contraste visual incomparable en fotografía, destacando naturalmente en montajes de eventos premium, bodas de lujo y celebraciones de aniversarios. La renta incluye traslado, montaje profesional y recolección, garantizando que la pieza se integre sin fricción al resto de tu decoración de evento."
+  dark={true}
+/>
+
+<CtaBar />
+
+<!-- ═══════════════════════════════════════════════════════
+     GALERÍA + SIDEBAR MODELOS
+═══════════════════════════════════════════════════════ -->
+<section class="section" id="galeria">
+  <SectionHeader
+    tag="h2"
+    badge="Mesa Teka en eventos"
+    title="La Mesa Teka Premium en Bodas de Lujo, Haciendas y Eventos VIP"
+    paragraph1="El acabado en aceite de teca crea una presencia visual y táctil que ningún otro tratamiento de madera replica. Aquí, la mesa premium elegida para los eventos más sofisticados de CDMX."
+    paragraph2="¿Tu evento requiere presencia premium? Cotiza disponibilidad y recibe asesoramiento sobre integración con decoración de lujo por WhatsApp."
+  />
+  <ProductGallery
+    images={[
+      { src: "/img/catalogo/mesa-madera-teka-premium-exterior-01.webp", alt: "Mesa de madera con acabado teka ámbar en evento VIP al aire libre CDMX" },
+      { src: "/img/catalogo/mesa-madera-teka-lujo-terraza-02.webp", alt: "Mesa teka premium en terraza de hacienda con iluminación cálida y decoración floral" },
+      { src: "/img/catalogo/mesa-madera-teka-detalle-acabado-03.webp", alt: "Detalle del acabado en aceite de teca importado sobre madera de pino nacional MESPIC" },
+      { src: "/img/catalogo/mesa-madera-teka-boda-lujo-04.webp", alt: "Mesa teka con vajilla premium y flores en boda de lujo en jardín privado" },
+      { src: "/img/catalogo/mesa-madera-teka-evento-vip-05.webp", alt: "Múltiples mesas teka en evento corporativo VIP con iluminación ambiental" },
+      { src: "/img/catalogo/mesa-madera-teka-premium-exterior-01.webp", alt: "Mesa de madera con acabado teka ámbar en evento VIP al aire libre CDMX" },
+    ]}
+    recommended={[
+      { title: "Mesa Parota",           description: "Veta natural · Rústica premium",      href: "/catalogo/mesa-picnic-parota/",         image: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
+      { title: "Mesa Premium",          description: "Acabado sin nudos · Bodas VIP",      href: "/catalogo/mesa-picnic-premium/",        image: "/img/mesa-picnic-boda-elegante-luces.avif" },
+      { title: "Set Lounge Exterior",   description: "Sofás + mesas · Zona lounge",       href: "/catalogo/set-lounge-exterior/",        image: "/img/tema-mexicana-1.avif" },
+      { title: "Mesa Farm Americana",   description: "2.40 m · Estilo hacienda",          href: "/catalogo/mesa-farm-americana/",        image: "/img/mesa-picnic-pedida-mano-romantica.webp" },
+      { title: "Set Picnic Completo",   description: "Mesa + decoración premium",         href: "/catalogo/set-picnic-completo/",       image: "/img/mesa-picnic-evento-corporativo-networking.avif" },
+    ]}
+    sidebarTitle="Otros modelos del catálogo"
+  />
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     ESPECIFICACIONES TÉCNICAS
+═══════════════════════════════════════════════════════ -->
+<section class="section section-alt" id="especificaciones">
+  <SectionHeader
+    tag="h2"
+    badge="Ficha técnica"
+    title="Especificaciones de la Mesa Teka Premium"
+    paragraph1="Dimensiones, material, acabado teka y capacidad. Todo lo que necesitas para integrar esta pieza de lujo en el layout de tu evento VIP."
+    paragraph2="Si requieres consultoría sobre distribución de mesas teka en eventos grandes o necesitas la ficha técnica en PDF, escríbenos por WhatsApp."
+    stats={[
+      { value: '2.00 × 1.00 m', label: 'dimensiones' },
+      { value: 'Teca ámbar',     label: 'acabado premium' },
+      { value: '6–8',            label: 'personas sentadas' },
+    ]}
+  />
+  <div class="container">
+    <div class="spec-grid">
+      <div class="spec-card">
+        <h3 class="spec-card__title">Ficha Técnica</h3>
+        <ul class="spec-list" role="list">
+          <li class="spec-list__item">
+            <span class="spec-list__label">Largo</span>
+            <span class="spec-list__value">2.00 m</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Ancho</span>
+            <span class="spec-list__value">1.00 m</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Alto de mesa</span>
+            <span class="spec-list__value">76 cm</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Capacidad</span>
+            <span class="spec-list__value">6–8 personas (con bancas)</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Material</span>
+            <span class="spec-list__value">Pino nacional primera calidad</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Acabado</span>
+            <span class="spec-list__value">Aceite de teca importado — tono ámbar profundo</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Uso recomendado</span>
+            <span class="spec-list__value">Exterior e interior ventilado</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Peso aproximado</span>
+            <span class="spec-list__value">45 kg</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Disponibilidad</span>
+            <span class="spec-list__value spec-list__value--ok">+8 piezas en bodega</span>
+          </li>
+        </ul>
+        <a href="/cotizar/" class="spec-card__cta">Cotizar disponibilidad →</a>
+      </div>
+
+      <div class="spec-features">
+        <FeatureCard
+          index={0}
+          title="Aceite de Teca Importado"
+          description="Penetra la fibra de la madera en lugar de cubrirla: resultado más natural, duradero y resistente a UV. Cada año el tono ámbar se enriquece con mayor profundidad, ganando patina."
+        />
+        <FeatureCard
+          index={1}
+          title="Tono Ámbar Profundo"
+          description="La teca desarrolla un color dorado-ámbar que enriquece cualquier montaje de evento premium, especialmente con iluminación cálida al atardecer o en ambientes nocturnos."
+        />
+        <FeatureCard
+          index={2}
+          title="Mayor Vida Útil"
+          description="El tratamiento con aceite de teca requiere mantenimiento menos frecuente que el barniz convencional. La madera respira naturalmente, reduciendo astillas y erosión."
+        />
+        <FeatureCard
+          index={3}
+          title="Compatibilidad VIP"
+          description="Diseñada para eventos donde la estética del mobiliario es parte central de la experiencia. Combina con decoración de lujo: flores premium, cristalería fina y lino de alta gama."
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     USOS RECOMENDADOS
+═══════════════════════════════════════════════════════ -->
+<section class="section" id="usos">
+  <SectionHeader
+    tag="h2"
+    badge="Usos recomendados"
+    title="Eventos Donde la Mesa Teka es la Pieza Protagonista"
+    paragraph1="El acabado teka eleva visualmente cualquier evento que demanda presencia premium. Estos son los contextos donde brilla con máxima intensidad."
+    paragraph2="Si tienes un concepto VIP definido, escríbenos por WhatsApp y te asesoramos sin costo sobre la distribución y combinación con otros modelos del catálogo."
+    stats={[
+      { value: 'VIP',           label: 'categoría de evento' },
+      { value: '6–8',           label: 'personas por mesa' },
+      { value: 'Ámbar premium', label: 'tono distintivo' },
+    ]}
+  />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard
+        title="Bodas de Lujo"
+        description="La Mesa Teka es la pieza favorita de las parejas que desean un evento donde cada detalle transmite refinamiento. Su tonalidad ámbar crea una atmósfera de calidez y elegancia incomparable."
+        image="/img/catalogo/mesa-madera-teka-premium-exterior-01.webp"
+        href="/servicios/bodas/"
+        btnLabel="Bodas de lujo"
+        badge="Bodas"
+      />
+      <ServiceCard
+        title="Eventos Corporativos VIP"
+        description="Para cenas de directivos, lanzamientos premium y reuniones ejecutivas donde la calidad del mobiliario es un reflejo del nivel de la empresa. La teka transmite solidez y buen gusto."
+        image="/img/catalogo/mesa-madera-teka-lujo-terraza-02.webp"
+        href="/servicios/eventos-corporativos/"
+        btnLabel="Corporativos VIP"
+        badge="Corporativo"
+      />
+      <ServiceCard
+        title="Picnic Romántico Premium"
+        description="Para aniversarios especiales y celebraciones íntimas de parejas que buscan lo mejor. Una o dos mesas teka en un jardín privado crea una escena de lujo absoluto."
+        image="/img/catalogo/mesa-madera-teka-boda-lujo-04.webp"
+        href="/servicios/picnic-romantico/"
+        btnLabel="Picnic romántico"
+        badge="Romántico"
+      />
+      <ServiceCard
+        title="Sesiones Fotográficas Editorial"
+        description="Fotógrafos y directores de arte especializados en lifestyle premium buscan la Mesa Teka por su capacidad de crear composiciones de revista. El ámbar aporta calidez cinematográfica."
+        image="/img/catalogo/mesa-madera-teka-evento-vip-05.webp"
+        href="/servicios/sesiones-fotograficas/"
+        btnLabel="Para producciones"
+        badge="Fotografía"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FAQ
+═══════════════════════════════════════════════════════ -->
+<section class="section section-alt" id="faq">
+  <SectionHeader
+    tag="h2"
+    badge="Preguntas frecuentes"
+    title="Preguntas sobre la Mesa de Madera con Acabado Teka"
+    paragraph1="Las dudas más comunes antes de reservar la Mesa Teka. Respondemos con detalle para que disfrutes de una experiencia premium sin sorpresas."
+    paragraph2="¿Tu pregunta no está aquí? Escríbenos por WhatsApp — respondemos el mismo día."
+  />
+  <FaqSection
+    phone="55 3128 1706"
+    whatsapp="5531281706"
+    schedule="Lun–Dom 8:00–20:00"
+    waMessage="Hola, quiero cotizar la Mesa de Madera con Acabado Teka para mi evento."
+    items={[
+      {
+        question: "¿Qué diferencia hay entre el acabado teka y el barniz convencional de las mesas picnic?",
+        answer: "El aceite de teca importado penetra las fibras de la madera en lugar de formar una película superficial como el barniz. Esto resulta en una tonalidad más natural y cálida, mayor resistencia UV, y una durabilidad superior que requiere menos mantenimiento. El barniz es más económico, la teca es premium: el ámbar profundo y la resistencia a largo plazo justifican la inversión para eventos de lujo."
+      },
+      {
+        question: "¿La Mesa Teka viene con bancas incluidas en la renta?",
+        answer: "Sí, la mesa incluye dos bancas de madera de la misma calidad, renta por separado de mesas adicionales de bancas si deseas más asientos. Las bancas están tratadas con aceite de teca también, manteniendo coherencia visual con la mesa."
+      },
+      {
+        question: "¿Para qué tipo de eventos es más recomendable la Mesa Teka?",
+        answer: "Es ideal para bodas de lujo, aniversarios especiales, eventos corporativos VIP, quinceañeras de alta gama, y sesiones fotográficas de editorial. Cualquier evento donde la calidad visual del mobiliario sea parte de la experiencia premium. Para eventos casuales o presupuesto limitado, nuestras mesas estándar o rústica son excelentes opciones."
+      },
+      {
+        question: "¿El aceite de teka daña la ropa o los manteles?",
+        answer: "No. El aceite está completamente absorbido y seco en la madera. No mancha ni traspasa. Puedes colocar manteles de lino, algodón o cualquier tela sin preocupación. Si deseas el tono ámbar visible, puedes dejar la madera natural sin mantel, que es cuando la mesa brilla más visualmente."
+      },
+      {
+        question: "¿Puedo combinar la Mesa Teka con la Mesa de Parota en el mismo evento?",
+        answer: "Sí, es una combinación sofisticada. La Teka (ámbar más profundo) como mesa principal o de honor, y la Parota (veta rústica visible) como complemento, crean un montaje visual con profundidad. Ambas son pino nacional, comparten escala y se ven coherentes juntas."
+      },
+      {
+        question: "¿La Mesa Teka resiste el sol directo y la humedad en eventos al aire libre?",
+        answer: "El aceite de teca está formulado especialmente para resistencia UV y humedad. Es superior al barniz convencional en estos aspectos. Para eventos al aire libre de 4-8 horas es perfecta. Para instalaciones permanentes (más de 6 meses de exposición continua), requiere reaplicación anual de teca."
+      }
+    ]}
+  />
+</section>
+
+<!-- Blog relacionado -->
+<section class="section" id="blog-relacionado">
+  <SectionHeader
+    tag="h2"
+    badge="Del blog"
+    title="Guías para Eventos Premium con Mesas de Madera"
+    paragraph1="Artículos sobre bodas de lujo, decoración premium y cómo maximizar la estética de mesas de madera en eventos VIP."
+  />
+  <div class="container">
+    <div class="blog-cards">
+      <a href="/blog/renta-mesas-picnic-bodas-cdmx/" class="blog-card">
+        <div class="blog-card__img-wrap">
+          <img src="/img/mesa-picnic-boda-elegante-decoracion.avif" alt="Renta de mesas picnic para bodas en CDMX" loading="lazy" width="400" height="240" />
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__cat">Bodas</span>
+          <h3 class="blog-card__title">Renta de Mesas Picnic para Bodas en CDMX</h3>
+          <p class="blog-card__desc">Guía completa: selección de modelos premium, distribución de mesas y detalles que marcan la diferencia en bodas de lujo.</p>
+          <span class="blog-card__cta">Leer guía →</span>
+        </div>
+      </a>
+      <a href="/blog/picnic-lujo-experiencias-premium-cdmx/" class="blog-card">
+        <div class="blog-card__img-wrap">
+          <img src="/img/mesa-picnic-romantica-velas-rosas.webp" alt="Picnic de lujo y experiencias premium CDMX" loading="lazy" width="400" height="240" />
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__cat">Premium</span>
+          <h3 class="blog-card__title">Picnic de Lujo y Experiencias Premium en CDMX</h3>
+          <p class="blog-card__desc">Cómo crear experiencias premium: selección de mobiliario, decoración, catering y detalles que evocan sofisticación absoluta.</p>
+          <span class="blog-card__cta">Leer artículo →</span>
+        </div>
+      </a>
+      <a href="/blog/bodas-haciendas-estado-mexico/" class="blog-card">
+        <div class="blog-card__img-wrap">
+          <img src="/img/tema-mexicana-1.avif" alt="Bodas en haciendas del Estado de México" loading="lazy" width="400" height="240" />
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__cat">Haciendas</span>
+          <h3 class="blog-card__title">Bodas en Haciendas del Estado de México</h3>
+          <p class="blog-card__desc">Coordinación de bodas en haciendas: integración de mobiliario rústico-premium con espacios de lujo histórico.</p>
+          <span class="blog-card__cta">Leer artículo →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<CtaBarFinal
+  headline="¿Lista tu Mesa Teka?"
+  subtext="Cotiza disponibilidad para tu evento VIP. Respondemos el mismo día con precio y confirmación de layout."
+  phone="55 3128 1706"
+  whatsapp="5531281706"
+  waMessage="Hola, quiero cotizar la Mesa de Madera con Acabado Teka para mi evento."
+  cotizarHref="/cotizar/"
+/>
+
+<WaBubble whatsapp="5531281706" message="Hola, me interesa rentar la Mesa de Madera con Acabado Teka." />
+
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Mesa de Madera con Acabado Teka — Renta MESPIC",
+    "description": "Mesa de madera con acabado teka de pino nacional para renta. 2.00 × 1.00 m, capacidad para 6-8 personas. Acabado en aceite de teca importado, tonalidad ámbar profunda. Premium para bodas de lujo, eventos corporativos VIP y aniversarios especiales en CDMX.",
+    "brand": { "@type": "Brand", "name": "MESPIC" },
+    "category": "Mobiliario para eventos — Renta Premium",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "MXN",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "LocalBusiness",
+        "name": "MESPIC — Renta de Mesas Picnic",
+        "telephone": "+52-55-3128-1706",
+        "url": "https://mesaspicnic.com",
+        "areaServed": [
+          { "@type": "City", "name": "Ciudad de México" },
+          { "@type": "State", "name": "Estado de México" }
+        ]
+      }
+    }
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué diferencia hay entre el acabado teka y el barniz convencional?",
+        "acceptedAnswer": { "@type": "Answer", "text": "El aceite de teca penetra las fibras de la madera en lugar de formar una película superficial como el barniz. Resultado: tonalidad más natural y cálida, resistencia UV superior, y durabilidad mayor con menor mantenimiento." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿La Mesa Teka viene con bancas incluidas?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí, la mesa incluye dos bancas de madera tratadas con aceite de teca, manteniendo coherencia visual completa." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Para qué eventos es recomendable la Mesa Teka?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ideal para bodas de lujo, aniversarios especiales, eventos corporativos VIP, quinceañeras de alta gama y sesiones fotográficas de editorial donde la calidad visual es central." }
+      }
+    ]
+  })} />
+</Fragment>
+
+</BaseLayout>
+
+<style>
+  .blog-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--c-border, #E7E0D8);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .blog-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.11); transform: translateY(-3px); }
+  .blog-card__img-wrap { overflow: hidden; aspect-ratio: 5/3; }
+  .blog-card__img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+  .blog-card:hover .blog-card__img-wrap img { transform: scale(1.04); }
+  .blog-card__body { display: flex; flex-direction: column; flex: 1; padding: 1.25rem 1.375rem 1.5rem; border-top: 3px solid var(--c-primary, #2C5530); }
+  .blog-card__cat { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--c-primary, #2C5530); margin-bottom: 0.5rem; display: block; }
+  .blog-card__title { font-size: 1rem; font-weight: 700; color: var(--c-text, #1C1917); line-height: 1.3; margin-bottom: 0.625rem; }
+  .blog-card__desc { font-size: 0.8125rem; color: var(--c-text-muted, #78716C); line-height: 1.65; flex: 1; margin-bottom: 1rem; }
+  .blog-card__cta { font-size: 0.8125rem; font-weight: 700; color: var(--c-primary, #2C5530); }
+  @media (max-width: 900px) { .blog-cards { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .blog-cards { grid-template-columns: 1fr; } }
+
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid-4 { grid-template-columns: 1fr; } }
+
+  .spec-grid { display: grid; grid-template-columns: 320px 1fr; gap: 2rem; align-items: start; }
+  .spec-card { background: #fff; border: 1px solid var(--c-border, #E7E0D8); border-radius: var(--radius-md, 12px); padding: 1.75rem; position: sticky; top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2rem); }
+  .spec-card__title { font-size: 1rem; font-weight: 700; color: var(--c-text, #1C1917); margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--c-primary, #2C5530); }
+  .spec-list { list-style: none; display: flex; flex-direction: column; gap: 0; margin-bottom: 1.5rem; }
+  .spec-list__item { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.625rem 0; border-bottom: 1px solid var(--c-border, #E7E0D8); }
+  .spec-list__item:last-child { border-bottom: none; }
+  .spec-list__label { font-size: 0.8125rem; color: var(--c-text-muted, #78716C); font-weight: 500; flex-shrink: 0; }
+  .spec-list__value { font-size: 0.8125rem; color: var(--c-text, #1C1917); font-weight: 600; text-align: right; }
+  .spec-list__value--ok { color: var(--c-primary, #2C5530); }
+  .spec-card__cta { display: flex; align-items: center; justify-content: center; background: var(--c-primary, #2C5530); color: #fff; padding: 0.75rem 1.25rem; border-radius: 8px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.18s ease; }
+  .spec-card__cta:hover { background: #224228; }
+  .spec-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  @media (max-width: 1024px) { .spec-grid { grid-template-columns: 1fr; } .spec-card { position: static; } }
+  @media (max-width: 640px) { .spec-features { grid-template-columns: 1fr; } }
+</style>

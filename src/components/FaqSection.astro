@@ -28,7 +28,24 @@ const {
 } = Astro.props;
 
 const waHref = `https://wa.me/${whatsapp}?text=${encodeURIComponent(waMessage)}`;
+
+// ── FAQPage Schema JSON-LD ──
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": items.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+};
+
 ---
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
 <div class="faq-layout container">
 

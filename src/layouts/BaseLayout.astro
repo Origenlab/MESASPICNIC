@@ -9,6 +9,8 @@ interface Props {
   description?: string;
   canonical?: string;
   ogImage?: string;
+  noindex?: boolean;
+  schema?: object | object[];
 }
 
 const {
@@ -16,9 +18,73 @@ const {
   description = "Renta de mesas picnic para eventos en CDMX y Estado de México. Bodas, corporativos, fiestas infantiles y temáticas. Entrega, montaje y recolección incluidos.",
   canonical,
   ogImage = "/img/mesa-picnic-boda-elegante-decoracion.avif",
+  noindex = false,
+  schema,
 } = Astro.props;
 
 const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toString();
+const siteUrl = "https://mesaspicnic.com";
+const siteName = "MESPIC — Renta de Mesas Picnic";
+const ogImageAbs = ogImage.startsWith("http") ? ogImage : `${siteUrl}${ogImage}`;
+
+// ── Schema: LocalBusiness ──
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "EventVenue"],
+  "name": "MESPIC — Renta de Mesas Picnic",
+  "url": siteUrl,
+  "telephone": "+52 55 6432 8954",
+  "email": "hola@mesaspicnic.com",
+  "description": "Renta de mesas picnic para bodas, eventos corporativos y fiestas en CDMX y Estado de México. Entrega y montaje incluidos.",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ciudad de México",
+    "addressRegion": "CDMX",
+    "addressCountry": "MX"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "19.4326",
+    "longitude": "-99.1332"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Ciudad de México" },
+    { "@type": "State", "name": "Estado de México" },
+    { "@type": "City", "name": "Cuernavaca" }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/mesaspicnic",
+    "https://www.instagram.com/mesaspicnic"
+  ]
+};
+
+// ── Schema: WebSite + SearchAction ──
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": siteName,
+  "url": siteUrl,
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `${siteUrl}/blog/?q={search_term_string}`
+    },
+    "query-input": "required name=search_term_string"
+  }
+};
+
+// Schemas adicionales por página
+const extraSchemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
 ---
 
 <!DOCTYPE html>
@@ -26,36 +92,59 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toStri
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"} />
 
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalURL} />
 
+  <!-- Geo / Local SEO -->
+  <meta name="geo:region" content="MX-CMX" />
+  <meta name="geo:placename" content="Ciudad de México" />
+  <meta name="ICBM" content="19.4326, -99.1332" />
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content={ogImage} />
+  <meta property="og:image" content={ogImageAbs} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="es_MX" />
-  <meta property="og:site_name" content="MESPIC — Renta de Mesas Picnic" />
+  <meta property="og:site_name" content={siteName} />
 
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageAbs} />
 
+  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/icon.png" />
   <meta name="theme-color" content="#2C5530" />
 
+  <!-- Fonts: Geist / system-ui (Inter removido) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- JSON-LD: LocalBusiness -->
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+  <!-- JSON-LD: WebSite + SearchAction -->
+  <script type="application/ld+json" set:html={JSON.stringify(webSiteSchema)} />
+
+  <!-- JSON-LD: schemas adicionales por página -->
+  {extraSchemas.map(s => (
+    <script type="application/ld+json" set:html={JSON.stringify(s)} />
+  ))}
 
   <slot name="head" />
 
-  <!-- TruConversion for mesaspicnic.com -->
+  <!-- TruConversion -->
   <script type="text/javascript">
     var _tip = _tip || [];
     (function(d,s,id){
@@ -78,39 +167,23 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toStri
     <slot />
   </main>
   <Footer />
+
   <!-- DMChamp Chat Widget -->
   <script is:inline src="https://api.dmchamp.com/v1/chat-widget/MudstzucAJwOXl5hvruG"></script>
-  <!-- End DMChamp Chat Widget -->
 
-  <!-- ═══════════════════════════════════════════════════════
-       EMBUDO MESPIC — Todos los contactos pasan por DMChamp
-       ═══════════════════════════════════════════════════════ -->
+  <!-- Embudo MESPIC — todos los contactos pasan por DMChamp -->
   <script is:inline>
     (function () {
       var WA_FALLBACK = 'https://wa.me/5564328954?text=' + encodeURIComponent('Hola, quiero cotizar mesas picnic para mi evento.');
-
-      // Abre el chat de DMChamp; si no está listo, abre WhatsApp como fallback
       function openMespicChat() {
         var bubble = document.querySelector('.wai-chat-bubble');
-        if (bubble) {
-          bubble.click();
-          return;
-        }
-        // Widget aún no cargó — reintenta una vez tras 800ms
+        if (bubble) { bubble.click(); return; }
         setTimeout(function () {
           var bubble2 = document.querySelector('.wai-chat-bubble');
-          if (bubble2) {
-            bubble2.click();
-          } else {
-            window.open(WA_FALLBACK, '_blank', 'noopener');
-          }
+          if (bubble2) { bubble2.click(); } else { window.open(WA_FALLBACK, '_blank', 'noopener'); }
         }, 800);
       }
-
-      // Exponer globalmente para uso en onclick inline
       window.openMespicChat = openMespicChat;
-
-      // Interceptar TODOS los links wa.me del sitio
       document.addEventListener('click', function (e) {
         var link = e.target.closest('a[href*="wa.me"]');
         if (!link) return;
@@ -119,6 +192,5 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toStri
       }, true);
     })();
   </script>
-  <!-- ═══ Fin embudo MESPIC ═══ -->
 </body>
 </html>
