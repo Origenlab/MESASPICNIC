@@ -55,7 +55,16 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toStri
 
   <slot name="head" />
   <!-- DMChamp Chat Widget -->
-  <script is:inline src="https://api.dmchamp.com/v1/chat-widget/MudstzucAJwOXl5hvruG"></script>
+  <!-- WhatzAI Chat Widget -->
+  <script is:inline>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://whatzai.web.app/chat-widget.js?id='+i;
+    f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','DlDQvU5cVBcLsjytyIWi');
+  </script>
+  <!-- End WhatzAI Chat Widget -->
 </head>
 <body>
   <TopBar />
