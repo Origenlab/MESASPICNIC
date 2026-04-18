@@ -11,14 +11,14 @@ import CtaBarFinal from '../../components/CtaBarFinal.astro';
 import WaBubble from '../../components/WaBubble.astro';
 
 const galeriaCatalogo = [
-  { src: "/img/mesa-picnic-boda-elegante-decoracion.avif",            alt: "Mesa picnic estándar de pino natural decorada para boda al aire libre" },
-  { src: "/img/mesa-picnic-evento-corporativo-networking.avif",       alt: "Mesa picnic grande para evento corporativo con networking al exterior" },
-  { src: "/img/infantil-cumple-1.avif",                               alt: "Mesa picnic infantil decorada para cumpleaños de niños en jardín" },
-  { src: "/img/mesa-picnic-boda-elegante-luces.avif",                 alt: "Mesa picnic premium con iluminación de luces para boda nocturna elegante" },
-  { src: "/img/corp-teambuilding-1.avif",                             alt: "Set de mesas picnic en parque para team building corporativo" },
-  { src: "/img/tema-mexicana-1.avif",                                 alt: "Mesa picnic rústica con acabado campestre para fiesta temática mexicana" },
-  { src: "/img/mesa-picnic-pedida-mano-romantica.webp",               alt: "Set picnic completo montado para pedida de mano con decoración romántica" },
-  { src: "/img/mesa-picnic-feria-gastronomica-multitud.avif",         alt: "Múltiples mesas picnic grandes para feria gastronómica con asistentes" },
+  { src: "/img/mesa-picnic-boda-elegante-decoracion.avif",                               alt: "Mesa picnic estándar de pino natural decorada para boda al aire libre" },
+  { src: "/img/catalogo/mesa-picnic-hexagonal-madera-6-personas-jardin-01.webp",          alt: "Mesa picnic hexagonal de pino en boda boho al aire libre con decoración floral" },
+  { src: "/img/mesa-picnic-evento-corporativo-networking.avif",                           alt: "Mesa picnic grande para evento corporativo con networking al exterior" },
+  { src: "/img/catalogo/mesa-alta-cocktail-madera-networking-03.webp",                    alt: "Mesas altas cocktail de madera en evento standing de lanzamiento de producto" },
+  { src: "/img/catalogo/mesa-picnic-xl-extra-larga-3m-16-personas-01.webp",               alt: "Mesa picnic XL de 3 metros para 16 personas en evento masivo al aire libre" },
+  { src: "/img/catalogo/set-lounge-exterior-madera-vip-evento-01.webp",                   alt: "Set lounge exterior de madera con tapizado para zona VIP en evento de lujo" },
+  { src: "/img/catalogo/mesa-picnic-parota-madera-premium-vip-01.webp",                   alt: "Mesa picnic de parota maciza mexicana en evento VIP premium al aire libre" },
+  { src: "/img/catalogo/set-picnic-infantil-tematico-colores-01.webp",                    alt: "Set picnic infantil temático con colores para fiesta de cumpleaños de niños" },
 ];
 
 const modelos = [
@@ -112,12 +112,133 @@ const modelos = [
     cta: "Ver Mesa Rústica",
     acento: "primary",
   },
+  // ── Nuevos modelos del catálogo expandido ──────────────────────────────────
+  {
+    id: "hexagonal",
+    href: "/catalogo/mesa-picnic-hexagonal/",
+    image: "/img/catalogo/mesa-picnic-hexagonal-madera-6-personas-jardin-01.webp",
+    alt: "Mesa picnic hexagonal de pino natural para 6-8 personas en boda boho al aire libre",
+    badge: "Boho · Jardín",
+    tipo: "Hexagonal",
+    nombre: "Mesa Picnic Hexagonal",
+    capacidad: "6–8",
+    unidad: "personas",
+    specs: ["Ø 1.80 m inscrito", "Pino barnizado", "6 bancas sectoriales"],
+    descripcion: "El modelo más distintivo del catálogo. Formato hexagonal de pino que transforma cualquier espacio en una composición visual de alto impacto. Favorita de bodas boho y sesiones fotográficas.",
+    cta: "Ver Mesa Hexagonal",
+    acento: "primary",
+  },
+  {
+    id: "plegable",
+    href: "/catalogo/mesa-picnic-plegable/",
+    image: "/img/catalogo/mesa-picnic-plegable-portatil-evento-01.webp",
+    alt: "Mesa picnic plegable portátil de pino con herrajes de acero galvanizado para 4-6 personas",
+    badge: "Portátil",
+    tipo: "Plegable",
+    nombre: "Mesa Picnic Plegable",
+    capacidad: "4–6",
+    unidad: "personas",
+    specs: ["1.50 × 1.20 m", "Sistema plegado acero", "25% más ligera"],
+    descripcion: "Sistema de plegado con bisagras de acero galvanizado. Reduce su grosor a 12 cm para transporte y almacenamiento. La opción más versátil para bazares, pop-ups y venues con acceso restringido.",
+    cta: "Ver Mesa Plegable",
+    acento: "primary",
+  },
+  {
+    id: "alta-cocktail",
+    href: "/catalogo/mesa-alta-cocktail/",
+    image: "/img/catalogo/mesa-alta-cocktail-madera-networking-01.webp",
+    alt: "Mesa alta cocktail de madera y acero para networking y eventos standing corporativos",
+    badge: "Standing · VIP",
+    tipo: "Alta Cocktail",
+    nombre: "Mesa Alta Cocktail",
+    capacidad: "4–5",
+    unidad: "de pie",
+    specs: ["Ø 70 cm · 110 cm alto", "MDF pino + acero negro", "Sin sillas necesarias"],
+    descripcion: "Tablero circular de MDF con chapa de pino y base de acero negro mate. Diseñada para eventos de pie: networking corporativo, cócteles de gala y activaciones de marca.",
+    cta: "Ver Mesa Cocktail",
+    acento: "primary",
+  },
+  {
+    id: "banca-individual",
+    href: "/catalogo/banca-picnic-individual/",
+    image: "/img/catalogo/banca-picnic-madera-pino-individual-01.webp",
+    alt: "Banca picnic individual de pino natural barnizado para 3 personas como complemento de mesas",
+    badge: "Complemento",
+    tipo: "Banca Individual",
+    nombre: "Banca Picnic Individual",
+    capacidad: "3",
+    unidad: "personas",
+    specs: ["1.80 × 0.35 m", "Pino barnizado", "350 kg resistencia"],
+    descripcion: "La misma madera y el mismo barniz que las mesas del catálogo, disponible como banca independiente. Complemento perfecto para cualquier mesa o asiento autónomo en festivales y graduaciones.",
+    cta: "Ver Banca Individual",
+    acento: "primary",
+  },
+  {
+    id: "xl",
+    href: "/catalogo/mesa-picnic-xl/",
+    image: "/img/catalogo/mesa-picnic-xl-extra-larga-3m-16-personas-01.webp",
+    alt: "Mesa picnic XL extra larga de 3 metros para 14-16 personas en evento masivo",
+    badge: "La más grande",
+    tipo: "XL",
+    nombre: "Mesa Picnic XL",
+    capacidad: "14–16",
+    unidad: "personas",
+    specs: ["3.00 × 1.50 m", "Refuerzo acero", "4 bancas incluidas"],
+    descripcion: "La mesa más larga del catálogo. Tres metros de pino nacional reforzado con estructura de acero. Para banquetes masivos, head tables de boda y festivales donde la escala importa.",
+    cta: "Ver Mesa XL",
+    acento: "primary",
+  },
+  {
+    id: "lounge",
+    href: "/catalogo/set-lounge-exterior/",
+    image: "/img/catalogo/set-lounge-exterior-madera-vip-evento-01.webp",
+    alt: "Set lounge exterior de madera con tapizado premium para zona VIP en eventos al aire libre",
+    badge: "Zona VIP",
+    tipo: "Set Lounge",
+    nombre: "Set Lounge Exterior",
+    capacidad: "4–6",
+    unidad: "personas",
+    specs: ["Mesa baja 45 cm", "4 módulos tapizados", "Lona impermeable 600D"],
+    descripcion: "Mesa baja de pino con aceite de teca y 4 módulos de asiento tapizados en lona impermeable. Una zona VIP completa lista para instalar. En 4 colores: crudo, negro, beige y terracota.",
+    cta: "Ver Set Lounge",
+    acento: "premium",
+  },
+  {
+    id: "parota",
+    href: "/catalogo/mesa-picnic-parota/",
+    image: "/img/catalogo/mesa-picnic-parota-madera-premium-vip-01.webp",
+    alt: "Mesa picnic de parota maciza mexicana con veta natural para bodas VIP y eventos de lujo",
+    badge: "Parota Premium",
+    tipo: "Parota",
+    nombre: "Mesa Picnic de Parota",
+    capacidad: "6–8",
+    unidad: "personas",
+    specs: ["2.00 × 0.90 m", "Parota maciza", "Aceite teca + barniz"],
+    descripcion: "Madera de parota maciza mexicana con dureza Janka de 1,480 lbf. Veta natural única e irrepetible en cada pieza. El modelo de mayor categoría del catálogo para eventos VIP y bodas de lujo.",
+    cta: "Ver Mesa Parota",
+    acento: "premium",
+  },
+  {
+    id: "infantil-tematico",
+    href: "/catalogo/set-picnic-infantil-tematico/",
+    image: "/img/catalogo/set-picnic-infantil-tematico-colores-01.webp",
+    alt: "Set picnic infantil temático con mesa y bancas de colores para niños de 3 a 8 años",
+    badge: "5 colores",
+    tipo: "Infantil Temático",
+    nombre: "Set Infantil Temático",
+    capacidad: "6–8",
+    unidad: "niños",
+    specs: ["1.00 × 0.70 m · 52 cm alto", "Pintura atóxica", "5 colores disponibles"],
+    descripcion: "Mesa y bancas con pintura atóxica certificada en 5 colores temáticos: blanco, azul cielo, rosa palo, verde menta y lila. Diseñado para niños de 3 a 8 años. Perfecto para cumpleaños y baby showers.",
+    cta: "Ver Set Infantil",
+    acento: "kids",
+  },
 ];
 ---
 
 <BaseLayout
-  title="Catálogo de Mesas Picnic para Renta — 6 Modelos | MESPIC CDMX"
-  description="Catálogo completo de mesas picnic de pino natural para renta en CDMX y Edomex. 6 modelos: estándar, grande, infantil, premium, rústica y set completo. Capacidad para 6 a 12 personas. Entrega y montaje incluidos."
+  title="Catálogo de Mesas Picnic para Renta — 14 Modelos | MESPIC CDMX"
+  description="Catálogo completo de mesas picnic de pino natural para renta en CDMX y Edomex. 14 modelos: estándar, grande, XL, hexagonal, plegable, parota, infantil, premium, rústica, set completo, set lounge, banca individual, mesa cocktail y set infantil temático. Entrega y montaje incluidos."
   ogImage="/img/mesa-picnic-boda-elegante-decoracion.avif"
 >
 
@@ -131,9 +252,9 @@ const modelos = [
 
 <!-- Hero -->
 <Hero
-  badge="6 modelos disponibles"
+  badge="14 modelos disponibles"
   title="Catálogo de Mesas Picnic de Pino Natural"
-  description="Seis modelos de mobiliario para renta: desde la banca estándar de 6 personas hasta el set picnic completo con decoración. Todos elaborados en pino nacional, lijados y barnizados a mano."
+  description="Catorce modelos de mobiliario para renta: desde la banca individual hasta el set lounge VIP. Pino nacional, parota maciza, acabados premium. Entrega, montaje y recolección incluidos en CDMX y Edomex."
   ctaPrimary={null}
   ctaSecondary={null}
   seoParagraph1="MESPIC cuenta con más de 120 piezas en bodega, disponibles los 7 días de la semana para la Ciudad de México y el Estado de México. Todos los modelos están fabricados en pino nacional seleccionado: lijado a grano fino, sellado y barnizado a tres manos para resistencia al exterior. La misma pieza que va a una boda en Coyoacán va al día siguiente a un festival en Roma Norte."
@@ -151,13 +272,13 @@ const modelos = [
   <SectionHeader
     tag="h2"
     badge="Ver todos los modelos"
-    title="6 Modelos de Mesa Picnic"
-    paragraph1="Cada modelo tiene un uso recomendado, capacidad específica y acabado adaptado al tipo de evento. Selecciona el que se ajuste a tu ocasión o cotiza varios para el mismo evento."
+    title="14 Modelos de Mesa Picnic y Mobiliario Premium"
+    paragraph1="Desde la Mesa Estándar de 6 personas hasta la Mesa XL de 14-16, pasando por la hexagonal boho, la plegable portátil, la parota maciza VIP y el Set Lounge Exterior. El catálogo más completo de mobiliario de madera para eventos en México."
     paragraph2="¿No sabes cuál elegir? Mándanos el número de invitados y el tipo de evento por WhatsApp y te recomendamos el modelo y la cantidad exacta. Respondemos en menos de 5 minutos."
     stats={[
-      { value: '6',             label: 'modelos en catálogo' },
-      { value: '6–12',          label: 'personas por pieza' },
-      { value: 'pino nacional', label: 'madera 100% natural' },
+      { value: '14',            label: 'modelos en catálogo' },
+      { value: '3–16',          label: 'personas por pieza' },
+      { value: 'pino · parota', label: 'maderas premium' },
     ]}
   />
 

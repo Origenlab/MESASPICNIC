@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import CtaBar from '../../../components/CtaBar.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import FeatureCard from '../../../components/FeatureCard.astro';
+import ServiceCard from '../../../components/ServiceCard.astro';
+import ProductGallery from '../../../components/ProductGallery.astro';
+import FaqSection from '../../../components/FaqSection.astro';
+import CtaBarFinal from '../../../components/CtaBarFinal.astro';
+import WaBubble from '../../../components/WaBubble.astro';
+---
+<BaseLayout
+  title="Mesa Picnic de Parota para Renta — Madera Maciza Premium VIP | MESPIC CDMX"
+  description="Renta la Mesa Picnic de Parota de MESPIC: madera de parota maciza con veta natural única, 6-8 personas, acabado en aceite de teca + barniz poliuretánico. El modelo de mayor categoría para bodas VIP y eventos de lujo en CDMX y Edomex."
+  ogImage="/img/catalogo/mesa-picnic-parota-madera-premium-vip-01.webp"
+>
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Catálogo", href: "/catalogo/" },
+    { label: "Mesa Picnic de Parota" }
+  ]} />
+</Fragment>
+<Hero
+  badge="Parota — Madera Premium"
+  title="Mesa Picnic de Parota — La Madera Maciza Más Premium del Catálogo"
+  description="Una sola Mesa de Parota transforma cualquier evento en una declaración de lujo absoluta. Madera de parota maciza (Enterolobium cyclocarpum), veta natural café nogal con cada pieza única e irrepetible, acabada en aceite de teca y barniz poliuretánico de alto brillo. El modelo más exclusivo del catálogo MESPIC."
+  ctaPrimary={null}
+  ctaSecondary={null}
+  seoParagraph1="La Mesa Picnic de Parota de MESPIC representa el nivel más alto del catálogo: madera dura mexicana de primera calidad, con una dureza Janka de 1,480 lbf — prácticamente el doble que el pino nacional de los modelos estándar. La parota (Enterolobium cyclocarpum) es una madera tropical endémica de México conocida por su veta pronunciada, sus tonos café nogal cálidos y su extraordinaria resistencia a la humedad y los cambios de temperatura propios de los eventos al aire libre."
+  seoParagraph2="Disponible para renta en Ciudad de México y Estado de México, la Mesa de Parota es la elección de los wedding planners y coordinadores de eventos que trabajan con presupuestos premium y buscan mobiliario que por sí solo justifique una estética de lujo. Al ser una madera de veta natural, cada pieza del catálogo MESPIC es absolutamente única: no hay dos Mesas de Parota iguales, lo que convierte a cada evento que la usa en una experiencia genuinamente exclusiva."
+  dark={true}
+/>
+<CtaBar />
+<section class="section" id="galeria">
+  <SectionHeader tag="h2" badge="Mesa de Parota en eventos"
+    title="La Mesa de Parota en Bodas VIP, Galas y Eventos de Lujo"
+    paragraph1="La parota no necesita decoración adicional para ser protagonista: su veta, su color y su brillo hacen el trabajo solos. Así luce en eventos donde el estándar es la excelencia."
+    paragraph2="¿Estás planeando un evento VIP? Escríbenos con el número de invitados y el concepto y preparamos una propuesta a tu medida." />
+  <ProductGallery
+    images={[
+      { src: "/img/catalogo/mesa-picnic-parota-madera-premium-vip-01.webp", alt: "Mesa picnic de parota maciza en evento VIP premium al aire libre CDMX" },
+      { src: "/img/catalogo/mesa-picnic-parota-madera-premium-vip-02.webp", alt: "Mesa de parota con luces cálidas en boda elegante nocturna de jardín privado" },
+      { src: "/img/catalogo/mesa-picnic-parota-madera-premium-vip-03.webp", alt: "Mesa picnic de parota decorada con flores en hacienda mexicana para boda" },
+      { src: "/img/catalogo/mesa-picnic-parota-madera-premium-vip-04.webp", alt: "Cena de gala nocturna con mesa de parota iluminada en evento de lujo exterior" },
+      { src: "/img/catalogo/mesa-picnic-parota-fabricacion-artesanal-01.webp", alt: "Proceso de fabricación artesanal de mesa de parota MESPIC en taller de carpintería" },
+      { src: "/img/catalogo/mesa-picnic-parota-carpinteria-detalle-01.webp",  alt: "Carpintero aplicando acabado de aceite de teca en mesa de parota premium" },
+    ]}
+    recommended={[
+      { title: "Mesa Premium",       description: "Pino sin nudos · Bodas de lujo",  href: "/catalogo/mesa-picnic-premium/",     image: "/img/mesa-picnic-boda-elegante-luces.avif" },
+      { title: "Set Picnic Completo",description: "Mesa + decoración premium",       href: "/catalogo/set-picnic-completo/",     image: "/img/mesa-picnic-pedida-mano-romantica.webp" },
+      { title: "Set Lounge Exterior",description: "Zona VIP · mesas bajas tapizadas",href: "/catalogo/set-lounge-exterior/",    image: "/img/catalogo/set-lounge-exterior-madera-vip-evento-01.webp" },
+      { title: "Mesa Hexagonal",     description: "Ø 1.80 m · Boho y jardín",       href: "/catalogo/mesa-picnic-hexagonal/",   image: "/img/catalogo/mesa-picnic-hexagonal-madera-6-personas-jardin-01.webp" },
+      { title: "Mesa Grande",        description: "2.40 m · 10–12 personas",         href: "/catalogo/mesa-picnic-grande/",      image: "/img/mesa-picnic-evento-corporativo-networking.avif" },
+    ]}
+    sidebarTitle="Otros modelos del catálogo"
+  />
+</section>
+<section class="section section-alt" id="especificaciones">
+  <SectionHeader tag="h2" badge="Ficha técnica" title="Especificaciones de la Mesa de Parota"
+    paragraph1="La ficha técnica más detallada del catálogo, para un material que lo merece: dimensiones, dureza, acabado y comparativa con el pino de los modelos estándar."
+    paragraph2="¿Tienes dudas sobre la compatibilidad de la parota con tu concepto visual? Escríbenos y te enviamos referencias fotográficas de eventos similares."
+    stats={[
+      { value: '2.00 m',     label: 'largo de mesa' },
+      { value: '1,480 lbf',  label: 'dureza Janka' },
+      { value: 'única',      label: 'veta irrepetible' },
+    ]} />
+  <div class="container">
+    <div class="spec-grid">
+      <div class="spec-card">
+        <h3 class="spec-card__title">Ficha Técnica</h3>
+        <ul class="spec-list" role="list">
+          <li class="spec-list__item"><span class="spec-list__label">Medidas</span><span class="spec-list__value">2.00 × 0.90 m</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Altura</span><span class="spec-list__value">76 cm</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Capacidad</span><span class="spec-list__value">6–8 personas</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Madera</span><span class="spec-list__value">Parota maciza (Enterolobium cyclocarpum)</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Dureza Janka</span><span class="spec-list__value">1,480 lbf (vs 870 lbf del pino)</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Color</span><span class="spec-list__value">Café nogal natural con veta pronunciada</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Acabado</span><span class="spec-list__value">Aceite de teca + barniz poliuretánico alto brillo</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Peso</span><span class="spec-list__value">55 kg</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Disponibilidad</span><span class="spec-list__value spec-list__value--ok">+15 piezas (modelo premium)</span></li>
+        </ul>
+        <a href="/cotizar/" class="spec-card__cta">Cotizar disponibilidad →</a>
+      </div>
+      <div class="spec-features">
+        <FeatureCard index={0} title="Madera de Parota Maciza Mexicana"
+          description="La parota (conocida también como guanacaste o árbol de oreja) es una de las maderas duras más apreciadas de México por su resistencia, su veta pronunciada y sus tonos cálidos. A diferencia del pino —madera blanda de rápido crecimiento—, la parota maciza tiene una densidad y una durabilidad superiores que se perciben inmediatamente al tacto." />
+        <FeatureCard index={1} title="Veta Natural Única e Irrepetible"
+          description="Cada Mesa de Parota del catálogo MESPIC es físicamente diferente a las demás: la veta, los nudos y las variaciones de tono del café nogal son tan específicos de cada árbol y de cada corte que hacen de cada mesa una pieza artesanal irrepetible. Esto convierte cada evento donde se usa en una experiencia genuinamente exclusiva." />
+        <FeatureCard index={2} title="Dureza Janka Superior — 1,480 lbf"
+          description="Con 1,480 lbf en la escala Janka de dureza —el estándar internacional para comparar maderas—, la parota es prácticamente el doble de dura que el pino nacional (870 lbf). Esta diferencia se traduce en mayor resistencia a ralladuras, mayor longevidad del acabado y una sensación de solidez que los invitados perciben instintivamente al tocar y apoyar objetos sobre la mesa." />
+        <FeatureCard index={3} title="Acabado de Doble Protección: Aceite + Barniz"
+          description="El proceso de acabado de la Mesa de Parota es de dos etapas: primero se aplica aceite de teca de penetración profunda para alimentar la madera desde dentro y potenciar la veta natural; después se aplica barniz de poliuretano de alto brillo en dos manos para crear una superficie brillante que protege el aceite y facilita la limpieza. El resultado es una profundidad visual que los barnices simples no pueden replicar." />
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="usos">
+  <SectionHeader tag="h2" badge="Usos recomendados" title="Cuándo Elegir la Mesa de Parota"
+    paragraph1="La Mesa de Parota no es para todos los eventos: es para aquellos donde la calidad del mobiliario es parte de la propuesta de valor del evento mismo."
+    paragraph2="¿Tu evento justifica la Mesa de Parota? Escríbenos y te ayudamos a decidir."
+    stats={[
+      { value: 'VIP',    label: 'estándar de lujo' },
+      { value: '6-8',    label: 'personas por mesa' },
+      { value: 'única',  label: 'pieza irrepetible' },
+    ]} />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard title="Bodas VIP y de Lujo" description="La Mesa de Parota es el estándar de los wedding planners que trabajan con bodas de presupuesto premium. Su veta natural y su acabado brillante crean la pieza principal del montaje sin necesidad de mantelería, centros de mesa elaborados ni decoración adicional." image="/img/catalogo/mesa-picnic-parota-madera-premium-vip-02.webp" href="/servicios/bodas/" btnLabel="Para bodas VIP" badge="Bodas VIP" />
+      <ServiceCard title="Eventos Corporativos de Alta Dirección" description="Para cenas de dirección, presentaciones a socios estratégicos y eventos de reconocimiento ejecutivo, la Mesa de Parota comunica una calidad que el cliente corporativo identifica inmediatamente como diferenciador frente a los proveedores de mobiliario convencional." image="/img/catalogo/mesa-picnic-parota-madera-premium-vip-04.webp" href="/servicios/eventos-corporativos/" btnLabel="Corporativo premium" badge="Corporativo VIP" />
+      <ServiceCard title="Picnic Premium y Experiencias de Lujo" description="Para propuestas de matrimonio en entornos naturales de alto nivel —viñedos, haciendas históricas, jardines privados— la Mesa de Parota es la pieza de mobiliario que hace que el momento sea digno de cada ángulo fotográfico posible." image="/img/catalogo/mesa-picnic-parota-madera-premium-vip-03.webp" href="/servicios/picnic-romantico/" btnLabel="Picnic de lujo" badge="Premium" />
+      <ServiceCard title="Sesiones Fotográficas y Editoriales" description="Directores de arte de marcas de lujo, publicaciones editoriales y producciones audiovisuales que buscan un elemento de mobiliario de madera con autenticidad artesanal eligen la Mesa de Parota por su impacto visual inmediato en cámara." image="/img/catalogo/mesa-picnic-parota-fabricacion-artesanal-01.webp" href="/servicios/sesiones-fotograficas/" btnLabel="Para producciones" badge="Fotografía" />
+    </div>
+  </div>
+</section>
+<section class="section section-alt" id="faq">
+  <SectionHeader tag="h2" badge="Preguntas frecuentes" title="Preguntas sobre la Mesa Picnic de Parota"
+    paragraph1="Todo lo que necesitas saber sobre la parota como madera, el proceso de acabado y la diferencia práctica con los modelos de pino del catálogo."
+    paragraph2="¿Tienes una pregunta específica sobre la parota? Escríbenos." />
+  <FaqSection phone="55 6432 8954" whatsapp="5564328954" schedule="Lun–Dom 8:00–20:00"
+    waMessage="Hola, quiero cotizar la Mesa Picnic de Parota para mi evento."
+    items={[
+      { question: "¿Qué es la madera de parota y por qué es premium?", answer: "La parota (Enterolobium cyclocarpum) es un árbol tropical mexicano de crecimiento lento que produce una madera dura de alta densidad. Su dureza Janka de 1,480 lbf la coloca entre las maderas más resistentes disponibles en México, superando ampliamente al pino (870 lbf) y comparable con el nogal americano. Su veta pronunciada, sus tonos café cálidos y su rareza como madera de mobiliario la hacen visualmente premium." },
+      { question: "¿La Mesa de Parota tiene el mismo formato que la Mesa Estándar?", answer: "No exactamente. La Mesa de Parota mide 2.00 × 0.90 m, ligeramente diferente a las 1.80 × 1.50 m del modelo estándar. El ancho es menor (0.90 m vs 1.50 m) para resaltar la continuidad de la veta a lo largo de los 2 metros y para crear una proporción visualmente más elegante y menos 'cuadrada'. Caben 6 a 8 personas en una configuración más íntima." },
+      { question: "¿Las Mesas de Parota incluyen bancas?", answer: "Sí. Cada Mesa de Parota incluye 2 bancas de pino premium con el mismo acabado barnizado, de 1.00 m de longitud cada una. Usamos pino premium (sin nudos, igual que el modelo Mesa Premium) para las bancas para garantizar la coherencia visual con la parota. No incluimos bancas de parota por su costo y disponibilidad, pero la combinación pino premium + parota es visualmente armoniosa." },
+      { question: "¿Qué tan delicado es el acabado brillante de la parota?", answer: "El barniz de poliuretano de alto brillo de la Mesa de Parota es más robusto que el barniz estándar del catálogo, pero igualmente requiere los mismos cuidados: no dejar objetos pesados golpear la superficie, no cortar directamente sobre la mesa y no usar lija ni abrasivos para limpiarla. Las manchas de agua, velas y comida se limpian sin problema con paño húmedo. No es un acabado frágil, pero sí es uno que agradece ser tratado bien." },
+      { question: "¿Puedo combinar la Mesa de Parota con las mesas de pino del catálogo?", answer: "Sí. La combinación más sofisticada es usar 1-2 Mesas de Parota para el head table o las mesas de honor y complementar con Mesas Premium o Estándar para el resto de invitados. La diferencia de color (café nogal de la parota vs amarillo cálido del pino barnizado) crea un contraste que jerarquiza visualmente las posiciones en el evento." },
+      { question: "¿Está disponible la Mesa de Parota con suficiente tiempo de anticipación?", answer: "Contamos con +15 piezas de Mesa de Parota en bodega, que es la cantidad más limitada del catálogo por tratarse del modelo premium. Para eventos grandes que requieren 5 o más Mesas de Parota, recomendamos reservar con al menos 4 a 6 semanas de anticipación. Para 1-3 mesas, 2 semanas de anticipación suelen ser suficientes." }
+    ]} />
+</section>
+<CtaBarFinal headline="¿Lista tu Mesa de Parota?" subtext="Cotiza disponibilidad para tu fecha. Respondemos el mismo día con confirmación y disponibilidad de piezas." phone="55 6432 8954" whatsapp="5564328954" waMessage="Hola, quiero cotizar la Mesa Picnic de Parota para mi evento." cotizarHref="/cotizar/" />
+<WaBubble whatsapp="5564328954" message="Hola, me interesa rentar la Mesa Picnic de Parota." />
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Mesa Picnic de Parota — Renta MESPIC", "description": "Mesa picnic de parota maciza para renta. 2.00 × 0.90 m, 6-8 personas. Madera de parota (Enterolobium cyclocarpum) con dureza Janka 1,480 lbf. Acabado aceite de teca + barniz poliuretánico alto brillo. El modelo premium del catálogo MESPIC. CDMX y Edomex.", "brand": { "@type": "Brand", "name": "MESPIC" }, "category": "Mobiliario para eventos — Renta", "offers": { "@type": "Offer", "priceCurrency": "MXN", "availability": "https://schema.org/InStock" } })} />
+</Fragment>
+</BaseLayout>
+<style>
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid-4 { grid-template-columns: 1fr; } }
+  .spec-grid { display: grid; grid-template-columns: 320px 1fr; gap: 2rem; align-items: start; }
+  .spec-card { background: #fff; border: 1px solid var(--c-border, #E7E0D8); border-radius: var(--radius-md, 12px); padding: 1.75rem; position: sticky; top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2rem); }
+  .spec-card__title { font-size: 1rem; font-weight: 700; color: var(--c-text, #1C1917); margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--c-primary, #2C5530); }
+  .spec-list { list-style: none; display: flex; flex-direction: column; gap: 0; margin-bottom: 1.5rem; }
+  .spec-list__item { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.625rem 0; border-bottom: 1px solid var(--c-border, #E7E0D8); }
+  .spec-list__item:last-child { border-bottom: none; }
+  .spec-list__label { font-size: 0.8125rem; color: var(--c-text-muted, #78716C); font-weight: 500; flex-shrink: 0; }
+  .spec-list__value { font-size: 0.8125rem; color: var(--c-text, #1C1917); font-weight: 600; text-align: right; }
+  .spec-list__value--ok { color: var(--c-primary, #2C5530); }
+  .spec-card__cta { display: flex; align-items: center; justify-content: center; background: var(--c-primary, #2C5530); color: #fff; padding: 0.75rem 1.25rem; border-radius: 8px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.18s ease; }
+  .spec-card__cta:hover { background: #224228; }
+  .spec-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  @media (max-width: 1024px) { .spec-grid { grid-template-columns: 1fr; } .spec-card { position: static; } }
+  @media (max-width: 640px) { .spec-features { grid-template-columns: 1fr; } }
+</style>

@@ -1,0 +1,381 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import CtaBar from '../../../components/CtaBar.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import FeatureCard from '../../../components/FeatureCard.astro';
+import ServiceCard from '../../../components/ServiceCard.astro';
+import ProductGallery from '../../../components/ProductGallery.astro';
+import FaqSection from '../../../components/FaqSection.astro';
+import CtaBarFinal from '../../../components/CtaBarFinal.astro';
+import WaBubble from '../../../components/WaBubble.astro';
+---
+
+<BaseLayout
+  title="Mesa Picnic Plegable para Renta — Portátil · 4-6 Personas | MESPIC CDMX"
+  description="Renta la Mesa Picnic Plegable de MESPIC: 1.50 × 1.20 m con sistema de plegado en herrajes de acero galvanizado, capacidad 4-6 personas. Ideal para bazares, pop-ups y espacios variables en CDMX y Edomex. Montaje y recolección incluidos."
+  ogImage="/img/catalogo/mesa-picnic-plegable-portatil-evento-01.webp"
+>
+
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Catálogo", href: "/catalogo/" },
+    { label: "Mesa Picnic Plegable" }
+  ]} />
+</Fragment>
+
+<Hero
+  badge="Mesa Plegable"
+  title="Mesa Picnic Plegable — Portátil para Espacios Variables"
+  description="El modelo más versátil para eventos en espacios reducidos o de configuración variable. Sistema de plegado con herrajes de acero galvanizado, pino nacional barnizado. 25% más ligera que el modelo estándar sin sacrificar resistencia."
+  ctaPrimary={null}
+  ctaSecondary={null}
+  seoParagraph1="La Mesa Picnic Plegable de MESPIC responde a la necesidad creciente de mobiliario de madera que se adapte a espacios cambiantes sin perder la estética premium que define al catálogo. Sus dimensiones abiertas de 1.50 × 1.20 metros ofrecen superficie suficiente para 4 a 6 personas, mientras que su sistema de plegado permite reducirla a tan solo 12 centímetros de grosor para transporte y almacenamiento."
+  seoParagraph2="Disponible para renta en Ciudad de México y Estado de México, la Mesa Plegable es especialmente solicitada en bazares de diseño, mercados gastronómicos, eventos pop-up, activaciones de marca en interiores y eventos corporativos donde el espacio del venue cambia según la configuración. Sus herrajes de acero galvanizado garantizan estabilidad completa en posición abierta, con la misma robustez estructural que el modelo estándar."
+  dark={true}
+/>
+
+<CtaBar />
+
+<section class="section" id="galeria">
+  <SectionHeader
+    tag="h2"
+    badge="Mesa Plegable en eventos"
+    title="La Mesa Plegable en Bazares, Corporativos y Eventos Pop-Up"
+    paragraph1="Su versatilidad la convierte en la solución predilecta cuando el espacio es variable o cuando la logística de instalación requiere agilidad. Así luce en distintos contextos."
+    paragraph2="¿Tienes un espacio con dimensiones no convencionales? Escríbenos el plano o las medidas y te calculamos la distribución exacta."
+  />
+  <ProductGallery
+    images={[
+      { src: "/img/catalogo/mesa-picnic-plegable-portatil-evento-01.webp",   alt: "Mesa picnic plegable de pino desplegada en evento corporativo al aire libre CDMX" },
+      { src: "/img/catalogo/mesa-picnic-plegable-portatil-evento-02.webp",   alt: "Mesa plegable de madera instalada en bazar de diseño en Ciudad de México" },
+      { src: "/img/catalogo/mesa-picnic-plegable-portatil-evento-03.webp",   alt: "Mesa picnic plegable en espacio reducido para evento pop-up exterior" },
+      { src: "/img/catalogo/mesa-picnic-plegable-portatil-evento-04.webp",   alt: "Varias mesas picnic plegables en reunión de amigos en jardín privado" },
+      { src: "/img/catalogo/mesa-picnic-plegable-logistica-entrega-01.webp", alt: "Camión con mesas plegables MESPIC en proceso de entrega para evento" },
+      { src: "/img/catalogo/mesa-picnic-plegable-almacen-plegada-01.webp",   alt: "Mesas plegables MESPIC en bodega apiladas en posición cerrada para transporte" },
+    ]}
+    recommended={[
+      { title: "Mesa Estándar",      description: "1.80 m · 6 personas",           href: "/catalogo/mesa-picnic-estandar/",     image: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
+      { title: "Mesa Grande",        description: "2.40 m · 10–12 personas",        href: "/catalogo/mesa-picnic-grande/",       image: "/img/mesa-picnic-evento-corporativo-networking.avif" },
+      { title: "Banca Individual",   description: "1.80 m · 3 personas",            href: "/catalogo/banca-picnic-individual/",  image: "/img/catalogo/banca-picnic-madera-pino-individual-01.webp" },
+      { title: "Mesa Premium",       description: "Acabado sin nudos · Lujo",       href: "/catalogo/mesa-picnic-premium/",      image: "/img/mesa-picnic-boda-elegante-luces.avif" },
+      { title: "Set Completo",       description: "Mesa + decoración incluida",     href: "/catalogo/set-picnic-completo/",      image: "/img/mesa-picnic-pedida-mano-romantica.webp" },
+    ]}
+    sidebarTitle="Otros modelos del catálogo"
+  />
+</section>
+
+<section class="section section-alt" id="especificaciones">
+  <SectionHeader
+    tag="h2"
+    badge="Ficha técnica"
+    title="Especificaciones de la Mesa Plegable"
+    paragraph1="Todo lo que necesitas saber sobre el sistema de plegado, dimensiones y resistencia antes de confirmar tu reserva."
+    paragraph2="¿Necesitas saber si cabe en tu venue? Envíanos las medidas del espacio por WhatsApp y te hacemos el cálculo de distribución sin costo."
+    stats={[
+      { value: '1.50 m', label: 'largo desplegado' },
+      { value: '12 cm',  label: 'grosor plegada' },
+      { value: '4-6',    label: 'personas sentadas' },
+    ]}
+  />
+  <div class="container">
+    <div class="spec-grid">
+      <div class="spec-card">
+        <h3 class="spec-card__title">Ficha Técnica</h3>
+        <ul class="spec-list" role="list">
+          <li class="spec-list__item">
+            <span class="spec-list__label">Medidas abiertas</span>
+            <span class="spec-list__value">1.50 × 1.20 m</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Medidas plegada</span>
+            <span class="spec-list__value">1.50 × 0.12 m</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Altura</span>
+            <span class="spec-list__value">72 cm</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Capacidad</span>
+            <span class="spec-list__value">4–6 personas</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Material</span>
+            <span class="spec-list__value">Pino nacional + acero galvanizado</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Sistema</span>
+            <span class="spec-list__value">Bisagras reforzadas grado comercial</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Acabado</span>
+            <span class="spec-list__value">Lijado + barniz natural resistente</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Peso</span>
+            <span class="spec-list__value">28 kg (25% menos que el estándar)</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Disponibilidad</span>
+            <span class="spec-list__value spec-list__value--ok">+50 piezas en bodega</span>
+          </li>
+        </ul>
+        <a href="/cotizar/" class="spec-card__cta">Cotizar disponibilidad →</a>
+      </div>
+
+      <div class="spec-features">
+        <FeatureCard
+          index={0}
+          title="Sistema de Plegado Profesional"
+          description="Las bisagras de acero galvanizado de grado comercial permiten abrir y cerrar la mesa en menos de 30 segundos sin herramienta. En posición abierta, el sistema de bloqueo automático garantiza una estabilidad equivalente a una mesa de patas fijas, sin flexión ni movimiento durante el evento."
+        />
+        <FeatureCard
+          index={1}
+          title="25% Más Ligera que el Modelo Estándar"
+          description="Con 28 kg frente a los 38 kg del modelo estándar, la Mesa Plegable es significativamente más manejable en venues con acceso complicado: escaleras estrechas, jardines en tercer piso, pasillos de hotel o salones con puertas angostas. Misma robustez, menor esfuerzo de instalación."
+        />
+        <FeatureCard
+          index={2}
+          title="Herrajes de Acero Galvanizado Anti-Corrosión"
+          description="Todos los elementos metálicos del sistema de plegado están fabricados en acero con tratamiento de galvanizado en caliente, el mismo estándar de protección utilizado en mobiliario para exposiciones a la intemperie. No se oxidan con el uso repetido ni con la exposición a la humedad ambiental de los eventos al aire libre."
+        />
+        <FeatureCard
+          index={3}
+          title="Ideal para Venues con Configuración Variable"
+          description="En eventos donde el espacio se reconfigura durante el día —comida formal en la tarde, cóctel en la noche—, la Mesa Plegable permite rearmar la distribución en minutos. Es el modelo preferido de los coordinadores de eventos que trabajan con venues polivalentes o con plantas libres."
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="usos">
+  <SectionHeader
+    tag="h2"
+    badge="Usos recomendados"
+    title="Cuándo la Mesa Plegable es la Mejor Elección"
+    paragraph1="Su diseño portátil la convierte en la solución más práctica para contextos donde la logística y la adaptabilidad son tan importantes como la estética."
+    paragraph2="¿No sabes si la Mesa Plegable es el mejor modelo para tu evento? Descríbenos tu venue y tu número de invitados y te asesoramos gratuitamente."
+    stats={[
+      { value: '30 seg',    label: 'en abrir o cerrar' },
+      { value: '12 cm',     label: 'grosor plegada' },
+      { value: 'cualquier', label: 'venue adaptable' },
+    ]}
+  />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard
+        title="Bazares y Mercados de Diseño"
+        description="La Mesa Plegable es el estándar de los bazares gastronómicos y de diseño: ocupa el menor espacio posible en transporte, se instala sin herramienta y aguanta 8 o más horas de uso intensivo sin perder estabilidad."
+        image="/img/catalogo/mesa-picnic-plegable-portatil-evento-02.webp"
+        href="/servicios/festivales/"
+        btnLabel="Mesas para bazares"
+        badge="Bazares"
+      />
+      <ServiceCard
+        title="Eventos Corporativos en Interiores"
+        description="Para almuerzos ejecutivos y team buildings en venues con acceso restringido o múltiples plantas, la Mesa Plegable facilita la instalación y el retiro sin interferir con las actividades del venue antes o después del evento."
+        image="/img/catalogo/mesa-picnic-plegable-portatil-evento-01.webp"
+        href="/servicios/eventos-corporativos/"
+        btnLabel="Mesas corporativas"
+        badge="Corporativo"
+      />
+      <ServiceCard
+        title="Reuniones Familiares en Patios"
+        description="Cuando el espacio exterior es un patio urbano o una terraza con capacidad medida, la Mesa Plegable maximiza el número de comensales sin bloquear la circulación. Compatible con sillas o con sus propias bancas sectoriales."
+        image="/img/catalogo/mesa-picnic-plegable-portatil-evento-04.webp"
+        href="/servicios/reuniones-familiares/"
+        btnLabel="Mesas para familia"
+        badge="Familiar"
+      />
+      <ServiceCard
+        title="Bodas en Espacios Compactos"
+        description="Para bodas íntimas en jardines pequeños, rooftops o terrazas con aforo controlado, la Mesa Plegable ofrece la estética de madera natural con una huella menor que permite distribuir más mesas en el mismo espacio."
+        image="/img/catalogo/mesa-picnic-plegable-portatil-evento-03.webp"
+        href="/servicios/bodas/"
+        btnLabel="Mesas para bodas"
+        badge="Bodas"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="faq">
+  <SectionHeader
+    tag="h2"
+    badge="Preguntas frecuentes"
+    title="Preguntas sobre la Mesa Picnic Plegable"
+    paragraph1="Resolvemos las dudas más frecuentes sobre el sistema de plegado, resistencia y compatibilidad con otros modelos del catálogo."
+    paragraph2="¿Tu caso es específico? Escríbenos y te respondemos en minutos."
+  />
+  <FaqSection
+    phone="55 6432 8954"
+    whatsapp="5564328954"
+    schedule="Lun–Dom 8:00–20:00"
+    waMessage="Hola, quiero cotizar la Mesa Picnic Plegable para mi evento."
+    items={[
+      {
+        question: "¿La Mesa Plegable es igual de resistente que la Estándar?",
+        answer: "Sí. La resistencia estructural de la Mesa Plegable en posición abierta es equivalente a la del modelo estándar: soporta hasta 350 kg de carga distribuida. El sistema de bisagras con bloqueo automático elimina cualquier flexión en el punto de unión. La diferencia de peso (28 vs 38 kg) se logra por optimización del grosor de la madera, no por reducción de la estructura."
+      },
+      {
+        question: "¿Cuántas personas caben en la Mesa Plegable?",
+        answer: "La Mesa Plegable acomoda 4 personas cómodamente (2 por lado largo) o 6 personas ajustadas (2 por lado largo más 1 en cada extremo). Su superficie es 17% menor que la del modelo estándar, por lo que si vas a colocar mucha decoración o menaje, calcula conservadoramente 4 personas por mesa."
+      },
+      {
+        question: "¿La mesa incluye bancas?",
+        answer: "Sí. La Mesa Plegable incluye 2 bancas laterales que también tienen sistema de plegado independiente. Las bancas se pliegan por separado y son igual de compactas en transporte. No es necesario rentar asientos adicionales, aunque son compatibles con sillas Tiffany, Chiavari u otras sillas decorativas si prefieres ese look."
+      },
+      {
+        question: "¿Qué espacio ocupa plegada en el camión de entrega?",
+        answer: "Plegada, la mesa mide 1.50 × 0.12 m y las bancas tienen una altura de solo 8 cm. Esto permite transportar hasta 3 veces más mesas plegables en el mismo volumen que mesas estándar de patas fijas. La logística de entrega es significativamente más eficiente, lo que nos permite llegar a venues con acceso restringido o elevadores de carga pequeños."
+      },
+      {
+        question: "¿Se puede usar en interiores y en exteriores?",
+        answer: "Sí. El barniz natural de la Mesa Plegable es apto para interiores y para exteriores con exposición solar moderada. No se recomienda para uso prolongado bajo lluvia directa sin protección (carpas o lonas). Para eventos al aire libre expuestos al sol toda la jornada, el barniz exterior triple del modelo estándar ofrece mayor protección."
+      },
+      {
+        question: "¿Hacen entrega y montaje de la Mesa Plegable en toda la CDMX?",
+        answer: "Sí. La Mesa Plegable se entrega, instala y recoge en toda la Ciudad de México y Estado de México. El precio cotizado incluye traslado, montaje por nuestro equipo y recolección al finalizar el evento. Aunque la mesa es técnicamente plegable, nosotros nos encargamos de todo el proceso logístico para que tú no tengas que intervenir."
+      }
+    ]}
+  />
+</section>
+
+<section class="section" id="blog-relacionado">
+  <SectionHeader
+    tag="h2"
+    badge="Del blog"
+    title="Guías para Eventos con Mesas Plegables"
+    paragraph1="Artículos con información práctica sobre logística, distribución y tipos de eventos donde la Mesa Plegable es la elección más inteligente."
+  />
+  <div class="container">
+    <div class="blog-cards">
+      <a href="/blog/cuantas-mesas-picnic-necesitas-segun-invitados/" class="blog-card">
+        <div class="blog-card__img-wrap">
+          <img src="/img/mesa-picnic-boda-invitados-atardecer.avif" alt="Cuántas mesas picnic necesitas según tus invitados" loading="lazy" width="400" height="240" />
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__cat">Guía de cálculo</span>
+          <h3 class="blog-card__title">¿Cuántas Mesas Necesitas Según tus Invitados?</h3>
+          <p class="blog-card__desc">Tabla de referencia exacta: número de mesas por cantidad de personas, con fórmulas para espacios reducidos o de configuración variable.</p>
+          <span class="blog-card__cta">Leer guía →</span>
+        </div>
+      </a>
+      <a href="/blog/mesas-picnic-eventos-corporativos/" class="blog-card">
+        <div class="blog-card__img-wrap">
+          <img src="/img/mesa-picnic-evento-corporativo-networking.avif" alt="Mesas picnic para eventos corporativos" loading="lazy" width="400" height="240" />
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__cat">Corporativos</span>
+          <h3 class="blog-card__title">Mesas Picnic para Eventos Corporativos</h3>
+          <p class="blog-card__desc">Cómo elegir el modelo correcto para conferencias, team building y activaciones de marca. Guía de configuraciones más solicitadas.</p>
+          <span class="blog-card__cta">Leer artículo →</span>
+        </div>
+      </a>
+      <a href="/blog/renta-mesas-picnic-polanco-lomas-santa-fe/" class="blog-card">
+        <div class="blog-card__img-wrap">
+          <img src="/img/mesa-picnic-evento-empresarial-exterior.webp" alt="Renta de mesas picnic en Polanco, Lomas y Santa Fe" loading="lazy" width="400" height="240" />
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__cat">CDMX</span>
+          <h3 class="blog-card__title">Renta de Mesas Picnic en Polanco, Lomas y Santa Fe</h3>
+          <p class="blog-card__desc">Cobertura, tiempos de entrega y venues preferidos en las colonias más activas para eventos corporativos de la CDMX.</p>
+          <span class="blog-card__cta">Leer artículo →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<CtaBarFinal
+  headline="¿Lista tu Mesa Plegable?"
+  subtext="Cotiza disponibilidad para tu fecha. Respondemos el mismo día con precio y confirmación de logística."
+  phone="55 6432 8954"
+  whatsapp="5564328954"
+  waMessage="Hola, quiero cotizar la Mesa Picnic Plegable para mi evento."
+  cotizarHref="/cotizar/"
+/>
+
+<WaBubble whatsapp="5564328954" message="Hola, me interesa rentar la Mesa Picnic Plegable." />
+
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Mesa Picnic Plegable — Renta MESPIC",
+    "description": "Mesa picnic plegable de pino nacional para renta. 1.50 × 1.20 m desplegada, 4-6 personas. Sistema de bisagras de acero galvanizado. 28 kg — 25% más ligera que el modelo estándar. Ideal para bazares, eventos pop-up y venues con acceso restringido en CDMX y Edomex.",
+    "brand": { "@type": "Brand", "name": "MESPIC" },
+    "category": "Mobiliario para eventos — Renta",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "MXN",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "LocalBusiness",
+        "name": "MESPIC — Renta de Mesas Picnic",
+        "telephone": "+52-55-6432-8954",
+        "url": "https://mesaspicnic.com",
+        "areaServed": [
+          { "@type": "City", "name": "Ciudad de México" },
+          { "@type": "State", "name": "Estado de México" }
+        ]
+      }
+    }
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuántas personas caben en la Mesa Picnic Plegable?",
+        "acceptedAnswer": { "@type": "Answer", "text": "4 personas cómodamente, o 6 ajustadas. Su superficie es 17% menor que el modelo estándar." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿La Mesa Plegable incluye bancas?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí, incluye 2 bancas laterales con su propio sistema de plegado independiente." }
+      }
+    ]
+  })} />
+</Fragment>
+
+</BaseLayout>
+
+<style>
+  .blog-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .blog-card { display: flex; flex-direction: column; background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid var(--c-border, #E7E0D8); box-shadow: 0 2px 10px rgba(0,0,0,0.06); text-decoration: none; color: inherit; transition: box-shadow 0.2s ease, transform 0.2s ease; }
+  .blog-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.11); transform: translateY(-3px); }
+  .blog-card__img-wrap { overflow: hidden; aspect-ratio: 5/3; }
+  .blog-card__img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+  .blog-card:hover .blog-card__img-wrap img { transform: scale(1.04); }
+  .blog-card__body { display: flex; flex-direction: column; flex: 1; padding: 1.25rem 1.375rem 1.5rem; border-top: 3px solid var(--c-primary, #2C5530); }
+  .blog-card__cat { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--c-primary, #2C5530); margin-bottom: 0.5rem; display: block; }
+  .blog-card__title { font-size: 1rem; font-weight: 700; color: var(--c-text, #1C1917); line-height: 1.3; margin-bottom: 0.625rem; }
+  .blog-card__desc { font-size: 0.8125rem; color: var(--c-text-muted, #78716C); line-height: 1.65; flex: 1; margin-bottom: 1rem; }
+  .blog-card__cta { font-size: 0.8125rem; font-weight: 700; color: var(--c-primary, #2C5530); }
+  @media (max-width: 900px) { .blog-cards { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .blog-cards { grid-template-columns: 1fr; } }
+
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid-4 { grid-template-columns: 1fr; } }
+
+  .spec-grid { display: grid; grid-template-columns: 320px 1fr; gap: 2rem; align-items: start; }
+  .spec-card { background: #fff; border: 1px solid var(--c-border, #E7E0D8); border-radius: var(--radius-md, 12px); padding: 1.75rem; position: sticky; top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2rem); }
+  .spec-card__title { font-size: 1rem; font-weight: 700; color: var(--c-text, #1C1917); margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--c-primary, #2C5530); }
+  .spec-list { list-style: none; display: flex; flex-direction: column; gap: 0; margin-bottom: 1.5rem; }
+  .spec-list__item { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.625rem 0; border-bottom: 1px solid var(--c-border, #E7E0D8); }
+  .spec-list__item:last-child { border-bottom: none; }
+  .spec-list__label { font-size: 0.8125rem; color: var(--c-text-muted, #78716C); font-weight: 500; flex-shrink: 0; }
+  .spec-list__value { font-size: 0.8125rem; color: var(--c-text, #1C1917); font-weight: 600; text-align: right; }
+  .spec-list__value--ok { color: var(--c-primary, #2C5530); }
+  .spec-card__cta { display: flex; align-items: center; justify-content: center; background: var(--c-primary, #2C5530); color: #fff; padding: 0.75rem 1.25rem; border-radius: 8px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.18s ease; }
+  .spec-card__cta:hover { background: #224228; }
+  .spec-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  @media (max-width: 1024px) { .spec-grid { grid-template-columns: 1fr; } .spec-card { position: static; } }
+  @media (max-width: 640px) { .spec-features { grid-template-columns: 1fr; } }
+</style>

@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import CtaBar from '../../../components/CtaBar.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import FeatureCard from '../../../components/FeatureCard.astro';
+import ServiceCard from '../../../components/ServiceCard.astro';
+import ProductGallery from '../../../components/ProductGallery.astro';
+import FaqSection from '../../../components/FaqSection.astro';
+import CtaBarFinal from '../../../components/CtaBarFinal.astro';
+import WaBubble from '../../../components/WaBubble.astro';
+---
+<BaseLayout
+  title="Mesa Picnic XL para Renta — 3 metros · 14-16 Personas | MESPIC CDMX"
+  description="Renta la Mesa Picnic XL de MESPIC: 3.00 × 1.50 m de pino nacional reforzado, capacidad 14-16 personas. La mesa más larga del catálogo para banquetes masivos, bodas grandes y festivales en CDMX y Edomex. Entrega y montaje incluidos."
+  ogImage="/img/catalogo/mesa-picnic-xl-extra-larga-3m-16-personas-01.webp"
+>
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Catálogo", href: "/catalogo/" },
+    { label: "Mesa Picnic XL" }
+  ]} />
+</Fragment>
+<Hero
+  badge="Mesa XL — La Más Grande"
+  title="Mesa Picnic XL — 3 metros para 14-16 Personas"
+  description="La pieza más imponente del catálogo. Tres metros de pino nacional reforzado con estructura de acero, capacidad para 14 a 16 comensales. Para bodas de gran escala, banquetes, festivales gastronómicos y eventos masivos donde la mesa es el centro absoluto del evento."
+  ctaPrimary={null}
+  ctaSecondary={null}
+  seoParagraph1="La Mesa Picnic XL de MESPIC es la respuesta a los eventos donde la escala importa tanto como la estética. Con 3 metros de largo por 1.50 metros de ancho, es la mesa de mayor dimensión del catálogo y puede sentar cómodamente entre 14 y 16 personas en una sola pieza. Para bodas con head table para 15 personas o para festivales donde los grupos grandes quieren compartir una mesa larga, la XL no tiene rival en el mercado de renta de mobiliario de madera en México."
+  seoParagraph2="Disponible para renta en Ciudad de México y Estado de México, la Mesa Picnic XL está reforzada internamente con estructura de acero en la base para garantizar estabilidad y nivel perfecto bajo cargas de hasta 800 kg distribuidos. Su madera es pino nacional de mayor escuadría que los modelos estándar, lo que le otorga una rigidez superior sin flexi ni combado a lo largo de sus tres metros. Incluye 4 bancas laterales de 1.50 m cada una para cubrir ambos lados de la mesa completa."
+  dark={true}
+/>
+<CtaBar />
+<section class="section" id="galeria">
+  <SectionHeader tag="h2" badge="Mesa XL en eventos"
+    title="La Mesa XL en Banquetes, Festivales y Bodas Masivas"
+    paragraph1="Tres metros de madera crean una declaración visual que ninguna mesa estándar puede igualar. Así luce la Mesa XL en los eventos donde fue la pieza central."
+    paragraph2="¿Estás organizando un evento para más de 100 personas? Escríbenos el número de invitados y te calculamos la distribución exacta con Mesa XL y modelos complementarios." />
+  <ProductGallery
+    images={[
+      { src: "/img/catalogo/mesa-picnic-xl-extra-larga-3m-16-personas-01.webp", alt: "Mesa picnic XL de 3 metros en evento masivo al aire libre con muchos invitados" },
+      { src: "/img/catalogo/mesa-picnic-xl-extra-larga-3m-16-personas-02.webp", alt: "Mesa picnic XL extra larga en evento de jardín con 16 personas sentadas" },
+      { src: "/img/catalogo/mesa-picnic-xl-extra-larga-3m-16-personas-03.webp", alt: "Varias mesas XL de madera en feria gastronómica con asistentes" },
+      { src: "/img/catalogo/mesa-picnic-xl-extra-larga-3m-16-personas-04.webp", alt: "Mesa XL de pino reforzado en festival de comida con grupos grandes" },
+      { src: "/img/catalogo/mesa-picnic-xl-extra-larga-3m-16-personas-05.webp", alt: "Mesa picnic XL con luces en festival masivo nocturno al aire libre" },
+      { src: "/img/mesa-picnic-evento-masivo-dia.avif",                         alt: "Vista general de evento masivo con mesas XL de madera distribuidas" },
+    ]}
+    recommended={[
+      { title: "Mesa Grande",      description: "2.40 m · 10–12 personas",     href: "/catalogo/mesa-picnic-grande/",       image: "/img/mesa-picnic-evento-corporativo-networking.avif" },
+      { title: "Mesa Estándar",    description: "1.80 m · 6 personas",          href: "/catalogo/mesa-picnic-estandar/",     image: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
+      { title: "Banca Individual", description: "1.80 m · 3 personas · extra",  href: "/catalogo/banca-picnic-individual/",  image: "/img/catalogo/banca-picnic-madera-pino-individual-01.webp" },
+      { title: "Mesa Premium",     description: "Acabado VIP sin nudos",        href: "/catalogo/mesa-picnic-premium/",      image: "/img/mesa-picnic-boda-elegante-luces.avif" },
+      { title: "Set Completo",     description: "Mesa + decoración incluida",   href: "/catalogo/set-picnic-completo/",      image: "/img/mesa-picnic-pedida-mano-romantica.webp" },
+    ]}
+    sidebarTitle="Otros modelos del catálogo"
+  />
+</section>
+<section class="section section-alt" id="especificaciones">
+  <SectionHeader tag="h2" badge="Ficha técnica" title="Especificaciones de la Mesa Picnic XL"
+    paragraph1="Dimensiones exactas, resistencia y comparativa con los demás modelos de largo del catálogo para ayudarte a elegir el modelo correcto."
+    paragraph2="¿Necesitas plano de distribución para tu venue? Envíanos las medidas y en menos de 24 horas te enviamos el croquis de layout."
+    stats={[
+      { value: '3.00 m', label: 'largo de mesa' },
+      { value: '800 kg', label: 'carga máxima' },
+      { value: '14-16',  label: 'personas sentadas' },
+    ]} />
+  <div class="container">
+    <div class="spec-grid">
+      <div class="spec-card">
+        <h3 class="spec-card__title">Ficha Técnica</h3>
+        <ul class="spec-list" role="list">
+          <li class="spec-list__item"><span class="spec-list__label">Medidas</span><span class="spec-list__value">3.00 × 1.50 m</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Altura</span><span class="spec-list__value">76 cm</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Capacidad</span><span class="spec-list__value">14–16 personas</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Material</span><span class="spec-list__value">Pino nacional escuadría reforzada</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Refuerzo</span><span class="spec-list__value">Estructura acero en base central</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Acabado</span><span class="spec-list__value">Lijado + barniz exterior 3 manos</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Carga máxima</span><span class="spec-list__value">800 kg distribuidos</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Bancas incluidas</span><span class="spec-list__value">4 bancas 1.50 m (2 por lado)</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Disponibilidad</span><span class="spec-list__value spec-list__value--ok">+30 piezas en bodega</span></li>
+        </ul>
+        <a href="/cotizar/" class="spec-card__cta">Cotizar disponibilidad →</a>
+      </div>
+      <div class="spec-features">
+        <FeatureCard index={0} title="La Mesa Más Larga del Catálogo — 3 Metros"
+          description="Con 3 metros de largo, la Mesa XL es 67% más larga que el modelo estándar de 1.80 m y 25% más larga que la Mesa Grande de 2.40 m. Su escala visual transforma cualquier espacio: una sola Mesa XL se convierte en la pieza protagonista del evento sin necesidad de decoración adicional." />
+        <FeatureCard index={1} title="Estructura Reforzada con Acero en la Base"
+          description="El mayor desafío técnico de las mesas extra largas es la rigidez longitudinal: sin refuerzo, una mesa de 3 metros tiende a combarse bajo carga. La Mesa XL resuelve esto con una estructura transversal de acero en la base central que distribuye las cargas de forma homogénea y garantiza nivel perfecto durante todo el evento." />
+        <FeatureCard index={2} title="4 Bancas Incluidas — 2 por Cada Lado"
+          description="La Mesa XL incluye 4 bancas de 1.50 m de longitud (las mismas que la banca individual del catálogo) que se colocan 2 a cada lado. Esta configuración permite 7 a 8 personas por cada lateral, con espacio de pasillo entre bancas para que el personal de servicio circule sin interrupciones." />
+        <FeatureCard index={3} title="Ideal para Banquetes y Head Tables de Boda"
+          description="Las grandes familias, los grupos de amigos y las head tables de boda con 12 o más personas en el mismo 'lado' encuentran en la Mesa XL su espacio ideal. No hay necesidad de unir mesas estándar con adaptadores: una sola pieza crea la experiencia de mesa larga con continuidad visual y sin juntas visibles." />
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="usos">
+  <SectionHeader tag="h2" badge="Usos recomendados" title="Eventos para los que Fue Diseñada la Mesa XL"
+    paragraph1="Tres metros de madera tienen un impacto visual y funcional que ningún otro modelo del catálogo puede replicar. Estos son los contextos donde la Mesa XL entrega su máximo valor."
+    paragraph2="¿Necesitas combinar la Mesa XL con otros modelos para tu evento? Te preparamos un layout completo sin costo."
+    stats={[
+      { value: '3.00 m', label: 'la más larga' },
+      { value: '16 pax', label: 'en una sola mesa' },
+      { value: '+30',    label: 'piezas disponibles' },
+    ]} />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard title="Bodas con Head Table Grande" description="Para novias que quieren sentar a todos los testigos, padres y padrinos en una sola mesa larga —al estilo medieval—, la Mesa XL es la única del catálogo que lo permite sin juntar piezas. Un head table de una sola Mesa XL puede alojar a los 14 o 16 invitados más importantes de la boda." image="/img/catalogo/mesa-picnic-xl-extra-larga-3m-16-personas-02.webp" href="/servicios/bodas/" btnLabel="Mesas para bodas" badge="Bodas" />
+      <ServiceCard title="Festivales Gastronómicos" description="En ferias de comida y festivales, la Mesa XL crea zonas de comida comunales donde los grupos grandes se instalan juntos. Su capacidad para 16 personas elimina la fragmentación de grupos que ocurre cuando varios grupos pequeños compiten por mesas." image="/img/catalogo/mesa-picnic-xl-extra-larga-3m-16-personas-03.webp" href="/servicios/festivales/" btnLabel="Mesas para festivales" badge="Festivales" />
+      <ServiceCard title="Eventos Corporativos Masivos" description="Para eventos de empresa con más de 200 personas, la Mesa XL reduce el número total de mesas necesarias y simplifica la logística de distribución. 20 Mesas XL pueden sentar a 280-320 personas; el mismo resultado requeriría 47 mesas estándar." image="/img/catalogo/mesa-picnic-xl-extra-larga-3m-16-personas-04.webp" href="/servicios/eventos-corporativos/" btnLabel="Mesas corporativas" badge="Corporativo" />
+      <ServiceCard title="Reuniones Familiares Grandes" description="Para posadas, cumpleaños de 50 años, aniversarios familiares y reuniones donde toda la familia quiere estar en la misma mesa, la Mesa XL es la solución que elimina la separación en mesas distintas y crea una experiencia de reunión genuinamente familiar." image="/img/mesa-picnic-reunion-familiar-comida.avif" href="/servicios/reuniones-familiares/" btnLabel="Mesas familiares" badge="Familiar" />
+    </div>
+  </div>
+</section>
+<section class="section section-alt" id="faq">
+  <SectionHeader tag="h2" badge="Preguntas frecuentes" title="Preguntas sobre la Mesa Picnic XL"
+    paragraph1="Todo lo que necesitas saber sobre capacidad, espacio requerido, entrega y diferencias con los otros modelos grandes del catálogo."
+    paragraph2="¿Tu pregunta no está aquí? Escríbenos y te respondemos en minutos." />
+  <FaqSection phone="55 6432 8954" whatsapp="5564328954" schedule="Lun–Dom 8:00–20:00"
+    waMessage="Hola, quiero cotizar la Mesa Picnic XL para mi evento."
+    items={[
+      { question: "¿Cuánto espacio necesito para instalar una Mesa XL?", answer: "La Mesa XL ocupa un área de aproximadamente 3.60 × 2.20 metros considerando el espacio para sentarse y que el personal de servicio pueda circular. Para un layout de 10 Mesas XL necesitas al menos 250 m² de espacio útil bien distribuido. Si nos envías las medidas de tu venue, te preparamos el croquis de distribución." },
+      { question: "¿Cuál es la diferencia entre la Mesa Grande y la Mesa XL?", answer: "La Mesa Grande mide 2.40 m y sienta 10-12 personas; la Mesa XL mide 3.00 m y sienta 14-16. Además, la XL tiene refuerzo de acero en la base para garantizar rigidez en los 3 metros de longitud. La Mesa Grande es para grupos mediano-grandes; la XL es para cuando necesitas la mesa más grande del mercado." },
+      { question: "¿La Mesa XL requiere 2 personas para instalarla?", answer: "Sí. Por su tamaño y peso, la Mesa XL requiere mínimo 2 personas del equipo para el transporte e instalación. Nuestro equipo de montaje siempre va en pares cuando hay Mesas XL en el pedido, por lo que el cliente no necesita preocuparse por la logística de instalación: la manejamos completamente nosotros." },
+      { question: "¿Se puede decorar con mantel de 3 metros?", answer: "Sí. La Mesa XL acepta manteles de hasta 3.00 × 1.80 m (con caída de 15 cm por lado), que se consiguen fácilmente con proveedores de renta de mantelería. También se ve extraordinariamente bien sin mantel: la veta del pino de 3 metros en una sola pieza es un elemento decorativo de alto impacto por sí mismo." },
+      { question: "¿Puedo combinar Mesas XL con mesas estándar en el mismo evento?", answer: "Sí, y es la combinación más habitual. Lo más común es usar 1 o 2 Mesas XL para el head table o las mesas principales, y complementar con Mesas Estándar o Grandes para el resto de invitados. El contraste de tamaños añade jerarquía visual al layout del evento." },
+      { question: "¿La entrega de la Mesa XL tiene algún costo adicional por el tamaño?", answer: "No. La Mesa XL está incluida en el servicio estándar de entrega, montaje y recolección de MESPIC sin costo adicional por tamaño o peso. El precio cotizado es el precio final, incluyendo logística completa en CDMX y Estado de México." }
+    ]} />
+</section>
+<CtaBarFinal headline="¿Lista tu Mesa XL?" subtext="Cotiza disponibilidad para tu fecha. Respondemos el mismo día con precio y croquis de distribución." phone="55 6432 8954" whatsapp="5564328954" waMessage="Hola, quiero cotizar la Mesa Picnic XL para mi evento." cotizarHref="/cotizar/" />
+<WaBubble whatsapp="5564328954" message="Hola, me interesa rentar la Mesa Picnic XL." />
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Mesa Picnic XL — Renta MESPIC", "description": "Mesa picnic XL de 3.00 × 1.50 m de pino nacional reforzado para renta. Capacidad 14-16 personas. Incluye 4 bancas. Carga máxima 800 kg. La mesa más grande del catálogo MESPIC para banquetes masivos, bodas grandes y festivales en CDMX y Edomex.", "brand": { "@type": "Brand", "name": "MESPIC" }, "category": "Mobiliario para eventos — Renta", "offers": { "@type": "Offer", "priceCurrency": "MXN", "availability": "https://schema.org/InStock" } })} />
+</Fragment>
+</BaseLayout>
+<style>
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid-4 { grid-template-columns: 1fr; } }
+  .spec-grid { display: grid; grid-template-columns: 320px 1fr; gap: 2rem; align-items: start; }
+  .spec-card { background: #fff; border: 1px solid var(--c-border, #E7E0D8); border-radius: var(--radius-md, 12px); padding: 1.75rem; position: sticky; top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2rem); }
+  .spec-card__title { font-size: 1rem; font-weight: 700; color: var(--c-text, #1C1917); margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--c-primary, #2C5530); }
+  .spec-list { list-style: none; display: flex; flex-direction: column; gap: 0; margin-bottom: 1.5rem; }
+  .spec-list__item { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.625rem 0; border-bottom: 1px solid var(--c-border, #E7E0D8); }
+  .spec-list__item:last-child { border-bottom: none; }
+  .spec-list__label { font-size: 0.8125rem; color: var(--c-text-muted, #78716C); font-weight: 500; flex-shrink: 0; }
+  .spec-list__value { font-size: 0.8125rem; color: var(--c-text, #1C1917); font-weight: 600; text-align: right; }
+  .spec-list__value--ok { color: var(--c-primary, #2C5530); }
+  .spec-card__cta { display: flex; align-items: center; justify-content: center; background: var(--c-primary, #2C5530); color: #fff; padding: 0.75rem 1.25rem; border-radius: 8px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.18s ease; }
+  .spec-card__cta:hover { background: #224228; }
+  .spec-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  @media (max-width: 1024px) { .spec-grid { grid-template-columns: 1fr; } .spec-card { position: static; } }
+  @media (max-width: 640px) { .spec-features { grid-template-columns: 1fr; } }
+</style>

@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import CtaBar from '../../../components/CtaBar.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import FeatureCard from '../../../components/FeatureCard.astro';
+import ServiceCard from '../../../components/ServiceCard.astro';
+import ProductGallery from '../../../components/ProductGallery.astro';
+import FaqSection from '../../../components/FaqSection.astro';
+import CtaBarFinal from '../../../components/CtaBarFinal.astro';
+import WaBubble from '../../../components/WaBubble.astro';
+---
+<BaseLayout
+  title="Banca Picnic Individual para Renta — Pino Natural · 3 Personas | MESPIC CDMX"
+  description="Renta Bancas Picnic Individuales de MESPIC: 1.80 m de longitud, pino nacional barnizado, 3 personas. Complemento perfecto para cualquier mesa del catálogo o como asiento independiente en festivales y graduaciones en CDMX y Edomex."
+  ogImage="/img/catalogo/banca-picnic-madera-pino-individual-01.webp"
+>
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Catálogo", href: "/catalogo/" },
+    { label: "Banca Picnic Individual" }
+  ]} />
+</Fragment>
+<Hero
+  badge="Banca Individual"
+  title="Banca Picnic Individual — 1.80 m de Pino Nacional Barnizado"
+  description="El complemento más versátil del catálogo. La misma madera y el mismo acabado que las mesas MESPIC, disponible como banca independiente. Compatible con todos los modelos, y perfecta como asiento autónomo en festivales, graduaciones y eventos masivos."
+  ctaPrimary={null}
+  ctaSecondary={null}
+  seoParagraph1="La Banca Picnic Individual de MESPIC cubre la necesidad de asientos adicionales de madera cuando la distribución del evento requiere más flexibilidad que la que ofrecen las bancas integradas de las mesas. Con 1.80 metros de longitud —exactamente la misma que el modelo estándar— y fabricada en pino nacional idéntico al de todas las mesas del catálogo, la Banca Individual se integra visualmente de forma perfecta en cualquier montaje ya existente."
+  seoParagraph2="Disponible para renta en Ciudad de México y Estado de México, las Bancas Individuales son especialmente solicitadas para graduaciones, ferias gastronómicas, festivales y eventos donde se necesitan asientos adicionales junto a mesas no convencionales. Su resistencia de 350 kg de carga distribuida y su peso de solo 14 kilos la convierten en el complemento más práctico y elegante del mobiliario de madera para eventos en México."
+  dark={true}
+/>
+<CtaBar />
+<section class="section" id="galeria">
+  <SectionHeader tag="h2" badge="Banca Individual en eventos"
+    title="La Banca Individual en Festivales, Bodas y Graduaciones"
+    paragraph1="La misma madera que las mesas, el mismo barniz, el mismo nivel de calidad. Aquí luce como complemento y como protagonista en distintos tipos de evento."
+    paragraph2="¿Necesitas calcular cuántas bancas adicionales para tu distribución? Escríbenos y lo resolvemos juntos." />
+  <ProductGallery
+    images={[
+      { src: "/img/catalogo/banca-picnic-madera-pino-individual-01.webp", alt: "Banca picnic individual de pino natural barnizado para eventos al aire libre CDMX" },
+      { src: "/img/catalogo/banca-picnic-madera-pino-individual-02.webp", alt: "Detalle de acabado barnizado en banca picnic individual MESPIC" },
+      { src: "/img/catalogo/banca-picnic-madera-pino-individual-03.webp", alt: "Textura de madera de pino nacional en banca picnic para renta" },
+      { src: "/img/catalogo/banca-picnic-madera-pino-individual-04.webp", alt: "Bancas picnic individuales de madera en boda elegante al aire libre" },
+      { src: "/img/catalogo/banca-picnic-madera-pino-individual-05.webp", alt: "Múltiples bancas individuales en feria gastronómica con muchos asistentes" },
+      { src: "/img/producto-vista-lateral-1.avif",                        alt: "Vista lateral de banca picnic individual mostrando estructura y proporciones" },
+    ]}
+    recommended={[
+      { title: "Mesa Estándar",   description: "1.80 m · 6 personas",      href: "/catalogo/mesa-picnic-estandar/",    image: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
+      { title: "Mesa Grande",     description: "2.40 m · 10–12 personas",   href: "/catalogo/mesa-picnic-grande/",      image: "/img/mesa-picnic-evento-corporativo-networking.avif" },
+      { title: "Mesa XL",         description: "3.00 m · 14–16 personas",   href: "/catalogo/mesa-picnic-xl/",          image: "/img/catalogo/mesa-picnic-xl-extra-larga-3m-16-personas-01.webp" },
+      { title: "Mesa Premium",    description: "Acabado sin nudos · Lujo",  href: "/catalogo/mesa-picnic-premium/",     image: "/img/mesa-picnic-boda-elegante-luces.avif" },
+      { title: "Set Completo",    description: "Mesa + decoración",         href: "/catalogo/set-picnic-completo/",     image: "/img/mesa-picnic-pedida-mano-romantica.webp" },
+    ]}
+    sidebarTitle="Otros modelos del catálogo"
+  />
+</section>
+<section class="section section-alt" id="especificaciones">
+  <SectionHeader tag="h2" badge="Ficha técnica" title="Especificaciones de la Banca Picnic Individual"
+    paragraph1="Dimensiones exactas, resistencia y compatibilidad con los modelos de mesa del catálogo MESPIC."
+    paragraph2="¿Tienes mesas de otra empresa y necesitas bancas de madera compatibles? Escríbenos con las medidas y verificamos la compatibilidad."
+    stats={[
+      { value: '1.80 m', label: 'longitud' },
+      { value: '350 kg', label: 'carga distribuida' },
+      { value: '3',      label: 'personas por banca' },
+    ]} />
+  <div class="container">
+    <div class="spec-grid">
+      <div class="spec-card">
+        <h3 class="spec-card__title">Ficha Técnica</h3>
+        <ul class="spec-list" role="list">
+          <li class="spec-list__item"><span class="spec-list__label">Medidas</span><span class="spec-list__value">1.80 × 0.35 m</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Alto asiento</span><span class="spec-list__value">45 cm</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Capacidad</span><span class="spec-list__value">3 personas</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Material</span><span class="spec-list__value">Pino nacional seleccionado</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Acabado</span><span class="spec-list__value">Lijado fino + barniz exterior 3 manos</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Resistencia</span><span class="spec-list__value">Hasta 350 kg de carga distribuida</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Uso recomendado</span><span class="spec-list__value">Exterior e interior</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Peso</span><span class="spec-list__value">14 kg</span></li>
+          <li class="spec-list__item"><span class="spec-list__label">Disponibilidad</span><span class="spec-list__value spec-list__value--ok">+200 piezas en bodega</span></li>
+        </ul>
+        <a href="/cotizar/" class="spec-card__cta">Cotizar disponibilidad →</a>
+      </div>
+      <div class="spec-features">
+        <FeatureCard index={0} title="Compatible con Todos los Modelos MESPIC"
+          description="La Banca Individual tiene exactamente la misma altura de asiento (45 cm), el mismo pino y el mismo barniz que todas las mesas del catálogo. Cuando la colocas junto a una Mesa Estándar, Grande, Premium o Rústica, la continuidad visual es perfecta. También funciona bien junto a mesas de otros proveedores de dimensiones similares." />
+        <FeatureCard index={1} title="Alta Resistencia Estructural — 350 kg"
+          description="La resistencia de 350 kg de carga distribuida está calculada para eventos de hasta 12 horas con uso continuo. Dos patas cruzadas en cada extremo de la banca, unidas por refuerzos transversales de la misma madera, garantizan que el asiento no flexiona ni chirría bajo el peso de los comensales más robustos." />
+        <FeatureCard index={2} title="Misma Madera y Acabado que las Mesas"
+          description="El mismo proceso de fabricación que las mesas: pino nacional seleccionado sin defectos estructurales, lijado en tres pasos (grano 80, 120 y 180) y tres manos de barniz de poliuretano exterior. La consistencia visual en un evento donde se mezclan bancas y mesas MESPIC es total." />
+        <FeatureCard index={3} title="Ligera y Fácil de Transportar — 14 kg"
+          description="Con solo 14 kg, cada miembro del equipo de montaje puede cargar y colocar una banca individual sin asistencia. Esto acelera significativamente el proceso de instalación en eventos grandes o en venues con acceso complicado. Las 200+ bancas del inventario MESPIC están disponibles para eventos masivos con días de anticipación." />
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="usos">
+  <SectionHeader tag="h2" badge="Usos recomendados" title="Cuándo Agregar Bancas Individuales a tu Evento"
+    paragraph1="Las Bancas Individuales resuelven situaciones donde la distribución estándar de bancas integradas no cubre todas las necesidades del evento."
+    paragraph2="¿No sabes cuántas bancas adicionales necesitas? Envíanos el plano de tu venue y te hacemos el cálculo."
+    stats={[
+      { value: '+200', label: 'piezas en bodega' },
+      { value: '14 kg', label: 'ligera y manejable' },
+      { value: 'todos', label: 'modelos compatibles' },
+    ]} />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard title="Graduaciones y Ceremonias" description="Para ceremonias de graduación en jardines y espacios al aire libre, las Bancas Individuales crean filas de asientos de madera elegantes que complementan visualmente cualquier escenario o arco decorativo." image="/img/infantil-graduacion-1.avif" href="/servicios/festivales/" btnLabel="Bancas para graduaciones" badge="Ceremonias" />
+      <ServiceCard title="Festivales Gastronómicos" description="En festivales y ferias donde las mesas son de diferentes tamaños y formatos, las Bancas Individuales llenan los espacios entre mesas sin imponer una forma específica, adaptándose a cualquier configuración del área de comida." image="/img/catalogo/banca-picnic-madera-pino-individual-05.webp" href="/servicios/festivales/" btnLabel="Bancas para festivales" badge="Festivales" />
+      <ServiceCard title="Bodas con Distribución Mixta" description="Para bodas donde se combinan mesas redondas (sin bancas integradas) con mesas picnic, las Bancas Individuales complementan el mobiliario redondo y mantienen la coherencia de madera natural en todo el espacio." image="/img/catalogo/banca-picnic-madera-pino-individual-04.webp" href="/servicios/bodas/" btnLabel="Bancas para bodas" badge="Bodas" />
+      <ServiceCard title="Eventos Corporativos Masivos" description="En conferencias al aire libre o team buildings con más de 100 asistentes, las Bancas Individuales proporcionan asientos de calidad en zonas de descanso, áreas de catering y estaciones de trabajo sin la estructura fija de las mesas completas." image="/img/mesa-picnic-seminario-corporativo.webp" href="/servicios/eventos-corporativos/" btnLabel="Bancas corporativas" badge="Corporativo" />
+    </div>
+  </div>
+</section>
+<section class="section section-alt" id="faq">
+  <SectionHeader tag="h2" badge="Preguntas frecuentes" title="Preguntas sobre la Banca Picnic Individual"
+    paragraph1="Todo lo que necesitas saber sobre compatibilidad, resistencia y logística de las Bancas Individuales."
+    paragraph2="¿Tu caso es específico? Escríbenos y te asesoramos sin costo." />
+  <FaqSection phone="55 6432 8954" whatsapp="5564328954" schedule="Lun–Dom 8:00–20:00"
+    waMessage="Hola, quiero cotizar Bancas Picnic Individuales para mi evento."
+    items={[
+      { question: "¿Las Bancas Individuales son compatibles con las mesas estándar de MESPIC?", answer: "Sí, completamente. Las Bancas Individuales tienen exactamente la misma altura de asiento (45 cm) y la misma profundidad que las bancas integradas del modelo estándar. Visualmente son indistinguibles: mismo pino, mismo tono, mismo barniz." },
+      { question: "¿Se pueden rentar solo las bancas sin la mesa?", answer: "Sí. Las Bancas Individuales se rentan de forma independiente de cualquier mesa del catálogo. Puedes contratar únicamente bancas para complementar mobiliario propio o de otro proveedor, o para crear áreas de asientos en zonas donde no se necesita mesa (como frente a un escenario o a lo largo de un camino de jardín)." },
+      { question: "¿Cuántas personas caben en cada banca?", answer: "Cada banca acomoda 3 personas de complexión promedio. Para personas de complexión más robusta o para garantizar mayor comodidad en eventos de varias horas, considera calcular 2.5 personas por banca y ajustar el número al alza." },
+      { question: "¿Las bancas tienen respaldo?", answer: "No, las Bancas Picnic Individuales son bancos sin respaldo, igual que las bancas integradas de las mesas del catálogo. Este es el formato estándar del mobiliario picnic. Si tu evento requiere respaldo, podemos orientarte sobre opciones de sillas de madera compatibles con el estilo del catálogo." },
+      { question: "¿Con cuánta anticipación debo reservar las bancas?", answer: "Con nuestro inventario de más de 200 bancas, podemos atender solicitudes de último momento para la mayoría de eventos. Sin embargo, para garantizar disponibilidad en fechas de alta demanda (fines de semana de mayo a octubre), recomendamos reservar con al menos 2 semanas de anticipación." },
+      { question: "¿La entrega incluye las bancas además de las mesas?", answer: "Sí. Cuando rentas bancas junto con mesas del catálogo, la entrega y montaje incluye ambos elementos en el mismo servicio sin costo adicional. Las bancas individuales también tienen servicio de entrega independiente si las rentas sin mesas." }
+    ]} />
+</section>
+<CtaBarFinal headline="¿Cuántas Bancas Necesitas?" subtext="Cotiza disponibilidad de Bancas Individuales para tu fecha. Respondemos el mismo día." phone="55 6432 8954" whatsapp="5564328954" waMessage="Hola, quiero cotizar Bancas Picnic Individuales para mi evento." cotizarHref="/cotizar/" />
+<WaBubble whatsapp="5564328954" message="Hola, me interesa rentar Bancas Picnic Individuales." />
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Banca Picnic Individual — Renta MESPIC", "description": "Banca picnic individual de pino nacional para renta. 1.80 × 0.35 m, 45 cm de altura de asiento, capacidad 3 personas. Resistencia 350 kg. Compatible con todos los modelos del catálogo MESPIC. Disponible en CDMX y Edomex.", "brand": { "@type": "Brand", "name": "MESPIC" }, "category": "Mobiliario para eventos — Renta", "offers": { "@type": "Offer", "priceCurrency": "MXN", "availability": "https://schema.org/InStock" } })} />
+</Fragment>
+</BaseLayout>
+<style>
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid-4 { grid-template-columns: 1fr; } }
+  .spec-grid { display: grid; grid-template-columns: 320px 1fr; gap: 2rem; align-items: start; }
+  .spec-card { background: #fff; border: 1px solid var(--c-border, #E7E0D8); border-radius: var(--radius-md, 12px); padding: 1.75rem; position: sticky; top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2rem); }
+  .spec-card__title { font-size: 1rem; font-weight: 700; color: var(--c-text, #1C1917); margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--c-primary, #2C5530); }
+  .spec-list { list-style: none; display: flex; flex-direction: column; gap: 0; margin-bottom: 1.5rem; }
+  .spec-list__item { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.625rem 0; border-bottom: 1px solid var(--c-border, #E7E0D8); }
+  .spec-list__item:last-child { border-bottom: none; }
+  .spec-list__label { font-size: 0.8125rem; color: var(--c-text-muted, #78716C); font-weight: 500; flex-shrink: 0; }
+  .spec-list__value { font-size: 0.8125rem; color: var(--c-text, #1C1917); font-weight: 600; text-align: right; }
+  .spec-list__value--ok { color: var(--c-primary, #2C5530); }
+  .spec-card__cta { display: flex; align-items: center; justify-content: center; background: var(--c-primary, #2C5530); color: #fff; padding: 0.75rem 1.25rem; border-radius: 8px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.18s ease; }
+  .spec-card__cta:hover { background: #224228; }
+  .spec-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  @media (max-width: 1024px) { .spec-grid { grid-template-columns: 1fr; } .spec-card { position: static; } }
+  @media (max-width: 640px) { .spec-features { grid-template-columns: 1fr; } }
+</style>
