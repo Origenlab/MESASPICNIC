@@ -8,6 +8,7 @@ import FeatureCard from '../../../components/FeatureCard.astro';
 import ServiceCard from '../../../components/ServiceCard.astro';
 import ProductGallery from '../../../components/ProductGallery.astro';
 import FaqSection from '../../../components/FaqSection.astro';
+import NextStep from '../../components/NextStep.astro';
 import CtaBarFinal from '../../../components/CtaBarFinal.astro';
 import WaBubble from '../../../components/WaBubble.astro';
 ---
@@ -130,6 +131,17 @@ import WaBubble from '../../../components/WaBubble.astro';
       { question: "¿La entrega incluye el set infantil junto con el resto del mobiliario?", answer: "Sí. Cuando rentas el Set Infantil junto con mesas de adultos del catálogo, la entrega, montaje y recolección de todos los elementos se realiza en el mismo servicio sin costo adicional. El equipo de MESPIC instala la zona de niños simultáneamente con el área de adultos para que todo esté listo al mismo tiempo." }
     ]} />
 </section>
+
+<!-- Siguiente paso: Ver paquetes -->
+<NextStep
+  titulo="¿Ya elegiste el mobiliario que necesitas?"
+  subtitulo="Selecciona el paquete que mejor se adapta al número de invitados de tu evento. Precio final sin extras."
+  href="/paquetes/"
+  btnLabel="Ver paquetes disponibles →"
+  step={2}
+  secondBtn={{ label: 'Cotizar directamente', href: '/cotizar/' }}
+/>
+
 <CtaBarFinal headline="¿Lista la Zona de Niños?" subtext="Cotiza el Set Infantil Temático para tu fecha. Respondemos el mismo día con disponibilidad de colores." phone="55 6432 8954" whatsapp="5564328954" waMessage="Hola, quiero cotizar el Set Picnic Infantil Temático para mi evento." cotizarHref="/cotizar/" />
 <WaBubble whatsapp="5564328954" message="Hola, me interesa rentar el Set Picnic Infantil Temático." />
 <Fragment slot="head">

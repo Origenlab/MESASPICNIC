@@ -9,8 +9,8 @@ import ServiceCard from '../../../components/ServiceCard.astro';
 import ProductGallery from '../../../components/ProductGallery.astro';
 import FaqSection from '../../../components/FaqSection.astro';
 import TestimonialCard from '../../../components/TestimonialCard.astro';
+import NextStep from '../../components/NextStep.astro';
 import CtaBarFinal from '../../../components/CtaBarFinal.astro';
-import WaBubble from '../../../components/WaBubble.astro';
 ---
 
 <BaseLayout
@@ -347,6 +347,17 @@ import WaBubble from '../../../components/WaBubble.astro';
 </section>
 
 <!-- CTA Final -->
+
+<!-- Siguiente paso: Ver catálogo -->
+<NextStep
+  titulo="¿Ya encontraste tu servicio?"
+  subtitulo="Explora el catálogo completo con 20 modelos de mobiliario. Hay una opción ideal para tu evento."
+  href="/catalogo/"
+  btnLabel="Ver catálogo completo →"
+  step={1}
+  secondBtn={{ label: 'Ver paquetes', href: '/paquetes/' }}
+/>
+
 <CtaBarFinal
   headline="¿Ya tienes fecha? Asegura tu mobiliario hoy."
   subtext="Te cotizamos el mismo día y separamos la fecha con un anticipo. Las bodas de fin de semana se agotan rápido en temporada alta."
@@ -356,8 +367,6 @@ import WaBubble from '../../../components/WaBubble.astro';
   cotizarHref="/cotizar/"
 />
 
-<!-- WA Bubble -->
-<WaBubble whatsapp="5564328954" message="Hola, quiero cotizar mesas de madera para mi boda." />
 
 <!-- Schema JSON-LD -->
 <Fragment slot="head">

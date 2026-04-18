@@ -8,6 +8,7 @@ import FeatureCard from '../../../components/FeatureCard.astro';
 import ServiceCard from '../../../components/ServiceCard.astro';
 import ProductGallery from '../../../components/ProductGallery.astro';
 import FaqSection from '../../../components/FaqSection.astro';
+import NextStep from '../../components/NextStep.astro';
 import CtaBarFinal from '../../../components/CtaBarFinal.astro';
 import WaBubble from '../../../components/WaBubble.astro';
 ---
@@ -230,6 +231,16 @@ import WaBubble from '../../../components/WaBubble.astro';
     ]}
   />
 </section>
+
+
+<!-- Siguiente paso: Cotizar -->
+<NextStep
+  titulo="¿Ya elegiste tu paquete?"
+  subtitulo="Solicita tu cotización sin compromiso. Te confirmamos disponibilidad y precio el mismo día."
+  href="/cotizar/"
+  btnLabel="Solicitar cotización →"
+  step={3}
+/>
 
 <CtaBarFinal
   headline="¿Tu evento es para hasta 24 personas?"

@@ -1,0 +1,265 @@
+---
+/**
+ * FunnelProgress — MESPIC Navigation Funnel
+ * ─────────────────────────────────────────
+ * Barra de 4 etapas que guía al cliente por el sitio.
+ * Auto-detecta la etapa actual desde Astro.url.pathname.
+ * Etapas: Servicios → Catálogo → Paquetes → Cotizar
+ */
+
+const path = Astro.url.pathname;
+
+let activeStep = 0;
+if (path === '/' || path === '') activeStep = 0;
+else if (path.startsWith('/servicios')) activeStep = 1;
+else if (path.startsWith('/catalogo')) activeStep = 2;
+else if (path.startsWith('/paquetes')) activeStep = 3;
+else if (path.startsWith('/cotizar') || path.startsWith('/contacto')) activeStep = 4;
+
+// On home, show step 1 as "next"
+const displayStep = activeStep === 0 ? 1 : activeStep;
+
+const steps = [
+  {
+    num: 1,
+    label: 'Servicios',
+    sub: 'Elige tu tipo de evento',
+    href: '/servicios/',
+    icon: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>`,
+  },
+  {
+    num: 2,
+    label: 'Catálogo',
+    sub: 'Explora el mobiliario',
+    href: '/catalogo/',
+    icon: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+  },
+  {
+    num: 3,
+    label: 'Paquetes',
+    sub: 'Selecciona la cantidad',
+    href: '/paquetes/',
+    icon: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>`,
+  },
+  {
+    num: 4,
+    label: 'Cotizar',
+    sub: 'Obtén tu precio',
+    href: '/cotizar/',
+    icon: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>`,
+  },
+];
+---
+
+<div class="funnel-bar" role="navigation" aria-label="Tu recorrido por MESPIC">
+  <div class="funnel-bar__inner">
+    <span class="funnel-bar__label">Tu recorrido:</span>
+    <ol class="funnel-steps" role="list">
+      {steps.map((step, i) => {
+        const isDone = step.num < displayStep;
+        const isCurrent = step.num === displayStep;
+        const isFuture = step.num > displayStep;
+        return (
+          <>
+            <li
+              class:list={[
+                'funnel-step',
+                isDone && 'funnel-step--done',
+                isCurrent && 'funnel-step--current',
+                isFuture && 'funnel-step--future',
+              ]}
+            >
+              <a href={step.href} class="funnel-step__link" aria-current={isCurrent ? 'step' : undefined}>
+                <span class="funnel-step__dot" aria-hidden="true">
+                  {isDone ? (
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  ) : (
+                    <span class="funnel-step__num">{step.num}</span>
+                  )}
+                </span>
+                <span class="funnel-step__text">
+                  <span class="funnel-step__name">{step.label}</span>
+                  <span class="funnel-step__sub">{step.sub}</span>
+                </span>
+              </a>
+            </li>
+            {i < steps.length - 1 && (
+              <li class="funnel-connector" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              </li>
+            )}
+          </>
+        );
+      })}
+    </ol>
+  </div>
+</div>
+
+<style>
+  .funnel-bar {
+    background: #0d0d0d;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0.55rem 0;
+  }
+
+  .funnel-bar__inner {
+    max-width: var(--container, 1400px);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .funnel-bar__label {
+    font-size: 0.6875rem;
+    color: rgba(255, 255, 255, 0.28);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* ─── Steps list ─── */
+  .funnel-steps {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .funnel-steps::-webkit-scrollbar { display: none; }
+
+  /* ─── Connector arrow ─── */
+  .funnel-connector {
+    display: flex;
+    align-items: center;
+    padding: 0 0.25rem;
+    color: rgba(255, 255, 255, 0.15);
+    flex-shrink: 0;
+  }
+
+  /* ─── Individual step ─── */
+  .funnel-step {
+    flex-shrink: 0;
+  }
+
+  .funnel-step__link {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+
+  .funnel-step__link:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  /* ─── Dot / badge ─── */
+  .funnel-step__dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    transition: background 0.15s ease;
+  }
+
+  .funnel-step__num {
+    font-size: 0.625rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  /* ─── Text ─── */
+  .funnel-step__text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  .funnel-step__name {
+    font-size: 0.75rem;
+    font-weight: 650;
+    white-space: nowrap;
+  }
+
+  .funnel-step__sub {
+    font-size: 0.6rem;
+    white-space: nowrap;
+    opacity: 0.6;
+  }
+
+  /* ══════════════════════════
+     STATE: DONE (past steps)
+  ══════════════════════════ */
+  .funnel-step--done .funnel-step__dot {
+    background: rgba(200, 149, 108, 0.2);
+    color: var(--c-accent, #C8956C);
+    border: 1.5px solid rgba(200, 149, 108, 0.4);
+  }
+  .funnel-step--done .funnel-step__name {
+    color: var(--c-accent, #C8956C);
+  }
+  .funnel-step--done .funnel-step__sub {
+    color: rgba(200, 149, 108, 0.5);
+  }
+
+  /* ══════════════════════════
+     STATE: CURRENT
+  ══════════════════════════ */
+  .funnel-step--current .funnel-step__dot {
+    background: var(--c-primary, #2C5530);
+    color: #fff;
+    border: 1.5px solid rgba(44, 85, 48, 0.8);
+    box-shadow: 0 0 0 3px rgba(44, 85, 48, 0.25);
+  }
+  .funnel-step--current .funnel-step__name {
+    color: #fff;
+  }
+  .funnel-step--current .funnel-step__sub {
+    color: rgba(255, 255, 255, 0.45);
+  }
+  .funnel-step--current .funnel-step__link {
+    background: rgba(44, 85, 48, 0.12);
+  }
+
+  /* ══════════════════════════
+     STATE: FUTURE
+  ══════════════════════════ */
+  .funnel-step--future .funnel-step__dot {
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.3);
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+  }
+  .funnel-step--future .funnel-step__name {
+    color: rgba(255, 255, 255, 0.3);
+  }
+  .funnel-step--future .funnel-step__sub {
+    color: rgba(255, 255, 255, 0.18);
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 768px) {
+    .funnel-bar__label { display: none; }
+    .funnel-bar__inner { padding: 0 0.75rem; }
+    .funnel-step__sub { display: none; }
+    .funnel-step__link { padding: 0.2rem 0.375rem; }
+  }
+
+  @media (max-width: 480px) {
+    .funnel-step__name { font-size: 0.6875rem; }
+  }
+</style>

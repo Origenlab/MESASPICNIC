@@ -8,6 +8,7 @@ import ServiceCard from '../../components/ServiceCard.astro';
 import FeatureCard from '../../components/FeatureCard.astro';
 import GallerySection from '../../components/GallerySection.astro';
 import FaqSection from '../../components/FaqSection.astro';
+import NextStep from '../components/NextStep.astro';
 import CtaBarFinal from '../../components/CtaBarFinal.astro';
 
 const galeriaServicios = [
@@ -361,6 +362,17 @@ const galeriaServicios = [
 </section>
 
 <!-- CTA Final -->
+
+<!-- Siguiente paso: Ver catálogo -->
+<NextStep
+  titulo="¿Ya encontraste tu servicio?"
+  subtitulo="Explora el catálogo completo con 20 modelos de mobiliario. Hay una opción ideal para tu evento."
+  href="/catalogo/"
+  btnLabel="Ver catálogo completo →"
+  step={1}
+  secondBtn={{ label: 'Ver paquetes', href: '/paquetes/' }}
+/>
+
 <CtaBarFinal
   headline="¿Ya sabes qué servicio necesitas?"
   subtext="Cotiza sin compromiso. Te asesoramos según tu evento y presupuesto."

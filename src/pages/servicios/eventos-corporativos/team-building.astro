@@ -8,8 +8,8 @@ import FeatureCard from '../../../components/FeatureCard.astro';
 import ServiceCard from '../../../components/ServiceCard.astro';
 import ProductGallery from '../../../components/ProductGallery.astro';
 import FaqSection from '../../../components/FaqSection.astro';
+import NextStep from '../../components/NextStep.astro';
 import CtaBarFinal from '../../../components/CtaBarFinal.astro';
-import WaBubble from '../../../components/WaBubble.astro';
 ---
 
 <BaseLayout
@@ -115,8 +115,18 @@ import WaBubble from '../../../components/WaBubble.astro';
   />
 </section>
 
+
+<!-- Siguiente paso: Ver catálogo -->
+<NextStep
+  titulo="¿Ya encontraste tu servicio?"
+  subtitulo="Explora el catálogo completo con 20 modelos de mobiliario. Hay una opción ideal para tu evento."
+  href="/catalogo/"
+  btnLabel="Ver catálogo completo →"
+  step={1}
+  secondBtn={{ label: 'Ver paquetes', href: '/paquetes/' }}
+/>
+
 <CtaBarFinal headline="¿Organizando un team building?" subtext="Cotiza con factura CFDI. Te respondemos el mismo día." phone="55 6432 8954" whatsapp="5564328954" waMessage="Hola, necesito cotizar mesas para un team building." cotizarHref="/cotizar/" />
-<WaBubble whatsapp="5564328954" message="Hola, necesito cotizar mesas para un team building." />
 
 <Fragment slot="head">
   <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Renta de Mesas para Team Building", "provider": { "@type": "LocalBusiness", "name": "MESPIC", "telephone": "+52-55-3128-1706" }, "areaServed": [{ "@type": "City", "name": "Ciudad de México" }, { "@type": "State", "name": "Estado de México" }], "description": "Renta de bancas de madera para dinámicas de team building al aire libre en CDMX y Edomex." })} />

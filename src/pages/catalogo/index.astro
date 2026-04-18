@@ -7,6 +7,7 @@ import SectionHeader from '../../components/SectionHeader.astro';
 import FeatureCard from '../../components/FeatureCard.astro';
 import GallerySection from '../../components/GallerySection.astro';
 import FaqSection from '../../components/FaqSection.astro';
+import NextStep from '../components/NextStep.astro';
 import CtaBarFinal from '../../components/CtaBarFinal.astro';
 import WaBubble from '../../components/WaBubble.astro';
 
@@ -533,6 +534,17 @@ const galeriaCatalogo = [
     ]}
   />
 </section>
+
+
+<!-- Siguiente paso: Ver paquetes -->
+<NextStep
+  titulo="¿Ya elegiste el mobiliario que necesitas?"
+  subtitulo="Selecciona el paquete que mejor se adapta al número de invitados de tu evento. Precio final sin extras."
+  href="/paquetes/"
+  btnLabel="Ver paquetes disponibles →"
+  step={2}
+  secondBtn={{ label: 'Cotizar directamente', href: '/cotizar/' }}
+/>
 
 <CtaBarFinal
   headline="¿Ya sabes qué modelo necesitas?"

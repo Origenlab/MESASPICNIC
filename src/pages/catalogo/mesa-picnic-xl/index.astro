@@ -8,6 +8,7 @@ import FeatureCard from '../../../components/FeatureCard.astro';
 import ServiceCard from '../../../components/ServiceCard.astro';
 import ProductGallery from '../../../components/ProductGallery.astro';
 import FaqSection from '../../../components/FaqSection.astro';
+import NextStep from '../../components/NextStep.astro';
 import CtaBarFinal from '../../../components/CtaBarFinal.astro';
 import WaBubble from '../../../components/WaBubble.astro';
 ---
@@ -130,6 +131,17 @@ import WaBubble from '../../../components/WaBubble.astro';
       { question: "¿La entrega de la Mesa XL tiene algún costo adicional por el tamaño?", answer: "No. La Mesa XL está incluida en el servicio estándar de entrega, montaje y recolección de MESPIC sin costo adicional por tamaño o peso. El precio cotizado es el precio final, incluyendo logística completa en CDMX y Estado de México." }
     ]} />
 </section>
+
+<!-- Siguiente paso: Ver paquetes -->
+<NextStep
+  titulo="¿Ya elegiste el mobiliario que necesitas?"
+  subtitulo="Selecciona el paquete que mejor se adapta al número de invitados de tu evento. Precio final sin extras."
+  href="/paquetes/"
+  btnLabel="Ver paquetes disponibles →"
+  step={2}
+  secondBtn={{ label: 'Cotizar directamente', href: '/cotizar/' }}
+/>
+
 <CtaBarFinal headline="¿Lista tu Mesa XL?" subtext="Cotiza disponibilidad para tu fecha. Respondemos el mismo día con precio y croquis de distribución." phone="55 6432 8954" whatsapp="5564328954" waMessage="Hola, quiero cotizar la Mesa Picnic XL para mi evento." cotizarHref="/cotizar/" />
 <WaBubble whatsapp="5564328954" message="Hola, me interesa rentar la Mesa Picnic XL." />
 <Fragment slot="head">

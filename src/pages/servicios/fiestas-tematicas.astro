@@ -8,8 +8,8 @@ import FeatureCard from '../../components/FeatureCard.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import ProductGallery from '../../components/ProductGallery.astro';
 import FaqSection from '../../components/FaqSection.astro';
+import NextStep from '../components/NextStep.astro';
 import CtaBarFinal from '../../components/CtaBarFinal.astro';
-import WaBubble from '../../components/WaBubble.astro';
 ---
 
 <BaseLayout
@@ -215,6 +215,17 @@ import WaBubble from '../../components/WaBubble.astro';
   />
 </section>
 
+
+<!-- Siguiente paso: Ver catálogo -->
+<NextStep
+  titulo="¿Ya encontraste tu servicio?"
+  subtitulo="Explora el catálogo completo con 20 modelos de mobiliario. Hay una opción ideal para tu evento."
+  href="/catalogo/"
+  btnLabel="Ver catálogo completo →"
+  step={1}
+  secondBtn={{ label: 'Ver paquetes', href: '/paquetes/' }}
+/>
+
 <CtaBarFinal
   headline="¿Tienes un concepto en mente?"
   subtext="Dinos tu temática y te decimos cómo la montamos."
@@ -224,7 +235,6 @@ import WaBubble from '../../components/WaBubble.astro';
   cotizarHref="/cotizar/"
 />
 
-<WaBubble whatsapp="5564328954" message="Hola, quiero cotizar mesas para una fiesta temática." />
 
 <Fragment slot="head">
   <script type="application/ld+json" set:html={JSON.stringify({

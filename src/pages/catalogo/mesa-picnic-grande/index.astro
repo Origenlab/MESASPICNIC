@@ -8,6 +8,7 @@ import FeatureCard from '../../../components/FeatureCard.astro';
 import ServiceCard from '../../../components/ServiceCard.astro';
 import ProductGallery from '../../../components/ProductGallery.astro';
 import FaqSection from '../../../components/FaqSection.astro';
+import NextStep from '../../components/NextStep.astro';
 import CtaBarFinal from '../../../components/CtaBarFinal.astro';
 import WaBubble from '../../../components/WaBubble.astro';
 ---
@@ -282,6 +283,17 @@ import WaBubble from '../../../components/WaBubble.astro';
     </div>
   </div>
 </section>
+
+
+<!-- Siguiente paso: Ver paquetes -->
+<NextStep
+  titulo="¿Ya elegiste el mobiliario que necesitas?"
+  subtitulo="Selecciona el paquete que mejor se adapta al número de invitados de tu evento. Precio final sin extras."
+  href="/paquetes/"
+  btnLabel="Ver paquetes disponibles →"
+  step={2}
+  secondBtn={{ label: 'Cotizar directamente', href: '/cotizar/' }}
+/>
 
 <CtaBarFinal
   headline="¿Necesitas la Mesa Grande para tu evento?"

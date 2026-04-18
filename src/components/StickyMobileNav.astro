@@ -1,0 +1,168 @@
+---
+/**
+ * StickyMobileNav — MESPIC Navigation Funnel
+ * ───────────────────────────────────────────
+ * Barra de navegación fija en la parte inferior del móvil.
+ * Solo visible en pantallas < 768px.
+ * Los 4 pasos del embudo siempre accesibles.
+ * El paso activo se detecta desde la URL (JS).
+ */
+---
+
+<nav class="smn" aria-label="Navegación rápida MESPIC" id="sticky-mobile-nav">
+  <a href="/servicios/" class="smn__item" data-path="servicios">
+    <span class="smn__icon" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+    </span>
+    <span class="smn__label">Servicios</span>
+  </a>
+
+  <a href="/catalogo/" class="smn__item" data-path="catalogo">
+    <span class="smn__icon" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </span>
+    <span class="smn__label">Catálogo</span>
+  </a>
+
+  <a href="/paquetes/" class="smn__item" data-path="paquetes">
+    <span class="smn__icon" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+    </span>
+    <span class="smn__label">Paquetes</span>
+  </a>
+
+  <a href="/cotizar/" class="smn__item smn__item--cta" data-path="cotizar">
+    <span class="smn__icon" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    </span>
+    <span class="smn__label">Cotizar</span>
+  </a>
+</nav>
+
+<script>
+  // Detectar el paso activo desde la URL
+  (function () {
+    const path = window.location.pathname;
+    const nav  = document.getElementById('sticky-mobile-nav');
+    if (!nav) return;
+
+    let active = '';
+    if (path.startsWith('/servicios')) active = 'servicios';
+    else if (path.startsWith('/catalogo')) active = 'catalogo';
+    else if (path.startsWith('/paquetes')) active = 'paquetes';
+    else if (path.startsWith('/cotizar') || path.startsWith('/contacto')) active = 'cotizar';
+
+    if (active) {
+      const el = nav.querySelector(`[data-path="${active}"]`);
+      if (el) el.classList.add('smn__item--active');
+    }
+  })();
+</script>
+
+<style>
+  .smn {
+    display: none; /* visible solo en mobile */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  /* ─── Items ─── */
+  .smn__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    padding: 0.65rem 0.5rem;
+    color: rgba(0, 0, 0, 0.45);
+    text-decoration: none;
+    flex: 1;
+    position: relative;
+    transition: color 0.18s ease;
+  }
+
+  .smn__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 24px;
+    height: 2px;
+    background: var(--c-primary, #2C5530);
+    border-radius: 0 0 2px 2px;
+    transition: transform 0.18s ease;
+    transform-origin: center;
+  }
+
+  .smn__item:hover { color: var(--c-primary, #2C5530); }
+
+  /* Active state */
+  .smn__item--active {
+    color: var(--c-primary, #2C5530);
+  }
+  .smn__item--active::before {
+    transform: translateX(-50%) scaleX(1);
+  }
+  .smn__item--active .smn__label {
+    font-weight: 700;
+  }
+
+  /* CTA item */
+  .smn__item--cta {
+    color: var(--c-accent, #C8956C);
+  }
+  .smn__item--cta .smn__icon {
+    background: rgba(200, 149, 108, 0.1);
+    border-color: rgba(200, 149, 108, 0.2);
+  }
+  .smn__item--cta:hover {
+    color: #b07a52;
+  }
+  .smn__item--cta.smn__item--active {
+    color: var(--c-accent, #C8956C);
+  }
+  .smn__item--cta.smn__item--active::before {
+    background: var(--c-accent, #C8956C);
+  }
+
+  /* Icon wrapper */
+  .smn__icon {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    transition: background 0.18s ease, border-color 0.18s ease;
+  }
+
+  .smn__item--active .smn__icon {
+    background: rgba(44, 85, 48, 0.1);
+    border-color: rgba(44, 85, 48, 0.2);
+  }
+
+  /* Label */
+  .smn__label {
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+
+  /* Only show on mobile */
+  @media (max-width: 768px) {
+    .smn {
+      display: flex;
+    }
+  }
+</style>

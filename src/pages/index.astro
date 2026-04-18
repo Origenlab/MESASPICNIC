@@ -10,6 +10,8 @@ import TestimonialCardEmpresa from '../components/TestimonialCardEmpresa.astro';
 import FaqSection from '../components/FaqSection.astro';
 import CtaBarFinal from '../components/CtaBarFinal.astro';
 import GallerySection from '../components/GallerySection.astro';
+import NextStep from '../components/NextStep.astro';
+import ExploreMore from '../components/ExploreMore.astro';
 
 const galeriaIndex = [
   { src: "/img/boda-hacienda-1.avif", alt: "Mesa larga decorada con flores blancas para boda en hacienda mexicana" },
@@ -294,6 +296,47 @@ const galeriaIndex = [
     ]}
   />
 </section>
+
+<!-- Sigue explorando -->
+<ExploreMore
+  title="Sigue explorando MESPIC"
+  subtitle="Todo lo que necesitas para tu evento en un solo lugar"
+  items={[
+    {
+      href: '/servicios/',
+      label: 'Todos los servicios',
+      sub: 'Bodas, corporativos, infantiles y más',
+      badge: 'Paso 1',
+      isEmoji: true,
+      icon: '🎪',
+    },
+    {
+      href: '/catalogo/',
+      label: 'Catálogo completo',
+      sub: '20 modelos con fichas técnicas y fotos',
+      badge: 'Paso 2',
+      isEmoji: true,
+      icon: '🪵',
+    },
+    {
+      href: '/paquetes/',
+      label: 'Nuestros paquetes',
+      sub: 'Básico · Estándar · Premium',
+      badge: 'Paso 3',
+      isEmoji: true,
+      icon: '📦',
+    },
+  ]}
+/>
+
+<!-- Siguiente paso -->
+<NextStep
+  titulo="¿Ya sabes qué tipo de evento tienes?"
+  subtitulo="Explora todos nuestros servicios especializados: bodas, corporativos, fiestas infantiles, picnics románticos y más."
+  href="/servicios/"
+  btnLabel="Explorar servicios →"
+  secondBtn={{ label: 'Ver catálogo', href: '/catalogo/' }}
+/>
 
 <!-- CTA Final -->
 <CtaBarFinal

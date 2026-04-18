@@ -8,6 +8,7 @@ import FeatureCard from '../../../components/FeatureCard.astro';
 import ServiceCard from '../../../components/ServiceCard.astro';
 import ProductGallery from '../../../components/ProductGallery.astro';
 import FaqSection from '../../../components/FaqSection.astro';
+import NextStep from '../../components/NextStep.astro';
 import CtaBarFinal from '../../../components/CtaBarFinal.astro';
 import WaBubble from '../../../components/WaBubble.astro';
 ---
@@ -130,6 +131,17 @@ import WaBubble from '../../../components/WaBubble.astro';
       { question: "¿La entrega incluye las bancas además de las mesas?", answer: "Sí. Cuando rentas bancas junto con mesas del catálogo, la entrega y montaje incluye ambos elementos en el mismo servicio sin costo adicional. Las bancas individuales también tienen servicio de entrega independiente si las rentas sin mesas." }
     ]} />
 </section>
+
+<!-- Siguiente paso: Ver paquetes -->
+<NextStep
+  titulo="¿Ya elegiste el mobiliario que necesitas?"
+  subtitulo="Selecciona el paquete que mejor se adapta al número de invitados de tu evento. Precio final sin extras."
+  href="/paquetes/"
+  btnLabel="Ver paquetes disponibles →"
+  step={2}
+  secondBtn={{ label: 'Cotizar directamente', href: '/cotizar/' }}
+/>
+
 <CtaBarFinal headline="¿Cuántas Bancas Necesitas?" subtext="Cotiza disponibilidad de Bancas Individuales para tu fecha. Respondemos el mismo día." phone="55 6432 8954" whatsapp="5564328954" waMessage="Hola, quiero cotizar Bancas Picnic Individuales para mi evento." cotizarHref="/cotizar/" />
 <WaBubble whatsapp="5564328954" message="Hola, me interesa rentar Bancas Picnic Individuales." />
 <Fragment slot="head">

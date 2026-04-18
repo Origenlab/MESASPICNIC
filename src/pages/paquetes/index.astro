@@ -8,6 +8,7 @@ import ServiceCard from '../../components/ServiceCard.astro';
 import FeatureCard from '../../components/FeatureCard.astro';
 import GallerySection from '../../components/GallerySection.astro';
 import FaqSection from '../../components/FaqSection.astro';
+import NextStep from '../components/NextStep.astro';
 import CtaBarFinal from '../../components/CtaBarFinal.astro';
 import WaBubble from '../../components/WaBubble.astro';
 
@@ -327,6 +328,16 @@ const galeriaPaquetes = [
 </section>
 
 <!-- CTA Final -->
+
+<!-- Siguiente paso: Cotizar -->
+<NextStep
+  titulo="¿Ya elegiste tu paquete?"
+  subtitulo="Solicita tu cotización sin compromiso. Te confirmamos disponibilidad y precio el mismo día."
+  href="/cotizar/"
+  btnLabel="Solicitar cotización →"
+  step={3}
+/>
+
 <CtaBarFinal
   headline="¿Listo para reservar tu paquete?"
   subtext="Cotiza sin compromiso. Te confirmamos disponibilidad y precio el mismo día."
