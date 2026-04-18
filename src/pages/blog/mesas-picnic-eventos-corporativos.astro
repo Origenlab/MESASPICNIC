@@ -453,7 +453,7 @@ import BlogLayout from '../../layouts/BlogLayout.astro';
     <p>Cuéntanos la fecha, el número de asistentes y el formato del evento. Te enviamos una propuesta detallada en PDF con precios, distribución y condiciones para proceso de compras.</p>
     <div class="art__final-cta-btns">
       <a href="/cotizar/" class="art__cta-btn">Solicitar cotización empresarial →</a>
-      <a href="https://wa.me/525512345678?text=Hola,%20quiero%20cotizar%20mesas%20picnic%20para%20un%20evento%20corporativo" class="art__cta-btn art__cta-btn--wa" target="_blank" rel="noopener">WhatsApp directo</a>
+      <a href="https://wa.me/525512345678?text=Hola,%20quiero%20cotizar%20mesas%20picnic%20para%20un%20evento%20corporativo" class="art__cta-btn art__cta-btn--wa" target="_blank" rel="noopener" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">WhatsApp directo</a>
       <a href="/catalogo/" class="art__cta-btn art__cta-btn--sec">Ver catálogo de mesas</a>
     </div>
   </section>

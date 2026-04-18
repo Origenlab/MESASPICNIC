@@ -65,6 +65,7 @@ import CtaBarFinal from '../components/CtaBarFinal.astro';
         <!-- Tarjeta WhatsApp -->
         <a
           href="https://wa.me/5215564328954?text=Hola%2C%20quiero%20cotizar%20mesas%20picnic%20para%20mi%20evento."
+          onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}"
           target="_blank"
           rel="noopener"
           class="channel-card channel-card--wa"
@@ -219,6 +220,7 @@ import CtaBarFinal from '../components/CtaBarFinal.astro';
               </button>
               <a
                 href="https://wa.me/5215564328954?text=Hola%2C%20quiero%20cotizar%20mesas%20picnic%20para%20mi%20evento."
+                onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}"
                 target="_blank"
                 rel="noopener"
                 class="cform__btn-wa"
@@ -425,7 +427,7 @@ import CtaBarFinal from '../components/CtaBarFinal.astro';
       if (email)     text += ' Correo: ' + email + '.';
       if (message)   text += ' Nota: ' + message;
 
-      window.open('https://wa.me/5215564328954?text=' + encodeURIComponent(text), '_blank');
+      if (window.openMespicChat) { openMespicChat(); } else { window.open('https://wa.me/5215564328954?text=' + encodeURIComponent(text), '_blank', 'noopener'); }
     });
   }
 </script>

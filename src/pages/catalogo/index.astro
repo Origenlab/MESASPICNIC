@@ -7,7 +7,8 @@ import SectionHeader from '../../components/SectionHeader.astro';
 import FeatureCard from '../../components/FeatureCard.astro';
 import GallerySection from '../../components/GallerySection.astro';
 import FaqSection from '../../components/FaqSection.astro';
-import NextStep from '../components/NextStep.astro';
+import ExploreMore from '../../components/ExploreMore.astro';
+import NextStep from '../../components/NextStep.astro';
 import CtaBarFinal from '../../components/CtaBarFinal.astro';
 import WaBubble from '../../components/WaBubble.astro';
 
@@ -125,6 +126,26 @@ const modelos = [
     usos: ["bodas", "premium"], acento: "premium",
   },
   {
+    id: "farm-hairpin", href: "/catalogo/mesa-farm-hairpin",
+    image: "/img/catalogo/mesa-farm-americana-madera-evento-jardin-01.webp",
+    alt: "Mesa farm patas de horquilla hierro negro pino natural para evento y boda al aire libre",
+    badge: "Tendencia 2025", categoria: "especial", categoriaLabel: "Mesa Especial",
+    nombre: "Mesa Farm Patas de Horquilla", capacidadLabel: "8–10 personas", capacidadNum: 10,
+    specs: ["2.40 × 0.84 m", "Hierro forjado negro", "Sin bancas — sillas libres"],
+    descripcion: "Tablero de pino barnizado con patas de hierro forjado negro mate. La mesa más fotogénica del catálogo — estilo industrial-natural que domina bodas y activaciones de marca premium.",
+    usos: ["bodas", "corporativo", "fotografía"], acento: "primary",
+  },
+  {
+    id: "sweetheart", href: "/catalogo/mesa-sweetheart-boda",
+    image: "/img/catalogo/mesa-redonda-madera-evento-boda-01.webp",
+    alt: "Mesa sweetheart exclusiva para novios en boda al aire libre CDMX",
+    badge: "Para los novios", categoria: "especial", categoriaLabel: "Mesa Especial",
+    nombre: "Mesa Sweetheart para Novios", capacidadLabel: "2 personas", capacidadNum: 2,
+    specs: ["1.50 × 0.84 m", "Barniz 4 manos", "Solo para la pareja"],
+    descripcion: "La mesa más especial del catálogo. Exclusiva para la pareja de novios. El centro visual de cualquier boda al aire libre — los protagonistas merecen su propio espacio.",
+    usos: ["bodas", "romantico", "premium"], acento: "premium",
+  },
+  {
     id: "parota", href: "/catalogo/mesa-picnic-parota",
     image: "/img/catalogo/mesa-picnic-parota-madera-premium-vip-01.webp",
     alt: "Mesa picnic de parota maciza mexicana para bodas VIP",
@@ -220,7 +241,7 @@ const modelos = [
 
 const categorias = [
   { id: "clasica",     label: "Mesas Picnic",        count: 8  },
-  { id: "especial",    label: "Mesas Especiales",     count: 4  },
+  { id: "especial",    label: "Mesas Especiales",     count: 6  },
   { id: "complemento", label: "Sets y Complementos",  count: 6  },
   { id: "ninos",       label: "Para Niños",           count: 2  },
 ];
@@ -339,6 +360,7 @@ const galeriaCatalogo = [
         <p class="sidebar-wa__text">¿No sabes cuál elegir? Te asesoramos gratis en minutos.</p>
         <a
           href="https://wa.me/5531281706?text=Hola%2C+quisiera+asesor%C3%ADa+para+elegir+el+modelo+adecuado+para+mi+evento."
+          onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}"
           class="sidebar-wa__btn"
           target="_blank" rel="noopener noreferrer"
         >
@@ -535,6 +557,38 @@ const galeriaCatalogo = [
   />
 </section>
 
+
+<!-- Sigue explorando -->
+<ExploreMore
+  title="Sigue explorando"
+  subtitle="Ya conoces el mobiliario — ahora elige tu paquete"
+  items={[
+    {
+      href: '/paquetes/',
+      label: 'Paquetes por número de invitados',
+      sub: 'Básico (24) · Estándar (36) · Premium (60 personas)',
+      badge: 'Siguiente paso',
+      isEmoji: true,
+      icon: '📦',
+    },
+    {
+      href: '/servicios/',
+      label: 'Ver todos los servicios',
+      sub: 'Bodas, corporativos, infantiles, festivales y más',
+      badge: 'Servicios',
+      isEmoji: true,
+      icon: '🎪',
+    },
+    {
+      href: '/blog/',
+      label: 'Consultar guías del blog',
+      sub: 'Cuántas mesas necesitas, decoración y más',
+      badge: 'Guías',
+      isEmoji: true,
+      icon: '📖',
+    },
+  ]}
+/>
 
 <!-- Siguiente paso: Ver paquetes -->
 <NextStep
