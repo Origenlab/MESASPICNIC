@@ -68,5 +68,44 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toStri
   <!-- DMChamp Chat Widget -->
   <script is:inline src="https://api.dmchamp.com/v1/chat-widget/MudstzucAJwOXl5hvruG"></script>
   <!-- End DMChamp Chat Widget -->
+
+  <!-- ═══════════════════════════════════════════════════════
+       EMBUDO MESPIC — Todos los contactos pasan por DMChamp
+       ═══════════════════════════════════════════════════════ -->
+  <script is:inline>
+    (function () {
+      var WA_FALLBACK = 'https://wa.me/5564328954?text=' + encodeURIComponent('Hola, quiero cotizar mesas picnic para mi evento.');
+
+      // Abre el chat de DMChamp; si no está listo, abre WhatsApp como fallback
+      function openMespicChat() {
+        var bubble = document.querySelector('.wai-chat-bubble');
+        if (bubble) {
+          bubble.click();
+          return;
+        }
+        // Widget aún no cargó — reintenta una vez tras 800ms
+        setTimeout(function () {
+          var bubble2 = document.querySelector('.wai-chat-bubble');
+          if (bubble2) {
+            bubble2.click();
+          } else {
+            window.open(WA_FALLBACK, '_blank', 'noopener');
+          }
+        }, 800);
+      }
+
+      // Exponer globalmente para uso en onclick inline
+      window.openMespicChat = openMespicChat;
+
+      // Interceptar TODOS los links wa.me del sitio
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href*="wa.me"]');
+        if (!link) return;
+        e.preventDefault();
+        openMespicChat();
+      }, true);
+    })();
+  </script>
+  <!-- ═══ Fin embudo MESPIC ═══ -->
 </body>
 </html>
