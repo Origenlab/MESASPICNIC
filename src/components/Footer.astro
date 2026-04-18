@@ -31,6 +31,10 @@ const year = new Date().getFullYear();
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             Lun–Dom 8:00–20:00
           </span>
+          <span class="ft__address">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Calle Gob. García Conde 34, Col. San Miguel Chapultepec I Secc, Miguel Hidalgo, 11800 CDMX
+          </span>
         </div>
       </div>
 
@@ -194,6 +198,21 @@ const year = new Date().getFullYear();
   .ft__schedule svg {
     flex-shrink: 0;
     opacity: 0.5;
+  }
+
+  .ft__address {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    color: #71717A;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+  }
+
+  .ft__address svg {
+    flex-shrink: 0;
+    opacity: 0.5;
+    margin-top: 2px;
   }
 
   /* ── Columnas de links ── */
