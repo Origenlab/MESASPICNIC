@@ -125,6 +125,7 @@ Procfile    text
 
 ## GRAPHICS
 *.ai   binary
+*.avif binary
 *.bmp  binary
 *.eps  binary
 *.gif  binary
