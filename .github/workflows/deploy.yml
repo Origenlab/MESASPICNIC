@@ -31,10 +31,10 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to main (root)
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
-          branch: gh-pages
-          clean: true
+          branch: main
+          clean: false
           single-commit: false
