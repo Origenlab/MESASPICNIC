@@ -1,0 +1,105 @@
+---
+/**
+ * Img Component — wrapper sobre <img> con CDN ExactDN (ewww.io)
+ * ──────────────────────────────────────────────────────────────
+ * Reescribe automáticamente el src para usar el CDN en producción.
+ * En dev local mantiene rutas /img/... sin tocar.
+ *
+ * Uso básico:
+ *   <Img src="/img/boda-boho-1.avif" alt="Boda boho al aire libre" />
+ *
+ * Con dimensiones (recomendado para LCP / hero):
+ *   <Img src="/img/hero.webp" alt="..." width={1600} height={900} />
+ *
+ * Con srcset responsive:
+ *   <Img
+ *     src="/img/hero.webp"
+ *     alt="..."
+ *     widths={[640, 960, 1280, 1920]}
+ *     sizes="(max-width: 768px) 100vw, 1600px"
+ *   />
+ *
+ * Props extra van como atributos HTML (class, style, decoding, etc.).
+ */
+import { cdnUrl, cdnSrcset, type CdnOpts } from "@/lib/cdn";
+
+interface Props {
+  src: string;
+  alt: string;
+  width?: number | string;
+  height?: number | string;
+  /** Lista de anchos para generar srcset (opcional) */
+  widths?: number[];
+  /** Atributo sizes para srcset */
+  sizes?: string;
+  /** loading: "lazy" (default) o "eager" (hero / above-the-fold) */
+  loading?: "lazy" | "eager";
+  /** decoding: "async" (default) o "sync" */
+  decoding?: "async" | "sync" | "auto";
+  /** fetchpriority: "high" | "low" | "auto" — para LCP */
+  fetchpriority?: "high" | "low" | "auto";
+  /** Calidad 1-100 (ExactDN, default 82) */
+  quality?: number;
+  /** Ancho máximo para transformación CDN */
+  w?: number;
+  /** Alto máximo para transformación CDN */
+  h?: number;
+  /** Clase CSS */
+  class?: string;
+  /** Estilo inline */
+  style?: string;
+  /** itemprop para microdatos */
+  itemprop?: string;
+  /** Desactivar CDN para esta imagen */
+  bypassCdn?: boolean;
+  /** Atributos extra arbitrarios */
+  [key: string]: any;
+}
+
+const {
+  src,
+  alt,
+  width,
+  height,
+  widths,
+  sizes,
+  loading = "lazy",
+  decoding = "async",
+  fetchpriority,
+  quality,
+  w,
+  h,
+  class: className,
+  style,
+  itemprop,
+  bypassCdn = false,
+  ...rest
+} = Astro.props;
+
+const cdnOpts: CdnOpts = {
+  q: quality,
+  w,
+  h,
+  bypass: bypassCdn,
+};
+
+const finalSrc = cdnUrl(src, cdnOpts);
+const finalSrcset =
+  widths && widths.length > 0 ? cdnSrcset(src, widths, { q: quality, bypass: bypassCdn }) : undefined;
+---
+
+<img
+  src={finalSrc}
+  srcset={finalSrcset}
+  sizes={sizes}
+  alt={alt}
+  width={width}
+  height={height}
+  loading={loading}
+  decoding={decoding}
+  fetchpriority={fetchpriority}
+  class={className}
+  style={style}
+  itemprop={itemprop}
+  {...rest}
+/>
