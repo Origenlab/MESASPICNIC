@@ -10,334 +10,242 @@ import FaqSection from '../../components/FaqSection.astro';
 import CtaBarFinal from '../../components/CtaBarFinal.astro';
 import WaBubble from '../../components/WaBubble.astro';
 
-const galeriaCatalogo = [
-  { src: "/img/mesa-picnic-boda-elegante-decoracion.avif",                               alt: "Mesa picnic estándar de pino natural decorada para boda al aire libre" },
-  { src: "/img/catalogo/mesa-picnic-hexagonal-madera-6-personas-jardin-01.webp",          alt: "Mesa picnic hexagonal de pino en boda boho al aire libre con decoración floral" },
-  { src: "/img/catalogo/mesa-farm-americana-madera-evento-jardin-01.webp",                alt: "Mesa farm americana de madera para evento al aire libre con decoración de jardín" },
-  { src: "/img/catalogo/mesa-redonda-madera-evento-boda-01.webp",                         alt: "Mesa redonda de madera natural para boda íntima en exterior" },
-  { src: "/img/mesa-picnic-evento-corporativo-networking.avif",                           alt: "Mesa picnic grande para evento corporativo con networking al exterior" },
-  { src: "/img/catalogo/mesa-alta-cocktail-madera-networking-03.webp",                    alt: "Mesas altas cocktail de madera en evento standing de lanzamiento de producto" },
-  { src: "/img/catalogo/mesa-biergarten-madera-festival-01.webp",                         alt: "Mesa biergarten de madera con bancas removibles en festival gastronómico exterior" },
-  { src: "/img/catalogo/mesa-madera-teka-premium-exterior-01.webp",                       alt: "Mesa de madera con acabado teka premium en terraza de evento VIP" },
-  { src: "/img/catalogo/barra-madera-eventos-cocktail-boda-03.webp",                      alt: "Barra de madera para cocktail en boda exterior con servicio de bebidas" },
-  { src: "/img/catalogo/set-comedor-exterior-formal-bodas-03.webp",                       alt: "Set comedor exterior con sillas crossback para cena formal en boda al aire libre" },
-  { src: "/img/catalogo/mesa-picnic-xl-extra-larga-3m-16-personas-01.webp",               alt: "Mesa picnic XL de 3 metros para 16 personas en evento masivo al aire libre" },
-  { src: "/img/catalogo/set-lounge-exterior-madera-vip-evento-01.webp",                   alt: "Set lounge exterior de madera con tapizado para zona VIP en evento de lujo" },
-];
-
 const modelos = [
+  // ── MESAS PICNIC CLÁSICAS (8) ──────────────────────────────────────────────
   {
-    id: "estandar",
-    href: "/catalogo/mesa-picnic-estandar/",
+    id: "estandar", href: "/catalogo/mesa-picnic-estandar",
     image: "/img/mesa-picnic-boda-elegante-decoracion.avif",
     alt: "Mesa picnic estándar de pino natural para 6 personas en boda al aire libre",
-    badge: "El más solicitado",
-    tipo: "Estándar",
-    nombre: "Mesa Picnic Estándar",
-    capacidad: "6",
-    unidad: "personas",
+    badge: "El más solicitado", categoria: "clasica", categoriaLabel: "Mesa Picnic",
+    nombre: "Mesa Picnic Estándar", capacidadLabel: "6 personas", capacidadNum: 6,
     specs: ["1.80 × 1.50 m", "Pino barnizado", "Bancas incluidas"],
-    descripcion: "El modelo base del catálogo. Capacidad para 6 personas, acabado liso y uniforme que combina con cualquier estilo de decoración: rústico, boho, clásico o corporativo.",
-    cta: "Ver Mesa Estándar",
-    acento: "primary",
+    descripcion: "El modelo base del catálogo. 6 personas, acabado liso que combina con rústico, boho, clásico o corporativo. El más reservado semana a semana.",
+    usos: ["bodas", "corporativo", "familiar"], acento: "primary", destacado: true,
   },
   {
-    id: "grande",
-    href: "/catalogo/mesa-picnic-grande/",
+    id: "grande", href: "/catalogo/mesa-picnic-grande",
     image: "/img/mesa-picnic-evento-corporativo-networking.avif",
-    alt: "Mesa picnic grande de 2.40 m para 10-12 personas en evento corporativo",
-    badge: "Mayor capacidad",
-    tipo: "Grande",
-    nombre: "Mesa Picnic Grande",
-    capacidad: "10–12",
-    unidad: "personas",
+    alt: "Mesa picnic grande para 10-12 personas en evento corporativo",
+    badge: "Mayor capacidad", categoria: "clasica", categoriaLabel: "Mesa Picnic",
+    nombre: "Mesa Picnic Grande", capacidadLabel: "10–12 personas", capacidadNum: 12,
     specs: ["2.40 × 1.50 m", "Pino barnizado", "Reforzada"],
-    descripcion: "El modelo de mayor superficie del catálogo. Ideal para corporativos, festivales y mesa principal de boda. 10 a 12 personas en una sola pieza.",
-    cta: "Ver Mesa Grande",
-    acento: "primary",
+    descripcion: "La mayor superficie del catálogo clásico. Ideal para corporativos, festivales y mesa principal de boda. 10 a 12 personas en una sola pieza.",
+    usos: ["corporativo", "festivales", "bodas"], acento: "primary",
   },
   {
-    id: "infantil",
-    href: "/catalogo/mesa-picnic-infantil/",
-    image: "/img/infantil-cumple-1.avif",
-    alt: "Mesa picnic infantil con altura reducida y acabado sin astillas para niños",
-    badge: "Para niños",
-    tipo: "Infantil",
-    nombre: "Mesa Picnic Infantil",
-    capacidad: "8–10",
-    unidad: "niños",
-    specs: ["1.20 × 1.00 m", "Sin astillas", "3–10 años"],
-    descripcion: "Diseñada desde cero para niños: altura reducida, bordes redondeados y lijado ultrafino. El modelo más seguro del catálogo.",
-    cta: "Ver Mesa Infantil",
-    acento: "kids",
-  },
-  {
-    id: "premium",
-    href: "/catalogo/mesa-picnic-premium/",
-    image: "/img/mesa-picnic-boda-elegante-luces.avif",
-    alt: "Mesa picnic premium con pino sin nudos y 4 manos de barniz para bodas VIP",
-    badge: "Bodas VIP",
-    tipo: "Premium",
-    nombre: "Mesa Picnic Premium",
-    capacidad: "6",
-    unidad: "personas",
-    specs: ["1.80 × 1.50 m", "Sin nudos", "4 manos barniz"],
-    descripcion: "Pino seleccionado sin nudos y cuatro manos de barniz de primer nivel. El acabado que marca la diferencia en fotografia profesional y eventos de alto perfil.",
-    cta: "Ver Mesa Premium",
-    acento: "premium",
-  },
-  {
-    id: "set-completo",
-    href: "/catalogo/set-picnic-completo/",
-    image: "/img/mesa-picnic-pedida-mano-romantica.webp",
-    alt: "Set picnic completo con mesa, mantelería, cojines y decoración para pedida de mano",
-    badge: "Todo incluido",
-    tipo: "Set Completo",
-    nombre: "Set Picnic Completo",
-    capacidad: "2–6",
-    unidad: "personas",
-    specs: ["Mesa + mantelería", "Cojines + centro", "Ambientación básica"],
-    descripcion: "Mesa, mantelería de algodón, cojines y ambientación en un solo paquete. Para picnics románticos, pedidas de mano y aniversarios sin necesidad de decoradora.",
-    cta: "Ver Set Completo",
-    acento: "primary",
-  },
-  {
-    id: "rustica",
-    href: "/catalogo/mesa-picnic-rustica/",
-    image: "/img/tema-mexicana-1.avif",
-    alt: "Mesa picnic rústica con veta de pino visible para boda boho y eventos vintage",
-    badge: "Boho & Vintage",
-    tipo: "Rústica",
-    nombre: "Mesa Picnic Rústica",
-    capacidad: "6",
-    unidad: "personas",
-    specs: ["1.80 × 1.50 m", "Veta visible", "Boho · Campestre"],
-    descripcion: "Barniz que resalta la veta y los nudos naturales del pino. La mesa que se convierte en elemento decorativo en sí misma para bodas rústicas, haciendas y festivales.",
-    cta: "Ver Mesa Rústica",
-    acento: "primary",
-  },
-  // ── Nuevos modelos del catálogo expandido ──────────────────────────────────
-  {
-    id: "hexagonal",
-    href: "/catalogo/mesa-picnic-hexagonal/",
-    image: "/img/catalogo/mesa-picnic-hexagonal-madera-6-personas-jardin-01.webp",
-    alt: "Mesa picnic hexagonal de pino natural para 6-8 personas en boda boho al aire libre",
-    badge: "Boho · Jardín",
-    tipo: "Hexagonal",
-    nombre: "Mesa Picnic Hexagonal",
-    capacidad: "6–8",
-    unidad: "personas",
-    specs: ["Ø 1.80 m inscrito", "Pino barnizado", "6 bancas sectoriales"],
-    descripcion: "El modelo más distintivo del catálogo. Formato hexagonal de pino que transforma cualquier espacio en una composición visual de alto impacto. Favorita de bodas boho y sesiones fotográficas.",
-    cta: "Ver Mesa Hexagonal",
-    acento: "primary",
-  },
-  {
-    id: "plegable",
-    href: "/catalogo/mesa-picnic-plegable/",
-    image: "/img/catalogo/mesa-picnic-plegable-portatil-evento-01.webp",
-    alt: "Mesa picnic plegable portátil de pino con herrajes de acero galvanizado para 4-6 personas",
-    badge: "Portátil",
-    tipo: "Plegable",
-    nombre: "Mesa Picnic Plegable",
-    capacidad: "4–6",
-    unidad: "personas",
-    specs: ["1.50 × 1.20 m", "Sistema plegado acero", "25% más ligera"],
-    descripcion: "Sistema de plegado con bisagras de acero galvanizado. Reduce su grosor a 12 cm para transporte y almacenamiento. La opción más versátil para bazares, pop-ups y venues con acceso restringido.",
-    cta: "Ver Mesa Plegable",
-    acento: "primary",
-  },
-  {
-    id: "alta-cocktail",
-    href: "/catalogo/mesa-alta-cocktail/",
-    image: "/img/catalogo/mesa-alta-cocktail-madera-networking-01.webp",
-    alt: "Mesa alta cocktail de madera y acero para networking y eventos standing corporativos",
-    badge: "Standing · VIP",
-    tipo: "Alta Cocktail",
-    nombre: "Mesa Alta Cocktail",
-    capacidad: "4–5",
-    unidad: "de pie",
-    specs: ["Ø 70 cm · 110 cm alto", "MDF pino + acero negro", "Sin sillas necesarias"],
-    descripcion: "Tablero circular de MDF con chapa de pino y base de acero negro mate. Diseñada para eventos de pie: networking corporativo, cócteles de gala y activaciones de marca.",
-    cta: "Ver Mesa Cocktail",
-    acento: "primary",
-  },
-  {
-    id: "banca-individual",
-    href: "/catalogo/banca-picnic-individual/",
-    image: "/img/catalogo/banca-picnic-madera-pino-individual-01.webp",
-    alt: "Banca picnic individual de pino natural barnizado para 3 personas como complemento de mesas",
-    badge: "Complemento",
-    tipo: "Banca Individual",
-    nombre: "Banca Picnic Individual",
-    capacidad: "3",
-    unidad: "personas",
-    specs: ["1.80 × 0.35 m", "Pino barnizado", "350 kg resistencia"],
-    descripcion: "La misma madera y el mismo barniz que las mesas del catálogo, disponible como banca independiente. Complemento perfecto para cualquier mesa o asiento autónomo en festivales y graduaciones.",
-    cta: "Ver Banca Individual",
-    acento: "primary",
-  },
-  {
-    id: "xl",
-    href: "/catalogo/mesa-picnic-xl/",
+    id: "xl", href: "/catalogo/mesa-picnic-xl",
     image: "/img/catalogo/mesa-picnic-xl-extra-larga-3m-16-personas-01.webp",
-    alt: "Mesa picnic XL extra larga de 3 metros para 14-16 personas en evento masivo",
-    badge: "La más grande",
-    tipo: "XL",
-    nombre: "Mesa Picnic XL",
-    capacidad: "14–16",
-    unidad: "personas",
+    alt: "Mesa picnic XL de 3 metros para 14-16 personas",
+    badge: "La más grande", categoria: "clasica", categoriaLabel: "Mesa Picnic",
+    nombre: "Mesa Picnic XL", capacidadLabel: "14–16 personas", capacidadNum: 16,
     specs: ["3.00 × 1.50 m", "Refuerzo acero", "4 bancas incluidas"],
-    descripcion: "La mesa más larga del catálogo. Tres metros de pino nacional reforzado con estructura de acero. Para banquetes masivos, head tables de boda y festivales donde la escala importa.",
-    cta: "Ver Mesa XL",
-    acento: "primary",
+    descripcion: "Tres metros de pino nacional reforzado con estructura de acero. Para banquetes masivos, head tables de boda y festivales donde la escala importa.",
+    usos: ["festivales", "corporativo", "bodas"], acento: "primary",
   },
   {
-    id: "lounge",
-    href: "/catalogo/set-lounge-exterior/",
-    image: "/img/catalogo/set-lounge-exterior-madera-vip-evento-01.webp",
-    alt: "Set lounge exterior de madera con tapizado premium para zona VIP en eventos al aire libre",
-    badge: "Zona VIP",
-    tipo: "Set Lounge",
-    nombre: "Set Lounge Exterior",
-    capacidad: "4–6",
-    unidad: "personas",
-    specs: ["Mesa baja 45 cm", "4 módulos tapizados", "Lona impermeable 600D"],
-    descripcion: "Mesa baja de pino con aceite de teca y 4 módulos de asiento tapizados en lona impermeable. Una zona VIP completa lista para instalar. En 4 colores: crudo, negro, beige y terracota.",
-    cta: "Ver Set Lounge",
-    acento: "premium",
+    id: "premium", href: "/catalogo/mesa-picnic-premium",
+    image: "/img/mesa-picnic-boda-elegante-luces.avif",
+    alt: "Mesa picnic premium con pino sin nudos y 4 manos de barniz",
+    badge: "Bodas VIP", categoria: "clasica", categoriaLabel: "Mesa Picnic",
+    nombre: "Mesa Picnic Premium", capacidadLabel: "6 personas", capacidadNum: 6,
+    specs: ["1.80 × 1.50 m", "Sin nudos", "4 manos barniz"],
+    descripcion: "Pino seleccionado sin nudos y cuatro manos de barniz. El acabado que marca la diferencia en fotografía profesional y eventos de alto perfil.",
+    usos: ["bodas", "premium"], acento: "premium",
   },
   {
-    id: "parota",
-    href: "/catalogo/mesa-picnic-parota/",
-    image: "/img/catalogo/mesa-picnic-parota-madera-premium-vip-01.webp",
-    alt: "Mesa picnic de parota maciza mexicana con veta natural para bodas VIP y eventos de lujo",
-    badge: "Parota Premium",
-    tipo: "Parota",
-    nombre: "Mesa Picnic de Parota",
-    capacidad: "6–8",
-    unidad: "personas",
-    specs: ["2.00 × 0.90 m", "Parota maciza", "Aceite teca + barniz"],
-    descripcion: "Madera de parota maciza mexicana con dureza Janka de 1,480 lbf. Veta natural única e irrepetible en cada pieza. El modelo de mayor categoría del catálogo para eventos VIP y bodas de lujo.",
-    cta: "Ver Mesa Parota",
-    acento: "premium",
+    id: "rustica", href: "/catalogo/mesa-picnic-rustica",
+    image: "/img/tema-mexicana-1.avif",
+    alt: "Mesa picnic rústica con veta de pino visible para boda boho",
+    badge: "Boho & Vintage", categoria: "clasica", categoriaLabel: "Mesa Picnic",
+    nombre: "Mesa Picnic Rústica", capacidadLabel: "6 personas", capacidadNum: 6,
+    specs: ["1.80 × 1.50 m", "Veta visible", "Boho · Campestre"],
+    descripcion: "Barniz que resalta la veta y los nudos naturales del pino. Se convierte en elemento decorativo en sí misma para bodas rústicas y haciendas.",
+    usos: ["bodas", "familiar"], acento: "primary",
   },
   {
-    id: "infantil-tematico",
-    href: "/catalogo/set-picnic-infantil-tematico/",
-    image: "/img/catalogo/set-picnic-infantil-tematico-colores-01.webp",
-    alt: "Set picnic infantil temático con mesa y bancas de colores para niños de 3 a 8 años",
-    badge: "5 colores",
-    tipo: "Infantil Temático",
-    nombre: "Set Infantil Temático",
-    capacidad: "6–8",
-    unidad: "niños",
-    specs: ["1.00 × 0.70 m · 52 cm alto", "Pintura atóxica", "5 colores disponibles"],
-    descripcion: "Mesa y bancas con pintura atóxica certificada en 5 colores temáticos: blanco, azul cielo, rosa palo, verde menta y lila. Diseñado para niños de 3 a 8 años. Perfecto para cumpleaños y baby showers.",
-    cta: "Ver Set Infantil",
-    acento: "kids",
+    id: "hexagonal", href: "/catalogo/mesa-picnic-hexagonal",
+    image: "/img/catalogo/mesa-picnic-hexagonal-madera-6-personas-jardin-01.webp",
+    alt: "Mesa picnic hexagonal de pino natural para 6-8 personas en boda boho",
+    badge: "Boho · Jardín", categoria: "clasica", categoriaLabel: "Mesa Picnic",
+    nombre: "Mesa Picnic Hexagonal", capacidadLabel: "6–8 personas", capacidadNum: 8,
+    specs: ["Ø 1.80 m inscrito", "Pino barnizado", "6 bancas sectoriales"],
+    descripcion: "El modelo más distintivo. Formato hexagonal que transforma cualquier espacio en una composición de alto impacto. Favorita de bodas boho.",
+    usos: ["bodas", "fotografía"], acento: "primary",
   },
-  // ── Nuevos 6 modelos — investigación competidores US / España / México ──────
   {
-    id: "farm-americana",
-    href: "/catalogo/mesa-farm-americana/",
+    id: "plegable", href: "/catalogo/mesa-picnic-plegable",
+    image: "/img/catalogo/mesa-picnic-plegable-portatil-evento-01.webp",
+    alt: "Mesa picnic plegable portátil para 4-6 personas",
+    badge: "Portátil", categoria: "clasica", categoriaLabel: "Mesa Picnic",
+    nombre: "Mesa Picnic Plegable", capacidadLabel: "4–6 personas", capacidadNum: 6,
+    specs: ["1.50 × 1.20 m", "Sistema plegado acero", "25% más ligera"],
+    descripcion: "Bisagras de acero galvanizado. Reduce a 12 cm de grosor para transporte. La opción más versátil para bazares, pop-ups y venues con acceso restringido.",
+    usos: ["festivales", "familiar", "corporativo"], acento: "primary",
+  },
+  {
+    id: "farm-americana", href: "/catalogo/mesa-farm-americana",
     image: "/img/catalogo/mesa-farm-americana-madera-evento-jardin-01.webp",
-    alt: "Mesa farm americana de madera para 8-10 personas en evento de jardín al aire libre",
-    badge: "Estilo US",
-    tipo: "Farm Americana",
-    nombre: "Mesa Farm Americana",
-    capacidad: "8–10",
-    unidad: "personas",
-    specs: ["2.40 × 1.10 m", "Sin bancas integradas", "Bodas campestres"],
-    descripcion: "La mesa rectangular de formato ancho importada del mercado estadounidense. Sin bancas integradas, diseñada para combinar con sillas de cualquier estilo. La preferida de bodas campestres, rústicas y decoraciones boho con sillas ghost o chiavari.",
-    cta: "Ver Mesa Farm",
-    acento: "primary",
+    alt: "Mesa farm americana de madera para 8-10 personas en evento de jardín",
+    badge: "Estilo US", categoria: "clasica", categoriaLabel: "Mesa Picnic",
+    nombre: "Mesa Farm Americana", capacidadLabel: "8–10 personas", capacidadNum: 10,
+    specs: ["2.40 × 1.10 m", "Sin bancas integradas", "Sillas libres"],
+    descripcion: "Formato ancho del mercado americano. Sin bancas — combina con sillas Tiffany, Crossback o Ghost. La preferida de bodas campestres formales.",
+    usos: ["bodas", "corporativo"], acento: "primary",
   },
+  // ── MESAS ESPECIALES (4) ────────────────────────────────────────────────────
   {
-    id: "redonda-madera",
-    href: "/catalogo/mesa-redonda-madera/",
+    id: "redonda-madera", href: "/catalogo/mesa-redonda-madera",
     image: "/img/catalogo/mesa-redonda-madera-evento-boda-01.webp",
-    alt: "Mesa redonda de madera natural de 1.50 m de diámetro para 8-10 personas en boda exterior",
-    badge: "Conversación",
-    tipo: "Redonda",
-    nombre: "Mesa Redonda de Madera",
-    capacidad: "8–10",
-    unidad: "personas",
+    alt: "Mesa redonda de madera natural para 8-10 personas",
+    badge: "Conversación", categoria: "especial", categoriaLabel: "Mesa Especial",
+    nombre: "Mesa Redonda de Madera", capacidadLabel: "8–10 personas", capacidadNum: 10,
     specs: ["Ø 1.50 m", "Sin cabecera", "Sillas opcionales"],
-    descripcion: "La mesa que elimina jerarquías. El formato circular facilita la conversación entre todos los comensales. Ideal para bodas íntimas, cenas de aniversario, mesas de sponsors y reuniones corporativas donde el diálogo es protagonista.",
-    cta: "Ver Mesa Redonda",
-    acento: "primary",
+    descripcion: "La mesa que elimina jerarquías. El formato circular facilita la conversación entre todos los comensales. Ideal para bodas íntimas y mesas corporativas.",
+    usos: ["bodas", "corporativo"], acento: "primary",
   },
   {
-    id: "biergarten",
-    href: "/catalogo/mesa-biergarten-madera/",
+    id: "biergarten", href: "/catalogo/mesa-biergarten-madera",
     image: "/img/catalogo/mesa-biergarten-madera-festival-01.webp",
-    alt: "Mesa biergarten de pino con 2 bancas removibles para festival gastronómico y cervecería al aire libre",
-    badge: "Festivales",
-    tipo: "Biergarten",
-    nombre: "Mesa Biergarten",
-    capacidad: "8–10",
-    unidad: "personas",
+    alt: "Mesa biergarten con bancas removibles para festival gastronómico",
+    badge: "Festivales", categoria: "especial", categoriaLabel: "Mesa Especial",
+    nombre: "Mesa Biergarten", capacidadLabel: "8–10 personas", capacidadNum: 10,
     specs: ["2.20 × 0.60 m", "2 bancas removibles", "Beer garden · Festival"],
-    descripcion: "El formato europeo de cervecería al aire libre. Mesa larga y estrecha con dos bancas removibles, diseñada para máxima densidad de personas. La opción más eficiente para food markets, ferias gastronómicas, festivales de cerveza y eventos en espacios abiertos.",
-    cta: "Ver Mesa Biergarten",
-    acento: "primary",
+    descripcion: "Formato europeo de cervecería. Mesa estrecha con dos bancas desmontables para máxima densidad. Estándar en food markets, ferias y festivals.",
+    usos: ["festivales", "corporativo"], acento: "primary",
   },
   {
-    id: "teka",
-    href: "/catalogo/mesa-madera-teka/",
+    id: "teka", href: "/catalogo/mesa-madera-teka",
     image: "/img/catalogo/mesa-madera-teka-premium-exterior-01.webp",
-    alt: "Mesa de madera con acabado de aceite teka premium en evento VIP de terraza con decoración de lujo",
-    badge: "Acabado VIP",
-    tipo: "Madera Teka",
-    nombre: "Mesa Madera Teka",
-    capacidad: "6–8",
-    unidad: "personas",
+    alt: "Mesa de madera con acabado teka premium en evento VIP",
+    badge: "Acabado VIP", categoria: "especial", categoriaLabel: "Mesa Especial",
+    nombre: "Mesa Madera Teka", capacidadLabel: "6–8 personas", capacidadNum: 8,
     specs: ["2.00 × 1.00 m", "Aceite de teca", "Resistente UV"],
-    descripcion: "Acabado en aceite de teca que penetra la fibra de la madera y la protege sin crear una capa superficial. El resultado es una superficie que se ve y se siente como madera viva, resistente a UV y humedad. Para bodas de lujo, terraza corporativa y eventos VIP.",
-    cta: "Ver Mesa Teka",
-    acento: "premium",
+    descripcion: "Aceite de teca que penetra la fibra sin crear capa superficial. Madera viva, resistente a UV y humedad. Para bodas de lujo y eventos VIP.",
+    usos: ["bodas", "premium"], acento: "premium",
   },
   {
-    id: "barra-madera",
-    href: "/catalogo/barra-madera-eventos/",
+    id: "parota", href: "/catalogo/mesa-picnic-parota",
+    image: "/img/catalogo/mesa-picnic-parota-madera-premium-vip-01.webp",
+    alt: "Mesa picnic de parota maciza mexicana para bodas VIP",
+    badge: "Parota Premium", categoria: "especial", categoriaLabel: "Mesa Especial",
+    nombre: "Mesa Picnic de Parota", capacidadLabel: "6–8 personas", capacidadNum: 8,
+    specs: ["2.00 × 0.90 m", "Parota maciza", "Aceite teca + barniz"],
+    descripcion: "Parota maciza mexicana con dureza Janka 1,480 lbf. Veta única en cada pieza. El modelo de mayor categoría del catálogo para eventos VIP.",
+    usos: ["bodas", "premium"], acento: "premium",
+  },
+  // ── SETS Y COMPLEMENTOS (6) ─────────────────────────────────────────────────
+  {
+    id: "set-completo", href: "/catalogo/set-picnic-completo",
+    image: "/img/mesa-picnic-pedida-mano-romantica.webp",
+    alt: "Set picnic completo con mesa, mantelería, cojines y decoración",
+    badge: "Todo incluido", categoria: "complemento", categoriaLabel: "Set / Complemento",
+    nombre: "Set Picnic Completo", capacidadLabel: "2–6 personas", capacidadNum: 6,
+    specs: ["Mesa + mantelería", "Cojines + centro", "Ambientación básica"],
+    descripcion: "Mesa, mantelería de algodón, cojines y ambientación en un solo paquete. Para picnics románticos, pedidas de mano y aniversarios sin decoradora.",
+    usos: ["bodas", "romantico"], acento: "primary",
+  },
+  {
+    id: "alta-cocktail", href: "/catalogo/mesa-alta-cocktail",
+    image: "/img/catalogo/mesa-alta-cocktail-madera-networking-01.webp",
+    alt: "Mesa alta cocktail de madera para networking standing",
+    badge: "Standing · VIP", categoria: "complemento", categoriaLabel: "Set / Complemento",
+    nombre: "Mesa Alta Cocktail", capacidadLabel: "4–5 de pie", capacidadNum: 5,
+    specs: ["Ø 70 cm · 110 cm alto", "MDF pino + acero negro", "Sin sillas"],
+    descripcion: "Tablero circular con chapa de pino y base de acero negro mate. Para networking corporativo, cócteles de gala y activaciones de marca.",
+    usos: ["corporativo", "premium"], acento: "primary",
+  },
+  {
+    id: "banca-individual", href: "/catalogo/banca-picnic-individual",
+    image: "/img/catalogo/banca-picnic-madera-pino-individual-01.webp",
+    alt: "Banca picnic individual de pino natural barnizado para 3 personas",
+    badge: "Complemento", categoria: "complemento", categoriaLabel: "Set / Complemento",
+    nombre: "Banca Picnic Individual", capacidadLabel: "3 personas", capacidadNum: 3,
+    specs: ["1.80 × 0.35 m", "Pino barnizado", "350 kg resistencia"],
+    descripcion: "La misma madera y barniz que las mesas. Disponible como banca independiente para complementar cualquier mesa o como asiento autónomo.",
+    usos: ["festivales", "familiar"], acento: "primary",
+  },
+  {
+    id: "set-lounge", href: "/catalogo/set-lounge-exterior",
+    image: "/img/catalogo/set-lounge-exterior-madera-vip-evento-01.webp",
+    alt: "Set lounge exterior de madera con tapizado premium para zona VIP",
+    badge: "Zona VIP", categoria: "complemento", categoriaLabel: "Set / Complemento",
+    nombre: "Set Lounge Exterior", capacidadLabel: "4–6 personas", capacidadNum: 6,
+    specs: ["Mesa baja 45 cm", "4 módulos tapizados", "Lona impermeable 600D"],
+    descripcion: "Mesa baja de pino con aceite de teca y 4 módulos tapizados en lona impermeable. Zona VIP completa en 4 colores: crudo, negro, beige y terracota.",
+    usos: ["bodas", "corporativo", "premium"], acento: "premium",
+  },
+  {
+    id: "barra-madera", href: "/catalogo/barra-madera-eventos",
     image: "/img/catalogo/barra-madera-eventos-bebidas-01.webp",
-    alt: "Barra de madera para eventos con servicio de bebidas en boda al aire libre con coctelería",
-    badge: "Único en catálogo",
-    tipo: "Barra",
-    nombre: "Barra de Madera para Eventos",
-    capacidad: "2–3",
-    unidad: "bartenders",
+    alt: "Barra de madera para eventos con servicio de bebidas",
+    badge: "Único en catálogo", categoria: "complemento", categoriaLabel: "Set / Complemento",
+    nombre: "Barra de Madera", capacidadLabel: "1–2 bartenders", capacidadNum: 2,
     specs: ["2.00 × 0.60 × 1.10 m", "Altura barra", "Estante trasero incl."],
-    descripcion: "La primera barra del catálogo. Diseñada para bartenders profesionales: 2 metros de superficie de trabajo, altura ergonómica de 1.10 m y estante trasero para botellas. Convierte cualquier espacio en una coctelería premium. Complemento perfecto para bodas, cumpleaños y activaciones.",
-    cta: "Ver Barra Madera",
-    acento: "primary",
+    descripcion: "Primera barra del catálogo. 2 metros de superficie, altura ergonómica 1.10m. Coctelería, candy bar, catering o activación de marca.",
+    usos: ["bodas", "corporativo", "festivales"], acento: "primary",
   },
   {
-    id: "comedor-exterior",
-    href: "/catalogo/set-comedor-exterior/",
+    id: "set-comedor", href: "/catalogo/set-comedor-exterior",
     image: "/img/catalogo/set-comedor-exterior-sillas-boda-01.webp",
-    alt: "Set comedor exterior con mesa rectangular y 6 sillas crossback para cena formal en boda al aire libre",
-    badge: "Con sillas",
-    tipo: "Set Comedor",
-    nombre: "Set Comedor Exterior",
-    capacidad: "6",
-    unidad: "personas",
+    alt: "Set comedor exterior con mesa y 6 sillas crossback para cena formal",
+    badge: "Con sillas", categoria: "complemento", categoriaLabel: "Set / Complemento",
+    nombre: "Set Comedor Exterior", capacidadLabel: "6 personas", capacidadNum: 6,
     specs: ["1.80 × 0.90 m", "6 sillas crossback", "Cena formal"],
-    descripcion: "La única propuesta del catálogo con sillas incluidas en lugar de bancas. Mesa rectangular de pino y 6 sillas crossback de haya lacada en blanco. El formato de cena formal más fotogénico del catálogo. Ideal para bodas románticas, aniversarios y eventos donde la elegancia importa.",
-    cta: "Ver Set Comedor",
-    acento: "primary",
+    descripcion: "La única propuesta con sillas incluidas. Mesa rectangular de pino y 6 sillas crossback de haya lacada en blanco. El más fotogénico del catálogo.",
+    usos: ["bodas", "premium"], acento: "primary",
   },
+  // ── PARA NIÑOS (2) ──────────────────────────────────────────────────────────
+  {
+    id: "infantil", href: "/catalogo/mesa-picnic-infantil",
+    image: "/img/infantil-cumple-1.avif",
+    alt: "Mesa picnic infantil con altura reducida para niños de 3 a 10 años",
+    badge: "Para niños", categoria: "ninos", categoriaLabel: "Para Niños",
+    nombre: "Mesa Picnic Infantil", capacidadLabel: "8–10 niños", capacidadNum: 10,
+    specs: ["1.20 × 1.00 m", "Sin astillas", "3–10 años"],
+    descripcion: "Altura reducida, bordes redondeados y lijado ultrafino. El modelo más seguro del catálogo, diseñado específicamente para niños.",
+    usos: ["infantil"], acento: "kids",
+  },
+  {
+    id: "infantil-tematico", href: "/catalogo/set-picnic-infantil-tematico",
+    image: "/img/catalogo/set-picnic-infantil-tematico-colores-01.webp",
+    alt: "Set picnic infantil temático con colores para niños de 3 a 8 años",
+    badge: "5 colores", categoria: "ninos", categoriaLabel: "Para Niños",
+    nombre: "Set Infantil Temático", capacidadLabel: "6–8 niños", capacidadNum: 8,
+    specs: ["1.00 × 0.70 m · 52 cm alto", "Pintura atóxica", "5 colores"],
+    descripcion: "Pintura atóxica certificada en 5 colores: blanco, azul cielo, rosa palo, verde menta y lila. Para niños de 3 a 8 años.",
+    usos: ["infantil"], acento: "kids",
+  },
+];
+
+const categorias = [
+  { id: "clasica",     label: "Mesas Picnic",        count: 8,  icon: "🌲" },
+  { id: "especial",    label: "Mesas Especiales",     count: 4,  icon: "✨" },
+  { id: "complemento", label: "Sets y Complementos",  count: 6,  icon: "🍹" },
+  { id: "ninos",       label: "Para Niños",           count: 2,  icon: "🎈" },
+];
+
+const galeriaCatalogo = [
+  { src: "/img/mesa-picnic-boda-elegante-decoracion.avif",                        alt: "Mesa picnic estándar decorada para boda al aire libre" },
+  { src: "/img/catalogo/mesa-picnic-hexagonal-madera-6-personas-jardin-01.webp",   alt: "Mesa picnic hexagonal en boda boho al aire libre" },
+  { src: "/img/catalogo/mesa-farm-americana-madera-evento-jardin-01.webp",         alt: "Mesa farm americana en evento de jardín campestre" },
+  { src: "/img/catalogo/mesa-redonda-madera-evento-boda-01.webp",                  alt: "Mesa redonda de madera en boda íntima exterior" },
+  { src: "/img/mesa-picnic-evento-corporativo-networking.avif",                    alt: "Mesa picnic grande en evento corporativo" },
+  { src: "/img/catalogo/mesa-alta-cocktail-madera-networking-03.webp",             alt: "Mesas altas cocktail en evento standing corporativo" },
+  { src: "/img/catalogo/mesa-biergarten-madera-festival-01.webp",                  alt: "Mesa biergarten en festival gastronómico exterior" },
+  { src: "/img/catalogo/mesa-madera-teka-premium-exterior-01.webp",                alt: "Mesa teka premium en evento VIP de terraza" },
+  { src: "/img/catalogo/barra-madera-eventos-cocktail-boda-03.webp",               alt: "Barra de madera como cocktail bar en boda exterior" },
+  { src: "/img/catalogo/set-comedor-exterior-formal-bodas-03.webp",                alt: "Set comedor exterior con sillas crossback en boda" },
+  { src: "/img/catalogo/set-lounge-exterior-madera-vip-evento-01.webp",            alt: "Set lounge exterior VIP en evento de lujo" },
+  { src: "/img/catalogo/mesa-picnic-parota-madera-premium-vip-01.webp",            alt: "Mesa de parota maciza mexicana en evento premium" },
 ];
 ---
 
 <BaseLayout
-  title="Catálogo de Mesas Picnic para Renta — 20 Modelos | MESPIC CDMX"
-  description="Catálogo completo de mesas picnic de pino natural para renta en CDMX y Edomex. 20 modelos: estándar, grande, XL, hexagonal, plegable, parota, farm americana, redonda, biergarten, teka, barra madera, set comedor exterior, infantil, premium, rústica, set completo, set lounge, banca, cocktail y set infantil temático. Entrega y montaje incluidos."
+  title="Catálogo de Mesas Picnic — 20 Modelos para Renta | MESPIC CDMX"
+  description="Catálogo completo con 20 modelos de mesas picnic y mobiliario de madera para renta en CDMX y Edomex. Filtra por tipo de evento, capacidad o categoría. Estándar, grande, XL, farm americana, biergarten, redonda, teka, parota, barra, set comedor, lounge VIP e infantil. Entrega y montaje incluidos."
   ogImage="/img/mesa-picnic-boda-elegante-decoracion.avif"
 >
 
-<!-- Breadcrumbs -->
 <Fragment slot="breadcrumbs">
   <Breadcrumbs items={[
     { label: "Inicio", href: "/" },
@@ -345,266 +253,222 @@ const modelos = [
   ]} />
 </Fragment>
 
-<!-- Hero -->
 <Hero
   badge="20 modelos disponibles"
-  title="Catálogo de Mesas Picnic de Pino Natural"
-  description="Veinte modelos de mobiliario para renta: desde la banca individual y la barra de coctelería hasta el set comedor exterior y el set lounge VIP. Pino nacional, parota maciza, acabados teka premium. Entrega, montaje y recolección incluidos en CDMX y Edomex."
+  title="Catálogo Completo de Mesas Picnic y Mobiliario"
+  description="Filtra por tipo de evento, capacidad o categoría. Desde la Banca Individual hasta la Barra de Coctelería — el catálogo más completo de mobiliario de madera para eventos en México."
   ctaPrimary={null}
   ctaSecondary={null}
-  seoParagraph1="MESPIC cuenta con más de 120 piezas en bodega, disponibles los 7 días de la semana para la Ciudad de México y el Estado de México. Todos los modelos están fabricados en pino nacional seleccionado: lijado a grano fino, sellado y barnizado a tres manos para resistencia al exterior. La misma pieza que va a una boda en Coyoacán va al día siguiente a un festival en Roma Norte."
-  seoParagraph2="El precio de renta incluye traslado, montaje profesional en tu locación y recolección al finalizar el evento. No hay cargos por maniobras, tiempo extra ni distancia dentro de nuestra zona de cobertura. Puedes combinar modelos en una misma cotización —por ejemplo, mesas farm americana para adultos y mesas infantiles para zona de niños— y todo llega en la misma entrega."
+  seoParagraph1="MESPIC cuenta con 20 modelos de mesas picnic, sets, barras y mobiliario complementario disponibles para renta en la Ciudad de México y el Estado de México. Todos los modelos están fabricados en pino nacional seleccionado, lijado a grano fino y barnizado tres manos para resistencia al exterior."
+  seoParagraph2="Usa los filtros para encontrar el modelo exacto para tu evento: tipo de celebración, capacidad de invitados o categoría de producto. Combinaciones de modelos en una sola cotización y entrega. Traslado, montaje profesional y recolección incluidos sin costo adicional."
   dark={true}
 />
 
-<!-- CtaBar -->
 <CtaBar />
 
-<!-- ═══════════════════════════════════════════════════════
-     VER TODOS LOS MODELOS
-═══════════════════════════════════════════════════════ -->
-<section class="section" id="modelos">
-  <SectionHeader
-    tag="h2"
-    badge="Ver todos los modelos"
-    title="20 Modelos de Mesa Picnic y Mobiliario Premium"
-    paragraph1="Desde la Banca Individual hasta el Set Lounge VIP, pasando por la Mesa Farm Americana, la Redonda de conversación, el Biergarten de festival, la Mesa Teka premium, la Barra de Coctelería y el Set Comedor Exterior con sillas. El catálogo más completo de mobiliario de madera para eventos en México, construido con investigación directa del mercado de Estados Unidos, España y México."
-    paragraph2="¿No sabes cuál elegir? Mándanos el número de invitados y el tipo de evento por WhatsApp y te recomendamos el modelo y la cantidad exacta. Respondemos en menos de 5 minutos."
-    stats={[
-      { value: '20',                 label: 'modelos en catálogo' },
-      { value: '3–16',               label: 'personas por pieza' },
-      { value: 'pino · parota · teka', label: 'maderas premium' },
-    ]}
-  />
+<!-- ═══════════════════════════════════════════════════════════════════════
+     CATÁLOGO INTERACTIVO — Sidebar + Grid
+═══════════════════════════════════════════════════════════════════════ -->
+<section class="catalog-section" id="catalogo">
+  <div class="catalog-wrap">
 
-  <div class="container">
-    <div class="cat-grid">
-      {modelos.map((m) => (
-        <article class={`cat-card cat-card--${m.acento}`} id={`modelo-${m.id}`}>
+    <!-- Overlay para mobile sidebar -->
+    <div id="sidebar-overlay" class="sidebar-overlay" aria-hidden="true"></div>
 
-          <!-- Imagen -->
-          <a href={m.href} class="cat-card__img-link" tabindex="-1" aria-hidden="true">
-            <div class="cat-card__img-wrap">
-              <img
-                src={m.image}
-                alt={m.alt}
-                loading="lazy"
-                width="600"
-                height="450"
-                class="cat-card__img"
-              />
-              <!-- Badge flotante -->
-              <span class="cat-card__badge">{m.badge}</span>
-              <!-- Capacidad flotante -->
-              <div class="cat-card__cap">
-                <span class="cat-card__cap-num">{m.capacidad}</span>
-                <span class="cat-card__cap-unit">{m.unidad}</span>
-              </div>
-            </div>
-          </a>
+    <!-- ── SIDEBAR ──────────────────────────────────────────────────────── -->
+    <aside class="catalog-sidebar" id="catalog-sidebar" aria-label="Filtros del catálogo">
 
-          <!-- Cuerpo -->
-          <div class="cat-card__body">
-            <!-- Tipo chip -->
-            <span class="cat-card__tipo">{m.tipo}</span>
+      <div class="sidebar-header">
+        <span class="sidebar-header__title">Filtrar catálogo</span>
+        <button class="sidebar-close-btn" id="sidebar-close" aria-label="Cerrar filtros">✕</button>
+      </div>
 
-            <!-- Nombre -->
-            <h3 class="cat-card__title">
-              <a href={m.href}>{m.nombre}</a>
-            </h3>
+      <!-- Búsqueda -->
+      <div class="sidebar-block">
+        <label class="sidebar-block__label" for="catalog-search">Buscar modelo</label>
+        <div class="sidebar-search-wrap">
+          <svg class="sidebar-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="search" id="catalog-search" class="sidebar-search" placeholder="Ej: hexagonal, farm…" autocomplete="off" />
+        </div>
+      </div>
 
-            <!-- Specs row -->
-            <ul class="cat-card__specs" role="list" aria-label="Especificaciones principales">
-              {m.specs.map((s) => (
-                <li class="cat-card__spec">{s}</li>
-              ))}
-            </ul>
+      <!-- Categorías -->
+      <div class="sidebar-block">
+        <span class="sidebar-block__label">Categoría</span>
+        <nav class="sidebar-cats" role="list">
+          <button class="sidebar-cat active" data-cat="todos" role="listitem">
+            <span class="sidebar-cat__icon">🏠</span>
+            <span class="sidebar-cat__label">Todos los modelos</span>
+            <span class="sidebar-cat__count">20</span>
+          </button>
+          {categorias.map(c => (
+            <button class="sidebar-cat" data-cat={c.id} role="listitem">
+              <span class="sidebar-cat__icon">{c.icon}</span>
+              <span class="sidebar-cat__label">{c.label}</span>
+              <span class="sidebar-cat__count">{c.count}</span>
+            </button>
+          ))}
+        </nav>
+      </div>
 
-            <!-- Descripción -->
-            <p class="cat-card__desc">{m.descripcion}</p>
+      <!-- Tipo de evento -->
+      <div class="sidebar-block">
+        <span class="sidebar-block__label">Tipo de evento</span>
+        <div class="sidebar-checks">
+          <label class="sidebar-check"><input type="checkbox" name="uso" value="bodas"><span>💐 Bodas al aire libre</span></label>
+          <label class="sidebar-check"><input type="checkbox" name="uso" value="corporativo"><span>🏢 Corporativo</span></label>
+          <label class="sidebar-check"><input type="checkbox" name="uso" value="festivales"><span>🎪 Festivales y ferias</span></label>
+          <label class="sidebar-check"><input type="checkbox" name="uso" value="familiar"><span>👨‍👩‍👧 Reuniones familiares</span></label>
+          <label class="sidebar-check"><input type="checkbox" name="uso" value="premium"><span>⭐ Premium / VIP</span></label>
+          <label class="sidebar-check"><input type="checkbox" name="uso" value="infantil"><span>🎈 Fiestas infantiles</span></label>
+        </div>
+      </div>
 
-            <!-- CTA -->
-            <a href={m.href} class="cat-card__cta">
-              {m.cta} <span aria-hidden="true">→</span>
-            </a>
+      <!-- Capacidad -->
+      <div class="sidebar-block">
+        <span class="sidebar-block__label">Capacidad de invitados</span>
+        <div class="cap-filter-btns">
+          <button class="cap-filter-btn active" data-cap="todos">Todos</button>
+          <button class="cap-filter-btn" data-cap="small">Hasta 6</button>
+          <button class="cap-filter-btn" data-cap="medium">6 – 10</button>
+          <button class="cap-filter-btn" data-cap="large">Más de 10</button>
+        </div>
+      </div>
+
+      <!-- CTA WhatsApp -->
+      <div class="sidebar-wa">
+        <p class="sidebar-wa__text">¿No sabes cuál elegir? Te asesoramos gratis en minutos.</p>
+        <a
+          href="https://wa.me/5531281706?text=Hola%2C+quisiera+asesor%C3%ADa+para+elegir+el+modelo+adecuado+para+mi+evento."
+          class="sidebar-wa__btn"
+          target="_blank" rel="noopener noreferrer"
+        >
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Asesoría por WhatsApp
+        </a>
+        <a href="/cotizar" class="sidebar-wa__cotizar">Cotizar en línea →</a>
+      </div>
+
+    </aside>
+
+    <!-- ── MAIN CONTENT ──────────────────────────────────────────────────── -->
+    <div class="catalog-main">
+
+      <!-- TOPBAR -->
+      <div class="catalog-topbar" id="catalog-topbar">
+        <div class="topbar-left">
+          <button id="filter-toggle-btn" class="filter-toggle-btn" aria-expanded="false" aria-controls="catalog-sidebar">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+            Filtros
+          </button>
+          <span id="results-count" class="results-count">20 modelos</span>
+        </div>
+        <div class="topbar-right">
+          <div class="view-toggle" role="group" aria-label="Tipo de vista">
+            <button id="view-grid-btn" class="view-btn active" aria-label="Vista cuadrícula" title="Vista cuadrícula">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+            </button>
+            <button id="view-list-btn" class="view-btn" aria-label="Vista lista" title="Vista lista">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
           </div>
-        </article>
-      ))}
-    </div>
+          <select id="sort-select" class="sort-select" aria-label="Ordenar resultados">
+            <option value="default">Destacados primero</option>
+            <option value="cap-asc">Menor capacidad</option>
+            <option value="cap-desc">Mayor capacidad</option>
+            <option value="nombre">Nombre A–Z</option>
+          </select>
+        </div>
+      </div>
 
-    <!-- CTA de cotizar debajo del grid -->
-    <div class="cat-bottom-cta">
-      <p class="cat-bottom-cta__text">¿Necesitas combinar varios modelos en un mismo evento?</p>
-      <a href="/cotizar/" class="btn btn-primary">Cotizar ahora →</a>
-      <a
-        href={`https://wa.me/5564328954?text=${encodeURIComponent('Hola, vi el catálogo y quiero cotizar mesas picnic para mi evento.')}`}
-        class="btn btn-wa"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        WhatsApp · respuesta en 5 min
-      </a>
-    </div>
-  </div>
+      <!-- TABS DE SECCIÓN -->
+      <div class="section-tabs" id="section-tabs" role="tablist" aria-label="Categorías del catálogo">
+        <button class="section-tab active" data-tab="todos" role="tab" aria-selected="true">Todos (20)</button>
+        <button class="section-tab" data-tab="clasica" role="tab" aria-selected="false">🌲 Mesas Picnic</button>
+        <button class="section-tab" data-tab="especial" role="tab" aria-selected="false">✨ Especiales</button>
+        <button class="section-tab" data-tab="complemento" role="tab" aria-selected="false">🍹 Complementos</button>
+        <button class="section-tab" data-tab="ninos" role="tab" aria-selected="false">🎈 Para Niños</button>
+      </div>
+
+      <!-- CHIPS DE FILTROS ACTIVOS -->
+      <div id="active-filters" class="active-filters" aria-live="polite" aria-label="Filtros activos"></div>
+
+      <!-- GRID DE PRODUCTOS -->
+      <div id="cat-grid" class="cat-grid cat-grid--grid" role="list">
+        {modelos.map((m) => (
+          <article
+            class={`cat-card cat-card--${m.acento}`}
+            data-id={m.id}
+            data-categoria={m.categoria}
+            data-usos={m.usos.join(',')}
+            data-cap={m.capacidadNum}
+            data-nombre={m.nombre.toLowerCase()}
+            role="listitem"
+          >
+            <a href={m.href} class="cat-card__img-link" tabindex="-1" aria-hidden="true">
+              <div class="cat-card__img-wrap">
+                <img
+                  src={m.image}
+                  alt={m.alt}
+                  loading="lazy"
+                  width="600"
+                  height="450"
+                  class="cat-card__img"
+                />
+                <span class="cat-card__badge">{m.badge}</span>
+                <div class={`cat-card__cap cat-card__cap--${m.acento}`}>
+                  <span class="cat-card__cap-num">{m.capacidadNum <= 2 ? m.capacidadLabel : m.capacidadNum}</span>
+                  <span class="cat-card__cap-unit">{m.capacidadNum <= 2 ? '' : 'personas'}</span>
+                </div>
+                <div class="cat-card__cat-chip">{m.categoriaLabel}</div>
+              </div>
+            </a>
+            <div class="cat-card__body">
+              <h3 class="cat-card__title">
+                <a href={m.href}>{m.nombre}</a>
+              </h3>
+              <ul class="cat-card__specs" aria-label="Especificaciones">
+                {m.specs.map(s => <li class="cat-card__spec">{s}</li>)}
+              </ul>
+              <p class="cat-card__desc">{m.descripcion}</p>
+              <div class="cat-card__tags">
+                {m.usos.map(uso => (
+                  <span class={`uso-tag uso-tag--${uso}`}>{uso}</span>
+                ))}
+              </div>
+              <a href={m.href} class={`cat-card__cta cat-card__cta--${m.acento}`}>
+                Ver ficha técnica <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- SIN RESULTADOS -->
+      <div id="no-results" class="no-results" hidden role="alert">
+        <div class="no-results__icon">🔍</div>
+        <h3 class="no-results__title">Sin resultados</h3>
+        <p class="no-results__text">No hay modelos que coincidan con los filtros seleccionados.</p>
+        <button id="clear-filters-btn" class="no-results__btn">Limpiar todos los filtros</button>
+      </div>
+
+      <!-- PAGINACIÓN -->
+      <nav id="pagination" class="pagination" aria-label="Páginas del catálogo"></nav>
+
+    </div><!-- /catalog-main -->
+  </div><!-- /catalog-wrap -->
 </section>
 
-<!-- ═══════════════════════════════════════════════════════
-     TABLA COMPARATIVA DE ESPECIFICACIONES
-═══════════════════════════════════════════════════════ -->
-<section class="section section-alt" id="comparativa">
-  <SectionHeader
-    tag="h2"
-    badge="Comparativa técnica"
-    title="Especificaciones por Modelo"
-    paragraph1="Consulta las medidas, capacidad y características de cada modelo en una tabla de referencia rápida. Todos los modelos son de pino nacional con tratamiento para exteriores."
-    paragraph2="Las medidas son estándar. Si necesitas algo específico o una combinación de modelos para el mismo evento, cotiza por WhatsApp y te preparamos un presupuesto a la medida."
-    stats={[
-      { value: '1.20–2.40 m', label: 'rango de longitud' },
-      { value: '100%',        label: 'madera de pino natural' },
-      { value: '+120 pzas',   label: 'inventario disponible' },
-    ]}
-  />
-  <div class="container">
-    <div class="spec-table-wrap">
-      <table class="spec-table" role="table" aria-label="Comparativa de modelos de mesa picnic">
-        <thead>
-          <tr>
-            <th scope="col">Modelo</th>
-            <th scope="col">Medidas</th>
-            <th scope="col">Capacidad</th>
-            <th scope="col">Acabado</th>
-            <th scope="col">Uso principal</th>
-            <th scope="col">Ficha</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="model-name">
-              <strong>Estándar</strong>
-              <span class="model-tag">Más solicitado</span>
-            </td>
-            <td class="dim-cell">1.80 × 1.50 m</td>
-            <td><span class="cap-badge">6 personas</span></td>
-            <td>Liso barnizado</td>
-            <td>Bodas · Reuniones · Corporativos</td>
-            <td><a href="/catalogo/mesa-picnic-estandar/" class="tbl-link">Ver →</a></td>
-          </tr>
-          <tr>
-            <td class="model-name"><strong>Grande</strong></td>
-            <td class="dim-cell">2.40 × 1.50 m</td>
-            <td><span class="cap-badge">10–12 personas</span></td>
-            <td>Liso barnizado</td>
-            <td>Corporativos · Festivales · Bodas</td>
-            <td><a href="/catalogo/mesa-picnic-grande/" class="tbl-link">Ver →</a></td>
-          </tr>
-          <tr>
-            <td class="model-name"><strong>Infantil</strong></td>
-            <td class="dim-cell">1.20 × 1.00 m</td>
-            <td><span class="cap-badge cap-badge--kids">8–10 niños</span></td>
-            <td>Ultra fino · Sin astillas</td>
-            <td>Fiestas infantiles · Baby showers</td>
-            <td><a href="/catalogo/mesa-picnic-infantil/" class="tbl-link">Ver →</a></td>
-          </tr>
-          <tr>
-            <td class="model-name">
-              <strong>Premium</strong>
-              <span class="model-tag model-tag--premium">VIP</span>
-            </td>
-            <td class="dim-cell">1.80 × 1.50 m</td>
-            <td><span class="cap-badge cap-badge--premium">6 personas</span></td>
-            <td>Sin nudos · 4 manos barniz</td>
-            <td>Bodas de lujo · Eventos VIP</td>
-            <td><a href="/catalogo/mesa-picnic-premium/" class="tbl-link tbl-link--premium">Ver →</a></td>
-          </tr>
-          <tr>
-            <td class="model-name"><strong>Set Completo</strong></td>
-            <td class="dim-cell">1.80 × 1.50 m</td>
-            <td><span class="cap-badge">2–6 personas</span></td>
-            <td>Liso + decoración incluida</td>
-            <td>Picnics románticos · Aniversarios</td>
-            <td><a href="/catalogo/set-picnic-completo/" class="tbl-link">Ver →</a></td>
-          </tr>
-          <tr>
-            <td class="model-name"><strong>Rústica</strong></td>
-            <td class="dim-cell">1.80 × 1.50 m</td>
-            <td><span class="cap-badge">6 personas</span></td>
-            <td>Barniz veta rústica</td>
-            <td>Bodas boho · Haciendas · Vintage</td>
-            <td><a href="/catalogo/mesa-picnic-rustica/" class="tbl-link">Ver →</a></td>
-          </tr>
-          <tr>
-            <td class="model-name">
-              <strong>Farm Americana</strong>
-              <span class="model-tag">Estilo US</span>
-            </td>
-            <td class="dim-cell">2.40 × 1.10 m</td>
-            <td><span class="cap-badge">8–10 personas</span></td>
-            <td>Liso barnizado</td>
-            <td>Bodas campestres · Boho · Ghost chairs</td>
-            <td><a href="/catalogo/mesa-farm-americana/" class="tbl-link">Ver →</a></td>
-          </tr>
-          <tr>
-            <td class="model-name"><strong>Redonda Madera</strong></td>
-            <td class="dim-cell">Ø 1.50 m</td>
-            <td><span class="cap-badge">8–10 personas</span></td>
-            <td>Liso barnizado</td>
-            <td>Bodas íntimas · Corporativos · Cenas</td>
-            <td><a href="/catalogo/mesa-redonda-madera/" class="tbl-link">Ver →</a></td>
-          </tr>
-          <tr>
-            <td class="model-name"><strong>Biergarten</strong></td>
-            <td class="dim-cell">2.20 × 0.60 m</td>
-            <td><span class="cap-badge">8–10 personas</span></td>
-            <td>Pino barnizado</td>
-            <td>Festivales · Food markets · Ferias</td>
-            <td><a href="/catalogo/mesa-biergarten-madera/" class="tbl-link">Ver →</a></td>
-          </tr>
-          <tr>
-            <td class="model-name">
-              <strong>Teka Premium</strong>
-              <span class="model-tag model-tag--premium">VIP</span>
-            </td>
-            <td class="dim-cell">2.00 × 1.00 m</td>
-            <td><span class="cap-badge cap-badge--premium">6–8 personas</span></td>
-            <td>Aceite de teca · Resistente UV</td>
-            <td>Bodas de lujo · Terrazas · VIP</td>
-            <td><a href="/catalogo/mesa-madera-teka/" class="tbl-link tbl-link--premium">Ver →</a></td>
-          </tr>
-          <tr>
-            <td class="model-name">
-              <strong>Barra Madera</strong>
-              <span class="model-tag">Único</span>
-            </td>
-            <td class="dim-cell">2.00 × 0.60 × 1.10 m</td>
-            <td><span class="cap-badge">2–3 bartenders</span></td>
-            <td>Liso barnizado</td>
-            <td>Bodas · Cumpleaños · Activaciones</td>
-            <td><a href="/catalogo/barra-madera-eventos/" class="tbl-link">Ver →</a></td>
-          </tr>
-          <tr>
-            <td class="model-name"><strong>Set Comedor Exterior</strong></td>
-            <td class="dim-cell">1.80 × 0.90 m</td>
-            <td><span class="cap-badge">6 personas</span></td>
-            <td>Liso + sillas crossback</td>
-            <td>Bodas románticas · Aniversarios · VIP</td>
-            <td><a href="/catalogo/set-comedor-exterior/" class="tbl-link">Ver →</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════════════════════════════
      MATERIAL Y PROCESO
-═══════════════════════════════════════════════════════ -->
+═══════════════════════════════════════════════════════════════════════ -->
 <section class="section" id="material">
   <SectionHeader
     tag="h2"
     badge="Calidad del producto"
     title="Pino Nacional Seleccionado, Elaborado a Mano"
-    paragraph1="Todo el mobiliario de MESPIC está fabricado en pino nacional de primera calidad. El proceso de preparación de cada pieza tarda más de lo que parece: selección de tabla, secado, lijado, aplicación de sellador y tres manos de barniz para exteriores."
-    paragraph2="Antes de cada entrega, cada pieza pasa por una inspección visual y estructural. Si una banca tiene una astilla, una grieta o un barniz deteriorado, no sale del almacén. Por eso nuestros clientes reciben mobiliario en condiciones impecables, evento tras evento."
+    paragraph1="Todo el mobiliario de MESPIC está fabricado en pino nacional de primera calidad. El proceso de preparación de cada pieza tarda más de lo que parece: selección de tabla, secado, lijado, sellador y tres manos de barniz para exteriores."
+    paragraph2="Antes de cada entrega, cada pieza pasa por inspección visual y estructural. Si una banca tiene una astilla, una grieta o un barniz deteriorado, no sale del almacén."
     stats={[
       { value: '3 manos',    label: 'de barniz para exteriores' },
       { value: 'grano fino', label: 'lijado sin astillas' },
@@ -613,39 +477,23 @@ const modelos = [
   />
   <div class="container">
     <div class="grid-4">
-      <FeatureCard
-        index={0}
-        title="Pino Nacional de Primera"
-        description="Seleccionamos tablas de pino con veta uniforme, sin defectos estructurales. La madera pasa por un proceso de secado natural antes de ser trabajada, lo que reduce deformaciones por humedad y temperatura."
-      />
-      <FeatureCard
-        index={1}
-        title="Lijado a Grano Fino"
-        description="Cada pieza se lija en dos etapas: desbaste grueso para eliminar irregularidades y acabado fino para lograr una superficie suave al tacto. El modelo infantil tiene una tercera pasada ultrafina para eliminar cualquier posibilidad de astilla."
-      />
-      <FeatureCard
-        index={2}
-        title="Sellador + 3 Manos de Barniz"
-        description="Aplicamos un sellador de poros antes del barniz para garantizar adherencia y protección profunda. Las tres manos de barniz de exterior protegen la madera de humedad, lluvia y variaciones de temperatura."
-      />
-      <FeatureCard
-        index={3}
-        title="Inspección Antes de Cada Entrega"
-        description="El día de la entrega, cada pieza es revisada: verificamos estructura, barniz, uniones y estado general. Si alguna pieza no cumple, se sustituye. Este proceso garantiza que lo que llega a tu evento siempre se ve impecable."
-      />
+      <FeatureCard index={0} title="Pino Nacional de Primera" description="Seleccionamos tablas de pino con veta uniforme, sin defectos estructurales. La madera pasa por secado natural antes de ser trabajada, reduciendo deformaciones por humedad y temperatura." />
+      <FeatureCard index={1} title="Lijado a Grano Fino" description="Cada pieza se lija en dos etapas: desbaste grueso para eliminar irregularidades y acabado fino para superficie suave al tacto. El modelo infantil tiene una tercera pasada ultrafina." />
+      <FeatureCard index={2} title="Sellador + 3 Manos de Barniz" description="Aplicamos sellador de poros antes del barniz para garantizar adherencia y protección profunda. Las tres manos protegen la madera de humedad, lluvia y variaciones de temperatura." />
+      <FeatureCard index={3} title="Inspección Antes de Cada Entrega" description="El día de la entrega, cada pieza es revisada: verificamos estructura, barniz, uniones y estado general. Si alguna pieza no cumple, se sustituye antes de salir del almacén." />
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════════════════════════════
      GALERÍA
-═══════════════════════════════════════════════════════ -->
+═══════════════════════════════════════════════════════════════════════ -->
 <section class="section section-alt" id="galeria">
   <SectionHeader
     tag="h2"
     badge="Galería del catálogo"
-    title="20 Modelos en Eventos Reales"
-    paragraph1="Así se ve el mobiliario de MESPIC en bodas, corporativos, festivales, fiestas infantiles, picnics románticos y activaciones de marca. Desde la mesa farm americana hasta la barra de coctelería — la madera natural se adapta a cualquier estilo de decoración."
+    title="Los 20 Modelos en Eventos Reales"
+    paragraph1="Así se ve el mobiliario de MESPIC en bodas, corporativos, festivales, fiestas infantiles y picnics románticos. La madera natural se adapta a cualquier estilo de decoración."
     stats={[
       { value: '20 modelos',      label: 'en una sola bodega' },
       { value: 'cualquier estilo', label: 'rústico, boho, farm, premium…' },
@@ -655,16 +503,15 @@ const modelos = [
   <GallerySection images={galeriaCatalogo} id="galeria-catalogo" />
 </section>
 
-<!-- ═══════════════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════════════════════════════
      FAQ
-═══════════════════════════════════════════════════════ -->
+═══════════════════════════════════════════════════════════════════════ -->
 <section class="section" id="faq-catalogo">
   <SectionHeader
     tag="h2"
     badge="Preguntas frecuentes"
     title="Preguntas sobre el Catálogo"
     paragraph1="Las dudas más comunes sobre los modelos, las medidas y la disponibilidad. Respuestas directas y sin rodeos."
-    paragraph2="¿Tienes una pregunta que no está aquí? Escríbenos por WhatsApp y te respondemos en minutos."
     stats={[
       { value: '8',       label: 'respuestas inmediatas' },
       { value: '< 5 min', label: 'respuesta por WhatsApp' },
@@ -672,574 +519,1024 @@ const modelos = [
     ]}
   />
   <FaqSection
-    phone="55 6432 8954"
-    whatsapp="5564328954"
+    phone="55 3128 1706"
+    whatsapp="5531281706"
     schedule="Lun–Dom 8:00–20:00"
     waMessage="Hola, quiero cotizar mesas picnic para mi evento."
     items={[
-      {
-        question: "¿Cuál es la diferencia entre la Mesa Estándar y la Grande?",
-        answer: "La Mesa Estándar mide 1.80 × 1.50 m y acomoda 6 personas. La Mesa Grande mide 2.40 × 1.50 m y acomoda 10 a 12. La Grande es ideal como mesa principal de una boda o para eventos corporativos donde se necesita espacio de trabajo o servicio de comida para grupos grandes. Para la mayoría de los eventos con invitados mixtos, la combinación óptima es 70% estándar y 30% grande."
-      },
-      {
-        question: "¿Qué diferencia la Mesa Premium de la Estándar?",
-        answer: "La Premium usa pino seleccionado sin nudos visibles y recibe una capa de barniz adicional de acabado fino. El resultado es una superficie más uniforme y un aspecto más elegante. Recomendamos el modelo Premium para bodas de alto perfil donde el mobiliario es un elemento visual protagonista, y para sesiones fotográficas profesionales."
-      },
-      {
-        question: "¿El Set Picnic Completo incluye todos los accesorios?",
-        answer: "Sí. El Set Picnic Completo incluye mesa estándar, mantelería de algodón, cojines decorativos, centro de mesa y ambientación básica. Es un paquete llave en mano para parejas que no quieren contratar por separado una decoradora. Si quieres agregar flores frescas, cesta de picnic con comida o decoración temática, lo cotizamos por separado."
-      },
-      {
-        question: "¿Puedo combinar diferentes modelos en un mismo evento?",
-        answer: "Sí, y de hecho es lo más común. Si tu evento tiene una zona de adultos y una zona de niños, llevamos mesas estándar e infantiles en la misma entrega. Si quieres una mesa grande como mesa principal y estándares para el resto de los invitados, también. Todo entra en una sola cotización y una sola entrega."
-      },
-      {
-        question: "¿Cuántas piezas pueden entregar para un mismo evento?",
-        answer: "Contamos con más de 120 piezas en bodega, lo que nos permite atender eventos de 100 o más personas sin problema. Para eventos masivos de 200+ asistentes, recomendamos reservar con al menos 2 semanas de anticipación para garantizar disponibilidad de todos los modelos que necesitas."
-      },
-      {
-        question: "¿La madera resiste el exterior y la intemperie?",
-        answer: "Sí. Todos los modelos tienen acabado con barniz de exterior que resiste humedad moderada, variaciones de temperatura y exposición al sol. Para lluvia intensa o eventos en zonas de alta humedad, recomendamos contar con carpas o toldos como respaldo. La madera no se daña con humedad moderada, pero una lluvia sostenida puede afectar el barniz a largo plazo si la pieza no está cubierta."
-      },
-      {
-        question: "¿Cuál es la diferencia entre la Mesa Farm Americana y la Mesa Picnic Estándar?",
-        answer: "La Mesa Farm Americana mide 2.40 × 1.10 m y no tiene bancas integradas: está diseñada para combinarse con sillas ghost, chiavari, crossback o cualquier otra silla de evento. La Mesa Picnic Estándar (1.80 × 1.50 m) incluye bancas fijas a los lados. La Farm es más ancha proporcionalmente y ofrece mayor libertad de estilización, lo que la hace favorita de bodas boho y sesiones fotográficas editoriales."
-      },
-      {
-        question: "¿La Barra de Madera para Eventos incluye servicio de bartender?",
-        answer: "No. La Barra de Madera es un elemento de mobiliario: estructura de pino barnizado de 2 metros con altura de trabajo de 1.10 m y estante trasero para botellas. El servicio de bar y bartenders es contratado por separado con el proveedor de bebidas de tu evento. Nosotros entregamos, instalamos y recogemos la barra; tú la decorás y operas según el concepto de tu evento."
-      }
+      { question: "¿Cuál es la diferencia entre la Mesa Estándar y la Grande?", answer: "La Mesa Estándar mide 1.80 × 1.50 m y acomoda 6 personas. La Grande mide 2.40 × 1.50 m y acomoda 10 a 12. La Grande es ideal como mesa principal de boda o para eventos corporativos grandes. Para eventos mixtos, la combinación óptima es 70% estándar y 30% grande." },
+      { question: "¿Qué diferencia la Mesa Farm Americana de la Estándar?", answer: "La Farm Americana es más ancha (1.10 m vs 0.60 m de la estándar) y no tiene bancas integradas. Su ancho premium permite centros de mesa elaborados y combina con sillas Tiffany, Ghost o Crossback. Es la favorita de bodas campestres formales y sesiones fotográficas." },
+      { question: "¿Cuándo conviene la Mesa Biergarten vs. la Estándar?", answer: "La Biergarten es más estrecha y permite mayor densidad de mesas en espacios reducidos. Sus bancas son desmontables, lo que da flexibilidad de configuración. Es ideal para festivales, food markets y eventos con mucho flujo de personas. La estándar es mejor para bodas y eventos formales." },
+      { question: "¿Puedo combinar diferentes modelos en un mismo evento?", answer: "Sí, y de hecho es lo más común. Si tu evento tiene zona de adultos y zona de niños, llevamos mesas estándar e infantiles en la misma entrega. También puedes combinar Farm Americana para la mesa de honor y estándares para el resto de los invitados — todo en una sola cotización." },
+      { question: "¿Cuántas piezas pueden entregar para un mismo evento?", answer: "Contamos con más de 120 piezas en bodega, lo que nos permite atender eventos de 100 o más personas sin problema. Para eventos masivos de 200+ asistentes, recomendamos reservar con al menos 2 semanas de anticipación para garantizar disponibilidad de todos los modelos." },
+      { question: "¿La madera resiste el exterior y la intemperie?", answer: "Sí. Todos los modelos tienen barniz de exterior que resiste humedad moderada, variaciones de temperatura y exposición al sol. Para lluvia intensa o zonas de alta humedad, recomendamos carpas o toldos como respaldo. La Biergarten y los modelos con aceite de teka son los más resistentes a intemperie directa." },
+      { question: "¿Qué diferencia la Mesa Premium de la Estándar?", answer: "La Premium usa pino seleccionado sin nudos visibles y recibe una cuarta mano de barniz de acabado fino. El resultado es una superficie más uniforme y elegante. Recomendamos el modelo Premium para bodas VIP donde el mobiliario es un elemento visual protagonista y para sesiones fotográficas profesionales." },
+      { question: "¿La Barra de Madera incluye el servicio de bartender?", answer: "No, la Barra de Madera es solo el mobiliario: estructura de pino barnizado con 2 metros de superficie y altura de trabajo de 1.10 m. El bartender y el servicio de bebidas los contrata el cliente por separado. Nosotros entregamos, instalamos y recogemos la barra — tú la decoras y operas." },
     ]}
   />
 </section>
 
-<!-- CTA Final -->
 <CtaBarFinal
   headline="¿Ya sabes qué modelo necesitas?"
   subtext="Cotiza por WhatsApp o en línea. Te respondemos con disponibilidad y precio el mismo día."
-  phone="55 6432 8954"
-  whatsapp="5564328954"
+  phone="55 3128 1706"
+  whatsapp="5531281706"
   waMessage="Hola, quiero cotizar mesas picnic para mi evento. Vi el catálogo en la web."
   cotizarHref="/cotizar/"
 />
 
-<!-- WA Bubble -->
-<WaBubble whatsapp="5564328954" message="Hola, vi el catálogo de mesas picnic y quiero cotizar." />
+<WaBubble whatsapp="5531281706" message="Hola, vi el catálogo de mesas picnic y quiero cotizar." />
 
-<!-- Schema.org -->
 <Fragment slot="head">
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "Catálogo de Mesas Picnic para Renta — MESPIC",
-    "description": "20 modelos de mesas picnic de pino natural para renta en CDMX y Edomex. Estándar, grande, XL, hexagonal, plegable, parota, farm americana, redonda, biergarten, teka, barra madera, set comedor exterior, infantil, premium, rústica, set completo, set lounge, banca individual, cocktail y set infantil temático.",
+    "description": "20 modelos de mesas picnic y mobiliario de madera para renta en CDMX y Edomex.",
     "url": "https://mesaspicnic.com/catalogo/",
     "numberOfItems": 20,
     "itemListElement": [
-      { "@type": "ListItem", "position": 1,  "name": "Mesa Picnic Estándar",       "url": "https://mesaspicnic.com/catalogo/mesa-picnic-estandar/" },
-      { "@type": "ListItem", "position": 2,  "name": "Mesa Picnic Grande",         "url": "https://mesaspicnic.com/catalogo/mesa-picnic-grande/" },
-      { "@type": "ListItem", "position": 3,  "name": "Mesa Picnic Infantil",       "url": "https://mesaspicnic.com/catalogo/mesa-picnic-infantil/" },
-      { "@type": "ListItem", "position": 4,  "name": "Mesa Picnic Premium",        "url": "https://mesaspicnic.com/catalogo/mesa-picnic-premium/" },
-      { "@type": "ListItem", "position": 5,  "name": "Set Picnic Completo",        "url": "https://mesaspicnic.com/catalogo/set-picnic-completo/" },
-      { "@type": "ListItem", "position": 6,  "name": "Mesa Picnic Rústica",        "url": "https://mesaspicnic.com/catalogo/mesa-picnic-rustica/" },
-      { "@type": "ListItem", "position": 7,  "name": "Mesa Picnic Hexagonal",      "url": "https://mesaspicnic.com/catalogo/mesa-picnic-hexagonal/" },
-      { "@type": "ListItem", "position": 8,  "name": "Mesa Picnic Plegable",       "url": "https://mesaspicnic.com/catalogo/mesa-picnic-plegable/" },
-      { "@type": "ListItem", "position": 9,  "name": "Mesa Alta Cocktail",         "url": "https://mesaspicnic.com/catalogo/mesa-alta-cocktail/" },
-      { "@type": "ListItem", "position": 10, "name": "Banca Picnic Individual",    "url": "https://mesaspicnic.com/catalogo/banca-picnic-individual/" },
-      { "@type": "ListItem", "position": 11, "name": "Mesa Picnic XL",             "url": "https://mesaspicnic.com/catalogo/mesa-picnic-xl/" },
-      { "@type": "ListItem", "position": 12, "name": "Set Lounge Exterior",        "url": "https://mesaspicnic.com/catalogo/set-lounge-exterior/" },
-      { "@type": "ListItem", "position": 13, "name": "Mesa Picnic de Parota",      "url": "https://mesaspicnic.com/catalogo/mesa-picnic-parota/" },
-      { "@type": "ListItem", "position": 14, "name": "Set Infantil Temático",      "url": "https://mesaspicnic.com/catalogo/set-picnic-infantil-tematico/" },
-      { "@type": "ListItem", "position": 15, "name": "Mesa Farm Americana",        "url": "https://mesaspicnic.com/catalogo/mesa-farm-americana/" },
-      { "@type": "ListItem", "position": 16, "name": "Mesa Redonda de Madera",     "url": "https://mesaspicnic.com/catalogo/mesa-redonda-madera/" },
-      { "@type": "ListItem", "position": 17, "name": "Mesa Biergarten",            "url": "https://mesaspicnic.com/catalogo/mesa-biergarten-madera/" },
-      { "@type": "ListItem", "position": 18, "name": "Mesa Madera Teka",           "url": "https://mesaspicnic.com/catalogo/mesa-madera-teka/" },
-      { "@type": "ListItem", "position": 19, "name": "Barra de Madera para Eventos","url": "https://mesaspicnic.com/catalogo/barra-madera-eventos/" },
-      { "@type": "ListItem", "position": 20, "name": "Set Comedor Exterior",       "url": "https://mesaspicnic.com/catalogo/set-comedor-exterior/" }
-    ]
-  })} />
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Cuál es la diferencia entre la Mesa Estándar y la Grande?",
-        "acceptedAnswer": { "@type": "Answer", "text": "La Mesa Estándar mide 1.80 × 1.50 m y acomoda 6 personas. La Mesa Grande mide 2.40 × 1.50 m y acomoda 10 a 12 personas." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Puedo combinar diferentes modelos en un mismo evento?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Puedes combinar modelos en una sola cotización y una sola entrega. Por ejemplo, mesas estándar para adultos y mesas infantiles para zona de niños." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cuántas piezas pueden entregar para un mismo evento?",
-        "acceptedAnswer": { "@type": "Answer", "text": "MESPIC cuenta con más de 120 piezas en bodega para atender eventos de 100 o más personas. Para eventos masivos, se recomienda reservar con al menos 2 semanas de anticipación." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cuál es la diferencia entre la Mesa Farm Americana y la Mesa Picnic Estándar?",
-        "acceptedAnswer": { "@type": "Answer", "text": "La Mesa Farm Americana mide 2.40 × 1.10 m sin bancas integradas, diseñada para combinarse con sillas ghost, chiavari o crossback. La Mesa Picnic Estándar incluye bancas fijas a los lados. La Farm es la favorita de bodas boho y sesiones fotográficas editoriales." }
-      }
+      { "@type": "ListItem", "position": 1,  "name": "Mesa Picnic Estándar",         "url": "https://mesaspicnic.com/catalogo/mesa-picnic-estandar/" },
+      { "@type": "ListItem", "position": 2,  "name": "Mesa Picnic Grande",           "url": "https://mesaspicnic.com/catalogo/mesa-picnic-grande/" },
+      { "@type": "ListItem", "position": 3,  "name": "Mesa Picnic XL",               "url": "https://mesaspicnic.com/catalogo/mesa-picnic-xl/" },
+      { "@type": "ListItem", "position": 4,  "name": "Mesa Picnic Premium",          "url": "https://mesaspicnic.com/catalogo/mesa-picnic-premium/" },
+      { "@type": "ListItem", "position": 5,  "name": "Mesa Picnic Rústica",          "url": "https://mesaspicnic.com/catalogo/mesa-picnic-rustica/" },
+      { "@type": "ListItem", "position": 6,  "name": "Mesa Picnic Hexagonal",        "url": "https://mesaspicnic.com/catalogo/mesa-picnic-hexagonal/" },
+      { "@type": "ListItem", "position": 7,  "name": "Mesa Picnic Plegable",         "url": "https://mesaspicnic.com/catalogo/mesa-picnic-plegable/" },
+      { "@type": "ListItem", "position": 8,  "name": "Mesa Farm Americana",          "url": "https://mesaspicnic.com/catalogo/mesa-farm-americana/" },
+      { "@type": "ListItem", "position": 9,  "name": "Mesa Redonda de Madera",       "url": "https://mesaspicnic.com/catalogo/mesa-redonda-madera/" },
+      { "@type": "ListItem", "position": 10, "name": "Mesa Biergarten",              "url": "https://mesaspicnic.com/catalogo/mesa-biergarten-madera/" },
+      { "@type": "ListItem", "position": 11, "name": "Mesa Madera Teka",             "url": "https://mesaspicnic.com/catalogo/mesa-madera-teka/" },
+      { "@type": "ListItem", "position": 12, "name": "Mesa Picnic de Parota",        "url": "https://mesaspicnic.com/catalogo/mesa-picnic-parota/" },
+      { "@type": "ListItem", "position": 13, "name": "Set Picnic Completo",          "url": "https://mesaspicnic.com/catalogo/set-picnic-completo/" },
+      { "@type": "ListItem", "position": 14, "name": "Mesa Alta Cocktail",           "url": "https://mesaspicnic.com/catalogo/mesa-alta-cocktail/" },
+      { "@type": "ListItem", "position": 15, "name": "Banca Picnic Individual",      "url": "https://mesaspicnic.com/catalogo/banca-picnic-individual/" },
+      { "@type": "ListItem", "position": 16, "name": "Set Lounge Exterior",          "url": "https://mesaspicnic.com/catalogo/set-lounge-exterior/" },
+      { "@type": "ListItem", "position": 17, "name": "Barra de Madera para Eventos", "url": "https://mesaspicnic.com/catalogo/barra-madera-eventos/" },
+      { "@type": "ListItem", "position": 18, "name": "Set Comedor Exterior",         "url": "https://mesaspicnic.com/catalogo/set-comedor-exterior/" },
+      { "@type": "ListItem", "position": 19, "name": "Mesa Picnic Infantil",         "url": "https://mesaspicnic.com/catalogo/mesa-picnic-infantil/" },
+      { "@type": "ListItem", "position": 20, "name": "Set Infantil Temático",        "url": "https://mesaspicnic.com/catalogo/set-picnic-infantil-tematico/" }
     ]
   })} />
 </Fragment>
 
 </BaseLayout>
 
+<!-- ═══════════════════════════════════════════════════════════════════════
+     JAVASCRIPT — Filtros, Paginación, Vista, Sort
+═══════════════════════════════════════════════════════════════════════ -->
+<script>
+(function () {
+  const ITEMS_PER_PAGE = 9;
+
+  // Estado de la aplicación
+  const state = {
+    categoria: 'todos',
+    usos: new Set(),
+    capacidad: 'todos',
+    search: '',
+    sort: 'default',
+    page: 1,
+    view: 'grid',
+  };
+
+  // DOM refs
+  const grid       = document.getElementById('cat-grid');
+  const noResults  = document.getElementById('no-results');
+  const countEl    = document.getElementById('results-count');
+  const paginEl    = document.getElementById('pagination');
+  const filterChips= document.getElementById('active-filters');
+  const sidebar    = document.getElementById('catalog-sidebar');
+  const overlay    = document.getElementById('sidebar-overlay');
+
+  function getAllCards() {
+    return [...grid.querySelectorAll('.cat-card')];
+  }
+
+  // ── Lógica de filtrado ──────────────────────────────────────────────
+  function matchCard(card) {
+    const cat    = card.dataset.categoria;
+    const usos   = card.dataset.usos.split(',');
+    const cap    = parseInt(card.dataset.cap);
+    const nombre = card.dataset.nombre;
+
+    if (state.categoria !== 'todos' && cat !== state.categoria) return false;
+    if (state.usos.size > 0 && ![...state.usos].some(u => usos.includes(u))) return false;
+    if (state.capacidad === 'small'  && cap > 6)           return false;
+    if (state.capacidad === 'medium' && (cap < 6 || cap > 10)) return false;
+    if (state.capacidad === 'large'  && cap <= 10)         return false;
+    if (state.search && !nombre.includes(state.search))    return false;
+    return true;
+  }
+
+  function sortCards(cards) {
+    const arr = [...cards];
+    if (state.sort === 'cap-asc')  return arr.sort((a,b) => +a.dataset.cap - +b.dataset.cap);
+    if (state.sort === 'cap-desc') return arr.sort((a,b) => +b.dataset.cap - +a.dataset.cap);
+    if (state.sort === 'nombre')   return arr.sort((a,b) => a.dataset.nombre.localeCompare(b.dataset.nombre));
+    return arr; // default: DOM order = insert order = curated
+  }
+
+  // ── Render principal ────────────────────────────────────────────────
+  function render() {
+    const all      = getAllCards();
+    const filtered = sortCards(all.filter(matchCard));
+    const total    = filtered.length;
+    const pages    = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
+    if (state.page > pages) state.page = 1;
+
+    const start  = (state.page - 1) * ITEMS_PER_PAGE;
+    const end    = start + ITEMS_PER_PAGE;
+    const visible = new Set(filtered.slice(start, end).map(c => c.dataset.id));
+
+    all.forEach(card => {
+      const show = visible.has(card.dataset.id);
+      card.style.display = show ? '' : 'none';
+      card.style.opacity = show ? '1' : '0';
+    });
+
+    countEl.textContent = total === 20
+      ? '20 modelos'
+      : `${total} de 20 modelos`;
+
+    noResults.hidden = total > 0;
+    grid.style.display = total === 0 ? 'none' : '';
+
+    renderPagination(pages, total);
+    renderChips();
+  }
+
+  // ── Paginación ──────────────────────────────────────────────────────
+  function renderPagination(totalPages, totalItems) {
+    if (totalPages <= 1 || totalItems === 0) { paginEl.innerHTML = ''; return; }
+
+    let html = `<div class="pag-info">Página ${state.page} de ${totalPages}</div><div class="pag-btns">`;
+
+    if (state.page > 1) {
+      html += `<button class="pag-btn pag-btn--arrow" data-page="${state.page - 1}" aria-label="Página anterior">←</button>`;
+    }
+
+    const delta = 1;
+    for (let i = 1; i <= totalPages; i++) {
+      const near = Math.abs(i - state.page) <= delta || i === 1 || i === totalPages;
+      const gap  = i === 2 && state.page > delta + 2;
+      const gap2 = i === totalPages - 1 && state.page < totalPages - delta - 1;
+      if (near) {
+        html += `<button class="pag-btn ${i === state.page ? 'active' : ''}" data-page="${i}">${i}</button>`;
+      } else if (gap || gap2) {
+        html += `<span class="pag-dots">…</span>`;
+      }
+    }
+
+    if (state.page < totalPages) {
+      html += `<button class="pag-btn pag-btn--arrow" data-page="${state.page + 1}" aria-label="Página siguiente">→</button>`;
+    }
+
+    html += `</div>`;
+    paginEl.innerHTML = html;
+
+    paginEl.querySelectorAll('[data-page]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        state.page = parseInt(btn.dataset.page);
+        render();
+        document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  }
+
+  // ── Chips de filtros activos ────────────────────────────────────────
+  const catLabels = { clasica: 'Mesas Picnic', especial: 'Mesas Especiales', complemento: 'Sets y Complementos', ninos: 'Para Niños' };
+  const capLabels = { small: 'Hasta 6 personas', medium: '6–10 personas', large: 'Más de 10' };
+  const usoLabels = { bodas: '💐 Bodas', corporativo: '🏢 Corporativo', festivales: '🎪 Festivales', familiar: '👨‍👩‍👧 Familiar', premium: '⭐ Premium', infantil: '🎈 Infantil' };
+
+  function renderChips() {
+    const chips = [];
+
+    if (state.categoria !== 'todos') {
+      chips.push(`<button class="filter-chip" data-remove="cat">📁 ${catLabels[state.categoria]} <span class="chip-x">×</span></button>`);
+    }
+    state.usos.forEach(uso => {
+      chips.push(`<button class="filter-chip" data-remove="uso:${uso}">${usoLabels[uso] || uso} <span class="chip-x">×</span></button>`);
+    });
+    if (state.capacidad !== 'todos') {
+      chips.push(`<button class="filter-chip" data-remove="cap">👥 ${capLabels[state.capacidad]} <span class="chip-x">×</span></button>`);
+    }
+    if (state.search) {
+      chips.push(`<button class="filter-chip" data-remove="search">🔍 "${state.search}" <span class="chip-x">×</span></button>`);
+    }
+    if (chips.length > 0) {
+      chips.push(`<button class="filter-chip filter-chip--reset" data-remove="all">Limpiar todo ×</button>`);
+    }
+
+    filterChips.innerHTML = chips.join('');
+    filterChips.querySelectorAll('[data-remove]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.dataset.remove;
+        if (key === 'all')           clearAll();
+        else if (key === 'cat')      { state.categoria = 'todos'; syncCatUI(); }
+        else if (key.startsWith('uso:')) { state.usos.delete(key.slice(4)); syncCheckboxes(); }
+        else if (key === 'cap')      { state.capacidad = 'todos'; syncCapUI(); }
+        else if (key === 'search')   { state.search = ''; document.getElementById('catalog-search').value = ''; }
+        state.page = 1;
+        render();
+      });
+    });
+  }
+
+  // ── Sync UI helpers ──────────────────────────────────────────────────
+  function syncCatUI() {
+    document.querySelectorAll('[data-cat]').forEach(b => b.classList.toggle('active', b.dataset.cat === state.categoria));
+    document.querySelectorAll('[data-tab]').forEach(b => {
+      b.classList.toggle('active', b.dataset.tab === state.categoria);
+      b.setAttribute('aria-selected', b.dataset.tab === state.categoria ? 'true' : 'false');
+    });
+  }
+
+  function syncCheckboxes() {
+    document.querySelectorAll('input[name="uso"]').forEach(cb => { cb.checked = state.usos.has(cb.value); });
+  }
+
+  function syncCapUI() {
+    document.querySelectorAll('[data-cap]').forEach(b => b.classList.toggle('active', b.dataset.cap === state.capacidad));
+  }
+
+  function clearAll() {
+    state.categoria = 'todos';
+    state.usos.clear();
+    state.capacidad = 'todos';
+    state.search = '';
+    state.page = 1;
+    document.getElementById('catalog-search').value = '';
+    syncCatUI();
+    syncCheckboxes();
+    syncCapUI();
+  }
+
+  // ── Event listeners ──────────────────────────────────────────────────
+  // Sidebar category nav
+  document.querySelectorAll('[data-cat]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.categoria = btn.dataset.cat;
+      state.page = 1;
+      syncCatUI();
+      render();
+      if (window.innerWidth < 900) closeSidebar();
+    });
+  });
+
+  // Section tabs (horizontal)
+  document.querySelectorAll('[data-tab]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.categoria = btn.dataset.tab;
+      state.page = 1;
+      syncCatUI();
+      render();
+    });
+  });
+
+  // Uso checkboxes
+  document.querySelectorAll('input[name="uso"]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      if (cb.checked) state.usos.add(cb.value);
+      else state.usos.delete(cb.value);
+      state.page = 1;
+      render();
+    });
+  });
+
+  // Capacidad
+  document.querySelectorAll('[data-cap]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.capacidad = btn.dataset.cap;
+      state.page = 1;
+      syncCapUI();
+      render();
+    });
+  });
+
+  // Búsqueda con debounce
+  let searchTimer;
+  document.getElementById('catalog-search').addEventListener('input', e => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => {
+      state.search = e.target.value.trim().toLowerCase();
+      state.page = 1;
+      render();
+    }, 200);
+  });
+
+  // Sort
+  document.getElementById('sort-select').addEventListener('change', e => {
+    state.sort = e.target.value;
+    state.page = 1;
+    render();
+  });
+
+  // Vista grid / lista
+  document.getElementById('view-grid-btn').addEventListener('click', () => {
+    state.view = 'grid';
+    grid.className = 'cat-grid cat-grid--grid';
+    document.getElementById('view-grid-btn').classList.add('active');
+    document.getElementById('view-list-btn').classList.remove('active');
+  });
+  document.getElementById('view-list-btn').addEventListener('click', () => {
+    state.view = 'list';
+    grid.className = 'cat-grid cat-grid--list';
+    document.getElementById('view-list-btn').classList.add('active');
+    document.getElementById('view-grid-btn').classList.remove('active');
+  });
+
+  // Mobile sidebar
+  function openSidebar() {
+    sidebar.classList.add('sidebar--open');
+    overlay.classList.add('overlay--active');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('filter-toggle-btn').setAttribute('aria-expanded', 'true');
+  }
+  function closeSidebar() {
+    sidebar.classList.remove('sidebar--open');
+    overlay.classList.remove('overlay--active');
+    document.body.style.overflow = '';
+    document.getElementById('filter-toggle-btn').setAttribute('aria-expanded', 'false');
+  }
+  document.getElementById('filter-toggle-btn').addEventListener('click', openSidebar);
+  document.getElementById('sidebar-close').addEventListener('click', closeSidebar);
+  overlay.addEventListener('click', closeSidebar);
+  document.getElementById('clear-filters-btn')?.addEventListener('click', () => { clearAll(); render(); });
+
+  // Render inicial
+  render();
+})();
+</script>
+
 <style>
-  /* ══════════════════════════════════════════
-     CATALOG GRID — Layout editorial 3 columnas
-  ══════════════════════════════════════════ */
-  .cat-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+/* ══════════════════════════════════════════════════════════════
+   CATALOG LAYOUT — Sidebar + Main
+══════════════════════════════════════════════════════════════ */
+.catalog-section {
+  background: var(--c-bg-alt, #FAF8F5);
+  padding: 2.5rem 0 3.5rem;
+}
+
+.catalog-wrap {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 268px 1fr;
+  gap: 2rem;
+  align-items: start;
+  position: relative;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────── */
+.catalog-sidebar {
+  background: #fff;
+  border: 1px solid var(--c-border, #E7E0D8);
+  border-radius: 16px;
+  padding: 0;
+  position: sticky;
+  top: 6rem;
+  max-height: calc(100vh - 7rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--c-border, #E7E0D8) transparent;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.375rem 1rem;
+  border-bottom: 1px solid var(--c-border, #E7E0D8);
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 2;
+}
+
+.sidebar-header__title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--c-primary, #2C5530);
+}
+
+.sidebar-close-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.125rem;
+  cursor: pointer;
+  color: var(--c-text-muted, #78716C);
+  padding: 0.25rem;
+  border-radius: 6px;
+}
+.sidebar-close-btn:hover { background: var(--c-bg-alt, #FAF8F5); }
+
+.sidebar-block {
+  padding: 1.125rem 1.375rem;
+  border-bottom: 1px solid var(--c-border, #E7E0D8);
+}
+.sidebar-block:last-child { border-bottom: none; }
+
+.sidebar-block__label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--c-text-muted, #78716C);
+  margin-bottom: 0.75rem;
+}
+
+/* Search */
+.sidebar-search-wrap {
+  position: relative;
+}
+.sidebar-search-icon {
+  position: absolute;
+  left: 0.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--c-text-muted, #78716C);
+  pointer-events: none;
+}
+.sidebar-search {
+  width: 100%;
+  padding: 0.55rem 0.75rem 0.55rem 2.1rem;
+  border: 1.5px solid var(--c-border, #E7E0D8);
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  background: var(--c-bg-alt, #FAF8F5);
+  color: var(--c-text, #1C1917);
+  outline: none;
+  transition: border-color 0.15s;
+}
+.sidebar-search:focus { border-color: var(--c-primary, #2C5530); background: #fff; }
+
+/* Category nav */
+.sidebar-cats { display: flex; flex-direction: column; gap: 0.25rem; }
+.sidebar-cat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 1.5px solid transparent;
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.8125rem;
+  color: var(--c-text, #1C1917);
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.sidebar-cat:hover { background: var(--c-bg-alt, #FAF8F5); }
+.sidebar-cat.active {
+  background: color-mix(in srgb, var(--c-primary, #2C5530) 8%, transparent);
+  border-color: color-mix(in srgb, var(--c-primary, #2C5530) 25%, transparent);
+  color: var(--c-primary, #2C5530);
+  font-weight: 600;
+}
+.sidebar-cat__icon { font-size: 1rem; flex-shrink: 0; }
+.sidebar-cat__label { flex: 1; }
+.sidebar-cat__count {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  background: var(--c-bg-alt, #F5F1EC);
+  color: var(--c-text-muted, #78716C);
+  padding: 1px 7px;
+  border-radius: 99px;
+  flex-shrink: 0;
+}
+.sidebar-cat.active .sidebar-cat__count {
+  background: color-mix(in srgb, var(--c-primary, #2C5530) 12%, transparent);
+  color: var(--c-primary, #2C5530);
+}
+
+/* Uso checkboxes */
+.sidebar-checks { display: flex; flex-direction: column; gap: 0.5rem; }
+.sidebar-check {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8125rem;
+  color: var(--c-text, #1C1917);
+  cursor: pointer;
+  padding: 0.25rem 0;
+}
+.sidebar-check input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--c-primary, #2C5530);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Capacidad buttons */
+.cap-filter-btns { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+.cap-filter-btn {
+  padding: 0.35rem 0.75rem;
+  border: 1.5px solid var(--c-border, #E7E0D8);
+  border-radius: 6px;
+  background: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--c-text-muted, #78716C);
+  transition: all 0.15s;
+}
+.cap-filter-btn:hover { border-color: var(--c-primary, #2C5530); color: var(--c-primary, #2C5530); }
+.cap-filter-btn.active {
+  background: var(--c-primary, #2C5530);
+  border-color: var(--c-primary, #2C5530);
+  color: #fff;
+}
+
+/* Sidebar WA CTA */
+.sidebar-wa {
+  padding: 1.25rem 1.375rem 1.5rem;
+}
+.sidebar-wa__text {
+  font-size: 0.8rem;
+  color: var(--c-text-muted, #78716C);
+  line-height: 1.5;
+  margin-bottom: 0.875rem;
+}
+.sidebar-wa__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.625rem 1rem;
+  background: #25D366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  transition: background 0.15s;
+  margin-bottom: 0.5rem;
+}
+.sidebar-wa__btn:hover { background: #1da855; }
+.sidebar-wa__cotizar {
+  display: block;
+  text-align: center;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--c-primary, #2C5530);
+  text-decoration: none;
+  padding: 0.5rem;
+}
+.sidebar-wa__cotizar:hover { text-decoration: underline; }
+
+/* Mobile overlay */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 399;
+  backdrop-filter: blur(2px);
+}
+.sidebar-overlay.overlay--active { display: block; }
+
+/* ══════════════════════════════════════════════════════════════
+   MAIN CONTENT
+══════════════════════════════════════════════════════════════ */
+.catalog-main { min-width: 0; }
+
+/* TOPBAR */
+.catalog-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border: 1px solid var(--c-border, #E7E0D8);
+  border-radius: 12px;
+  margin-bottom: 0.875rem;
+  flex-wrap: wrap;
+}
+.topbar-left { display: flex; align-items: center; gap: 0.875rem; flex-wrap: wrap; }
+.topbar-right { display: flex; align-items: center; gap: 0.5rem; }
+
+.filter-toggle-btn {
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.875rem;
+  border: 1.5px solid var(--c-border, #E7E0D8);
+  border-radius: 8px;
+  background: none;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--c-text, #1C1917);
+  transition: all 0.15s;
+}
+.filter-toggle-btn:hover { border-color: var(--c-primary, #2C5530); color: var(--c-primary, #2C5530); }
+
+.results-count {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--c-primary, #2C5530);
+}
+
+.view-toggle { display: flex; gap: 0.25rem; }
+.view-btn {
+  padding: 0.375rem 0.5rem;
+  border: 1.5px solid var(--c-border, #E7E0D8);
+  border-radius: 6px;
+  background: none;
+  cursor: pointer;
+  color: var(--c-text-muted, #78716C);
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+}
+.view-btn:hover { border-color: var(--c-primary, #2C5530); color: var(--c-primary, #2C5530); }
+.view-btn.active { background: var(--c-primary, #2C5530); border-color: var(--c-primary, #2C5530); color: #fff; }
+
+.sort-select {
+  padding: 0.4rem 0.625rem;
+  border: 1.5px solid var(--c-border, #E7E0D8);
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  background: #fff;
+  color: var(--c-text, #1C1917);
+  cursor: pointer;
+  outline: none;
+}
+.sort-select:focus { border-color: var(--c-primary, #2C5530); }
+
+/* SECTION TABS */
+.section-tabs {
+  display: flex;
+  gap: 0.375rem;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 0.25rem;
+}
+.section-tabs::-webkit-scrollbar { display: none; }
+.section-tab {
+  flex-shrink: 0;
+  padding: 0.45rem 1rem;
+  border: 1.5px solid var(--c-border, #E7E0D8);
+  border-radius: 99px;
+  background: #fff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--c-text-muted, #78716C);
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.section-tab:hover { border-color: var(--c-primary, #2C5530); color: var(--c-primary, #2C5530); }
+.section-tab.active {
+  background: var(--c-primary, #2C5530);
+  border-color: var(--c-primary, #2C5530);
+  color: #fff;
+}
+
+/* ACTIVE FILTER CHIPS */
+.active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-bottom: 1rem;
+  min-height: 0;
+}
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  background: color-mix(in srgb, var(--c-primary, #2C5530) 8%, transparent);
+  border: 1.5px solid color-mix(in srgb, var(--c-primary, #2C5530) 20%, transparent);
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--c-primary, #2C5530);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.filter-chip:hover { background: color-mix(in srgb, var(--c-primary, #2C5530) 14%, transparent); }
+.filter-chip--reset {
+  background: #FEF2F2;
+  border-color: #FECACA;
+  color: #B91C1C;
+}
+.filter-chip--reset:hover { background: #FEE2E2; }
+.chip-x { font-size: 0.9rem; opacity: 0.7; }
+
+/* ══════════════════════════════════════════════════════════════
+   PRODUCT CARDS — Grid View
+══════════════════════════════════════════════════════════════ */
+.cat-grid--grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* List view */
+.cat-grid--list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.cat-grid--list .cat-card {
+  flex-direction: row;
+  max-height: 200px;
+}
+.cat-grid--list .cat-card__img-link { width: 260px; flex-shrink: 0; }
+.cat-grid--list .cat-card__img-wrap { aspect-ratio: 4/3; height: 100%; }
+.cat-grid--list .cat-card__body { padding: 1.125rem 1.25rem; }
+.cat-grid--list .cat-card__desc { -webkit-line-clamp: 2; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
+.cat-grid--list .cat-card__tags { display: none; }
+
+/* Card base */
+.cat-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--c-border, #E7E0D8);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  transition: box-shadow 0.22s ease, transform 0.22s ease, opacity 0.2s ease;
+}
+.cat-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.11); transform: translateY(-3px); }
+
+.cat-card__img-link { display: block; text-decoration: none; }
+.cat-card__img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--c-bg-alt, #FAF8F5);
+}
+.cat-card__img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+.cat-card:hover .cat-card__img { transform: scale(1.04); }
+
+/* Badge flotante */
+.cat-card__badge {
+  position: absolute;
+  top: 10px; left: 10px;
+  background: rgba(255,255,255,0.95);
+  color: var(--c-primary, #2C5530);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 99px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  pointer-events: none;
+}
+.cat-card--premium .cat-card__badge { background: var(--c-accent, #D4A574); color: #fff; }
+
+/* Capacidad pill */
+.cat-card__cap {
+  position: absolute;
+  bottom: 10px; right: 10px;
+  background: var(--c-primary, #2C5530);
+  color: #fff;
+  border-radius: 8px;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  pointer-events: none;
+}
+.cat-card__cap--premium { background: var(--c-accent, #D4A574); }
+.cat-card__cap--kids    { background: #92400E; }
+.cat-card__cap-num  { font-size: 1.0625rem; font-weight: 800; letter-spacing: -0.02em; }
+.cat-card__cap-unit { font-size: 0.5625rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; opacity: 0.9; margin-top: 1px; }
+
+/* Categoría chip */
+.cat-card__cat-chip {
+  position: absolute;
+  bottom: 10px; left: 10px;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 4px;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+}
+
+/* Body */
+.cat-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.125rem 1.25rem 1.375rem;
+  border-top: 3px solid var(--c-primary, #2C5530);
+}
+.cat-card--premium .cat-card__body { border-top-color: var(--c-accent, #D4A574); }
+.cat-card--kids    .cat-card__body { border-top-color: #92400E; }
+
+.cat-card__title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--c-text, #1C1917);
+  line-height: 1.25;
+  margin-bottom: 0.625rem;
+}
+.cat-card__title a { color: inherit; text-decoration: none; }
+.cat-card__title a:hover { color: var(--c-primary, #2C5530); }
+
+.cat-card__specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  list-style: none;
+  margin-bottom: 0.625rem;
+  padding: 0;
+}
+.cat-card__spec {
+  font-size: 0.6625rem;
+  font-weight: 600;
+  color: var(--c-text-muted, #78716C);
+  background: var(--c-bg-alt, #F5F1EC);
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.cat-card__desc {
+  font-size: 0.8rem;
+  color: var(--c-text-muted, #78716C);
+  line-height: 1.65;
+  flex: 1;
+  margin-bottom: 0.875rem;
+}
+
+/* Uso tags */
+.cat-card__tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.875rem; }
+.uso-tag {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+.uso-tag--bodas      { background: #FDF2F8; color: #9D174D; }
+.uso-tag--corporativo{ background: #EFF6FF; color: #1D4ED8; }
+.uso-tag--festivales { background: #FFFBEB; color: #92400E; }
+.uso-tag--familiar   { background: #F0FDF4; color: #166534; }
+.uso-tag--premium    { background: #FEF3C7; color: #92400E; }
+.uso-tag--infantil   { background: #FFF7ED; color: #C2410C; }
+.uso-tag--romantico  { background: #FDF2F8; color: #9D174D; }
+.uso-tag--fotografía { background: #F3E8FF; color: #7C3AED; }
+
+/* CTA */
+.cat-card__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  background: var(--c-primary, #2C5530);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 0.625rem 1rem;
+  border-radius: 8px;
+  transition: background 0.15s;
+  margin-top: auto;
+}
+.cat-card__cta:hover { background: #224228; }
+.cat-card__cta--premium { background: var(--c-accent, #D4A574); }
+.cat-card__cta--premium:hover { background: #b8834c; }
+.cat-card__cta--kids { background: #92400E; }
+.cat-card__cta--kids:hover { background: #7c3510; }
+
+/* ══════════════════════════════════════════════════════════════
+   SIN RESULTADOS
+══════════════════════════════════════════════════════════════ */
+.no-results {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #fff;
+  border: 1px solid var(--c-border, #E7E0D8);
+  border-radius: 14px;
+}
+.no-results__icon { font-size: 3rem; margin-bottom: 1rem; }
+.no-results__title { font-size: 1.25rem; font-weight: 700; color: var(--c-text, #1C1917); margin-bottom: 0.5rem; }
+.no-results__text { font-size: 0.9rem; color: var(--c-text-muted, #78716C); margin-bottom: 1.5rem; }
+.no-results__btn {
+  padding: 0.625rem 1.5rem;
+  background: var(--c-primary, #2C5530);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.no-results__btn:hover { background: #224228; }
+
+/* ══════════════════════════════════════════════════════════════
+   PAGINACIÓN
+══════════════════════════════════════════════════════════════ */
+.pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 1rem;
+}
+.pag-info {
+  font-size: 0.75rem;
+  color: var(--c-text-muted, #78716C);
+  font-weight: 600;
+}
+.pag-btns { display: flex; gap: 0.375rem; flex-wrap: wrap; justify-content: center; }
+.pag-btn {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 0.5rem;
+  border: 1.5px solid var(--c-border, #E7E0D8);
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--c-text, #1C1917);
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pag-btn:hover { border-color: var(--c-primary, #2C5530); color: var(--c-primary, #2C5530); }
+.pag-btn.active { background: var(--c-primary, #2C5530); border-color: var(--c-primary, #2C5530); color: #fff; }
+.pag-btn--arrow { font-size: 1rem; }
+.pag-dots { display: flex; align-items: center; padding: 0 0.25rem; color: var(--c-text-muted, #78716C); font-size: 0.875rem; }
+
+/* ══════════════════════════════════════════════════════════════
+   GENÉRICOS (usados por FeatureCard y secciones inferiores)
+══════════════════════════════════════════════════════════════ */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .cat-grid--grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .catalog-wrap {
+    grid-template-columns: 1fr;
   }
 
-  /* ══════════════════════════════════════════
-     CATALOG CARD
-  ══════════════════════════════════════════ */
-  .cat-card {
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid var(--c-border, #E7E0D8);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    transition: box-shadow 0.22s ease, transform 0.22s ease;
-    position: relative;
+  /* Sidebar becomes a fixed drawer on mobile */
+  .catalog-sidebar {
+    position: fixed;
+    left: 0; top: 0; bottom: 0;
+    width: min(320px, 88vw);
+    max-height: 100vh;
+    border-radius: 0 16px 16px 0;
+    z-index: 400;
+    transform: translateX(-110%);
+    transition: transform 0.28s cubic-bezier(0.4,0,0.2,1);
   }
+  .catalog-sidebar.sidebar--open { transform: translateX(0); }
+  .sidebar-close-btn { display: flex !important; }
+  .filter-toggle-btn { display: flex !important; }
+}
 
-  .cat-card:hover {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-    transform: translateY(-3px);
-  }
-
-  /* ── Imagen ── */
-  .cat-card__img-link {
-    display: block;
-    text-decoration: none;
-  }
-
-  .cat-card__img-wrap {
-    position: relative;
-    overflow: hidden;
-    aspect-ratio: 4 / 3;
-    background: var(--c-bg-alt, #FAF8F5);
-  }
-
-  .cat-card__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
-  }
-
-  .cat-card:hover .cat-card__img {
-    transform: scale(1.04);
-  }
-
-  /* ── Badge flotante (esquina sup-izq) ── */
-  .cat-card__badge {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    background: rgba(255, 255, 255, 0.96);
-    color: var(--c-primary, #2C5530);
-    font-size: 0.6875rem;
-    font-weight: 700;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    border-radius: 50px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-    pointer-events: none;
-  }
-
-  /* Premium badge en dorado */
-  .cat-card--premium .cat-card__badge {
-    background: var(--c-accent, #D4A574);
-    color: #fff;
-  }
-
-  /* ── Capacidad (esquina inf-der) ── */
-  .cat-card__cap {
-    position: absolute;
-    bottom: 12px;
-    right: 12px;
-    background: var(--c-primary, #2C5530);
-    color: #fff;
-    border-radius: 10px;
-    padding: 6px 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 1;
-    pointer-events: none;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .cat-card--premium .cat-card__cap {
-    background: var(--c-accent, #D4A574);
-  }
-
-  .cat-card--kids .cat-card__cap {
-    background: #92400E;
-  }
-
-  .cat-card__cap-num {
-    font-size: 1.1875rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-  }
-
-  .cat-card__cap-unit {
-    font-size: 0.6rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    opacity: 0.9;
-    margin-top: 1px;
-  }
-
-  /* ── Cuerpo ── */
-  .cat-card__body {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 1.375rem 1.5rem 1.625rem;
-    border-top: 3px solid var(--c-primary, #2C5530);
-  }
-
-  .cat-card--premium .cat-card__body {
-    border-top-color: var(--c-accent, #D4A574);
-  }
-
-  /* ── Chip de tipo ── */
-  .cat-card__tipo {
-    display: inline-block;
-    font-size: 0.6875rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--c-primary, #2C5530);
-    margin-bottom: 0.5rem;
-  }
-
-  .cat-card--premium .cat-card__tipo {
-    color: var(--c-accent, #D4A574);
-  }
-
-  /* ── Nombre ── */
-  .cat-card__title {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: var(--c-text, #1C1917);
-    line-height: 1.25;
-    margin-bottom: 0.875rem;
-  }
-
-  .cat-card__title a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .cat-card__title a:hover {
-    color: var(--c-primary, #2C5530);
-  }
-
-  /* ── Specs row ── */
-  .cat-card__specs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.375rem;
-    list-style: none;
-    margin-bottom: 0.875rem;
-    padding: 0;
-  }
-
-  .cat-card__spec {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--c-text-muted, #78716C);
-    background: var(--c-bg-alt, #F5F1EC);
-    padding: 3px 9px;
-    border-radius: 4px;
-    letter-spacing: 0.02em;
-    white-space: nowrap;
-  }
-
-  /* ── Descripción ── */
-  .cat-card__desc {
-    font-size: 0.8375rem;
-    color: var(--c-text-muted, #78716C);
-    line-height: 1.7;
-    flex: 1;
-    margin-bottom: 1.25rem;
-  }
-
-  /* ── CTA ── */
-  .cat-card__cta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.375rem;
-    background: var(--c-primary, #2C5530);
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.875rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    padding: 0.7rem 1.25rem;
-    border-radius: 8px;
-    transition: background 0.18s ease;
-    width: 100%;
-    text-align: center;
-  }
-
-  .cat-card__cta:hover {
-    background: #224228;
-  }
-
-  .cat-card--premium .cat-card__cta {
-    background: var(--c-accent, #D4A574);
-  }
-
-  .cat-card--premium .cat-card__cta:hover {
-    background: #b8834c;
-  }
-
-  /* ══════════════════════════════════════════
-     CTA BAR DEBAJO DEL GRID
-  ══════════════════════════════════════════ */
-  .cat-bottom-cta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    padding: 2rem;
-    background: var(--c-bg-alt, #FAF8F5);
-    border: 1px solid var(--c-border, #E7E0D8);
-    border-radius: 16px;
-  }
-
-  .cat-bottom-cta__text {
-    font-size: 0.9375rem;
-    color: var(--c-text-muted, #78716C);
-    margin: 0;
-    flex: 1;
-    min-width: 200px;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    font-size: 0.875rem;
-    font-weight: 700;
-    padding: 0.7rem 1.375rem;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.18s ease, color 0.18s ease;
-    white-space: nowrap;
-  }
-
-  .btn-primary {
-    background: var(--c-primary, #2C5530);
-    color: #fff;
-  }
-
-  .btn-primary:hover {
-    background: #224228;
-  }
-
-  .btn-wa {
-    background: #25D366;
-    color: #fff;
-  }
-
-  .btn-wa:hover {
-    background: #1da855;
-  }
-
-  .btn-secondary {
-    background: transparent;
-    color: var(--c-primary, #2C5530);
-    border: 2px solid var(--c-primary, #2C5530);
-  }
-
-  .btn-secondary:hover {
-    background: var(--c-primary, #2C5530);
-    color: #fff;
-  }
-
-  /* ══════════════════════════════════════════
-     TABLA DE ESPECIFICACIONES
-  ══════════════════════════════════════════ */
-  .spec-table-wrap {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    border-radius: var(--radius-md, 12px);
-    border: 1px solid var(--c-border, #E7E0D8);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-
-  .spec-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.875rem;
-    background: #fff;
-  }
-
-  .spec-table thead {
-    background: var(--c-primary, #2C5530);
-    color: #fff;
-  }
-
-  .spec-table thead th {
-    padding: 0.875rem 1.25rem;
-    text-align: left;
-    font-weight: 700;
-    font-size: 0.75rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
-
-  .spec-table tbody tr {
-    border-bottom: 1px solid var(--c-border, #E7E0D8);
-    transition: background 0.15s ease;
-  }
-
-  .spec-table tbody tr:last-child { border-bottom: none; }
-  .spec-table tbody tr:hover { background: var(--c-bg-alt, #FAF8F5); }
-
-  .spec-table tbody td {
-    padding: 0.875rem 1.25rem;
-    color: var(--c-text-muted, #78716C);
-    font-size: 0.875rem;
-    vertical-align: middle;
-  }
-
-  .model-name {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-
-  .model-name strong {
-    color: var(--c-text, #1C1917);
-    font-weight: 700;
-    font-size: 0.9rem;
-  }
-
-  .model-tag {
-    display: inline-block;
-    font-size: 0.6rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--c-primary, #2C5530);
-    background: color-mix(in srgb, var(--c-primary, #2C5530) 10%, transparent);
-    padding: 2px 7px;
-    border-radius: 4px;
-    width: fit-content;
-  }
-
-  .model-tag--premium {
-    color: #7C4A1A;
-    background: color-mix(in srgb, var(--c-accent, #D4A574) 15%, transparent);
-  }
-
-  .dim-cell {
-    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
-    font-size: 0.8125rem;
-    color: var(--c-text, #1C1917) !important;
-    font-weight: 600;
-  }
-
-  /* Badges de capacidad */
-  .cap-badge {
-    display: inline-flex;
-    align-items: center;
-    background: color-mix(in srgb, var(--c-primary, #2C5530) 10%, transparent);
-    color: var(--c-primary, #2C5530);
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 0.2rem 0.625rem;
-    border-radius: 999px;
-    white-space: nowrap;
-  }
-
-  .cap-badge--kids {
-    background: color-mix(in srgb, #F59E0B 12%, transparent);
-    color: #92400E;
-  }
-
-  .cap-badge--premium {
-    background: color-mix(in srgb, var(--c-accent, #D4A574) 18%, transparent);
-    color: #7C4A1A;
-  }
-
-  .tbl-link {
-    display: inline-block;
-    font-size: 0.8125rem;
-    font-weight: 700;
-    color: var(--c-primary, #2C5530);
-    text-decoration: none;
-    padding: 0.3rem 0.75rem;
-    border: 1.5px solid var(--c-primary, #2C5530);
-    border-radius: 6px;
-    transition: background 0.15s ease, color 0.15s ease;
-  }
-
-  .tbl-link:hover {
-    background: var(--c-primary, #2C5530);
-    color: #fff;
-  }
-
-  .tbl-link--premium {
-    color: var(--c-accent, #D4A574);
-    border-color: var(--c-accent, #D4A574);
-  }
-
-  .tbl-link--premium:hover {
-    background: var(--c-accent, #D4A574);
-    color: #fff;
-  }
-
-  /* ══════════════════════════════════════════
-     GRID GENÉRICO
-  ══════════════════════════════════════════ */
-  .grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.25rem;
-  }
-
-  /* ══════════════════════════════════════════
-     RESPONSIVE
-  ══════════════════════════════════════════ */
-  @media (max-width: 1100px) {
-    .cat-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  @media (max-width: 1024px) {
-    .grid-4 { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  @media (max-width: 640px) {
-    .cat-grid { grid-template-columns: 1fr; }
-    .grid-4 { grid-template-columns: 1fr; }
-    .cat-bottom-cta { flex-direction: column; text-align: center; }
-    .cat-bottom-cta__text { min-width: unset; }
-    .btn { width: 100%; }
-  }
+@media (max-width: 640px) {
+  .cat-grid--grid { grid-template-columns: 1fr; }
+  .cat-grid--list .cat-card { flex-direction: column; max-height: none; }
+  .cat-grid--list .cat-card__img-link { width: 100%; }
+  .catalog-topbar { padding: 0.625rem 0.75rem; }
+  .grid-4 { grid-template-columns: 1fr; }
+}
 </style>
