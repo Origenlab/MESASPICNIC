@@ -54,6 +54,19 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toStri
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <slot name="head" />
+
+  <!-- TruConversion for mesaspicnic.com -->
+  <script type="text/javascript">
+    var _tip = _tip || [];
+    (function(d,s,id){
+        var js, tjs = d.getElementsByTagName(s)[0];
+        if(d.getElementById(id)) { return; }
+        js = d.createElement(s); js.id = id;
+        js.async = true;
+        js.src = d.location.protocol + '//app.truconversion.com/ti-js/62950/9fe33.js';
+        tjs.parentNode.insertBefore(js, tjs);
+    }(document, 'script', 'ti-js'));
+  </script>
 </head>
 <body>
   <TopBar />
