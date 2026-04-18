@@ -8,6 +8,10 @@ export default defineConfig({
   site: SITE,
   output: "static",
   trailingSlash: "never",
+  compressHTML: true,
+  build: {
+    inlineStylesheets: "auto",
+  },
   integrations: [
     mdx(),
     sitemap({

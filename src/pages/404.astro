@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Página no encontrada | MESPIC"
+  description="La página que buscas no existe o fue movida. Regresa al inicio o explora nuestros paquetes y catálogo."
+  noindex={true}
+>
+  <section class="err">
+    <div class="container err__inner">
+      <span class="err__code">404</span>
+      <h1 class="err__title">Esta página no existe</h1>
+      <p class="err__lead">
+        El enlace que seguiste puede haber caducado o la URL está mal escrita. No perdamos el impulso:
+      </p>
+
+      <div class="err__links">
+        <a href="/" class="err__btn err__btn--primary">Regresar al inicio</a>
+        <a href="/catalogo/" class="err__btn">Ver catálogo de mesas</a>
+        <a href="/paquetes/" class="err__btn">Ver paquetes</a>
+        <a href="/cotizar/" class="err__btn">Pide cotización</a>
+      </div>
+
+      <p class="err__help">
+        ¿Buscas algo específico? Escríbenos por WhatsApp al
+        <a href="tel:+525564328954" class="err__phone">55 6432 8954</a>
+        y te llevamos directo al recurso.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .err {
+    padding: 6rem 0 4rem;
+    background: var(--c-bg-alt);
+    min-height: calc(100vh - 400px);
+    display: flex;
+    align-items: center;
+  }
+  .err__inner {
+    max-width: 720px;
+    text-align: center;
+  }
+  .err__code {
+    display: inline-block;
+    font-family: var(--font-head);
+    font-size: clamp(4rem, 12vw, 7rem);
+    font-weight: 800;
+    color: var(--c-primary);
+    letter-spacing: -0.05em;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .err__title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+  .err__lead {
+    color: var(--c-text-muted);
+    font-size: 1.0625rem;
+    margin-bottom: 2rem;
+  }
+  .err__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .err__btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--c-border);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: var(--c-text);
+    background: var(--c-bg);
+    transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+  }
+  .err__btn:hover {
+    border-color: var(--c-primary);
+    color: var(--c-primary);
+  }
+  .err__btn--primary {
+    background: var(--c-primary);
+    color: #fff;
+    border-color: var(--c-primary);
+  }
+  .err__btn--primary:hover {
+    background: var(--c-primary-dark);
+    color: #fff;
+  }
+  .err__help {
+    color: var(--c-text-muted);
+    font-size: 0.9375rem;
+  }
+  .err__phone {
+    color: var(--c-primary);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+</style>

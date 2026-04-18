@@ -1,0 +1,445 @@
+---
+/**
+ * CtaFlujo — MESPIC Smart CTA · OrigenLab v1
+ * ─────────────────────────────────────────────
+ * Auto-detecta la sección desde la URL y sirve
+ * el CTA correcto para cada etapa del funnel.
+ * Se instancia una sola vez en BaseLayout.
+ *
+ * Funnel:
+ *  Home → Servicios → Catálogo → Paquetes → Cotizar
+ */
+
+const path = Astro.url.pathname;
+
+// Páginas donde NO se muestra (ya tienen su propio CTA nativo)
+const skip = ['/cotizar', '/contacto', '/aviso-de-privacidad'];
+const isHome = path === '/' || path === '';
+const show = !isHome && !skip.some(s => path.startsWith(s));
+
+// ── Variantes por sección ────────────────────────────────
+type Cta = { label: string; href: string; style: 'primary' | 'outline' | 'wa' };
+
+type Variant = {
+  badge: string;
+  badgeColor: string; // clase CSS
+  headline: string;
+  subtext: string;
+  cta1: Cta;
+  cta2: Cta;
+  step: string; // indicador de progreso del funnel 1-4
+};
+
+let v: Variant;
+
+const waHref = `https://wa.me/5564328954?text=${encodeURIComponent('Hola, quiero cotizar mesas picnic para mi evento.')}`;
+
+if (path === '/' || path === '') {
+  v = {
+    badge: 'Empieza por aquí',
+    badgeColor: 'badge--green',
+    headline: 'Tu evento merece el mobiliario correcto',
+    subtext: 'Explora nuestros servicios por tipo de evento o elige directamente entre los 20 modelos disponibles.',
+    cta1: { label: 'Explorar servicios →', href: '/servicios/', style: 'primary' },
+    cta2: { label: 'Ver catálogo', href: '/catalogo/', style: 'outline' },
+    step: '1',
+  };
+} else if (path === '/servicios/' || path === '/servicios') {
+  v = {
+    badge: 'Paso 2 de 4',
+    badgeColor: 'badge--green',
+    headline: '¿Ya identificaste el tipo de evento?',
+    subtext: 'El siguiente paso es elegir el modelo de mesa y la cantidad de piezas según tus invitados.',
+    cta1: { label: 'Ver catálogo de modelos →', href: '/catalogo/', style: 'primary' },
+    cta2: { label: 'Ver paquetes armados', href: '/paquetes/', style: 'outline' },
+    step: '2',
+  };
+} else if (path.startsWith('/servicios/')) {
+  v = {
+    badge: 'Paso 3 de 4',
+    badgeColor: 'badge--wood',
+    headline: '¿Cuántas personas esperan en tu evento?',
+    subtext: 'Tenemos paquetes listos por número de invitados o podemos cotizar exactamente lo que necesitas.',
+    cta1: { label: 'Ver paquetes →', href: '/paquetes/', style: 'primary' },
+    cta2: { label: 'Cotizar a medida', href: '/cotizar/', style: 'outline' },
+    step: '3',
+  };
+} else if (path === '/catalogo/' || path === '/catalogo') {
+  v = {
+    badge: 'Paso 3 de 4',
+    badgeColor: 'badge--wood',
+    headline: '¿Ya elegiste el modelo?',
+    subtext: 'Ahora elige cuántas piezas necesitas. Tenemos paquetes para 24, 36 y 60 personas — o cotizamos tu medida exacta.',
+    cta1: { label: 'Ver paquetes →', href: '/paquetes/', style: 'primary' },
+    cta2: { label: 'Cotizar personalizado', href: '/cotizar/', style: 'outline' },
+    step: '3',
+  };
+} else if (path.startsWith('/catalogo/')) {
+  v = {
+    badge: '¿Este es tu modelo?',
+    badgeColor: 'badge--wood',
+    headline: 'Elige un paquete o cotiza piezas exactas',
+    subtext: 'Paquetes desde 4 bancas para 24 personas. Si tu evento es más grande o especial, cotizamos directo.',
+    cta1: { label: 'Ver paquetes →', href: '/paquetes/', style: 'primary' },
+    cta2: { label: 'Solicitar cotización', href: '/cotizar/', style: 'outline' },
+    step: '3',
+  };
+} else if (path === '/paquetes/' || path === '/paquetes') {
+  v = {
+    badge: 'Paso 4 de 4',
+    badgeColor: 'badge--amber',
+    headline: '¿Ya encontraste el paquete para tu evento?',
+    subtext: 'Confirma disponibilidad en tu fecha y obtén el precio final. Sin pagos ocultos ni cargos extra.',
+    cta1: { label: 'Solicitar cotización →', href: '/cotizar/', style: 'primary' },
+    cta2: { label: 'Consultar por WhatsApp', href: waHref, style: 'wa' },
+    step: '4',
+  };
+} else if (path.startsWith('/paquetes/')) {
+  v = {
+    badge: 'Último paso',
+    badgeColor: 'badge--amber',
+    headline: 'Reserva este paquete para tu evento',
+    subtext: 'Disponibilidad confirmada en minutos. Precio final incluye traslado, montaje y recolección.',
+    cta1: { label: 'Cotizar este paquete →', href: '/cotizar/', style: 'primary' },
+    cta2: { label: 'Preguntar por WhatsApp', href: waHref, style: 'wa' },
+    step: '4',
+  };
+} else if (path === '/blog/' || path === '/blog') {
+  v = {
+    badge: 'De la lectura a la acción',
+    badgeColor: 'badge--slate',
+    headline: '¿Listo para planear tu evento?',
+    subtext: 'Explora nuestros servicios por tipo de evento o descubre el modelo de mesa ideal para tu ocasión.',
+    cta1: { label: 'Ver servicios →', href: '/servicios/', style: 'primary' },
+    cta2: { label: 'Ver catálogo', href: '/catalogo/', style: 'outline' },
+    step: '1',
+  };
+} else if (path.startsWith('/blog/')) {
+  v = {
+    badge: 'Da el siguiente paso',
+    badgeColor: 'badge--slate',
+    headline: '¿Te ayudó este artículo?',
+    subtext: 'Consulta nuestro catálogo completo o solicita una cotización sin compromiso para tu evento.',
+    cta1: { label: 'Ver catálogo →', href: '/catalogo/', style: 'primary' },
+    cta2: { label: 'Cotizar mi evento', href: '/cotizar/', style: 'outline' },
+    step: '2',
+  };
+} else {
+  // /nosotros/ y cualquier otra página
+  v = {
+    badge: '¿Tienes un evento en mente?',
+    badgeColor: 'badge--green',
+    headline: 'Cotiza sin compromiso',
+    subtext: 'Respondemos en menos de 5 minutos. Precio final: traslado, montaje y recolección siempre incluidos.',
+    cta1: { label: 'Solicitar cotización →', href: '/cotizar/', style: 'primary' },
+    cta2: { label: 'Escribir por WhatsApp', href: waHref, style: 'wa' },
+    step: '4',
+  };
+}
+
+// Barra de progreso del funnel
+const steps = [
+  { label: 'Servicios', num: '1' },
+  { label: 'Catálogo',  num: '2' },
+  { label: 'Paquetes',  num: '3' },
+  { label: 'Cotizar',   num: '4' },
+];
+---
+
+{show && (
+<section class="cf" aria-label="Siguiente paso">
+
+  <!-- Funnel progress bar -->
+  <div class="cf__funnel">
+    <div class="container cf__funnel-inner">
+      {steps.map((s) => (
+        <div class:list={['cf__step', s.num === v.step && 'cf__step--active', parseInt(s.num) < parseInt(v.step) && 'cf__step--done']}>
+          <span class="cf__step-dot">
+            {parseInt(s.num) < parseInt(v.step)
+              ? <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              : s.num
+            }
+          </span>
+          <span class="cf__step-label">{s.label}</span>
+          {s.num !== '4' && <span class="cf__step-line" />}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Main CTA -->
+  <div class="cf__main">
+    <div class="container cf__inner">
+      <div class="cf__text">
+        <span class:list={['cf__badge', v.badgeColor]}>{v.badge}</span>
+        <h2 class="cf__headline">{v.headline}</h2>
+        <p class="cf__sub">{v.subtext}</p>
+      </div>
+      <div class="cf__actions">
+        {v.cta1.style === 'primary' && (
+          <a href={v.cta1.href} class="cf__btn cf__btn--primary">{v.cta1.label}</a>
+        )}
+        {v.cta2.style === 'outline' && (
+          <a href={v.cta2.href} class="cf__btn cf__btn--outline">{v.cta2.label}</a>
+        )}
+        {v.cta2.style === 'wa' && (
+          <a href={v.cta2.href} class="cf__btn cf__btn--wa" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            {v.cta2.label}
+          </a>
+        )}
+      </div>
+    </div>
+  </div>
+
+</section>
+)}
+
+<style>
+  /* ══════════════════════════════════════════
+     FUNNEL PROGRESS BAR
+     ══════════════════════════════════════════ */
+  .cf__funnel {
+    background: #111113;
+    border-top: 1px solid #1e1e22;
+    padding: 0.75rem 0;
+  }
+
+  .cf__funnel-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .cf__step {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+  }
+
+  .cf__step-dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #27272A;
+    border: 1.5px solid #3F3F46;
+    color: #71717A;
+    font-size: 0.625rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .cf__step-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: #52525B;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+  }
+
+  .cf__step-line {
+    display: block;
+    width: 3rem;
+    height: 1px;
+    background: #27272A;
+    margin: 0 0.625rem;
+    flex-shrink: 0;
+  }
+
+  /* Estado: completado */
+  .cf__step--done .cf__step-dot {
+    background: rgba(44, 85, 48, 0.3);
+    border-color: rgba(44, 85, 48, 0.6);
+    color: #5a9b5f;
+  }
+  .cf__step--done .cf__step-label {
+    color: #5a9b5f;
+  }
+  .cf__step--done .cf__step-line {
+    background: rgba(44, 85, 48, 0.4);
+  }
+
+  /* Estado: activo */
+  .cf__step--active .cf__step-dot {
+    background: var(--c-primary, #2C5530);
+    border-color: var(--c-primary, #2C5530);
+    color: #fff;
+    box-shadow: 0 0 0 3px rgba(44, 85, 48, 0.25);
+  }
+  .cf__step--active .cf__step-label {
+    color: #d4d4d8;
+    font-weight: 700;
+  }
+
+  /* ══════════════════════════════════════════
+     MAIN CTA
+     ══════════════════════════════════════════ */
+  .cf__main {
+    background: linear-gradient(135deg, #1B3B20 0%, #2C5530 60%, #1D4A25 100%);
+    padding: 2.75rem 0;
+    border-bottom: 3px solid rgba(200, 149, 108, 0.25);
+  }
+
+  .cf__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+  }
+
+  .cf__text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* ── Badge ── */
+  .cf__badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 100px;
+    margin-bottom: 0.75rem;
+  }
+
+  .badge--green {
+    background: rgba(44, 85, 48, 0.5);
+    color: #86c98d;
+    border: 1px solid rgba(44, 85, 48, 0.6);
+  }
+  .badge--wood {
+    background: rgba(200, 149, 108, 0.15);
+    color: #e2b38a;
+    border: 1px solid rgba(200, 149, 108, 0.3);
+  }
+  .badge--amber {
+    background: rgba(217, 119, 6, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(217, 119, 6, 0.3);
+  }
+  .badge--slate {
+    background: rgba(100, 116, 139, 0.2);
+    color: #94a3b8;
+    border: 1px solid rgba(100, 116, 139, 0.3);
+  }
+
+  /* ── Headline & Subtext ── */
+  .cf__headline {
+    font-family: var(--font-head, 'Plus Jakarta Sans', sans-serif);
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-weight: 750;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .cf__sub {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.62);
+    line-height: 1.6;
+    max-width: 52ch;
+  }
+
+  /* ── Actions ── */
+  .cf__actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-shrink: 0;
+    align-items: center;
+  }
+
+  .cf__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.625rem;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    font-weight: 650;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .cf__btn--primary {
+    background: #fff;
+    color: var(--c-primary, #2C5530);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  }
+  .cf__btn--primary:hover {
+    background: #f0fdf4;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  }
+
+  .cf__btn--outline {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.85);
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+  }
+  .cf__btn--outline:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #fff;
+  }
+
+  .cf__btn--wa {
+    background: #25D366;
+    color: #fff;
+    box-shadow: 0 2px 12px rgba(37, 211, 102, 0.25);
+  }
+  .cf__btn--wa:hover {
+    background: #1fb855;
+    transform: translateY(-1px);
+  }
+
+  /* ══════════════════════════════════════════
+     RESPONSIVE
+     ══════════════════════════════════════════ */
+  @media (max-width: 1024px) {
+    .cf__inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+    .cf__step-line {
+      width: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cf__funnel {
+      display: none; /* La barra de pasos se oculta en móvil para no saturar */
+    }
+    .cf__main {
+      padding: 2rem 0;
+    }
+    .cf__actions {
+      width: 100%;
+    }
+    .cf__btn {
+      flex: 1;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cf__actions {
+      flex-direction: column;
+    }
+  }
+</style>

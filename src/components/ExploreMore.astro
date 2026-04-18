@@ -46,13 +46,6 @@ const {
     <div class="explore-more__grid" style={`--cols: ${Math.min(items.length, 3)}`}>
       {items.map((item) => (
         <a href={item.href} class="explore-card" aria-label={item.label}>
-          <div class="explore-card__icon" aria-hidden="true">
-            {item.isEmoji ? (
-              <span class="explore-card__emoji">{item.icon}</span>
-            ) : (
-              <span class="explore-card__svg" set:html={item.icon} />
-            )}
-          </div>
           <div class="explore-card__body">
             {item.badge && (
               <span class="explore-card__badge">{item.badge}</span>
@@ -141,34 +134,6 @@ const {
     background: #fff;
     transform: translateY(-2px);
     box-shadow: 0 4px 16px rgba(44, 85, 48, 0.1);
-  }
-
-  /* Icon */
-  .explore-card__icon {
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(44, 85, 48, 0.08);
-    border-radius: 10px;
-    flex-shrink: 0;
-    color: var(--c-primary, #2C5530);
-    transition: background 0.18s ease;
-  }
-
-  .explore-card:hover .explore-card__icon {
-    background: rgba(44, 85, 48, 0.14);
-  }
-
-  .explore-card__emoji {
-    font-size: 1.25rem;
-    line-height: 1;
-  }
-
-  .explore-card__svg svg {
-    width: 20px;
-    height: 20px;
   }
 
   /* Body */

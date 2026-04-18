@@ -272,11 +272,11 @@ const galeriaIndex = [
     tag="h2"
     badge="Preguntas frecuentes"
     title="Preguntas Frecuentes"
-    paragraph1="Estas son las dudas más comunes que recibimos por WhatsApp antes de cada evento. Si no encuentras tu respuesta, usa el formulario de al lado y te respondemos en minutos."
+    paragraph1="Estas son las dudas más comunes que recibimos por WhatsApp antes de cada evento. Si no encuentras tu respuesta, usa el formulario de al lado y te contestamos el mismo día hábil."
     paragraph2="Toda la información de precios, tiempos de entrega, zonas de cobertura y especificaciones del mobiliario está en las respuestas."
     stats={[
-      { value: '8', label: 'preguntas con respuesta inmediata' },
-      { value: '< 5 min', label: 'tiempo de respuesta por WhatsApp' },
+      { value: '8', label: 'preguntas resueltas al vuelo' },
+      { value: 'hábil', label: 'cotización el mismo día' },
       { value: 'lun–dom', label: '8:00 a 20:00 hrs' },
     ]}
   />
@@ -338,44 +338,10 @@ const galeriaIndex = [
   secondBtn={{ label: 'Ver catálogo', href: '/catalogo/' }}
 />
 
-<!-- CTA Final -->
-<CtaBarFinal
-  headline="¿Listo para tu evento?"
-  subtext="Cotiza sin compromiso. Te respondemos en minutos."
-  phone="55 6432 8954"
-  whatsapp="5564328954"
-  waMessage="Hola, quiero cotizar mesas picnic para mi evento."
-  cotizarHref="/cotizar/"
-/>
+<!-- CTA Final eliminado del home -->
 
-<!-- Schema.org -->
+<!-- Schema.org (LocalBusiness ya está en BaseLayout — aquí solo FAQPage) -->
 <Fragment slot="head">
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "MESPIC — Renta de Mesas Picnic",
-    "description": "Renta de mobiliario de madera para eventos al aire libre en Ciudad de México y Estado de México.",
-    "url": "https://mesaspicnic.com",
-    "telephone": "+52-55-6432-8954",
-    "priceRange": "$$",
-    "areaServed": [
-      { "@type": "City", "name": "Ciudad de México" },
-      { "@type": "State", "name": "Estado de México" }
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Calle Gob. García Conde 34, Col. San Miguel Chapultepec I Secc",
-      "addressLocality": "Ciudad de México",
-      "addressRegion": "Miguel Hidalgo, CDMX",
-      "postalCode": "11800",
-      "addressCountry": "MX"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "ratingCount": "500"
-    }
-  })} />
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",

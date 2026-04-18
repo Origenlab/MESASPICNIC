@@ -1,112 +1,220 @@
 ---
 /**
- * Footer — OrigenLab Standard v2
- * Profesional, oscuro neutro, navegación completa.
- * Sin animaciones. Código limpio.
+ * Footer — MESPIC Premium v3
+ * Pre-footer CTA · Stats · Redes · Zonas · Nav completa
  */
 const year = new Date().getFullYear();
+const path = Astro.url.pathname;
+const isHome = path === '/' || path === '';
 ---
 
-<footer class="ft">
+{!isHome && (
+<Fragment>
+<section class="ft-cta">
+  <div class="container ft-cta__inner">
+    <div class="ft-cta__text">
+      <p class="ft-cta__eyebrow">¿Listo para tu evento?</p>
+      <h2 class="ft-cta__title">Mobiliario de madera para eventos — entrega, montaje y recolección</h2>
+    </div>
+    <div class="ft-cta__actions">
+      <button
+        type="button"
+        class="ft-cta__btn ft-cta__btn--wa"
+        onclick="if(window.openMespicChat){openMespicChat()}else{window.open('https://wa.me/5564328954?text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20mesas%20picnic%20para%20mi%20evento','_blank','noopener')}"
+        aria-label="Abrir chat de WhatsApp"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Escribir por WhatsApp
+      </button>
+      <a href="/cotizar/" class="ft-cta__btn ft-cta__btn--outline">
+        Solicitar cotización
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
 
-  <!-- ═══ PRINCIPAL ═══ -->
+<div class="ft-stats">
+  <div class="container ft-stats__grid">
+    <div class="ft-stats__item">
+      <span class="ft-stats__num">+800</span>
+      <span class="ft-stats__label">Eventos realizados</span>
+    </div>
+    <div class="ft-stats__divider" aria-hidden="true"></div>
+    <div class="ft-stats__item">
+      <span class="ft-stats__num">+5</span>
+      <span class="ft-stats__label">Años de experiencia</span>
+    </div>
+    <div class="ft-stats__divider" aria-hidden="true"></div>
+    <div class="ft-stats__item">
+      <span class="ft-stats__num">+20</span>
+      <span class="ft-stats__label">Modelos de mobiliario</span>
+    </div>
+    <div class="ft-stats__divider" aria-hidden="true"></div>
+    <div class="ft-stats__item">
+      <span class="ft-stats__num">CDMX</span>
+      <span class="ft-stats__label">y zona metropolitana</span>
+    </div>
+  </div>
+</div>
+</Fragment>
+)}
+
+<footer class="ft">
   <div class="container ft__main">
     <div class="ft__grid">
 
-      <!-- Marca + contacto -->
+      <!-- ── Col 1: Marca + Contacto ── -->
       <div class="ft__brand">
         <a href="/" class="ft__logo">MesPic<span class="ft__dot">·</span></a>
-        <p class="ft__tagline">Renta de mobiliario de madera para eventos al aire libre en Ciudad de México y Estado de México.</p>
+        <p class="ft__tagline">
+          Renta de mesas picnic y mobiliario de madera premium para bodas, eventos corporativos y celebraciones al aire libre en CDMX y Zona Metropolitana.
+        </p>
 
-        <div class="ft__contact-list">
-          <a href="tel:+525564328954" class="ft__contact-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            55 6432 8954
+        <ul class="ft__contact">
+          <li>
+            <a href="tel:+525564328954" class="ft__contact-link">
+              <span class="ft__contact-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              </span>
+              55 6432 8954
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/5564328954?text=Hola%2C%20quiero%20cotizar%20mesas%20picnic%20para%20mi%20evento." target="_blank" rel="noopener" class="ft__contact-link ft__contact-link--wa">
+              <span class="ft__contact-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </span>
+              WhatsApp — Cotización el mismo día
+            </a>
+          </li>
+          <li>
+            <a href="mailto:contacto@mesaspicnic.com" class="ft__contact-link">
+              <span class="ft__contact-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              contacto@mesaspicnic.com
+            </a>
+          </li>
+          <li class="ft__contact-info">
+            <span class="ft__contact-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            Lun – Dom &nbsp;·&nbsp; 8:00 – 20:00 hrs
+          </li>
+          <li class="ft__contact-info">
+            <span class="ft__contact-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            San Miguel Chapultepec, Miguel Hidalgo, CDMX
+          </li>
+        </ul>
+
+        <!-- Redes sociales -->
+        <div class="ft__social">
+          <a href="https://www.instagram.com/mesaspicnicmx" target="_blank" rel="noopener" class="ft__social-link" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </a>
-          <a href="https://wa.me/5564328954" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}" class="ft__contact-link ft__contact-wa">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp
+          <a href="https://www.facebook.com/mesaspicnicmx" target="_blank" rel="noopener" class="ft__social-link" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
           </a>
-          <span class="ft__schedule">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Lun–Dom 8:00–20:00
-          </span>
-          <span class="ft__address">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Calle Gob. García Conde 34, Col. San Miguel Chapultepec I Secc, Miguel Hidalgo, 11800 CDMX
-          </span>
+          <a href="https://www.tiktok.com/@mesaspicnicmx" target="_blank" rel="noopener" class="ft__social-link" aria-label="TikTok">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.73a8.19 8.19 0 004.79 1.52V6.79a4.85 4.85 0 01-1.02-.1z"/></svg>
+          </a>
+          <a href="https://www.pinterest.com/mesaspicnicmx" target="_blank" rel="noopener" class="ft__social-link" aria-label="Pinterest">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.76 1.22-5.15 1.22-5.15s-.31-.62-.31-1.55c0-1.45.84-2.54 1.89-2.54.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.49-.25 1.04.52 1.88 1.54 1.88 1.85 0 3.09-2.37 3.09-5.16 0-2.13-1.43-3.63-3.49-3.63-2.38 0-3.77 1.78-3.77 3.63 0 .72.28 1.49.62 1.91.07.08.08.15.06.24-.06.27-.21.84-.23.96-.03.15-.1.19-.24.11-1.38-.64-2.24-2.66-2.24-4.28 0-3.48 2.53-6.68 7.3-6.68 3.83 0 6.81 2.73 6.81 6.37 0 3.81-2.39 6.87-5.72 6.87-1.12 0-2.17-.58-2.53-1.27l-.69 2.57c-.25.97-.93 2.18-1.38 2.92.92.28 1.89.44 2.9.44 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          </a>
         </div>
       </div>
 
-      <!-- Servicios -->
+      <!-- ── Col 2: Servicios + Paquetes ── -->
       <div class="ft__col">
         <h4 class="ft__heading">Servicios</h4>
-        <ul>
-          <li><a href="/servicios/bodas/">Bodas</a></li>
-          <li><a href="/servicios/eventos-corporativos/">Corporativos</a></li>
-          <li><a href="/servicios/fiestas-infantiles/">Infantiles</a></li>
-          <li><a href="/servicios/picnic-romantico/">Picnic Romántico</a></li>
-          <li><a href="/servicios/fiestas-tematicas/">Fiestas Temáticas</a></li>
-          <li><a href="/servicios/reuniones-familiares/">Reuniones Familiares</a></li>
-          <li><a href="/servicios/festivales/">Festivales y Ferias</a></li>
-          <li><a href="/servicios/sesiones-fotograficas/">Sesiones Fotográficas</a></li>
-        </ul>
-      </div>
-
-      <!-- Catálogo -->
-      <div class="ft__col">
-        <h4 class="ft__heading">Catálogo</h4>
-        <ul>
-          <li><a href="/catalogo/mesa-picnic-estandar/">Mesa Estándar</a></li>
-          <li><a href="/catalogo/mesa-picnic-grande/">Mesa Grande</a></li>
-          <li><a href="/catalogo/mesa-picnic-infantil/">Mesa Infantil</a></li>
-          <li><a href="/catalogo/mesa-picnic-premium/">Mesa Premium</a></li>
-          <li><a href="/catalogo/set-picnic-completo/">Set Completo</a></li>
-          <li><a href="/catalogo/mesa-picnic-rustica/">Mesa Rústica</a></li>
+        <ul class="ft__links">
+          <li><a href="/servicios/bodas/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Bodas al Aire Libre</a></li>
+          <li><a href="/servicios/eventos-corporativos/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Eventos Corporativos</a></li>
+          <li><a href="/servicios/fiestas-infantiles/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Fiestas Infantiles</a></li>
+          <li><a href="/servicios/picnic-romantico/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Picnic Romántico</a></li>
+          <li><a href="/servicios/fiestas-tematicas/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Fiestas Temáticas</a></li>
+          <li><a href="/servicios/reuniones-familiares/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Reuniones Familiares</a></li>
+          <li><a href="/servicios/festivales/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Festivales y Ferias</a></li>
+          <li><a href="/servicios/sesiones-fotograficas/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Sesiones Fotográficas</a></li>
         </ul>
 
         <h4 class="ft__heading ft__heading--mt">Paquetes</h4>
-        <ul>
-          <li><a href="/paquetes/basico/">Básico — 24 personas</a></li>
-          <li><a href="/paquetes/estandar/">Estándar — 36 personas</a></li>
-          <li><a href="/paquetes/premium/">Premium — 60 personas</a></li>
+        <ul class="ft__links">
+          <li><a href="/paquetes/basico/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Básico — hasta 24 pax</a></li>
+          <li><a href="/paquetes/estandar/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Estándar — hasta 36 pax</a></li>
+          <li><a href="/paquetes/premium/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Premium — hasta 60 pax</a></li>
         </ul>
       </div>
 
-      <!-- Blog + Empresa -->
+      <!-- ── Col 3: Catálogo ── -->
       <div class="ft__col">
-        <h4 class="ft__heading">Blog</h4>
-        <ul>
-          <li><a href="/blog/renta-mesas-picnic-bodas-cdmx/">Mesas picnic para bodas en CDMX</a></li>
-          <li><a href="/blog/cuantas-mesas-picnic-necesitas-segun-invitados/">¿Cuántas mesas necesitas?</a></li>
-          <li><a href="/blog/decoracion-mesas-picnic-fiestas-infantiles/">Decoración para infantiles</a></li>
-          <li><a href="/blog/mesas-picnic-eventos-corporativos/">Eventos corporativos</a></li>
-          <li><a href="/blog/picnic-lujo-experiencias-premium-cdmx/">Picnic de lujo en CDMX</a></li>
-          <li><a href="/blog/renta-mesas-picnic-polanco-lomas-santa-fe/">Polanco · Lomas · Santa Fe</a></li>
-          <li><a href="/blog/renta-mesas-picnic-coyoacan-san-angel-roma-norte/">Coyoacán · Roma Norte</a></li>
-          <li><a href="/blog/mesas-picnic-eventos-corporativos-interlomas-huixquilucan/">Interlomas · Huixquilucan</a></li>
-          <li><a href="/blog/mesas-picnic-fiestas-privadas-metepec-zona-esmeralda-bosque-real/">Metepec · Zona Esmeralda</a></li>
+        <h4 class="ft__heading">Catálogo</h4>
+        <ul class="ft__links">
+          <li><a href="/catalogo/mesa-picnic-estandar/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Mesa Picnic Estándar</a></li>
+          <li><a href="/catalogo/mesa-picnic-grande/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Mesa Picnic Grande</a></li>
+          <li><a href="/catalogo/mesa-picnic-premium/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Mesa Premium Barnizada</a></li>
+          <li><a href="/catalogo/mesa-picnic-xl/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Mesa Picnic XL</a></li>
+          <li><a href="/catalogo/set-picnic-completo/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Set Picnic Completo</a></li>
+          <li><a href="/catalogo/mesa-picnic-rustica/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Mesa Rústica / Boho</a></li>
+          <li><a href="/catalogo/mesa-picnic-parota/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Mesa de Parota Maciza</a></li>
+          <li><a href="/catalogo/set-lounge-exterior/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Set Lounge Exterior VIP</a></li>
+          <li><a href="/catalogo/mesa-farm-americana/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Mesa Farm Americana</a></li>
+          <li><a href="/catalogo/mesa-madera-teka/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Mesa Teca Premium</a></li>
+          <li><a href="/catalogo/" class="ft__link-all">Ver catálogo completo →</a></li>
+        </ul>
+      </div>
+
+      <!-- ── Col 4: Blog + Empresa ── -->
+      <div class="ft__col">
+        <h4 class="ft__heading">Artículos del Blog</h4>
+        <ul class="ft__links">
+          <li><a href="/blog/renta-mesas-picnic-bodas-cdmx/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Mesas picnic para bodas en CDMX</a></li>
+          <li><a href="/blog/cuantas-mesas-picnic-necesitas-segun-invitados/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>¿Cuántas mesas necesitas?</a></li>
+          <li><a href="/blog/mesas-picnic-eventos-corporativos/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Eventos corporativos</a></li>
+          <li><a href="/blog/picnic-lujo-experiencias-premium-cdmx/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Picnic de lujo en CDMX</a></li>
+          <li><a href="/blog/renta-mesas-picnic-polanco-lomas-santa-fe/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Polanco · Lomas · Santa Fe</a></li>
+          <li><a href="/blog/" class="ft__link-all">Ver todos los artículos →</a></li>
         </ul>
 
         <h4 class="ft__heading ft__heading--mt">Empresa</h4>
-        <ul>
-          <li><a href="/nosotros/">Nosotros</a></li>
-          <li><a href="/cotizar/">Cotizar</a></li>
-          <li><a href="/contacto/">Contacto</a></li>
-          <li><a href="/aviso-de-privacidad/">Aviso de privacidad</a></li>
+        <ul class="ft__links">
+          <li><a href="/nosotros/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Nosotros</a></li>
+          <li><a href="/cotizar/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Solicitar Cotización</a></li>
+          <li><a href="/contacto/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Contacto</a></li>
+          <li><a href="/aviso-de-privacidad/"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>Aviso de Privacidad</a></li>
         </ul>
       </div>
 
+    </div><!-- /ft__grid -->
+  </div><!-- /container -->
+
+  <!-- ═══ ZONAS DE COBERTURA ═══ -->
+  <div class="ft__zones">
+    <div class="container ft__zones-inner">
+      <span class="ft__zones-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Zonas de cobertura:
+      </span>
+      <div class="ft__zones-tags">
+        <span>CDMX</span><span>Polanco</span><span>Lomas de Chapultepec</span><span>Santa Fe</span><span>Coyoacán</span><span>San Ángel</span><span>Roma Norte</span><span>Condesa</span><span>Tlalpan</span><span>Interlomas</span><span>Huixquilucan</span><span>Metepec</span><span>Zona Esmeralda</span><span>Bosque Real</span><span>Naucalpan</span><span>Satélite</span>
+      </div>
     </div>
   </div>
 
   <!-- ═══ BOTTOM BAR ═══ -->
   <div class="ft__bar">
     <div class="container ft__bar-inner">
-      <p>&copy; {year} MESPIC — Renta de Mesas Picnic para Eventos. Todos los derechos reservados.</p>
+      <p class="ft__bar-copy">
+        &copy; {year} <strong>MESPIC</strong> — Renta de Mesas Picnic para Eventos · CDMX, México
+      </p>
       <div class="ft__bar-links">
         <a href="/aviso-de-privacidad/">Aviso de privacidad</a>
-        <span class="ft__bar-sep">·</span>
+        <span>·</span>
+        <a href="/cotizar/">Cotizar</a>
+        <span>·</span>
         <a href="/contacto/">Contacto</a>
       </div>
     </div>
@@ -115,9 +223,143 @@ const year = new Date().getFullYear();
 </footer>
 
 <style>
-  /* ══════════════════════════════════════
-     Footer — Fondo oscuro neutro
-     ══════════════════════════════════════ */
+  /* ══════════════════════════════════════════════════
+     PRE-FOOTER CTA STRIP
+     ══════════════════════════════════════════════════ */
+  .ft-cta {
+    background: linear-gradient(135deg, #1a0f08 0%, #2d1a0e 50%, #1a0f08 100%);
+    border-top: 1px solid rgba(200, 149, 108, 0.2);
+    padding: 3.5rem 0;
+  }
+
+  .ft-cta__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .ft-cta__eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--c-accent, #C8956C);
+    margin-bottom: 0.5rem;
+  }
+
+  .ft-cta__title {
+    font-family: var(--font-head);
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.25;
+    max-width: 520px;
+    margin: 0;
+  }
+
+  .ft-cta__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .ft-cta__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.375rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+    border: none;
+    transition: opacity 0.2s;
+  }
+
+  .ft-cta__btn--wa {
+    background: #25D366;
+    color: #fff;
+  }
+
+  .ft-cta__btn--wa:hover { opacity: 0.9; }
+
+  .ft-cta__btn--outline {
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .ft-cta__btn--outline:hover { border-color: rgba(255, 255, 255, 0.5); }
+
+  @media (max-width: 768px) {
+    .ft-cta__inner { flex-direction: column; text-align: center; }
+    .ft-cta__title { max-width: 100%; }
+    .ft-cta__actions { flex-wrap: wrap; justify-content: center; }
+  }
+
+  /* ══════════════════════════════════════════════════
+     STATS BAR
+     ══════════════════════════════════════════════════ */
+  .ft-stats {
+    background: #111113;
+    border-top: 1px solid #1e1e22;
+    border-bottom: 1px solid #1e1e22;
+    padding: 1.75rem 0;
+  }
+
+  .ft-stats__grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .ft-stats__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 3rem;
+    gap: 0.25rem;
+  }
+
+  .ft-stats__num {
+    font-family: var(--font-head);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--c-accent, #C8956C);
+    line-height: 1;
+  }
+
+  .ft-stats__label {
+    font-size: 0.75rem;
+    color: #71717A;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 500;
+  }
+
+  .ft-stats__divider {
+    width: 1px;
+    height: 36px;
+    background: #27272A;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 640px) {
+    .ft-stats__grid { flex-wrap: wrap; gap: 1.5rem; }
+    .ft-stats__item { padding: 0 1.5rem; }
+    .ft-stats__divider { display: none; }
+  }
+
+  /* ══════════════════════════════════════════════════
+     FOOTER PRINCIPAL
+     ══════════════════════════════════════════════════ */
   .ft {
     background: #18181B;
     color: #fff;
@@ -129,18 +371,19 @@ const year = new Date().getFullYear();
 
   .ft__grid {
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
-    gap: 2.5rem;
+    grid-template-columns: 1.5fr 1fr 1fr 1.1fr;
+    gap: 2.5rem 3rem;
   }
 
   /* ── Marca ── */
   .ft__logo {
     font-family: var(--font-head, 'Plus Jakarta Sans', sans-serif);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 800;
     color: #fff;
     display: inline-block;
-    margin-bottom: 1rem;
+    margin-bottom: 0.875rem;
+    letter-spacing: -0.02em;
   }
 
   .ft__dot {
@@ -150,134 +393,251 @@ const year = new Date().getFullYear();
   .ft__tagline {
     color: #A1A1AA;
     font-size: 0.875rem;
-    line-height: 1.65;
-    max-width: 300px;
+    line-height: 1.7;
     margin-bottom: 1.5rem;
   }
 
-  .ft__contact-list {
+  /* ── Contacto ── */
+  .ft__contact {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
   }
 
   .ft__contact-link {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    color: #D4D4D8;
-    font-size: 0.875rem;
+    gap: 0.625rem;
+    font-size: 0.8125rem;
     font-weight: 500;
+    color: #D4D4D8;
+    transition: color 0.15s ease;
   }
 
   .ft__contact-link:hover {
     color: #fff;
   }
 
-  .ft__contact-link svg {
-    flex-shrink: 0;
-    opacity: 0.7;
-  }
-
-  .ft__contact-wa {
+  .ft__contact-link--wa {
     color: #25D366;
   }
 
-  .ft__contact-wa:hover {
+  .ft__contact-link--wa:hover {
     color: #2ee077;
   }
 
-  .ft__schedule {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #71717A;
-    font-size: 0.8125rem;
-  }
-
-  .ft__schedule svg {
-    flex-shrink: 0;
-    opacity: 0.5;
-  }
-
-  .ft__address {
+  .ft__contact-info {
     display: inline-flex;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 0.625rem;
+    font-size: 0.8rem;
     color: #71717A;
-    font-size: 0.8125rem;
-    line-height: 1.5;
   }
 
-  .ft__address svg {
+  .ft__contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 6px;
     flex-shrink: 0;
-    opacity: 0.5;
-    margin-top: 2px;
+    color: #71717A;
+  }
+
+  .ft__contact-link .ft__contact-icon {
+    background: rgba(200,149,108,0.1);
+    color: var(--c-accent, #C8956C);
+  }
+
+  .ft__contact-link--wa .ft__contact-icon {
+    background: rgba(37,211,102,0.1);
+    color: #25D366;
+  }
+
+  /* ── Redes sociales ── */
+  .ft__social {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .ft__social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid #2e2e32;
+    color: #71717A;
+    transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+  }
+
+  .ft__social-link:hover {
+    border-color: var(--c-accent, #C8956C);
+    color: var(--c-accent, #C8956C);
+    background: rgba(200,149,108,0.08);
   }
 
   /* ── Columnas de links ── */
   .ft__heading {
-    font-family: var(--font-body, 'Inter', sans-serif);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
     color: #FAFAFA;
+    margin-bottom: 1rem;
+    padding-bottom: 0.625rem;
+    border-bottom: 1px solid #27272A;
   }
 
   .ft__heading--mt {
-    margin-top: 1.75rem;
+    margin-top: 2rem;
   }
 
-  .ft__col ul {
+  .ft__links {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.375rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
-  .ft__col a {
+  .ft__links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
     color: #A1A1AA;
     font-size: 0.8125rem;
+    line-height: 1.5;
+    transition: color 0.15s ease;
   }
 
-  .ft__col a:hover {
+  .ft__links a svg {
+    flex-shrink: 0;
+    opacity: 0;
+    color: var(--c-accent, #C8956C);
+    transition: opacity 0.15s ease;
+  }
+
+  .ft__links a:hover {
     color: #fff;
   }
 
-  /* ── Bottom bar ── */
-  .ft__bar {
-    border-top: 1px solid #27272A;
+  .ft__links a:hover svg {
+    opacity: 1;
+  }
+
+  .ft__link-all {
+    margin-top: 0.375rem;
+    color: var(--c-accent, #C8956C) !important;
+    font-weight: 600 !important;
+    font-size: 0.8rem !important;
+  }
+
+  .ft__link-all:hover {
+    color: #e0a87d !important;
+  }
+
+  /* ═══ ZONAS DE COBERTURA ═══ */
+  .ft__zones {
+    border-top: 1px solid #222226;
     padding: 1.25rem 0;
+    background: #16161a;
+  }
+
+  .ft__zones-inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .ft__zones-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #52525B;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .ft__zones-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+
+  .ft__zones-tags span {
+    font-size: 0.7rem;
+    color: #52525B;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid #27272A;
+    padding: 0.2rem 0.6rem;
+    border-radius: 100px;
+    cursor: default;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .ft__zones-tags span:hover {
+    color: #A1A1AA;
+    border-color: #3f3f46;
+  }
+
+  /* ═══ BOTTOM BAR ═══ */
+  .ft__bar {
+    border-top: 1px solid #1e1e22;
+    padding: 1.25rem 0;
+    background: #111113;
   }
 
   .ft__bar-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #52525B;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .ft__bar-copy {
+    color: #3F3F46;
     font-size: 0.75rem;
+  }
+
+  .ft__bar-copy strong {
+    color: #52525B;
   }
 
   .ft__bar-links {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.625rem;
+    font-size: 0.75rem;
+    color: #3F3F46;
   }
 
   .ft__bar-links a {
-    color: #52525B;
+    color: #3F3F46;
+    transition: color 0.15s ease;
   }
 
   .ft__bar-links a:hover {
     color: #A1A1AA;
   }
 
-  .ft__bar-sep {
-    color: #3F3F46;
-  }
-
-  /* ── Responsive ── */
+  /* ══════════════════════════════════════════════════
+     RESPONSIVE
+     ══════════════════════════════════════════════════ */
   @media (max-width: 1100px) {
     .ft__grid {
       grid-template-columns: 1fr 1fr;
@@ -286,6 +646,14 @@ const year = new Date().getFullYear();
 
     .ft__brand {
       grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .ft__zones-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
     }
   }
 
@@ -299,6 +667,10 @@ const year = new Date().getFullYear();
       flex-direction: column;
       gap: 0.5rem;
       text-align: center;
+    }
+
+    .ft__bar-links {
+      justify-content: center;
     }
   }
 </style>

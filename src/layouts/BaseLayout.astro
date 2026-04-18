@@ -2,6 +2,7 @@
 import TopBar from '../components/TopBar.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import CtaFlujo from '../components/CtaFlujo.astro';
 import StickyMobileNav from '../components/StickyMobileNav.astro';
 import '../styles/global.css';
 
@@ -40,9 +41,16 @@ const localBusinessSchema = {
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Calle Gob. García Conde 34, Col. San Miguel Chapultepec I Secc",
     "addressLocality": "Ciudad de México",
     "addressRegion": "CDMX",
+    "postalCode": "11800",
     "addressCountry": "MX"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "500"
   },
   "geo": {
     "@type": "GeoCoordinates",
@@ -130,7 +138,13 @@ const extraSchemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
   <!-- Fonts: Geist / system-ui (Inter removido) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet" />
+
+  <!-- 3rd-party preconnects (chat widget + analytics) -->
+  <link rel="preconnect" href="https://api.dmchamp.com" crossorigin />
+  <link rel="preconnect" href="https://app.truconversion.com" crossorigin />
+  <link rel="dns-prefetch" href="https://api.dmchamp.com" />
+  <link rel="dns-prefetch" href="https://app.truconversion.com" />
 
   <!-- JSON-LD: LocalBusiness -->
   <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
@@ -159,38 +173,55 @@ const extraSchemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
   </script>
 </head>
 <body>
+  <a href="#contenido" class="skip-link">Saltar al contenido</a>
   <TopBar />
   <div class="hdr-stack">
     <Header />
     <slot name="breadcrumbs" />
   </div>
-  <main>
+  <main id="contenido">
     <slot />
   </main>
+  <CtaFlujo />
   <Footer />
 
   <!-- Sticky Mobile Navigation Funnel -->
   <StickyMobileNav />
 
   <!-- DMChamp Chat Widget -->
-  <script is:inline src="https://api.dmchamp.com/v1/chat-widget/MudstzucAJwOXl5hvruG"></script>
+  <script is:inline async src="https://api.dmchamp.com/v1/chat-widget/MudstzucAJwOXl5hvruG"></script>
 
-  <!-- Embudo MESPIC — todos los contactos pasan por DMChamp -->
+  <!-- Embudo MESPIC — todos los contactos pasan por DMChamp (con queue + fallback) -->
   <script is:inline>
     (function () {
       var WA_FALLBACK = 'https://wa.me/5564328954?text=' + encodeURIComponent('Hola, quiero cotizar mesas picnic para mi evento.');
-      function openMespicChat() {
+
+      function tryOpen() {
         var bubble = document.querySelector('.wai-chat-bubble');
-        if (bubble) { bubble.click(); return; }
-        setTimeout(function () {
-          var bubble2 = document.querySelector('.wai-chat-bubble');
-          if (bubble2) { bubble2.click(); } else { window.open(WA_FALLBACK, '_blank', 'noopener'); }
-        }, 800);
+        if (bubble) { bubble.click(); return true; }
+        return false;
       }
+
+      function openMespicChat() {
+        if (tryOpen()) return;
+        // queue + retry (max ~5s) con fallback a wa.me
+        var attempts = 0;
+        var interval = setInterval(function () {
+          attempts++;
+          if (tryOpen() || attempts > 25) {
+            clearInterval(interval);
+            if (attempts > 25) window.open(WA_FALLBACK, '_blank', 'noopener');
+          }
+        }, 200);
+      }
+
       window.openMespicChat = openMespicChat;
+
       document.addEventListener('click', function (e) {
         var link = e.target.closest('a[href*="wa.me"]');
         if (!link) return;
+        // Opt-out explícito: <a data-no-intercept="true" href="wa.me/...">
+        if (link.dataset && link.dataset.noIntercept === 'true') return;
         e.preventDefault();
         openMespicChat();
       }, true);

@@ -1,0 +1,576 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import CtaBar from '../../../components/CtaBar.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import FeatureCard from '../../../components/FeatureCard.astro';
+import ServiceCard from '../../../components/ServiceCard.astro';
+import ProductGallery from '../../../components/ProductGallery.astro';
+import FaqSection from '../../../components/FaqSection.astro';
+import WaBubble from '../../../components/WaBubble.astro';
+---
+
+<BaseLayout
+  title="Mesa Farm Patas de Horquilla para Renta — 2.40 m · 8–10 Personas | MESPIC CDMX"
+  description="Renta la Mesa Farm con Patas de Horquilla de MESPIC: 2.40 × 0.84 m, 8–10 personas, tablero de pino barnizado y patas de hierro forjado en negro mate. Estilo industrial y moderno para bodas, eventos y activaciones en CDMX y Edomex. Entrega y montaje incluidos."
+  ogImage="/img/catalogo/mesa-farm-americana-madera-evento-jardin-01.webp"
+>
+
+<!-- Breadcrumbs -->
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Catálogo", href: "/catalogo/" },
+    { label: "Mesa Farm Patas de Horquilla" }
+  ]} />
+</Fragment>
+
+<!-- Hero -->
+<Hero
+  badge="Mesa Farm Patas de Horquilla"
+  title="Mesa Farm Patas de Horquilla — 2.40 m para 8–10 Personas"
+  description="La mesa más versátil del catálogo para bodas modernas y eventos corporativos. Tablero de pino nacional barnizado + patas de hierro forjado en negro mate. Estilo industrial, boho y minimalista en una sola pieza."
+  ctaPrimary={null}
+  ctaSecondary={null}
+  seoParagraph1="La Mesa Farm Patas de Horquilla es la incorporación más solicitada del catálogo de MESPIC para quienes buscan un estilo contemporáneo sin perder la calidez de la madera natural. Las patas de hierro forjado en negro mate crean un contraste elegante con el tablero de pino barnizado, resultando en una pieza que se adapta por igual a bodas campestres de lujo, activaciones de marca y events corporativos con identidad visual fuerte. Sus 2.40 metros de largo y 84 centímetros de ancho la convierten en la mesa ideal para grupos de 8 a 10 personas sentadas cómodamente."
+  seoParagraph2="A diferencia de las mesas picnic tradicionales con bancas integradas, la Mesa Farm Patas de Horquilla está diseñada para combinarse con sillas independientes, lo que permite adaptar el estilo de cada evento: sillas crossback para bodas rústicas, sillas Thonet para eventos vintage, taburetes industriales para activaciones de marca, o sillas fantasma para eventos minimalistas de lujo. Esta flexibilidad la convierte en la elección preferida de planners de eventos y coordinadoras de boda que buscan mobiliario de alto impacto visual."
+  dark={true}
+/>
+
+<!-- CtaBar -->
+<CtaBar />
+
+<!-- ═══════════════════════════════════════════════════════
+     GALERÍA + SIDEBAR MODELOS
+═══════════════════════════════════════════════════════ -->
+<section class="section" id="galeria">
+  <SectionHeader
+    tag="h2"
+    badge="La Mesa Farm en eventos reales"
+    title="Mesa Farm Patas de Horquilla en Bodas, Corporativos y Activaciones"
+    paragraph1="El modelo más fotografiado por coordinadores de boda y planners de eventos. La combinación de madera y hierro crea composiciones visuales que dominan el feed de Instagram de cualquier evento."
+    paragraph2="¿Tienes fecha? Cotiza disponibilidad y precio por WhatsApp — respondemos el mismo día."
+  />
+  <ProductGallery
+    images={[
+      { src: "/img/catalogo/mesa-farm-americana-madera-evento-jardin-01.webp",  alt: "Mesa farm patas de horquilla negras en jardín exterior decorada para evento" },
+      { src: "/img/catalogo/mesa-farm-americana-exterior-decorada-03.webp",     alt: "Mesa farm madera pino con patas hierro forjado decorada con flores y velas" },
+      { src: "/img/catalogo/mesa-farm-americana-boda-campestre-02.webp",        alt: "Mesa farm patas horquilla en boda campestre rústica al aire libre CDMX" },
+      { src: "/img/catalogo/mesa-farm-americana-evento-premium-05.webp",        alt: "Mesa farm madera barnizada patas negras en evento premium corporativo" },
+      { src: "/img/catalogo/mesa-farm-americana-detalle-madera-04.webp",        alt: "Detalle tablero pino nacional barnizado mesa farm con patas de hierro negro" },
+      { src: "/img/catalogo/mesa-madera-teka-boda-lujo-04.webp",                alt: "Mesa farm industrial en boda de lujo exterior con sillas crossback madera" },
+    ]}
+    recommended={[
+      { title: "Mesa Farm Americana",   description: "2.40 m · 8–10 pax · Sin bancas",    href: "/catalogo/mesa-farm-americana/",     image: "/img/catalogo/mesa-farm-americana-madera-evento-jardin-01.webp" },
+      { title: "Mesa Premium",          description: "Barniz 4 manos · Lujo",             href: "/catalogo/mesa-picnic-premium/",      image: "/img/catalogo/mesa-picnic-lujo-madera-exterior-renta-01.avif" },
+      { title: "Mesa Madera Teka",      description: "Aceite de teca · VIP",              href: "/catalogo/mesa-madera-teka/",         image: "/img/catalogo/mesa-madera-teka-premium-exterior-01.webp" },
+      { title: "Set Comedor Exterior",  description: "Mesa + 6 sillas crossback",         href: "/catalogo/set-comedor-exterior/",     image: "/img/catalogo/set-comedor-exterior-sillas-boda-01.webp" },
+      { title: "Barra de Madera",       description: "2.00 m · Coctelería & catering",    href: "/catalogo/barra-madera-eventos/",     image: "/img/catalogo/barra-madera-eventos-bebidas-01.webp" },
+    ]}
+    sidebarTitle="Otros modelos del catálogo"
+  />
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     ESPECIFICACIONES TÉCNICAS
+═══════════════════════════════════════════════════════ -->
+<section class="section section-alt" id="especificaciones">
+  <SectionHeader
+    tag="h2"
+    badge="Ficha técnica"
+    title="Especificaciones de la Mesa Farm Patas de Horquilla"
+    paragraph1="Dimensiones exactas, materiales y opciones de acabado. Todo lo que necesitas para planear el layout de tu evento con la máxima precisión."
+    paragraph2="Si necesitas planos de distribución para tu locación, escríbenos por WhatsApp y te enviamos la ficha técnica completa en PDF sin costo."
+    stats={[
+      { value: '2.40 m', label: 'largo del tablero' },
+      { value: '0.84 m', label: 'ancho de mesa' },
+      { value: '8–10',   label: 'personas sentadas' },
+    ]}
+  />
+  <div class="container">
+    <div class="spec-grid">
+      <!-- Ficha visual -->
+      <div class="spec-card">
+        <h3 class="spec-card__title">Ficha Técnica</h3>
+        <ul class="spec-list" role="list">
+          <li class="spec-list__item">
+            <span class="spec-list__label">Medidas tablero</span>
+            <span class="spec-list__value">2.40 × 0.84 m</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Altura de mesa</span>
+            <span class="spec-list__value">0.76 m</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Capacidad</span>
+            <span class="spec-list__value">8–10 personas</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Tablero</span>
+            <span class="spec-list__value">Pino nacional seleccionado</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Acabado tablero</span>
+            <span class="spec-list__value">Barniz exterior 3 manos</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Patas</span>
+            <span class="spec-list__value">Hierro forjado negro mate</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Sillas incluidas</span>
+            <span class="spec-list__value">No — se renta sin sillas</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Resistencia</span>
+            <span class="spec-list__value">Exterior e interior</span>
+          </li>
+          <li class="spec-list__item">
+            <span class="spec-list__label">Disponibilidad</span>
+            <span class="spec-list__value spec-list__value--ok">Consultar stock</span>
+          </li>
+        </ul>
+        <a href="/cotizar/" class="spec-card__cta">Cotizar disponibilidad →</a>
+      </div>
+
+      <!-- Features -->
+      <div class="spec-features">
+        <FeatureCard
+          index={0}
+          title="Contraste Madera + Hierro Negro"
+          description="La combinación de tablero en madera natural con patas de hierro forjado negro mate es el acabado más fotografiado en eventos y bodas premium. Genera un contraste cálido-industrial que eleva cualquier decoración sin competir con ella."
+        />
+        <FeatureCard
+          index={1}
+          title="Compatible con Cualquier Silla"
+          description="Al no incluir bancas fijas, esta mesa acepta cualquier tipo de silla: crossback, Thonet, fantasma, Tolix, chiavari o sillas de madera rusticana. Eso significa que se adapta al estilo exacto de cada evento sin restricciones."
+        />
+        <FeatureCard
+          index={2}
+          title="Ideal para Bodas y Activaciones Premium"
+          description="Planners de eventos y coordinadoras de boda la eligen por su versatilidad visual. Es perfecta para disposiciones tipo banquete lineal, mesas reales de lujo o configuraciones mixtas con otras piezas del catálogo MESPIC."
+        />
+        <FeatureCard
+          index={3}
+          title="Tablero Barnizado para Uso Exterior"
+          description="El pino nacional recibe tres manos de barniz de acabado exterior, lo que lo protege contra humedad moderada, sol directo y el uso intensivo de eventos de 8 o más horas. La superficie no requiere mantel, pero acepta cualquier tipo de montaje textil."
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     IDEAL PARA (USE CASES)
+═══════════════════════════════════════════════════════ -->
+<section class="section" id="usos">
+  <SectionHeader
+    tag="h2"
+    badge="Usos recomendados"
+    title="Para Qué Tipo de Evento es la Mesa Farm Patas de Horquilla"
+    paragraph1="La Mesa Farm Patas de Horquilla es la elección definitiva para eventos donde la identidad visual es tan importante como la funcionalidad. Su diseño industrial-natural se adapta a múltiples estilos sin perder protagonismo."
+    paragraph2="Si no sabes cuántas mesas necesitas para tu evento, escríbenos el número de invitados y te hacemos el cálculo en minutos con un layout de referencia."
+    stats={[
+      { value: '6+',     label: 'estilos de decoración compatibles' },
+      { value: '8–10',   label: 'personas por mesa' },
+      { value: 'sin',    label: 'bancas — combina con cualquier silla' },
+    ]}
+  />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard
+        title="Bodas Campestres de Lujo"
+        description="La mesa ideal para bodas en haciendas, jardines privados y viñedos. Combinada con sillas crossback o Thonet y centros de flores naturales, crea la estética de revista que toda novia quiere en su día especial."
+        image="/img/boda-hacienda-banquete-1.avif"
+        href="/servicios/bodas/"
+        btnLabel="Mesas para bodas"
+        badge="Bodas"
+      />
+      <ServiceCard
+        title="Eventos Corporativos Premium"
+        description="Para dinámicas de equipo, presentaciones de productos y almuerzos ejecutivos al aire libre donde la imagen de marca importa. El diseño industrial agrega sofisticación a cualquier espacio corporativo."
+        image="/img/corp-teambuilding-1.avif"
+        href="/servicios/eventos-corporativos/"
+        btnLabel="Mesas corporativas"
+        badge="Corporativo"
+      />
+      <ServiceCard
+        title="Activaciones de Marca"
+        description="Marcas, agencias y productoras eligen esta mesa para activaciones en espacios abiertos, food markets y sesiones fotográficas de producto. El contraste madera-hierro genera composiciones visuales de alto impacto."
+        image="/img/cine-aire-libre-mesas-picnic-festival-01.avif"
+        href="/servicios/festivales/"
+        btnLabel="Mesas para activaciones"
+        badge="Activaciones"
+      />
+      <ServiceCard
+        title="Sesiones Fotográficas"
+        description="Usada como set de producción en campañas editoriales, sesiones de moda y contenido para redes sociales. La textura del pino y las patas de hierro negro crean un fondo neutro que no compite con el producto fotografiado."
+        image="/img/boda-detalle-1.avif"
+        href="/servicios/sesiones-fotograficas/"
+        btnLabel="Mesas para shoots"
+        badge="Fotografía"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FAQ
+═══════════════════════════════════════════════════════ -->
+<section class="section section-alt" id="faq">
+  <SectionHeader
+    tag="h2"
+    badge="Preguntas frecuentes"
+    title="Preguntas sobre la Mesa Farm Patas de Horquilla"
+    paragraph1="Las dudas más comunes que recibimos antes de reservar esta mesa. Respuestas directas para que puedas decidir sin incertidumbre."
+    paragraph2="¿No está tu pregunta aquí? Escríbenos por WhatsApp con el detalle y respondemos el mismo día hábil."
+  />
+  <FaqSection
+    phone="55 6432 8954"
+    whatsapp="5564328954"
+    schedule="Lun–Dom 8:00–20:00"
+    waMessage="Hola, quiero cotizar la Mesa Farm Patas de Horquilla para mi evento."
+    items={[
+      {
+        question: "¿Cuántas personas caben en la Mesa Farm Patas de Horquilla?",
+        answer: "La Mesa Farm Patas de Horquilla acomoda 8 personas cómodamente — 4 de cada lado — y puede llegar a 10 si se colocan una persona en cada cabecera. Para mayor confort en eventos de larga duración, recomendamos 8 personas por mesa."
+      },
+      {
+        question: "¿Las sillas están incluidas en la renta?",
+        answer: "No. La Mesa Farm Patas de Horquilla se renta sin sillas. Esto es intencional: es justamente lo que le da su versatilidad. Puedes combinarla con cualquier tipo de silla según el estilo de tu evento. Si necesitas sillas, consúltanos — tenemos opciones disponibles para combinar."
+      },
+      {
+        question: "¿En qué se diferencia esta mesa de la Mesa Farm Americana?",
+        answer: "La Mesa Farm Americana tiene patas de madera torneada en el mismo tono del tablero, lo que da una estética 100% natural y cálida. La Mesa Farm Patas de Horquilla tiene patas de hierro forjado negro, lo que añade un contraste industrial-moderno. Ambas miden 2.40 m y tienen la misma capacidad, pero tienen estéticas distintas. La elección depende del estilo visual de tu evento."
+      },
+      {
+        question: "¿Se puede usar la mesa sin mantel?",
+        answer: "Sí, absolutamente. El barniz liso y la veta natural del pino se ven muy bien sin mantel, especialmente en eventos con estética industrial, minimalista o modern-rustic. Si prefieres mantel, la superficie plana acepta cualquier tipo de tela sin problema."
+      },
+      {
+        question: "¿Cuántas mesas necesito para 80 invitados?",
+        answer: "Para 80 invitados con 8 personas por mesa necesitas exactamente 10 mesas. Si quieres contar con margen de comodidad (7 personas por mesa), necesitas 12. Escríbenos el número exacto de invitados y te hacemos el cálculo personalizado con layout de referencia."
+      },
+      {
+        question: "¿El precio incluye entrega, montaje y recolección?",
+        answer: "Sí. El precio de renta de la Mesa Farm Patas de Horquilla incluye traslado a tu locación en CDMX o Edomex, colocación y acomodo por nuestro equipo, y recolección al finalizar tu evento. No hay cargos adicionales por maniobras ni tiempo extra dentro del horario acordado."
+      },
+      {
+        question: "¿La mesa resiste la lluvia o el sol directo?",
+        answer: "El tablero tiene acabado de barniz exterior que resiste humedad moderada, rocío y exposición solar por varias horas. No recomendamos dejarla bajo lluvia intensa durante periodos prolongados. Para eventos con probabilidad de lluvia, te sugerimos combinarla con carpas o contar con un plan B de cobertura."
+      }
+    ]}
+  />
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     DEL BLOG — Artículos relacionados
+═══════════════════════════════════════════════════════ -->
+<section class="section" id="blog-relacionado">
+  <SectionHeader
+    tag="h2"
+    badge="Del blog"
+    title="Guías para Eventos con Mesa Farm"
+    paragraph1="Artículos con información práctica para planear eventos con mobiliario tipo farm: distribuciones, estilos de decoración y combinaciones de sillas más efectivas."
+  />
+  <div class="container">
+    <div class="blog-cards">
+      <a href="/blog/renta-mesas-picnic-bodas-cdmx/" class="blog-card">
+        <div class="blog-card__img-wrap">
+          <img src="/img/renta-mesa-picnic-madera-pino-cdmx-01.avif" alt="Renta de mesas de madera para bodas en CDMX" loading="lazy" width="400" height="240" />
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__cat">Bodas</span>
+          <h3 class="blog-card__title">Renta de Mesas de Madera para Bodas en CDMX</h3>
+          <p class="blog-card__desc">Guía completa para elegir el modelo correcto según el estilo de tu boda: rústico, boho, campestre o moderno. Incluye tabla de comparación de modelos.</p>
+          <span class="blog-card__cta">Leer guía →</span>
+        </div>
+      </a>
+      <a href="/blog/mesas-picnic-eventos-corporativos/" class="blog-card">
+        <div class="blog-card__img-wrap">
+          <img src="/img/eventos-corporativos-ejecutivos-renta-mesas-picnic-01.avif" alt="Mesas de madera para eventos corporativos al aire libre" loading="lazy" width="400" height="240" />
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__cat">Corporativos</span>
+          <h3 class="blog-card__title">Mobiliario de Madera para Eventos Corporativos</h3>
+          <p class="blog-card__desc">Cómo usar mesas farm y mobiliario industrial en conferencias, team buildings y activaciones de marca. Distribuciones y configuraciones más solicitadas.</p>
+          <span class="blog-card__cta">Leer artículo →</span>
+        </div>
+      </a>
+      <a href="/blog/cuantas-mesas-picnic-necesitas-segun-invitados/" class="blog-card">
+        <div class="blog-card__img-wrap">
+          <img src="/img/mesa-picnic-boda-invitados-atardecer.avif" alt="Cuántas mesas farm necesitas según el número de invitados" loading="lazy" width="400" height="240" />
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__cat">Guía de cálculo</span>
+          <h3 class="blog-card__title">¿Cuántas Mesas Necesitas para Tu Evento?</h3>
+          <p class="blog-card__desc">Tabla exacta de referencia: número de mesas por cantidad de invitados para modelos de 8, 10 y 12 personas. Incluye fórmulas y márgenes de seguridad.</p>
+          <span class="blog-card__cta">Leer guía →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Siguiente paso: Ver paquetes -->
+
+
+<!-- WA Bubble -->
+<WaBubble whatsapp="5564328954" message="Hola, me interesa rentar la Mesa Farm Patas de Horquilla." />
+
+<!-- Schema JSON-LD -->
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Mesa Farm Patas de Horquilla — Renta MESPIC",
+    "description": "Mesa farm de pino nacional para renta. 2.40 × 0.84 m, capacidad 8–10 personas. Tablero barnizado exterior + patas de hierro forjado negro mate. Estilo industrial y moderno. Ideal para bodas campestres, eventos corporativos y activaciones de marca en CDMX y Edomex.",
+    "brand": { "@type": "Brand", "name": "MESPIC" },
+    "category": "Mobiliario para eventos — Renta",
+    "image": "https://mesaspicnic.com/img/catalogo/mesa-farm-americana-madera-evento-jardin-01.webp",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "MXN",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "LocalBusiness",
+        "name": "MESPIC — Renta de Mesas Picnic",
+        "telephone": "+52-55-6432-8954",
+        "url": "https://mesaspicnic.com",
+        "areaServed": [
+          { "@type": "City", "name": "Ciudad de México" },
+          { "@type": "State", "name": "Estado de México" }
+        ]
+      }
+    }
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuántas personas caben en la Mesa Farm Patas de Horquilla?",
+        "acceptedAnswer": { "@type": "Answer", "text": "La Mesa Farm Patas de Horquilla acomoda 8 personas cómodamente — 4 de cada lado — y puede llegar a 10 si se coloca una persona en cada cabecera." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Las sillas están incluidas en la renta de la Mesa Farm?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. La Mesa Farm Patas de Horquilla se renta sin sillas, lo que permite combinarla con cualquier tipo de silla según el estilo del evento: crossback, Thonet, fantasma, Tolix o sillas industriales." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuántas mesas farm necesito para 80 invitados?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Para 80 invitados con 8 personas por mesa necesitas exactamente 10 mesas Farm Patas de Horquilla. Con 7 personas por mesa (mayor comodidad), necesitas 12 mesas." }
+      }
+    ]
+  })} />
+</Fragment>
+
+</BaseLayout>
+
+<style>
+  /* ── Blog cards ── */
+  .blog-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--c-border, #E7E0D8);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .blog-card:hover {
+    box-shadow: 0 8px 28px rgba(0,0,0,0.11);
+    transform: translateY(-3px);
+  }
+
+  .blog-card__img-wrap {
+    overflow: hidden;
+    aspect-ratio: 5/3;
+  }
+
+  .blog-card__img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .blog-card:hover .blog-card__img-wrap img {
+    transform: scale(1.04);
+  }
+
+  .blog-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.25rem 1.375rem 1.5rem;
+    border-top: 3px solid var(--c-primary, #2C5530);
+  }
+
+  .blog-card__cat {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--c-primary, #2C5530);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  .blog-card__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--c-text, #1C1917);
+    line-height: 1.3;
+    margin-bottom: 0.625rem;
+  }
+
+  .blog-card__desc {
+    font-size: 0.8125rem;
+    color: var(--c-text-muted, #78716C);
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: 1rem;
+  }
+
+  .blog-card__cta {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--c-primary, #2C5530);
+  }
+
+  @media (max-width: 900px) {
+    .blog-cards { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 600px) {
+    .blog-cards { grid-template-columns: 1fr; }
+  }
+
+  /* ── Grid genérico ── */
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 1024px) {
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 640px) {
+    .grid-4 { grid-template-columns: 1fr; }
+  }
+
+  /* ── Ficha técnica ── */
+  .spec-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .spec-card {
+    background: #fff;
+    border: 1px solid var(--c-border, #E7E0D8);
+    border-radius: var(--radius-md, 12px);
+    padding: 1.75rem;
+    position: sticky;
+    top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2rem);
+  }
+
+  .spec-card__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--c-text, #1C1917);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--c-primary, #2C5530);
+  }
+
+  .spec-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .spec-list__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.625rem 0;
+    border-bottom: 1px solid var(--c-border, #E7E0D8);
+  }
+
+  .spec-list__item:last-child {
+    border-bottom: none;
+  }
+
+  .spec-list__label {
+    font-size: 0.8125rem;
+    color: var(--c-text-muted, #78716C);
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+
+  .spec-list__value {
+    font-size: 0.8125rem;
+    color: var(--c-text, #1C1917);
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .spec-list__value--ok {
+    color: var(--c-primary, #2C5530);
+  }
+
+  .spec-card__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--c-primary, #2C5530);
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.18s ease;
+  }
+
+  .spec-card__cta:hover {
+    background: #224228;
+  }
+
+  .spec-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  @media (max-width: 1024px) {
+    .spec-grid { grid-template-columns: 1fr; }
+    .spec-card { position: static; }
+  }
+
+  @media (max-width: 640px) {
+    .spec-features { grid-template-columns: 1fr; }
+  }
+</style>

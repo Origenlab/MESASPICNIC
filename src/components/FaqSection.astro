@@ -65,7 +65,7 @@ const faqSchema = {
   <div class="faq-layout__contact">
     <div class="faq-contact">
       <h3 class="faq-contact__title">¿No encuentras tu respuesta?</h3>
-      <p class="faq-contact__desc">Escríbenos y te respondemos en minutos. También puedes llamarnos directamente.</p>
+      <p class="faq-contact__desc">Escríbenos con fecha, zona y número de invitados — te mandamos cotización y disponibilidad el mismo día hábil.</p>
 
       <div class="faq-contact__info">
         <a href={`tel:+52${whatsapp}`} class="faq-contact__item">
@@ -117,8 +117,12 @@ const faqSchema = {
     var msg = document.getElementById('faqMsg').value.trim();
     var text = 'Hola, soy ' + name + '. Estoy interesado en mesas picnic para ' + event.toLowerCase() + '.';
     if (msg) text += ' Mi pregunta: ' + msg;
-    var wa = 'https://wa.me/5564328954?text=' + encodeURIComponent(text);
-    window.open(wa, '_blank');
+    if (window.openMespicChat) {
+      openMespicChat();
+    } else {
+      var wa = 'https://wa.me/5564328954?text=' + encodeURIComponent(text);
+      window.open(wa, '_blank', 'noopener');
+    }
   });
 </script>
 
