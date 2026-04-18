@@ -218,10 +218,10 @@ const modelos = [
 ];
 
 const categorias = [
-  { id: "clasica",     label: "Mesas Picnic",        count: 8,  icon: "🌲" },
-  { id: "especial",    label: "Mesas Especiales",     count: 4,  icon: "✨" },
-  { id: "complemento", label: "Sets y Complementos",  count: 6,  icon: "🍹" },
-  { id: "ninos",       label: "Para Niños",           count: 2,  icon: "🎈" },
+  { id: "clasica",     label: "Mesas Picnic",        count: 8  },
+  { id: "especial",    label: "Mesas Especiales",     count: 4  },
+  { id: "complemento", label: "Sets y Complementos",  count: 6  },
+  { id: "ninos",       label: "Para Niños",           count: 2  },
 ];
 
 const galeriaCatalogo = [
@@ -279,7 +279,7 @@ const galeriaCatalogo = [
     <aside class="catalog-sidebar" id="catalog-sidebar" aria-label="Filtros del catálogo">
 
       <div class="sidebar-header">
-        <span class="sidebar-header__title">Filtrar catálogo</span>
+        <span class="sidebar-header__title">Filtros</span>
         <button class="sidebar-close-btn" id="sidebar-close" aria-label="Cerrar filtros">✕</button>
       </div>
 
@@ -297,13 +297,11 @@ const galeriaCatalogo = [
         <span class="sidebar-block__label">Categoría</span>
         <nav class="sidebar-cats" role="list">
           <button class="sidebar-cat active" data-cat="todos" role="listitem">
-            <span class="sidebar-cat__icon">🏠</span>
             <span class="sidebar-cat__label">Todos los modelos</span>
             <span class="sidebar-cat__count">20</span>
           </button>
           {categorias.map(c => (
             <button class="sidebar-cat" data-cat={c.id} role="listitem">
-              <span class="sidebar-cat__icon">{c.icon}</span>
               <span class="sidebar-cat__label">{c.label}</span>
               <span class="sidebar-cat__count">{c.count}</span>
             </button>
@@ -315,12 +313,12 @@ const galeriaCatalogo = [
       <div class="sidebar-block">
         <span class="sidebar-block__label">Tipo de evento</span>
         <div class="sidebar-checks">
-          <label class="sidebar-check"><input type="checkbox" name="uso" value="bodas"><span>💐 Bodas al aire libre</span></label>
-          <label class="sidebar-check"><input type="checkbox" name="uso" value="corporativo"><span>🏢 Corporativo</span></label>
-          <label class="sidebar-check"><input type="checkbox" name="uso" value="festivales"><span>🎪 Festivales y ferias</span></label>
-          <label class="sidebar-check"><input type="checkbox" name="uso" value="familiar"><span>👨‍👩‍👧 Reuniones familiares</span></label>
-          <label class="sidebar-check"><input type="checkbox" name="uso" value="premium"><span>⭐ Premium / VIP</span></label>
-          <label class="sidebar-check"><input type="checkbox" name="uso" value="infantil"><span>🎈 Fiestas infantiles</span></label>
+          <label class="sidebar-check"><input type="checkbox" name="uso" value="bodas"><span>Bodas al aire libre</span></label>
+          <label class="sidebar-check"><input type="checkbox" name="uso" value="corporativo"><span>Corporativo</span></label>
+          <label class="sidebar-check"><input type="checkbox" name="uso" value="festivales"><span>Festivales y ferias</span></label>
+          <label class="sidebar-check"><input type="checkbox" name="uso" value="familiar"><span>Reuniones familiares</span></label>
+          <label class="sidebar-check"><input type="checkbox" name="uso" value="premium"><span>Premium / VIP</span></label>
+          <label class="sidebar-check"><input type="checkbox" name="uso" value="infantil"><span>Fiestas infantiles</span></label>
         </div>
       </div>
 
@@ -384,10 +382,10 @@ const galeriaCatalogo = [
       <!-- TABS DE SECCIÓN -->
       <div class="section-tabs" id="section-tabs" role="tablist" aria-label="Categorías del catálogo">
         <button class="section-tab active" data-tab="todos" role="tab" aria-selected="true">Todos (20)</button>
-        <button class="section-tab" data-tab="clasica" role="tab" aria-selected="false">🌲 Mesas Picnic</button>
-        <button class="section-tab" data-tab="especial" role="tab" aria-selected="false">✨ Especiales</button>
-        <button class="section-tab" data-tab="complemento" role="tab" aria-selected="false">🍹 Complementos</button>
-        <button class="section-tab" data-tab="ninos" role="tab" aria-selected="false">🎈 Para Niños</button>
+        <button class="section-tab" data-tab="clasica" role="tab" aria-selected="false">Mesas Picnic</button>
+        <button class="section-tab" data-tab="especial" role="tab" aria-selected="false">Especiales</button>
+        <button class="section-tab" data-tab="complemento" role="tab" aria-selected="false">Complementos</button>
+        <button class="section-tab" data-tab="ninos" role="tab" aria-selected="false">Para Niños</button>
       </div>
 
       <!-- CHIPS DE FILTROS ACTIVOS -->
@@ -707,22 +705,22 @@ const galeriaCatalogo = [
   // ── Chips de filtros activos ────────────────────────────────────────
   const catLabels = { clasica: 'Mesas Picnic', especial: 'Mesas Especiales', complemento: 'Sets y Complementos', ninos: 'Para Niños' };
   const capLabels = { small: 'Hasta 6 personas', medium: '6–10 personas', large: 'Más de 10' };
-  const usoLabels = { bodas: '💐 Bodas', corporativo: '🏢 Corporativo', festivales: '🎪 Festivales', familiar: '👨‍👩‍👧 Familiar', premium: '⭐ Premium', infantil: '🎈 Infantil' };
+  const usoLabels = { bodas: 'Bodas', corporativo: 'Corporativo', festivales: 'Festivales', familiar: 'Familiar', premium: 'Premium', infantil: 'Infantil' };
 
   function renderChips() {
     const chips = [];
 
     if (state.categoria !== 'todos') {
-      chips.push(`<button class="filter-chip" data-remove="cat">📁 ${catLabels[state.categoria]} <span class="chip-x">×</span></button>`);
+      chips.push(`<button class="filter-chip" data-remove="cat">${catLabels[state.categoria]} <span class="chip-x">×</span></button>`);
     }
     state.usos.forEach(uso => {
       chips.push(`<button class="filter-chip" data-remove="uso:${uso}">${usoLabels[uso] || uso} <span class="chip-x">×</span></button>`);
     });
     if (state.capacidad !== 'todos') {
-      chips.push(`<button class="filter-chip" data-remove="cap">👥 ${capLabels[state.capacidad]} <span class="chip-x">×</span></button>`);
+      chips.push(`<button class="filter-chip" data-remove="cap">${capLabels[state.capacidad]} <span class="chip-x">×</span></button>`);
     }
     if (state.search) {
-      chips.push(`<button class="filter-chip" data-remove="search">🔍 "${state.search}" <span class="chip-x">×</span></button>`);
+      chips.push(`<button class="filter-chip" data-remove="search">"${state.search}" <span class="chip-x">×</span></button>`);
     }
     if (chips.length > 0) {
       chips.push(`<button class="filter-chip filter-chip--reset" data-remove="all">Limpiar todo ×</button>`);
@@ -883,11 +881,14 @@ const galeriaCatalogo = [
   margin: 0 auto;
   padding: 0 1.5rem;
   display: grid;
-  grid-template-columns: 268px 1fr;
+  grid-template-columns: 1fr 268px;
   gap: 2rem;
   align-items: start;
   position: relative;
 }
+
+.catalog-main { order: 1; }
+.catalog-sidebar { order: 2; }
 
 /* ── Sidebar ─────────────────────────────────────────────── */
 .catalog-sidebar {
@@ -1001,7 +1002,6 @@ const galeriaCatalogo = [
   color: var(--c-primary, #2C5530);
   font-weight: 600;
 }
-.sidebar-cat__icon { font-size: 1rem; flex-shrink: 0; }
 .sidebar-cat__label { flex: 1; }
 .sidebar-cat__count {
   font-size: 0.6875rem;
@@ -1516,16 +1516,17 @@ const galeriaCatalogo = [
     grid-template-columns: 1fr;
   }
 
-  /* Sidebar becomes a fixed drawer on mobile */
+  /* Sidebar becomes a fixed drawer on mobile (slides from right) */
   .catalog-sidebar {
     position: fixed;
-    left: 0; top: 0; bottom: 0;
+    right: 0; top: 0; bottom: 0;
     width: min(320px, 88vw);
     max-height: 100vh;
-    border-radius: 0 16px 16px 0;
+    border-radius: 16px 0 0 16px;
     z-index: 400;
-    transform: translateX(-110%);
+    transform: translateX(110%);
     transition: transform 0.28s cubic-bezier(0.4,0,0.2,1);
+    order: unset;
   }
   .catalog-sidebar.sidebar--open { transform: translateX(0); }
   .sidebar-close-btn { display: flex !important; }
