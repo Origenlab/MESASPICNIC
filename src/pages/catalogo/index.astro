@@ -689,13 +689,13 @@ const galeriaCatalogo = [
     }
 
     paginEl.innerHTML = `
-      <p class="pag-info">Mostrando <strong>${start}–${end}</strong> de <strong>${totalItems}</strong> modelos</p>
-      <div class="pag-row">
-        <button class="pag-btn pag-btn--nav" data-page="${state.page - 1}" aria-label="Página anterior" ${state.page === 1 ? 'disabled' : ''}>${chevL} Anterior</button>
-        <div class="pag-divider"></div>
-        ${pageNums}
-        <div class="pag-divider"></div>
-        <button class="pag-btn pag-btn--nav" data-page="${state.page + 1}" aria-label="Página siguiente" ${state.page === totalPages ? 'disabled' : ''}>Siguiente ${chevR}</button>
+      <div class="pag-wrap">
+        <button class="pag-nav" data-page="${state.page - 1}" aria-label="Página anterior" ${state.page === 1 ? 'disabled' : ''}>${chevL}<span>Anterior</span></button>
+        <div class="pag-center">
+          <span class="pag-label">Mostrando ${start}–${end} de ${totalItems}</span>
+          <div class="pag-nums">${pageNums}</div>
+        </div>
+        <button class="pag-nav" data-page="${state.page + 1}" aria-label="Página siguiente" ${state.page === totalPages ? 'disabled' : ''}><span>Siguiente</span>${chevR}</button>
       </div>`;
 
     paginEl.querySelectorAll('[data-page]:not([disabled])').forEach(btn => {
@@ -872,7 +872,7 @@ const galeriaCatalogo = [
 })();
 </script>
 
-<style>
+<style is:global>
 /* ══════════════════════════════════════════════════════════════
    CATALOG LAYOUT — Sidebar + Main
 ══════════════════════════════════════════════════════════════ */
@@ -1463,45 +1463,48 @@ const galeriaCatalogo = [
    PAGINACIÓN
 ══════════════════════════════════════════════════════════════ */
 .pagination {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.875rem;
-  padding: 1.75rem 0 0.5rem;
+  padding: 1.5rem 0 0.25rem;
   border-top: 1px solid var(--c-border, #E7E0D8);
   margin-top: 0.5rem;
 }
 
-.pag-info {
-  font-size: 0.75rem;
-  color: var(--c-text-muted, #78716C);
-  font-weight: 400;
-  letter-spacing: 0.01em;
+.pag-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
-.pag-info strong { font-weight: 700; color: var(--c-text, #1C1917); }
 
-.pag-row {
+.pag-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.pag-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--c-text-muted, #78716C);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.pag-nums {
   display: flex;
   align-items: center;
   gap: 0.25rem;
 }
 
-.pag-divider {
-  width: 1px;
-  height: 22px;
-  background: var(--c-border, #E7E0D8);
-  margin: 0 0.375rem;
-  flex-shrink: 0;
-}
-
+/* Número de página */
 .pag-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.375rem;
-  min-width: 38px;
-  height: 38px;
-  padding: 0 0.5rem;
+  min-width: 36px;
+  height: 36px;
+  padding: 0;
   border: 1.5px solid var(--c-border, #E7E0D8);
   border-radius: 8px;
   background: #fff;
@@ -1509,41 +1512,59 @@ const galeriaCatalogo = [
   font-weight: 600;
   cursor: pointer;
   color: var(--c-text, #1C1917);
-  transition: all 0.15s ease;
-  white-space: nowrap;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
   line-height: 1;
 }
-.pag-btn:hover:not([disabled]) {
+.pag-btn:hover {
   border-color: var(--c-primary, #2C5530);
   color: var(--c-primary, #2C5530);
-  background: color-mix(in srgb, var(--c-primary, #2C5530) 4%, #fff);
 }
 .pag-btn--active {
-  background: var(--c-primary, #2C5530);
-  border-color: var(--c-primary, #2C5530);
-  color: #fff;
+  background: var(--c-primary, #2C5530) !important;
+  border-color: var(--c-primary, #2C5530) !important;
+  color: #fff !important;
   cursor: default;
   pointer-events: none;
 }
-.pag-btn--nav {
-  padding: 0 0.875rem;
-  color: var(--c-text-muted, #78716C);
+
+/* Botones Anterior / Siguiente */
+.pag-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  height: 36px;
+  padding: 0 1rem;
+  border: 1.5px solid var(--c-border, #E7E0D8);
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--c-text, #1C1917);
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
-.pag-btn--nav:hover:not([disabled]) { color: var(--c-primary, #2C5530); }
-.pag-btn[disabled] {
-  opacity: 0.32;
+.pag-nav:hover:not([disabled]) {
+  border-color: var(--c-primary, #2C5530);
+  color: var(--c-primary, #2C5530);
+  background: #F4F8F4;
+}
+.pag-nav[disabled] {
+  opacity: 0.3;
   cursor: not-allowed;
   pointer-events: none;
 }
+
 .pag-dots {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 38px;
-  height: 38px;
-  color: var(--c-text-muted, #78716C);
+  min-width: 36px;
+  height: 36px;
   font-size: 0.875rem;
-  letter-spacing: 0.1em;
+  color: var(--c-text-muted, #78716C);
+  letter-spacing: 0.08em;
   user-select: none;
 }
 
