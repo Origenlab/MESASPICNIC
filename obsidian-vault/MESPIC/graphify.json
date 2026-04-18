@@ -3,7 +3,7 @@
     "project": "MESPIC — mesaspicnic.com",
     "description": "Mapa de conocimiento del sitio web de renta de mesas picnic para eventos en CDMX",
     "updated": "2026-04-17",
-    "version": "1.6"
+    "version": "2.0"
   },
   "nodes": [
     {
@@ -54,6 +54,47 @@
       "group": "paginas",
       "status": "publicado",
       "url": "https://mesaspicnic.com/blog/"
+    },
+    {
+      "id": "contacto",
+      "label": "Contacto",
+      "type": "page",
+      "group": "paginas",
+      "status": "publicado",
+      "url": "https://mesaspicnic.com/contacto/"
+    },
+    {
+      "id": "aviso-privacidad",
+      "label": "Aviso de Privacidad",
+      "type": "page",
+      "group": "paginas",
+      "status": "publicado",
+      "url": "https://mesaspicnic.com/aviso-de-privacidad/"
+    },
+    {
+      "id": "catalogo",
+      "label": "Catálogo",
+      "type": "page",
+      "group": "paginas",
+      "status": "publicado",
+      "url": "https://mesaspicnic.com/catalogo/"
+    },
+    {
+      "id": "paquetes",
+      "label": "Paquetes",
+      "type": "page",
+      "group": "paginas",
+      "status": "publicado",
+      "url": "https://mesaspicnic.com/paquetes/"
+    },
+    {
+      "id": "github-repo",
+      "label": "GitHub: Frankoropeza/mesaspicnic",
+      "type": "infraestructura",
+      "group": "infraestructura",
+      "url": "https://github.com/Frankoropeza/mesaspicnic",
+      "note": "Push: gh auth switch -u Frankoropeza && git push origin main. Remote secundario: Origenlab/MESASPICNIC.",
+      "updated": "2026-04-17"
     },
     {
       "id": "sec-hero",
@@ -113,11 +154,75 @@
       "url": "https://mesaspicnic.com/servicios/bodas/"
     },
     {
+      "id": "srv-bodas-boho",
+      "label": "Bodas: Boho",
+      "type": "servicio",
+      "group": "sub-bodas",
+      "url": "https://mesaspicnic.com/servicios/bodas/boho/",
+      "file": "src/pages/servicios/bodas/boho.astro"
+    },
+    {
+      "id": "srv-bodas-clasica",
+      "label": "Bodas: Clásica",
+      "type": "servicio",
+      "group": "sub-bodas",
+      "url": "https://mesaspicnic.com/servicios/bodas/clasica/",
+      "file": "src/pages/servicios/bodas/clasica.astro"
+    },
+    {
+      "id": "srv-bodas-intima",
+      "label": "Bodas: Íntima",
+      "type": "servicio",
+      "group": "sub-bodas",
+      "url": "https://mesaspicnic.com/servicios/bodas/intima/",
+      "file": "src/pages/servicios/bodas/intima.astro"
+    },
+    {
+      "id": "srv-bodas-rustica",
+      "label": "Bodas: Rústica",
+      "type": "servicio",
+      "group": "sub-bodas",
+      "url": "https://mesaspicnic.com/servicios/bodas/rustica/",
+      "file": "src/pages/servicios/bodas/rustica.astro"
+    },
+    {
       "id": "srv-corporativo",
       "label": "Corporativo",
       "type": "servicio",
       "group": "servicios",
       "url": "https://mesaspicnic.com/servicios/eventos-corporativos/"
+    },
+    {
+      "id": "srv-corp-activaciones",
+      "label": "Corporativo: Activaciones",
+      "type": "servicio",
+      "group": "sub-corporativo",
+      "url": "https://mesaspicnic.com/servicios/eventos-corporativos/activaciones/",
+      "file": "src/pages/servicios/eventos-corporativos/activaciones.astro"
+    },
+    {
+      "id": "srv-corp-comidas",
+      "label": "Corporativo: Comidas",
+      "type": "servicio",
+      "group": "sub-corporativo",
+      "url": "https://mesaspicnic.com/servicios/eventos-corporativos/comidas/",
+      "file": "src/pages/servicios/eventos-corporativos/comidas.astro"
+    },
+    {
+      "id": "srv-corp-conferencias",
+      "label": "Corporativo: Conferencias",
+      "type": "servicio",
+      "group": "sub-corporativo",
+      "url": "https://mesaspicnic.com/servicios/eventos-corporativos/conferencias/",
+      "file": "src/pages/servicios/eventos-corporativos/conferencias.astro"
+    },
+    {
+      "id": "srv-corp-teambuilding",
+      "label": "Corporativo: Team Building",
+      "type": "servicio",
+      "group": "sub-corporativo",
+      "url": "https://mesaspicnic.com/servicios/eventos-corporativos/team-building/",
+      "file": "src/pages/servicios/eventos-corporativos/team-building.astro"
     },
     {
       "id": "srv-infantil",
@@ -162,6 +267,78 @@
       "url": "https://mesaspicnic.com/servicios/sesiones-fotograficas/"
     },
     {
+      "id": "cat-estandar",
+      "label": "Mesa Picnic Estándar",
+      "type": "producto",
+      "group": "catalogo-productos",
+      "url": "https://mesaspicnic.com/catalogo/mesa-picnic-estandar/",
+      "file": "src/pages/catalogo/mesa-picnic-estandar"
+    },
+    {
+      "id": "cat-grande",
+      "label": "Mesa Picnic Grande",
+      "type": "producto",
+      "group": "catalogo-productos",
+      "url": "https://mesaspicnic.com/catalogo/mesa-picnic-grande/",
+      "file": "src/pages/catalogo/mesa-picnic-grande"
+    },
+    {
+      "id": "cat-infantil",
+      "label": "Mesa Picnic Infantil",
+      "type": "producto",
+      "group": "catalogo-productos",
+      "url": "https://mesaspicnic.com/catalogo/mesa-picnic-infantil/",
+      "file": "src/pages/catalogo/mesa-picnic-infantil"
+    },
+    {
+      "id": "cat-premium",
+      "label": "Mesa Picnic Premium",
+      "type": "producto",
+      "group": "catalogo-productos",
+      "url": "https://mesaspicnic.com/catalogo/mesa-picnic-premium/",
+      "file": "src/pages/catalogo/mesa-picnic-premium"
+    },
+    {
+      "id": "cat-rustica",
+      "label": "Mesa Picnic Rústica",
+      "type": "producto",
+      "group": "catalogo-productos",
+      "url": "https://mesaspicnic.com/catalogo/mesa-picnic-rustica/",
+      "file": "src/pages/catalogo/mesa-picnic-rustica"
+    },
+    {
+      "id": "cat-set-completo",
+      "label": "Set Picnic Completo",
+      "type": "producto",
+      "group": "catalogo-productos",
+      "url": "https://mesaspicnic.com/catalogo/set-picnic-completo/",
+      "file": "src/pages/catalogo/set-picnic-completo"
+    },
+    {
+      "id": "paq-basico",
+      "label": "Paquete Básico",
+      "type": "paquete",
+      "group": "paquetes-lista",
+      "url": "https://mesaspicnic.com/paquetes/basico/",
+      "file": "src/pages/paquetes/basico"
+    },
+    {
+      "id": "paq-estandar",
+      "label": "Paquete Estándar",
+      "type": "paquete",
+      "group": "paquetes-lista",
+      "url": "https://mesaspicnic.com/paquetes/estandar/",
+      "file": "src/pages/paquetes/estandar"
+    },
+    {
+      "id": "paq-premium",
+      "label": "Paquete Premium",
+      "type": "paquete",
+      "group": "paquetes-lista",
+      "url": "https://mesaspicnic.com/paquetes/premium/",
+      "file": "src/pages/paquetes/premium"
+    },
+    {
       "id": "layout-blog",
       "label": "BlogLayout",
       "type": "layout",
@@ -176,7 +353,7 @@
       "type": "componente",
       "group": "componentes",
       "status": "producción",
-      "description": "Hero estándar APROBADO — dark={true} en TODO el sitio. 2 columnas: izq (badge + H1 + desc + CTAs) | der (seoParagraph1 + seoParagraph2). Gradiente forestal oscuro. Homologado en 18 páginas el 2026-04-17.",
+      "description": "Hero estándar APROBADO — dark={true} + sin CTAs en TODO el sitio. 2 columnas: izq (badge + H1 + desc) | der (seoParagraph1 + seoParagraph2). Gradiente forestal oscuro. Homologado en 33 páginas el 2026-04-17.",
       "file": "src/components/Hero.astro",
       "spec": {
         "variante_aprobada": "dark={true}",
@@ -189,37 +366,27 @@
           "seoParagraph2"
         ],
         "props_opcionales": [
-          "ctaPrimary",
-          "ctaSecondary",
           "metrics"
         ],
-        "cta_labels_aprobados": [
-          "Cotizar ahora →",
-          "Ver servicios",
-          "Ver todos los servicios",
-          "Ver artículos →",
-          "Cotizar ahora"
-        ],
-        "cta_labels_PROHIBIDOS": [
-          "Ver catálogo de mesas →",
-          "Ver paquetes",
-          "Ver catálogo →",
-          "Ver catálogo completo →"
-        ],
-        "defaults_ctaPrimary": {
-          "label": "Cotizar ahora →",
-          "href": "/cotizar/"
-        },
-        "defaults_ctaSecondary": {
-          "label": "Ver servicios",
-          "href": "/servicios/"
-        },
+        "defaults_ctaPrimary": null,
+        "defaults_ctaSecondary": null,
         "reglas": [
           "SIEMPRE usar dark={true}. Nunca omitir. Sin excepciones.",
-          "NUNCA usar 'Ver catálogo de mesas →' ni 'Ver paquetes' como CTA en el hero. Aplica a TODAS las páginas.",
-          "Referencia de homologación: hero del index /. Los CTAs del hero del index son el estándar."
+          "NUNCA incluir CTAs en el hero. ctaPrimary=null y ctaSecondary=null en TODAS las páginas del sitio.",
+          "Referencia canónica: hero del index /. Aprobado 2026-04-17."
         ]
       },
+      "obsidian_doc": "obsidian-vault/MESPIC/Estándar Hero.md",
+      "updated": "2026-04-17"
+    },
+    {
+      "id": "comp-service-card",
+      "label": "ServiceCard",
+      "type": "componente",
+      "group": "componentes",
+      "status": "producción",
+      "description": "Tarjeta de servicio: badge flotante, ícono por categoría, hover lift+zoom, CTA flecha animada.",
+      "file": "src/components/ServiceCard.astro",
       "updated": "2026-04-17"
     },
     {
@@ -228,7 +395,7 @@
       "type": "componente",
       "group": "componentes",
       "status": "producción",
-      "description": "Barra de navegación rápida por tipo de evento (Bodas, Corporativo, Infantiles, Romántico, Cotizar).",
+      "description": "Strip oscuro #111 con ícono terracota, label, subtítulo y CTA. Patrón NavRápida MESECI.",
       "file": "src/components/CtaBar.astro"
     },
     {
@@ -338,6 +505,56 @@
       "categoria": "Eventos corporativos"
     },
     {
+      "id": "art-interlomas",
+      "label": "Blog: Interlomas / Huixquilucan",
+      "type": "articulo",
+      "group": "blog-articulos",
+      "status": "publicado",
+      "url": "https://mesaspicnic.com/blog/mesas-picnic-eventos-corporativos-interlomas-huixquilucan/",
+      "file": "src/pages/blog/mesas-picnic-eventos-corporativos-interlomas-huixquilucan.astro",
+      "categoria": "SEO Local — Corporativo"
+    },
+    {
+      "id": "art-fiestas-privadas",
+      "label": "Blog: Fiestas Privadas Metepec / Bosque Real",
+      "type": "articulo",
+      "group": "blog-articulos",
+      "status": "publicado",
+      "url": "https://mesaspicnic.com/blog/mesas-picnic-fiestas-privadas-metepec-zona-esmeralda-bosque-real/",
+      "file": "src/pages/blog/mesas-picnic-fiestas-privadas-metepec-zona-esmeralda-bosque-real.astro",
+      "categoria": "SEO Local — Fiestas privadas"
+    },
+    {
+      "id": "art-lujo",
+      "label": "Blog: Picnic de Lujo CDMX",
+      "type": "articulo",
+      "group": "blog-articulos",
+      "status": "publicado",
+      "url": "https://mesaspicnic.com/blog/picnic-lujo-experiencias-premium-cdmx/",
+      "file": "src/pages/blog/picnic-lujo-experiencias-premium-cdmx.astro",
+      "categoria": "Premium / experiencias"
+    },
+    {
+      "id": "art-coyoacan",
+      "label": "Blog: Coyoacán / San Ángel / Roma Norte",
+      "type": "articulo",
+      "group": "blog-articulos",
+      "status": "publicado",
+      "url": "https://mesaspicnic.com/blog/renta-mesas-picnic-coyoacan-san-angel-roma-norte/",
+      "file": "src/pages/blog/renta-mesas-picnic-coyoacan-san-angel-roma-norte.astro",
+      "categoria": "SEO Local — CDMX Sur"
+    },
+    {
+      "id": "art-polanco",
+      "label": "Blog: Polanco / Lomas / Santa Fe",
+      "type": "articulo",
+      "group": "blog-articulos",
+      "status": "publicado",
+      "url": "https://mesaspicnic.com/blog/renta-mesas-picnic-polanco-lomas-santa-fe/",
+      "file": "src/pages/blog/renta-mesas-picnic-polanco-lomas-santa-fe.astro",
+      "categoria": "SEO Local — CDMX Poniente"
+    },
+    {
       "id": "tech-astro",
       "label": "Astro",
       "type": "tecnologia",
@@ -427,14 +644,15 @@
       "type": "estandar",
       "group": "componentes",
       "status": "aprobado",
-      "description": "Regla: todos los heroes del sitio usan dark={true} y NUNCA incluyen 'Ver catálogo de mesas →' ni 'Ver paquetes' como CTAs. Referencia: homepage /. Homologado 2026-04-17.",
+      "description": "Hero sin CTAs + dark={true} en las 33 páginas del sitio. Aprobado 2026-04-17.",
       "reglas": [
-        "dark={true} obligatorio en todo hero del sitio",
-        "CTAs prohibidos en hero: 'Ver catálogo de mesas →', 'Ver paquetes'",
-        "CTAs permitidos: 'Cotizar ahora →', 'Ver servicios', variantes contextuales equivalentes",
+        "dark={true} obligatorio en todo hero del sitio. Sin excepciones.",
+        "SIN CTAs en el hero. ctaPrimary=null y ctaSecondary=null siempre.",
+        "Default del componente Hero.astro ya configurado en null para ambos CTAs.",
         "Referencia canónica: hero del index /"
       ],
-      "paginas_aplicadas": 18,
+      "obsidian_doc": "obsidian-vault/MESPIC/Estándar Hero.md",
+      "paginas_aplicadas": 33,
       "updated": "2026-04-17"
     },
     {
@@ -501,6 +719,44 @@
     }
   ],
   "edges": [
+    { "source": "mespic", "target": "contacto", "label": "tiene página" },
+    { "source": "mespic", "target": "aviso-privacidad", "label": "tiene página" },
+    { "source": "mespic", "target": "catalogo", "label": "tiene página" },
+    { "source": "mespic", "target": "paquetes", "label": "tiene página" },
+    { "source": "mespic", "target": "github-repo", "label": "desplegado en" },
+    { "source": "srv-bodas", "target": "srv-bodas-boho", "label": "incluye" },
+    { "source": "srv-bodas", "target": "srv-bodas-clasica", "label": "incluye" },
+    { "source": "srv-bodas", "target": "srv-bodas-intima", "label": "incluye" },
+    { "source": "srv-bodas", "target": "srv-bodas-rustica", "label": "incluye" },
+    { "source": "srv-corporativo", "target": "srv-corp-activaciones", "label": "incluye" },
+    { "source": "srv-corporativo", "target": "srv-corp-comidas", "label": "incluye" },
+    { "source": "srv-corporativo", "target": "srv-corp-conferencias", "label": "incluye" },
+    { "source": "srv-corporativo", "target": "srv-corp-teambuilding", "label": "incluye" },
+    { "source": "catalogo", "target": "cat-estandar", "label": "incluye producto" },
+    { "source": "catalogo", "target": "cat-grande", "label": "incluye producto" },
+    { "source": "catalogo", "target": "cat-infantil", "label": "incluye producto" },
+    { "source": "catalogo", "target": "cat-premium", "label": "incluye producto" },
+    { "source": "catalogo", "target": "cat-rustica", "label": "incluye producto" },
+    { "source": "catalogo", "target": "cat-set-completo", "label": "incluye producto" },
+    { "source": "paquetes", "target": "paq-basico", "label": "incluye paquete" },
+    { "source": "paquetes", "target": "paq-estandar", "label": "incluye paquete" },
+    { "source": "paquetes", "target": "paq-premium", "label": "incluye paquete" },
+    { "source": "blog", "target": "art-interlomas", "label": "contiene artículo" },
+    { "source": "blog", "target": "art-fiestas-privadas", "label": "contiene artículo" },
+    { "source": "blog", "target": "art-lujo", "label": "contiene artículo" },
+    { "source": "blog", "target": "art-coyoacan", "label": "contiene artículo" },
+    { "source": "blog", "target": "art-polanco", "label": "contiene artículo" },
+    { "source": "art-interlomas", "target": "layout-blog", "label": "usa layout" },
+    { "source": "art-fiestas-privadas", "target": "layout-blog", "label": "usa layout" },
+    { "source": "art-lujo", "target": "layout-blog", "label": "usa layout" },
+    { "source": "art-coyoacan", "target": "layout-blog", "label": "usa layout" },
+    { "source": "art-polanco", "target": "layout-blog", "label": "usa layout" },
+    { "source": "art-interlomas", "target": "srv-corporativo", "label": "enlaza a servicio" },
+    { "source": "art-coyoacan", "target": "srv-bodas", "label": "enlaza a servicio" },
+    { "source": "art-polanco", "target": "srv-bodas", "label": "enlaza a servicio" },
+    { "source": "art-lujo", "target": "srv-picnic", "label": "enlaza a servicio" },
+    { "source": "art-fiestas-privadas", "target": "srv-infantil", "label": "enlaza a servicio" },
+    { "source": "sec-servicios", "target": "comp-service-card", "label": "usa componente" },
     {
       "source": "mespic",
       "target": "home",
@@ -843,42 +1099,21 @@
     }
   ],
   "groups": {
-    "core": {
-      "label": "Marca",
-      "color": "#2C5530"
-    },
-    "paginas": {
-      "label": "Páginas del Sitio",
-      "color": "#4a7c59"
-    },
-    "home-secciones": {
-      "label": "Secciones del Home",
-      "color": "#6b9e7a"
-    },
-    "servicios": {
-      "label": "Servicios",
-      "color": "#8aba99"
-    },
-    "blog-articulos": {
-      "label": "Artículos del Blog",
-      "color": "#C8956C"
-    },
-    "sidebar-widgets": {
-      "label": "Sidebar Widgets",
-      "color": "#D4A574"
-    },
-    "aliados": {
-      "label": "Empresas Aliadas",
-      "color": "#D4A574"
-    },
-    "componentes": {
-      "label": "Componentes UI",
-      "color": "#94a3b8"
-    },
-    "stack": {
-      "label": "Stack Técnico",
-      "color": "#cbd5e1"
-    },
+    "core": { "label": "Marca", "color": "#2C5530" },
+    "infraestructura": { "label": "Infraestructura", "color": "#1e293b" },
+    "paginas": { "label": "Páginas del Sitio", "color": "#4a7c59" },
+    "home-secciones": { "label": "Secciones del Home", "color": "#6b9e7a" },
+    "servicios": { "label": "Servicios", "color": "#8aba99" },
+    "sub-bodas": { "label": "Sub-páginas Bodas", "color": "#a8c5b5" },
+    "sub-corporativo": { "label": "Sub-páginas Corporativo", "color": "#b8d4c8" },
+    "catalogo-productos": { "label": "Catálogo de Productos", "color": "#7c9e8a" },
+    "paquetes-lista": { "label": "Paquetes", "color": "#5a8e6a" },
+    "blog-articulos": { "label": "Artículos del Blog", "color": "#C8956C" },
+    "sidebar-widgets": { "label": "Sidebar Widgets", "color": "#D4A574" },
+    "aliados": { "label": "Empresas Aliadas", "color": "#D4A574" },
+    "componentes": { "label": "Componentes UI", "color": "#94a3b8" },
+    "estandares": { "label": "Estándares de Diseño", "color": "#f59e0b" },
+    "stack": { "label": "Stack Técnico", "color": "#cbd5e1" },
     "templates-l3": {
       "label": "Templates L3 (Patrones de Sección)",
       "color": "#f59e0b",
