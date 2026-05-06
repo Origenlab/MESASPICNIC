@@ -9,7 +9,6 @@ import ServiceCard from '../../../components/ServiceCard.astro';
 import ProductGallery from '../../../components/ProductGallery.astro';
 import FaqSection from '../../../components/FaqSection.astro';
 import NextStep from '../../../components/NextStep.astro';
-import WaBubble from '../../../components/WaBubble.astro';
 import ExploreMore from '../../../components/ExploreMore.astro';
 ---
 <BaseLayout
@@ -151,7 +150,6 @@ import ExploreMore from '../../../components/ExploreMore.astro';
   btnLabel="Explorar servicios →"
   secondBtn={{ label: 'Ver catálogo', href: '/catalogo/' }}
 />
-<WaBubble whatsapp="5564328954" message="Hola, me interesa rentar el Set Picnic Infantil Temático." />
 <Fragment slot="head">
   <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Set Picnic Infantil Temático — Renta MESPIC", "description": "Set picnic infantil temático para renta. Mesa 1.00×0.70×0.52 m + 2 bancas. Pintura atóxica certificada en 5 colores: blanco, azul cielo, rosa palo, verde menta y lila. Para niños de 3-8 años. +80 sets en bodega. CDMX y Edomex.", "brand": { "@type": "Brand", "name": "MESPIC" }, "category": "Mobiliario para eventos infantiles — Renta", "offers": { "@type": "Offer", "priceCurrency": "MXN", "availability": "https://schema.org/InStock" } })} />
 </Fragment>
