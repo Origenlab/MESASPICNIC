@@ -9,7 +9,7 @@ import ServiceCard from '../../../components/ServiceCard.astro';
 import ProductGallery from '../../../components/ProductGallery.astro';
 import FaqSection from '../../../components/FaqSection.astro';
 import NextStep from '../../../components/NextStep.astro';
-import CtaBarFinal from '../../../components/CtaBarFinal.astro';
+import ExploreMore from '../../../components/ExploreMore.astro';
 ---
 
 <BaseLayout
@@ -115,17 +115,25 @@ import CtaBarFinal from '../../../components/CtaBarFinal.astro';
 </section>
 
 
-<!-- Siguiente paso: Ver catálogo -->
-<NextStep
-  titulo="¿Ya encontraste tu servicio?"
-  subtitulo="Explora el catálogo completo con 20 modelos de mobiliario. Hay una opción ideal para tu evento."
-  href="/catalogo/"
-  btnLabel="Ver catálogo completo →"
-  step={1}
-  secondBtn={{ label: 'Ver paquetes', href: '/paquetes/' }}
+<!-- Sigue explorando -->
+<ExploreMore
+  title="Sigue explorando MESPIC"
+  subtitle="Todo lo que necesitas para tu evento en un solo lugar"
+  items={[
+    { href: '/servicios/', label: 'Todos los servicios', sub: 'Bodas, corporativos, infantiles y más', badge: 'Paso 1', isEmoji: true, icon: '🎪' },
+    { href: '/catalogo/', label: 'Catálogo completo', sub: '20 modelos con fichas técnicas y fotos', badge: 'Paso 2', isEmoji: true, icon: '🪵' },
+    { href: '/paquetes/', label: 'Nuestros paquetes', sub: 'Básico · Estándar · Premium', badge: 'Paso 3', isEmoji: true, icon: '📦' },
+  ]}
 />
 
-<CtaBarFinal headline="¿Organizando una comida empresarial?" subtext="Cotiza con factura CFDI. Distribución incluida." phone="55 6432 8954" whatsapp="5564328954" waMessage="Hola, necesito cotizar mesas para una comida empresarial." cotizarHref="/cotizar/" />
+<!-- Siguiente paso -->
+<NextStep
+  titulo="¿Ya sabes qué tipo de evento tienes?"
+  subtitulo="Explora todos nuestros servicios especializados: bodas, corporativos, fiestas infantiles, picnics románticos y más."
+  href="/servicios/"
+  btnLabel="Explorar servicios →"
+  secondBtn={{ label: 'Ver catálogo', href: '/catalogo/' }}
+/>
 
 <Fragment slot="head">
   <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Renta de Mesas para Comidas Empresariales", "provider": { "@type": "LocalBusiness", "name": "MESPIC", "telephone": "+52-55-3128-1706" }, "areaServed": [{ "@type": "City", "name": "Ciudad de México" }, { "@type": "State", "name": "Estado de México" }], "description": "Renta de bancas de madera para comidas empresariales, cierres anuales y posadas corporativas en CDMX." })} />

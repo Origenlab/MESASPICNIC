@@ -3,15 +3,15 @@
  * BlogLayout — MESPIC
  * Layout completo para artículos de blog.
  * Patrón idéntico al resto del sitio:
- *   BaseLayout → Hero(dark) → CtaBar → contenido + sidebar → CtaBarFinal
+ *   BaseLayout → Hero(dark) → CtaBar → contenido + sidebar → ExploreMore → NextStep
  * Breadcrumbs en slot="breadcrumbs" → dentro del hdr-stack fijo, debajo del header.
  */
 import BaseLayout from './BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import CtaBar from '../components/CtaBar.astro';
-import CtaBarFinal from '../components/CtaBarFinal.astro';
 import NextStep from '../components/NextStep.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ExploreMore from '../components/ExploreMore.astro';
 
 interface SidebarProduct { name: string; cap: string; href: string; img: string; }
 interface SidebarArticle { title: string; meta: string; href: string; img: string; }
@@ -212,22 +212,25 @@ const crumbs = breadcrumbs.length > 0 ? breadcrumbs : defaultBreadcrumbs;
     </div>
   </div>
 
-  <!-- ── Siguiente paso desde el blog ── -->
-  <NextStep
-    titulo="¿Listo para explorar el mobiliario?"
-    subtitulo="Ahora que conoces más sobre MESPIC, explora el catálogo completo o elige tu paquete según el número de invitados."
-    href="/catalogo/"
-    btnLabel="Ver catálogo completo →"
-    step={1}
-    secondBtn={{ label: 'Ver paquetes', href: '/paquetes/' }}
-  />
+  <!-- Sigue explorando -->
+<ExploreMore
+  title="Sigue explorando MESPIC"
+  subtitle="Todo lo que necesitas para tu evento en un solo lugar"
+  items={[
+    { href: '/servicios/', label: 'Todos los servicios', sub: 'Bodas, corporativos, infantiles y más', badge: 'Paso 1', isEmoji: true, icon: '🎪' },
+    { href: '/catalogo/', label: 'Catálogo completo', sub: '20 modelos con fichas técnicas y fotos', badge: 'Paso 2', isEmoji: true, icon: '🪵' },
+    { href: '/paquetes/', label: 'Nuestros paquetes', sub: 'Básico · Estándar · Premium', badge: 'Paso 3', isEmoji: true, icon: '📦' },
+  ]}
+/>
 
-  <!-- ── Barra final de conversión ── -->
-  <CtaBarFinal
-    headline="¿Lista para reservar el mobiliario de tu boda?"
-    subtext="Cotiza sin compromiso. Te respondemos en menos de 30 minutos."
-    waMessage="Hola, quiero cotizar mesas picnic para mi boda en CDMX."
-  />
+<!-- Siguiente paso -->
+<NextStep
+  titulo="¿Ya sabes qué tipo de evento tienes?"
+  subtitulo="Explora todos nuestros servicios especializados: bodas, corporativos, fiestas infantiles, picnics románticos y más."
+  href="/servicios/"
+  btnLabel="Explorar servicios →"
+  secondBtn={{ label: 'Ver catálogo', href: '/catalogo/' }}
+/>
 
 </BaseLayout>
 

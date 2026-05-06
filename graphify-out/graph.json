@@ -153,7 +153,7 @@
       "source_file": "/Users/frankoropeza/Documents/Claude/Projects/MESASPICNIC/webpack.config.prod.js",
       "source_location": "L1",
       "id": "users_frankoropeza_documents_claude_projects_mesaspicnic_webpack_config_prod_js",
-      "community": 15,
+      "community": 17,
       "norm_label": "webpack.config.prod.js"
     },
     {
@@ -231,17 +231,17 @@
     {
       "label": "astro.config.mjs",
       "file_type": "code",
-      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/MESASPICNIC/astro.config.mjs",
+      "source_file": "astro.config.mjs",
       "source_location": "L1",
-      "id": "users_frankoropeza_documents_claude_projects_mesaspicnic_astro_config_mjs",
+      "id": "astro_config_mjs",
       "community": 13,
       "norm_label": "astro.config.mjs"
     },
     {
       "label": "serialize()",
       "file_type": "code",
-      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/MESASPICNIC/astro.config.mjs",
-      "source_location": "L18",
+      "source_file": "astro.config.mjs",
+      "source_location": "L24",
       "id": "astro_config_serialize",
       "community": 13,
       "norm_label": "serialize()"
@@ -324,7 +324,7 @@
       "source_file": "/Users/frankoropeza/Documents/Claude/Projects/MESASPICNIC/_noop-middleware.mjs",
       "source_location": "L1",
       "id": "users_frankoropeza_documents_claude_projects_mesaspicnic_noop_middleware_mjs",
-      "community": 14,
+      "community": 16,
       "norm_label": "_noop-middleware.mjs"
     },
     {
@@ -333,7 +333,7 @@
       "source_file": "/Users/frankoropeza/Documents/Claude/Projects/MESASPICNIC/_noop-middleware.mjs",
       "source_location": "L1",
       "id": "noop_middleware_onrequest",
-      "community": 14,
+      "community": 16,
       "norm_label": "onrequest()"
     },
     {
@@ -342,7 +342,7 @@
       "source_file": "/Users/frankoropeza/Documents/Claude/Projects/MESASPICNIC/webpack.config.dev.js",
       "source_location": "L1",
       "id": "users_frankoropeza_documents_claude_projects_mesaspicnic_webpack_config_dev_js",
-      "community": 16,
+      "community": 18,
       "norm_label": "webpack.config.dev.js"
     },
     {
@@ -684,7 +684,7 @@
       "source_file": "/Users/frankoropeza/Documents/Claude/Projects/MESASPICNIC/webpack.common.js",
       "source_location": "L1",
       "id": "users_frankoropeza_documents_claude_projects_mesaspicnic_webpack_common_js",
-      "community": 17,
+      "community": 19,
       "norm_label": "webpack.common.js"
     },
     {
@@ -3856,6 +3856,42 @@
       "norm_label": "loadsharp()"
     },
     {
+      "label": "optimize-images.mjs",
+      "file_type": "code",
+      "source_file": "scripts/optimize-images.mjs",
+      "source_location": "L1",
+      "id": "scripts_optimize_images_mjs",
+      "community": 14,
+      "norm_label": "optimize-images.mjs"
+    },
+    {
+      "label": "fmt()",
+      "file_type": "code",
+      "source_file": "scripts/optimize-images.mjs",
+      "source_location": "L36",
+      "id": "optimize_images_fmt",
+      "community": 14,
+      "norm_label": "fmt()"
+    },
+    {
+      "label": "optimize()",
+      "file_type": "code",
+      "source_file": "scripts/optimize-images.mjs",
+      "source_location": "L42",
+      "id": "optimize_images_optimize",
+      "community": 14,
+      "norm_label": "optimize()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scripts/optimize-images.mjs",
+      "source_location": "L90",
+      "id": "optimize_images_main",
+      "community": 14,
+      "norm_label": "main()"
+    },
+    {
       "label": "catalogo.astro.mjs",
       "file_type": "code",
       "source_file": "/Users/frankoropeza/Documents/Claude/Projects/MESASPICNIC/pages/catalogo.astro.mjs",
@@ -4689,8 +4725,62 @@
       "source_file": "/Users/frankoropeza/Documents/Claude/Projects/MESASPICNIC/src/env.d.ts",
       "source_location": "L1",
       "id": "users_frankoropeza_documents_claude_projects_mesaspicnic_src_env_d_ts",
-      "community": 18,
+      "community": 20,
       "norm_label": "env.d.ts"
+    },
+    {
+      "label": "exactdn.ts",
+      "file_type": "code",
+      "source_file": "src/integrations/exactdn.ts",
+      "source_location": "L1",
+      "id": "src_integrations_exactdn_ts",
+      "community": 13,
+      "norm_label": "exactdn.ts"
+    },
+    {
+      "label": "rewrite()",
+      "file_type": "code",
+      "source_file": "src/integrations/exactdn.ts",
+      "source_location": "L49",
+      "id": "exactdn_rewrite",
+      "community": 13,
+      "norm_label": "rewrite()"
+    },
+    {
+      "label": "exactdnRewriter()",
+      "file_type": "code",
+      "source_file": "src/integrations/exactdn.ts",
+      "source_location": "L60",
+      "id": "exactdn_exactdnrewriter",
+      "community": 13,
+      "norm_label": "exactdnrewriter()"
+    },
+    {
+      "label": "cdn.ts",
+      "file_type": "code",
+      "source_file": "src/lib/cdn.ts",
+      "source_location": "L1",
+      "id": "src_lib_cdn_ts",
+      "community": 15,
+      "norm_label": "cdn.ts"
+    },
+    {
+      "label": "cdnUrl()",
+      "file_type": "code",
+      "source_file": "src/lib/cdn.ts",
+      "source_location": "L59",
+      "id": "cdn_cdnurl",
+      "community": 15,
+      "norm_label": "cdnurl()"
+    },
+    {
+      "label": "cdnSrcset()",
+      "file_type": "code",
+      "source_file": "src/lib/cdn.ts",
+      "source_location": "L99",
+      "id": "cdn_cdnsrcset",
+      "community": 15,
+      "norm_label": "cdnsrcset()"
     }
   ],
   "links": [
@@ -5091,14 +5181,26 @@
       "target": "server_c6afcjss_decodekey"
     },
     {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "astro.config.mjs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "astro_config_mjs",
+      "_tgt": "src_integrations_exactdn_ts",
+      "source": "astro_config_mjs",
+      "target": "src_integrations_exactdn_ts",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "/Users/frankoropeza/Documents/Claude/Projects/MESASPICNIC/astro.config.mjs",
-      "source_location": "L18",
+      "source_file": "astro.config.mjs",
+      "source_location": "L24",
       "weight": 1.0,
-      "_src": "users_frankoropeza_documents_claude_projects_mesaspicnic_astro_config_mjs",
+      "_src": "astro_config_mjs",
       "_tgt": "astro_config_serialize",
-      "source": "users_frankoropeza_documents_claude_projects_mesaspicnic_astro_config_mjs",
+      "source": "astro_config_mjs",
       "target": "astro_config_serialize",
       "confidence_score": 1.0
     },
@@ -17613,8 +17715,8 @@
       "source_file": "/Users/frankoropeza/Documents/Claude/Projects/MESASPICNIC/pages/blog/ideas-decoracion-mesas-picnic-fiestas-infantiles.astro.mjs",
       "source_location": "L137",
       "weight": 1.0,
-      "_src": "server_c6afcjss_createvnode",
-      "_tgt": "ideas_decoracion_mesas_picnic_fiestas_infantiles_astro_createmdxcontent",
+      "_src": "ideas_decoracion_mesas_picnic_fiestas_infantiles_astro_createmdxcontent",
+      "_tgt": "server_c6afcjss_createvnode",
       "source": "server_c6afcjss_createvnode",
       "target": "ideas_decoracion_mesas_picnic_fiestas_infantiles_astro_createmdxcontent"
     },
@@ -17625,8 +17727,8 @@
       "source_file": "/Users/frankoropeza/Documents/Claude/Projects/MESASPICNIC/pages/blog/ideas-decoracion-mesas-picnic-fiestas-infantiles.astro.mjs",
       "source_location": "L484",
       "weight": 1.0,
-      "_src": "server_c6afcjss_createvnode",
-      "_tgt": "ideas_decoracion_mesas_picnic_fiestas_infantiles_astro_mdxcontent",
+      "_src": "ideas_decoracion_mesas_picnic_fiestas_infantiles_astro_mdxcontent",
+      "_tgt": "server_c6afcjss_createvnode",
       "source": "server_c6afcjss_createvnode",
       "target": "ideas_decoracion_mesas_picnic_fiestas_infantiles_astro_mdxcontent"
     },
@@ -17868,6 +17970,66 @@
       "_tgt": "assets_service_vab_9i6c_matchpathname",
       "source": "assets_service_vab_9i6c_matchpattern",
       "target": "assets_service_vab_9i6c_matchpathname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/optimize-images.mjs",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_src": "scripts_optimize_images_mjs",
+      "_tgt": "optimize_images_fmt",
+      "source": "scripts_optimize_images_mjs",
+      "target": "optimize_images_fmt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/optimize-images.mjs",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_src": "scripts_optimize_images_mjs",
+      "_tgt": "optimize_images_optimize",
+      "source": "scripts_optimize_images_mjs",
+      "target": "optimize_images_optimize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/optimize-images.mjs",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_src": "scripts_optimize_images_mjs",
+      "_tgt": "optimize_images_main",
+      "source": "scripts_optimize_images_mjs",
+      "target": "optimize_images_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/optimize-images.mjs",
+      "source_location": "L122",
+      "weight": 1.0,
+      "_src": "optimize_images_main",
+      "_tgt": "optimize_images_fmt",
+      "source": "optimize_images_fmt",
+      "target": "optimize_images_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/optimize-images.mjs",
+      "source_location": "L104",
+      "weight": 1.0,
+      "_src": "optimize_images_main",
+      "_tgt": "optimize_images_optimize",
+      "source": "optimize_images_optimize",
+      "target": "optimize_images_main",
       "confidence_score": 1.0
     },
     {
@@ -18456,6 +18618,54 @@
       "_tgt": "premium_astro_page",
       "source": "users_frankoropeza_documents_claude_projects_mesaspicnic_pages_paquetes_premium_astro_mjs",
       "target": "premium_astro_page",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/integrations/exactdn.ts",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_src": "src_integrations_exactdn_ts",
+      "_tgt": "exactdn_rewrite",
+      "source": "src_integrations_exactdn_ts",
+      "target": "exactdn_rewrite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/integrations/exactdn.ts",
+      "source_location": "L60",
+      "weight": 1.0,
+      "_src": "src_integrations_exactdn_ts",
+      "_tgt": "exactdn_exactdnrewriter",
+      "source": "src_integrations_exactdn_ts",
+      "target": "exactdn_exactdnrewriter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/cdn.ts",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_src": "src_lib_cdn_ts",
+      "_tgt": "cdn_cdnurl",
+      "source": "src_lib_cdn_ts",
+      "target": "cdn_cdnurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/cdn.ts",
+      "source_location": "L99",
+      "weight": 1.0,
+      "_src": "src_lib_cdn_ts",
+      "_tgt": "cdn_cdnsrcset",
+      "source": "src_lib_cdn_ts",
+      "target": "cdn_cdnsrcset",
       "confidence_score": 1.0
     }
   ],

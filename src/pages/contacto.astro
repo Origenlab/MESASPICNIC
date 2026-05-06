@@ -6,7 +6,8 @@ import CtaBar from '../components/CtaBar.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import FeatureCard from '../components/FeatureCard.astro';
 import FaqSection from '../components/FaqSection.astro';
-import CtaBarFinal from '../components/CtaBarFinal.astro';
+import NextStep from '../components/NextStep.astro';
+import ExploreMore from '../components/ExploreMore.astro';
 ---
 
 <BaseLayout
@@ -335,14 +336,24 @@ import CtaBarFinal from '../components/CtaBarFinal.astro';
   />
 </section>
 
-<!-- CtaBarFinal -->
-<CtaBarFinal
-  headline="¿Listo para hablar de tu evento?"
-  subtext="Escríbenos por WhatsApp y te respondemos en menos de 10 minutos con disponibilidad y precio."
-  phone="55 6432 8954"
-  whatsapp="5564328954"
-  waMessage="Hola, quiero cotizar mesas picnic para mi evento."
-  cotizarHref="/cotizar/"
+<!-- Sigue explorando -->
+<ExploreMore
+  title="Sigue explorando MESPIC"
+  subtitle="Todo lo que necesitas para tu evento en un solo lugar"
+  items={[
+    { href: '/servicios/', label: 'Todos los servicios', sub: 'Bodas, corporativos, infantiles y más', badge: 'Paso 1', isEmoji: true, icon: '🎪' },
+    { href: '/catalogo/', label: 'Catálogo completo', sub: '20 modelos con fichas técnicas y fotos', badge: 'Paso 2', isEmoji: true, icon: '🪵' },
+    { href: '/paquetes/', label: 'Nuestros paquetes', sub: 'Básico · Estándar · Premium', badge: 'Paso 3', isEmoji: true, icon: '📦' },
+  ]}
+/>
+
+<!-- Siguiente paso -->
+<NextStep
+  titulo="¿Ya sabes qué tipo de evento tienes?"
+  subtitulo="Explora todos nuestros servicios especializados: bodas, corporativos, fiestas infantiles, picnics románticos y más."
+  href="/servicios/"
+  btnLabel="Explorar servicios →"
+  secondBtn={{ label: 'Ver catálogo', href: '/catalogo/' }}
 />
 
 <!-- Schema.org LocalBusiness + ContactPage -->
