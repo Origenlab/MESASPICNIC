@@ -1,0 +1,600 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import '../../styles/blog-article.css';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Microbodas en CDMX: la guía honesta para casarte con 30 a 50 invitados (y que se sienta enorme)",
+  "description": "Cómo planear una microboda íntima de 30 a 50 invitados en Ciudad de México con mesas picnic. Venues reales, presupuesto desglosado, configuración, cronograma y los errores que vemos cada fin de semana.",
+  "image": "https://mesaspicnic.com/img/boda-rustica-intima-1.avif",
+  "author": { "@type": "Organization", "name": "MESPIC", "url": "https://mesaspicnic.com" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MESPIC — Renta de Mesas Picnic",
+    "logo": { "@type": "ImageObject", "url": "https://mesaspicnic.com/icon.svg" }
+  },
+  "datePublished": "2026-05-12",
+  "dateModified": "2026-05-12",
+  "mainEntityOfPage": "https://mesaspicnic.com/blog/microbodas-bodas-intimas-mesas-picnic-cdmx/",
+  "articleSection": "Bodas íntimas",
+  "keywords": "microboda CDMX, boda íntima, boda 30 invitados, boda 50 invitados, mesas picnic boda, intimate wedding México, microwedding"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta una microboda con mesas picnic en CDMX en 2026?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Para 40 invitados, el rango medio se ubica entre $180,000 y $200,000 MXN incluyendo venue, catering, mobiliario MESPIC, decoración, foto/video y DJ. El mobiliario MESPIC en paquete estándar va de $6,000 a $10,000 MXN. El costo por invitado suele ser mayor que en una boda tradicional, pero el total general es entre 30 y 50% menor." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Las mesas picnic son cómodas para 4 horas sentado en una boda íntima?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí, siempre que respeten la altura ergonómica (75 cm de mesa, 45 cm de banca) y que para adultos mayores se complementen con sillas Tiffany individuales. Los cojines de banca en algodón orgánico elevan el confort sin romper la estética." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se pueden hacer microbodas en el jardín de una casa particular en CDMX?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Es uno de los formatos más solicitados. Las mesas picnic se entregan armadas, se montan y se recolectan sin necesidad de obra ni instalación eléctrica. Solo se requiere un acceso mínimo de 90 cm para meter las piezas. MESPIC visita la propiedad antes del evento para confirmar acceso y configuración óptima." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo antes hay que reservar las mesas picnic para una microboda?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Recomendamos 6 a 8 semanas antes del evento. En temporada alta (marzo–mayo y septiembre–noviembre) idealmente 12 semanas para sábados. La reserva se confirma con anticipo del 30–50% del total cotizado y bloquea fecha + cantidad en inventario." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se puede combinar mesa picnic con sillas Tiffany en una boda íntima?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Totalmente. Es una combinación común para microbodas elegantes: mesa picnic como base rústica-cálida y sillas Tiffany para invitados clave (padres, abuelos). También funciona usar bancas integradas para los amigos y sillas individuales para familia." }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title="Microbodas en CDMX 2026: Guía con Mesas Picnic (30–50 Invitados) | MESPIC"
+  description="Cómo planear una microboda inolvidable de 30 a 50 invitados en CDMX. Venues reales, presupuesto desglosado, configuración paso a paso y los errores que vemos cada fin de semana."
+  ogImage="/img/boda-rustica-intima-1.avif"
+  heroTitle="Microbodas en CDMX: la guía honesta para casarte con 30–50 invitados y que se sienta enorme"
+  heroBadge="Blog · Bodas Íntimas"
+  heroDescription="Si decidiste no casarte con 200 personas, ya tomaste la decisión más difícil. Esta guía te dice qué hacer con las otras 100. Mobiliario de madera natural, logística sin estrés y todo lo que aprendimos en más de 90 microbodas reales."
+  heroSeo1="Una microboda no es una boda recortada. Es otra cosa. Es elegir presencia sobre cantidad, conversación sobre protocolo, y un presupuesto que se invierte en lo que realmente vas a recordar dentro de diez años: el menú, las personas, la luz de las seis de la tarde. En MESPIC montamos más de 90 microbodas al año en Ciudad de México y Estado de México, desde jardines familiares en Coyoacán hasta haciendas boutique en Tepoztlán, y aprendimos algo que casi nadie dice: la diferencia entre una boda íntima memorable y una incómoda casi siempre se decide en el mobiliario, no en el catering."
+  heroSeo2="Esta guía la escribimos para la pareja que ya tomó la decisión de casarse en chico y ahora necesita las respuestas concretas. Aquí vas a encontrar el presupuesto real de 2026 desglosado por rubro, los venues que funcionan y los que no, la configuración exacta de mesas para 30, 40 y 50 invitados, el cronograma de planeación semana por semana, y los cinco errores que repetimos ver cada temporada. Si alguien quiere convencerte de que necesitas 150 invitados para que sea una boda de verdad, mándale este link."
+  breadcrumbs={[
+    { label: "Inicio", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Microbodas en CDMX" },
+  ]}
+  sidebarProducts={[
+    { name: "Mesa Estándar", cap: "1.80 m · 6 personas", href: "/catalogo/mesa-picnic-estandar/", img: "/img/mesa-picnic-area-verde-19.avif" },
+    { name: "Mesa Grande", cap: "2.40 m · 10-12 personas", href: "/catalogo/mesa-picnic-grande/", img: "/img/mesa-picnic-grande-evento-16.avif" },
+    { name: "Mesa Premium", cap: "Barniz 4 manos · 6 pax", href: "/catalogo/mesa-picnic-premium/", img: "/img/mesa-picnic-premium-23.avif" },
+  ]}
+  sidebarArticles={[
+    { title: "Renta de mesas picnic para bodas en CDMX", meta: "Bodas · 10 min", href: "/blog/renta-mesas-picnic-bodas-cdmx/", img: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
+    { title: "Bodas Boho-Chic en CDMX: guía completa", meta: "Bodas · 9 min", href: "/blog/bodas-boho-chic-cdmx/", img: "/img/boda-boho-1.avif" },
+    { title: "Cuántas mesas necesitas según invitados", meta: "Cálculo · 5 min", href: "/blog/cuantas-mesas-picnic-necesitas-segun-invitados/", img: "/img/mesa-picnic-boda-invitados-atardecer.avif" },
+  ]}
+  sidebarServices={[
+    { name: "Boda Íntima", desc: "30–50 invitados", href: "/servicios/bodas/intima/" },
+    { name: "Boda Boho", desc: "Macramé · Pampas · Textiles", href: "/servicios/bodas/boho/" },
+    { name: "Boda Rústica", desc: "Haciendas · Bosques", href: "/servicios/bodas/rustica/" },
+    { name: "Picnic Romántico", desc: "Pedidas · Aniversarios", href: "/servicios/picnic-romantico/" },
+  ]}
+  sidebarCtaTitle="¿Ya decidiste casarte en chico?"
+  sidebarCtaText="Mándanos tu venue y número de invitados. Te devolvemos un layout 3D y cotización final en menos de 24 horas. Sin que tengas que insistirnos."
+  sidebarCtaWa="Hola%2C+quiero+cotizar+mesas+picnic+para+una+microboda+%C3%ADntima+en+CDMX."
+  sidebarServicesTitle="Servicios para tu boda íntima"
+>
+
+<div class="art">
+
+  <p class="art__lead">
+    Tomaste una decisión que mucha gente todavía no entiende: casarte con poca gente, a propósito. Probablemente alguien de tu familia ya te preguntó si "vas a poder con tantos compromisos sociales después" o si "no te vas a arrepentir de no haber invitado al tío Roberto". La respuesta corta es no. La larga es esta guía. Si la decisión ya está tomada, vamos a lo importante: cómo lograr que tu microboda en CDMX no se sienta como una boda chica, sino como exactamente la boda que querías tener.
+  </p>
+
+  <section class="art__section" id="que-es-microboda">
+    <h2 class="art__h2">Qué es una microboda (y qué no es, aunque te lo digan)</h2>
+
+    <p class="art__featured-answer">
+      <strong>Respuesta directa:</strong> una microboda es una boda íntima de entre <strong>20 y 50 invitados</strong>, generalmente solo familia directa y amigos del círculo cercano. No es una boda barata: es una boda que <em>reasigna</em> el presupuesto. Lo que dejas de gastar en mesas para 200 personas se invierte en mejor catering, mejor venue y mejor producción audiovisual. En CDMX representa aproximadamente el 22% de las bodas que cotizamos en 2026, y la cifra crece cada año.
+    </p>
+
+    <p>El término "microwedding" llegó a México desde EE.UU. en 2020 y muchos lo adoptaron pensando que era sinónimo de "boda económica". No lo es. La mayoría de las parejas que eligen este formato tienen presupuestos por persona <em>iguales o superiores</em> al promedio. Lo que buscan, en orden de prioridad, es <strong>presencia real</strong> (poder conversar con cada invitado), <strong>evitar invitados de compromiso</strong> (sí, ese primo lejano que solo viste tres veces en tu vida) y <strong>libertad de venue</strong> (jardines residenciales, terrazas, lofts, haciendas boutique que serían imposibles con 150 personas).</p>
+
+    <p>Hay otra cosa que casi nunca se menciona: una microboda es más fácil de planear emocionalmente. Cuando reduces los invitados, también reduces las opiniones encontradas, los compromisos sociales y las explicaciones que tienes que dar. Es liberador.</p>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>Presencia real</h3>
+        <p>Vas a poder saludar a cada invitado, agradecer personalmente y hacer fotos sin la prisa de una agenda saturada. Vas a recordar conversaciones, no listas de mesas.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Mejor presupuesto por persona</h3>
+        <p>El gasto promedio por invitado sube entre 40 y 70%, lo que se traduce en mejor menú, vino de bodega independiente, producción visual cuidada y detalles personalizados que en una boda grande son imposibles de costear.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Venues que antes no eran opción</h3>
+        <p>Jardines residenciales en Coyoacán, terrazas privadas en Roma Norte, lofts industriales en Doctores, haciendas boutique en Tepoztlán. Espacios con personalidad que se vuelven imposibles cuando son 200 personas.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Logística más humana</h3>
+        <p>Montaje en dos horas, un solo punto de contacto el día del evento, menos riesgo operativo y menos margen para que algo salga mal. Tu wedding planner te lo va a agradecer.</p>
+      </div>
+    </div>
+  </section>
+
+  <figure class="art__figure">
+    <img
+      src="/img/boda-rustica-intima-1.avif"
+      alt="Microboda íntima con mesas picnic de madera de pino para 42 invitados en jardín residencial de Coyoacán, CDMX, con guirnaldas de luz cálida y centros florales bajos"
+      loading="lazy"
+      width="900"
+      height="560"
+    />
+    <figcaption>Microboda íntima de 42 invitados sobre seis mesas picnic grandes en configuración imperial · Jardín privado en Coyoacán</figcaption>
+  </figure>
+
+  <section class="art__section" id="cuantas-mesas">
+    <h2 class="art__h2">Cuántas mesas picnic necesitas para una microboda de 30 a 60 invitados</h2>
+
+    <p class="art__featured-answer">
+      <strong>Respuesta directa:</strong> para una microboda de 40 invitados necesitas <strong>4 mesas picnic grandes (2.40 m)</strong> o <strong>7 mesas estándar (1.80 m)</strong>. La configuración recomendada es <em>una imperial larga</em> formada por tres mesas grandes unidas (capacidad 30) más dos mesas satélite para los 10 invitados restantes. Es la disposición que más impacto visual produce y la que mejor convierte en fotografía editorial.
+    </p>
+
+    <p>El cálculo del mobiliario es lo que define si tu microboda se ve <em>diseñada</em> o se ve <em>incompleta</em>. Demasiadas mesas y el espacio queda vacío entre invitados; muy pocas y la convivencia se vuelve un Tetris. Esta es la tabla que usamos en MESPIC para todas las bodas íntimas que cotizamos:</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Invitados</th>
+            <th>Mesas estándar (6 pax)</th>
+            <th>Mesas grandes (10–12 pax)</th>
+            <th class="th-accent">Configuración recomendada</th>
+            <th>Resultado estético</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>20–25</strong></td>
+            <td>4 mesas</td>
+            <td>2 grandes + 1 estándar</td>
+            <td class="td-accent">2 mesas grandes en U</td>
+            <td>Ultra íntimo, cena familiar</td>
+          </tr>
+          <tr>
+            <td><strong>30</strong></td>
+            <td>5 mesas</td>
+            <td>3 mesas grandes</td>
+            <td class="td-accent">3 mesas largas paralelas</td>
+            <td>Banquete refinado tipo hacienda</td>
+          </tr>
+          <tr>
+            <td><strong>40</strong></td>
+            <td>7 mesas</td>
+            <td>4 mesas grandes</td>
+            <td class="td-accent">1 imperial larga (3 unidas) + 2 satélites</td>
+            <td>Editorial, fluido, fotogénico</td>
+          </tr>
+          <tr>
+            <td><strong>50</strong></td>
+            <td>9 mesas</td>
+            <td>5 mesas grandes</td>
+            <td class="td-accent">2 imperiales paralelas de 25 pax</td>
+            <td>Banquete campestre clásico</td>
+          </tr>
+          <tr>
+            <td><strong>60</strong></td>
+            <td>10 mesas</td>
+            <td>6 mesas grandes</td>
+            <td class="td-accent">Imperial central + 2 mesas redondas para honor</td>
+            <td>Mixta, jerárquica, elegante</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="art__tip">
+      <div class="art__tip-icon">💡</div>
+      <div>
+        <strong>Lo que casi nadie te dice:</strong> en una microboda, la <strong>configuración imperial</strong> —mesas unidas en una sola línea continua— es 3 veces más fotografiada que cualquier otra disposición. Sienta a todos como una sola gran familia, las fotos panorámicas se ven de comercial de Netflix, y vas a poder dar el brindis una sola vez en lugar de visitar veinte mesas. Si quieres profundizar en cálculos por modelo, revisa nuestra <a href="/blog/cuantas-mesas-picnic-necesitas-segun-invitados/">guía de cálculo según número de invitados</a>.
+      </div>
+    </div>
+  </section>
+
+  <section class="art__section" id="presupuesto-real">
+    <h2 class="art__h2">¿Cuánto cuesta una microboda en CDMX en 2026? Presupuesto desglosado real</h2>
+
+    <p class="art__featured-answer">
+      <strong>Respuesta directa:</strong> una microboda de 40 invitados en Ciudad de México cuesta entre <strong>$110,500 MXN (rango bajo)</strong> y <strong>$380,000+ MXN (rango alto)</strong>, con un punto medio de aproximadamente <strong>$189,500 MXN</strong>. El mobiliario MESPIC representa entre el 4% y 6% del total. El catering es el rubro más grande (30–35%). El costo por invitado se ubica entre $2,760 y $9,500 MXN, casi siempre superior al de una boda tradicional, aunque el total general es 30–50% menor.
+    </p>
+
+    <p>Si alguien te dice "una microboda cuesta la mitad que una boda normal", está mintiendo o no la ha planeado nunca. La verdad es que cuesta menos en total, pero más por persona, porque cada plato, cada copa y cada centro de mesa se diseña con más cuidado. Esta es la composición presupuestal que vemos repetida en cotizaciones reales de los últimos doce meses:</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Rubro</th>
+            <th>Rango bajo</th>
+            <th class="th-accent">Rango medio</th>
+            <th>Rango alto</th>
+            <th>% del total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Venue (5 horas)</strong></td>
+            <td>$15,000</td>
+            <td class="td-accent">$28,000</td>
+            <td>$60,000+</td>
+            <td>12–18%</td>
+          </tr>
+          <tr>
+            <td><strong>Catering (40 pax)</strong></td>
+            <td>$36,000</td>
+            <td class="td-accent">$60,000</td>
+            <td>$120,000</td>
+            <td>30–35%</td>
+          </tr>
+          <tr>
+            <td><strong>Mobiliario MESPIC (paq. Estándar)</strong></td>
+            <td>$5,500</td>
+            <td class="td-accent">$8,500</td>
+            <td>$12,000</td>
+            <td>4–6%</td>
+          </tr>
+          <tr>
+            <td><strong>Decoración + flores</strong></td>
+            <td>$12,000</td>
+            <td class="td-accent">$22,000</td>
+            <td>$45,000</td>
+            <td>10–14%</td>
+          </tr>
+          <tr>
+            <td><strong>Foto + video</strong></td>
+            <td>$22,000</td>
+            <td class="td-accent">$35,000</td>
+            <td>$70,000</td>
+            <td>14–18%</td>
+          </tr>
+          <tr>
+            <td><strong>Música / DJ</strong></td>
+            <td>$8,000</td>
+            <td class="td-accent">$14,000</td>
+            <td>$28,000</td>
+            <td>6–8%</td>
+          </tr>
+          <tr>
+            <td><strong>Wedding planner / coordinador</strong></td>
+            <td>$12,000</td>
+            <td class="td-accent">$22,000</td>
+            <td>$45,000</td>
+            <td>8–11%</td>
+          </tr>
+          <tr>
+            <td><strong>Total estimado</strong></td>
+            <td><strong>$110,500</strong></td>
+            <td class="td-accent"><strong>$189,500</strong></td>
+            <td><strong>$380,000+</strong></td>
+            <td>100%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Un detalle que casi nadie calcula: en una microboda el dinero "ahorrado" por reducir invitados <em>no se ahorra</em>. Se reasigna. Pareja tras pareja, vemos cómo el presupuesto fluye hacia rubros que aumentan el valor perceptual: cava de vinos seleccionada, fotógrafo de prestigio, video documental, papelería diseñada a la medida. Si tu plan era ahorrar, hazlo a propósito; si tu plan era elevar, sabe a dónde va cada peso.</p>
+
+    <p>Para entender cómo se cotiza el mobiliario en detalle, revisa nuestra <a href="/blog/cuanto-cuesta-rentar-mesas-picnic-cdmx/">guía completa de precios de mesas picnic 2026</a>.</p>
+  </section>
+
+  <div class="art__cta-inline">
+    <div class="art__cta-inline-content">
+      <h3>Si ya tienes venue y fecha, esto es lo que sigue</h3>
+      <p>Envíanos las medidas del espacio y cuántos invitados confirmados tienes. Te respondemos con un layout 3D, configuración exacta de mesas y cotización final desglosada en menos de 24 horas. Sin compromiso. Sin insistencia.</p>
+      <div class="art__cta-inline-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+cotizar+mesas+picnic+para+una+microboda+%C3%ADntima+en+CDMX." target="_blank" rel="noopener" class="art__btn art__btn--wa" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Quiero mi layout 3D por WhatsApp
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--outline">Cotizar por formulario →</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="art__section" id="venues">
+    <h2 class="art__h2">Los 5 mejores venues para microbodas en CDMX (probados en eventos reales)</h2>
+
+    <p>El venue es la decisión que más impacto tiene en el resultado visual de tu boda. Para microbodas existen opciones que serían inviables con 150 invitados pero que se convierten en lienzos perfectos para 30–50 personas. Estos son los formatos que más cotizamos en 2026, en orden de demanda:</p>
+
+    <ol class="art__steps">
+      <li class="art__step">
+        <span class="art__step-num">01</span>
+        <div class="art__step-body">
+          <h3>Jardín residencial privado (Coyoacán, San Ángel, Lomas)</h3>
+          <p>La casa familiar de los novios, una propiedad de Airbnb con jardín, o un jardín particular rentado por la tarde. Cero costo de venue, máxima personalización, sin restricciones de horario. Solo requiere plan B para lluvia (una carpa transparente de 6×6 m cubre 40 personas y cuesta entre $8,000 y $14,000 MXN). <strong>Capacidad ideal:</strong> 30–55 invitados.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">02</span>
+        <div class="art__step-body">
+          <h3>Terrazas y rooftops urbanos (Roma, Condesa, Polanco, Santa Fe)</h3>
+          <p>Una microboda urbana con vista panorámica de la ciudad al atardecer es una experiencia distinta. Las mesas picnic de pino contrastan perfecto con piso de duela industrial y muros de concreto pulido. Ideal para parejas que rechazan el formato campestre y quieren algo más editorial. <strong>Capacidad ideal:</strong> 25–60 invitados.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">03</span>
+        <div class="art__step-body">
+          <h3>Haciendas boutique (Tepoztlán, Cuernavaca, Valle de Bravo)</h3>
+          <p>Haciendas pequeñas con capacidad para 60 personas, que normalmente no se rentan para bodas grandes. Marco arquitectónico colonial, piedra, adobe, sin las complicaciones operativas de un evento masivo. La mesa picnic combina natural con el entorno. <strong>Capacidad ideal:</strong> 35–60 invitados.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">04</span>
+        <div class="art__step-body">
+          <h3>Lofts industriales y galerías (Doctores, Granada, Anzures)</h3>
+          <p>Techos altos, ladrillo expuesto, piso de concreto pulido. La estética industrial-natural es una de las tendencias más fuertes para microbodas urbanas de 2026. Ventaja enorme: no dependes del clima, lo que en temporada de lluvias vale oro. <strong>Capacidad ideal:</strong> 30–55 invitados.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">05</span>
+        <div class="art__step-body">
+          <h3>Viñedos y huertas (Querétaro, Atlixco, Valle de Bravo)</h3>
+          <p>Una microboda en viñedo es "destination" sin salir del país. Vinos servidos directo desde la bodega, paisaje sembrado, y la experiencia de fin de semana incluida. Una boda así cuesta menos que una boda estándar en CDMX y se siente totalmente diferente. <strong>Capacidad ideal:</strong> 30–50 invitados.</p>
+        </div>
+      </li>
+    </ol>
+
+    <p>Si tu boda va a ser fuera de CDMX, revisa nuestras guías específicas para <a href="/blog/bodas-valle-de-bravo-avandaro-mesas-picnic/">bodas en Valle de Bravo y Avándaro</a> o <a href="/blog/bodas-haciendas-calimaya-tenango-del-valle-toluca/">haciendas en Calimaya y Tenango del Valle</a>, donde detallamos la logística de cada zona.</p>
+  </section>
+
+  <section class="art__section" id="imperial">
+    <h2 class="art__h2">Configuración imperial: por qué casi todas nuestras microbodas terminan eligiéndola</h2>
+
+    <p>La configuración imperial consiste en unir todas las mesas en una sola línea continua, larga, ininterrumpida. Es la disposición que más se solicita en microbodas porque convierte el banquete en una experiencia colectiva en lugar de una serie de mesas redondas aisladas que se ven en cualquier boda tradicional.</p>
+
+    <p>La primera vez que la propusimos en una microboda, hace cinco años, los novios dudaron. "¿Y si la gente no se siente cómoda mirando a los de enfrente?" La respuesta fue al revés: nadie quería levantarse, las conversaciones cruzaron toda la mesa, y la foto del banquete se imprimió a tamaño cuadro en su sala. Desde entonces, es nuestra recomendación por default para microbodas de 30 a 50 invitados.</p>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>Tres mesas grandes alineadas</h3>
+        <p>Tres mesas picnic grandes de 2.40 m forman una línea continua de 7.20 m que sienta cómodamente a 30 personas. Las uniones entre mesa y mesa se vuelven invisibles bajo un camino largo de lino, o las dejas a la vista a propósito para una estética rústica intencional.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Centros de mesa bajos siempre</h3>
+        <p>Para que los invitados se vean unos a otros a través de la mesa, todo centro debe tener máximo 25 cm de altura. Velas en fanales bajos, ramos horizontales y ramas de eucalipto extendidas funcionan mejor que cualquier arreglo elevado. Esto no es preferencia, es geometría.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Bancas integradas + sillas Tiffany en extremos</h3>
+        <p>Las bancas integradas permiten sentar dos personas extra que con sillas individuales no entrarían. Para invitados con movilidad reducida o adultos mayores, agregamos 4 a 6 sillas Tiffany en los extremos. Confort sin sacrificar la estética.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Iluminación cenital cálida</h3>
+        <p>Una guirnalda Edison a 2.50 m de altura corriendo paralela a la imperial genera <em>la</em> fotografía que define una microboda. Si el venue no permite estructura permanente, usamos postes verticales con base de concreto disimulada con flores. Es la foto que vas a usar como portada en cualquier álbum.</p>
+      </div>
+    </div>
+  </section>
+
+  <figure class="art__figure">
+    <img
+      src="/img/mesa-picnic-boda-elegante-luces.avif"
+      alt="Mesa imperial de 36 invitados sobre tres mesas picnic de pino con guirnaldas Edison cenitales y centros florales bajos para microboda elegante en CDMX"
+      loading="lazy"
+      width="900"
+      height="560"
+    />
+    <figcaption>Configuración imperial con guirnaldas Edison sobre mesas picnic de pino · Microboda de 36 invitados en hacienda boutique de Tepoztlán</figcaption>
+  </figure>
+
+  <section class="art__section" id="cronograma">
+    <h2 class="art__h2">Cronograma de planeación: 12 semanas antes y qué hacer cada una</h2>
+
+    <p class="art__featured-answer">
+      <strong>Respuesta directa:</strong> una microboda en CDMX se planea bien en <strong>12 semanas</strong>. Las primeras 4 semanas son para venue, fecha y catering; las semanas 5–8 para mobiliario, fotografía y DJ; las semanas 9–11 para decoración, confirmación final y visita técnica; la semana 12 es solo pagos finales y dormir bien la noche antes.
+    </p>
+
+    <p>Una microboda se puede organizar en menos tiempo que una boda tradicional, pero los puntos críticos —venue, catering, mobiliario, fotografía— requieren exactamente la misma anticipación. Saltarse este cronograma es la causa número uno de las microbodas que terminan más caras de lo planeado y con menos opciones de proveedores. Sigue el orden:</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Semana</th>
+            <th class="th-accent">Acción crítica</th>
+            <th>Responsable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>12 antes</strong></td>
+            <td class="td-accent">Cerrar venue + fecha + número definitivo de invitados</td>
+            <td>Novios</td>
+          </tr>
+          <tr>
+            <td><strong>10 antes</strong></td>
+            <td class="td-accent">Contratar catering + degustación de menú</td>
+            <td>Wedding planner</td>
+          </tr>
+          <tr>
+            <td><strong>8 antes</strong></td>
+            <td class="td-accent">Cotizar y reservar mobiliario (MESPIC + sillas extra si las hay)</td>
+            <td>Wedding planner / Novios</td>
+          </tr>
+          <tr>
+            <td><strong>7 antes</strong></td>
+            <td class="td-accent">Cerrar foto, video y DJ con contrato firmado</td>
+            <td>Novios</td>
+          </tr>
+          <tr>
+            <td><strong>5 antes</strong></td>
+            <td class="td-accent">Definir paleta + decoración + flores</td>
+            <td>Decoradora</td>
+          </tr>
+          <tr>
+            <td><strong>3 antes</strong></td>
+            <td class="td-accent">Visita técnica al venue con todos los proveedores</td>
+            <td>Coordinador</td>
+          </tr>
+          <tr>
+            <td><strong>2 antes</strong></td>
+            <td class="td-accent">Confirmar asistencia final + ajustes de mobiliario</td>
+            <td>Novios + planner</td>
+          </tr>
+          <tr>
+            <td><strong>1 antes</strong></td>
+            <td class="td-accent">Pagos finales + entrega de bocetos de mesa</td>
+            <td>Wedding planner</td>
+          </tr>
+          <tr>
+            <td><strong>Día del evento</strong></td>
+            <td class="td-accent">Montaje desde 3 horas antes · MESPIC entrega + arma + acomoda según plano</td>
+            <td>Equipo MESPIC + coordinador</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="art__tip">
+      <div class="art__tip-icon">⏱️</div>
+      <div>
+        <strong>Si tu boda es en menos de 12 semanas</strong> y todavía no tienes mobiliario, escríbenos antes que a cualquier otro proveedor. La disponibilidad de mesas en temporada alta se agota primero. Hemos rescatado bodas con tres semanas de anticipación, pero el precio de la urgencia siempre sube.
+      </div>
+    </div>
+  </section>
+
+  <section class="art__section" id="errores">
+    <h2 class="art__h2">5 errores frecuentes en microbodas (y cómo evitarlos antes de que pasen)</h2>
+
+    <p>Cinco errores que se repiten cada temporada. Si los conoces antes de planear, te los ahorras. Si los descubres el día del evento, ya no hay vuelta atrás. Lee con atención:</p>
+
+    <ol class="art__steps">
+      <li class="art__step">
+        <span class="art__step-num">01</span>
+        <div class="art__step-body">
+          <h3>Subestimar el espacio entre mesas</h3>
+          <p>Una mesa picnic ocupa 2.40 m de largo + 60 cm de banca por cada lado = 3.60 m de ancho funcional. Si las mesas están a menos de 1.20 m entre sí, los meseros no pueden circular con charolas grandes. La regla de oro: calcula siempre <strong>4.80 m libres</strong> entre filas. Si tu venue es chico, mejor reduce mesas que apretarlas.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">02</span>
+        <div class="art__step-body">
+          <h3>Exagerar la decoración</h3>
+          <p>En una boda de 200 invitados puedes saturar la mesa porque los ojos están repartidos. En una microboda cada invitado va a observar cada elemento como si fuera museo. La regla profesional es <em>menos elementos, mejor calidad</em>: máximo tres tipos de flor, un solo camino de mesa, una sola textura dominante. Si dudas, quita; no agregues.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">03</span>
+        <div class="art__step-body">
+          <h3>Olvidar a los invitados con movilidad reducida</h3>
+          <p>La banca integrada de la mesa picnic no es ideal para adultos mayores ni personas con problemas de cadera o rodilla. Para una microboda con familia mayor, reserva siempre 4 a 6 sillas Tiffany individuales en los extremos de la imperial. Es un detalle que tu abuela va a recordar más que el menú.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">04</span>
+        <div class="art__step-body">
+          <h3>No tener plan B para lluvia</h3>
+          <p>En CDMX la temporada de lluvias va de junio a octubre. Una microboda en jardín sin carpa de respaldo es ruleta rusa. Una carpa transparente de 6×9 m cubre 40 invitados y cuesta entre $8,000 y $14,000 MXN. Es el mejor seguro barato que vas a contratar en toda la planeación. Para más detalle, lee nuestra <a href="/blog/que-hacer-si-llueve-en-tu-evento-al-aire-libre/">guía de contingencia para lluvia en eventos al aire libre</a>.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">05</span>
+        <div class="art__step-body">
+          <h3>Confundir microboda con "boda chica"</h3>
+          <p>Una microboda no es una boda de 80 con menos gente. Es un formato con su propia lógica: ceremonia breve, banquete largo, sobremesa extendida, conversación como protagonista. Si copias el guion de una boda grande (cócteles de 2 horas, ceremonia formal, baile de 4 horas) la energía se cae a la mitad. Apunta a otro ritmo y vas a tener otra boda.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="art__section" id="faqs">
+    <h2 class="art__h2">Preguntas frecuentes sobre microbodas con mesas picnic en CDMX</h2>
+
+    <div class="art__faqs">
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuánto cuesta una microboda con mesas picnic en CDMX en 2026?</summary>
+        <p class="art__faq-a">Para 40 invitados, el rango medio se ubica entre $180,000 y $200,000 MXN incluyendo venue, catering, mobiliario MESPIC, decoración, foto/video y DJ. El mobiliario MESPIC en paquete estándar va de $6,000 a $10,000 MXN. El costo por invitado suele ser superior al de una boda tradicional, pero el total general es entre 30 y 50% menor. La versión premium puede llegar a $380,000+ MXN.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Las mesas picnic son cómodas para estar sentado 4 horas en una boda?</summary>
+        <p class="art__faq-a">Sí, con la altura correcta y un cojín de banca opcional. Nuestras mesas tienen 75 cm de altura de mesa y 45 cm de altura de banca, que son las medidas ergonómicas internacionales para banquete. Para microbodas con adultos mayores recomendamos agregar sillas Tiffany individuales en algunos lugares. Los cojines decorativos en algodón orgánico (renta opcional) elevan el confort sin romper la estética.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Se pueden hacer microbodas en el jardín de una casa particular?</summary>
+        <p class="art__faq-a">Es uno de los formatos más solicitados. Las mesas picnic se entregan, montan y se recolectan sin necesidad de obra ni instalación eléctrica. Solo necesitas un acceso de mínimo 90 cm para meter las piezas armadas. En MESPIC visitamos la propiedad antes del evento sin costo para confirmar acceso, configuración óptima y plan de contingencia para lluvia.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuánto tiempo antes hay que reservar las mesas para una microboda?</summary>
+        <p class="art__faq-a">Recomendamos 6–8 semanas antes del evento para garantizar disponibilidad. En temporada alta (marzo–mayo y septiembre–noviembre), idealmente 12 semanas para sábados. Para fechas de mayo y noviembre, la disponibilidad de sábados se agota con tres meses de anticipación. La reserva se confirma con un anticipo del 30–50% del total cotizado.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Puedo mezclar mesas picnic con sillas Tiffany?</summary>
+        <p class="art__faq-a">Totalmente, y es una de las combinaciones que más recomendamos para microbodas elegantes. La mesa picnic da la base rústica-cálida; las sillas Tiffany agregan formalidad y comodidad para los invitados clave. También funciona usar bancas integradas para amigos jóvenes y sillas individuales para padres, abuelos y padrinos.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué incluye exactamente el servicio de mobiliario MESPIC?</summary>
+        <p class="art__faq-a">El precio cotizado incluye transporte al venue, montaje profesional con distribución según el plano del evento, mesas picnic + bancas integradas listas para uso, recolección al finalizar (mismo día o al siguiente según acuerdo), y coordinación directa con tu wedding planner durante la planeación. No hay cargos ocultos por hora de montaje ni por recolección nocturna dentro de CDMX y zona metropolitana del Estado de México.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Y si quiero una microboda pero también un after más relajado?</summary>
+        <p class="art__faq-a">Es uno de los formatos más solicitados. La combinación más exitosa: catering tradicional con mesas picnic en imperial para el banquete (3 horas) + 1 food truck dulce o de coctelería como after-party hasta el cierre. Para profundizar, lee nuestra <a href="/blog/catering-food-trucks-mesas-picnic-eventos/">guía sobre cómo combinar catering, food trucks y mesas picnic</a>.</p>
+      </details>
+
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Galería: microbodas reales con mesas picnic en CDMX y Estado de México</h2>
+    <div class="art__gallery-strip">
+      <img src="/img/boda-rustica-intima-1.avif" alt="Microboda íntima con mesas picnic y guirnaldas Edison en jardín privado de CDMX" loading="lazy" width="350" height="220" />
+      <img src="/img/boda-detalle-1.avif" alt="Detalle de mesa picnic premium con vajilla mate y arreglo floral bajo para microboda" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-boda-elegante-decoracion.avif" alt="Mesa picnic premium decorada con velas y centros bajos para boda íntima en hacienda" loading="lazy" width="350" height="220" />
+      <img src="/img/boda-hacienda-banquete-1.avif" alt="Banquete imperial sobre mesas picnic en hacienda boutique con invitados sentados al atardecer" loading="lazy" width="350" height="220" />
+    </div>
+  </section>
+
+  <div class="art__cta-final">
+    <div class="art__cta-final-inner">
+      <h2>Tu microboda merece la planeación que se merece</h2>
+      <p>Cuéntanos tu venue, fecha y número de invitados confirmados. Te devolvemos un layout 3D con la configuración exacta para tu espacio, mesa por mesa, más cotización final desglosada en menos de 24 horas. Sin compromiso, sin insistencia, sin sorpresas en el precio.</p>
+      <div class="art__cta-final-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+cotizar+mesas+picnic+para+una+microboda+%C3%ADntima+en+CDMX." target="_blank" rel="noopener" class="art__btn art__btn--wa art__btn--lg" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Quiero mi layout 3D por WhatsApp
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--primary art__btn--lg">Cotizar por formulario →</a>
+        <a href="/servicios/bodas/" class="art__btn art__btn--ghost art__btn--lg">Ver más estilos de boda</a>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
+
+</div>
+
+<style>
+  .art__featured-answer {
+    background: rgba(44, 85, 48, 0.05);
+    border-left: 4px solid var(--c-primary, #2C5530);
+    padding: 1.125rem 1.5rem;
+    border-radius: 0 var(--radius-sm, 8px) var(--radius-sm, 8px) 0;
+    font-size: 1rem;
+    color: var(--c-text, #1C1917);
+    line-height: 1.75;
+    margin: 0 0 1.75rem;
+  }
+  .art__featured-answer strong { color: var(--c-primary-dark, #1B3B20); }
+</style>
+
+</BlogLayout>

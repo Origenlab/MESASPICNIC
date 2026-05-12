@@ -336,6 +336,35 @@ const allPosts: Post[] = [
     href: "/blog/sesiones-fotograficas-valle-de-bravo-bosque-lago/",
     category: "Producciones Toluca",
   },
+  // ── 4 nuevos artículos profesionales (mayo 2026) ───────────────────────────
+  {
+    title: "Microbodas y Bodas Íntimas en CDMX: Guía con Mesas Picnic (30-50 invitados)",
+    description: "Cómo planear una microboda o boda íntima de 30 a 50 invitados en CDMX con mesas picnic de madera natural. Venues, presupuesto, configuración y errores frecuentes.",
+    image: "/img/boda-rustica-intima-1.avif",
+    href: "/blog/microbodas-bodas-intimas-mesas-picnic-cdmx/",
+    category: "Bodas",
+  },
+  {
+    title: "Bridal Shower y Despedida de Soltera con Mesas Picnic en CDMX",
+    description: "Cómo organizar un bridal shower o despedida de soltera elegante en CDMX con mesas picnic. Temáticas, decoración, paquetes, presupuesto y errores a evitar.",
+    image: "/img/picnic-romantico-bridal-shower-mesas-pino-02.avif",
+    href: "/blog/bridal-shower-despedida-soltera-mesas-picnic-cdmx/",
+    category: "Bridal Shower",
+  },
+  {
+    title: "Catering, Food Trucks y Mesas Picnic: La Combinación Perfecta para Eventos",
+    description: "Cómo combinar catering tradicional, food trucks y estaciones de comida con mesas picnic en CDMX. Logística, configuraciones, costos y errores frecuentes.",
+    image: "/img/mesa-picnic-feria-gastronomica-multitud.avif",
+    href: "/blog/catering-food-trucks-mesas-picnic-eventos/",
+    category: "Gastronomía",
+  },
+  {
+    title: "Cumpleaños Adultos (30, 40, 50 Años) con Mesas Picnic en CDMX",
+    description: "Cómo celebrar tu cumpleaños 30, 40 o 50 con mesas picnic en CDMX. Temáticas adultas, configuraciones, presupuesto real, venues y errores frecuentes a evitar.",
+    image: "/img/mesa-picnic-celebracion-18.avif",
+    href: "/blog/cumpleanos-adultos-30-40-50-mesas-picnic-cdmx/",
+    category: "Celebraciones",
+  },
 ];
 
 const featuredPost = allPosts.find(p => p.featured)!;
@@ -389,6 +418,9 @@ const catColor: Record<string, string> = {
   "Familiar Toluca":      "#2C5530",
   "Festivales Toluca":    "#B45309",
   "Producciones Toluca":  "#1F2937",
+  // Nuevas categorías mayo 2026
+  "Bridal Shower":        "#D4869F",
+  "Gastronomía":          "#A0522D",
 };
 ---
 
@@ -427,8 +459,8 @@ const catColor: Record<string, string> = {
     paragraph2="Navega por categoría o consulta la barra lateral para encontrar exactamente lo que necesitas."
     badge="Contenido especializado"
     stats={[
-      { value: "19", label: "Artículos" },
-      { value: "12", label: "Categorías" },
+      { value: String(allPosts.length), label: "Artículos" },
+      { value: String(categories.length), label: "Categorías" },
     ]}
   />
 

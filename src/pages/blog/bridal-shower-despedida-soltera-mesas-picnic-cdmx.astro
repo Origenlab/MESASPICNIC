@@ -1,0 +1,527 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import '../../styles/blog-article.css';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Bridal Shower y Despedida de Soltera en CDMX: la guía que las madrinas necesitaban",
+  "description": "Cómo organizar un bridal shower elegante o una despedida de soltera memorable en Ciudad de México con mesas picnic. Temáticas, configuración, presupuesto desglosado, locaciones reales y errores frecuentes a evitar.",
+  "image": "https://mesaspicnic.com/img/picnic-romantico-bridal-shower-mesas-pino-02.avif",
+  "author": { "@type": "Organization", "name": "MESPIC", "url": "https://mesaspicnic.com" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MESPIC — Renta de Mesas Picnic",
+    "logo": { "@type": "ImageObject", "url": "https://mesaspicnic.com/icon.svg" }
+  },
+  "datePublished": "2026-05-12",
+  "dateModified": "2026-05-12",
+  "mainEntityOfPage": "https://mesaspicnic.com/blog/bridal-shower-despedida-soltera-mesas-picnic-cdmx/",
+  "articleSection": "Bridal Shower",
+  "keywords": "bridal shower CDMX, despedida de soltera, despedida soltera ciudad de México, bridal brunch, decoración bridal shower, mesas picnic bridal shower"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta organizar un bridal shower en CDMX en 2026?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Para 25 invitadas, el presupuesto recomendado se ubica entre $50,000 y $80,000 MXN incluyendo mobiliario MESPIC, catering, decoración, vajilla, fotografía y souvenirs. El mobiliario MESPIC para esta escala va de $6,000 a $10,000 MXN. El costo por invitada en formato elegante promedia $2,500 MXN. La versión premium puede llegar a $120,000+ MXN." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué temática es mejor para un bridal shower con mesas picnic?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Depende de la novia y del venue. Para novias clásicas funcionan Garden Party Inglés o Champagne & Roses. Para novias relajadas, Boho-Chic o Picnic Editorial. Para novias minimalistas, Escandinavo. La regla es que la temática debe coincidir con la estética de la boda final, no contradecirla." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se puede mezclar mesa picnic con vajilla fina en un bridal shower elegante?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí, perfectamente. La mesa picnic de pino premium con barniz de 4 manos funciona como base neutra para cualquier vajilla: porcelana clásica con borde dorado, cristalería de bordes irregulares o vajilla cerámica artesanal. El contraste entre madera natural y vajilla fina es uno de los recursos estéticos más buscados en bridal showers editoriales." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo antes hay que reservar el mobiliario para un bridal shower?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Recomendamos 4 a 6 semanas antes del evento. En temporada alta (marzo–mayo y septiembre–noviembre) sube a 8 semanas porque coincide con la temporada de bodas. La reserva se confirma con un anticipo del 30–50% del total cotizado." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hay paquetes que incluyan mesa picnic más decoración para bridal shower?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí, MESPIC ofrece el Set Picnic Completo que incluye mesas, decoración base (camino de mesa, centros, vajilla) y montaje. El catering se contrata por separado con proveedores aliados que podemos recomendar." }
+    }
+  ]
+};
+---
+
+<BlogLayout
+  title="Bridal Shower y Despedida de Soltera en CDMX 2026 con Mesas Picnic | MESPIC"
+  description="La guía honesta para organizar un bridal shower elegante o despedida de soltera en CDMX. Temáticas que funcionan, presupuesto real, locaciones probadas y errores frecuentes."
+  ogImage="/img/picnic-romantico-bridal-shower-mesas-pino-02.avif"
+  heroTitle="Bridal Shower y Despedida de Soltera en CDMX: la guía que las madrinas necesitaban"
+  heroBadge="Blog · Bridal Shower"
+  heroDescription="Si te tocó organizarle el bridal shower a tu mejor amiga (o a tu hermana, o a tu hija), esta guía te va a ahorrar veinte horas de Pinterest y una cantidad razonable de discusiones grupales en el chat de las madrinas."
+  heroSeo1="El bridal shower y la despedida de soltera dejaron atrás los juegos forzados, las cenas en restaurantes de cadena y las despedidas con disfraz embarazoso. La novia de 2026 quiere otra cosa: experiencias diseñadas, fotografías editoriales, conversación real con las personas que más quiere, y un montaje que se vea tan cuidado como su boda. En CDMX vemos cómo crece año tras año la demanda de formatos al aire libre con mesas picnic, porque combinan elegancia, intimidad y la estética fotogénica que define cualquier celebración pre-boda exitosa en redes y en álbum."
+  heroSeo2="En MESPIC montamos más de 130 bridal showers al año en jardines residenciales, terrazas privadas, casas de campo y rooftops urbanos. Lo que aprendimos no cabe en un tablero de Pinterest, pero sí en una guía bien estructurada: cuál es la diferencia real entre bridal shower y despedida de soltera, qué temáticas funcionan para cada tipo de novia, cuánto cuesta organizar uno bien en 2026, cuántas mesas se necesitan según invitadas, qué locaciones recomendamos y, sobre todo, los cinco errores que repetimos ver y que arruinan el resultado visual aunque la decoración esté impecable."
+  breadcrumbs={[
+    { label: "Inicio", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Bridal Shower en CDMX" },
+  ]}
+  sidebarProducts={[
+    { name: "Mesa Estándar", cap: "1.80 m · 6 personas", href: "/catalogo/mesa-picnic-estandar/", img: "/img/picnic-romantico-bridal-shower-mesas-pino-01.avif" },
+    { name: "Set Picnic Completo", cap: "Decoración incluida", href: "/catalogo/set-picnic-completo/", img: "/img/picnic-romantico-bridal-shower-mesas-pino-04.avif" },
+    { name: "Mesa Premium", cap: "Barniz 4 manos · 6 pax", href: "/catalogo/mesa-picnic-premium/", img: "/img/mesa-picnic-premium-23.avif" },
+  ]}
+  sidebarArticles={[
+    { title: "Mesas Picnic para Baby Shower en CDMX", meta: "Baby Shower · 8 min", href: "/blog/mesas-picnic-baby-shower-cdmx/", img: "/img/picnic-romantico-bridal-shower-mesas-pino-02.avif" },
+    { title: "Picnic Romántico para Pedida de Mano", meta: "Romántico · 7 min", href: "/blog/picnic-romantico-pedida-de-mano-cdmx/", img: "/img/picnic-romantico-bridal-shower-mesas-pino-03.avif" },
+    { title: "Picnic de Lujo en CDMX: experiencias premium", meta: "Lujo · 5 min", href: "/blog/picnic-lujo-experiencias-premium-cdmx/", img: "/img/picnic-lujo-romantico-cdmx-mespic.avif" },
+  ]}
+  sidebarServices={[
+    { name: "Picnic Romántico", desc: "Experiencias íntimas", href: "/servicios/picnic-romantico/" },
+    { name: "Baby Shower", desc: "Bebés en camino", href: "/servicios/baby-shower/" },
+    { name: "Reuniones Familiares", desc: "Hasta 80 invitados", href: "/servicios/reuniones-familiares/" },
+    { name: "Fiestas Temáticas", desc: "Concepto + montaje", href: "/servicios/fiestas-tematicas/" },
+  ]}
+  sidebarCtaTitle="¿Tú eres la madrina principal?"
+  sidebarCtaText="Te ayudamos con todo el montaje. Tú elige la paleta, nosotros nos encargamos del mobiliario y la coordinación. Cotización personalizada el mismo día."
+  sidebarCtaWa="Hola%2C+quiero+cotizar+mesas+picnic+para+un+bridal+shower+en+CDMX."
+  sidebarServicesTitle="Servicios para la novia"
+>
+
+<div class="art">
+
+  <p class="art__lead">
+    Organizar el bridal shower de alguien que quieres es una responsabilidad bonita y ligeramente aterradora. La novia tiene expectativas (aunque diga que no), el grupo de madrinas tiene opiniones encontradas, y tú quedaste como la persona que tiene que coordinar todo sin que se note el esfuerzo. Esta guía está escrita para ti. Aquí vas a encontrar todo lo que aprendimos en más de 130 bridal showers profesionales en CDMX: qué funciona, qué no funciona, qué dijo el fotógrafo después del montaje, y cuánto se gastó en cada caso.
+  </p>
+
+  <section class="art__section" id="bridal-shower-vs-despedida">
+    <h2 class="art__h2">¿Bridal shower, despedida de soltera o bridal brunch? Cómo decidir el formato correcto</h2>
+
+    <p class="art__featured-answer">
+      <strong>Respuesta directa:</strong> el <strong>bridal shower</strong> es un evento de tarde, formato elegante y íntimo (15–35 invitadas), donde se mezcla familia y amigas. La <strong>despedida de soltera</strong> es de noche, formato fiesta o viaje, solo amigas cercanas (8–20). El <strong>bridal brunch</strong> es de mediodía, formato relajado tipo brunch, mezcla familia y amigas íntimas (12–25). La tendencia 2026 es hacer dos eventos separados: bridal shower elegante para la familia, despedida privada para amigas.
+    </p>
+
+    <p>Aunque se usen como sinónimos en muchas conversaciones, hay diferencias culturales y operativas importantes entre estos formatos. Saber cuál estás organizando es la decisión más importante de toda la planeación, porque define horario, paleta, presupuesto, locación y dress code. Esta tabla te ahorra dos semanas de dudas:</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Concepto</th>
+            <th class="th-accent">Bridal Shower</th>
+            <th>Despedida de Soltera</th>
+            <th>Bridal Brunch</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Horario</strong></td>
+            <td class="td-accent">3–7 pm</td>
+            <td>8 pm en adelante</td>
+            <td>11 am – 3 pm</td>
+          </tr>
+          <tr>
+            <td><strong>Tono</strong></td>
+            <td class="td-accent">Elegante, fotogénico, íntimo</td>
+            <td>Fiesta, baile, energía alta</td>
+            <td>Relajado, gastronómico</td>
+          </tr>
+          <tr>
+            <td><strong>Invitadas</strong></td>
+            <td class="td-accent">Mamás, tías, hermanas, amigas</td>
+            <td>Solo amigas cercanas</td>
+            <td>Familia + amigas íntimas</td>
+          </tr>
+          <tr>
+            <td><strong>Capacidad típica</strong></td>
+            <td class="td-accent">15–35 invitadas</td>
+            <td>8–20 invitadas</td>
+            <td>12–25 invitadas</td>
+          </tr>
+          <tr>
+            <td><strong>Mesa picnic ideal</strong></td>
+            <td class="td-accent">Imperial larga + decoración floral</td>
+            <td>Set picnic bajo + cojines</td>
+            <td>Mesas independientes de 6</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="art__tip">
+      <div class="art__tip-icon">💡</div>
+      <div>
+        <strong>La tendencia que vemos crecer en 2026:</strong> hacer <em>dos eventos separados</em>. Un bridal shower elegante de tarde para familia y amigas mayores (formato sentado, decoración floral, montaje editorial) y una despedida de soltera privada con las amigas más cercanas (formato relajado, picnic bajo, sin protocolos). Ambos se montan con mesas picnic en distintas configuraciones, y el costo no se duplica porque cada uno es más pequeño.
+      </div>
+    </div>
+  </section>
+
+  <figure class="art__figure">
+    <img
+      src="/img/picnic-romantico-bridal-shower-mesas-pino-02.avif"
+      alt="Bridal shower elegante de 24 invitadas con configuración imperial sobre mesas picnic premium, vajilla blanca y arreglos florales bajos en jardín residencial de Lomas de Chapultepec"
+      loading="lazy"
+      width="900"
+      height="560"
+    />
+    <figcaption>Bridal shower de 24 invitadas con configuración imperial sobre mesas picnic premium · Jardín residencial en Lomas de Chapultepec</figcaption>
+  </figure>
+
+  <section class="art__section" id="tematicas">
+    <h2 class="art__h2">Las 6 temáticas de bridal shower que más nos piden en CDMX (y por qué funcionan)</h2>
+
+    <p>Antes de discutir paleta con tu grupo de madrinas, lee esta sección. La temática define todo lo demás —flores, vajilla, dress code, papelería, menú— así que elegirla mal cuesta caro en tiempo y dinero. Estas son las seis temáticas que más cotizamos en 2026 y que mejor combinan con la madera natural de la mesa picnic:</p>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>1. Garden Party Inglés</h3>
+        <p>Paleta de blancos, verdes y rosas pastel. Vajilla de porcelana con flores pintadas, té en juego de plata, scones y sándwiches en torre. Mesa picnic con camino de lino blanco y arreglos bajos de peonías o rosas inglesas. Ideal para novia clásica con familia tradicional.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>2. Picnic Boho-Chic</h3>
+        <p>Paleta terracota, cobre y crema. Macramé colgante, pampas, frutas estacionales sobre tabla de madera y velas en fanales bajos. Mesa picnic con caminos étnicos, cojines en algodón orgánico, mantas tejidas a mano. Para novia relajada con ojo editorial.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>3. Mediterráneo / Toscana</h3>
+        <p>Paleta amarillo limón, verde oliva y blanco roto. Ramas de olivo, limones decorativos, jarrones de cerámica y pan rústico. Mesa picnic con vajilla mate, vino blanco y antipasti en tablas oscuras. Funciona perfecto para bridal brunch.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>4. Champagne & Roses</h3>
+        <p>Paleta dorado, blanco y rosa polvo. Champaneras de cobre, rosas premium, copas flauta cristal y vajilla con borde dorado. Mesa picnic estilo premium con barniz 4 manos y camino satinado. La opción más fotografiada en Instagram.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>5. Tropical Editorial</h3>
+        <p>Paleta verde palmera, fucsia y blanco. Hojas tropicales (monstera, palmas), piñas decorativas, cocteles frutales y vajilla con motivos botánicos. Perfecto para showers en terraza con alberca o azotea con vista.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>6. Minimalista Escandinavo</h3>
+        <p>Paleta blancos puros, beige y madera natural. Cero flores, mucho ramaje verde, vajilla cerámica color tierra y velas cilíndricas blancas. Estética nórdica que deja brillar a la novia, no a la decoración. Para novia que odia "lo cargado".</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="art__section" id="cuantas-mesas">
+    <h2 class="art__h2">¿Cuántas mesas picnic necesitas y cómo configurarlas según el formato?</h2>
+
+    <p class="art__featured-answer">
+      <strong>Respuesta directa:</strong> para un bridal shower de 25 invitadas con <strong>formato sentado</strong>, necesitas <strong>3 mesas grandes</strong> unidas en imperial (7.20 m total) más 1 mesa auxiliar para postres y 1 para regalos. Para <strong>formato coctel</strong>, 2 mesas centrales más 1 estación de comida. La regla de oro es siempre crear un punto fotográfico principal (la imperial) y separar las mesas auxiliares para no romper el plano visual.
+    </p>
+
+    <p>El número correcto de mesas depende de si el evento será sentado (banquete formal) o tipo coctel (estaciones y conversación de pie). Las cantidades aquí son las que cotizamos con más frecuencia y que sabemos que funcionan en eventos reales:</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Invitadas</th>
+            <th>Formato sentado</th>
+            <th>Formato coctel</th>
+            <th class="th-accent">Mesa principal</th>
+            <th>Mesas auxiliares</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>10–15</strong></td>
+            <td>2 mesas estándar unidas</td>
+            <td>1 mesa central</td>
+            <td class="td-accent">Imperial de 3.60 m</td>
+            <td>1 mesa para regalos</td>
+          </tr>
+          <tr>
+            <td><strong>20</strong></td>
+            <td>3 estándar / 2 grandes</td>
+            <td>1 central + 1 lateral</td>
+            <td class="td-accent">Imperial de 5.40 m</td>
+            <td>1 postres + 1 regalos</td>
+          </tr>
+          <tr>
+            <td><strong>25–30</strong></td>
+            <td>5 estándar / 3 grandes</td>
+            <td>2 centrales + 1 estación</td>
+            <td class="td-accent">Imperial de 7.20 m</td>
+            <td>1 postres + 1 bebidas + 1 regalos</td>
+          </tr>
+          <tr>
+            <td><strong>35–40</strong></td>
+            <td>7 estándar / 4 grandes</td>
+            <td>2 imperiales + 2 estaciones</td>
+            <td class="td-accent">2 imperiales de 5.40 m</td>
+            <td>1 champagne + 1 postres + 1 regalos</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Para formato sentado recomendamos siempre la <strong>configuración imperial</strong>: genera la foto editorial que define un bridal shower y permite a la novia conversar con todas las invitadas sin levantarse a circular mesa por mesa. Las mesas auxiliares (postres, bebidas, regalos) deben estar siempre separadas para no romper el plano fotográfico principal.</p>
+  </section>
+
+  <div class="art__cta-inline">
+    <div class="art__cta-inline-content">
+      <h3>Si ya tienes fecha, paleta y número de invitadas...</h3>
+      <p>Mándanos esos tres datos y te devolvemos un moodboard visual con la configuración exacta para tu venue, mesa por mesa, más la cotización completa. En menos de 24 horas. Sin compromiso. Sin que la novia se entere si tú no quieres.</p>
+      <div class="art__cta-inline-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+cotizar+mesas+picnic+para+un+bridal+shower+en+CDMX." target="_blank" rel="noopener" class="art__btn art__btn--wa" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Mandar info por WhatsApp
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--outline">Cotizar por formulario →</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="art__section" id="presupuesto">
+    <h2 class="art__h2">¿Cuánto cuesta un bridal shower en CDMX en 2026? Presupuesto desglosado</h2>
+
+    <p class="art__featured-answer">
+      <strong>Respuesta directa:</strong> un bridal shower de 25 invitadas en CDMX cuesta entre <strong>$30,000 MXN (versión básica)</strong> y <strong>$125,500 MXN (versión premium)</strong>, con un punto recomendado de <strong>$62,000 MXN</strong>. El costo por invitada en formato recomendado es ~$2,480 MXN. El rubro con mejor ROI a largo plazo es la fotografía profesional, que cuesta entre $6,000 y $14,000 MXN dependiendo del fotógrafo.
+    </p>
+
+    <p>Esta es la composición presupuestal para un bridal shower elegante de 25 invitadas en CDMX, basada en cotizaciones reales del último año. Te recomendamos no recortar la fotografía: es la inversión que más valor mantiene cinco años después del evento.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Rubro</th>
+            <th>Básico</th>
+            <th class="th-accent">Recomendado</th>
+            <th>Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Mobiliario MESPIC (5 mesas)</strong></td>
+            <td>$4,500</td>
+            <td class="td-accent">$6,500</td>
+            <td>$9,000</td>
+          </tr>
+          <tr>
+            <td><strong>Catering / brunch (25 pax)</strong></td>
+            <td>$12,000</td>
+            <td class="td-accent">$22,000</td>
+            <td>$42,000</td>
+          </tr>
+          <tr>
+            <td><strong>Mesa de postres</strong></td>
+            <td>$3,500</td>
+            <td class="td-accent">$7,500</td>
+            <td>$14,000</td>
+          </tr>
+          <tr>
+            <td><strong>Decoración + flores</strong></td>
+            <td>$5,000</td>
+            <td class="td-accent">$11,000</td>
+            <td>$28,000</td>
+          </tr>
+          <tr>
+            <td><strong>Vajilla, cristalería y manteles</strong></td>
+            <td>$2,500</td>
+            <td class="td-accent">$4,500</td>
+            <td>$8,500</td>
+          </tr>
+          <tr>
+            <td><strong>Fotografía profesional</strong></td>
+            <td>$0 (amiga)</td>
+            <td class="td-accent">$6,000</td>
+            <td>$14,000</td>
+          </tr>
+          <tr>
+            <td><strong>Souvenirs / regalos para invitadas</strong></td>
+            <td>$2,500</td>
+            <td class="td-accent">$4,500</td>
+            <td>$10,000</td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td><strong>$30,000</strong></td>
+            <td class="td-accent"><strong>$62,000</strong></td>
+            <td><strong>$125,500</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Para entender cómo se cotiza el mobiliario en detalle, revisa nuestra <a href="/blog/cuanto-cuesta-rentar-mesas-picnic-cdmx/">guía completa de precios de mesas picnic 2026</a>.</p>
+  </section>
+
+  <section class="art__section" id="locaciones">
+    <h2 class="art__h2">Las 5 mejores locaciones en CDMX para un bridal shower fotogénico</h2>
+
+    <ol class="art__steps">
+      <li class="art__step">
+        <span class="art__step-num">01</span>
+        <div class="art__step-body">
+          <h3>Jardín residencial privado (Coyoacán, San Ángel, Tlalpan)</h3>
+          <p>La opción favorita y la más solicitada. Jardines particulares con árboles maduros, glorietas o empedrado. Cero costo de venue, máxima personalización, sin restricciones de horario. Acepta cualquier temática. Las mesas picnic se entregan armadas y la recolección es discreta. Si la casa es de la novia o de alguna invitada, además se ahorra el desplazamiento.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">02</span>
+        <div class="art__step-body">
+          <h3>Terraza o rooftop urbano (Roma Norte, Condesa, Polanco)</h3>
+          <p>Ideal para bridal shower con estética minimalista o tropical. La vista panorámica reemplaza la decoración floral elaborada y baja el costo total de la producción. Requiere confirmar que el acceso al rooftop permita meter mesas picnic armadas (mínimo 90 cm de elevador o escalera amplia).</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">03</span>
+        <div class="art__step-body">
+          <h3>Casa de campo o quinta (Tepoztlán, Avándaro, Cuernavaca)</h3>
+          <p>Si la novia y sus amigas quieren convertir el bridal shower en fin de semana de despedida, las quintas de Tepoztlán o Avándaro funcionan perfecto. Más espacio, más naturaleza, mejor para temáticas Toscana o Boho. La logística MESPIC cubre estas zonas con un cargo de flete adicional que se especifica en la cotización.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">04</span>
+        <div class="art__step-body">
+          <h3>Espacio de eventos con jardín (Hipódromo, Lomas, Bosques)</h3>
+          <p>Para bridal showers de 30+ invitadas conviene rentar un espacio dedicado: vestidores para la novia, baños suficientes, parking incluido y cocina equipada para el catering. El costo de venue baja en proporción al número de invitadas.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">05</span>
+        <div class="art__step-body">
+          <h3>Pop-up en parque público (Parque España, Lincoln, Viveros)</h3>
+          <p>Estos parques requieren permiso del gobierno de CDMX para eventos privados. Cuando se obtiene, generan fotografías editoriales únicas que no se logran en ningún jardín privado. Confirma el permiso con 6 semanas de anticipación y verifica acceso vehicular para descarga de mobiliario.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <figure class="art__figure">
+    <img
+      src="/img/picnic-romantico-bridal-shower-mesas-pino-04.avif"
+      alt="Bridal shower temática boho con mesas picnic de pino, pampas secas, vajilla artesanal y caminos étnicos en jardín de casa privada en Tepoztlán"
+      loading="lazy"
+      width="900"
+      height="560"
+    />
+    <figcaption>Bridal shower boho con mesas picnic de pino, pampas y vajilla artesanal · Casa privada en Tepoztlán</figcaption>
+  </figure>
+
+  <section class="art__section" id="errores">
+    <h2 class="art__h2">5 errores que arruinan un bridal shower (y la forma profesional de evitarlos)</h2>
+
+    <ol class="art__steps">
+      <li class="art__step">
+        <span class="art__step-num">01</span>
+        <div class="art__step-body">
+          <h3>Mezclar demasiadas paletas de color</h3>
+          <p>Un bridal shower necesita máximo tres colores más un acento metálico (dorado, cobre o plata). Si la decoración mezcla rosa, lila, blanco, dorado, verde y azul al mismo tiempo, la fotografía final se ve caótica aunque cada elemento individual sea bonito. Elige paleta y respétala en flores, vajilla, decoración, dress code y papelería. Es disciplina, no creatividad.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">02</span>
+        <div class="art__step-body">
+          <h3>Programar juegos forzados</h3>
+          <p>Los juegos clásicos de bridal shower (pasar el papel higiénico, adivinar la edad de la novia) se sienten desactualizados en 2026 y vacían la energía del evento. Reemplázalos por dinámicas más elegantes: video editado con mensajes de la familia, libro de consejos para la novia, sesión de fotos curada con accesorios temáticos, cata de vinos si la novia disfruta.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">03</span>
+        <div class="art__step-body">
+          <h3>Subestimar las bebidas</h3>
+          <p>Mocktails sin alcohol, agua fresca artesanal, vino blanco bien frío, champagne y café de especialidad. La mesa de bebidas debe ser visible, fotogénica y suficiente: calcula 2 bebidas por invitada por hora. Una cubeta de hielo con champagne sobre la mesa picnic es uno de los íconos visuales más fotografiados del evento.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">04</span>
+        <div class="art__step-body">
+          <h3>Improvisar la mesa de regalos</h3>
+          <p>La mesa de regalos no puede ser una orilla del banquete con cajas amontonadas. Merece su propia mesa picnic decorada, idealmente con balloon arch o backdrop floral. Bien montada, se convierte en el segundo punto fotográfico más importante después de la mesa principal. Mal montada, contamina las fotos de toda la tarde.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">05</span>
+        <div class="art__step-body">
+          <h3>No contratar fotógrafo profesional</h3>
+          <p>El bridal shower es uno de los pocos eventos pre-boda donde las imágenes se conservan, se imprimen y se comparten durante años. Confiar la fotografía a una amiga con celular reduce el valor de toda la inversión hecha en decoración, catering y mobiliario. Un fotógrafo de medio tiempo cuesta entre $5,000 y $8,000 MXN: es el rubro con mejor ROI del evento.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="art__section" id="faqs">
+    <h2 class="art__h2">Preguntas frecuentes sobre bridal shower con mesas picnic en CDMX</h2>
+
+    <div class="art__faqs">
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuánto cuesta organizar un bridal shower en CDMX en 2026?</summary>
+        <p class="art__faq-a">Para 25 invitadas, el presupuesto recomendado se ubica entre $50,000 y $80,000 MXN incluyendo mobiliario MESPIC, catering, decoración, vajilla, fotografía y souvenirs. El mobiliario MESPIC para esta escala va de $6,000 a $10,000 MXN. El costo por invitada en formato elegante promedia $2,500 MXN. Las versiones premium (champagne, fotógrafo top, flores de importación) pueden llegar a $120,000+.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué temática es la mejor para mi bridal shower?</summary>
+        <p class="art__faq-a">Depende de la personalidad de la novia y del venue. Para novias clásicas: Garden Party Inglés o Champagne & Roses. Para novias relajadas y bohemias: Boho-Chic o Picnic Editorial. Para novias modernas y minimalistas: Escandinavo. La regla es que la temática debe coincidir con la estética que la novia ya mostró para su boda final, no contradecirla.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Mesa picnic combina con vajilla elegante y cristalería fina?</summary>
+        <p class="art__faq-a">Sí, perfectamente. La mesa picnic de pino premium con barniz de 4 manos funciona como base neutra para cualquier vajilla, desde porcelana clásica con borde dorado hasta vajilla cerámica artesanal. El contraste entre madera natural y vajilla fina es uno de los recursos estéticos más buscados en bridal showers editoriales.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuánto tiempo antes hay que reservar el mobiliario?</summary>
+        <p class="art__faq-a">Recomendamos 4–6 semanas antes del evento. En temporada alta (marzo–mayo y septiembre–noviembre) sube a 8 semanas porque coincide con la temporada de bodas. La reserva se confirma con un anticipo del 30–50% del total cotizado y bloquea la fecha más la cantidad de mesas en el inventario.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Hay paquetes que incluyan mobiliario + decoración + catering?</summary>
+        <p class="art__faq-a">En MESPIC ofrecemos el "Set Picnic Completo" que incluye mesas, decoración base (camino de mesa, centros, vajilla) y montaje. El catering se contrata por separado con proveedores aliados que conocemos y podemos recomendar. Hacerlo así mantiene la transparencia sobre cada concepto y permite ajustar el menú al gusto exacto de la novia.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Y si llueve el día del bridal shower?</summary>
+        <p class="art__faq-a">Recomendamos siempre tener plan B con carpa transparente o blanca de respaldo. En temporada de lluvias (junio–octubre) revisamos pronóstico 48 horas antes y, si es necesario, ajustamos el montaje a área techada. Las mesas picnic son resistentes a humedad gracias al barnizado, pero la decoración floral y la fotografía se ven afectadas si llueve sin protección.</p>
+      </details>
+
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Galería: bridal showers reales en CDMX y zona metropolitana</h2>
+    <div class="art__gallery-strip">
+      <img src="/img/picnic-romantico-bridal-shower-mesas-pino-01.avif" alt="Bridal shower elegante con mesas picnic y centros florales bajos en jardín de Coyoacán" loading="lazy" width="350" height="220" />
+      <img src="/img/picnic-romantico-bridal-shower-mesas-pino-03.avif" alt="Bridal brunch con mesa picnic premium decorada con champagne y vajilla con borde dorado" loading="lazy" width="350" height="220" />
+      <img src="/img/picnic-romantico-bridal-shower-mesas-pino-05.avif" alt="Bridal shower boho con pampas secas y mesa picnic en jardín privado" loading="lazy" width="350" height="220" />
+      <img src="/img/picnic-romantico-bridal-shower-mesas-pino-07.avif" alt="Despedida de soltera elegante con mesas picnic y vajilla blanca minimalista" loading="lazy" width="350" height="220" />
+    </div>
+  </section>
+
+  <div class="art__cta-final">
+    <div class="art__cta-final-inner">
+      <h2>Diseñemos juntas el bridal shower que tu amiga merece</h2>
+      <p>Cuéntanos la temática, la fecha y el número de invitadas. Te enviamos un moodboard visual con paleta, configuración de mesa y cotización personalizada en menos de 24 horas. Sin compromiso. Sin que la novia se entere si quieres que sea sorpresa.</p>
+      <div class="art__cta-final-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+cotizar+mesas+picnic+para+un+bridal+shower+en+CDMX." target="_blank" rel="noopener" class="art__btn art__btn--wa art__btn--lg" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Cotizar por WhatsApp
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--primary art__btn--lg">Cotizar por formulario →</a>
+        <a href="/servicios/" class="art__btn art__btn--ghost art__btn--lg">Ver todos los servicios</a>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
+
+</div>
+
+<style>
+  .art__featured-answer {
+    background: rgba(44, 85, 48, 0.05);
+    border-left: 4px solid var(--c-primary, #2C5530);
+    padding: 1.125rem 1.5rem;
+    border-radius: 0 var(--radius-sm, 8px) var(--radius-sm, 8px) 0;
+    font-size: 1rem;
+    color: var(--c-text, #1C1917);
+    line-height: 1.75;
+    margin: 0 0 1.75rem;
+  }
+  .art__featured-answer strong { color: var(--c-primary-dark, #1B3B20); }
+</style>
+
+</BlogLayout>
