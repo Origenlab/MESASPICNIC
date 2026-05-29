@@ -1,0 +1,527 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import '../../styles/blog-article.css';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Checklist Definitivo: 90 Días Antes de Tu Evento al Aire Libre en CDMX",
+  "description": "Cronograma profesional semana a semana para los últimos 90 días antes de un evento al aire libre en CDMX: proveedores, logística, plan B y día del evento.",
+  "image": "https://mesaspicnic.com/img/mesa-picnic-boda-montaje-elegante-rosas.webp",
+  "inLanguage": "es-MX",
+  "wordCount": 3900,
+  "author": { "@type": "Organization", "name": "MESPIC — Coordinación", "url": "https://mesaspicnic.com/nosotros/" },
+  "publisher": { "@type": "Organization", "name": "MESPIC", "logo": { "@type": "ImageObject", "url": "https://mesaspicnic.com/icon.png" } },
+  "mainEntityOfPage": "https://mesaspicnic.com/blog/checklist-90-dias-antes-evento-aire-libre/",
+  "about": ["Checklist evento", "Planeación evento al aire libre", "Cronograma boda", "Coordinación eventos CDMX"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Necesito una coordinadora profesional para mi evento?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Para bodas, corporativos grandes (60+ personas) o eventos sociales con alta producción visual: sí. Cuesta $8,000–$25,000 MXN según experiencia y libera al anfitrión de operar el evento desde el celular. Regla práctica: más de 5 proveedores externos = vale la pena." } },
+    { "@type": "Question", "name": "¿Cuándo es el mejor momento para activar el plan B por clima?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Entre 12:00 y 14:00 con el pronóstico actualizado. Regla: si la probabilidad de lluvia en el horario del evento es mayor al 60% o hay aviso meteorológico, se activa. Carpas requieren 3–4 horas de instalación." } },
+    { "@type": "Question", "name": "¿Qué hago si un proveedor me cancela una semana antes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Activar la red de respaldos identificada en el bloque T-90. Si no la tienes: (1) llamar a la coordinadora; (2) contactar al venue, que tiene relaciones con alternativos; (3) revisar contrato para penalización y devolución." } },
+    { "@type": "Question", "name": "¿Cuánto tiempo toma el montaje de un evento al aire libre típico?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Para evento mediano (60–100 invitados) con mesas picnic, decoración y catering: 3–5 horas total. MESPIC monta el mobiliario en 1–2 horas según número de mesas y accesibilidad." } },
+    { "@type": "Question", "name": "¿Qué tan importante es el walk-through previo en el venue?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Una de las tareas más infravaloradas del checklist. Visitar el venue a la hora exacta del evento permite verificar orientación del sol, iluminación natural, ruido ambiental, temperatura real y accesibilidad — problemas invisibles en visitas matutinas." } }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mesaspicnic.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mesaspicnic.com/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Checklist 90 Días Antes del Evento" }
+  ]
+};
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo ejecutar el cronograma de 90 días antes de un evento al aire libre en CDMX",
+  "description": "Metodología por bloques temporales (T-90 a T-0) para planear sin sorpresas un evento al aire libre.",
+  "totalTime": "P90D",
+  "step": [
+    { "@type": "HowToStep", "name": "T-90 a T-60: Cimientos", "text": "Confirmar venue, reservar mobiliario y catering, contratar fotografía, definir presupuesto, diseñar invitaciones." },
+    { "@type": "HowToStep", "name": "T-60 a T-30: Cierre operativo", "text": "Cerrar florería, layout, plan B, permisos, prueba de menú, comunicación con invitados." },
+    { "@type": "HowToStep", "name": "T-30 a T-15: Confirmaciones", "text": "Cerrar conteo final, walk-through en venue, timeline minuto a minuto, ajuste de catering al número real." },
+    { "@type": "HowToStep", "name": "T-15 a T-0: Producción", "text": "Empaque, briefing de equipo, kit de emergencia, confirmación final con proveedores." },
+    { "@type": "HowToStep", "name": "Día del evento + día siguiente", "text": "Ejecución según timeline, coordinadora gestiona imprevistos, recolección sin recargo, feedback a proveedores." }
+  ]
+};
+---
+
+<BlogLayout
+  title="Checklist Definitivo: 90 Días Antes de Tu Evento al Aire Libre en CDMX | MESPIC"
+  description="Cronograma profesional semana a semana para los últimos 90 días antes de un evento al aire libre en CDMX: proveedores, logística, plan B y día del evento. Metodología MESPIC."
+  ogImage="/img/mesa-picnic-boda-montaje-elegante-rosas.webp"
+  canonical="https://mesaspicnic.com/blog/checklist-90-dias-antes-evento-aire-libre/"
+  heroTitle="Checklist Definitivo: 90 Días Antes de Tu Evento al Aire Libre"
+  heroBadge="Blog · Planeación operativa"
+  heroDescription="Semana a semana, tarea por tarea: la lista profesional que usamos en MESPIC para que ningún detalle se quede fuera en los últimos 90 días antes de un evento al aire libre en CDMX, Edomex o Valle de Bravo."
+  heroSeo1="Los últimos 90 días antes de un evento al aire libre son donde se gana o se pierde la experiencia final. La planeación estratégica de los seis meses previos (venue, presupuesto, lista de invitados) es importante, pero es en los últimos tres meses donde las decenas de decisiones tácticas — confirmaciones, contratos, layouts, plan B, timing minuto a minuto — definen si el evento se ve impecable o se ve improvisado. Este checklist está construido a partir de la operación real de MESPIC en más de 500 eventos al aire libre, y es el documento que usan internamente nuestros coordinadores cuando acompañan a clientes en la planeación."
+  heroSeo2="Está pensado para tres usos: para la persona que organiza su primer evento grande y necesita una guía estructurada de qué hacer cuándo; para la coordinadora profesional que quiere un baseline a personalizar; y para el cliente corporativo que necesita demostrar a su comité interno que el evento está bajo control. Cada bloque temporal — 90, 60, 30, 15 días y la semana del evento — viene con tareas accionables, proveedores que se confirman, documentos que se firman y riesgos que se mitigan. Si tu evento es al aire libre en CDMX, esta es la lista que reduce las posibilidades de sorpresa al mínimo."
+  heroMetrics={[
+    { value: "90 días", label: "Cobertura desde T-90 al día siguiente" },
+    { value: "120+", label: "Tareas concretas organizadas" },
+    { value: "500+", label: "Eventos como base de la metodología" },
+  ]}
+  breadcrumbs={[
+    { label: "Inicio", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Checklist 90 Días Antes del Evento" },
+  ]}
+  sidebarProducts={[
+    { name: "Mesa Estándar", cap: "1.80 m · 6 personas", href: "/catalogo/mesa-picnic-estandar/", img: "/img/renta-mesa-picnic-madera-pino-cdmx-01.avif" },
+    { name: "Mesa Premium", cap: "Bodas VIP · sin nudos", href: "/catalogo/mesa-picnic-premium/", img: "/img/mesa-picnic-boda-elegante-luces.avif" },
+    { name: "Set Comedor Exterior", cap: "Set completo", href: "/catalogo/set-comedor-exterior/", img: "/img/mesa-picnic-boda-montaje-elegante-rosas.webp" },
+  ]}
+  sidebarArticles={[
+    { title: "Cómo organizar un evento al aire libre en CDMX", meta: "Guía · 14 min", href: "/blog/como-organizar-evento-al-aire-libre-cdmx-guia-completa/", img: "/img/mesa-picnic-boda-jardin-atardecer-01.webp" },
+    { title: "Calendario de temporadas para reservar mobiliario", meta: "Planeación · 13 min", href: "/blog/calendario-temporadas-cuando-reservar-mobiliario-cdmx/", img: "/img/mesa-picnic-boda-jardin-atardecer-03.webp" },
+    { title: "Qué hacer si llueve en tu evento al aire libre", meta: "Plan B · 8 min", href: "/blog/que-hacer-si-llueve-en-tu-evento-al-aire-libre/", img: "/img/mesa-picnic-boda-jardin-atardecer-02.webp" },
+  ]}
+  sidebarServices={[
+    { name: "Bodas al Aire Libre", desc: "Jardines · Haciendas", href: "/servicios/bodas/" },
+    { name: "Eventos Corporativos", desc: "Team building · Conferencias", href: "/servicios/eventos-corporativos/" },
+    { name: "Fiestas Infantiles", desc: "Cumpleaños · Baby shower", href: "/servicios/fiestas-infantiles/" },
+    { name: "Cotización rápida", desc: "Respuesta en 30 min", href: "/cotizar/" },
+  ]}
+  sidebarCtaTitle="¿Quieres apoyo de coordinación?"
+  sidebarCtaText="Asesoramos sin costo durante la planeación. Si rentas mobiliario con MESPIC, llevamos el detalle de logística contigo desde el primer día."
+  sidebarCtaWa="Hola%2C+quiero+asesor%C3%ADa+para+planear+un+evento+al+aire+libre+en+CDMX."
+  sidebarServicesTitle="Servicios"
+>
+
+<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
+
+<div class="art">
+
+  <div class="art__author">
+    <div class="art__author-badge">M</div>
+    <div class="art__author-meta">
+      <span class="art__author-name">Coordinación operativa MESPIC</span>
+      <span class="art__author-role">500+ eventos producidos · Metodología refinada en operación</span>
+      <span class="art__author-stamp">Tiempo de lectura: 14 min · Usado por coordinadores internos</span>
+    </div>
+  </div>
+
+  <p class="art__lead">
+    Un evento al aire libre exitoso parece haber surgido con naturalidad. Esa naturalidad es el resultado de un cronograma de 90 días bien ejecutado. Este documento es ese cronograma, descompuesto en bloques temporales accionables, con las tareas concretas, los proveedores que se confirman en cada fase y los riesgos que se mitigan. Úsalo como base, personalízalo a tu evento, y si trabajamos juntos lo iteramos contigo en cada hito.
+  </p>
+
+  <aside class="art__tldr" aria-label="Resumen ejecutivo">
+    <span class="art__tldr-label">Resumen ejecutivo · 30 segundos</span>
+    <ul>
+      <li><strong>T-90 a T-60:</strong> cimientos — venue, mobiliario, catering, fotografía. Sin esto firmado, el resto no avanza.</li>
+      <li><strong>T-60 a T-30:</strong> cierre operativo — florería, layout, permisos, plan B contratado.</li>
+      <li><strong>T-30 a T-15:</strong> confirmaciones y walk-through a la hora exacta del evento.</li>
+      <li><strong>T-15 a T-0:</strong> producción material, briefings, kit de emergencia, descanso del anfitrión.</li>
+      <li><strong>Semana del evento:</strong> ejecución limpia, coordinadora al frente, anfitrión disfruta.</li>
+    </ul>
+  </aside>
+
+  <nav class="art__toc" aria-label="Tabla de contenidos">
+    <p class="art__toc-title">En este cronograma</p>
+    <ol>
+      <li><a href="#como-usar">Cómo usar este checklist</a></li>
+      <li><a href="#bloque-1">Bloque 1 · T-90 a T-60 días</a></li>
+      <li><a href="#bloque-2">Bloque 2 · T-60 a T-30 días</a></li>
+      <li><a href="#bloque-3">Bloque 3 · T-30 a T-15 días</a></li>
+      <li><a href="#bloque-4">Bloque 4 · T-15 a T-7 días</a></li>
+      <li><a href="#bloque-5">Bloque 5 · Semana del evento</a></li>
+      <li><a href="#bloque-6">Bloque 6 · Día del evento + día siguiente</a></li>
+      <li><a href="#errores-evitados">Los 7 errores que este checklist evita</a></li>
+      <li><a href="#faqs">Preguntas frecuentes</a></li>
+    </ol>
+  </nav>
+
+  <section class="art__section" id="como-usar">
+    <h2 class="art__h2">Cómo usar este checklist</h2>
+
+    <p>El checklist está organizado en seis bloques temporales: T-90 a T-60, T-60 a T-30, T-30 a T-15, T-15 a T-7, semana del evento, y día del evento + día siguiente. Cada bloque tiene tareas obligatorias (sin las cuales el evento no debería avanzar) y tareas opcionales que elevan la calidad final. Los iconos indican prioridad:</p>
+
+    <ul>
+      <li>🔴 <strong>Crítico</strong> — debe completarse antes de avanzar al siguiente bloque</li>
+      <li>🟠 <strong>Importante</strong> — debe completarse dentro del bloque</li>
+      <li>🟢 <strong>Recomendado</strong> — eleva la calidad pero no bloquea</li>
+    </ul>
+
+    <div class="art__definition">
+      <span class="art__definition-term">Definición · Bloque temporal T-X</span>
+      <p>Convención de planeación de eventos donde "T" es la fecha del evento y "T-X" indica X días antes. T-90 significa 90 días antes del evento. Este sistema permite asignar tareas con precisión sin depender de fechas concretas: el cronograma es portable entre eventos de fechas distintas.</p>
+    </div>
+
+    <p>Recomendamos imprimir el checklist o exportarlo a digital con tu coordinadora para hacer seguimiento conjunto. La trazabilidad por escrito es lo que diferencia un evento bien coordinado de uno con suposiciones cruzadas.</p>
+  </section>
+
+  <section class="art__section" id="bloque-1">
+    <h2 class="art__h2">Bloque 1 — T-90 a T-60 días: cimientos del evento</h2>
+
+    <p>Las decisiones que tomas en este bloque son las que más impactan el resultado final. Aquí se cierran los proveedores críticos (venue, catering, mobiliario, fotografía) y se construye el esqueleto del evento. Las decisiones precipitadas o retrasadas en este bloque generan problemas en cascada hasta el día del evento.</p>
+
+    <h3>Logística y proveedores</h3>
+    <ul>
+      <li>🔴 Confirmar venue con contrato firmado y anticipo pagado</li>
+      <li>🔴 Reservar mobiliario (mesas, bancas, lounge) con anticipo</li>
+      <li>🔴 Cerrar catering: número de invitados, menú base, prueba agendada</li>
+      <li>🔴 Contratar fotografía y video con contrato firmado</li>
+      <li>🟠 Reservar DJ, banda o música ambiental según tipo de evento</li>
+      <li>🟠 Cerrar coordinadora de día del evento si no tienes equipo propio</li>
+      <li>🟠 Contratar transporte / valet parking si aplica</li>
+      <li>🟢 Identificar dos proveedores de respaldo por categoría crítica</li>
+    </ul>
+
+    <h3>Diseño e identidad del evento</h3>
+    <ul>
+      <li>🔴 Definir estilo, paleta de colores y mood board del evento</li>
+      <li>🟠 Elegir florería y enviar tablero de inspiración</li>
+      <li>🟠 Diseñar invitaciones, save-the-date o convocatoria corporativa</li>
+      <li>🟢 Definir hashtag del evento si aplica para redes sociales</li>
+    </ul>
+
+    <h3>Documentación legal y permisos</h3>
+    <ul>
+      <li>🔴 Solicitar permiso del venue (sonido, alcohol, horarios)</li>
+      <li>🟠 Tramitar permiso de espacio público si aplica (ver <a href="/blog/permisos-eventos-parques-publicos-cdmx/">guía de permisos en parques</a>)</li>
+      <li>🟢 Contratar póliza de responsabilidad civil para eventos de más de 50 personas</li>
+    </ul>
+
+    <div class="art__takeaway">
+      <span class="art__takeaway-label">Cierre del Bloque 1</span>
+      <ul>
+        <li>Venue, mobiliario, catering y fotografía: con contrato y anticipo.</li>
+        <li>Estilo del evento definido y comunicado a florería.</li>
+        <li>Permisos en proceso si el venue lo requiere.</li>
+        <li>Save the date enviado o convocatoria comunicada.</li>
+      </ul>
+    </div>
+  </section>
+
+  <figure class="art__figure">
+    <img
+      src="/img/mesa-picnic-boda-montaje-elegante-rosas.webp"
+      alt="Montaje profesional de mesa picnic con decoración floral para boda en jardín CDMX"
+      width="900" height="500"
+      loading="lazy"
+    />
+    <figcaption>Montaje pre-evento en hacienda de Toluca. El layout final se valida en el walk-through de T-15: distancia entre mesas, orientación al sol, áreas de circulación.</figcaption>
+  </figure>
+
+  <section class="art__section" id="bloque-2">
+    <h2 class="art__h2">Bloque 2 — T-60 a T-30: cierre operativo</h2>
+
+    <p>Con los proveedores críticos cerrados, este bloque se enfoca en el detalle operativo: layout, decoración, comunicación con invitados y resolución de los servicios secundarios. Es también cuando se activa el plan B y se confirman los horarios minuto a minuto.</p>
+
+    <h3>Layout, decoración y producción visual</h3>
+    <ul>
+      <li>🔴 Diseñar layout definitivo del venue: mesas, áreas de servicio, lounge, pista</li>
+      <li>🔴 Confirmar mobiliario adicional: barra, mesas altas, mesa de regalos, mesa de honor</li>
+      <li>🟠 Cerrar decoración y producción visual con florería</li>
+      <li>🟠 Diseñar y producir señalética (menú, lugares, hashtag, instrucciones)</li>
+      <li>🟠 Confirmar mantelería, vajilla y cristalería específicas</li>
+      <li>🟢 Producir tarjetas de lugar y favores para invitados</li>
+    </ul>
+
+    <h3>Comunicación con invitados</h3>
+    <ul>
+      <li>🔴 Enviar invitaciones formales con instrucciones de RSVP</li>
+      <li>🟠 Comunicar instrucciones de transporte y código de vestimenta</li>
+      <li>🟠 Reservar bloque de hotel si invitados vienen de fuera</li>
+      <li>🟢 Crear chat o canal de comunicación grupal para invitados clave</li>
+    </ul>
+
+    <h3>Catering y bebidas</h3>
+    <ul>
+      <li>🔴 Realizar prueba de menú con catering</li>
+      <li>🔴 Definir bar: tipos de bebida, marcas, cantidades estimadas</li>
+      <li>🟠 Cerrar pastel, postres y mesa de dulces si aplica</li>
+      <li>🟠 Confirmar food trucks o estaciones especiales</li>
+      <li>🟢 Coordinar opciones para invitados con restricciones alimentarias</li>
+    </ul>
+
+    <h3>Plan B por clima</h3>
+    <ul>
+      <li>🔴 Definir plan B activo y contratarlo (carpa, espacio cubierto alternativo)</li>
+      <li>🟠 Definir protocolo de activación (quién decide, cuándo, cómo se comunica)</li>
+      <li>🟢 Tener kit anti-clima ligero listo (paraguas, sombrillas, repelente)</li>
+    </ul>
+  </section>
+
+  <section class="art__section" id="bloque-3">
+    <h2 class="art__h2">Bloque 3 — T-30 a T-15: confirmaciones y detalles finos</h2>
+
+    <p>En este bloque casi todo está cerrado; el trabajo es confirmar, ajustar y producir los detalles finales. Es el bloque donde se hace el walk-through del venue a la hora exacta del evento, se confirman conteos finales y se ajusta el timeline a la realidad operativa.</p>
+
+    <h3>Confirmaciones de proveedores</h3>
+    <ul>
+      <li>🔴 Confirmar fecha y horario con cada proveedor por escrito</li>
+      <li>🔴 Confirmar el conteo final de invitados (cierre de RSVP)</li>
+      <li>🔴 Ajustar mobiliario y catering al número final</li>
+      <li>🟠 Pagar saldos previos al evento según contratos</li>
+      <li>🟠 Confirmar layouts finales con coordinadora y venue</li>
+    </ul>
+
+    <h3>Producción y logística</h3>
+    <ul>
+      <li>🔴 Walk-through en el venue a la hora exacta del evento</li>
+      <li>🔴 Generar timeline minuto a minuto del día</li>
+      <li>🟠 Coordinar logística de carga y descarga con cada proveedor</li>
+      <li>🟠 Confirmar accesos, estacionamiento y ruta para proveedores</li>
+      <li>🟢 Probar iluminación y sonido en el venue real</li>
+    </ul>
+
+    <h3>Detalles personales y comunicación final</h3>
+    <ul>
+      <li>🟠 Preparar paquete de personalización: libro de firmas, recuerdos, decoración personal</li>
+      <li>🟠 Enviar instrucciones finales a invitados: ubicación exacta, horarios, código vestir, mapa y plan B</li>
+      <li>🟢 Definir paquete de regalos para proveedores clave</li>
+      <li>🟢 Confirmar accesibilidad para invitados con necesidades especiales</li>
+    </ul>
+  </section>
+
+  <section class="art__section" id="bloque-4">
+    <h2 class="art__h2">Bloque 4 — T-15 a T-7: producción final</h2>
+
+    <p>La semana 2 y 1 antes del evento son de producción material: comprar, empacar, ensayar y delegar. Aquí no se toman decisiones nuevas; se ejecuta lo planeado. Si en este bloque aparecen sorpresas grandes (cambios de proveedor, cambios de venue) hay un problema de bloque anterior.</p>
+
+    <h3>Empaque y producción</h3>
+    <ul>
+      <li>🔴 Empacar todos los elementos personales (decoración, libro de firmas, recuerdos)</li>
+      <li>🔴 Confirmar timeline definitivo con cada proveedor</li>
+      <li>🟠 Producir kit de emergencia: hilo, aguja, pegamento, alfileres, parche para zapatos, parche para vestido, banditas, analgésico, agua de respaldo</li>
+      <li>🟠 Reconfirmar conteo final y ajustar cualquier cambio de último momento</li>
+      <li>🟢 Tener efectivo en pequeñas denominaciones para propinas operativas</li>
+    </ul>
+
+    <h3>Briefing de equipo</h3>
+    <ul>
+      <li>🔴 Briefing con coordinadora y equipo del venue sobre el timeline</li>
+      <li>🟠 Briefing con maestro de ceremonias o conductor del evento</li>
+      <li>🟠 Reunión con la familia/equipo cercano sobre roles y responsabilidades</li>
+      <li>🟢 Lista de invitados VIP con instrucciones especiales para coordinadora</li>
+    </ul>
+
+    <h3>Personal y bienestar</h3>
+    <ul>
+      <li>🟢 Hacer pruebas de atuendo y peinado/maquillaje</li>
+      <li>🟢 Descansar bien: la semana previa debe priorizar el bienestar del anfitrión</li>
+      <li>🟢 Bloquear tiempo personal el día anterior al evento</li>
+    </ul>
+  </section>
+
+  <section class="art__section" id="bloque-5">
+    <h2 class="art__h2">Bloque 5 — Semana del evento</h2>
+
+    <p>Esta tabla resume el itinerario día a día de la semana del evento. Es la fase donde menos margen hay para imprevistos y donde la coordinadora toma protagonismo operativo:</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Día</th>
+            <th>Tareas críticas</th>
+            <th class="th-accent">Quién es responsable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Lunes</strong></td><td>Confirmación final con cada proveedor, revisión de pronóstico</td><td class="td-accent">Coordinador / anfitrión</td></tr>
+          <tr><td><strong>Martes</strong></td><td>Compras finales: bebidas extra, suministros de emergencia</td><td class="td-accent">Logística</td></tr>
+          <tr><td><strong>Miércoles</strong></td><td>Empaque y briefing final con equipo</td><td class="td-accent">Coordinador</td></tr>
+          <tr><td><strong>Jueves</strong></td><td>Última revisión de timeline, activación de plan B si pronóstico lo indica</td><td class="td-accent">Coordinador / anfitrión</td></tr>
+          <tr><td><strong>Viernes</strong></td><td>Pre-montaje si el venue lo permite. Repaso final con coordinadora</td><td class="td-accent">Coordinador + proveedores</td></tr>
+          <tr><td><strong>Sábado (día del evento)</strong></td><td>Ejecución según timeline</td><td class="td-accent">Todo el equipo</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="art__section" id="bloque-6">
+    <h2 class="art__h2">Bloque 6 — Día del evento + día siguiente</h2>
+
+    <h3>Día del evento (mañana — montaje)</h3>
+    <ul>
+      <li>🔴 Coordinadora llega 2 horas antes del primer proveedor</li>
+      <li>🔴 MESPIC u otro proveedor de mobiliario llega para montaje según horario acordado</li>
+      <li>🔴 Catering, florería y proveedores secundarios llegan en su slot asignado</li>
+      <li>🟠 Briefing rápido entre coordinadora y maestro de ceremonias</li>
+      <li>🟠 Revisión final de cada estación antes de apertura de puertas</li>
+      <li>🟢 Tiempo de buffer de 30 minutos entre montaje y llegada de invitados</li>
+    </ul>
+
+    <h3>Durante el evento</h3>
+    <ul>
+      <li>🔴 Coordinadora gestiona timeline minuto a minuto</li>
+      <li>🟠 Punto de contacto único para resolver cualquier imprevisto</li>
+      <li>🟠 Anfitrión queda libre para disfrutar, no para resolver crisis</li>
+      <li>🟢 Fotografía documenta detalles antes de que el evento empiece</li>
+    </ul>
+
+    <h3>Fin del evento (desmontaje)</h3>
+    <ul>
+      <li>🔴 MESPIC recoge mobiliario sin importar la hora — incluye servicio sin recargo</li>
+      <li>🔴 Recogida de elementos personales (regalos, libro de firmas, decoración custom)</li>
+      <li>🟠 Confirmación de que cada proveedor retira sus elementos</li>
+      <li>🟢 Revisión del venue antes de devolución para verificar estado</li>
+    </ul>
+
+    <h3>Día siguiente</h3>
+    <ul>
+      <li>🟠 Revisión de fotografía y video preliminares</li>
+      <li>🟠 Agradecimientos a proveedores clave (correo o WhatsApp)</li>
+      <li>🟢 Compartir álbum digital con invitados</li>
+      <li>🟢 Feedback honesto a cada proveedor — ayuda a mejorar el sector</li>
+    </ul>
+
+    <div class="art__quote">
+      El día del evento, la coordinadora y el anfitrión deben estar en lados opuestos del salón. Si están juntos, alguno está apagando el incendio que no debería existir.
+      <span class="art__quote-cite">— Coordinación operativa MESPIC</span>
+    </div>
+  </section>
+
+  <section class="art__section" id="errores-evitados">
+    <h2 class="art__h2">Los 7 errores que este checklist evita</h2>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Error frecuente</th>
+            <th class="th-accent">Por qué pasa</th>
+            <th>Cómo lo previene este checklist</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Mobiliario no disponible</strong></td><td class="td-accent">Reserva tardía</td><td>Tarea T-90: reservar antes de cerrar resto</td></tr>
+          <tr><td><strong>Catering insuficiente</strong></td><td class="td-accent">Cambio de invitados sin ajuste</td><td>Tarea T-30: confirmar conteo y ajustar contratos</td></tr>
+          <tr><td><strong>Lluvia sin plan B</strong></td><td class="td-accent">Sobreoptimismo climático</td><td>Tarea T-60: contratar plan B desde día 1</td></tr>
+          <tr><td><strong>Layout que bloquea circulación</strong></td><td class="td-accent">Diseño en papel sin verificación</td><td>Tarea T-15: walk-through real en el venue</td></tr>
+          <tr><td><strong>Proveedor que no llega</strong></td><td class="td-accent">Sin confirmación previa documentada</td><td>Tarea T-15 y semana del evento: confirmación escrita</td></tr>
+          <tr><td><strong>Anfitrión apagando incendios</strong></td><td class="td-accent">Sin coordinadora delegada</td><td>Tarea T-60: contratar coordinadora</td></tr>
+          <tr><td><strong>Sorpresas de costo</strong></td><td class="td-accent">Contratos verbales o incompletos</td><td>Tarea T-90: contratos firmados desde el inicio</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="art__cta-inline">
+    <h3>¿Quieres llevar este checklist con apoyo profesional?</h3>
+    <p>Si rentas mobiliario con MESPIC, nuestro equipo de coordinación acompaña los hitos clave de logística sin costo adicional. Conocemos los venues, las alcaldías y los proveedores aliados. La diferencia operativa la notas el día del evento.</p>
+    <div class="art__cta-inline-btns">
+      <a href="https://wa.me/5564328954?text=Hola%2C+quiero+asesor%C3%ADa+para+planear+un+evento+al+aire+libre+en+CDMX." target="_blank" rel="noopener" class="art__btn art__btn--wa" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+        Asesorarme por WhatsApp
+      </a>
+      <a href="/cotizar/" class="art__btn art__btn--outline">Formulario de cotización →</a>
+    </div>
+  </div>
+
+  <section class="art__section" id="faqs">
+    <h2 class="art__h2">Preguntas frecuentes sobre planeación de eventos al aire libre</h2>
+
+    <div class="art__faqs">
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Necesito una coordinadora profesional para mi evento?</summary>
+        <p class="art__faq-a">Para bodas, eventos corporativos grandes (más de 60 personas) o eventos sociales con alta producción visual, sí. Una coordinadora cuesta entre <strong>$8,000 y $25,000 MXN</strong> según experiencia y duración, y libera al anfitrión de la operación día del evento. Para reuniones familiares pequeñas, baby showers o cumpleaños con 30 invitados o menos puede prescindirse si el anfitrión tiene apoyo familiar coordinado. Regla práctica: más de 5 proveedores externos = vale la pena.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuándo es el mejor momento para activar el plan B?</summary>
+        <p class="art__faq-a">Para eventos vespertinos, la decisión se toma entre <strong>12:00 y 14:00</strong> con el pronóstico actualizado. Regla operativa: si la probabilidad de lluvia en el horario del evento es mayor al 60% o si hay aviso meteorológico oficial, se activa el plan B. Carpas y toldos transparentes requieren 3–4 horas para instalación; activar más tarde no llega a tiempo.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué hago si un proveedor me cancela una semana antes?</summary>
+        <p class="art__faq-a">Activar inmediatamente la red de respaldos identificada en el bloque T-90. Si no la tienes: (1) llamar a tu coordinadora para activar sus contactos del sector; (2) contactar al venue, que típicamente tiene relaciones con proveedores alternativos; (3) revisar contrato del proveedor original para entender penalización y procedimiento de devolución. MESPIC opera con red de proveedores aliados verificados y puede sugerir alternativas en catering, fotografía, decoración o sonido.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuánto tiempo toma el montaje de un evento al aire libre típico?</summary>
+        <p class="art__faq-a">Para un evento mediano (60–100 invitados) con mesas picnic, decoración y catering, el montaje completo toma entre <strong>3 y 5 horas</strong>. MESPIC monta el mobiliario en 1–2 horas según número de mesas y accesibilidad. Florería y catering tardan más por la naturaleza de su trabajo. Para bodas con producción audiovisual, dos días de pre-montaje son comunes.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué tan importante es el walk-through previo en el venue?</summary>
+        <p class="art__faq-a">Es una de las tareas más infravaloradas del checklist. Visitar el venue a la hora exacta del evento permite verificar: orientación del sol (cuántas mesas quedan al sol durante el cóctel), iluminación natural disponible al atardecer, ruido ambiental del entorno (calle, vecinos), temperatura real a esa hora del día, y problemas de accesibilidad que en visitas matutinas no se detectan. Los venues siempre se ven mejor en la luz "amigable" del medio día; el walk-through real muestra cómo se verá tu evento.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cómo manejo invitados que confirman tarde o llegan sin aviso?</summary>
+        <p class="art__faq-a">El conteo de catering y mobiliario se ajusta una sola vez a los 30 días, con ventana de tolerancia del 10% para ajustes finales hasta los 15 días. Por debajo de esa ventana, se trabaja con el número confirmado y se asume buffer del 5–8%. Los invitados de último momento se atienden con el buffer; más allá, se pierde calidad del servicio. Comunicar fecha de cierre de RSVP de forma firme y respetuosa es parte del trabajo del anfitrión.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Puedo usar este checklist para un evento corporativo o solo para boda?</summary>
+        <p class="art__faq-a">Funciona para los dos. Para corporativos, las tareas de "comunicación con invitados" se reemplazan por "comunicación con asistentes/comité interno", y se suman tareas específicas: aprobación de presupuesto en comité, logística de transporte corporativo, branding del evento, contratación de speakers o moderadores. La estructura de bloques temporales se mantiene idéntica.</p>
+      </details>
+
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Lecturas relacionadas</h2>
+    <div class="art__nextsteps">
+      <a href="/blog/como-organizar-evento-al-aire-libre-cdmx-guia-completa/" class="art__nextstep-card">
+        <span class="art__nextstep-tag">Pillar</span>
+        <span class="art__nextstep-title">Cómo organizar un evento al aire libre en CDMX</span>
+        <span class="art__nextstep-desc">Venues, mobiliario, presupuesto, plan B y permisos.</span>
+      </a>
+      <a href="/blog/calendario-temporadas-cuando-reservar-mobiliario-cdmx/" class="art__nextstep-card">
+        <span class="art__nextstep-tag">Calendario</span>
+        <span class="art__nextstep-title">Calendario de temporadas para reservar</span>
+        <span class="art__nextstep-desc">Cuándo reservar mes a mes y cómo evitar recargos.</span>
+      </a>
+      <a href="/blog/que-hacer-si-llueve-en-tu-evento-al-aire-libre/" class="art__nextstep-card">
+        <span class="art__nextstep-tag">Plan B</span>
+        <span class="art__nextstep-title">Qué hacer si llueve en tu evento</span>
+        <span class="art__nextstep-desc">Protocolos de activación y proveedores de carpa.</span>
+      </a>
+    </div>
+  </section>
+
+  <div class="art__about">
+    <div class="art__about-badge">MESPIC</div>
+    <div>
+      <h3>500+ eventos y un checklist refinado en cada uno</h3>
+      <p>Esta metodología es la que usa internamente el equipo de coordinación de MESPIC en cada evento que producimos: bodas en hacienda, corporativos en Lerma, XV años, brand experiences, sesiones audiovisuales y picnics privados. Si trabajamos juntos, este documento se convierte en un cronograma personalizado para tu evento, con seguimiento de hitos y coordinación logística sin costo adicional.</p>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">Galería: cada bloque del checklist en acción</h2>
+    <div class="art__gallery-strip">
+      <img src="/img/mesa-picnic-boda-montaje-elegante-rosas.webp" alt="Montaje pre-evento de mesa picnic con decoración floral para boda CDMX" loading="lazy" width="350" height="220" />
+      <img src="/img/equipo-logistica-mesas-picnic.webp" alt="Equipo MESPIC en logística de entrega y montaje de mesas picnic" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-boda-novios-luces-jardin.webp" alt="Evento en ejecución con mesas picnic e iluminación cálida en jardín CDMX" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-boda-jardin-atardecer-04.webp" alt="Boda al atardecer con producción profesional y mesas picnic MESPIC" loading="lazy" width="350" height="220" />
+    </div>
+  </section>
+
+  <div class="art__cta-final">
+    <div class="art__cta-final-inner">
+      <h2>Tu evento al aire libre, con cero sorpresas operativas</h2>
+      <p>500+ eventos producidos y un checklist refinado en cada uno. Si trabajamos juntos, este documento se vuelve un cronograma personalizado, con seguimiento de hitos y coordinación logística sin costo adicional.</p>
+      <div class="art__cta-final-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+asesor%C3%ADa+para+planear+un+evento+al+aire+libre+en+CDMX." target="_blank" rel="noopener" class="art__btn art__btn--wa art__btn--lg" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          Iniciar mi planeación
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--primary art__btn--lg">Cotizar mobiliario →</a>
+        <a href="/paquetes/" class="art__btn art__btn--ghost art__btn--lg">Ver paquetes</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</BlogLayout>

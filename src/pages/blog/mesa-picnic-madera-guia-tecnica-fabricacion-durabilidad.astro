@@ -1,0 +1,446 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import '../../styles/blog-article.css';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Mesa Picnic de Madera: Guía Técnica del Material, Fabricación y Durabilidad",
+  "description": "Análisis técnico de mesas picnic de madera: especies, ensambles, barnices, vida útil real y comparativa con materiales alternativos.",
+  "image": "https://mesaspicnic.com/img/artesano-acabado-mesa-picnic-taller.webp",
+  "inLanguage": "es-MX",
+  "wordCount": 3800,
+  "author": { "@type": "Organization", "name": "MESPIC — Taller propio", "url": "https://mesaspicnic.com/nosotros/" },
+  "publisher": { "@type": "Organization", "name": "MESPIC", "logo": { "@type": "ImageObject", "url": "https://mesaspicnic.com/icon.png" } },
+  "mainEntityOfPage": "https://mesaspicnic.com/blog/mesa-picnic-madera-guia-tecnica-fabricacion-durabilidad/",
+  "about": ["Mesa picnic", "Madera de pino", "Mobiliario para eventos", "Fabricación de mobiliario"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Cuánto pesa una mesa picnic profesional?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Una mesa picnic estándar de 1.80 m en pino con bancas integradas pesa entre 35 y 42 kg. La mesa grande de 2.40 m pesa entre 50 y 58 kg. La mesa de parota alcanza 65–75 kg por la densidad de la madera." } },
+    { "@type": "Question", "name": "¿Cuánto dura una mesa picnic con uso intensivo?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Una mesa picnic profesional de pino con barniz uretano y mantenimiento estructurado tiene vida útil documentada de 7 a 10 años. Con uso intensivo de renta (60–90 eventos/año), 3–5 años antes de requerir restauración mayor." } },
+    { "@type": "Question", "name": "¿La madera de pino soporta el sol intenso de CDMX?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí, siempre que tenga barniz uretano para exterior con filtro UV. Las mesas pueden estar expuestas al sol pleno durante eventos de 6–8 horas sin daño visible. La exposición permanente (meses) sí requiere parota o teca." } },
+    { "@type": "Question", "name": "¿Cómo se limpia una mancha de vino tinto en madera barnizada?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Inmediatamente con paño húmedo y agua tibia. Si penetró, paño con agua tibia y dos gotas de jabón neutro. Manchas viejas: alcohol isopropílico al 70%. Nunca cloro ni solventes industriales: dañan el barniz." } },
+    { "@type": "Question", "name": "¿Cuál es la diferencia entre Mesa Estándar y Mesa Premium MESPIC?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Tres diferencias técnicas: la Premium usa pino seleccionado sin nudos visibles; lleva 4 manos de barniz uretano con lijado intermedio (vs 2 en Estándar); pasa por inspección de calidad pre-evento individual." } }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mesaspicnic.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mesaspicnic.com/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Mesa Picnic de Madera: Guía Técnica" }
+  ]
+};
+---
+
+<BlogLayout
+  title="Mesa Picnic de Madera: Guía Técnica del Material, Fabricación y Durabilidad | MESPIC"
+  description="Guía técnica profesional de mesas picnic de madera: pino, encino, parota y teca, proceso de fabricación, barnices uretano, vida útil real, mantenimiento y comparativa con materiales alternativos."
+  ogImage="/img/artesano-acabado-mesa-picnic-taller.webp"
+  canonical="https://mesaspicnic.com/blog/mesa-picnic-madera-guia-tecnica-fabricacion-durabilidad/"
+  heroTitle="Mesa Picnic de Madera: Guía Técnica del Material, Fabricación y Vida Útil"
+  heroBadge="Blog · Conocimiento técnico"
+  heroDescription="Todo lo que un planeador, una novia o un comprador comparativo necesita saber sobre las mesas picnic de madera: especies, ensambles, barnices uretano, durabilidad real y comparativa contra metal, plástico y aluminio."
+  heroSeo1="La mesa picnic de madera es un objeto aparentemente simple — una tapa, dos bancas y dos soportes en A — que en realidad esconde una de las decisiones de manufactura más sutiles del mobiliario para eventos. La especie de madera define peso, veta, durabilidad y comportamiento frente a humedad; el tipo de ensamble define si la mesa soporta uso intensivo o se afloja al tercer evento; el acabado define si se ve premium en fotografía o pelea contra la luz natural del jardín. MESPIC fabrica y opera mobiliario propio en taller en la Ciudad de México y este documento concentra el conocimiento técnico que normalmente vive solo entre los carpinteros."
+  heroSeo2="Esta guía está pensada para tres lectores: el planeador profesional que necesita argumentos sólidos para defender el costo de mobiliario premium; la novia o el novio que quieren entender qué están rentando antes de firmar contrato; y el comprador comparativo (venue, salón de eventos, productora) que evalúa adquirir mesas para uso recurrente. Cubrimos las cinco maderas usadas en México, el proceso de fabricación etapa por etapa, los acabados aprobados para uso al aire libre, el protocolo de mantenimiento entre eventos y la comparativa honesta contra alternativas en metal, plástico y aluminio."
+  heroMetrics={[
+    { value: "5", label: "Especies de madera evaluadas" },
+    { value: "7–10 años", label: "Vida útil con mantenimiento" },
+    { value: "4 manos", label: "Barniz uretano en línea premium" },
+  ]}
+  breadcrumbs={[
+    { label: "Inicio", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Mesa Picnic de Madera: Guía Técnica" },
+  ]}
+  sidebarProducts={[
+    { name: "Mesa Premium", cap: "Barniz 4 manos · sin nudos", href: "/catalogo/mesa-picnic-premium/", img: "/img/mesa-picnic-boda-elegante-luces.avif" },
+    { name: "Mesa Estándar", cap: "1.80 m · pino lijado", href: "/catalogo/mesa-picnic-estandar/", img: "/img/renta-mesa-picnic-madera-pino-cdmx-01.avif" },
+    { name: "Mesa Parota", cap: "Veta natural premium", href: "/catalogo/mesa-picnic-parota/", img: "/img/mesa-picnic-lujo-madera-exterior-renta-01.avif" },
+  ]}
+  sidebarArticles={[
+    { title: "Mesa picnic vs sillas Tiffany vs tablón: comparativa", meta: "Comparativa · 9 min", href: "/blog/mesa-picnic-vs-sillas-tiffany-vs-tablon-comparativa/", img: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
+    { title: "Decoración de mesas picnic para fiestas infantiles", meta: "Decoración · 6 min", href: "/blog/decoracion-mesas-picnic-fiestas-infantiles/", img: "/img/picnic-romantico-bridal-shower-mesas-pino-02.avif" },
+    { title: "¿Cuántas mesas necesitas según invitados?", meta: "Cálculo · 5 min", href: "/blog/cuantas-mesas-picnic-necesitas-segun-invitados/", img: "/img/mesa-picnic-boda-invitados-atardecer.avif" },
+  ]}
+  sidebarServices={[
+    { name: "Catálogo completo", desc: "20 modelos con fichas técnicas", href: "/catalogo/" },
+    { name: "Mesa Premium", desc: "Bodas y eventos VIP", href: "/catalogo/mesa-picnic-premium/" },
+    { name: "Mesa Parota", desc: "Veta natural premium", href: "/catalogo/mesa-picnic-parota/" },
+    { name: "Sobre MESPIC", desc: "Nuestra historia y taller", href: "/nosotros/" },
+  ]}
+  sidebarCtaTitle="¿Necesitas mesas para tu evento?"
+  sidebarCtaText="Te asesoramos sobre el modelo ideal según tu venue, número de invitados y estética. Sin compromiso."
+  sidebarCtaWa="Hola%2C+quiero+asesor%C3%ADa+sobre+el+modelo+de+mesa+picnic+ideal+para+mi+evento."
+  sidebarServicesTitle="Catálogo"
+>
+
+<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+<div class="art">
+
+  <div class="art__author">
+    <div class="art__author-badge">M</div>
+    <div class="art__author-meta">
+      <span class="art__author-name">Taller MESPIC · Carpintería + Operación</span>
+      <span class="art__author-role">Fabricamos, mantenemos y operamos mobiliario de madera para eventos al aire libre</span>
+      <span class="art__author-stamp">Tiempo de lectura: 13 min · Revisión técnica del taller</span>
+    </div>
+  </div>
+
+  <p class="art__lead">
+    Una mesa picnic bien fabricada se comporta como un objeto de carpintería tradicional: pesa lo correcto, suena macizo al golpe seco, se siente caliente al tacto, envejece bien y resiste cientos de eventos sin perder presencia. Una mal fabricada se aligera con el uso, se mancha con el primer derrame de vino, se astilla en los bordes, se afloja en los soportes y termina cubierta por un mantel para no aparecer en las fotos. Esta guía explica exactamente dónde está la diferencia entre una y otra, con el detalle que normalmente solo conocen los carpinteros que las hacen.
+  </p>
+
+  <aside class="art__tldr" aria-label="Resumen ejecutivo">
+    <span class="art__tldr-label">Resumen ejecutivo · 30 segundos</span>
+    <ul>
+      <li><strong>El pino amarillo de Michoacán</strong> es el material estándar — equilibra costo, peso, trabajabilidad y comportamiento del barniz.</li>
+      <li><strong>El barniz uretano para exterior es protección, no decoración.</strong> Sin él, la madera se mancha y oscurece en el primer evento.</li>
+      <li><strong>Lo que se ve en fotos es el lijado.</strong> Granos 80–150–220 mínimo; línea premium agrega 320.</li>
+      <li><strong>Vida útil real:</strong> 7–10 años con mantenimiento; 3–5 años en uso intensivo de renta.</li>
+      <li><strong>La madera supera al plástico, aluminio y metal pintado</strong> en la única métrica que importa para eventos: cómo se ve en fotografía.</li>
+    </ul>
+  </aside>
+
+  <nav class="art__toc" aria-label="Tabla de contenidos">
+    <p class="art__toc-title">En esta guía técnica</p>
+    <ol>
+      <li><a href="#anatomia">Anatomía: las 5 piezas estructurales</a></li>
+      <li><a href="#maderas">Las 5 maderas más usadas en México</a></li>
+      <li><a href="#proceso">Proceso de fabricación etapa por etapa</a></li>
+      <li><a href="#acabados">Acabados y barnices: por qué importan</a></li>
+      <li><a href="#vida-util">Vida útil y curva de envejecimiento</a></li>
+      <li><a href="#mantenimiento">Mantenimiento entre eventos</a></li>
+      <li><a href="#comparativa">Comparativa con materiales alternativos</a></li>
+      <li><a href="#faqs">Preguntas frecuentes técnicas</a></li>
+    </ol>
+  </nav>
+
+  <section class="art__section" id="anatomia">
+    <h2 class="art__h2">Anatomía de una mesa picnic: las cinco piezas que determinan todo</h2>
+
+    <p>Aunque una mesa picnic parece un objeto único, en realidad es un ensamble de cinco elementos estructurales, cada uno con su propia decisión de manufactura. Entender estas piezas permite evaluar calidad antes de rentar o comprar:</p>
+
+    <ul>
+      <li><strong>Tapa o cubierta:</strong> superficie horizontal donde se come. Define la estética principal y el área útil (típicamente 0.75 × 1.80 m en mesa estándar, 0.85 × 2.40 m en mesa grande).</li>
+      <li><strong>Bancas integradas:</strong> dos tablones laterales más bajos y angostos. La distancia entre tapa y banca define ergonomía: 27–30 cm es el rango cómodo para adultos.</li>
+      <li><strong>Soportes en A:</strong> dos estructuras laterales que sostienen tapa y bancas en una sola pieza. Su ángulo y grosor definen estabilidad y carga máxima.</li>
+      <li><strong>Largueros:</strong> piezas longitudinales que unen los soportes en A. Sin largueros bien dimensionados la mesa "baila" con el movimiento de los comensales.</li>
+      <li><strong>Tornillería y herrajes:</strong> tornillos pasantes con tuerca ciega, escuadras de refuerzo, bisagras en modelos plegables. Acero galvanizado para evitar corrosión por humedad.</li>
+    </ul>
+
+    <div class="art__definition">
+      <span class="art__definition-term">Definición · Soporte en A</span>
+      <p>Estructura lateral de la mesa picnic con forma de letra A invertida, formada por dos patas inclinadas, un travesaño superior (donde se atornilla la tapa) y un travesaño intermedio (donde se atornillan las bancas). Es el elemento que da estabilidad a la mesa: una mesa con soportes en A correctamente dimensionados (ángulo 70°, grosor 5×10 cm) soporta 350 kg de carga distribuida.</p>
+    </div>
+
+    <p>El error más común al evaluar mesas picnic es revisar únicamente la tapa. La estabilidad de los soportes en A y la calidad de la tornillería son responsables del <strong>80% de la vida útil real</strong>. Una tapa bonita sobre soportes flojos es una mesa que dura un año; una tapa modesta sobre soportes maciza y tornillería pasante es una mesa que dura una década.</p>
+  </section>
+
+  <section class="art__section" id="maderas">
+    <h2 class="art__h2">Las cinco maderas más usadas en mesas picnic en México</h2>
+
+    <p>Cada especie de madera tiene un comportamiento distinto frente a humedad, temperatura, peso, manchas y estética. Esta tabla compara las cinco maderas más usadas en mobiliario para eventos en México, ordenadas de mayor a menor disponibilidad comercial:</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Madera</th>
+            <th>Densidad</th>
+            <th class="th-accent">Resistencia exterior</th>
+            <th>Estética</th>
+            <th>Costo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Pino blanco</strong> <em>(Pinus ayacahuite)</em></td><td>Media-baja</td><td class="td-accent">Buena con barniz exterior</td><td>Veta clara, cálida, neutra</td><td>★★☆☆☆</td></tr>
+          <tr><td><strong>Pino amarillo / Michoacán</strong></td><td>Media</td><td class="td-accent">Muy buena con barniz uretano</td><td>Veta marcada, dorada</td><td>★★★☆☆</td></tr>
+          <tr><td><strong>Encino</strong> <em>(Quercus spp.)</em></td><td>Alta</td><td class="td-accent">Excelente, requiere mantenimiento</td><td>Veta densa, tono medio</td><td>★★★★☆</td></tr>
+          <tr><td><strong>Parota</strong> <em>(Enterolobium cyclocarpum)</em></td><td>Media-alta</td><td class="td-accent">Excelente, naturalmente resistente</td><td>Veta espectacular, chocolate</td><td>★★★★★</td></tr>
+          <tr><td><strong>Teca</strong> <em>(Tectona grandis)</em></td><td>Media-alta</td><td class="td-accent">La mejor del mercado</td><td>Dorado-miel uniforme</td><td>★★★★★</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Las mesas estándar de la línea MESPIC se fabrican en pino amarillo de Michoacán por su combinación de costo, peso (transporte y montaje), trabajabilidad en taller y comportamiento del barniz. La línea Premium incorpora pino seleccionado sin nudos visibles en cara superior. Modelos especiales como la <a href="/catalogo/mesa-picnic-parota/">Mesa Parota</a> usan madera de parota mexicana por su veta única y mejor desempeño al aire libre prolongado.</p>
+
+    <div class="art__tip">
+      <span class="art__tip-icon">🌳</span>
+      <span><strong>Sostenibilidad:</strong> el pino y la parota usados en MESPIC provienen de explotaciones forestales mexicanas con certificación de manejo sustentable. El pino tiene ciclo de tala de 12–18 años, lo que lo convierte en una de las maderas más renovables del mundo. Esta es una diferencia ecológica relevante frente al plástico (no renovable) y el aluminio (alto consumo energético en producción).</span>
+    </div>
+  </section>
+
+  <figure class="art__figure">
+    <img
+      src="/img/artesano-acabado-mesa-picnic-taller.webp"
+      alt="Artesano aplicando barniz uretano a una mesa picnic de pino en taller MESPIC"
+      width="900" height="500"
+      loading="lazy"
+    />
+    <figcaption>Detalle del acabado de cuarta mano en una mesa picnic línea Premium. Cada mesa pasa por cuatro ciclos de lijado y barniz uretano para uso exterior antes de salir a su primer evento.</figcaption>
+  </figure>
+
+  <section class="art__section" id="proceso">
+    <h2 class="art__h2">El proceso de fabricación, paso a paso</h2>
+
+    <p>Una mesa picnic profesional se fabrica en aproximadamente 18–24 horas de trabajo activo distribuido en cinco etapas. Estos son los pasos críticos donde se gana o se pierde calidad final:</p>
+
+    <h3>1. Selección y dimensionado de la madera</h3>
+    <p>La madera llega al taller en tablones de 4×8 pies y 1 ¼" de grosor para la tapa, 1" para las bancas y 2" para los soportes en A. Se descartan tablones con nudos pasantes, fisuras de secado o curvatura excesiva. Para línea Premium se selecciona pino sin nudos visibles en la cara superior. Esta etapa, aparentemente burocrática, define si la mesa final tendrá imperfecciones que comprometen estética o estabilidad.</p>
+
+    <h3>2. Corte y cepillado</h3>
+    <p>Cada tablón se corta a medida y se cepilla por ambas caras para obtener superficies perfectamente planas. El cepillado es lo que permite que cuando se unen las tablas para formar la tapa, no haya escalones perceptibles al tacto. Un cepillado deficiente se traduce en una tapa "lavadora" que se nota apenas se pasa la mano.</p>
+
+    <h3>3. Lijado progresivo (cuatro pasadas)</h3>
+    <p>El lijado se realiza con tres granos progresivamente más finos: grano 80 para emparejar superficies, grano 150 para suavizar, grano 220 para acabado fino. En línea Premium se añade una pasada con grano 320 para resultado vidrioso al tacto. Cada lijada se realiza antes y entre capas de barniz para obtener acabado homogéneo.</p>
+
+    <h3>4. Ensamble estructural</h3>
+    <p>Los soportes en A se arman con tornillería pasante de 3" y tuerca ciega. La tapa se sujeta con tornillos avellanados ocultos por tarugos de madera del mismo tono. Las bancas se montan con escuadras metálicas de refuerzo. Cada punto de unión recibe pegamento blanco para madera además del tornillo, lo que multiplica la resistencia al jaloneo.</p>
+
+    <h3>5. Barniz uretano para exterior (2 a 4 manos)</h3>
+    <p>El barniz no es decoración: es protección. Un barniz uretano de calidad para exterior protege la madera contra humedad, rayos UV, manchas de vino, grasa y temperatura. Línea Estándar lleva 2 manos; línea Premium lleva 4 manos con lijado intermedio. Cada capa requiere 8 horas mínimas de secado. Una mesa que sale a evento con barniz a medio secar se mancha al primer derrame.</p>
+
+    <div class="art__takeaway">
+      <span class="art__takeaway-label">Indicadores de calidad observables</span>
+      <ul>
+        <li>Bordes con biselado fino, no canto vivo cortante.</li>
+        <li>Tarugos de madera cubriendo cabezas de tornillo, no tornillos a la vista.</li>
+        <li>Superficie homogénea sin "escalones" entre las tablas de la tapa.</li>
+        <li>Brillo profundo y uniforme, no brillo plástico de barniz nitrocelulósico.</li>
+        <li>Madera caliente al tacto incluso después de varias horas a la sombra.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="art__section" id="acabados">
+    <h2 class="art__h2">Acabados y barnices: por qué importa el detalle</h2>
+
+    <p>El acabado final es lo que distingue una mesa que se fotografía bien de una que no. Hay tres tipos de acabado usados en mobiliario para eventos:</p>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>🪵 Barniz uretano semi-mate</h3>
+        <p>El estándar profesional. Conserva el tono natural de la madera sin saturarlo, ofrece protección completa contra humedad y rayado, y se fotografía sin brillos parásitos. Es el acabado de línea Estándar y Premium MESPIC.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>✨ Barniz uretano brillante</h3>
+        <p>Mayor profundidad visual y resistencia al rayado, pero genera reflejos en fotografía y se ve "comercial" sobre madera natural. Recomendado únicamente para uso en interiores controlados.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>🌾 Aceite y cera</h3>
+        <p>Acabado de carpintería fina con tono natural perfecto, pero requiere mantenimiento frecuente y no resiste manchas de vino o grasa sin tratamiento inmediato. Apropiado para mobiliario residencial, no para renta de alto volumen.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>🎨 Pinturas y tintes opacos</h3>
+        <p>Cubren completamente la veta. Pueden funcionar para mobiliario temático específico (mesas blancas para bodas náuticas), pero anulan la principal ventaja estética de la madera natural.</p>
+      </div>
+    </div>
+
+    <div class="art__definition">
+      <span class="art__definition-term">Definición · Barniz uretano para exterior</span>
+      <p>Recubrimiento poliuretánico de dos componentes formulado para resistir intemperie. Forma una película elástica que se expande y contrae con la madera sin agrietarse, bloquea rayos UV (evita amarillamiento), repele agua y resiste manchas orgánicas como vino, café o grasa. Es el estándar industrial para mobiliario náutico y exterior — y el correcto para mesas de eventos.</p>
+    </div>
+  </section>
+
+  <section class="art__section" id="vida-util">
+    <h2 class="art__h2">Vida útil real y curva de envejecimiento</h2>
+
+    <p>Una mesa picnic de pino con uso intensivo de renta (60–90 eventos por año) tiene una vida útil documentada de 3 a 5 años antes de requerir restauración mayor. Una mesa con uso moderado (20–30 eventos) llega a 7–10 años. Estas son las cinco etapas naturales de su vida útil:</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Etapa</th>
+            <th>Edad típica</th>
+            <th class="th-accent">Estado visible</th>
+            <th>Intervención</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Nueva</strong></td><td>0–6 meses</td><td class="td-accent">Brillo uniforme, tono fresco</td><td>Ninguna</td></tr>
+          <tr><td><strong>Asentada</strong></td><td>6 m–2 años</td><td class="td-accent">Color profundo, tono asentado</td><td>Limpieza estándar tras cada evento</td></tr>
+          <tr><td><strong>Madura</strong></td><td>2–4 años</td><td class="td-accent">Pequeños rayones superficiales</td><td>Lijado leve y mano de barniz anual</td></tr>
+          <tr><td><strong>Restauración</strong></td><td>4–7 años</td><td class="td-accent">Desgaste visible, posibles aflojamientos</td><td>Lijado profundo, 2 manos de barniz, ajuste de tornillería</td></tr>
+          <tr><td><strong>Retiro o reuso</strong></td><td>7–10+ años</td><td class="td-accent">Madera marcada por uso intenso</td><td>Salida de catálogo principal, posible uso residencial</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>MESPIC retira automáticamente del catálogo de bodas premium cualquier mesa que muestre signos de envejecimiento avanzado. Las mesas en etapa de restauración pasan a línea estándar; las de retiro pueden venderse a precio simbólico para uso residencial.</p>
+  </section>
+
+  <section class="art__section" id="mantenimiento">
+    <h2 class="art__h2">Mantenimiento: lo que MESPIC hace entre cada evento</h2>
+
+    <p>La calidad visible de una mesa en su evento número 80 depende de un protocolo de mantenimiento riguroso entre eventos. El nuestro consiste en:</p>
+
+    <ul>
+      <li><strong>Inspección visual inmediata</strong> al regreso de cada evento — manchas, rayones, ajustes mecánicos</li>
+      <li><strong>Limpieza con paño húmedo</strong> y jabón neutro para retirar manchas de vino, grasa o tinta</li>
+      <li><strong>Encerado intermedio</strong> cada 4–6 eventos para conservar la barrera del barniz</li>
+      <li><strong>Revisión y ajuste de tornillería</strong> al primer signo de aflojamiento</li>
+      <li><strong>Lijado y rebarnizado completo</strong> una vez al año en línea Estándar, cada 6 meses en línea Premium</li>
+      <li><strong>Almacenamiento en bodega cubierta</strong> con ventilación y humedad controlada</li>
+    </ul>
+
+    <div class="art__quote">
+      La diferencia operativa entre rentar una mesa y rentar un producto es el protocolo entre eventos. Las mesas que llegan con manchas visibles, tornillos flojos o barniz descuidado son la queja número uno del sector. Es el estándar contra el que medimos cada entrega.
+      <span class="art__quote-cite">— Coordinación operativa MESPIC</span>
+    </div>
+  </section>
+
+  <section class="art__section" id="comparativa">
+    <h2 class="art__h2">Comparativa con materiales alternativos</h2>
+
+    <p>La madera no es la única opción para mobiliario de eventos. Estas son las alternativas y por qué la madera sigue siendo el estándar en CDMX para eventos premium:</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Material</th>
+            <th>Peso</th>
+            <th class="th-accent">Estética fotográfica</th>
+            <th>Comportamiento exterior</th>
+            <th>Vida útil</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Madera de pino</strong></td><td>Medio (38 kg)</td><td class="td-accent">Excelente, cálida, natural</td><td>Muy bueno con barniz</td><td>7–10 años</td></tr>
+          <tr><td><strong>Plástico</strong></td><td>Ligero</td><td class="td-accent">Pobre, comercial</td><td>Excelente</td><td>3–5 años (feo desde el inicio)</td></tr>
+          <tr><td><strong>Aluminio</strong></td><td>Ligero</td><td class="td-accent">Frío, refleja luz, poco fotogénico</td><td>Excelente</td><td>10+ años</td></tr>
+          <tr><td><strong>Metal pintado</strong></td><td>Medio-alto</td><td class="td-accent">Industrial, requiere decoración encima</td><td>Bueno, oxidación posible</td><td>5–8 años</td></tr>
+          <tr><td><strong>Madera + metal</strong></td><td>Alto</td><td class="td-accent">Industrial-chic, muy específico</td><td>Muy bueno</td><td>10+ años</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>La madera gana en la única métrica que importa para eventos premium: cómo se ve en fotografía. El plástico funciona logísticamente pero penaliza la estética del evento; el aluminio es eficiente pero frío; el metal pintado exige decoración compensatoria. Si el objetivo es un evento que se vea editorial sin esfuerzo, la madera es el material correcto. Lectura adicional: <a href="/blog/mesa-picnic-vs-sillas-tiffany-vs-tablon-comparativa/">comparativa mesa picnic vs sillas Tiffany vs tablón</a>.</p>
+  </section>
+
+  <div class="art__cta-inline">
+    <h3>¿Quieres ver el mobiliario en persona?</h3>
+    <p>Visitas al taller MESPIC con cita previa. Podemos mostrarte acabados, ensambles y maderas que conforman cada modelo del catálogo. Para decisiones importantes (bodas, eventos corporativos grandes) lo recomendamos sin reservas.</p>
+    <div class="art__cta-inline-btns">
+      <a href="https://wa.me/5564328954?text=Hola%2C+quiero+agendar+una+visita+al+taller+MESPIC+para+ver+las+mesas." target="_blank" rel="noopener" class="art__btn art__btn--wa" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+        Agendar visita al taller
+      </a>
+      <a href="/catalogo/" class="art__btn art__btn--outline">Ver catálogo completo →</a>
+    </div>
+  </div>
+
+  <section class="art__section" id="faqs">
+    <h2 class="art__h2">Preguntas frecuentes técnicas</h2>
+
+    <div class="art__faqs">
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuánto pesa una mesa picnic profesional?</summary>
+        <p class="art__faq-a">Una mesa picnic estándar de 1.80 m en pino con bancas integradas pesa entre <strong>35 y 42 kg</strong>. La mesa grande de 2.40 m pesa entre 50 y 58 kg. La mesa de parota puede alcanzar 65–75 kg por la densidad de la madera. Este peso es importante porque define qué tan estable se siente (mesas demasiado ligeras se mueven con los comensales) y qué logística de montaje requiere (dos operadores por mesa es lo estándar).</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuánto tarda en construirse una mesa picnic en taller?</summary>
+        <p class="art__faq-a">El tiempo activo de carpintería es de <strong>6–8 horas</strong>, pero el tiempo total incluyendo secado de pegamento, secado de cada mano de barniz y curado final es de <strong>4 a 6 días</strong>. Línea Premium con 4 manos de barniz requiere mínimo una semana antes de salir a evento. Por eso las mesas no se fabrican bajo pedido individual: se producen en lotes y se mantienen en inventario.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿La madera de pino soporta el sol intenso de CDMX?</summary>
+        <p class="art__faq-a">Sí, siempre que tenga barniz uretano para exterior con filtro UV. Sin protección UV el barniz amarillea y la madera pierde tono natural. Con barniz adecuado, las mesas pueden estar expuestas al sol pleno durante eventos de 6–8 horas sin daño visible. La exposición prolongada (mesas instaladas permanentemente al sol durante meses) sí requiere especies como parota o teca, no pino.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cómo se limpia una mancha de vino tinto en madera barnizada?</summary>
+        <p class="art__faq-a">Inmediatamente: paño húmedo con agua tibia. Si la mancha quedó penetrada, paño con agua tibia y dos gotas de jabón neutro. Para manchas viejas, alcohol isopropílico al 70%. <strong>Nunca</strong> usar cloro, solventes industriales o estropajos abrasivos: dañan el barniz. Las mesas MESPIC pasan por protocolo de limpieza profesional tras cada evento; el cliente final no tiene que preocuparse por manchas durante el evento.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuál es la diferencia real entre Mesa Estándar y Mesa Premium MESPIC?</summary>
+        <p class="art__faq-a">Tres diferencias técnicas: <strong>(1)</strong> la Premium usa pino seleccionado sin nudos visibles, mientras la Estándar puede mostrar nudos pequeños; <strong>(2)</strong> la Premium lleva 4 manos de barniz uretano con lijado intermedio, la Estándar 2 manos; <strong>(3)</strong> la Premium pasa por inspección de calidad pre-evento individual. Visualmente, la Premium tiene superficie más homogénea y brillo más profundo. Para bodas y eventos editoriales recomendamos Premium; para corporativos, familiares y casuales la Estándar entrega el mismo valor estético.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Se pueden comprar mesas MESPIC en lugar de rentarlas?</summary>
+        <p class="art__faq-a">Sí, manejamos venta a clientes que requieren mobiliario propio: venues con eventos múltiples al mes, salones de catering, jardines de eventos, productoras audiovisuales con uso recurrente, o particulares con propiedades de descanso (Valle de Bravo, Tepoztlán, San Miguel). El precio de compra y los tiempos de entrega se cotizan caso por caso. Contáctanos con tu requerimiento y armamos propuesta.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿La madera de pino es sostenible para mobiliario de eventos?</summary>
+        <p class="art__faq-a">Sí — entre las más sostenibles del mobiliario industrial. El pino mexicano usado en mesas MESPIC tiene ciclo de tala de <strong>12–18 años</strong> (vs. 60+ años de maderas tropicales como caoba). Proviene de explotaciones forestales con certificación de manejo sustentable. En análisis de ciclo de vida, una mesa picnic de pino con vida útil de 10 años tiene huella ambiental significativamente menor que mobiliario plástico (no renovable) o aluminio (alto consumo energético en fabricación).</p>
+      </details>
+
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Lecturas relacionadas</h2>
+    <div class="art__nextsteps">
+      <a href="/blog/mesa-picnic-vs-sillas-tiffany-vs-tablon-comparativa/" class="art__nextstep-card">
+        <span class="art__nextstep-tag">Comparativa</span>
+        <span class="art__nextstep-title">Mesa picnic vs Tiffany vs tablón</span>
+        <span class="art__nextstep-desc">Costos reales, comportamiento sobre superficies y rendimiento fotográfico.</span>
+      </a>
+      <a href="/blog/decoracion-mesas-picnic-fiestas-infantiles/" class="art__nextstep-card">
+        <span class="art__nextstep-tag">Decoración</span>
+        <span class="art__nextstep-title">Decoración de mesas picnic</span>
+        <span class="art__nextstep-desc">Estilos, paletas y elementos clave para tu evento.</span>
+      </a>
+      <a href="/blog/cuanto-cuesta-rentar-mesas-picnic-cdmx/" class="art__nextstep-card">
+        <span class="art__nextstep-tag">Precios</span>
+        <span class="art__nextstep-title">Cuánto cuesta rentar mesas picnic</span>
+        <span class="art__nextstep-desc">Rangos por modelo, paquetes y factores que mueven el precio.</span>
+      </a>
+    </div>
+  </section>
+
+  <div class="art__about">
+    <div class="art__about-badge">MESPIC</div>
+    <div>
+      <h3>Nuestro taller, nuestro estándar</h3>
+      <p>MESPIC fabrica, opera y mantiene mobiliario propio. No subcontratamos producción: cada mesa que entregamos pasó por el proceso técnico documentado en esta guía dentro de nuestro taller. Trabajamos con maderas de explotaciones forestales mexicanas certificadas, barniz uretano profesional y protocolo de mantenimiento individual por mesa.</p>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">Galería técnica: detalles del taller</h2>
+    <div class="art__gallery-strip">
+      <img src="/img/artesano-acabado-mesa-picnic-taller.webp" alt="Detalle del lijado fino en mesa picnic premium MESPIC" loading="lazy" width="350" height="220" />
+      <img src="/img/equipo-logistica-mesas-picnic.webp" alt="Equipo MESPIC cargando mesas picnic para entrega en evento CDMX" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-lujo-madera-exterior-renta-01.avif" alt="Mesa picnic de parota con veta natural en evento al aire libre" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-boda-elegante-luces.avif" alt="Mesa picnic premium con acabado de cuatro manos en boda al atardecer" loading="lazy" width="350" height="220" />
+    </div>
+  </section>
+
+  <div class="art__cta-final">
+    <div class="art__cta-final-inner">
+      <h2>Mobiliario que se nota en fotografía y se siente al tacto</h2>
+      <p>Años de operación fabricando y manteniendo mesas picnic de madera. Cada mesa que entregamos pasó por el mismo proceso técnico documentado aquí. Solicita asesoría sobre el modelo correcto para tu evento.</p>
+      <div class="art__cta-final-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+asesor%C3%ADa+sobre+el+modelo+de+mesa+picnic+ideal+para+mi+evento." target="_blank" rel="noopener" class="art__btn art__btn--wa art__btn--lg" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          Consultar por WhatsApp
+        </a>
+        <a href="/catalogo/" class="art__btn art__btn--primary art__btn--lg">Ver catálogo →</a>
+        <a href="/nosotros/" class="art__btn art__btn--ghost art__btn--lg">Conocer MESPIC</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</BlogLayout>

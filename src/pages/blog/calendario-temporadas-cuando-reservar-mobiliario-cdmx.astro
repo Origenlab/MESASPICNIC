@@ -1,0 +1,397 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import '../../styles/blog-article.css';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Calendario de Temporadas de Eventos: Cuándo Reservar Mobiliario en CDMX y Edomex",
+  "description": "Calendario de temporadas de eventos en CDMX y Edomex con anticipación recomendada por tipo de evento, fechas pico del año y estrategia de reserva.",
+  "image": "https://mesaspicnic.com/img/mesa-picnic-boda-jardin-atardecer-03.webp",
+  "inLanguage": "es-MX",
+  "author": { "@type": "Organization", "name": "MESPIC — Operación", "url": "https://mesaspicnic.com/nosotros/" },
+  "publisher": { "@type": "Organization", "name": "MESPIC", "logo": { "@type": "ImageObject", "url": "https://mesaspicnic.com/icon.png" } },
+  "mainEntityOfPage": "https://mesaspicnic.com/blog/calendario-temporadas-cuando-reservar-mobiliario-cdmx/",
+  "about": ["Calendario de eventos CDMX", "Temporada de bodas", "Reserva de mobiliario", "Planeación de eventos"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Cuánto antes debo reservar el mobiliario para mi boda en CDMX?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Para bodas en sábados de octubre, noviembre o marzo, seis a nueve meses de anticipación. Para sábados de fechas regulares, tres a cuatro meses. Microbodas en días laborables o domingo, seis a ocho semanas. La línea premium se agota antes que la estándar." } },
+    { "@type": "Question", "name": "¿Cuál es la mejor temporada para una boda al aire libre en CDMX?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Las mejores ventanas climáticas son enero–marzo (frío seco, sin lluvia) y octubre–noviembre (post-lluvias, días templados, noches frescas). Octubre y noviembre son los meses pico, también los más saturados y caros." } },
+    { "@type": "Question", "name": "¿Hay recargo por reservar a último momento?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No hay recargo por urgencia en fechas regulares. Sí hay recargo de temporada del diez al veinticinco por ciento en las semanas decembrinas y posibles recargos logísticos si la entrega implica desplazamientos no estándar." } },
+    { "@type": "Question", "name": "¿En agosto realmente hay menos eventos en CDMX?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí, agosto es estadísticamente el mes con menor volumen de eventos sociales en CDMX por el periodo vacacional. Ofrece máxima disponibilidad, tarifas estándar sin recargo y atención más personalizada." } },
+    { "@type": "Question", "name": "¿Puedo reservar fecha sin tener todos los detalles del evento listos?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Para reservar fecha basta confirmar tipo de evento, ubicación tentativa y rango estimado de invitados. Los detalles finales (modelo exacto, configuración) se confirman un mes antes." } }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mesaspicnic.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mesaspicnic.com/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Calendario de Temporadas para Reservar Mobiliario" }
+  ]
+};
+---
+
+<BlogLayout
+  title="Calendario de Temporadas de Eventos: Cuándo Reservar Mobiliario en CDMX y Edomex | MESPIC"
+  description="Calendario operativo de temporadas de eventos en CDMX y Edomex: anticipación recomendada por tipo de evento, meses pico, estrategia de reserva y cómo evitar recargos."
+  ogImage="/img/mesa-picnic-boda-jardin-atardecer-03.webp"
+  canonical="https://mesaspicnic.com/blog/calendario-temporadas-cuando-reservar-mobiliario-cdmx/"
+  heroTitle="Calendario de Temporadas: Cuándo Reservar Mobiliario para Tu Evento en CDMX y Edomex"
+  heroBadge="Blog · Planeación temporal"
+  heroDescription="Mes a mes, las temporadas de eventos en la Ciudad de México y zona metropolitana: cuándo reservar, qué meses saturan rápido, cuánta anticipación necesitas por tipo de evento y cómo evitar la prima de última hora."
+  heroSeo1="La reserva tardía es la causa número uno de eventos comprometidos en el sector del mobiliario para eventos en la Ciudad de México. No por falta de disponibilidad genérica, sino porque los modelos premium, las configuraciones específicas y los sábados pico se agotan en patrones predecibles cada año. Saber cuándo reservar es tan estratégico como saber qué reservar. Este calendario descompone mes a mes los patrones de demanda en CDMX y Edomex con la anticipación recomendada por tipo de evento, construido sobre los registros internos de operación de MESPIC."
+  heroSeo2="Esta guía está pensada para tres audiencias: la persona que está empezando a planear (bodas con más de seis meses de anticipación), el cliente corporativo que organiza eventos recurrentes durante el año fiscal, y el cliente social con planeación más corta (cumpleaños, baby shower, picnics). Cada mes incluye los tipos de evento dominantes, el nivel de saturación, la anticipación segura para reservar y los periodos específicos que conviene apuntar o evitar. Si tu evento es en CDMX, Edomex o Valle de Bravo, esta es la información que te falta antes de cotizar."
+  heroMetrics={[
+    { value: "12 meses", label: "Cobertura mes a mes" },
+    { value: "Patrones", label: "Construidos sobre operación real" },
+    { value: "<30 min", label: "Respuesta a cotización" },
+  ]}
+  breadcrumbs={[
+    { label: "Inicio", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Calendario de Temporadas para Reservar Mobiliario" },
+  ]}
+  sidebarProducts={[
+    { name: "Mesa Estándar", cap: "1.80 m · 6 personas", href: "/catalogo/mesa-picnic-estandar/", img: "/img/renta-mesa-picnic-madera-pino-cdmx-01.avif" },
+    { name: "Mesa Grande 2.40m", cap: "10–12 personas", href: "/catalogo/mesa-picnic-grande/", img: "/img/mesa-picnic-grande-evento-16.avif" },
+    { name: "Mesa Premium", cap: "Bodas · sin nudos", href: "/catalogo/mesa-picnic-premium/", img: "/img/mesa-picnic-boda-elegante-luces.avif" },
+  ]}
+  sidebarArticles={[
+    { title: "Cómo organizar un evento al aire libre en CDMX", meta: "Guía · 14 min", href: "/blog/como-organizar-evento-al-aire-libre-cdmx-guia-completa/", img: "/img/mesa-picnic-boda-jardin-atardecer-01.webp" },
+    { title: "Mesas picnic para posadas decembrinas", meta: "Estacional · 8 min", href: "/blog/mesas-picnic-posadas-navidenas-eventos-decembrinos/", img: "/img/tema-navidad-1.avif" },
+    { title: "¿Cuánto cuesta rentar mesas picnic en CDMX?", meta: "Precios · 7 min", href: "/blog/cuanto-cuesta-rentar-mesas-picnic-cdmx/", img: "/img/mesa-picnic-evento-jardin-01.webp" },
+  ]}
+  sidebarServices={[
+    { name: "Paquete Básico", desc: "Hasta 40 personas", href: "/paquetes/basico/" },
+    { name: "Paquete Estándar", desc: "Hasta 80 personas", href: "/paquetes/estandar/" },
+    { name: "Paquete Premium", desc: "80+ personas", href: "/paquetes/premium/" },
+    { name: "Cotizar evento", desc: "Respuesta en 30 min", href: "/cotizar/" },
+  ]}
+  sidebarCtaTitle="¿Ya tienes fecha?"
+  sidebarCtaText="Reserva con anticipación, asegura disponibilidad y modelo premium sin recargos. Te cotizamos en menos de 30 minutos."
+  sidebarCtaWa="Hola%2C+quiero+reservar+mobiliario+para+mi+evento."
+  sidebarServicesTitle="Reservar paquetes"
+>
+
+<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+<div class="art">
+
+  <div class="art__author">
+    <div class="art__author-badge">M</div>
+    <div class="art__author-meta">
+      <span class="art__author-name">Equipo de operación MESPIC</span>
+      <span class="art__author-role">Registros internos de reservas, ocupación y saturación temporada por temporada</span>
+      <span class="art__author-stamp">Tiempo de lectura: 13 min · Datos: temporadas CDMX y Edomex</span>
+    </div>
+  </div>
+
+  <p class="art__lead">
+    El calendario de eventos en CDMX no es lineal: tiene picos altísimos en marzo, octubre, noviembre y diciembre que concentran más del 60% de la demanda anual, valles relativos en julio y agosto, y una temporada de bodas destination en Valle de Bravo con su propia lógica. Este documento ordena esos patrones mes a mes con la anticipación recomendada por tipo de evento, los periodos específicos que conviene marcar en rojo y la estrategia de reserva que evita la prima de última hora.
+  </p>
+
+  <aside class="art__tldr" aria-label="Resumen ejecutivo">
+    <span class="art__tldr-label">Resumen ejecutivo · 30 segundos</span>
+    <ul>
+      <li><strong>Marzo, mayo, octubre, noviembre y diciembre</strong> son los meses pico: reserva con cuatro a seis meses de anticipación.</li>
+      <li><strong>Julio, agosto y segunda mitad de enero</strong> son los valles: máxima disponibilidad, tarifas estándar.</li>
+      <li><strong>La línea premium se agota primero</strong> en meses pico. Si quieres Mesa Premium, reserva con al menos cuatro meses.</li>
+      <li><strong>Diciembre tiene recargo de temporada</strong> del diez al veinticinco por ciento en las semanas finales. Reservar con tres meses congela el precio base.</li>
+      <li><strong>Flexibilidad de fecha = mejor precio.</strong> Martes a jueves y domingos abren tarifas más bajas y mayor disponibilidad.</li>
+    </ul>
+  </aside>
+
+  <nav class="art__toc" aria-label="Tabla de contenidos">
+    <p class="art__toc-title">En este calendario</p>
+    <ol>
+      <li><a href="#tabla-maestra">Tabla maestra por tipo de evento</a></li>
+      <li><a href="#mes-a-mes">Calendario mes a mes</a></li>
+      <li><a href="#fechas-criticas">Los periodos críticos en una tabla</a></li>
+      <li><a href="#estrategia">Estrategia para optimizar costo y disponibilidad</a></li>
+      <li><a href="#faqs">Preguntas frecuentes</a></li>
+    </ol>
+  </nav>
+
+  <section class="art__section" id="tabla-maestra">
+    <h2 class="art__h2">Tabla maestra: anticipación recomendada por tipo de evento</h2>
+
+    <p>Antes del desglose mensual, la regla operativa por tipo de evento. Esta tabla resume cuánto antes debes reservar el mobiliario según el evento que estés organizando:</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Tipo de evento</th>
+            <th>Mínima</th>
+            <th class="th-accent">Óptima</th>
+            <th>Riesgo de última hora</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Boda</strong></td><td>3 meses</td><td class="td-accent">6–9 meses</td><td>Alto: la línea Premium se agota primero</td></tr>
+          <tr><td><strong>Boda en Valle de Bravo</strong></td><td>4 meses</td><td class="td-accent">8–12 meses</td><td>Muy alto: pocos proveedores con cobertura</td></tr>
+          <tr><td><strong>XV años</strong></td><td>2 meses</td><td class="td-accent">4–6 meses</td><td>Alto en meses pico</td></tr>
+          <tr><td><strong>Cumpleaños / reunión familiar</strong></td><td>3 semanas</td><td class="td-accent">6–8 semanas</td><td>Medio</td></tr>
+          <tr><td><strong>Baby / bridal shower</strong></td><td>3 semanas</td><td class="td-accent">5–7 semanas</td><td>Medio</td></tr>
+          <tr><td><strong>Evento corporativo</strong></td><td>4 semanas</td><td class="td-accent">8–12 semanas</td><td>Medio-alto si es decembrino</td></tr>
+          <tr><td><strong>Posada / cierre de año</strong></td><td>5 semanas</td><td class="td-accent">10–14 semanas</td><td>Crítico: diciembre se llena en septiembre</td></tr>
+          <tr><td><strong>Sesión fotográfica</strong></td><td>1 semana</td><td class="td-accent">2–3 semanas</td><td>Bajo (eventos cortos, mayor flexibilidad)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="art__definition">
+      <span class="art__definition-term">Definición · Temporada alta vs. temporada baja en eventos CDMX</span>
+      <p>La temporada alta de eventos en la Ciudad de México concentra los meses de marzo, mayo, octubre, noviembre y diciembre, con saturación promedio del 80–95% del inventario disponible los fines de semana. La temporada baja (julio, agosto, segunda mitad de enero) opera al 30–50% de capacidad. La diferencia tiene impacto directo en disponibilidad, tarifa y márgenes de negociación con proveedores.</p>
+    </div>
+  </section>
+
+  <section class="art__section" id="mes-a-mes">
+    <h2 class="art__h2">Calendario mes a mes en CDMX y Edomex</h2>
+
+    <h3>Enero — Mes de reset</h3>
+    <p>Demanda baja después del pico decembrino. Eventos típicos: cumpleaños de inicio de año, picnics familiares aprovechando clima seco, sesiones de fotografía editorial, kick-offs corporativos. Uno de los mejores meses para bodas íntimas: clima estable, costos bajos, alta disponibilidad. <strong>Anticipación segura: 3–4 semanas.</strong></p>
+
+    <h3>Febrero — Bodas pre-primavera + San Valentín</h3>
+    <p>Demanda media-alta. El <strong>Día de San Valentín</strong> satura rápido para picnics románticos y pedidas de mano. Los sábados de febrero comienzan a llenarse para bodas pre-primaverales en jardines del sur (Tlalpan, Xochimilco, Coyoacán). <strong>Anticipación segura: 6–8 semanas para sábados; mínimo dos semanas para San Valentín si quieres modelo premium.</strong></p>
+
+    <h3>Marzo — Inicio de temporada alta</h3>
+    <p>Demanda alta. Bodas, XV años, primeras comuniones, eventos de fin de cuaresma. Los sábados de marzo se reservan con tres meses o más de anticipación. Clima ideal: días templados, noches frescas, sin lluvia. <strong>Anticipación segura: 10–12 semanas. Periodos críticos: todos los sábados.</strong></p>
+
+    <h3>Abril — Pico pre-Semana Santa y bodas</h3>
+    <p>Demanda muy alta antes de Semana Santa, baja durante (la ciudad se vacía), recupera al regreso. Los fines de semana previos a Semana Santa están sobre-reservados. Bodas en hacienda dominan. <strong>Anticipación segura: 10–14 semanas. Evitar Semana Santa si esperas mucha asistencia local.</strong></p>
+
+    <h3>Mayo — Día de las Madres + graduaciones</h3>
+    <p>Demanda muy alta. El <strong>Día de las Madres</strong> y los fines de semana adyacentes son críticos para comidas familiares. Comienzan las graduaciones universitarias. Clima cálido a mediodía, ideal para vespertinos y nocturnos. <strong>Anticipación segura: 8–10 semanas. Periodos críticos: ventana del Día de las Madres y todos los sábados.</strong></p>
+
+    <h3>Junio — Bodas + inicio de lluvias</h3>
+    <p>Demanda alta para bodas, media para resto. Comienzan las lluvias vespertinas (frecuencia incrementada a partir de la segunda quincena). Es el mes donde el plan B por clima debe contratarse desde el día uno. Eventos corporativos de cierre de semestre. <strong>Anticipación segura: 8–10 semanas. Importante: reservar plan B simultáneamente.</strong></p>
+
+    <h3>Julio — Valle relativo</h3>
+    <p>Demanda media-baja. La ciudad pierde habitantes por vacaciones, varios fines de semana son discretos. Es uno de los mejores meses para reuniones familiares con tarifa estándar. Eventos en Valle de Bravo aumentan porque las casas de descanso se activan. <strong>Anticipación segura: 4–6 semanas. Mejor oportunidad de mes para clientes flexibles.</strong></p>
+
+    <h3>Agosto — Mes más tranquilo del año</h3>
+    <p>Demanda baja. Periodo vacacional, eventos sociales escasos en CDMX, actividad en destinos de descanso. Para cliente flexible y con clima favorable, agosto ofrece máxima disponibilidad y mejor servicio. Eventos corporativos de regreso al fin del mes. <strong>Anticipación segura: 3–4 semanas. Mejor mes del año para reservar con poca anticipación.</strong></p>
+
+    <h3>Septiembre — Recuperación y mes patrio</h3>
+    <p>Demanda en alza. Las <strong>fiestas patrias</strong> generan demanda específica de eventos temáticos mexicanos. Corporativos de inicio de Q4 retoman fuerza. Bodas regresan tras vacaciones. Clima caprichoso con lluvias intermitentes. <strong>Anticipación segura: 6–8 semanas. Reservar con anticipación para fiestas patrias si quieres mobiliario decorado en tema mexicano.</strong></p>
+
+    <h3>Octubre — Temporada alta de bodas</h3>
+    <p>Demanda muy alta. Mes pico para bodas en CDMX: clima estable post-lluvias, días templados, noches frescas perfectas. Todos los sábados se reservan con más de cuatro meses de anticipación. Corporativos de cierre de año empiezan a programarse. <strong>Anticipación segura: 12–16 semanas. Periodos críticos: todos los sábados.</strong></p>
+
+    <h3>Noviembre — Pico bodas + Día de Muertos</h3>
+    <p>Demanda muy alta. Continúa temporada alta de bodas. El <strong>Día de Muertos</strong> genera eventos temáticos y altares ofrenda. Corporativos de cierre saturan los días laborables. Es el mes donde los modelos premium se agotan primero. <strong>Anticipación segura: 12–16 semanas. Premium con cuatro meses o más si la quieres asegurada.</strong></p>
+
+    <h3>Diciembre — Posadas y cierres</h3>
+    <p>Demanda crítica. La saturación más alta del año. Posadas familiares, cierres empresariales, eventos navideños temáticos, fiestas privadas decembrinas. El sector opera arriba del 95% de capacidad durante las semanas centrales del mes. <strong>Anticipación segura: 14–18 semanas. Posadas en septiembre, cierres corporativos en octubre. Recargos de temporada del 10–25% en las últimas dos semanas.</strong></p>
+  </section>
+
+  <figure class="art__figure">
+    <img
+      src="/img/mesa-picnic-boda-jardin-atardecer-03.webp"
+      alt="Boda en jardín de CDMX en temporada alta con mesas picnic al atardecer"
+      width="900" height="500"
+      loading="lazy"
+    />
+    <figcaption>Boda en jardín privado de Coyoacán durante el pico de otoño. Octubre y noviembre son los meses pico de bodas en CDMX; reservar mobiliario con cuatro meses o más asegura disponibilidad de línea Premium.</figcaption>
+  </figure>
+
+  <section class="art__section" id="fechas-criticas">
+    <h2 class="art__h2">Los periodos críticos del año en una sola tabla</h2>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Periodo</th>
+            <th>Tipo dominante</th>
+            <th class="th-accent">Saturación</th>
+            <th>Reservar con</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Día de San Valentín</strong></td><td>Picnics románticos, pedidas</td><td class="td-accent">Muy alta (premium agotado)</td><td>4–6 semanas de anticipación</td></tr>
+          <tr><td><strong>Sábados de marzo</strong></td><td>Bodas, inicio temporada alta</td><td class="td-accent">Alta</td><td>10–12 semanas</td></tr>
+          <tr><td><strong>Semana Santa</strong></td><td>Ciudad vacía</td><td class="td-accent">Baja (evitar para invitados locales)</td><td>No aplica</td></tr>
+          <tr><td><strong>Día de las Madres</strong></td><td>Comidas familiares</td><td class="td-accent">Muy alta</td><td>8–10 semanas</td></tr>
+          <tr><td><strong>Sábados de mayo</strong></td><td>Bodas, XV años, graduaciones</td><td class="td-accent">Alta</td><td>8–10 semanas</td></tr>
+          <tr><td><strong>Fiestas patrias</strong></td><td>Eventos temáticos mexicanos</td><td class="td-accent">Alta</td><td>6–8 semanas</td></tr>
+          <tr><td><strong>Sábados de octubre</strong></td><td>Bodas pico de otoño</td><td class="td-accent">Crítica (premium agotado pronto)</td><td>12–16 semanas</td></tr>
+          <tr><td><strong>Día de Muertos</strong></td><td>Eventos temáticos ofrenda</td><td class="td-accent">Alta</td><td>8–10 semanas</td></tr>
+          <tr><td><strong>Sábados de noviembre</strong></td><td>Bodas pico, corporativos cierre</td><td class="td-accent">Crítica</td><td>12–16 semanas</td></tr>
+          <tr><td><strong>Semanas de posadas</strong></td><td>Posadas, cierres empresariales</td><td class="td-accent">Crítica (recargo 10–25%)</td><td>14–18 semanas</td></tr>
+          <tr><td><strong>Navidad</strong></td><td>Cenas familiares íntimas</td><td class="td-accent">Muy alta (logística complicada)</td><td>12–14 semanas</td></tr>
+          <tr><td><strong>Fin de año</strong></td><td>Fiestas privadas decembrinas</td><td class="td-accent">Crítica (cierre temprano de servicios)</td><td>12–14 semanas</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="art__section" id="estrategia">
+    <h2 class="art__h2">Estrategia de reserva para optimizar costo y disponibilidad</h2>
+
+    <p>La diferencia entre reservar bien y reservar mal puede ser de hasta <strong>30% en el costo total</strong> y la diferencia entre tener el modelo premium o conformarse con el básico disponible. Estos son los seis principios operativos:</p>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>📅 1. Reserva la fecha antes que el modelo</h3>
+        <p>Algunos proveedores (incluido MESPIC) reservan fecha con anticipo bajo y permiten ajustar el modelo definitivo más cerca del evento. Esto asegura disponibilidad sin cerrar decisiones estéticas.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>💰 2. Prevé recargos en temporada pico</h3>
+        <p>Octubre, noviembre y diciembre tienen recargos de temporada del 10–25%. Reservar con cuatro meses o más de anticipación bloquea precio base sin recargo.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>🔁 3. Flexibilidad de fecha = mejor precio</h3>
+        <p>Si tu fecha es flexible (cumpleaños, baby shower, eventos no rituales), elegir martes a jueves o domingo abre tarifas más bajas y disponibilidad mayor.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>📦 4. Confirma el paquete completo</h3>
+        <p>Reservar mesa + bancas + lounge + decoración con un solo proveedor evita conflictos logísticos y suele tener mejor precio total que armar piezas sueltas. Ver <a href="/paquetes/">paquetes</a>.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>📞 5. Confirma un mes antes</h3>
+        <p>Una reserva sin confirmación previa puede ser reasignada. Llama o escribe cuatro semanas antes para confirmar mobiliario, horarios y configuración final.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>📋 6. Planea con contrato escrito</h3>
+        <p>El correo no es contrato. Solicita confirmación firmada con fecha, horarios, costo, modelos y política de cancelación. Es protección para ambas partes.</p>
+      </div>
+    </div>
+
+    <div class="art__takeaway">
+      <span class="art__takeaway-label">Las 5 reglas no negociables</span>
+      <ul>
+        <li>Para sábados pico (octubre–diciembre), reservar con cuatro meses o más de anticipación.</li>
+        <li>Para bodas en venue popular, primero el venue, después el mobiliario.</li>
+        <li>Plan B por clima entre junio y septiembre, contratado desde el día uno.</li>
+        <li>Confirmación final con todos los proveedores un mes antes del evento.</li>
+        <li>Walk-through en el venue a la hora exacta del evento — sin excepción.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="art__cta-inline">
+    <h3>Reserva tu fecha antes de que se llene</h3>
+    <p>Si ya sabes que tu evento es en temporada alta (marzo, mayo, octubre, noviembre, diciembre), reservar con anticipación es la diferencia entre tener el modelo Premium garantizado o conformarse con lo disponible. Cotización en menos de 30 minutos y reserva con anticipo accesible.</p>
+    <div class="art__cta-inline-btns">
+      <a href="https://wa.me/5564328954?text=Hola%2C+quiero+reservar+mobiliario+para+mi+evento." target="_blank" rel="noopener" class="art__btn art__btn--wa" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+        Reservar fecha por WhatsApp
+      </a>
+      <a href="/cotizar/" class="art__btn art__btn--outline">Formulario de cotización →</a>
+    </div>
+  </div>
+
+  <section class="art__section" id="faqs">
+    <h2 class="art__h2">Preguntas frecuentes sobre reserva y disponibilidad</h2>
+
+    <div class="art__faqs">
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuánto antes debo reservar el mobiliario para mi boda en CDMX?</summary>
+        <p class="art__faq-a">Para bodas en sábados de octubre, noviembre o marzo, lo óptimo es <strong>seis a nueve meses</strong> de anticipación. Para sábados de fechas regulares, tres a cuatro meses. Para microbodas o bodas íntimas en días laborables o domingo, seis a ocho semanas funcionan en la mayoría de los casos. La línea Premium se agota antes que la Estándar en cualquier periodo pico.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué pasa si reservo y luego cambio la fecha?</summary>
+        <p class="art__faq-a">MESPIC permite reagendar la fecha sin penalización si se hace con al menos un mes de anticipación y la nueva fecha tiene disponibilidad equivalente. Cambios dentro de las cuatro semanas previas quedan sujetos a disponibilidad y pueden implicar ajuste de costo según temporada de la nueva fecha. El contrato detalla cada caso. Para eventos en temporadas pico recomendamos confirmar la fecha antes de pagar el anticipo.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Hay recargo por reservar a último momento?</summary>
+        <p class="art__faq-a">No hay recargo por urgencia en temporadas regulares: si tienes evento en una semana y hay disponibilidad, el precio es estándar. Sí hay recargo de temporada en semanas decembrinas y posibles recargos logísticos si la entrega implica desplazamientos no estándar o ventana horaria muy estrecha. Estos casos se cotizan transparentemente caso por caso.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuál es la mejor temporada para una boda al aire libre en CDMX?</summary>
+        <p class="art__faq-a">Las mejores ventanas climáticas son <strong>enero–marzo</strong> (frío seco, sin lluvia, atardeceres dramáticos) y <strong>octubre–noviembre</strong> (post-lluvias, clima estable, días templados y noches frescas). Octubre y noviembre son los meses pico con la atmósfera más buscada, pero también los más saturados y caros. Enero y febrero ofrecen mejor relación calidad-disponibilidad-precio para parejas con flexibilidad.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿En agosto realmente hay menos eventos?</summary>
+        <p class="art__faq-a">Sí, agosto es estadísticamente el mes con menor volumen de eventos sociales en CDMX por el periodo vacacional. Eventos corporativos también disminuyen. Para clientes flexibles, agosto ofrece máxima disponibilidad, tarifas estándar sin recargo y la atención más personalizada del equipo. La contrapartida es que parte de tus invitados puede estar fuera de la ciudad.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Puedo reservar fecha sin tener todos los detalles del evento listos?</summary>
+        <p class="art__faq-a">Sí. Para reservar fecha basta confirmar tipo de evento, ubicación tentativa y rango estimado de invitados. Los detalles finales (modelo exacto, configuración, decoración) se confirman un mes antes. Esta política es útil para bodas con fecha cerrada pero venue todavía en evaluación, o para corporativos con presupuesto aprobado y diseño en proceso.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuándo cierra la disponibilidad para eventos decembrinos?</summary>
+        <p class="art__faq-a">Históricamente, los sábados centrales de diciembre cierran su disponibilidad de mobiliario línea Premium a fines de septiembre o principios de octubre. La línea Estándar suele cerrar tres a cuatro semanas después. Para garantizar disponibilidad de cierre corporativo decembrino, recomendamos reservar antes de que termine septiembre del mismo año.</p>
+      </details>
+
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Lecturas relacionadas para tu planeación</h2>
+    <div class="art__nextsteps">
+      <a href="/blog/como-organizar-evento-al-aire-libre-cdmx-guia-completa/" class="art__nextstep-card">
+        <span class="art__nextstep-tag">Pillar</span>
+        <span class="art__nextstep-title">Cómo organizar un evento al aire libre en CDMX</span>
+        <span class="art__nextstep-desc">Venues, mobiliario, presupuesto y plan B en una sola guía.</span>
+      </a>
+      <a href="/blog/checklist-90-dias-antes-evento-aire-libre/" class="art__nextstep-card">
+        <span class="art__nextstep-tag">Cronograma</span>
+        <span class="art__nextstep-title">Checklist 90 días antes del evento</span>
+        <span class="art__nextstep-desc">Tareas por bloque temporal hasta el día del evento.</span>
+      </a>
+      <a href="/blog/cuanto-cuesta-rentar-mesas-picnic-cdmx/" class="art__nextstep-card">
+        <span class="art__nextstep-tag">Precios</span>
+        <span class="art__nextstep-title">¿Cuánto cuesta rentar mesas picnic?</span>
+        <span class="art__nextstep-desc">Rangos por modelo, paquetes y factores que mueven el precio.</span>
+      </a>
+    </div>
+  </section>
+
+  <div class="art__about">
+    <div class="art__about-badge">MESPIC</div>
+    <div>
+      <h3>Patrones documentados temporada tras temporada</h3>
+      <p>Las recomendaciones de este calendario se basan en los registros internos de reservas, ocupación y cancelaciones de MESPIC a lo largo de múltiples temporadas. No son estimaciones genéricas: son lo que vemos cada año en las temporadas reales de la Ciudad de México y Edomex. Si tu fecha no encaja en el patrón, podemos asesorarte sobre opciones alternativas (cambio de día, mobiliario distinto, configuración compacta) que abran disponibilidad.</p>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">Galería: eventos en distintas temporadas del año</h2>
+    <div class="art__gallery-strip">
+      <img src="/img/mesa-picnic-boda-jardin-atardecer-03.webp" alt="Boda al atardecer en otoño con mesas picnic en jardín CDMX" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-fiesta-infantil-parque.webp" alt="Fiesta infantil en parque público de CDMX con mesas picnic" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-evento-corporativo-exterior.webp" alt="Evento corporativo al aire libre en Edomex con mobiliario MESPIC" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-cena-romantica-atardecer.webp" alt="Picnic romántico con mesa picnic decorada al atardecer" loading="lazy" width="350" height="220" />
+    </div>
+  </section>
+
+  <div class="art__cta-final">
+    <div class="art__cta-final-inner">
+      <h2>Tu fecha, reservada, con la mejor disponibilidad</h2>
+      <p>Patrones documentados temporada tras temporada. Te ayudamos a entender la mejor estrategia de reserva según tu fecha, tipo de evento y presupuesto. Sin compromiso, respuesta en menos de 30 minutos.</p>
+      <div class="art__cta-final-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+reservar+mobiliario+para+mi+evento." target="_blank" rel="noopener" class="art__btn art__btn--wa art__btn--lg" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          Reservar fecha
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--primary art__btn--lg">Cotizar mi evento →</a>
+        <a href="/paquetes/" class="art__btn art__btn--ghost art__btn--lg">Ver paquetes</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</BlogLayout>

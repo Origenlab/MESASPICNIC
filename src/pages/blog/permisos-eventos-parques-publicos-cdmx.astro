@@ -1,0 +1,465 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import '../../styles/blog-article.css';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Permisos para Eventos en Parques y Espacios Públicos de la CDMX",
+  "description": "Guía operativa de permisos para eventos en parques públicos de la Ciudad de México: alcaldías, Chapultepec, costos, tiempos y documentación.",
+  "image": "https://mesaspicnic.com/img/mesa-picnic-fiesta-infantil-parque.webp",
+  "inLanguage": "es-MX",
+  "wordCount": 3500,
+  "author": { "@type": "Organization", "name": "MESPIC", "url": "https://mesaspicnic.com/nosotros/" },
+  "publisher": { "@type": "Organization", "name": "MESPIC", "logo": { "@type": "ImageObject", "url": "https://mesaspicnic.com/icon.png" } },
+  "mainEntityOfPage": "https://mesaspicnic.com/blog/permisos-eventos-parques-publicos-cdmx/",
+  "about": ["Permisos eventos CDMX", "Parques públicos", "Alcaldías CDMX", "SEDEMA Chapultepec"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Cuándo necesito permiso para un evento en un parque público de CDMX?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cuando el evento privado tiene más de 15 personas, mobiliario adicional, sonido amplificado, servicio de alimentos, anclaje a estructuras del parque, o se trata de producción audiovisual profesional. Un picnic familiar discreto sin mobiliario no requiere permiso." } },
+    { "@type": "Question", "name": "¿Cuánto cuesta el permiso para un evento privado en un parque de CDMX?",
+      "acceptedAnswer": { "@type": "Answer", "text": "En parques de alcaldía: $1,500–$8,000 MXN según superficie y horario. En Bosque de Chapultepec (SEDEMA): $3,000–$12,000 MXN más fianza reembolsable de $5,000–$15,000 MXN. En Viveros de Coyoacán (SEMARNAT): proceso federal especial." } },
+    { "@type": "Question", "name": "¿Cuánto tarda el trámite del permiso?",
+      "acceptedAnswer": { "@type": "Answer", "text": "En alcaldías: 15–30 días hábiles. SEDEMA (Chapultepec): 30–45 días. SEMARNAT (Viveros): 30–60 días. INAH (zonas arqueológicas): 45–90 días. La documentación completa desde el inicio reduce el tiempo entre 7 y 14 días." } },
+    { "@type": "Question", "name": "¿Se puede hacer una boda en el Bosque de Chapultepec?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí, en áreas específicas de la Segunda y Tercera Sección, con permiso previo de SEDEMA tramitado con 30–45 días de anticipación. Capacidad limitada a 80–200 personas. Restricciones de horario y sonido. Costo del permiso entre $5,000 y $12,000 MXN más fianza." } },
+    { "@type": "Question", "name": "¿Qué pasa si hago el evento sin permiso?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Riesgo de retiro forzado por personal de la alcaldía o policía auxiliar, multa administrativa de $5,000 a $30,000 MXN, posible queja vecinal escalada, y negativa de permisos futuros. Para eventos documentados en redes sociales, el riesgo es alto." } }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mesaspicnic.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mesaspicnic.com/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Permisos para Eventos en Parques de CDMX" }
+  ]
+};
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo tramitar un permiso para evento en parque público de CDMX",
+  "description": "Proceso paso a paso para obtener autorización de evento privado en parque público de la Ciudad de México.",
+  "step": [
+    { "@type": "HowToStep", "name": "Identificar el parque y la autoridad", "text": "Verificar si el parque pertenece a la alcaldía, a SEDEMA (Chapultepec) o a SEMARNAT (Viveros). Esto define a quién dirigirse." },
+    { "@type": "HowToStep", "name": "Acudir a la dirección correspondiente", "text": "Visitar la Dirección de Servicios Urbanos o Cultura de la alcaldía con propuesta del evento." },
+    { "@type": "HowToStep", "name": "Presentar documentación", "text": "INE, descripción del evento, layout, número de invitados, fecha, horario, lista de proveedores y carta de responsabilidad." },
+    { "@type": "HowToStep", "name": "Pagar derechos", "text": "Tras la respuesta favorable (10–25 días hábiles), pagar los derechos en tesorería de la alcaldía." },
+    { "@type": "HowToStep", "name": "Recibir oficio de autorización", "text": "El oficio se presenta el día del evento. Sin él, el personal del parque puede suspender la actividad." }
+  ]
+};
+---
+
+<BlogLayout
+  title="Permisos para Eventos en Parques Públicos de la CDMX: Guía Operativa | MESPIC"
+  description="Guía profesional para tramitar permisos de eventos en parques públicos de la CDMX: Chapultepec, Viveros, parques de alcaldía. Costos, tiempos, autoridades, documentación y alternativas privadas."
+  ogImage="/img/mesa-picnic-fiesta-infantil-parque.webp"
+  canonical="https://mesaspicnic.com/blog/permisos-eventos-parques-publicos-cdmx/"
+  heroTitle="Permisos para Eventos en Parques y Espacios Públicos de la CDMX"
+  heroBadge="Blog · Trámites y normativa"
+  heroDescription="Cuándo se necesita permiso, ante qué autoridad se tramita, cuánto cuesta y cuánto tarda. Guía operativa para producir eventos en parques de la Ciudad de México sin sorpresas legales ni administrativas."
+  heroSeo1="Organizar un evento en un parque público de la Ciudad de México es una de las opciones más bellas y económicas para celebraciones íntimas, picnics familiares, cumpleaños infantiles, sesiones fotográficas y activaciones de marca. También es la opción que más rápidamente se complica si no se tramita correctamente el permiso correspondiente. Cada año, decenas de eventos se interrumpen o cancelan en CDMX porque los organizadores asumieron — incorrectamente — que un espacio público es de uso libre incluso para eventos privados. Esta guía aclara, con información operativa, cuándo se requiere permiso, qué autoridad lo otorga, cuánto cuesta y cuánto tarda el proceso."
+  heroSeo2="MESPIC coordina logística con autoridades de parques y espacios públicos para clientes desde nuestros inicios y conoce al detalle los procesos de las principales alcaldías y áreas naturales protegidas de la ciudad. Este documento ordena esa información de forma accesible para quien planea su primer evento al aire libre y para quien organiza producciones recurrentes en espacios urbanos. Cubrimos Bosque de Chapultepec (SEDEMA), parques de las 16 alcaldías, espacios federales como Viveros de Coyoacán (SEMARNAT), jardines emblemáticos y alternativas privadas cuando el permiso no es viable. Regla operativa: cualquier evento privado en espacio público con mobiliario, sonido o servicio de alimentos requiere autorización formal."
+  heroMetrics={[
+    { value: "16", label: "Alcaldías de CDMX cubiertas" },
+    { value: "15–45 días", label: "Tiempo típico de trámite" },
+    { value: "$1,500–$8,000", label: "Rango de costos en MXN" },
+  ]}
+  breadcrumbs={[
+    { label: "Inicio", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Permisos para Eventos en Parques de CDMX" },
+  ]}
+  sidebarProducts={[
+    { name: "Mesa Estándar", cap: "Eventos en parques", href: "/catalogo/mesa-picnic-estandar/", img: "/img/mesa-picnic-fiesta-infantil-parque.webp" },
+    { name: "Mesa Infantil", cap: "Parques · 6 niños", href: "/catalogo/mesa-picnic-infantil/", img: "/img/mesa-picnic-infantil-parque-regalos.webp" },
+    { name: "Mesa Plegable", cap: "Logística móvil", href: "/catalogo/mesa-picnic-plegable/", img: "/img/renta-mesa-picnic-madera-pino-cdmx-01.avif" },
+  ]}
+  sidebarArticles={[
+    { title: "Cómo organizar un evento al aire libre en CDMX", meta: "Guía · 14 min", href: "/blog/como-organizar-evento-al-aire-libre-cdmx-guia-completa/", img: "/img/mesa-picnic-boda-jardin-atardecer-01.webp" },
+    { title: "Fiestas infantiles en parques CDMX", meta: "Infantiles · 7 min", href: "/blog/fiestas-infantiles-metepec-cumpleanos/", img: "/img/mesa-picnic-fiesta-infantil-parque.webp" },
+    { title: "Sesiones fotográficas mesas picnic y producciones", meta: "Producción · 8 min", href: "/blog/sesiones-fotograficas-mesas-picnic-producciones/", img: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
+  ]}
+  sidebarServices={[
+    { name: "Reuniones Familiares", desc: "Picnics · Cumpleaños", href: "/servicios/reuniones-familiares/" },
+    { name: "Fiestas Infantiles", desc: "Cumpleaños · Baby shower", href: "/servicios/fiestas-infantiles/" },
+    { name: "Sesiones Fotográficas", desc: "Producciones · Editoriales", href: "/servicios/sesiones-fotograficas/" },
+    { name: "Picnic Romántico", desc: "Pedidas · Aniversarios", href: "/servicios/picnic-romantico/" },
+  ]}
+  sidebarCtaTitle="¿Necesitas asesoría con permisos?"
+  sidebarCtaText="Orientamos sin costo sobre el proceso de permiso según parque y tipo de evento. Cotización de mobiliario en menos de 30 minutos."
+  sidebarCtaWa="Hola%2C+necesito+asesor%C3%ADa+sobre+permisos+para+un+evento+en+un+parque+de+CDMX."
+  sidebarServicesTitle="Servicios relacionados"
+>
+
+<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
+
+<div class="art">
+
+  <div class="art__author">
+    <div class="art__author-badge">M</div>
+    <div class="art__author-meta">
+      <span class="art__author-name">Coordinación operativa MESPIC</span>
+      <span class="art__author-role">Producción de eventos en parques públicos de CDMX con operación propia</span>
+      <span class="art__author-stamp">Tiempo de lectura: 12 min · Vigente para alcaldías CDMX</span>
+    </div>
+  </div>
+
+  <p class="art__lead">
+    Un permiso de parque no es burocracia inútil: es el documento que protege a tu evento del retiro forzado por personal de la alcaldía, la queja vecinal escalada, la suspensión por protección civil o la multa administrativa. También es lo que distingue una producción profesional de una improvisada. Esta guía ordena el panorama de permisos de eventos en espacios públicos de CDMX con la información operativa que normalmente requiere tres llamadas a distintas autoridades para conseguir.
+  </p>
+
+  <aside class="art__tldr" aria-label="Resumen ejecutivo">
+    <span class="art__tldr-label">Resumen ejecutivo · 30 segundos</span>
+    <ul>
+      <li><strong>Más de 15 personas + mobiliario + sonido = permiso.</strong> La regla simple para saber si aplica.</li>
+      <li><strong>Cuatro autoridades posibles:</strong> alcaldía (95% de los casos), SEDEMA (Chapultepec), SEMARNAT (Viveros), INAH (patrimonio).</li>
+      <li><strong>Tiempo de trámite:</strong> 15–45 días según autoridad. Plan tu evento para 45+ días después de iniciar el trámite.</li>
+      <li><strong>Costo:</strong> $1,500–$8,000 MXN en alcaldía. Más fianza reembolsable en Chapultepec.</li>
+      <li><strong>Sin permiso, hay riesgo real</strong> de suspensión, multa de $5,000–$30,000 MXN y bloqueo de futuros trámites.</li>
+    </ul>
+  </aside>
+
+  <nav class="art__toc" aria-label="Tabla de contenidos">
+    <p class="art__toc-title">En esta guía</p>
+    <ol>
+      <li><a href="#cuando-necesitas">Cuándo necesitas permiso</a></li>
+      <li><a href="#autoridades">Las 4 autoridades que otorgan permisos</a></li>
+      <li><a href="#chapultepec">Bosque de Chapultepec: el caso especial</a></li>
+      <li><a href="#alcaldias">Permisos en alcaldías: proceso estándar</a></li>
+      <li><a href="#documentacion">Documentación que casi siempre piden</a></li>
+      <li><a href="#cobertura">Qué cubre y qué no cubre el permiso</a></li>
+      <li><a href="#alternativas">Alternativas privadas si el permiso no es viable</a></li>
+      <li><a href="#faqs">Preguntas frecuentes</a></li>
+    </ol>
+  </nav>
+
+  <section class="art__section" id="cuando-necesitas">
+    <h2 class="art__h2">¿Cuándo necesitas permiso?</h2>
+
+    <p>La respuesta corta es: <strong>casi siempre que tu evento exceda lo que se considera "uso recreativo normal" del espacio público</strong>. Estos son los criterios concretos que aplican autoridades de alcaldía, SEDEMA y SEMARNAT en CDMX:</p>
+
+    <ul>
+      <li><strong>Más de 15 personas reunidas</strong> en un mismo punto con propósito de evento privado</li>
+      <li><strong>Mobiliario adicional al del parque:</strong> mesas, sillas, carpas, tarimas, decoración</li>
+      <li><strong>Sonido amplificado</strong> de cualquier tipo (en algunas alcaldías incluso bocinas portátiles)</li>
+      <li><strong>Servicio de alimentos</strong> profesional o catering, incluidos food trucks</li>
+      <li><strong>Bebidas alcohólicas:</strong> en todos los espacios públicos requiere permiso específico</li>
+      <li><strong>Decoración con anclaje:</strong> globos atados a árboles, telas amarradas, estructuras</li>
+      <li><strong>Producción audiovisual profesional:</strong> cámaras, luces, talento, vestuario</li>
+      <li><strong>Actividades comerciales:</strong> ventas, activaciones de marca, promoción</li>
+    </ul>
+
+    <div class="art__definition">
+      <span class="art__definition-term">Definición · Evento privado en espacio público</span>
+      <p>Cualquier reunión convocada por un particular u organización con propósito específico (celebración, activación, sesión audiovisual) que ocupa un espacio de uso recreativo común con elementos no permanentes. A diferencia del uso recreativo libre, requiere autorización formal porque limita temporalmente el acceso del resto de los usuarios y modifica el uso convencional del espacio.</p>
+    </div>
+
+    <p>Un picnic familiar con mantel sobre el pasto, comida en hieleras, sin mobiliario adicional y con menos de 15 personas usualmente no requiere permiso. Una celebración con 30 invitados, 5 mesas picnic, decoración y bocina sí lo requiere — sin excepción, sin importar que el espacio sea "público".</p>
+  </section>
+
+  <section class="art__section" id="autoridades">
+    <h2 class="art__h2">Las cuatro autoridades que otorgan permisos en CDMX</h2>
+
+    <p>No hay una sola ventanilla. La autoridad depende del espacio. Conocer cuál te corresponde ahorra semanas de gestión:</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Autoridad</th>
+            <th>Espacios que administra</th>
+            <th class="th-accent">Tiempo trámite</th>
+            <th>Vía de gestión</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Alcaldías de CDMX</strong></td><td>Parques de barrio, deportivos, jardines</td><td class="td-accent">15–30 días</td><td>Dirección de Servicios Urbanos / Cultura</td></tr>
+          <tr><td><strong>SEDEMA — Áreas Naturales</strong></td><td>Bosque de Chapultepec (1ª–4ª sección)</td><td class="td-accent">30–45 días</td><td>Sistema de Áreas Naturales Protegidas (SANPC)</td></tr>
+          <tr><td><strong>SEMARNAT</strong></td><td>Viveros de Coyoacán (federal)</td><td class="td-accent">30–60 días</td><td>Dirección General de Vida Silvestre</td></tr>
+          <tr><td><strong>INAH</strong></td><td>Zonas arqueológicas y patrimonio</td><td class="td-accent">45–90 días</td><td>Trámite federal, no para eventos sociales</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Para el 95% de los eventos sociales y corporativos al aire libre la autoridad relevante es la alcaldía. Solo Chapultepec y Viveros tienen procesos especiales por su carácter de áreas naturales protegidas.</p>
+  </section>
+
+  <figure class="art__figure">
+    <img
+      src="/img/mesa-picnic-fiesta-infantil-parque.webp"
+      alt="Fiesta infantil en parque público de CDMX con mesas picnic infantiles y decoración temática"
+      width="900" height="500"
+      loading="lazy"
+    />
+    <figcaption>Cumpleaños infantil con permiso de alcaldía en parque de Coyoacán. Mesas picnic infantiles MESPIC, decoración temática y delimitación clara del área autorizada.</figcaption>
+  </figure>
+
+  <section class="art__section" id="chapultepec">
+    <h2 class="art__h2">Bosque de Chapultepec: el caso especial</h2>
+
+    <p>Chapultepec es el parque urbano más visitado de Latinoamérica y tiene un régimen propio bajo administración de SEDEMA y del Sistema de Áreas Naturales Protegidas de la Ciudad de México (SANPC). Cada sección tiene reglas distintas:</p>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>🌳 Primera Sección</h3>
+        <p>La más restringida. Áreas como Lago Mayor, Casa del Lago y Audiorama autorizan únicamente eventos culturales avalados. Eventos privados sociales se rechazan habitualmente. Sesiones fotográficas requieren permiso específico de SEDEMA.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>🌲 Segunda Sección</h3>
+        <p>Más flexible para eventos sociales medianos. Áreas alrededor del Papalote y zonas administrativas pueden autorizar eventos de hasta 80 personas con mobiliario y catering. Trámite ante SEDEMA con 30–45 días.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>🍃 Tercera Sección</h3>
+        <p>La más abierta a eventos privados y producciones audiovisuales. Áreas como El Rollo, Cárcamo y adyacentes pueden recibir eventos de hasta 200 personas. Costo y tiempo similares a Segunda Sección.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>🌿 Cuarta Sección</h3>
+        <p>Nueva sección abierta, en proceso de definir política de eventos. Hasta hoy se han autorizado activaciones de marca puntuales. Para eventos sociales personales todavía no es la opción más predecible.</p>
+      </div>
+    </div>
+
+    <div class="art__takeaway">
+      <span class="art__takeaway-label">Costos referenciales Chapultepec</span>
+      <ul>
+        <li>Permiso de uso de espacio: $3,000–$8,000 MXN según superficie y horario.</li>
+        <li>Fianza de limpieza y restitución: $5,000–$15,000 MXN reembolsable.</li>
+        <li>Permiso de música amplificada: solicitud adicional, sujeta a evaluación.</li>
+        <li>Cobertura de seguro RC: requerida para eventos de más de 50 personas.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="art__section" id="alcaldias">
+    <h2 class="art__h2">Permisos en alcaldías: el proceso estándar</h2>
+
+    <p>Cada una de las 16 alcaldías de la CDMX tiene sus particularidades, pero el flujo general es similar. Estos son los cinco pasos típicos del proceso:</p>
+
+    <ol>
+      <li><strong>Identificar el parque exacto</strong> y verificar que pertenece a la alcaldía (no a la federación)</li>
+      <li><strong>Acudir a la Dirección de Servicios Urbanos o de Cultura</strong> con propuesta del evento por escrito</li>
+      <li><strong>Presentar documentación:</strong> INE del solicitante, descripción del evento, layout, número de invitados, fecha, horario, lista de proveedores, carta responsiva</li>
+      <li><strong>Recibir respuesta</strong> en 10–25 días hábiles según la alcaldía</li>
+      <li><strong>Pagar derechos</strong> en tesorería ($1,500–$5,000 MXN típicos) y recibir oficio autorización para portar el día del evento</li>
+    </ol>
+
+    <p>El tiempo y la rigurosidad varían enormemente entre alcaldías. Esta tabla resume el perfil de las más activas en eventos al aire libre:</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Alcaldía</th>
+            <th>Tiempo trámite</th>
+            <th class="th-accent">Costo aproximado</th>
+            <th>Apertura a eventos privados</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Coyoacán</strong></td><td>15–25 días</td><td class="td-accent">$2,500–$5,500</td><td>Alta para eventos culturales/familiares</td></tr>
+          <tr><td><strong>Cuauhtémoc</strong></td><td>20–35 días</td><td class="td-accent">$3,000–$7,000</td><td>Media, requiere justificación</td></tr>
+          <tr><td><strong>Benito Juárez</strong></td><td>15–30 días</td><td class="td-accent">$2,000–$5,000</td><td>Alta para sociales y corporativos</td></tr>
+          <tr><td><strong>Miguel Hidalgo</strong></td><td>20–40 días</td><td class="td-accent">$3,500–$8,000</td><td>Media-alta, parques selectos</td></tr>
+          <tr><td><strong>Álvaro Obregón</strong></td><td>20–30 días</td><td class="td-accent">$2,000–$4,500</td><td>Alta para sociales</td></tr>
+          <tr><td><strong>Tlalpan</strong></td><td>15–25 días</td><td class="td-accent">$1,800–$4,000</td><td>Alta, sobre todo eventos familiares</td></tr>
+          <tr><td><strong>Iztapalapa</strong></td><td>20–30 días</td><td class="td-accent">$1,500–$4,000</td><td>Alta para sociales y comunitarios</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="art__section" id="documentacion">
+    <h2 class="art__h2">Documentación que casi siempre te van a pedir</h2>
+
+    <p>Independientemente de la autoridad, este es el paquete documental estándar. Tenerlo listo desde el inicio acelera el trámite entre 7 y 14 días:</p>
+
+    <ul>
+      <li>INE vigente del solicitante (responsable legal del evento)</li>
+      <li>Comprobante de domicilio reciente</li>
+      <li>Descripción del evento por escrito: tipo, propósito, número de invitados, horario, fecha</li>
+      <li>Plano o croquis del montaje sobre el espacio solicitado</li>
+      <li>Listado de proveedores con razón social: catering, mobiliario, sonido, fotografía</li>
+      <li>Carta responsiva por limpieza, daños y conducta de invitados</li>
+      <li>Comprobante de pago de derechos (al final del proceso)</li>
+      <li>Póliza de responsabilidad civil para eventos grandes (50+ personas)</li>
+    </ul>
+
+    <div class="art__tip">
+      <span class="art__tip-icon">📋</span>
+      <span><strong>Consejo profesional:</strong> entrega la documentación impresa Y digital. Algunas alcaldías procesan más rápido con expediente digital, otras siguen exigiendo expediente físico. Llevar ambas versiones desde el inicio evita retrasos de 1–2 semanas. Igualmente, lleva una copia adicional sellada para conservar tu propio acuse.</span>
+    </div>
+  </section>
+
+  <section class="art__section" id="cobertura">
+    <h2 class="art__h2">Qué se cubre y qué no se cubre con el permiso</h2>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Concepto</th>
+            <th>¿Incluido en el permiso?</th>
+            <th class="th-accent">Detalle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Uso del espacio físico</strong></td><td>✓ Sí</td><td class="td-accent">Solo el área autorizada, no todo el parque</td></tr>
+          <tr><td><strong>Mobiliario en el espacio</strong></td><td>✓ Sí</td><td class="td-accent">Debe declararse en el trámite</td></tr>
+          <tr><td><strong>Música amplificada</strong></td><td>Variable</td><td class="td-accent">Permitida con límite de decibeles y horario</td></tr>
+          <tr><td><strong>Bebidas alcohólicas</strong></td><td>Permiso adicional</td><td class="td-accent">Solicitud específica, no automática</td></tr>
+          <tr><td><strong>Anclaje a árboles o estructuras</strong></td><td>✗ No</td><td class="td-accent">Prohibido en la mayoría de los espacios</td></tr>
+          <tr><td><strong>Fogatas / pirotecnia</strong></td><td>✗ No</td><td class="td-accent">Prohibido sin excepciones</td></tr>
+          <tr><td><strong>Cobro de entrada al evento</strong></td><td>✗ No</td><td class="td-accent">Espacio público no admite venta de boletos</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="art__section" id="alternativas">
+    <h2 class="art__h2">Alternativas privadas cuando el permiso no es viable</h2>
+
+    <p>Si el tiempo de trámite no se ajusta a tu fecha, o si el tipo de evento no es compatible con espacio público, existen alternativas privadas con estética muy similar:</p>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>🏡 Jardines de casa particular</h3>
+        <p>Sin trámite, máxima flexibilidad, capacidad limitada por dimensiones del espacio. Ideal para hasta 80 invitados. Verificar reglamento de condominio si aplica.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>🌿 Jardines de eventos privados</h3>
+        <p>Renta de jardines profesionales con permisos preconfigurados. Costo entre $15,000 y $50,000 MXN. Múltiples opciones en Tlalpan, Xochimilco, Coyoacán y zona sur.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>🏛️ Haciendas y quintas</h3>
+        <p>Venues completos con permisos incluidos, capacidad hasta 400 personas. Costo entre $60,000 y $250,000 MXN. Opción premium para bodas y corporativos grandes.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>🏬 Terrazas y rooftops</h3>
+        <p>Espacios privados con permisos del establecimiento. Capacidad típica 30–150. Costo entre $15,000 y $80,000 MXN según ubicación.</p>
+      </div>
+    </div>
+
+    <p>Para más detalle sobre tipos de venues y su perfil operativo lee <a href="/blog/como-organizar-evento-al-aire-libre-cdmx-guia-completa/">cómo organizar un evento al aire libre en CDMX</a>.</p>
+  </section>
+
+  <div class="art__cta-inline">
+    <h3>¿Necesitas mobiliario y guía con el permiso?</h3>
+    <p>MESPIC orienta sobre el proceso de permiso según el espacio elegido — sin costo y sin compromiso de contratación. Si decides rentar mobiliario con nosotros, coordinamos la logística para que llegue exactamente en el horario y zona autorizadas por la alcaldía.</p>
+    <div class="art__cta-inline-btns">
+      <a href="https://wa.me/5564328954?text=Hola%2C+necesito+asesor%C3%ADa+sobre+permisos+para+un+evento+en+un+parque+de+CDMX." target="_blank" rel="noopener" class="art__btn art__btn--wa" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+        Asesorarme por WhatsApp
+      </a>
+      <a href="/cotizar/" class="art__btn art__btn--outline">Cotizar mobiliario →</a>
+    </div>
+  </div>
+
+  <section class="art__section" id="faqs">
+    <h2 class="art__h2">Preguntas frecuentes sobre permisos en parques de CDMX</h2>
+
+    <div class="art__faqs">
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuánto cuesta hacer una fiesta de cumpleaños infantil en un parque público?</summary>
+        <p class="art__faq-a">El permiso de alcaldía para una fiesta infantil de 30–50 invitados oscila entre <strong>$1,500 y $4,000 MXN</strong>. Sumar costo del mobiliario (mesas picnic, sillas), decoración, food trucks o catering, animación y fotografía. El presupuesto total típico para un cumpleaños infantil al aire libre con permiso oscila entre <strong>$15,000 y $45,000 MXN</strong>.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Se puede hacer una boda en el Bosque de Chapultepec?</summary>
+        <p class="art__faq-a">Sí, en áreas específicas de la <strong>Segunda y Tercera Sección</strong>, con permiso previo de SEDEMA tramitado con 30–45 días de anticipación, capacidad limitada a 80–200 personas según el área, y restricciones de horario y sonido. El proceso es más restrictivo que rentar una hacienda privada, pero es viable para bodas íntimas con valor simbólico. Costo del permiso entre $5,000 y $12,000 MXN más fianza reembolsable.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Necesito permiso para una sesión fotográfica en un parque?</summary>
+        <p class="art__faq-a">Para fotografía personal con cámara amateur sin equipo adicional, no se requiere permiso. Para producción profesional con luces, asistentes, vestuario, mobiliario o talento (modelos), todos los parques de CDMX requieren permiso de filmación/fotografía específico. El trámite ante alcaldía toma 10–20 días y cuesta entre <strong>$1,500 y $5,000 MXN</strong> según el espacio.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué pasa si hago el evento sin permiso?</summary>
+        <p class="art__faq-a">El riesgo concreto es: retiro forzado del lugar por personal de la alcaldía o policía auxiliar, multa administrativa entre <strong>$5,000 y $30,000 MXN</strong>, queja vecinal que escala a infracción civil si hay daño al espacio público, y posible negativa de permiso futuro. En la práctica, eventos pequeños y discretos pueden pasar inadvertidos, pero la apuesta no compensa frente al costo del permiso. Para eventos documentados en redes sociales, el riesgo es real.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿MESPIC entrega el mobiliario directo al parque?</summary>
+        <p class="art__faq-a">Sí, entregamos directamente al espacio autorizado dentro del parque. Coordinamos el ingreso con la administración del lugar según el horario establecido en tu permiso. Las mesas picnic plegables y modulares MESPIC están diseñadas para escenarios donde el camión no puede acercarse al punto de montaje. Nuestro equipo tiene experiencia con eventos en Chapultepec, Viveros, Parque México y los principales parques de las alcaldías.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuándo conviene una alternativa privada en lugar de tramitar permiso?</summary>
+        <p class="art__faq-a">Tres escenarios típicos: <strong>(1)</strong> cuando la fecha está a menos de 30 días y no hay tiempo de tramitar; <strong>(2)</strong> cuando el evento es grande (más de 80 personas) y el espacio público no autoriza esa capacidad; <strong>(3)</strong> cuando la naturaleza del evento (boda con alcohol y música hasta tarde) no es compatible con las restricciones del parque. En estos casos, un jardín de eventos privado, una hacienda o una terraza son alternativas más eficientes operativamente.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿El permiso cubre el uso de bocinas o requiere autorización adicional?</summary>
+        <p class="art__faq-a">Depende de la alcaldía. La mayoría de los permisos estándar autorizan <strong>música ambiental con bocina portátil</strong> hasta 70 dB en horario diurno. Para sonido amplificado profesional (DJ, banda, audio para conferencia) se requiere autorización adicional con declaración de nivel de decibeles y horario. SEDEMA en Chapultepec es la más estricta: requiere medición previa y rechaza eventos que excedan los límites del Programa de Áreas Naturales.</p>
+      </details>
+
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Lecturas relacionadas</h2>
+    <div class="art__nextsteps">
+      <a href="/blog/como-organizar-evento-al-aire-libre-cdmx-guia-completa/" class="art__nextstep-card">
+        <span class="art__nextstep-tag">Guía pillar</span>
+        <span class="art__nextstep-title">Cómo organizar un evento al aire libre en CDMX</span>
+        <span class="art__nextstep-desc">Venues, mobiliario, presupuesto y cronograma operativo de 90 días.</span>
+      </a>
+      <a href="/blog/checklist-90-dias-antes-evento-aire-libre/" class="art__nextstep-card">
+        <span class="art__nextstep-tag">Cronograma</span>
+        <span class="art__nextstep-title">Checklist 90 días antes del evento</span>
+        <span class="art__nextstep-desc">Tareas día por día para que ningún trámite quede pendiente.</span>
+      </a>
+      <a href="/blog/fiestas-infantiles-metepec-cumpleanos/" class="art__nextstep-card">
+        <span class="art__nextstep-tag">Específico</span>
+        <span class="art__nextstep-title">Fiestas infantiles en CDMX y Edomex</span>
+        <span class="art__nextstep-desc">Cómo elegir parque, decoración y mobiliario adecuados a niños.</span>
+      </a>
+    </div>
+  </section>
+
+  <div class="art__about">
+    <div class="art__about-badge">MESPIC</div>
+    <div>
+      <h3>Trabajamos con autoridades de parques de CDMX</h3>
+      <p>MESPIC ha coordinado mobiliario en eventos con permiso en alcaldías de Coyoacán, Cuauhtémoc, Benito Juárez, Miguel Hidalgo, Álvaro Obregón, Tlalpan y otras, así como en el Bosque de Chapultepec (SEDEMA). Conocemos los puntos de carga autorizados, los horarios de ingreso y los formatos de cumplimiento. Si vas a tramitar permiso, podemos orientarte sobre las particularidades de cada alcaldía antes de que pierdas tiempo en la ventanilla equivocada.</p>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">Galería: eventos con permiso en parques de CDMX</h2>
+    <div class="art__gallery-strip">
+      <img src="/img/mesa-picnic-fiesta-infantil-parque.webp" alt="Fiesta infantil con permiso de alcaldía en parque público de CDMX" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-infantil-parque-regalos.webp" alt="Cumpleaños infantil con mesas picnic infantiles en parque" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-aire-libre-08.webp" alt="Picnic familiar al aire libre con mesa picnic de madera MESPIC" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-evento-jardin-01.webp" alt="Evento social con mesas picnic en jardín de evento privado CDMX" loading="lazy" width="350" height="220" />
+    </div>
+  </section>
+
+  <div class="art__cta-final">
+    <div class="art__cta-final-inner">
+      <h2>Permiso correcto, mobiliario impecable, evento sin sorpresas</h2>
+      <p>Te orientamos sobre el proceso de permiso según el parque elegido, sin costo. Si rentas con MESPIC, coordinamos entrega y recolección dentro de los horarios autorizados. Operación propia trabajando con autoridades de parques en CDMX.</p>
+      <div class="art__cta-final-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+necesito+asesor%C3%ADa+sobre+permisos+para+un+evento+en+un+parque+de+CDMX." target="_blank" rel="noopener" class="art__btn art__btn--wa art__btn--lg" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          Asesorarme ahora
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--primary art__btn--lg">Cotizar mobiliario →</a>
+        <a href="/servicios/" class="art__btn art__btn--ghost art__btn--lg">Ver servicios</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</BlogLayout>

@@ -1,0 +1,506 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import '../../styles/blog-article.css';
+
+// JSON-LD: Article + FAQPage + BreadcrumbList — para AI Overviews y rich results
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cómo Organizar un Evento al Aire Libre en CDMX: la Guía Definitiva",
+  "description": "Guía profesional para organizar eventos al aire libre en CDMX: venues, permisos, mobiliario, clima, presupuesto, plan B y logística operativa.",
+  "image": "https://mesaspicnic.com/img/mesa-picnic-boda-jardin-atardecer-01.webp",
+  "inLanguage": "es-MX",
+  "wordCount": 3800,
+  "author": {
+    "@type": "Organization",
+    "name": "MESPIC — Mesas Picnic",
+    "url": "https://mesaspicnic.com/nosotros/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MESPIC",
+    "logo": { "@type": "ImageObject", "url": "https://mesaspicnic.com/icon.png" }
+  },
+  "mainEntityOfPage": "https://mesaspicnic.com/blog/como-organizar-evento-al-aire-libre-cdmx-guia-completa/",
+  "about": ["Eventos al aire libre", "Ciudad de México", "Planeación de eventos", "Mobiliario para eventos"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Cuál es la mejor época del año para un evento al aire libre en CDMX?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Las ventanas climáticas más seguras en CDMX son enero–marzo (frío seco, sin lluvia) y octubre–noviembre (post-lluvias, días templados, noches frescas). Abril–mayo son ideales para eventos vespertinos. Junio–septiembre requiere plan B contratado por temporada de lluvias." } },
+    { "@type": "Question", "name": "¿Con cuánta anticipación debo reservar mi venue y mobiliario para una boda en CDMX?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Para bodas en sábados de temporada alta (marzo, octubre, noviembre, diciembre) recomendamos 6–9 meses de anticipación. Para eventos sociales y corporativos, 60–90 días. El mobiliario MESPIC se reserva con 4–8 semanas, salvo fechas pico que requieren 12 semanas." } },
+    { "@type": "Question", "name": "¿Cuánto cuesta organizar un evento al aire libre para 100 personas en CDMX?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Una boda al aire libre para 100 personas en CDMX oscila entre $350,000 y $600,000 MXN incluyendo venue, catering, mobiliario, decoración y fotografía. Un evento corporativo equivalente cuesta entre $150,000 y $300,000 MXN." } },
+    { "@type": "Question", "name": "¿Necesito permiso para hacer un evento en un parque público de CDMX?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Cualquier evento privado en parque público con más de 15 personas, mobiliario adicional, sonido amplificado o servicio de alimentos requiere permiso ante la alcaldía correspondiente, SEDEMA (Chapultepec) o SEMARNAT (Viveros). Tiempos: 15–45 días. Costos: $1,500–$8,000 MXN." } },
+    { "@type": "Question", "name": "¿Qué hago si llueve el día de mi evento al aire libre?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Si tienes plan B contratado desde el inicio (carpa transparente o espacio cubierto alternativo), se activa con 2–4 horas de anticipación según pronóstico. Sin plan B previo, la mayoría de los proveedores de carpas no tienen disponibilidad el mismo día en temporada de lluvias." } }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mesaspicnic.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mesaspicnic.com/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Cómo Organizar un Evento al Aire Libre en CDMX" }
+  ]
+};
+---
+
+<BlogLayout
+  title="Cómo Organizar un Evento al Aire Libre en CDMX: Guía Definitiva | MESPIC"
+  description="Guía profesional para organizar eventos al aire libre en CDMX y Edomex: venues, permisos, mobiliario, presupuesto realista, plan B por clima y cronograma operativo de 90 días."
+  ogImage="/img/mesa-picnic-boda-jardin-atardecer-01.webp"
+  canonical="https://mesaspicnic.com/blog/como-organizar-evento-al-aire-libre-cdmx-guia-completa/"
+  heroTitle="Cómo Organizar un Evento al Aire Libre en CDMX: la Guía Definitiva"
+  heroBadge="Blog · Planeación de eventos"
+  heroDescription="Del primer save the date a la última recolección del mobiliario: el manual operativo, presupuestario y logístico que usamos en MESPIC para producir eventos al aire libre en CDMX, Edomex y Valle de Bravo."
+  heroSeo1="Organizar un evento al aire libre en la Ciudad de México exige resolver al mismo tiempo tres variables que ningún otro tipo de evento combina: una operación logística compleja en una de las metrópolis más densas del mundo, un clima volátil con temporada de lluvias bien marcada entre junio y septiembre, y una expectativa estética cada vez más alta — los invitados llegan con la cámara del teléfono lista y un estándar visual heredado de Pinterest e Instagram. En MESPIC hemos producido más de 500 eventos al aire libre — bodas en hacienda, picnics corporativos, fiestas infantiles, sesiones editoriales, festivales gastronómicos — y este documento concentra el conocimiento operativo acumulado en años de operación."
+  heroSeo2="Esta guía está pensada para tres lectores: el anfitrión que organiza por primera vez un evento mediano y necesita una hoja de ruta confiable; la novia o el novio que quieren entender el oficio antes de delegar; y la coordinadora corporativa que tiene que defender un plan ante un comité interno. Cada decisión clave viene con su tabla de referencia, su rango de costos en pesos mexicanos, su plan B y su anclaje legal. Si tu evento es en CDMX, Edomex o el corredor Toluca–Lerma, este es el documento que necesitas leer antes de pagar el primer anticipo."
+  heroMetrics={[
+    { value: "500+", label: "Eventos al aire libre producidos" },
+    { value: "Operación propia", label: "CDMX, Edomex y Valle de Bravo" },
+    { value: "<30 min", label: "Respuesta promedio a cotización" },
+  ]}
+  breadcrumbs={[
+    { label: "Inicio", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Cómo Organizar un Evento al Aire Libre en CDMX" },
+  ]}
+  sidebarProducts={[
+    { name: "Mesa Estándar", cap: "1.80 m · 6 personas", href: "/catalogo/mesa-picnic-estandar/", img: "/img/renta-mesa-picnic-madera-pino-cdmx-01.avif" },
+    { name: "Mesa Grande 2.40m", cap: "10–12 personas", href: "/catalogo/mesa-picnic-grande/", img: "/img/mesa-picnic-grande-evento-16.avif" },
+    { name: "Mesa Premium", cap: "Bodas VIP · sin nudos", href: "/catalogo/mesa-picnic-premium/", img: "/img/mesa-picnic-boda-elegante-luces.avif" },
+  ]}
+  sidebarArticles={[
+    { title: "Qué hacer si llueve en tu evento al aire libre", meta: "Logística · 8 min", href: "/blog/que-hacer-si-llueve-en-tu-evento-al-aire-libre/", img: "/img/mesa-picnic-boda-jardin-atardecer-02.webp" },
+    { title: "Checklist 90 días antes del evento", meta: "Planeación · 12 min", href: "/blog/checklist-90-dias-antes-evento-aire-libre/", img: "/img/mesa-picnic-boda-montaje-elegante-rosas.webp" },
+    { title: "¿Cuánto cuesta rentar mesas picnic en CDMX?", meta: "Precios · 7 min", href: "/blog/cuanto-cuesta-rentar-mesas-picnic-cdmx/", img: "/img/mesa-picnic-evento-jardin-01.webp" },
+  ]}
+  sidebarServices={[
+    { name: "Bodas al Aire Libre", desc: "Jardines · Haciendas · Terrazas", href: "/servicios/bodas/" },
+    { name: "Eventos Corporativos", desc: "Team building · Conferencias", href: "/servicios/eventos-corporativos/" },
+    { name: "Picnic Romántico", desc: "Pedidas · Aniversarios", href: "/servicios/picnic-romantico/" },
+    { name: "Fiestas Infantiles", desc: "Cumpleaños · Baby shower", href: "/servicios/fiestas-infantiles/" },
+  ]}
+  sidebarCtaTitle="¿Estás planeando un evento?"
+  sidebarCtaText="Te asesoramos sin costo sobre venue, mobiliario y logística. Respondemos en menos de 30 minutos por WhatsApp."
+  sidebarCtaWa="Hola%2C+quiero+asesor%C3%ADa+para+organizar+un+evento+al+aire+libre+en+CDMX."
+  sidebarServicesTitle="Servicios relacionados"
+>
+
+<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+<div class="art">
+
+  <!-- EEAT byline -->
+  <div class="art__author">
+    <div class="art__author-badge">M</div>
+    <div class="art__author-meta">
+      <span class="art__author-name">Equipo editorial MESPIC · Producción de eventos</span>
+      <span class="art__author-role">Especialistas en eventos al aire libre en CDMX, Edomex y Valle de Bravo</span>
+      <span class="art__author-stamp">Tiempo de lectura: 14 min · Basado en 500+ eventos producidos</span>
+    </div>
+  </div>
+
+  <p class="art__lead">
+    Un evento al aire libre bien producido se siente como si hubiera surgido por casualidad: las mesas en el lugar exacto, la luz del atardecer cayendo sobre el primer brindis, el catering apareciendo cuando los invitados empiezan a tener hambre. Esa aparente casualidad es ingeniería invisible. Detrás hay un cronograma de tres meses, un presupuesto que respeta una jerarquía estricta, un plan B por lluvia que nadie va a usar y una decena de proveedores coordinados al minuto. Esta guía descompone esa ingeniería en decisiones concretas para que tu evento en CDMX o Edomex se vea exactamente así: inevitable.
+  </p>
+
+  <!-- TL;DR -->
+  <aside class="art__tldr" aria-label="Resumen ejecutivo">
+    <span class="art__tldr-label">Resumen ejecutivo · 30 segundos</span>
+    <ul>
+      <li><strong>Reserva el venue y el mobiliario primero.</strong> Son los dos cuellos de botella; el resto se acomoda alrededor.</li>
+      <li><strong>Contrata el plan B desde el día uno</strong> si tu evento es entre junio y septiembre. La carpa no aparece la semana del evento.</li>
+      <li><strong>Presupuesta el venue al 25–35% del total.</strong> Si supera el 40%, el resto del evento se compromete.</li>
+      <li><strong>El cronograma de 90 días</strong> es la diferencia entre una boda fluida y una crisis controlada. No improvises los últimos 30 días.</li>
+      <li><strong>Permisos sí aplican</strong> en jardines de eventos, terrazas y parques públicos. Verificar siempre por escrito.</li>
+    </ul>
+  </aside>
+
+  <!-- Tabla de contenidos -->
+  <nav class="art__toc" aria-label="Tabla de contenidos">
+    <p class="art__toc-title">En esta guía</p>
+    <ol>
+      <li><a href="#por-que-cdmx">Por qué CDMX es ideal para eventos outdoor</a></li>
+      <li><a href="#tipos-de-venues">5 tipos de venues con capacidad y costo</a></li>
+      <li><a href="#cronograma">Cronograma de planeación · 90 días</a></li>
+      <li><a href="#mobiliario">Mobiliario: qué funciona y qué no</a></li>
+      <li><a href="#permisos">Permisos, horarios y normativa</a></li>
+      <li><a href="#presupuesto">Presupuesto realista por tipo de evento</a></li>
+      <li><a href="#plan-b">Plan B por clima: nivel 1, 2 y 3</a></li>
+      <li><a href="#errores">7 errores que cuestan tiempo y dinero</a></li>
+      <li><a href="#faqs">Preguntas frecuentes</a></li>
+    </ol>
+  </nav>
+
+  <section class="art__section" id="por-que-cdmx">
+    <h2 class="art__h2">Por qué CDMX es uno de los mejores mercados para eventos al aire libre</h2>
+
+    <p>La Ciudad de México y su zona metropolitana concentran una combinación poco común en el continente: clima templado durante diez meses al año, una infraestructura de venues única en Latinoamérica — haciendas coloniales del siglo XVII, jardines privados con vegetación madura, terrazas con vista a parques urbanos, espacios federales con permisos accesibles — y un ecosistema maduro de proveedores especializados que permite producir eventos del nivel de los mercados europeos a costos significativamente menores. La diferencia con Roma, Lisboa o Barcelona no está en la estética: está en el presupuesto y en la cantidad de eventos que un mismo equipo puede coordinar al mes sin sacrificar calidad.</p>
+
+    <p>Sin embargo, la ciudad también impone restricciones logísticas únicas. Un trayecto de 18 kilómetros puede tomar 45 minutos a las 10 de la mañana y tres horas a las 6 de la tarde. La temporada de lluvias entre junio y septiembre es intensa pero predecible: lluvia entre 16:00 y 19:00, varios días consecutivos. Y la diferencia entre montar sobre pasto de un jardín en Coyoacán y montar sobre el concreto de una terraza en Polanco implica decisiones de mobiliario, anclaje y producción radicalmente distintas. Esta guía aborda cada una de esas decisiones.</p>
+
+    <div class="art__definition">
+      <span class="art__definition-term">Definición · Evento al aire libre (outdoor event)</span>
+      <p>Celebración social, corporativa, gastronómica o audiovisual cuya ejecución principal ocurre en un espacio exterior — jardín, terraza, hacienda, parque público o espacio natural — con mobiliario instalado y servicios coordinados. A diferencia de un evento en salón, exige plan B climático, permisos específicos y mobiliario certificado para uso exterior.</p>
+    </div>
+  </section>
+
+  <section class="art__section" id="tipos-de-venues">
+    <h2 class="art__h2">Cinco tipos de venues al aire libre en CDMX y Edomex</h2>
+
+    <p>El venue es la decisión que condiciona todas las demás: presupuesto, mobiliario, logística, permisos, número de invitados, plan B por clima. En la zona metropolitana hay cinco grandes categorías de espacios al aire libre, cada una con un perfil operativo distinto. Esta tabla resume los rangos reales que vemos en cotizaciones recurrentes:</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Tipo de venue</th>
+            <th>Capacidad</th>
+            <th class="th-accent">Renta</th>
+            <th>Perfil ideal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Jardín privado / casa propia</strong></td><td>20–120</td><td class="td-accent">$0–$25,000</td><td>Bodas íntimas, cumpleaños, baby shower</td></tr>
+          <tr><td><strong>Jardín de eventos privado</strong></td><td>40–200</td><td class="td-accent">$15,000–$50,000</td><td>Bodas medianas, XV años, corporativos</td></tr>
+          <tr><td><strong>Hacienda colonial</strong></td><td>80–400</td><td class="td-accent">$60,000–$250,000</td><td>Bodas grandes, corporativos premium</td></tr>
+          <tr><td><strong>Terraza / rooftop</strong></td><td>30–150</td><td class="td-accent">$15,000–$80,000</td><td>Cócteles, brand experiences urbanas</td></tr>
+          <tr><td><strong>Parque público con permiso</strong></td><td>20–80</td><td class="td-accent">$1,500–$8,000 permiso</td><td>Picnics, sesiones, cumpleaños infantiles</td></tr>
+          <tr><td><strong>Hacienda Valle de Bravo</strong></td><td>40–250</td><td class="td-accent">$45,000–$180,000</td><td>Bodas destination, retiros corporativos</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Cada categoría tiene ventajas y restricciones específicas que no siempre son obvias en la primera visita. Los jardines privados ofrecen máxima flexibilidad y costo cero de venue, pero limitan invitados por capacidad estructural (baños, estacionamiento, capacidad eléctrica del medidor). Las haciendas resuelven el venue completo pero imponen políticas de proveedores y horarios estrictos — algunas no permiten DJ después de las 23:00 y requieren proveedores de su lista cerrada. Las terrazas tienen vista pero capacidad de carga limitada y restricciones de sonido. Los parques cuestan poco pero exigen permiso, logística de entrada caminando y planes de contingencia robustos. La <a href="/cobertura/cdmx/">cobertura completa de MESPIC en CDMX</a> incluye los cinco tipos.</p>
+
+    <div class="art__takeaway">
+      <span class="art__takeaway-label">Cómo elegir entre los cinco</span>
+      <ul>
+        <li>Si el costo del venue ya superó el 35% del presupuesto, busca alternativa.</li>
+        <li>Si los invitados llegan desde la zona norte de CDMX, prioriza Edomex o norte de la ciudad — el tráfico es el peor enemigo de la asistencia.</li>
+        <li>Si vas a fotografía editorial, hacienda &gt; jardín privado &gt; terraza &gt; parque.</li>
+        <li>Si vas a invitados internacionales, hacienda con hospedaje cerca es el formato más fácil de explicar.</li>
+        <li>Si la fecha está fija y el venue no se libera, considera correr la fecha antes que cambiar de venue.</li>
+      </ul>
+    </div>
+  </section>
+
+  <figure class="art__figure">
+    <img
+      src="/img/mesa-picnic-boda-jardin-atardecer-01.webp"
+      alt="Boda al aire libre en jardín privado de CDMX con mesas picnic de madera al atardecer"
+      width="900" height="500"
+      loading="lazy"
+    />
+    <figcaption>Boda en jardín privado de la Colonia Roma Sur, CDMX. Montaje sobre pasto con mesas picnic de pino, decoración boho-romántica y atardecer dirigido como elemento de iluminación natural.</figcaption>
+  </figure>
+
+  <section class="art__section" id="cronograma">
+    <h2 class="art__h2">Cronograma de planeación: 90 días, paso a paso</h2>
+
+    <p>Un evento al aire libre se planea hacia atrás desde la fecha. Los proveedores críticos (venue, catering, mobiliario, fotografía) se reservan primero porque su disponibilidad es limitada. Esta es la estructura macro; el detalle día por día está en nuestro <a href="/blog/checklist-90-dias-antes-evento-aire-libre/">checklist 90 días antes del evento</a>.</p>
+
+    <h3>T-90 a T-60 días — Cimientos</h3>
+    <ul>
+      <li>Definir presupuesto total y rangos por categoría</li>
+      <li>Confirmar fecha, hora y número estimado de invitados</li>
+      <li>Reservar venue con contrato firmado y anticipo pagado</li>
+      <li>Reservar mobiliario y catering — los dos cuellos de botella</li>
+      <li>Contratar fotografía y video con contrato firmado</li>
+      <li>Diseñar el invitation funnel: save the date, invitación, RSVP</li>
+    </ul>
+
+    <h3>T-60 a T-30 — Cierre operativo</h3>
+    <ul>
+      <li>Cerrar florería, decoración y coordinadora de día del evento</li>
+      <li>Confirmar permisos del venue (sonido, alcohol, horarios)</li>
+      <li>Diseñar layout definitivo de mesas y áreas</li>
+      <li>Definir menú y agendar prueba de catering</li>
+      <li>Confirmar transporte / valet si aplica</li>
+      <li>Contratar plan B por clima si la fecha es entre junio y septiembre</li>
+    </ul>
+
+    <h3>T-30 a T-15 — Confirmaciones finas</h3>
+    <ul>
+      <li>Confirmar conteo final de invitados con RSVP cerrado</li>
+      <li>Ajustar mobiliario y catering al número real</li>
+      <li>Walk-through en el venue a la hora exacta del evento</li>
+      <li>Generar timeline minuto a minuto del evento</li>
+      <li>Coordinar logística de carga, descarga y montaje con cada proveedor</li>
+    </ul>
+
+    <h3>T-15 a T-0 — Producción</h3>
+    <ul>
+      <li>Confirmación final por escrito con todos los proveedores</li>
+      <li>Empaque de detalles personales</li>
+      <li>Briefing al maestro de ceremonias / DJ</li>
+      <li>Kit de emergencia: paraguas, sombrillas, repelente, kit de costura</li>
+      <li>Descanso planeado — la semana previa debe priorizar bienestar del anfitrión</li>
+    </ul>
+  </section>
+
+  <section class="art__section" id="mobiliario">
+    <h2 class="art__h2">Mobiliario para eventos al aire libre: qué funciona y qué no</h2>
+
+    <p>El mobiliario es la decisión que más impacto visual genera por peso económico, y al mismo tiempo es donde más errores se cometen. La regla básica para eventos al aire libre es simple: <strong>el mobiliario debe complementar el entorno natural, no competir contra él</strong>. La madera natural es el material que mejor lo logra; el plástico es el que peor envejece en fotografía; el metal pulido y el cristal funcionan únicamente en venues controlados con sombra y piso firme.</p>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>🪵 Mesas picnic de madera</h3>
+        <p>El estándar contemporáneo para eventos outdoor en CDMX. Pino lijado y barnizado que va con cualquier estilo de decoración, se ve perfecta en fotografía, resiste sol moderado y rocío. Configuración tipo banca integrada que optimiza espacio y refuerza la atmósfera de mesa compartida.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>🪑 Sillas Tiffany y cross-back</h3>
+        <p>Funcionan para bodas formales con mesa redonda tradicional, pero requieren piso firme y nivelado. Sobre pasto suelen hundirse. Para hacienda con loseta o concreto son válidas; sobre jardín blando, las picnic dominan estética y operativamente.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>🪟 Mesas tablón con manteles</h3>
+        <p>La opción económica de la generación anterior. Operativamente sirven, pero estéticamente las picnic las superan por presupuesto similar: el mantel oculta toda la mesa, mientras la picnic <em>es</em> la decoración. Viables para banquete clásico en hacienda con mantelería trabajada.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>🛋️ Lounge y áreas de descanso</h3>
+        <p>Toda boda o evento de más de 4 horas necesita zonas de lounge: pufs, costales rellenos, alfombras de fibra natural, sofás bajos. Es el elemento que más diferencia un evento "bonito" de uno "memorable" porque crea micro-momentos sociales fuera del salón principal.</p>
+      </div>
+    </div>
+
+    <p>Para profundizar lee la <a href="/blog/mesa-picnic-vs-sillas-tiffany-vs-tablon-comparativa/">comparativa: mesa picnic vs. sillas Tiffany vs. tablón con mantel</a> y la <a href="/blog/mesa-picnic-madera-guia-tecnica-fabricacion-durabilidad/">guía técnica de mesas picnic de madera</a>.</p>
+
+    <div class="art__quote">
+      La pregunta correcta no es "qué mobiliario es más bonito", sino "qué mobiliario hace innecesaria la decoración". Las mesas picnic son la respuesta más frecuente porque la madera resuelve el 70% de la estética antes de que llegue la florería.
+      <span class="art__quote-cite">— Equipo de coordinación MESPIC</span>
+    </div>
+  </section>
+
+  <section class="art__section" id="permisos">
+    <h2 class="art__h2">Permisos, horarios y normativa: lo que no puedes ignorar</h2>
+
+    <p>Cada tipo de venue tiene un régimen de permisos distinto. Ignorarlo es la causa número uno de eventos suspendidos o multados en la Ciudad de México. Estas son las reglas operativas vigentes:</p>
+
+    <ul>
+      <li><strong>Jardín privado / casa propia:</strong> sin permiso especial, pero con regla informal de horarios (música hasta las 23:00 entre semana, 01:00 en fin de semana). Verificar reglamento de condominio.</li>
+      <li><strong>Hacienda contratada:</strong> el permiso está incluido en la renta del venue. Solicitar comprobante por escrito, especialmente para eventos con alcohol y música amplificada.</li>
+      <li><strong>Parques de alcaldía:</strong> trámite específico ante la alcaldía con 30–45 días de anticipación. Costos $1,500–$8,000 MXN según superficie y horario.</li>
+      <li><strong>Bosque de Chapultepec:</strong> trámite ante SEDEMA. Solo Segunda y Tercera Sección autorizan eventos privados. 30–45 días de anticipación.</li>
+      <li><strong>Terrazas y azoteas:</strong> verificar reglamento de protección civil sobre carga máxima y horarios. Algunos rooftops comerciales tienen permiso de música hasta las 22:00 únicamente.</li>
+      <li><strong>Valle de Bravo y Edomex:</strong> cada municipio tiene reglamento propio. Las haciendas establecidas tienen permisos preconfigurados.</li>
+    </ul>
+
+    <p>El detalle completo de permisos en parques públicos está en nuestra <a href="/blog/permisos-eventos-parques-publicos-cdmx/">guía de permisos para eventos en parques de CDMX</a>.</p>
+
+    <div class="art__tip">
+      <span class="art__tip-icon">⚖️</span>
+      <span><strong>Regla mínima legal:</strong> el contrato escrito con cada proveedor debe especificar fecha, hora de montaje, hora de desmontaje, número de invitados confirmados, política de cambios y política de cancelación. Sin contrato, no hay protección. MESPIC firma confirmación escrita antes del anticipo en cada cotización aceptada.</span>
+    </div>
+  </section>
+
+  <section class="art__section" id="presupuesto">
+    <h2 class="art__h2">Presupuesto realista por tipo de evento en CDMX</h2>
+
+    <p>El presupuesto de un evento al aire libre se construye por categoría. Los porcentajes típicos para un evento social en CDMX son: venue 25–35%, catering 25–30%, mobiliario y decoración 15–20%, fotografía/video 10–15%, música/entretenimiento 5–10%, miscelánea 5%. Esta tabla muestra rangos reales por tipo de evento:</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Tipo de evento</th>
+            <th>Invitados</th>
+            <th class="th-accent">Presupuesto total</th>
+            <th>Costo por persona</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Cumpleaños / reunión familiar</strong></td><td>30–60</td><td class="td-accent">$25,000–$80,000</td><td>$800–$1,400</td></tr>
+          <tr><td><strong>Baby shower / bridal shower</strong></td><td>20–40</td><td class="td-accent">$20,000–$60,000</td><td>$900–$1,600</td></tr>
+          <tr><td><strong>Boda íntima (microboda)</strong></td><td>30–60</td><td class="td-accent">$120,000–$280,000</td><td>$3,500–$5,500</td></tr>
+          <tr><td><strong>Boda mediana</strong></td><td>80–150</td><td class="td-accent">$300,000–$700,000</td><td>$3,800–$5,200</td></tr>
+          <tr><td><strong>Boda grande / hacienda</strong></td><td>150–300</td><td class="td-accent">$700,000–$1,800,000</td><td>$4,500–$6,500</td></tr>
+          <tr><td><strong>Evento corporativo</strong></td><td>50–200</td><td class="td-accent">$80,000–$350,000</td><td>$1,500–$2,500</td></tr>
+          <tr><td><strong>XV años</strong></td><td>100–250</td><td class="td-accent">$200,000–$600,000</td><td>$2,200–$3,800</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Estos rangos asumen producción profesional, venue contratado, catering completo, mobiliario tipo MESPIC, decoración curada y fotografía profesional. Eventos en jardín propio o con catering casero pueden reducir el costo total entre 30% y 50% manteniendo nivel estético con buena curaduría de mobiliario. Para profundizar en costos específicos lee <a href="/blog/cuanto-cuesta-rentar-mesas-picnic-cdmx/">¿cuánto cuesta rentar mesas picnic en CDMX?</a></p>
+  </section>
+
+  <section class="art__section" id="plan-b">
+    <h2 class="art__h2">Plan B por clima: la diferencia entre amateur y profesional</h2>
+
+    <p>La temporada de lluvias en CDMX (junio–septiembre) tiene patrones predecibles: lluvias breves pero intensas entre 16:00 y 19:00. Eventos vespertinos al aire libre en esos meses sin plan B son una apuesta de probabilidad baja. Un plan B serio incluye tres niveles escalables:</p>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>☂️ Nivel 1 — Cubierta parcial</h3>
+        <p>Sombrillas individuales, gazebos pequeños sobre área de barra y catering. Costo bajo ($3,000–$8,000 MXN), cubre lluvia ligera y duración corta. Útil como complemento, no como plan único.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>⛺ Nivel 2 — Carpa transparente</h3>
+        <p>Toldo cristal sobre área principal de mesas. Mantiene la estética outdoor, cubre lluvia moderada. Costo medio ($15,000–$60,000 MXN según tamaño). Es la solución más popular para bodas con plan B activable.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>🏠 Nivel 3 — Espacio interior alternativo</h3>
+        <p>Salón cubierto del mismo venue, disponible como contingencia activable con 2 horas de anticipación. Costo variable según venue. Es la solución más segura cuando el venue lo ofrece.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>🔄 Combinación ideal</h3>
+        <p>Carpa transparente + salón interior de respaldo. Permite empezar al aire libre y migrar si la lluvia es prolongada. Es lo que recomendamos para bodas entre julio y septiembre.</p>
+      </div>
+    </div>
+
+    <p>El error más común es decidir el plan B la misma semana del evento, cuando todas las carpas y toldos ya están reservados. La decisión correcta es contratar el plan B desde el día uno con política de "lo activamos si llueve, lo cancelamos si no" — algunos proveedores manejan tarifa reducida bajo esta modalidad. Cubrimos protocolos completos en <a href="/blog/que-hacer-si-llueve-en-tu-evento-al-aire-libre/">qué hacer si llueve en tu evento al aire libre</a>.</p>
+  </section>
+
+  <section class="art__section" id="errores">
+    <h2 class="art__h2">Los 7 errores que cuestan tiempo y dinero</h2>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Error común</th>
+            <th class="th-accent">Consecuencia real</th>
+            <th>Cómo evitarlo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Reservar mobiliario en el último mes</strong></td><td class="td-accent">Solo queda lo que nadie eligió, sin descuento</td><td>Reservar mobiliario 60+ días antes</td></tr>
+          <tr><td><strong>No visitar el venue al horario del evento</strong></td><td class="td-accent">Iluminación, ruido y temperatura distintos a lo esperado</td><td>Walk-through obligatorio a la hora exacta</td></tr>
+          <tr><td><strong>Subestimar número de baños</strong></td><td class="td-accent">Filas, mala experiencia, queja generalizada</td><td>1 baño por cada 25 invitados; portátiles si hay alcohol</td></tr>
+          <tr><td><strong>Ignorar potencia eléctrica</strong></td><td class="td-accent">Falla de DJ, iluminación o cocina a media noche</td><td>Auditar amperaje del venue 30 días antes</td></tr>
+          <tr><td><strong>Plan B improvisado</strong></td><td class="td-accent">Sin carpa disponible cuando llueve</td><td>Plan B contratado desde el día 1</td></tr>
+          <tr><td><strong>Curva de tráfico ignorada</strong></td><td class="td-accent">Invitados llegan 60 min tarde, agenda colapsa</td><td>Comunicar hora con buffer realista de tráfico</td></tr>
+          <tr><td><strong>Anfitrión sin coordinadora</strong></td><td class="td-accent">El evento se administra desde el celular del anfitrión</td><td>Coordinadora dedicada para eventos de 60+ invitados</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="art__cta-inline">
+    <h3>Asesoría sin compromiso desde el día uno</h3>
+    <p>Producimos eventos al aire libre en CDMX y Edomex con operación propia. Cuéntanos tu fecha, número de invitados y venue tentativo y te damos recomendaciones específicas de mobiliario, layout y logística — sin costo ni compromiso de contratación.</p>
+    <div class="art__cta-inline-btns">
+      <a href="https://wa.me/5564328954?text=Hola%2C+quiero+asesor%C3%ADa+para+organizar+un+evento+al+aire+libre+en+CDMX." target="_blank" rel="noopener" class="art__btn art__btn--wa" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+        Consultar por WhatsApp
+      </a>
+      <a href="/cotizar/" class="art__btn art__btn--outline">Formulario de cotización →</a>
+    </div>
+  </div>
+
+  <section class="art__section" id="faqs">
+    <h2 class="art__h2">Preguntas frecuentes sobre eventos al aire libre en CDMX</h2>
+
+    <div class="art__faqs">
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuál es la mejor época del año para un evento al aire libre en CDMX?</summary>
+        <p class="art__faq-a">Las temporadas de menor riesgo climático en la Ciudad de México son <strong>enero–marzo</strong> (frío seco, ideal para eventos diurnos y atardeceres) y <strong>octubre–noviembre</strong> (post-lluvias, días templados y noches frescas). Abril–mayo son calurosos a mediodía pero ideales para eventos vespertinos. La temporada de lluvia (junio–septiembre) exige plan B activado desde el día uno. Diciembre tiene clima perfecto pero saturación de eventos y precios premium del 10–25%.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Con cuánta anticipación debo reservar mi venue y mobiliario?</summary>
+        <p class="art__faq-a">Para bodas con venue popular o sábado de temporada alta (febrero, marzo, octubre, noviembre, diciembre): mínimo <strong>6 meses</strong> para venue, <strong>4 meses</strong> para mobiliario línea premium. Para eventos corporativos y sociales medianos: <strong>60–90 días</strong>. El mobiliario MESPIC se reserva con 4–8 semanas, aunque para periodos pico sugerimos 12 semanas. Consulta nuestro <a href="/blog/calendario-temporadas-cuando-reservar-mobiliario-cdmx/">calendario de temporadas mes a mes</a>.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuánto cuesta organizar un evento al aire libre para 100 personas?</summary>
+        <p class="art__faq-a">Depende del tipo de evento. Una <strong>boda al aire libre para 100 personas</strong> en CDMX oscila entre <strong>$350,000 y $600,000 MXN</strong> incluyendo venue, catering, mobiliario, decoración y fotografía. Un <strong>evento corporativo</strong> equivalente: <strong>$150,000–$300,000 MXN</strong>. Un <strong>cumpleaños familiar</strong> con catering moderado puede producirse desde <strong>$80,000 MXN</strong>. El costo por persona varía más según el nivel de producción que según el número de invitados.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Necesito permiso para hacer un evento en un parque?</summary>
+        <p class="art__faq-a">Sí, casi siempre. Cualquier evento privado en parque público con más de 15 personas, mobiliario adicional, sonido amplificado o servicio de alimentos requiere permiso. Los trámites toman 15–45 días según el espacio. Permisos para Chapultepec se gestionan ante SEDEMA; los de parques de alcaldía ante la Dirección de Servicios Urbanos o Cultura. Guía completa en <a href="/blog/permisos-eventos-parques-publicos-cdmx/">permisos para eventos en parques de CDMX</a>.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿MESPIC entrega y monta el mobiliario o solo lo renta?</summary>
+        <p class="art__faq-a">El servicio incluye <strong>entrega, montaje profesional y recolección sin costo adicional y sin límite de tiempo</strong> dentro de CDMX y zona metropolitana. Nuestro equipo de logística llega con anticipación al horario del evento, monta el mobiliario en la configuración acordada y regresa al término del evento — incluso si termina pasada la medianoche. Es uno de los pocos servicios sin recargos ocultos del mercado.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué pasa si llueve el día de mi evento al aire libre?</summary>
+        <p class="art__faq-a">Con plan B contratado, se activa con 2–4 horas de anticipación según pronóstico: las mesas picnic se mueven al área cubierta o se instala la carpa cristal previamente reservada. MESPIC trabaja con proveedores aliados de carpas y toldos transparentes activables el mismo día. Sin plan B previo, el riesgo de cancelación es alto en temporada de lluvias. Protocolos en <a href="/blog/que-hacer-si-llueve-en-tu-evento-al-aire-libre/">qué hacer si llueve en tu evento</a>.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuántos invitados máximo caben en mi jardín de casa?</summary>
+        <p class="art__faq-a">La regla operativa es <strong>1.2 m² por invitado</strong> en zona de comida (mesa + circulación), más 0.8 m² por invitado en zona de cóctel/lounge. Un jardín útil de 80 m² acomoda cómodamente 40 invitados sentados o 60 en formato cóctel. Los baños son el segundo cuello: 1 baño por cada 25 invitados es el mínimo aceptable; con alcohol, considerar 1 baño portátil adicional por cada 30.</p>
+      </details>
+
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Debo contratar coordinadora de eventos o puedo hacerlo yo?</summary>
+        <p class="art__faq-a">Para bodas, eventos corporativos de 60+ invitados y XV años: <strong>sí</strong>. Una coordinadora cuesta entre $8,000 y $25,000 MXN según experiencia, y libera al anfitrión de operar el evento desde el celular. Para reuniones familiares pequeñas o baby showers con 20–30 invitados puede prescindirse si hay apoyo familiar coordinado. La regla práctica: si el evento implica más de 5 proveedores externos, vale la pena la coordinadora.</p>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- Próximos pasos / interlinking pro -->
+  <section class="art__section">
+    <h2 class="art__h2">Próximos pasos en tu planeación</h2>
+    <p>Tres lecturas que profundizan en los puntos críticos de esta guía:</p>
+    <div class="art__nextsteps">
+      <a href="/blog/checklist-90-dias-antes-evento-aire-libre/" class="art__nextstep-card">
+        <span class="art__nextstep-tag">Paso 1</span>
+        <span class="art__nextstep-title">Checklist 90 días antes del evento</span>
+        <span class="art__nextstep-desc">Cronograma día por día con tareas accionables, plan B y briefing de equipo.</span>
+      </a>
+      <a href="/blog/calendario-temporadas-cuando-reservar-mobiliario-cdmx/" class="art__nextstep-card">
+        <span class="art__nextstep-tag">Paso 2</span>
+        <span class="art__nextstep-title">Calendario de temporadas para reservar</span>
+        <span class="art__nextstep-desc">Mes a mes: cuándo reservar, periodos críticos, anticipación por tipo de evento.</span>
+      </a>
+      <a href="/blog/permisos-eventos-parques-publicos-cdmx/" class="art__nextstep-card">
+        <span class="art__nextstep-tag">Paso 3</span>
+        <span class="art__nextstep-title">Permisos en parques de CDMX</span>
+        <span class="art__nextstep-desc">Autoridades, costos, tiempos y documentación para eventos en espacio público.</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- About MESPIC EEAT -->
+  <div class="art__about">
+    <div class="art__about-badge">MESPIC</div>
+    <div>
+      <h3>Por qué confiar en esta guía</h3>
+      <p>MESPIC opera mobiliario propio de mesas picnic, bancas y sets exteriores para eventos en CDMX, Edomex y Valle de Bravo. Más de 500 eventos producidos: bodas, corporativos, XV años, brand experiences, sesiones audiovisuales y picnics privados. Servicio integral con entrega, montaje y recolección sin costo adicional. Toda esta guía está construida con la operación interna de nuestro equipo de coordinación y logística — no es contenido genérico de marketing.</p>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">Galería: eventos al aire libre producidos por MESPIC</h2>
+    <div class="art__gallery-strip">
+      <img src="/img/mesa-picnic-boda-jardin-atardecer-01.webp" alt="Boda al aire libre en jardín de CDMX con mesas picnic al atardecer" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-evento-corporativo-exterior.webp" alt="Evento corporativo al aire libre con mesas picnic en Lerma Edomex" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-fiesta-infantil-parque.webp" alt="Fiesta infantil en parque con mesas picnic infantiles y decoración temática" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-boda-hacienda-mexicana.webp" alt="Boda en hacienda mexicana con mesas picnic largas y decoración rústica" loading="lazy" width="350" height="220" />
+    </div>
+  </section>
+
+  <div class="art__cta-final">
+    <div class="art__cta-final-inner">
+      <h2>Tu evento al aire libre, sin sorpresas operativas</h2>
+      <p>Años de operación produciendo eventos en CDMX, Edomex y Valle de Bravo. Mobiliario propio, logística sin recargos, asesoría sin compromiso. Cuéntanos tu fecha y armamos juntos el evento.</p>
+      <div class="art__cta-final-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+asesor%C3%ADa+para+organizar+un+evento+al+aire+libre+en+CDMX." target="_blank" rel="noopener" class="art__btn art__btn--wa art__btn--lg" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          Iniciar mi cotización
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--primary art__btn--lg">Formulario de cotización →</a>
+        <a href="/catalogo/" class="art__btn art__btn--ghost art__btn--lg">Ver catálogo de mobiliario</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</BlogLayout>
