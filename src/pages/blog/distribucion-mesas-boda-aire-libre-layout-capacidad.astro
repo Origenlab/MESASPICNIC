@@ -1,0 +1,407 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import '../../styles/blog-article.css';
+---
+
+<BlogLayout
+  title="Cómo Distribuir las Mesas en tu Boda al Aire Libre: Layout y Capacidad | MESPIC"
+  description="Guía técnica de distribución de mesas picnic en bodas al aire libre: layouts imperial, en U y mixto, cálculo de capacidad por invitado, flujo de circulación y plano de montaje en CDMX y Edomex."
+  ogImage="/img/mesa-picnic-boda-invitados-atardecer.avif"
+  heroTitle="Cómo Distribuir las Mesas en tu Boda al Aire Libre: Layout, Capacidad y Flujo"
+  heroBadge="Blog · Bodas · Planeación"
+  heroDescription="El plano de montaje decide si tu boda fluye o se siente apretada. Te explicamos los layouts más usados, cómo calcular capacidad real por invitado y cuántas mesas picnic necesitas según el espacio de tu jardín o hacienda en CDMX y Estado de México."
+  heroSeo1="La distribución de las mesas es una de las decisiones más subestimadas en la planeación de una boda al aire libre, y a la vez una de las que más impacta la experiencia. Un buen plano de montaje permite que los invitados circulen sin chocar, que el servicio de banquete llegue a cada mesa con fluidez, que la pista y la mesa de novios tengan protagonismo y que la fotografía capture líneas limpias. Un mal plano genera cuellos de botella, mesas desaprovechadas y esa sensación de evento apretado que nadie quiere. En MESPIC montamos cientos de bodas al año y el plano siempre se trabaja antes de mover una sola mesa."
+  heroSeo2="Esta guía explica cómo se calcula la capacidad real de un espacio para boda, cuántos metros cuadrados necesita cada invitado sentado, qué layouts funcionan mejor según el número de personas y el tipo de venue, y cómo combinar mesas estándar, grandes e imperiales para lograr el flujo correcto. Incluye tablas de capacidad por número de invitados, distancias mínimas de circulación y un método de cinco pasos para armar tu plano de montaje. Si planeas una boda en jardín, hacienda o terraza en la Ciudad de México o el Estado de México, este material te da el criterio profesional para distribuir como un wedding planner."
+  heroMetrics={[
+    { value: "5 pasos", label: "Para armar tu plano" },
+    { value: "9 min", label: "Tiempo de lectura" },
+    { value: "1.4 m²", label: "Espacio ideal por invitado" },
+  ]}
+  datePublished="2026-06-03"
+  articleSection="Bodas"
+  breadcrumbs={[
+    { label: "Inicio", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Cómo Distribuir las Mesas en tu Boda" },
+  ]}
+  sidebarProducts={[
+    { name: "Mesa Estándar 1.80m", cap: "6 personas", href: "/catalogo/mesa-picnic-estandar/", img: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
+    { name: "Mesa Grande 2.40m", cap: "10–12 personas · Imperial", href: "/catalogo/mesa-picnic-grande/", img: "/img/mesa-picnic-grande-evento-16.avif" },
+    { name: "Mesa Premium", cap: "Sin nudos · Bodas VIP", href: "/catalogo/mesa-picnic-premium/", img: "/img/mesa-picnic-premium-23.avif" },
+  ]}
+  sidebarArticles={[
+    { title: "Boda en Jardín, Hacienda o Terraza: Qué Mobiliario Elegir", meta: "Bodas · 9 min", href: "/blog/bodas-jardin-hacienda-terraza-mobiliario-cdmx/", img: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
+    { title: "¿Cuántas Mesas Picnic Necesitas Según los Invitados?", meta: "Guía · 5 min", href: "/blog/cuantas-mesas-picnic-necesitas-segun-invitados/", img: "/img/mesa-picnic-boda-invitados-atardecer.avif" },
+    { title: "Renta de Mesas Picnic para Bodas en CDMX", meta: "Bodas · 8 min", href: "/blog/renta-mesas-picnic-bodas-cdmx/", img: "/img/mesa-picnic-boda-elegante-luces.avif" },
+  ]}
+  sidebarServices={[
+    { name: "Bodas al Aire Libre", desc: "Jardines · Haciendas · Terrazas", href: "/servicios/bodas/" },
+    { name: "Boda Clásica", desc: "Banquete formal", href: "/servicios/bodas/clasica/" },
+    { name: "Boda Íntima", desc: "30 a 80 invitados", href: "/servicios/bodas/intima/" },
+    { name: "Boda Rústica", desc: "Haciendas · Campestre", href: "/servicios/bodas/rustica/" },
+  ]}
+  sidebarCtaTitle="¿Te armamos el plano?"
+  sidebarCtaText="Mándanos las medidas del venue y tu número de invitados. Te proponemos la distribución de mesas y cotizamos en menos de 30 minutos."
+  sidebarCtaWa="Hola%2C+quiero+ayuda+con+la+distribuci%C3%B3n+de+mesas+para+mi+boda."
+  sidebarServicesTitle="Servicios para tu boda"
+  faqs={[
+    { q: "¿Cuántos metros cuadrados necesito por invitado en una boda con mesas picnic?", a: "Para banquete sentado con mesas picnic se calculan entre 1.2 y 1.5 m² por invitado considerando mesa, bancas y circulación. A esto se suma el área de pista (1 m² por cada 2 invitados que bailen), barra, mesa de novios y estaciones de servicio. Para 100 invitados, el área útil de banquete ronda los 130–150 m² más las zonas complementarias." },
+    { q: "¿Qué layout de mesas es mejor para una boda al aire libre?", a: "Depende del número de invitados y el venue. El layout imperial (filas largas de mesas grandes) luce espectacular en haciendas y jardines amplios y favorece la conversación. El layout de mesas individuales agrupadas da más intimidad y flexibilidad de circulación. El mixto —mesa de novios imperial más mesas estándar alrededor— es el más versátil para 80–150 invitados." },
+    { q: "¿Cuántas mesas picnic necesito para 100 invitados en una boda?", a: "Con mesa estándar de 6 personas necesitas alrededor de 17 mesas para sentar a 100 invitados, sumando un 10% de holgura. Si usas mesas grandes de 2.40 m (10–12 personas) bajas a 9–10 mesas con líneas imperiales más largas. Lo habitual es combinar ambos modelos según el plano y la mesa de novios." },
+    { q: "¿Qué distancia debo dejar entre mesas para que los invitados circulen?", a: "La distancia mínima recomendada entre mesas es de 1.2 metros para permitir que un invitado pase aunque haya personas sentadas, y de 1.5 metros en los pasillos principales por donde circula el servicio de banquete. En venues con meseros llevando charolas conviene 1.8 metros en las rutas de servicio para evitar accidentes." },
+    { q: "¿Dónde coloco la mesa de novios y la pista de baile?", a: "La mesa de novios se ubica en un punto focal visible desde todas las mesas, generalmente al frente o centrada, a veces elevada. La pista se coloca cerca de la mesa de novios y del DJ o grupo, en una zona que no obstruya la circulación al banquete ni a la barra. En venues alargados conviene la pista al centro para equilibrar el flujo." },
+    { q: "¿MESPIC ayuda a diseñar el plano de distribución de mesas?", a: "Sí. Con las medidas del venue y tu número de invitados proponemos una distribución de mesas que optimiza capacidad y circulación, y el equipo monta exactamente según ese plano el día de la boda. Operamos en toda la CDMX y el Estado de México, coordinando directamente con tu wedding planner o con el venue." },
+  ]}
+>
+
+<div class="art">
+
+  <p class="art__lead">
+    Puedes tener el venue más bonito y las mesas más elegantes, pero si el plano de distribución está mal armado, la boda se siente apretada, el servicio se traba y las fotos salen amontonadas. La buena noticia: distribuir mesas es una ciencia con reglas claras. Esta guía te da el método que usan los wedding planners para que tu boda al aire libre fluya con elegancia.
+  </p>
+
+  <div class="art__author">
+    <div class="art__author-badge">M</div>
+    <div class="art__author-meta">
+      <span class="art__author-name">Equipo MESPIC · Montaje de bodas</span>
+      <span class="art__author-role">Planeación y montaje de banquetes con mesas de madera en CDMX y Estado de México</span>
+      <span class="art__author-stamp">Tiempo de lectura: 9 min · Basado en cientos de planos de boda</span>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">Qué es un plano de montaje y por qué decide la experiencia</h2>
+
+    <p>Antes de rentar una sola mesa, todo evento bien planeado parte de un plano: un dibujo a escala del venue con la ubicación de cada mesa, la pista, la barra, la mesa de novios y las rutas de circulación. Ese plano es lo que traduce "tengo 120 invitados" en "necesito 20 mesas estándar distribuidas en tres bloques con pasillos de 1.5 metros". Si todavía no decides el modelo, primero vale la pena ver <a href="/blog/bodas-jardin-hacienda-terraza-mobiliario-cdmx/">qué mobiliario va mejor con tu venue</a>, porque eso condiciona el plano.</p>
+
+    <div class="art__definition">
+      <span class="art__definition-term">Definición · Plano de montaje (floor plan)</span>
+      <p>Representación a escala del espacio de un evento que ubica el mobiliario, las zonas funcionales (banquete, pista, barra, mesa de novios, estaciones de servicio) y las rutas de circulación de invitados y personal. Su objetivo es maximizar la capacidad útil sin sacrificar el flujo: que todos quepan cómodos, que el servicio llegue a cada mesa y que las zonas de mayor tránsito no se saturen. Es la base sobre la que se calcula cuántas mesas picnic rentar y cómo acomodarlas.</p>
+    </div>
+
+    <p>El plano resuelve tres preguntas en orden: cuánta gente cabe (capacidad), cómo se acomodan las mesas (layout) y cómo se mueven las personas (flujo). Vamos una por una.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Capacidad: cuánto espacio necesita cada invitado</h2>
+
+    <p>El error más común es asumir que un espacio de 200 m² sienta a 200 personas. No es así. Cada invitado sentado en banquete necesita su silla o banca, su porción de mesa y espacio para levantarse sin chocar con quien está atrás. Estas son las cifras de referencia que usamos al planear:</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Zona del evento</th>
+            <th class="th-accent">Espacio por invitado</th>
+            <th>Notas de planeación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Banquete sentado (mesa picnic)</strong></td>
+            <td class="td-accent">1.2 – 1.5 m²</td>
+            <td>Incluye mesa, bancas y circulación básica</td>
+          </tr>
+          <tr>
+            <td><strong>Cóctel de pie</strong></td>
+            <td class="td-accent">0.6 – 0.8 m²</td>
+            <td>Mesas altas cocktail, sin sillas</td>
+          </tr>
+          <tr>
+            <td><strong>Pista de baile</strong></td>
+            <td class="td-accent">0.5 m² por cada 2 invitados</td>
+            <td>Se asume que ~40% baila a la vez</td>
+          </tr>
+          <tr>
+            <td><strong>Barra y estaciones</strong></td>
+            <td class="td-accent">+10–15% del área total</td>
+            <td>Barra, food stations, mesa de postres</td>
+          </tr>
+          <tr>
+            <td><strong>Mesa de novios</strong></td>
+            <td class="td-accent">6–10 m² fijos</td>
+            <td>Punto focal, requiere espacio propio</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="art__tip">
+      <div class="art__tip-icon">💡</div>
+      <div>
+        <strong>Regla rápida:</strong> para una boda con banquete sentado, multiplica el número de invitados por 1.4 m² y súmale el área de pista, barra y mesa de novios. Una boda de 100 invitados necesita aproximadamente 140 m² de banquete más 50–70 m² de zonas complementarias: unos 200 m² útiles en total.
+      </div>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">¿Cuántas mesas picnic necesitas? Tabla por invitados</h2>
+
+    <p>Una vez claro el espacio, el cálculo de mesas es directo. Esta tabla asume un 10% de holgura sobre invitados confirmados (siempre llegan acompañantes de último minuto) y muestra dos escenarios: solo mesas estándar o combinación con mesas grandes. Si quieres ir más a fondo en el cálculo, tenemos una guía dedicada a <a href="/blog/cuantas-mesas-picnic-necesitas-segun-invitados/">cuántas mesas necesitas según tus invitados</a>.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Invitados</th>
+            <th class="th-accent">Solo mesa estándar (6 pax)</th>
+            <th>Combinación estándar + grande</th>
+            <th>Área útil aprox.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>40</strong></td>
+            <td class="td-accent">7 mesas</td>
+            <td>4 estándar + 2 grandes</td>
+            <td>~80 m²</td>
+          </tr>
+          <tr>
+            <td><strong>60</strong></td>
+            <td class="td-accent">11 mesas</td>
+            <td>6 estándar + 3 grandes</td>
+            <td>~110 m²</td>
+          </tr>
+          <tr>
+            <td><strong>100</strong></td>
+            <td class="td-accent">17 mesas</td>
+            <td>8 estándar + 6 grandes</td>
+            <td>~150 m²</td>
+          </tr>
+          <tr>
+            <td><strong>150</strong></td>
+            <td class="td-accent">26 mesas</td>
+            <td>12 estándar + 9 grandes</td>
+            <td>~220 m²</td>
+          </tr>
+          <tr>
+            <td><strong>200</strong></td>
+            <td class="td-accent">34 mesas</td>
+            <td>16 estándar + 12 grandes</td>
+            <td>~290 m²</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <figure class="art__figure">
+    <img
+      src="/img/mesa-picnic-boda-invitados-atardecer.avif"
+      alt="Distribución de mesas picnic con invitados en boda al aire libre al atardecer en CDMX"
+      loading="lazy"
+      width="900"
+      height="560"
+    />
+    <figcaption>Layout mixto de mesas picnic para boda de 120 invitados con líneas imperiales y circulación amplia · MESPIC</figcaption>
+  </figure>
+
+  <section class="art__section">
+    <h2 class="art__h2">Los 3 layouts que mejor funcionan en bodas al aire libre</h2>
+
+    <p>Con la capacidad resuelta, toca decidir cómo se acomodan las mesas. Estos son los tres layouts más usados, cada uno con su lógica de flujo y su estética.</p>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>Layout imperial</h3>
+        <p>Filas largas de mesas grandes de 2.40 m unidas. Espectacular en haciendas y jardines amplios, favorece la conversación grupal y la fotografía de líneas largas. Ideal para 80–200 invitados con buena circulación lateral.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Mesas individuales agrupadas</h3>
+        <p>Mesas estándar distribuidas en bloques. Da intimidad por grupos, máxima flexibilidad para circular y se adapta a venues irregulares. La opción más cómoda para jardines con árboles o desniveles.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Layout mixto (recomendado)</h3>
+        <p>Mesa de novios imperial al frente más mesas estándar alrededor. Combina protagonismo de los novios con intimidad de invitados. El más versátil para la mayoría de bodas de 80–150 personas.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Layout en U o herradura</h3>
+        <p>Para bodas íntimas de 30–60 invitados. Todos se ven entre sí y la mesa de novios cierra la U. Crea cercanía y es perfecto para microbodas en terraza o jardín pequeño.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="art__cta-inline">
+    <div class="art__cta-inline-content">
+      <h3>¿Quieres que te armemos el plano?</h3>
+      <p>Envíanos las medidas de tu venue y el número de invitados. Te proponemos la distribución de mesas óptima y cotizamos el mobiliario en menos de 30 minutos.</p>
+      <div class="art__cta-inline-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+ayuda+con+el+plano+de+distribuci%C3%B3n+de+mi+boda." target="_blank" rel="noopener" class="art__btn art__btn--wa" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Pedir mi plano por WhatsApp
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--outline">Ir al formulario de cotización →</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">Flujo: las distancias de circulación que no debes ignorar</h2>
+
+    <p>El flujo es lo que separa una boda cómoda de una apretada. Estas son las distancias mínimas que respetamos en cada montaje para que invitados y servicio se muevan sin tropezar.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Ruta</th>
+            <th class="th-accent">Distancia mínima</th>
+            <th>Por qué</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Entre mesas (lateral)</strong></td>
+            <td class="td-accent">1.2 m</td>
+            <td>Pasar aunque haya invitados sentados</td>
+          </tr>
+          <tr>
+            <td><strong>Pasillo principal</strong></td>
+            <td class="td-accent">1.5 m</td>
+            <td>Circulación de invitados en ambos sentidos</td>
+          </tr>
+          <tr>
+            <td><strong>Ruta de servicio (meseros)</strong></td>
+            <td class="td-accent">1.8 m</td>
+            <td>Charolas y carritos sin riesgo de accidente</td>
+          </tr>
+          <tr>
+            <td><strong>Acceso a barra y pista</strong></td>
+            <td class="td-accent">2.0 m</td>
+            <td>Zonas de alto tránsito y aglomeración</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Cómo armar tu plano de montaje en 5 pasos</h2>
+
+    <p>Este es el método que seguimos al planear la distribución de una boda. Puedes hacerlo tú con las medidas del venue, o enviárnoslas y lo armamos contigo.</p>
+
+    <ol class="art__steps">
+      <li class="art__step">
+        <span class="art__step-num">01</span>
+        <div class="art__step-body">
+          <h3>Mide el área útil real del venue</h3>
+          <p>No el área total: descuenta jardineras, fuentes, árboles, desniveles y zonas de paso obligado. El área útil es donde realmente puedes montar mesas. Anota largo, ancho y obstáculos fijos.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">02</span>
+        <div class="art__step-body">
+          <h3>Calcula capacidad y número de mesas</h3>
+          <p>Multiplica invitados por 1.4 m² para el banquete y verifica que el área útil lo permita. Usa la tabla de mesas para definir cuántas estándar y grandes necesitas con 10% de holgura.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">03</span>
+        <div class="art__step-body">
+          <h3>Ubica las zonas fijas primero</h3>
+          <p>Coloca en el plano la mesa de novios (punto focal), la pista cerca del DJ, la barra accesible y las estaciones de servicio. Estas zonas mandan; las mesas de invitados se acomodan alrededor.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">04</span>
+        <div class="art__step-body">
+          <h3>Distribuye las mesas con los pasillos correctos</h3>
+          <p>Acomoda las mesas respetando 1.2 m entre ellas y 1.5–1.8 m en pasillos y rutas de servicio. Elige el layout (imperial, mixto o en U) según el número de invitados y la forma del espacio.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">05</span>
+        <div class="art__step-body">
+          <h3>Valida el flujo y comparte el plano</h3>
+          <p>Recorre mentalmente el camino de un invitado de su mesa a la barra, al baño y a la pista. Si hay cuellos de botella, ajusta. Comparte el plano final con el venue y el equipo de montaje para que todo se coloque exactamente igual.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Cobertura y montaje según plano en CDMX y Edomex</h2>
+
+    <p>Montamos según el plano acordado en toda la Ciudad de México y el Estado de México. El equipo coloca cada mesa en su posición exacta, no solo descarga el mobiliario.</p>
+
+    <div class="art__coverage-grid">
+      <div class="art__coverage-col">
+        <h3>Ciudad de México</h3>
+        <ul class="art__coverage-list">
+          <li>Todas las alcaldías</li>
+          <li>Jardines de eventos en Tlalpan y Xochimilco</li>
+          <li>Terrazas en Roma, Condesa y Polanco</li>
+          <li>Casas con jardín en Coyoacán y San Ángel</li>
+        </ul>
+      </div>
+      <div class="art__coverage-col">
+        <h3>Estado de México</h3>
+        <ul class="art__coverage-list">
+          <li>Haciendas en Calimaya y Tenango del Valle</li>
+          <li>Texcoco y Tepotzotlán</li>
+          <li>Metepec y corredor Toluca</li>
+          <li>Huixquilucan, Interlomas y Naucalpan</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Preguntas frecuentes sobre distribución de mesas</h2>
+
+    <div class="art__faqs">
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuántos metros cuadrados necesito por invitado en una boda con mesas picnic?</summary>
+        <p class="art__faq-a">Para banquete sentado con mesas picnic se calculan entre 1.2 y 1.5 m² por invitado considerando mesa, bancas y circulación. A esto se suma el área de pista (1 m² por cada 2 invitados que bailen), barra, mesa de novios y estaciones de servicio. Para 100 invitados, el área útil de banquete ronda los 130–150 m² más las zonas complementarias.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué layout de mesas es mejor para una boda al aire libre?</summary>
+        <p class="art__faq-a">Depende del número de invitados y el venue. El layout imperial (filas largas de mesas grandes) luce espectacular en haciendas y jardines amplios y favorece la conversación. El layout de mesas individuales agrupadas da más intimidad y flexibilidad de circulación. El mixto —mesa de novios imperial más mesas estándar alrededor— es el más versátil para 80–150 invitados.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuántas mesas picnic necesito para 100 invitados en una boda?</summary>
+        <p class="art__faq-a">Con mesa estándar de 6 personas necesitas alrededor de 17 mesas para sentar a 100 invitados, sumando un 10% de holgura. Si usas mesas grandes de 2.40 m (10–12 personas) bajas a 9–10 mesas con líneas imperiales más largas. Lo habitual es combinar ambos modelos según el plano y la mesa de novios.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué distancia debo dejar entre mesas para que los invitados circulen?</summary>
+        <p class="art__faq-a">La distancia mínima recomendada entre mesas es de 1.2 metros para permitir que un invitado pase aunque haya personas sentadas, y de 1.5 metros en los pasillos principales por donde circula el servicio de banquete. En venues con meseros llevando charolas conviene 1.8 metros en las rutas de servicio para evitar accidentes.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Dónde coloco la mesa de novios y la pista de baile?</summary>
+        <p class="art__faq-a">La mesa de novios se ubica en un punto focal visible desde todas las mesas, generalmente al frente o centrada, a veces elevada. La pista se coloca cerca de la mesa de novios y del DJ o grupo, en una zona que no obstruya la circulación al banquete ni a la barra. En venues alargados conviene la pista al centro para equilibrar el flujo.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿MESPIC ayuda a diseñar el plano de distribución de mesas?</summary>
+        <p class="art__faq-a">Sí. Con las medidas del venue y tu número de invitados proponemos una distribución de mesas que optimiza capacidad y circulación, y el equipo monta exactamente según ese plano el día de la boda. Operamos en toda la CDMX y el Estado de México, coordinando directamente con tu wedding planner o con el venue.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Galería: layouts de boda montados por MESPIC</h2>
+    <div class="art__gallery-strip">
+      <img src="/img/boda-multiples-1.avif" alt="Layout imperial de mesas picnic en boda con muchos invitados" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-boda-jardin-atardecer-01.webp" alt="Distribución de mesas en boda de jardín al atardecer" loading="lazy" width="350" height="220" />
+      <img src="/img/boda-hacienda-banquete-1.avif" alt="Banquete de boda en hacienda con distribución imperial" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-boda-elegante-decoracion.avif" alt="Mesa de boda con distribución elegante y decoración" loading="lazy" width="350" height="220" />
+    </div>
+  </section>
+
+  <div class="art__cta-final">
+    <div class="art__cta-final-inner">
+      <h2>Cotiza tu boda con la distribución correcta</h2>
+      <p>Sin compromiso. Mándanos las medidas del venue y tu número de invitados. Te proponemos el plano y respondemos con precio final del mobiliario en menos de 30 minutos.</p>
+      <div class="art__cta-final-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+cotizar+mesas+picnic+y+ayuda+con+la+distribuci%C3%B3n+de+mi+boda." target="_blank" rel="noopener" class="art__btn art__btn--wa art__btn--lg" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Cotizar por WhatsApp ahora
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--primary art__btn--lg">Formulario de cotización →</a>
+        <a href="/servicios/bodas/" class="art__btn art__btn--ghost art__btn--lg">Ver servicio de bodas</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</BlogLayout>

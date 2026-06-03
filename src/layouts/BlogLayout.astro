@@ -30,6 +30,10 @@ interface Props {
   heroMetrics?: Array<{ value: string; label: string }>;
   heroCta?: { label: string; href: string };
   heroCtaSecondary?: { label: string; href: string };
+  datePublished?: string;          // ISO: "2026-06-03"
+  dateModified?: string;
+  articleSection?: string;         // categoría temática
+  faqs?: Array<{ q: string; a: string }>;  // genera FAQPage schema (SEO/GEO)
   breadcrumbs?: Array<{ label: string; href?: string }>;
   sidebarProducts?: SidebarProduct[];
   sidebarArticles?: SidebarArticle[];
@@ -53,6 +57,10 @@ const {
   heroMetrics,
   heroCta = { label: "Cotizar sin compromiso →", href: "/cotizar/" },
   heroCtaSecondary = { label: "Ver catálogo", href: "/catalogo/" },
+  datePublished = "2026-06-03",
+  dateModified,
+  articleSection = "Eventos",
+  faqs = [],
   breadcrumbs = [],
   sidebarProducts = [
     { name: "Mesa Estándar",  cap: "1.80 m · 6 personas",        href: "/catalogo/mesa-picnic-estandar/",  img: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
@@ -82,6 +90,46 @@ const defaultBreadcrumbs = [
 ];
 
 const crumbs = breadcrumbs.length > 0 ? breadcrumbs : defaultBreadcrumbs;
+
+// ── Schema SEO/GEO: BlogPosting + FAQPage ──
+const _siteUrl = "https://mesaspicnic.com";
+const _canonical = (canonical || new URL(Astro.url.pathname, Astro.site).toString())
+  .replace(/^(https?:\/\/[^/]+\/.+?)\/$/, "$1");
+const _img = ogImage
+  ? (ogImage.startsWith("http") ? ogImage : `${_siteUrl}${ogImage}`)
+  : `${_siteUrl}/img/mesa-picnic-boda-elegante-decoracion.avif`;
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": heroTitle,
+  "description": description,
+  "image": _img,
+  "datePublished": datePublished,
+  "dateModified": dateModified || datePublished,
+  "articleSection": articleSection,
+  "inLanguage": "es-MX",
+  "author": { "@type": "Organization", "name": "MESPIC — Renta de Mesas Picnic", "url": _siteUrl },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MESPIC — Renta de Mesas Picnic",
+    "url": _siteUrl,
+    "logo": { "@type": "ImageObject", "url": `${_siteUrl}/img/mespic.webp` },
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": _canonical },
+};
+
+const faqSchema = faqs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  })),
+} : null;
+
+const blogSchemas = [blogPostingSchema, ...(faqSchema ? [faqSchema] : [])];
 ---
 
 <BaseLayout
@@ -89,6 +137,7 @@ const crumbs = breadcrumbs.length > 0 ? breadcrumbs : defaultBreadcrumbs;
   description={description}
   canonical={canonical}
   ogImage={ogImage}
+  schema={blogSchemas}
 >
 
   <!-- ── Breadcrumbs: slot fijo dentro del hdr-stack, debajo del header ── -->
