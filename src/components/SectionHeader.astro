@@ -79,8 +79,8 @@ const Tag = tag;
   .sh__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
+    gap: 3rem clamp(2rem, 5vw, 4rem);
+    align-items: center;
   }
 
   /* ════════════════════════════════
@@ -114,10 +114,13 @@ const Tag = tag;
 
   /* Título */
   .sh__title {
-    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-size: clamp(1.9rem, 4vw, 2.85rem);
+    font-weight: 800;
     color: var(--c-text, #1C1917);
-    line-height: 1.15;
-    letter-spacing: -0.02em;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    max-width: 22ch;
     margin-bottom: 1.25rem;
   }
 
