@@ -1,0 +1,382 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import '../../styles/blog-article.css';
+---
+
+<BlogLayout
+  title="Coffee Breaks y Coffee Stations Corporativas: Mobiliario de Madera | MESPIC"
+  description="Cómo montar una coffee station que la gente recuerde: tipos de estación, mobiliario de madera, cálculo por asistentes y logística para juntas, congresos y oficinas en CDMX y Edomex."
+  ogImage="/img/corp-desayuno-reunion-1.avif"
+  heroTitle="Coffee Breaks y Coffee Stations Corporativas: Mobiliario de Madera para tu Evento"
+  heroBadge="Blog · Corporativo · Coffee Break"
+  heroDescription="El coffee break es ese momento donde realmente pasa el networking. Aquí va lo que hemos aprendido montando estaciones de café para juntas, congresos y oficinas: qué mobiliario funciona, cuánto necesitas según los asistentes y el error logístico que arruina la fila del café."
+  heroSeo1="Hay un mito que escuchamos seguido cuando una empresa nos cotiza un evento: que el coffee break es el rubro donde se puede recortar. Lo entendemos, parece secundario al lado de la agenda, los ponentes o el salón. Pero la verdad, después de montar cientos de eventos corporativos, es que el coffee break es donde la gente se relaja, conversa y cierra los acuerdos que no salieron en la sala de juntas. Una coffee station bien montada no es un gasto: es la zona social del evento, y el mobiliario que la sostiene decide si funciona o si se vuelve una fila tensa de gente con su taza en la mano sin dónde apoyarse."
+  heroSeo2="En este artículo desarmamos la coffee station con honestidad de quien la monta, no de quien la vende en un PDF. Vamos a contarte qué tipos de estación existen y cuándo conviene cada una, qué mobiliario de madera aguanta el tránsito de una pausa de quince minutos con cien personas encima, cómo calcular cuántas piezas necesitas según el número de asistentes, y qué detalles de logística —el acceso, la energía, el flujo de la fila— marcan la diferencia entre un break que fluye y uno que colapsa. Sin relleno y sin sobrevender."
+  heroMetrics={[
+    { value: "4 formatos", label: "Estación según el evento" },
+    { value: "8 min", label: "Tiempo de lectura" },
+    { value: "CDMX + Edomex", label: "Cobertura sin flete" },
+  ]}
+  datePublished="2026-06-03"
+  articleSection="Corporativo"
+  breadcrumbs={[
+    { label: "Inicio", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Coffee Breaks y Coffee Stations Corporativas" },
+  ]}
+  sidebarProducts={[
+    { name: "Mesa Alta Cocktail", cap: "De pie · Networking", href: "/catalogo/mesa-alta-cocktail/", img: "/img/mesa-picnic-evento-corporativo-networking.avif" },
+    { name: "Mesa Biergarten", cap: "Barra larga · Buffet de café", href: "/catalogo/mesa-biergarten-madera/", img: "/img/mesa-picnic-comida-corporativa-empresas.webp" },
+    { name: "Mesa Estándar 1.80m", cap: "6 personas · Apoyo", href: "/catalogo/mesa-picnic-estandar/", img: "/img/eventos-corporativos-ejecutivos-renta-mesas-picnic-02.avif" },
+  ]}
+  sidebarArticles={[
+    { title: "Cómo Organizar un Día de Integración (Offsite) Empresarial al Aire Libre", meta: "Corporativo · 9 min", href: "/blog/dia-integracion-offsite-empresarial-aire-libre-cdmx/", img: "/img/corp-teambuilding-1.avif" },
+    { title: "Mesas Picnic para Team Building de Empresas", meta: "Corporativo · 7 min", href: "/blog/mesas-picnic-team-building-empresas/", img: "/img/corp-teambuilding-1.avif" },
+    { title: "Conferencias Empresariales al Aire Libre", meta: "Corporativo · 8 min", href: "/blog/conferencias-empresariales-aire-libre-mobiliario/", img: "/img/mesa-picnic-conferencia-empresarial-plantas.avif" },
+  ]}
+  sidebarServices={[
+    { name: "Eventos Corporativos", desc: "Congresos · Juntas · Lanzamientos", href: "/servicios/eventos-corporativos/" },
+    { name: "Mesa Alta Cocktail", desc: "Networking de pie", href: "/catalogo/mesa-alta-cocktail/" },
+    { name: "Mesa Biergarten", desc: "Barra de buffet y café", href: "/catalogo/mesa-biergarten-madera/" },
+  ]}
+  sidebarCtaTitle="¿Tienes evento con coffee break?"
+  sidebarCtaText="Cuéntanos cuántos asistentes y dónde es. Te decimos qué estación tiene sentido y te pasamos precio el mismo día."
+  sidebarCtaWa="Hola%2C+quiero+cotizar+mobiliario+para+una+coffee+station+corporativa."
+  sidebarServicesTitle="Servicios y mobiliario"
+  faqs={[
+    { q: "¿Cuánto mobiliario necesito para una coffee station según los asistentes?", a: "La regla rápida que usamos: una mesa de barra o biergarten de buffet por cada 50 a 60 personas para servir el café, más mesas altas de apoyo a razón de una por cada 8 a 10 asistentes para que tengan dónde dejar la taza. Para un evento de 100 personas hablamos de dos barras de servicio y unas diez mesas altas. Lo que más se subestima no es la mesa de servicio, sino los puntos de apoyo: sin ellos la gente se queda parada con la taza en la mano y el break se vuelve incómodo." },
+    { q: "¿Qué tipo de coffee station conviene para una junta o congreso?", a: "Depende del formato. Para una junta de 20 a 30 personas funciona una sola barra con dos o tres mesas altas alrededor. Para un congreso de varios cientos conviene distribuir varias estaciones idénticas en puntos distintos del foyer para que la fila no se concentre. La peor decisión es una sola estación gigante: se forma un cuello de botella justo en los quince minutos que dura la pausa." },
+    { q: "¿La mesa alta cocktail sirve para un coffee break?", a: "Es prácticamente la pieza estrella. La altura de barra hace que la gente conserve la postura de pie, conversando, sin sentarse a aislarse. Caben cuatro o cinco personas alrededor de cada una, son ligeras de mover y dan ese aire de networking que tanto se busca. Para nosotros, una coffee station sin mesas altas está incompleta." },
+    { q: "¿Se puede montar una coffee station dentro de la oficina o en un rooftop corporativo?", a: "Sí, y es de lo que más nos piden. En oficina lo crítico es el acceso: medir el elevador y los pasillos antes, porque una barra biergarten no entra por cualquier puerta. En rooftop el piso suele estar firme y nivelado, así que el montaje es sencillo; el detalle ahí es el viento y confirmar el horario de carga del edificio. Resolvemos ambos casos seguido." },
+    { q: "¿El mobiliario de madera aguanta el tránsito de un evento corporativo?", a: "Sí. Trabajamos con pino macizo barnizado a mano, pensado para uso de evento, no decorativo de un solo día. Aguanta que cien personas pasen apoyando tazas, platos y laptops durante toda una jornada. Lo barnizamos para que el café o un derrame no manchen, y entre evento y evento revisamos pieza por pieza." },
+    { q: "¿Cubren oficinas en Santa Fe, Polanco e Interlomas?", a: "Sí. Entregamos, montamos y recogemos en toda la CDMX y los municipios del Estado de México sin cobrar flete, incluidas las zonas corporativas más pedidas: Santa Fe, Polanco, Reforma, Interlomas, Naucalpan y el corredor Toluca–Lerma. Para destinos más lejanos aplica un cargo por distancia, pero te lo decimos claro en la cotización, nunca el día del evento." },
+  ]}
+>
+
+<div class="art">
+
+  <p class="art__lead">
+    Quince minutos. Eso dura, en promedio, un coffee break en un evento corporativo. Y en esos quince minutos pasa más networking real que en toda la jornada de presentaciones. Por eso nos sorprende lo poco que se piensa en el mobiliario que sostiene ese momento. Una coffee station no es solo una mesa con termos: es el lugar donde la gente conversa, intercambia tarjetas y decide si tu evento se sintió cuidado o improvisado. Esta guía es para que montes una que funcione de verdad.
+  </p>
+
+  <div class="art__author">
+    <div class="art__author-badge">M</div>
+    <div class="art__author-meta">
+      <span class="art__author-name">Equipo MESPIC · Eventos corporativos</span>
+      <span class="art__author-role">Mobiliario de madera para coffee stations, congresos y eventos de empresa en CDMX y Estado de México</span>
+      <span class="art__author-stamp">Tiempo de lectura: 8 min · Basado en cientos de eventos corporativos montados</span>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">Por qué el coffee break decide más de lo que parece</h2>
+
+    <p>Te lo planteamos al revés: ¿cuántas veces has cerrado una conversación importante en plena sala de conferencias, con todos sentados mirando una pantalla? Casi nunca. Las cosas se hablan en la pausa, café en mano, de pie. Por eso un coffee break mal montado no solo se ve descuidado, sino que <strong>desperdicia el único momento de socialización</strong> que tiene tu evento. Cuando la fila se atora, no hay dónde apoyar la taza y la gente vuelve a la sala antes de poder conversar, perdiste ese valor por completo.</p>
+
+    <p>Nosotros lo vemos como una extensión natural de cualquier evento de empresa bien planeado. Si estás organizando algo más grande, conviene pensar la coffee station como parte del montaje completo de tus <a href="/servicios/eventos-corporativos/">eventos corporativos</a>, no como un añadido de último minuto. Y si el break es parte de una jornada más larga tipo offsite, vale la pena leer cómo encaja en la planeación de un <a href="/blog/dia-integracion-offsite-empresarial-aire-libre-cdmx/">día de integración empresarial</a> completo, porque el ritmo de las pausas cambia todo el flujo del día.</p>
+
+    <div class="art__definition">
+      <span class="art__definition-term">Definición · Coffee station corporativa</span>
+      <p>Es el punto físico donde se sirve café, infusiones y bocadillos durante las pausas de un evento de empresa. Combina una barra de servicio (donde están los termos y la comida) con puntos de apoyo de pie (mesas altas) donde los asistentes conversan mientras consumen. A diferencia de una mesa de banquete sentado, está diseñada para flujo rápido, rotación constante y networking informal de pie.</p>
+    </div>
+
+    <p>Con esa idea clara, veamos los cuatro formatos de estación que montamos según el tipo de evento.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Los cuatro formatos de coffee station</h2>
+
+    <p>No toda coffee station es igual. El formato depende del número de asistentes, del espacio y de qué tan importante sea el networking en tu evento. Esta tabla te da lo esencial de un vistazo.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table art__table--compare">
+        <thead>
+          <tr>
+            <th>Formato</th>
+            <th class="th-accent">Estación express</th>
+            <th>Estación networking</th>
+            <th>Estación buffet</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Ideal para</strong></td>
+            <td class="td-accent">Juntas 15–40 pax</td>
+            <td>Eventos 40–120 pax</td>
+            <td>Congresos 120+ pax</td>
+          </tr>
+          <tr>
+            <td><strong>Mobiliario base</strong></td>
+            <td class="td-accent">1 barra + 2 mesas altas</td>
+            <td>1–2 barras + altas cocktail</td>
+            <td>Varias barras biergarten</td>
+          </tr>
+          <tr>
+            <td><strong>Servicio</strong></td>
+            <td class="td-accent">Autoservicio rápido</td>
+            <td>Autoservicio + barista</td>
+            <td>Barista + meseros</td>
+          </tr>
+          <tr>
+            <td><strong>Tiempo de pausa</strong></td>
+            <td class="td-accent">10–15 min</td>
+            <td>15–20 min</td>
+            <td>20–30 min</td>
+          </tr>
+          <tr>
+            <td><strong>Nivel de networking</strong></td>
+            <td class="td-accent">Bajo</td>
+            <td>Alto</td>
+            <td>Medio (por volumen)</td>
+          </tr>
+          <tr>
+            <td><strong>El reto que nadie ve venir</strong></td>
+            <td class="td-accent">El punto de energía</td>
+            <td>Puntos de apoyo suficientes</td>
+            <td>Distribuir para evitar fila</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Más abajo entramos en el mobiliario concreto que sostiene cada uno. Pero primero, una opinión honesta: el formato que más fallamos en ver es el de networking. Mucha gente cree que basta con la barra de servicio y olvida los puntos de apoyo. Sin ellos, la conversación dura lo que aguanta el brazo sosteniendo la taza.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">El mobiliario que sostiene una buena coffee station</h2>
+
+    <p>Aquí está el corazón del asunto. Una estación funciona o no según las piezas que la arman. Estas son las que recomendamos y por qué, después de verlas en acción una y otra vez.</p>
+
+    <h3>Las piezas clave</h3>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>Mesa alta cocktail</h3>
+        <p>La reina del coffee break. Su altura de barra mantiene a la gente de pie y conversando, no sentada y aislada. Caben cuatro o cinco alrededor, son ligeras y dan ese aire de networking. Una estación sin ellas se siente incompleta.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Mesa biergarten como barra de servicio</h3>
+        <p>Su largo de 2.20 m la vuelve perfecta para alinear termos, tazas, charolas de fruta y bocadillos sin que se amontonen. Es la barra de buffet ideal para un café que sirve a mucha gente con orden.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Mesa estándar de 1.80 m</h3>
+        <p>Cuando hay pausa con galletas o snacks que piden sentarse un momento, un par de mesas estándar dan ese respiro. También funcionan como mesa de materiales o de registro junto a la estación.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Madera barnizada, no decorativa</h3>
+        <p>Todo en pino macizo barnizado a mano, pensado para uso de evento. Aguanta derrames de café, apoyo de laptops y el tránsito de una jornada completa sin marcarse ni tambalear.</p>
+      </div>
+    </div>
+
+    <div class="art__tip">
+      <div class="art__tip-icon">💡</div>
+      <div>
+        <strong>Lo que siempre confirmamos antes de montar:</strong> dónde están los contactos eléctricos. Una coffee station con cafetera industrial o samovar eléctrico necesita energía cerca, y en muchos foyers el enchufe más próximo está a quince metros. Saberlo antes evita cables cruzados por el piso o, peor, una estación sin café caliente a la mitad del break.
+      </div>
+    </div>
+  </section>
+
+  <figure class="art__figure">
+    <img
+      src="/img/corp-desayuno-reunion-1.avif"
+      alt="Coffee station corporativa con mobiliario de madera para reunión de empresa"
+      loading="lazy"
+      width="900"
+      height="560"
+    />
+    <figcaption>Estación de café con barra de servicio y mesas de apoyo: el formato que mejor fluye para una reunión de empresa.</figcaption>
+  </figure>
+
+  <section class="art__section">
+    <h2 class="art__h2">Cómo calcular cuánto mobiliario necesitas</h2>
+
+    <p>Esta es la pregunta que más nos hacen, y la respuesta no es complicada si la divides en dos: piezas de servicio y puntos de apoyo. El error clásico es resolver solo lo primero. Esta tabla cruza el número de asistentes con lo que recomendamos.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Asistentes</th>
+            <th class="th-accent">Barras de servicio</th>
+            <th>Mesas altas de apoyo</th>
+            <th>Mesas estándar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Hasta 30</strong></td>
+            <td class="td-accent">1 barra</td>
+            <td>3–4 mesas altas</td>
+            <td>1 (snacks)</td>
+          </tr>
+          <tr>
+            <td><strong>30–60</strong></td>
+            <td class="td-accent">1–2 barras</td>
+            <td>6–8 mesas altas</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><strong>60–120</strong></td>
+            <td class="td-accent">2 barras</td>
+            <td>10–12 mesas altas</td>
+            <td>3–4</td>
+          </tr>
+          <tr>
+            <td><strong>120+</strong></td>
+            <td class="td-accent">3+ estaciones distribuidas</td>
+            <td>1 alta por cada 8–10 pax</td>
+            <td>Según foyer</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>La fórmula corta que usamos en cotización: una barra de servicio por cada 50 a 60 personas, y una mesa alta de apoyo por cada 8 a 10 asistentes. Pasa de 120 personas y deja de pensar en una estación grande: distribuye varias idénticas en distintos puntos del espacio. Una sola, por enorme que sea, genera fila y mata el ritmo de la pausa.</p>
+  </section>
+
+  <div class="art__cta-inline">
+    <div class="art__cta-inline-content">
+      <h3>¿No sabes cuántas piezas pedir para tu evento?</h3>
+      <p>Dinos cuántos asistentes esperas y dónde es. Te armamos la configuración de coffee station que tiene sentido y te pasamos precio el mismo día.</p>
+      <div class="art__cta-inline-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+asesor%C3%ADa+de+mobiliario+para+una+coffee+station+corporativa." target="_blank" rel="noopener" class="art__btn art__btn--wa" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Pedir asesoría por WhatsApp
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--outline">Ir al formulario de cotización →</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">Logística: oficina, foyer o rooftop</h2>
+
+    <p>Dónde montas la estación cambia las prioridades. No es lo mismo una sala de juntas en piso 14 que un rooftop corporativo. Esto es lo que revisamos en cada caso, en el orden en que lo hacemos.</p>
+
+    <ol class="art__steps">
+      <li class="art__step">
+        <span class="art__step-num">01</span>
+        <div class="art__step-body">
+          <h3>Mide el acceso antes de cerrar fecha</h3>
+          <p>Elevadores, pasillos y puertas. Una barra biergarten de 2.20 m no entra por cualquier lado. En oficinas de torre corporativa este es, de lejos, el detalle que más complica el montaje cuando nadie lo revisó.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">02</span>
+        <div class="art__step-body">
+          <h3>Confirma los puntos de energía</h3>
+          <p>Cafeteras, samovares y termos eléctricos necesitan contacto cerca. Localiza los enchufes del foyer o la sala antes de decidir dónde va la barra de servicio, no después.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">03</span>
+        <div class="art__step-body">
+          <h3>Diseña el flujo de la fila</h3>
+          <p>La barra de servicio en un extremo, las mesas altas alrededor pero sin bloquear el paso. La gente debe poder servirse y salir del flujo para conversar. Una fila que se cruza con la salida del salón es el caos asegurado.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">04</span>
+        <div class="art__step-body">
+          <h3>Si es rooftop, piensa en el viento y el horario</h3>
+          <p>El piso suele estar firme, así que montar es fácil. Pero el viento mueve servilletas y manteles ligeros, y los edificios tienen horarios de carga estrictos. Coordinamos ambos con el venue por adelantado.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">05</span>
+        <div class="art__step-body">
+          <h3>Cierra montaje y recolección por escrito</h3>
+          <p>Horario de entrega con margen antes del primer break y recolección al cierre. Que todo quede en la cotización, sin cargos que aparecen el día del evento.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Dónde montamos</h2>
+
+    <p>Entregamos, montamos y recogemos coffee stations en toda la Ciudad de México y los municipios del Estado de México, con foco en las zonas corporativas donde más eventos de empresa se realizan.</p>
+
+    <div class="art__coverage-grid">
+      <div class="art__coverage-col">
+        <h3>Ciudad de México</h3>
+        <ul class="art__coverage-list">
+          <li>Santa Fe y Cuajimalpa</li>
+          <li>Polanco y Lomas de Chapultepec</li>
+          <li>Reforma, Juárez y Roma</li>
+          <li>Insurgentes y Del Valle</li>
+          <li>Granada y Nuevo Polanco</li>
+        </ul>
+      </div>
+      <div class="art__coverage-col">
+        <h3>Estado de México (corporativo)</h3>
+        <ul class="art__coverage-list">
+          <li>Interlomas y Huixquilucan</li>
+          <li>Naucalpan y Satélite</li>
+          <li>Corredor Toluca–Lerma</li>
+          <li>Atizapán y Tlalnepantla</li>
+          <li>Parques industriales de Lerma</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Preguntas que nos hacen seguido</h2>
+
+    <div class="art__faqs">
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuánto mobiliario necesito para una coffee station según los asistentes?</summary>
+        <p class="art__faq-a">La regla rápida que usamos: una mesa de barra o biergarten de buffet por cada 50 a 60 personas para servir el café, más mesas altas de apoyo a razón de una por cada 8 a 10 asistentes para que tengan dónde dejar la taza. Para un evento de 100 personas hablamos de dos barras de servicio y unas diez mesas altas. Lo que más se subestima no es la mesa de servicio, sino los puntos de apoyo: sin ellos la gente se queda parada con la taza en la mano y el break se vuelve incómodo.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué tipo de coffee station conviene para una junta o congreso?</summary>
+        <p class="art__faq-a">Depende del formato. Para una junta de 20 a 30 personas funciona una sola barra con dos o tres mesas altas alrededor. Para un congreso de varios cientos conviene distribuir varias estaciones idénticas en puntos distintos del foyer para que la fila no se concentre. La peor decisión es una sola estación gigante: se forma un cuello de botella justo en los quince minutos que dura la pausa.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿La mesa alta cocktail sirve para un coffee break?</summary>
+        <p class="art__faq-a">Es prácticamente la pieza estrella. La altura de barra hace que la gente conserve la postura de pie, conversando, sin sentarse a aislarse. Caben cuatro o cinco personas alrededor de cada una, son ligeras de mover y dan ese aire de networking que tanto se busca. Para nosotros, una coffee station sin mesas altas está incompleta.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Se puede montar una coffee station dentro de la oficina o en un rooftop corporativo?</summary>
+        <p class="art__faq-a">Sí, y es de lo que más nos piden. En oficina lo crítico es el acceso: medir el elevador y los pasillos antes, porque una barra biergarten no entra por cualquier puerta. En rooftop el piso suele estar firme y nivelado, así que el montaje es sencillo; el detalle ahí es el viento y confirmar el horario de carga del edificio. Resolvemos ambos casos seguido.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿El mobiliario de madera aguanta el tránsito de un evento corporativo?</summary>
+        <p class="art__faq-a">Sí. Trabajamos con pino macizo barnizado a mano, pensado para uso de evento, no decorativo de un solo día. Aguanta que cien personas pasen apoyando tazas, platos y laptops durante toda una jornada. Lo barnizamos para que el café o un derrame no manchen, y entre evento y evento revisamos pieza por pieza.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cubren oficinas en Santa Fe, Polanco e Interlomas?</summary>
+        <p class="art__faq-a">Sí. Entregamos, montamos y recogemos en toda la CDMX y los municipios del Estado de México sin cobrar flete, incluidas las zonas corporativas más pedidas: Santa Fe, Polanco, Reforma, Interlomas, Naucalpan y el corredor Toluca–Lerma. Para destinos más lejanos aplica un cargo por distancia, pero te lo decimos claro en la cotización, nunca el día del evento.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Galería: coffee stations que hemos montado</h2>
+    <div class="art__gallery-strip">
+      <img src="/img/corp-afterwork-1.avif" alt="Coffee break corporativo con mesas altas de madera para networking" loading="lazy" width="350" height="220" />
+      <img src="/img/corp-rooftop-1.avif" alt="Estación de café en rooftop corporativo con mobiliario de madera" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-evento-corporativo-networking.avif" alt="Mesa alta de madera para networking en coffee break empresarial" loading="lazy" width="350" height="220" />
+      <img src="/img/eventos-corporativos-ejecutivos-renta-mesas-picnic-03.avif" alt="Mobiliario de madera para evento corporativo con coffee break" loading="lazy" width="350" height="220" />
+    </div>
+  </section>
+
+  <div class="art__cta-final">
+    <div class="art__cta-final-inner">
+      <h2>Cuéntanos de tu evento y armamos la coffee station</h2>
+      <p>Sin compromiso. Danos el número de asistentes, la fecha y dónde es. Te proponemos la configuración que tiene sentido y te pasamos precio final el mismo día.</p>
+      <div class="art__cta-final-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+cotizar+mobiliario+para+una+coffee+station+corporativa." target="_blank" rel="noopener" class="art__btn art__btn--wa art__btn--lg" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--primary art__btn--lg">Formulario de cotización →</a>
+        <a href="/servicios/eventos-corporativos/" class="art__btn art__btn--ghost art__btn--lg">Ver servicio corporativo</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</BlogLayout>

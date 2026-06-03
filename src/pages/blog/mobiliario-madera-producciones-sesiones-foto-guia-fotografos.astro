@@ -1,0 +1,406 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import '../../styles/blog-article.css';
+---
+
+<BlogLayout
+  title="Mobiliario de Madera para Producciones y Sesiones de Foto: Guía para Fotógrafos | MESPIC"
+  description="Por qué la madera natural funciona en cámara y qué modelo usar según el tipo de sesión. Guía honesta de logística de renta para fotógrafos y productores en CDMX y Edomex."
+  ogImage="/img/mesa-picnic-romantica-vinedo-atardecer.webp"
+  heroTitle="Mobiliario de Madera para Producciones y Sesiones de Foto: Guía para Fotógrafos"
+  heroBadge="Blog · Producciones · Foto"
+  heroDescription="La madera natural se comporta distinto frente a la cámara que un mueble pintado o de metal. Aquí va lo que hemos visto montando para producciones: cómo reacciona a la luz, qué modelo pide cada tipo de sesión y cómo coordinar la renta para que el mobiliario llegue, esté listo y no te coma horas de set."
+  heroSeo1="Cuando un fotógrafo o un productor nos contacta, casi nunca pregunta por la mesa más bonita del catálogo. Pregunta por la que se va a portar bien en cámara: la que no genera reflejos imposibles, la que aporta textura sin robar protagonismo al sujeto, la que entra por la puerta de la locación sin drama. Y esas son preguntas distintas a las que hace una pareja que planea su boda. Por eso escribimos esta guía pensada específicamente para quien produce imágenes, no para quien organiza una fiesta."
+  heroSeo2="Vamos a hablar de tres cosas concretas. Primero, por qué la madera de pino natural funciona tan bien frente al lente —textura, manejo de luz, neutralidad de color— y cuándo conviene y cuándo no. Segundo, qué modelo de mesa pide cada tipo de sesión, desde un still de e-commerce hasta una editorial de lifestyle al atardecer. Y tercero, la parte que menos se habla pero más arruina los rodajes: la logística de renta para producción, con horarios, accesos y entregas pensados para set y no para un evento social."
+  heroMetrics={[
+    { value: "4 usos", label: "E-commerce · Editorial · Lifestyle · Video" },
+    { value: "9 min", label: "Tiempo de lectura" },
+    { value: "CDMX + Edomex", label: "Cobertura sin flete" },
+  ]}
+  datePublished="2026-06-03"
+  articleSection="Producciones"
+  breadcrumbs={[
+    { label: "Inicio", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Mobiliario para Producciones y Sesiones de Foto" },
+  ]}
+  sidebarProducts={[
+    { name: "Mesa Premium", cap: "Sin nudos · Editorial", href: "/catalogo/mesa-picnic-premium/", img: "/img/mesa-picnic-premium-23.avif" },
+    { name: "Mesa Rústica", cap: "Veta marcada · Carácter", href: "/catalogo/mesa-picnic-rustica/", img: "/img/mesa-picnic-rustica-patio-mexicano.webp" },
+    { name: "Mesa Redonda", cap: "Composición · Cenital", href: "/catalogo/mesa-redonda-madera/", img: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
+  ]}
+  sidebarArticles={[
+    { title: "Sesiones Fotográficas con Mesas Picnic para Producciones", meta: "Producciones · 9 min", href: "/blog/sesiones-fotograficas-mesas-picnic-producciones/", img: "/img/mesa-picnic-decoracion-elegante-champagne.webp" },
+    { title: "Props y Locaciones: Mesas Picnic en Sesiones Editoriales y de Marca", meta: "Producciones · 9 min", href: "/blog/props-locaciones-mesas-picnic-sesiones-marca-editorial/", img: "/img/mesa-picnic-boda-hacienda-mexicana.webp" },
+    { title: "Sesiones en Valle de Bravo: Bosque y Lago", meta: "Locaciones · 8 min", href: "/blog/sesiones-fotograficas-valle-de-bravo-bosque-lago/", img: "/img/boda-bosque-encantado-1.avif" },
+  ]}
+  sidebarServices={[
+    { name: "Sesiones Fotográficas", desc: "Editorial · E-commerce · Video", href: "/servicios/sesiones-fotograficas/" },
+    { name: "Activaciones de Marca", desc: "Brand experiences · Pop-ups", href: "/servicios/eventos-corporativos/activaciones/" },
+    { name: "Festivales y Ferias", desc: "Eventos masivos · Bazares", href: "/servicios/festivales/" },
+    { name: "Eventos al Aire Libre", desc: "Todas las variantes", href: "/servicios/" },
+  ]}
+  sidebarCtaTitle="¿Tienes un rodaje cerca?"
+  sidebarCtaText="Cuéntanos el tipo de sesión, la locación y la fecha. Te decimos qué modelo va mejor en cámara y coordinamos la entrega al horario de tu call time."
+  sidebarCtaWa="Hola%2C+soy+fot%C3%B3grafo%2Fproductor+y+quiero+rentar+mobiliario+de+madera+para+una+sesi%C3%B3n."
+  sidebarServicesTitle="Servicios para producciones"
+  faqs={[
+    { q: "¿Por qué la madera natural funciona mejor en cámara que un mueble pintado?", a: "Porque tiene textura real y un acabado que dispersa la luz en lugar de rebotarla. Una superficie pintada brillante genera puntos especulares difíciles de controlar; la madera con barniz mate o satinado da un brillo suave y parejo. Además, la veta aporta detalle que se lee bien tanto en plano cerrado como en general, y su color cálido neutro combina con casi cualquier paleta sin pelearse con el sujeto." },
+    { q: "¿Qué modelo conviene para una sesión de producto o e-commerce?", a: "Para still de producto solemos recomendar la premium o la rústica según el mood: la premium si quieres una superficie limpia y uniforme que no distraiga, la rústica si la marca busca carácter artesanal y la veta forma parte del relato. Lo importante es que la madera sea consistente en todo el set para que el color match no se complique en postproducción." },
+    { q: "¿Pueden entregar el mobiliario a la hora del call time?", a: "Sí, coordinamos la entrega y el montaje según tu llamado, no al revés. Si necesitas el set listo a las 6 a.m. para aprovechar la luz, llegamos antes para que el equipo no espere. Solo necesitamos saber el horario con anticipación y los datos de acceso de la locación para planear la maniobra." },
+    { q: "¿El mobiliario llega listo para foto o hay que prepararlo?", a: "Llega limpio, barnizado y revisado, listo para set. Si la sesión lo pide, podemos llevar piezas con la veta más marcada o más uniforme según lo que necesites. Lo que sí recomendamos es reservar unos minutos de buffer al inicio para que el equipo de arte termine el styling sobre la mesa ya nivelada." },
+    { q: "¿Rentan por medio día o solo por jornada completa?", a: "Manejamos esquemas por bloque de horas, medio día y jornada completa, porque sabemos que una sesión de producto no dura lo mismo que un rodaje de comercial. Dinos cuántas horas estará en set y el rango de la ventana de luz que buscas, y armamos la cotización a la medida de la producción." },
+    { q: "¿Llegan a locaciones fuera de la ciudad como Valle de Bravo?", a: "Sí. Cubrimos toda la CDMX y los municipios del Estado de México sin cobrar flete. Para locaciones de naturaleza más lejanas —Valle de Bravo, Tepoztlán, Malinalco— aplica un cargo por distancia que te decimos claro en la cotización, nunca el día del rodaje. Esos destinos de bosque y lago son justo donde la madera natural rinde mejor en cámara." },
+  ]}
+>
+
+<div class="art">
+
+  <p class="art__lead">
+    Hay una diferencia enorme entre un mueble que se ve bonito en una fiesta y uno que rinde frente al lente. En una producción, el mobiliario no es decoración: es un elemento de composición que tiene que comportarse igual de bien en un plano cenital de producto que en un contraluz al atardecer. Esta guía es para fotógrafos, productores y directores de arte que necesitan saber, antes de rentar, cómo se porta la madera natural en cámara y cómo coordinar su llegada al set sin perder tiempo de luz.
+  </p>
+
+  <div class="art__author">
+    <div class="art__author-badge">M</div>
+    <div class="art__author-meta">
+      <span class="art__author-name">Equipo MESPIC · Mobiliario para producciones</span>
+      <span class="art__author-role">Renta de mesas de madera para sesiones de foto, editoriales y rodajes en CDMX y Estado de México</span>
+      <span class="art__author-stamp">Tiempo de lectura: 9 min · Basado en montajes para foto y video</span>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">Por qué la madera natural funciona frente a la cámara</h2>
+
+    <p>Un mueble puede verse precioso a simple vista y volverse un problema en cuanto lo iluminas para foto. Las superficies plásticas o pintadas brillantes rebotan la luz en puntos duros que peleas toda la sesión; el metal cromado introduce reflejos del entorno que no controlas. La madera natural juega distinto. Su acabado mate o satinado dispersa la luz de forma suave, sin esos hotspots que obligan a difundir todo o a clonar en postproducción. Por eso la pedimos tanto en producciones donde la iluminación es el corazón del trabajo.</p>
+
+    <p>Hay tres razones técnicas concretas. La primera es la <strong>textura</strong>: la veta aporta detalle real que se lee bien en cualquier distancia focal, desde un macro de producto hasta un general. La segunda es el <strong>manejo de luz</strong>: la superficie barnizada a mano devuelve un brillo parejo y cálido en lugar de un reflejo especular. Y la tercera es la <strong>neutralidad de color</strong>: el tono cálido del pino convive con paletas frías y cálidas sin imponerse, lo que simplifica el color grading. Si quieres profundizar en cómo aprovechamos estas cualidades en rodaje, lo desarrollamos en nuestra guía de <a href="/blog/sesiones-fotograficas-mesas-picnic-producciones/">sesiones fotográficas con mesas picnic para producciones</a>.</p>
+
+    <div class="art__definition">
+      <span class="art__definition-term">Definición · Mobiliario apto para cámara</span>
+      <p>Es el mueble cuyo acabado, color y proporción están pensados para comportarse bien bajo iluminación controlada: dispersa la luz sin reflejos duros, aporta textura legible en distintos encuadres y mantiene un color neutro que no contamina la paleta del set. La madera de pino barnizada a mano cumple estos tres criterios, lo que la vuelve una de las superficies más nobles para producción de foto y video.</p>
+    </div>
+
+    <p>Dicho esto, la madera no es la respuesta para absolutamente todo. Para un look hipermoderno de acero y vidrio, o para un fondo infinito de estudio donde no quieres ninguna textura, hay opciones mejores. Esta tabla resume cómo se comporta cada superficie frente al lente.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table art__table--compare">
+        <thead>
+          <tr>
+            <th>Criterio en cámara</th>
+            <th class="th-accent">Madera natural</th>
+            <th>Pintado brillante</th>
+            <th>Metal / cromo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Manejo de reflejos</strong></td>
+            <td class="td-accent">Brillo suave y parejo</td>
+            <td>Hotspots difíciles</td>
+            <td>Refleja el entorno</td>
+          </tr>
+          <tr>
+            <td><strong>Textura legible</strong></td>
+            <td class="td-accent">Alta (veta)</td>
+            <td>Nula</td>
+            <td>Baja</td>
+          </tr>
+          <tr>
+            <td><strong>Neutralidad de color</strong></td>
+            <td class="td-accent">Cálido neutro</td>
+            <td>Depende del tono</td>
+            <td>Frío, contaminante</td>
+          </tr>
+          <tr>
+            <td><strong>Trabajo en postproducción</strong></td>
+            <td class="td-accent">Mínimo</td>
+            <td>Clonar brillos</td>
+            <td>Limpiar reflejos</td>
+          </tr>
+          <tr>
+            <td><strong>Mejor para</strong></td>
+            <td class="td-accent">Lifestyle, gastro, editorial cálido</td>
+            <td>Looks pop muy específicos</td>
+            <td>Estética industrial</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Lo que sigue te ayuda a saber cuándo conviene la madera y con qué modelo según el tipo de sesión.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Qué modelo pide cada tipo de sesión</h2>
+
+    <p>No todas las sesiones piden la misma mesa. Lo que en un still de e-commerce es virtud —una superficie limpia y uniforme— puede restar carácter en una editorial de lifestyle, donde una veta marcada cuenta historia. Aquí va cómo lo pensamos por tipo de trabajo.</p>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>Still de producto y e-commerce</h3>
+        <p>Mesa premium, sin nudos a la vista. Una superficie uniforme y predecible facilita el color match entre tomas y deja que el producto sea el héroe absoluto del cuadro.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Editorial de lifestyle</h3>
+        <p>Mesa rústica de veta marcada. Aquí la madera narra: el grano, los tonos cálidos y el carácter artesanal sostienen la historia de un mood relajado y auténtico.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Gastronómico y bebidas</h3>
+        <p>Mesa redonda o estándar para composiciones cenitales. El tono cálido de la madera realza alimentos y vajilla, y la forma redonda abre acomodos circulares muy fotogénicos.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Video y comercial al aire libre</h3>
+        <p>Mesa grande de 2.40 m para planos amplios con varios talentos. Aguanta el dressing completo y se nivela bien en exteriores para travellings y dollys estables.</p>
+      </div>
+    </div>
+
+    <div class="art__tip">
+      <div class="art__tip-icon">💡</div>
+      <div>
+        <strong>Lo que pedimos saber antes del rodaje:</strong> el tipo de plano dominante (cenital, frontal, general), si la mesa sale enfocada o desenfocada y la paleta de la marca. Con eso elegimos entre veta marcada o uniforme y el acabado mate o satinado que mejor se lleve con tu esquema de luz.
+      </div>
+    </div>
+  </section>
+
+  <figure class="art__figure">
+    <img
+      src="/img/mesa-picnic-romantica-vinedo-atardecer.webp"
+      alt="Mesa de madera natural montada para sesión de foto al atardecer en exterior"
+      loading="lazy"
+      width="900"
+      height="560"
+    />
+    <figcaption>La madera al atardecer: brillo cálido y parejo, textura legible y un color que no pelea con el contraluz.</figcaption>
+  </figure>
+
+  <section class="art__section">
+    <h2 class="art__h2">Tabla rápida: modelo según el uso en foto</h2>
+
+    <p>Si solo tienes treinta segundos antes de pedir cotización, esta tabla cruza cada uso con el modelo, el acabado y por qué funciona en cámara.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Tipo de sesión</th>
+            <th class="th-accent">Modelo recomendado</th>
+            <th>Acabado</th>
+            <th>Por qué funciona en cámara</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>E-commerce / producto</strong></td>
+            <td class="td-accent">Mesa premium</td>
+            <td>Satinado, sin nudos</td>
+            <td>Superficie uniforme y color predecible entre tomas</td>
+          </tr>
+          <tr>
+            <td><strong>Editorial lifestyle</strong></td>
+            <td class="td-accent">Mesa rústica</td>
+            <td>Veta natural marcada</td>
+            <td>Textura que narra un mood auténtico y cálido</td>
+          </tr>
+          <tr>
+            <td><strong>Gastronómico</strong></td>
+            <td class="td-accent">Mesa redonda</td>
+            <td>Mate cálido</td>
+            <td>Realza alimentos y abre composiciones cenitales</td>
+          </tr>
+          <tr>
+            <td><strong>Moda / retrato</strong></td>
+            <td class="td-accent">Mesa estándar</td>
+            <td>Pino claro mate</td>
+            <td>Línea limpia que ancla al talento sin distraer</td>
+          </tr>
+          <tr>
+            <td><strong>Video / comercial</strong></td>
+            <td class="td-accent">Mesa grande 2.40 m</td>
+            <td>Barniz parejo</td>
+            <td>Estable en planos amplios y movimientos de cámara</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Logística de renta para producción: la parte que decide el día</h2>
+
+    <p>Aquí está la diferencia entre rentar para una fiesta y rentar para un set. Una boda perdona quince minutos de retraso en el montaje; una producción con ventana de luz y talento facturando por hora, no. Por eso tratamos la entrega para foto como lo que es: un punto de la orden del día que tiene que cumplirse al minuto. Lo coordinamos al revés de un evento social, partiendo de tu call time y trabajando hacia atrás.</p>
+
+    <h3>Horarios pensados para set</h3>
+    <p>Si necesitas el mobiliario listo a las seis de la mañana para cazar la primera luz, llegamos antes para nivelar y limpiar mientras el equipo se monta. No esperamos a que la producción nos abra: planeamos la maniobra para que la mesa esté en posición cuando el director de arte llegue a vestir el set. Para sesiones largas o de varios bloques, dejamos definido el horario de retiro para no interrumpir una toma.</p>
+
+    <h3>Locación y accesos</h3>
+    <p>Antes de cerrar la fecha confirmamos cómo entra el mobiliario: ancho de puertas, escaleras, elevador en estudios de piso alto y permisos de carga si la locación los pide. Una mesa de 2.40 m necesita espacio de maniobra, y más vale saberlo en preproducción que descubrirlo el día del rodaje. Si la sesión es en exterior, revisamos el piso para llevar lo necesario para nivelar y dejar la superficie estable bajo cámara.</p>
+
+    <h3>Entrega, buffer y retiro</h3>
+    <p>Entregamos las piezas limpias, barnizadas y revisadas, listas para set. Recomendamos siempre reservar unos minutos de buffer al inicio para que el equipo de arte haga su styling sobre la mesa ya nivelada, sin prisas. Y dejamos el retiro coordinado para un momento que no choque con el rodaje, normalmente al wrap o al día siguiente según convenga a la producción.</p>
+  </section>
+
+  <div class="art__cta-inline">
+    <div class="art__cta-inline-content">
+      <h3>¿Tienes un rodaje y no sabes qué modelo pedir?</h3>
+      <p>Cuéntanos el tipo de sesión, la locación y tu call time. Te decimos qué mesa rinde mejor en cámara y coordinamos la entrega a tu horario, no al nuestro.</p>
+      <div class="art__cta-inline-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+soy+fot%C3%B3grafo%2Fproductor+y+quiero+asesor%C3%ADa+de+mobiliario+para+una+sesi%C3%B3n." target="_blank" rel="noopener" class="art__btn art__btn--wa" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Coordinar por WhatsApp
+        </a>
+        <a href="/servicios/sesiones-fotograficas/" class="art__btn art__btn--outline">Ver servicio de sesiones →</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">Acabado, color y consistencia en postproducción</h2>
+
+    <p>Un detalle que los fotógrafos agradecen: la consistencia. Cuando rentas varias mesas para un mismo set, el color y el barniz deben coincidir entre piezas para que el color grading no se vuelva un rompecabezas. Trabajamos con lotes barnizados de forma pareja precisamente por eso. Si tu marca pide un look impecable y uniforme, la premium sin nudos es la apuesta segura; si buscas carácter y autenticidad, la rústica con veta marcada da textura que se agradece en cámara, sobre todo en piezas que aprovechan la <a href="/catalogo/mesa-picnic-rustica/">madera con carácter artesanal</a> como protagonista del cuadro.</p>
+
+    <p>Sobre temperatura de color: el pino cálido suma media a una luz de tarde y se equilibra fácil bajo luz de día balanceada. En interiores con tungsteno, la madera florece; bajo LED frío conviene calentar ligeramente para que no se apague. Son ajustes menores, pero saberlos de antemano te ahorra sorpresas en el monitor.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Checklist de preproducción, en cinco pasos</h2>
+
+    <p>Este es el orden que seguimos cuando una producción nos pide ayuda antes de cotizar. Te sirve igual para planear tu propio set.</p>
+
+    <ol class="art__steps">
+      <li class="art__step">
+        <span class="art__step-num">01</span>
+        <div class="art__step-body">
+          <h3>Define el uso y el plano dominante</h3>
+          <p>E-commerce, editorial, gastronómico, moda o video. El tipo de plano —cenital, frontal, general— y si la mesa sale enfocada o no determinan el modelo y el acabado.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">02</span>
+        <div class="art__step-body">
+          <h3>Comparte la paleta de la marca</h3>
+          <p>Saber si trabajas tonos cálidos o fríos nos deja elegir entre veta marcada o uniforme y anticipar cómo se llevará la madera con tu color grading.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">03</span>
+        <div class="art__step-body">
+          <h3>Revisa accesos de la locación</h3>
+          <p>Puertas, escaleras, elevador en estudios de piso alto y permisos de carga. La mesa de 2.40 m necesita maniobra; mejor saberlo en preproducción que el día del rodaje.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">04</span>
+        <div class="art__step-body">
+          <h3>Fija el call time y la ventana de luz</h3>
+          <p>Trabajamos hacia atrás desde tu llamado. Si la primera luz es a las seis, llegamos antes a nivelar para que el set esté listo cuando el equipo de arte vista la mesa.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">05</span>
+        <div class="art__step-body">
+          <h3>Cierra horas, buffer y retiro</h3>
+          <p>Define cuántas horas estará en set, reserva buffer para el styling inicial y coordina el retiro para que no choque con ninguna toma. Todo queda en la cotización.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Dónde entregamos para producciones</h2>
+
+    <p>Llevamos, montamos y retiramos mobiliario para foto y video en toda la Ciudad de México y los municipios del Estado de México, además de las locaciones de naturaleza donde la madera rinde mejor en cámara.</p>
+
+    <div class="art__coverage-grid">
+      <div class="art__coverage-col">
+        <h3>Ciudad de México</h3>
+        <ul class="art__coverage-list">
+          <li>Roma, Condesa y Juárez</li>
+          <li>Polanco y Lomas de Chapultepec</li>
+          <li>Coyoacán y San Ángel</li>
+          <li>Cuajimalpa y Santa Fe</li>
+          <li>Estudios en Iztacalco y Azcapotzalco</li>
+        </ul>
+      </div>
+      <div class="art__coverage-col">
+        <h3>Estado de México</h3>
+        <ul class="art__coverage-list">
+          <li>Huixquilucan e Interlomas</li>
+          <li>Naucalpan y Atizapán</li>
+          <li>Metepec y corredor Toluca</li>
+          <li>Texcoco y Tepotzotlán</li>
+          <li>Haciendas de Calimaya y Tenango</li>
+        </ul>
+      </div>
+      <div class="art__coverage-col">
+        <h3>Locaciones de naturaleza</h3>
+        <ul class="art__coverage-list">
+          <li>Valle de Bravo (bosque y lago)</li>
+          <li>Malinalco y alrededores</li>
+          <li>Tepoztlán y zona boscosa</li>
+          <li>Desierto de los Leones</li>
+          <li>Parques y reservas del Edomex</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Preguntas que nos hacen las producciones</h2>
+
+    <div class="art__faqs">
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Por qué la madera natural funciona mejor en cámara que un mueble pintado?</summary>
+        <p class="art__faq-a">Porque tiene textura real y un acabado que dispersa la luz en lugar de rebotarla. Una superficie pintada brillante genera puntos especulares difíciles de controlar; la madera con barniz mate o satinado da un brillo suave y parejo. Además, la veta aporta detalle que se lee bien tanto en plano cerrado como en general, y su color cálido neutro combina con casi cualquier paleta sin pelearse con el sujeto.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué modelo conviene para una sesión de producto o e-commerce?</summary>
+        <p class="art__faq-a">Para still de producto solemos recomendar la premium o la rústica según el mood: la premium si quieres una superficie limpia y uniforme que no distraiga, la rústica si la marca busca carácter artesanal y la veta forma parte del relato. Lo importante es que la madera sea consistente en todo el set para que el color match no se complique en postproducción.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Pueden entregar el mobiliario a la hora del call time?</summary>
+        <p class="art__faq-a">Sí, coordinamos la entrega y el montaje según tu llamado, no al revés. Si necesitas el set listo a las 6 a.m. para aprovechar la luz, llegamos antes para que el equipo no espere. Solo necesitamos saber el horario con anticipación y los datos de acceso de la locación para planear la maniobra.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿El mobiliario llega listo para foto o hay que prepararlo?</summary>
+        <p class="art__faq-a">Llega limpio, barnizado y revisado, listo para set. Si la sesión lo pide, podemos llevar piezas con la veta más marcada o más uniforme según lo que necesites. Lo que sí recomendamos es reservar unos minutos de buffer al inicio para que el equipo de arte termine el styling sobre la mesa ya nivelada.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Rentan por medio día o solo por jornada completa?</summary>
+        <p class="art__faq-a">Manejamos esquemas por bloque de horas, medio día y jornada completa, porque sabemos que una sesión de producto no dura lo mismo que un rodaje de comercial. Dinos cuántas horas estará en set y el rango de la ventana de luz que buscas, y armamos la cotización a la medida de la producción.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Llegan a locaciones fuera de la ciudad como Valle de Bravo?</summary>
+        <p class="art__faq-a">Sí. Cubrimos toda la CDMX y los municipios del Estado de México sin cobrar flete. Para locaciones de naturaleza más lejanas —Valle de Bravo, Tepoztlán, Malinalco— aplica un cargo por distancia que te decimos claro en la cotización, nunca el día del rodaje. Esos destinos de bosque y lago son justo donde la madera natural rinde mejor en cámara.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Galería: la madera en distintos sets</h2>
+    <div class="art__gallery-strip">
+      <img src="/img/mesa-picnic-romantica-vinedo-champagne.webp" alt="Mesa de madera con styling de champagne para sesión editorial" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-cena-romantica-atardecer.webp" alt="Mesa de madera montada para sesión gastronómica al atardecer" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-boda-hacienda-mexicana.webp" alt="Mesa de madera natural en locación de hacienda mexicana" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-atardecer-11.webp" alt="Mesa de madera en contraluz al atardecer para producción" loading="lazy" width="350" height="220" />
+    </div>
+  </section>
+
+  <div class="art__cta-final">
+    <div class="art__cta-final-inner">
+      <h2>Cuéntanos de tu rodaje y armamos el set</h2>
+      <p>Sin compromiso. Danos el tipo de sesión, la locación, la fecha y tu call time. Te proponemos el modelo que rinde mejor en cámara y coordinamos la entrega a tu horario.</p>
+      <div class="art__cta-final-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+soy+fot%C3%B3grafo%2Fproductor+y+quiero+cotizar+mobiliario+de+madera+para+una+sesi%C3%B3n." target="_blank" rel="noopener" class="art__btn art__btn--wa art__btn--lg" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+        <a href="/servicios/sesiones-fotograficas/" class="art__btn art__btn--primary art__btn--lg">Ver servicio de sesiones →</a>
+        <a href="/blog/props-locaciones-mesas-picnic-sesiones-marca-editorial/" class="art__btn art__btn--ghost art__btn--lg">Props y locaciones para marca</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</BlogLayout>

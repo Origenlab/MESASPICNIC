@@ -1,0 +1,384 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import '../../styles/blog-article.css';
+---
+
+<BlogLayout
+  title="Cómo Organizar un Día de Integración (Offsite) Empresarial al Aire Libre | MESPIC"
+  description="Guía honesta para planear un offsite o día de integración al aire libre: objetivos, sede, mobiliario, dinámicas, catering, cronograma y presupuesto. Con la experiencia de quien lo monta en CDMX y Edomex."
+  ogImage="/img/corp-teambuilding-1.avif"
+  heroTitle="Cómo Organizar un Día de Integración (Offsite) Empresarial al Aire Libre"
+  heroBadge="Blog · Corporativo · Offsite"
+  heroDescription="Un buen día de integración no se improvisa, pero tampoco hace falta un máster en logística. Aquí va el método que seguimos al montar offsites empresariales: cómo fijar objetivos, elegir sede, planear el cronograma y no quedarte corto ni largo de mobiliario."
+  heroSeo1="Hemos montado suficientes días de integración como para saber cuándo uno va a salir bien antes de que empiece. Y casi siempre se nota en lo mismo: en si la empresa pensó el offsite como un objetivo o como un pretexto para salir de la oficina. Los que funcionan tienen una intención clara —integrar a un equipo nuevo, cerrar un trimestre, reconciliar áreas que no se hablan— y todo lo demás, desde la sede hasta el catering, se ordena alrededor de eso. Los que no, terminan siendo un día de campo caro donde la gente se aburre y mira el reloj. La diferencia no es el presupuesto: es la planeación."
+  heroSeo2="En esta guía te compartimos el método que usamos para que un offsite empresarial al aire libre salga redondo, sin relleno y con la honestidad de quien ha visto lo que falla. Vamos a recorrer cómo definir el objetivo real del día, cómo elegir la sede según ese objetivo, qué mobiliario hace falta para que las dinámicas y la comida fluyan, cómo armar un cronograma que respire, cómo pensar el catering y, al final, un checklist en pasos y una tabla de presupuesto según el formato. Lo escribimos para que puedas planear tu día de integración aunque sea la primera vez que organizas uno."
+  heroMetrics={[
+    { value: "3 formatos", label: "Medio día · Día · Retiro" },
+    { value: "9 min", label: "Tiempo de lectura" },
+    { value: "CDMX + Edomex", label: "Cobertura sin flete" },
+  ]}
+  datePublished="2026-06-03"
+  articleSection="Corporativo"
+  breadcrumbs={[
+    { label: "Inicio", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Día de Integración Empresarial al Aire Libre" },
+  ]}
+  sidebarProducts={[
+    { name: "Mesa Grande 2.40m", cap: "10–12 personas · Comida grupal", href: "/catalogo/mesa-picnic-grande/", img: "/img/mesas-picnic-madera-renta-evento-cdmx-05.avif" },
+    { name: "Mesa Estándar 1.80m", cap: "6 personas · Dinámicas", href: "/catalogo/mesa-picnic-estandar/", img: "/img/eventos-corporativos-ejecutivos-renta-mesas-picnic-02.avif" },
+    { name: "Mesa Alta Cocktail", cap: "De pie · Networking", href: "/catalogo/mesa-alta-cocktail/", img: "/img/mesa-picnic-evento-corporativo-networking.avif" },
+  ]}
+  sidebarArticles={[
+    { title: "Coffee Breaks y Coffee Stations Corporativas", meta: "Corporativo · 8 min", href: "/blog/coffee-breaks-coffee-stations-corporativas-mobiliario-cdmx/", img: "/img/corp-desayuno-reunion-1.avif" },
+    { title: "Mesas Picnic para Team Building de Empresas", meta: "Corporativo · 7 min", href: "/blog/mesas-picnic-team-building-empresas/", img: "/img/corp-teambuilding-1.avif" },
+    { title: "Picnic Empresarial y Wellness Day Off", meta: "Corporativo · 7 min", href: "/blog/picnic-empresarial-wellness-day-off-corporativo/", img: "/img/corp-bienestar-1.avif" },
+  ]}
+  sidebarServices={[
+    { name: "Eventos Corporativos", desc: "Offsites · Integración · Team building", href: "/servicios/eventos-corporativos/" },
+    { name: "Mesa Grande", desc: "Comida grupal al aire libre", href: "/catalogo/mesa-picnic-grande/" },
+    { name: "Mesa Alta Cocktail", desc: "Networking de pie", href: "/catalogo/mesa-alta-cocktail/" },
+  ]}
+  sidebarCtaTitle="¿Planeas un offsite?"
+  sidebarCtaText="Cuéntanos cuántas personas y qué formato buscas. Te decimos qué mobiliario va mejor y te pasamos precio el mismo día."
+  sidebarCtaWa="Hola%2C+quiero+cotizar+mobiliario+para+un+d%C3%ADa+de+integraci%C3%B3n+empresarial."
+  sidebarServicesTitle="Servicios y mobiliario"
+  faqs={[
+    { q: "¿Qué es exactamente un día de integración u offsite empresarial?", a: "Es una jornada que la empresa organiza fuera de la oficina para fortalecer al equipo: integrar gente nueva, cerrar un trimestre, alinear áreas o simplemente convivir con un propósito. Lo de offsite viene de que ocurre off-site, fuera del sitio habitual de trabajo. Cuando es al aire libre suma el beneficio de sacar a la gente del entorno de escritorio, que es justo lo que afloja las dinámicas y hace que la conversación fluya distinto." },
+    { q: "¿Cómo elijo la sede para un offsite al aire libre?", a: "Empieza por el objetivo y el número de personas, no por la foto bonita. Si el día es de dinámicas activas necesitas espacio abierto y piso parejo; si es más de convivencia y comida, importa la sombra y el acceso para el mobiliario. Revisa siempre que haya baños suficientes, estacionamiento, un plan B techado por si llueve y, crítico, por dónde entra y se monta el mobiliario. Una sede preciosa sin acceso de carga complica todo." },
+    { q: "¿Qué mobiliario necesito para un día de integración?", a: "La base son mesas para comer en grupo —mesas grandes de 2.40 m funcionan increíble para sentar equipos completos— más estaciones de apoyo de pie para las pausas y el networking. Si hay dinámicas de mesa, suma mesas estándar como superficie de trabajo. Lo calculamos según asistentes y formato; la idea es que nadie coma de pie ni sobre las rodillas, pero tampoco saturar el espacio de las actividades." },
+    { q: "¿Cuánto dura idealmente un día de integración?", a: "Depende del objetivo. Un medio día (cuatro a cinco horas) funciona para una integración ligera o un cierre de trimestre. Un día completo (ocho horas) permite combinar dinámicas, comida y un cierre relajado, que es el formato más común. El retiro de dos días se justifica cuando el objetivo es profundo: replantear estrategia, integrar equipos que casi no se conocen o trabajar temas que piden tiempo sin prisa." },
+    { q: "¿Cómo presupuesto un offsite empresarial?", a: "Piensa en cinco rubros: sede, mobiliario, catering, dinámicas o facilitación, y logística (transporte, montaje, audio). El catering suele ser el más grande, seguido de la sede. El mobiliario es de los rubros donde más control tienes: rentar lo justo según el formato evita pagar de más. En la tabla de este artículo desglosamos qué pesa más en cada formato para que armes un presupuesto realista desde el inicio." },
+    { q: "¿Llegan a sedes fuera de la ciudad para un offsite?", a: "Sí. Cubrimos toda la CDMX y los municipios del Estado de México sin cobrar flete, incluidas zonas donde suelen hacerse offsites como Santa Fe, Interlomas, Naucalpan y el corredor Toluca–Lerma. Para sedes campestres más lejos —Valle de Bravo, Tepoztlán, Malinalco— sí aplica un cargo por distancia, pero te lo decimos claro en la cotización, nunca el día del evento." },
+  ]}
+>
+
+<div class="art">
+
+  <p class="art__lead">
+    Te tocó organizar el día de integración del equipo. Quizá es la primera vez, quizá ya pasaste por uno que salió tibio y no quieres repetirlo. La buena noticia: un offsite que funciona no depende del presupuesto, sino de un método claro. Después de montar muchos, aprendimos que todo se ordena alrededor de una sola pregunta —¿para qué es este día?— y de ahí baja la sede, el mobiliario, el cronograma y la comida. Esta guía es ese método, sin relleno.
+  </p>
+
+  <div class="art__author">
+    <div class="art__author-badge">M</div>
+    <div class="art__author-meta">
+      <span class="art__author-name">Equipo MESPIC · Eventos corporativos</span>
+      <span class="art__author-role">Mobiliario de madera para offsites, días de integración y team building al aire libre en CDMX y Estado de México</span>
+      <span class="art__author-stamp">Tiempo de lectura: 9 min · Basado en cientos de eventos corporativos montados</span>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">Primero el objetivo, todo lo demás después</h2>
+
+    <p>El error más caro de un offsite no es elegir mal la sede ni quedarse corto de comida: es no tener claro para qué se hace. Lo vemos seguido. Una empresa nos pide mobiliario "para un día de integración" y, cuando preguntamos qué buscan lograr, la respuesta es un silencio. Sin objetivo, el día se vuelve un picnic caro. Con objetivo, cada decisión —cuánto espacio abierto necesitas, qué tan formal va la comida, si hay facilitador— tiene una respuesta lógica.</p>
+
+    <p>Define en una frase qué quieres que pase. ¿Integrar a un equipo que creció rápido? ¿Reconciliar dos áreas que chocan? ¿Premiar un buen trimestre? De ahí en adelante, el día se diseña solo. Si tu objetivo va por el lado de la colaboración activa, conviene apoyarte en dinámicas estructuradas, y para eso vale la pena ver cómo planeamos un <a href="/blog/mesas-picnic-team-building-empresas/">team building con empresas</a> de principio a fin. Y si el ángulo es más de descanso y bienestar, un <a href="/blog/picnic-empresarial-wellness-day-off-corporativo/">picnic empresarial tipo wellness day</a> resuelve ese tono mejor que una agenda apretada de actividades.</p>
+
+    <div class="art__definition">
+      <span class="art__definition-term">Definición · Día de integración (offsite) empresarial</span>
+      <p>Es una jornada que una empresa organiza fuera de su sede habitual para fortalecer al equipo a través de convivencia, dinámicas y un objetivo definido —integración, alineación, reconocimiento o estrategia—. Cuando se realiza al aire libre, combina espacio abierto para actividades, zonas de comida grupal y puntos de descanso. Su éxito depende de alinear sede, mobiliario, cronograma y catering con ese objetivo, no de improvisar un día de campo.</p>
+    </div>
+
+    <p>Con el objetivo fijo, lo siguiente es elegir el formato y la sede que lo sostengan.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Tres formatos de offsite, lado a lado</h2>
+
+    <p>No todo offsite necesita un día completo ni un retiro de dos días. El formato depende del objetivo y de cuánto tiempo realista puede salir tu equipo de operación. Esta tabla te ayuda a decidir.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table art__table--compare">
+        <thead>
+          <tr>
+            <th>Criterio</th>
+            <th class="th-accent">Medio día</th>
+            <th>Día completo</th>
+            <th>Retiro (2 días)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Duración</strong></td>
+            <td class="td-accent">4–5 horas</td>
+            <td>8 horas</td>
+            <td>2 días con pernocta</td>
+          </tr>
+          <tr>
+            <td><strong>Ideal para</strong></td>
+            <td class="td-accent">Cierre de trimestre</td>
+            <td>Integración + convivencia</td>
+            <td>Estrategia profunda</td>
+          </tr>
+          <tr>
+            <td><strong>Bloques de agenda</strong></td>
+            <td class="td-accent">1 dinámica + comida</td>
+            <td>2–3 dinámicas + comida</td>
+            <td>Talleres + comidas + ocio</td>
+          </tr>
+          <tr>
+            <td><strong>Mobiliario base</strong></td>
+            <td class="td-accent">Mesas grandes + altas</td>
+            <td>Mesas grandes + estándar + altas</td>
+            <td>Montaje por zonas</td>
+          </tr>
+          <tr>
+            <td><strong>Peso del presupuesto</strong></td>
+            <td class="td-accent">Catering</td>
+            <td>Catering + sede</td>
+            <td>Hospedaje + sede</td>
+          </tr>
+          <tr>
+            <td><strong>El reto que nadie ve venir</strong></td>
+            <td class="td-accent">Que se sienta corto</td>
+            <td>El bajón post-comida</td>
+            <td>Cuidar la energía del día 2</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Una opinión honesta: el día completo es el que mejor relación esfuerzo-resultado da para la mayoría de las empresas. El medio día se queda corto justo cuando la gente entra en confianza, y el retiro solo se justifica si el objetivo realmente pide profundidad. No hagas un retiro para algo que se resuelve en una tarde.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Cómo elegir la sede</h2>
+
+    <p>La sede no se elige por la foto, se elige por el objetivo y el número de personas. Una sede preciosa sin acceso de carga o sin sombra suficiente puede arruinar un día perfecto en el papel. Esto es lo que pesamos al recomendar un espacio.</p>
+
+    <h3>Lo que realmente importa</h3>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>Espacio abierto y piso parejo</h3>
+        <p>Si hay dinámicas activas, necesitas área libre y suelo nivelado. Si es más de convivencia, importa menos el espacio y más la sombra. Define cuál es tu día antes de buscar sede.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Acceso para el mobiliario</h3>
+        <p>Por dónde entra y se monta. Una mesa grande de 2.40 m necesita maniobra. Las sedes campestres con acceso angosto o escalones son las que más complican el montaje cuando nadie lo revisó antes.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Servicios y plan B</h3>
+        <p>Baños suficientes, estacionamiento y un área techada por si llueve. En CDMX y Edomex el clima de tarde no perdona; tener dónde refugiar a la gente y el equipo salva el día.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Distancia razonable</h3>
+        <p>Una sede a dos horas se come buena parte de la energía del equipo en traslado. Para un día completo, mejor algo dentro de la zona metropolitana o en el primer anillo campestre.</p>
+      </div>
+    </div>
+
+    <div class="art__tip">
+      <div class="art__tip-icon">💡</div>
+      <div>
+        <strong>Lo que siempre confirmamos antes de cerrar sede:</strong> el acceso de carga y el horario de montaje. Muchas sedes campestres son hermosas pero tienen entradas pensadas para autos, no para descargar mobiliario. Visitar el lugar —o pedir fotos del acceso— antes de firmar evita la sorpresa de tener que cargar mesas cien metros a pie el día del evento.
+      </div>
+    </div>
+  </section>
+
+  <figure class="art__figure">
+    <img
+      src="/img/corp-teambuilding-1.avif"
+      alt="Día de integración empresarial al aire libre con mobiliario de madera"
+      loading="lazy"
+      width="900"
+      height="560"
+    />
+    <figcaption>Offsite al aire libre con mesas grandes para comida grupal y zonas de pie para las dinámicas: el montaje que mejor fluye en un día completo.</figcaption>
+  </figure>
+
+  <section class="art__section">
+    <h2 class="art__h2">Mobiliario, cronograma y catering</h2>
+
+    <p>Con la sede definida, el día se arma alrededor de tres piezas: dónde se sienta la gente a comer, cómo respira la agenda y qué se come. Aquí va lo que recomendamos en cada una.</p>
+
+    <p>En mobiliario, la base son mesas grandes de 2.40 m para sentar equipos completos en la comida —sentar a doce personas en una misma mesa hace más por la integración que cualquier dinámica forzada— más estaciones altas de pie para las pausas y el networking, y mesas estándar como superficie cuando hay dinámicas de mesa. Lo dimensionamos contigo según asistentes y formato, sin saturar el área de actividades. Esta tabla cruza cada bloque del día con el mobiliario que pide.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Bloque del día</th>
+            <th class="th-accent">Mobiliario</th>
+            <th>Función</th>
+            <th>Tono</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Bienvenida / café</strong></td>
+            <td class="td-accent">Mesas altas + barra</td>
+            <td>Recepción y networking de pie</td>
+            <td>Energía, romper el hielo</td>
+          </tr>
+          <tr>
+            <td><strong>Dinámicas</strong></td>
+            <td class="td-accent">Mesas estándar / espacio libre</td>
+            <td>Superficie de trabajo o área abierta</td>
+            <td>Activo, colaborativo</td>
+          </tr>
+          <tr>
+            <td><strong>Comida</strong></td>
+            <td class="td-accent">Mesas grandes 2.40 m</td>
+            <td>Sentar equipos completos juntos</td>
+            <td>Convivencia, integración</td>
+          </tr>
+          <tr>
+            <td><strong>Cierre / afterwork</strong></td>
+            <td class="td-accent">Mesas altas + lounge</td>
+            <td>Conversación relajada de pie</td>
+            <td>Distendido, informal</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>En cronograma, la regla de oro es que el día respire. Una agenda sin huecos agota; deja transiciones de quince minutos entre bloques y coloca la dinámica más demandante antes de comer, nunca después: el bajón post-comida es real y ninguna actividad activa funciona con el equipo amodorrado. En catering, define formato según el tono —buffet para convivencia, servicio emplatado para algo más formal, food trucks para un ambiente relajado— y confirma siempre opciones vegetarianas y restricciones con anticipación.</p>
+  </section>
+
+  <div class="art__cta-inline">
+    <div class="art__cta-inline-content">
+      <h3>¿No sabes qué mobiliario pide tu offsite?</h3>
+      <p>Dinos cuántas personas, el formato y dónde es. Te armamos el montaje que tiene sentido para tu día de integración y te pasamos precio el mismo día.</p>
+      <div class="art__cta-inline-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+asesor%C3%ADa+de+mobiliario+para+un+d%C3%ADa+de+integraci%C3%B3n+empresarial." target="_blank" rel="noopener" class="art__btn art__btn--wa" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Pedir asesoría por WhatsApp
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--outline">Ir al formulario de cotización →</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">Checklist: cómo armar tu offsite paso a paso</h2>
+
+    <p>Este es el orden exacto que seguimos cuando una empresa nos pide ayuda a planear su día. Si lo haces en este orden, no se te escapa nada importante.</p>
+
+    <ol class="art__steps">
+      <li class="art__step">
+        <span class="art__step-num">01</span>
+        <div class="art__step-body">
+          <h3>Define el objetivo en una frase</h3>
+          <p>Integrar, alinear, premiar o replantear. Esa frase manda sobre todo lo demás: formato, sede, dinámicas y tono de la comida. Sin ella, el día no tiene rumbo.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">02</span>
+        <div class="art__step-body">
+          <h3>Elige formato y fecha</h3>
+          <p>Medio día, día completo o retiro, según el objetivo y cuánto puede salir tu equipo de operación. Reserva la fecha con margen y avisa al equipo con tiempo para asegurar asistencia.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">03</span>
+        <div class="art__step-body">
+          <h3>Cierra la sede revisando el acceso</h3>
+          <p>Espacio, sombra, baños, estacionamiento, plan B techado y, crítico, el acceso de carga para el mobiliario. Pide fotos de la entrada si no puedes visitar antes.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">04</span>
+        <div class="art__step-body">
+          <h3>Arma el cronograma que respire</h3>
+          <p>Bloques con transiciones de quince minutos, la dinámica más demandante antes de comer y un cierre relajado. Evita la agenda saturada que agota a media tarde.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">05</span>
+        <div class="art__step-body">
+          <h3>Cotiza mobiliario y catering según el formato</h3>
+          <p>Mesas grandes para comer, altas para pausas, estándar para dinámicas. Catering acorde al tono. Confirma todo por escrito, con montaje, recolección y restricciones alimentarias incluidas.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Dónde montamos</h2>
+
+    <p>Entregamos, montamos y recogemos mobiliario para offsites y días de integración en toda la Ciudad de México y los municipios del Estado de México, incluidas las zonas corporativas y campestres donde más se realizan.</p>
+
+    <div class="art__coverage-grid">
+      <div class="art__coverage-col">
+        <h3>Ciudad de México</h3>
+        <ul class="art__coverage-list">
+          <li>Santa Fe y Cuajimalpa</li>
+          <li>Polanco y Lomas de Chapultepec</li>
+          <li>Tlalpan y Xochimilco (sedes campestres)</li>
+          <li>Reforma, Roma y Condesa</li>
+          <li>Milpa Alta y zonas con áreas verdes</li>
+        </ul>
+      </div>
+      <div class="art__coverage-col">
+        <h3>Estado de México (offsites)</h3>
+        <ul class="art__coverage-list">
+          <li>Interlomas y Huixquilucan</li>
+          <li>Naucalpan y Atizapán</li>
+          <li>Corredor Toluca–Lerma</li>
+          <li>Calimaya y Tenango (campestre)</li>
+          <li>Tepotzotlán y alrededores</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Preguntas que nos hacen seguido</h2>
+
+    <div class="art__faqs">
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué es exactamente un día de integración u offsite empresarial?</summary>
+        <p class="art__faq-a">Es una jornada que la empresa organiza fuera de la oficina para fortalecer al equipo: integrar gente nueva, cerrar un trimestre, alinear áreas o simplemente convivir con un propósito. Lo de offsite viene de que ocurre off-site, fuera del sitio habitual de trabajo. Cuando es al aire libre suma el beneficio de sacar a la gente del entorno de escritorio, que es justo lo que afloja las dinámicas y hace que la conversación fluya distinto.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cómo elijo la sede para un offsite al aire libre?</summary>
+        <p class="art__faq-a">Empieza por el objetivo y el número de personas, no por la foto bonita. Si el día es de dinámicas activas necesitas espacio abierto y piso parejo; si es más de convivencia y comida, importa la sombra y el acceso para el mobiliario. Revisa siempre que haya baños suficientes, estacionamiento, un plan B techado por si llueve y, crítico, por dónde entra y se monta el mobiliario. Una sede preciosa sin acceso de carga complica todo.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué mobiliario necesito para un día de integración?</summary>
+        <p class="art__faq-a">La base son mesas para comer en grupo —mesas grandes de 2.40 m funcionan increíble para sentar equipos completos— más estaciones de apoyo de pie para las pausas y el networking. Si hay dinámicas de mesa, suma mesas estándar como superficie de trabajo. Lo calculamos según asistentes y formato; la idea es que nadie coma de pie ni sobre las rodillas, pero tampoco saturar el espacio de las actividades.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuánto dura idealmente un día de integración?</summary>
+        <p class="art__faq-a">Depende del objetivo. Un medio día (cuatro a cinco horas) funciona para una integración ligera o un cierre de trimestre. Un día completo (ocho horas) permite combinar dinámicas, comida y un cierre relajado, que es el formato más común. El retiro de dos días se justifica cuando el objetivo es profundo: replantear estrategia, integrar equipos que casi no se conocen o trabajar temas que piden tiempo sin prisa.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cómo presupuesto un offsite empresarial?</summary>
+        <p class="art__faq-a">Piensa en cinco rubros: sede, mobiliario, catering, dinámicas o facilitación, y logística (transporte, montaje, audio). El catering suele ser el más grande, seguido de la sede. El mobiliario es de los rubros donde más control tienes: rentar lo justo según el formato evita pagar de más. En la tabla de este artículo desglosamos qué pesa más en cada formato para que armes un presupuesto realista desde el inicio.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Llegan a sedes fuera de la ciudad para un offsite?</summary>
+        <p class="art__faq-a">Sí. Cubrimos toda la CDMX y los municipios del Estado de México sin cobrar flete, incluidas zonas donde suelen hacerse offsites como Santa Fe, Interlomas, Naucalpan y el corredor Toluca–Lerma. Para sedes campestres más lejos —Valle de Bravo, Tepoztlán, Malinalco— sí aplica un cargo por distancia, pero te lo decimos claro en la cotización, nunca el día del evento.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Galería: días de integración que hemos montado</h2>
+    <div class="art__gallery-strip">
+      <img src="/img/corp-almuerzo-1.avif" alt="Comida grupal en día de integración empresarial con mesas de madera" loading="lazy" width="350" height="220" />
+      <img src="/img/corp-taller-1.avif" alt="Taller y dinámicas en offsite corporativo al aire libre" loading="lazy" width="350" height="220" />
+      <img src="/img/corp-celebracion-1.avif" alt="Cierre de día de integración con mobiliario de madera al aire libre" loading="lazy" width="350" height="220" />
+      <img src="/img/eventos-corporativos-ejecutivos-renta-mesas-picnic-04.avif" alt="Mobiliario ejecutivo de madera para evento corporativo al aire libre" loading="lazy" width="350" height="220" />
+    </div>
+  </section>
+
+  <div class="art__cta-final">
+    <div class="art__cta-final-inner">
+      <h2>Cuéntanos de tu offsite y lo planeamos juntos</h2>
+      <p>Sin compromiso. Danos el objetivo, el número de personas y la fecha. Te proponemos el mobiliario que tiene sentido para tu día de integración y te pasamos precio final el mismo día.</p>
+      <div class="art__cta-final-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+cotizar+mobiliario+para+un+d%C3%ADa+de+integraci%C3%B3n+empresarial." target="_blank" rel="noopener" class="art__btn art__btn--wa art__btn--lg" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--primary art__btn--lg">Formulario de cotización →</a>
+        <a href="/servicios/eventos-corporativos/" class="art__btn art__btn--ghost art__btn--lg">Ver servicio corporativo</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</BlogLayout>

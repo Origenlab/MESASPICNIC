@@ -1,0 +1,395 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import '../../styles/blog-article.css';
+---
+
+<BlogLayout
+  title="Logística de Mesas Picnic en Festivales Gastronómicos: Montaje, Flujo y Seguridad | MESPIC"
+  description="Cronograma de montaje masivo, distribución de food trucks y mesas, flujo de filas, limpieza y recolección. La logística real que aplicamos al montar mesas picnic en festivales de CDMX y Edomex."
+  ogImage="/img/mesa-picnic-feria-food-trucks-multitud.webp"
+  heroTitle="Logística de Mesas Picnic en Festivales Gastronómicos: Montaje, Flujo y Seguridad"
+  heroBadge="Blog · Festivales · Logística"
+  heroDescription="Un festival gastronómico se gana o se pierde en las horas antes de abrir puertas. Aquí está el cronograma de montaje masivo, la distribución de food trucks y mesas, y el plan de flujo, limpieza y recolección que aplicamos cuando hay cientos de mesas en juego."
+  heroSeo1="La gente ve un festival gastronómico lleno y bien acomodado y asume que se armó solo. No se arma solo. Detrás de cada zona de mesas que fluye sin amontonamientos hay un cronograma cronometrado, cuadrillas que entran en secuencia, una distribución pensada para que las filas de los food trucks no choquen con quien busca dónde sentarse, y un plan de recolección que arranca antes de que termine el último concierto. La logística es invisible cuando sale bien, y es lo único que se nota cuando sale mal."
+  heroSeo2="En esta guía abrimos el manual operativo que usamos al montar mesas picnic en festivales y ferias gastronómicas de gran volumen. Vas a ver el cronograma hora por hora del día de montaje, cómo se distribuyen los food trucks frente a las zonas de comensales, por qué el flujo de filas se diseña antes que la estética, cómo mantener la limpieza y la rotación de mesas durante el evento, y cómo recoger cientos de piezas sin que la desmontada se vuelva el caos que la montada evitó."
+  heroMetrics={[
+    { value: "90 min", label: "Ventana de montaje masivo" },
+    { value: "8 min", label: "Tiempo de lectura" },
+    { value: "CDMX + Edomex", label: "Cobertura sin flete" },
+  ]}
+  datePublished="2026-06-03"
+  articleSection="Festivales"
+  breadcrumbs={[
+    { label: "Inicio", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Logística de Mesas Picnic en Festivales" },
+  ]}
+  sidebarProducts={[
+    { name: "Mesa Biergarten", cap: "Plegable · Montaje rápido", href: "/catalogo/mesa-biergarten-madera/", img: "/img/catalogo/mesa-biergarten-madera-festival-01.webp" },
+    { name: "Mesa Grande 2.40m", cap: "10–12 personas · Imperial", href: "/catalogo/mesa-picnic-grande/", img: "/img/mesa-picnic-grande-evento-16.avif" },
+    { name: "Mesa Picnic XL 3m", cap: "14–16 personas · Líneas largas", href: "/catalogo/mesa-picnic-xl/", img: "/img/catalogo/mesa-picnic-xl-extra-larga-3m-16-personas-01.webp" },
+  ]}
+  sidebarArticles={[
+    { title: "Mobiliario para Festivales: Cómo Calcular Capacidad en Eventos Masivos", meta: "Festivales · 8 min", href: "/blog/mobiliario-festivales-ferias-capacidad-eventos-masivos/", img: "/img/mesa-picnic-feria-gastronomica-multitud.avif" },
+    { title: "Mesas Picnic para Festivales y Ferias Gastronómicas", meta: "Festivales · 8 min", href: "/blog/mesas-picnic-festivales-ferias-gastronomicas/", img: "/img/mesa-picnic-festival-masivo-luces.avif" },
+    { title: "Catering, Food Trucks y Mesas Picnic en Eventos", meta: "Eventos · 7 min", href: "/blog/catering-food-trucks-mesas-picnic-eventos/", img: "/img/mesa-picnic-evento-masivo-dia.avif" },
+  ]}
+  sidebarServices={[
+    { name: "Festivales", desc: "Montaje de gran volumen", href: "/servicios/festivales/" },
+    { name: "Ferias Gastronómicas", desc: "Food trucks + comensales", href: "/servicios/festivales/" },
+    { name: "Eventos Masivos", desc: "Aforos de miles", href: "/servicios/festivales/" },
+    { name: "Valle de Bravo", desc: "Ferias y eventos fuera de la ciudad", href: "/blog/ferias-eventos-masivos-valle-de-bravo/" },
+  ]}
+  sidebarCtaTitle="¿Festival a la vista?"
+  sidebarCtaText="Cuéntanos fecha, sede y aforo. Coordinamos cronograma de montaje, distribución y recolección, y te pasamos precio el mismo día."
+  sidebarCtaWa="Hola%2C+quiero+coordinar+la+log%C3%ADstica+de+mesas+picnic+para+un+festival."
+  sidebarServicesTitle="Servicios para tu festival"
+  faqs={[
+    { q: "¿Cuánto tiempo toma montar las mesas de un festival gastronómico?", a: "Depende del volumen y del modelo, pero un equipo entrenado levanta una zona de 50 a 80 mesas en una ventana de 90 minutos cuando se usan modelos plegables como la biergarten. Para montajes de cientos de mesas dividimos en cuadrillas por zona y trabajamos en paralelo. La clave no es ir rápido, sino seguir la secuencia: primero marcar, luego mesas, después bancas, al final ajustes y limpieza previa." },
+    { q: "¿Cómo se distribuyen los food trucks respecto a las mesas?", a: "Los food trucks van en perímetro o en hilera, con la zona de comensales al centro o enfrente, nunca mezclados entre las mesas. Así la fila de cada puesto crece hacia afuera sin invadir el área donde la gente come. Dejamos un pasillo de al menos 3 m frente a cada truck para que la fila no bloquee la circulación general del festival." },
+    { q: "¿Quién se encarga de limpiar las mesas durante el evento?", a: "En festivales coordinamos un esquema de limpieza por rondas: una cuadrilla recorre la zona sentada despejando charolas y limpiando superficies para acelerar la rotación. En eventos con organizador propio, definimos antes quién hace qué para que ninguna mesa se quede ocupada por basura mientras hay gente buscando lugar. Una mesa sucia es una mesa que nadie usa." },
+    { q: "¿A qué hora se recoge el mobiliario después de un festival?", a: "El plan de recolección se cierra desde la cotización. Lo más común es desmontar esa misma noche al cierre, o al día siguiente temprano si el venue lo permite y es más seguro. En festivales grandes empezamos a recoger por zonas conforme se liberan, sin esperar a que termine todo, para que la desmontada no se acumule en una sola maniobra caótica a medianoche." },
+    { q: "¿Necesito permisos o coordinación con Protección Civil?", a: "Para eventos masivos sí, y el mobiliario es parte de eso: los pasillos, las rutas de evacuación y la densidad que entreguemos deben respetar lo que Protección Civil aprueba. Nosotros montamos respetando esos anchos y ubicaciones; el permiso del evento lo tramita el organizador, pero coordinamos para que el montaje real coincida con el plano autorizado." },
+    { q: "¿Coordinan logística de festivales fuera de la Ciudad de México?", a: "Sí. Cubrimos toda la CDMX y los municipios del Estado de México sin cobrar flete, incluido el corredor Toluca–Metepec. Para festivales y ferias en Valle de Bravo y destinos más lejanos aplica un cargo por distancia, y ajustamos el cronograma de montaje y recolección a los tiempos de traslado de ese tipo de evento, todo aclarado en la cotización." },
+  ]}
+>
+
+<div class="art">
+
+  <p class="art__lead">
+    Un festival gastronómico bien montado se siente fácil: la gente entra, encuentra dónde sentarse, las filas de los food trucks avanzan, las mesas se desocupan y se vuelven a llenar, y al final todo desaparece sin drama. Esa facilidad es pura logística. Detrás hay un cronograma, una distribución pensada y un plan de recolección que arranca antes de lo que nadie imagina. Esta guía es ese plan, abierto de par en par.
+  </p>
+
+  <div class="art__author">
+    <div class="art__author-badge">M</div>
+    <div class="art__author-meta">
+      <span class="art__author-name">Equipo MESPIC · Operación de eventos masivos</span>
+      <span class="art__author-role">Montaje, distribución y recolección de mobiliario de madera en festivales y ferias gastronómicas de CDMX y Estado de México</span>
+      <span class="art__author-stamp">Tiempo de lectura: 8 min · Basado en festivales gastronómicos con cientos de mesas montadas</span>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">La logística empieza mucho antes del día del evento</h2>
+
+    <p>Si esperas al día del festival para pensar la logística, ya perdiste. El montaje de gran volumen es la parte visible de un trabajo que empieza con el plano. Antes de cargar una sola mesa, ya sabemos cuántas piezas van, en qué zona, por dónde entra el camión, dónde se descarga, qué cuadrilla arma qué bloque y a qué hora debe estar todo listo para que Protección Civil dé el visto bueno. Improvisar a esa escala no es valentía, es la receta del retraso.</p>
+
+    <p>Todo este plan se apoya en un cálculo previo de cuántas mesas y bancas hacen falta —que cubrimos en detalle en la guía de <a href="/blog/mobiliario-festivales-ferias-capacidad-eventos-masivos/">cómo calcular capacidad en eventos masivos</a>—. Aquí asumimos que ese número ya está definido y nos concentramos en lo siguiente: cómo poner esas piezas en el piso, en el tiempo justo y en el orden correcto. Empecemos por definir de qué hablamos cuando decimos logística de festival.</p>
+
+    <div class="art__definition">
+      <span class="art__definition-term">Definición · Logística de mobiliario en festival</span>
+      <p>Es el conjunto de operaciones que llevan el mobiliario desde la bodega hasta su posición exacta en el recinto, lo mantienen funcional durante el evento y lo retiran al cierre. Incluye el cronograma de montaje por cuadrillas, la distribución espacial de mesas y food trucks, el diseño del flujo de personas y filas, la limpieza y rotación de superficies durante el evento, y la recolección por zonas. Su objetivo no es solo armar mesas: es que el aforo circule, consuma y se evacúe con seguridad, sin que el mobiliario se vuelva un obstáculo en ningún momento.</p>
+    </div>
+
+    <p>Con eso claro, vamos al corazón de la operación: el cronograma del día de montaje.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Cronograma de montaje masivo, hora por hora</h2>
+
+    <p>Este es el esqueleto temporal que seguimos en un festival de volumen medio-alto. Los tiempos se escalan según el número de mesas y de cuadrillas, pero la secuencia no cambia: cada fase depende de que la anterior esté lista. Saltarse el orden es lo que produce esos montajes donde a las cuadrillas les estorban entre sí.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Hora (T = apertura)</th>
+            <th class="th-accent">Fase</th>
+            <th>Qué pasa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>T − 6 h</strong></td>
+            <td class="td-accent">Llegada y descarga</td>
+            <td>Camión en posición, descarga ordenada por zona, conteo de piezas</td>
+          </tr>
+          <tr>
+            <td><strong>T − 5 h</strong></td>
+            <td class="td-accent">Marcado del piso</td>
+            <td>Se traza el plano real: bloques de mesas, pasillos, rutas de evacuación</td>
+          </tr>
+          <tr>
+            <td><strong>T − 4 h</strong></td>
+            <td class="td-accent">Montaje de mesas</td>
+            <td>Cuadrillas en paralelo arman y colocan mesas por zona, no por todo el campo</td>
+          </tr>
+          <tr>
+            <td><strong>T − 2.5 h</strong></td>
+            <td class="td-accent">Bancas y nivelación</td>
+            <td>Se colocan bancas, se nivela donde el piso lo pida, se alinean filas</td>
+          </tr>
+          <tr>
+            <td><strong>T − 1.5 h</strong></td>
+            <td class="td-accent">Food trucks y ajustes</td>
+            <td>Los trucks toman posición, se verifican anchos de fila y pasillos</td>
+          </tr>
+          <tr>
+            <td><strong>T − 1 h</strong></td>
+            <td class="td-accent">Limpieza previa y visto bueno</td>
+            <td>Limpieza de superficies, despeje de empaques, revisión con Protección Civil</td>
+          </tr>
+          <tr>
+            <td><strong>T − 0</strong></td>
+            <td class="td-accent">Apertura de puertas</td>
+            <td>Todo listo, cuadrilla de mantenimiento en standby para rondas</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="art__tip">
+      <div class="art__tip-icon">💡</div>
+      <div>
+        <strong>El truco que más tiempo nos ahorra:</strong> descargar por zonas, no en un montón. Si las mesas de la zona norte llegan apiladas junto a la zona norte, la cuadrilla no pierde minutos cruzando el recinto cargando piezas. Parece obvio, pero la diferencia entre una descarga ordenada y una desordenada puede ser una hora de montaje en un evento grande. Por eso modelos plegables como la <a href="/catalogo/mesa-biergarten-madera/">mesa biergarten</a> brillan aquí: se transportan compactas y se levantan en segundos.
+      </div>
+    </div>
+  </section>
+
+  <figure class="art__figure">
+    <img
+      src="/img/mesa-picnic-feria-food-trucks-multitud.webp"
+      alt="Food trucks en hilera frente a zona de mesas picnic en feria gastronómica con multitud"
+      loading="lazy"
+      width="900"
+      height="560"
+    />
+    <figcaption>Food trucks en perímetro y zona de comensales al frente: las filas crecen hacia afuera y la circulación central queda libre.</figcaption>
+  </figure>
+
+  <section class="art__section">
+    <h2 class="art__h2">Distribución: food trucks frente a mesas, no entre ellas</h2>
+
+    <p>La distribución es donde un festival se vuelve fluido o se vuelve un embudo. El error clásico es regar los food trucks entre las mesas pensando que así "todos quedan cerca de la comida". Lo que pasa en realidad es que la fila de cada truck invade la zona de comensales, choca con quien busca lugar, y a media tarde nadie sabe por dónde caminar. La regla que seguimos es simple: comida en el perímetro, comensales al centro.</p>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>Trucks en perímetro o hilera</h3>
+        <p>Los puestos van pegados al borde de la zona o en una hilera definida. Así la fila de cada uno crece hacia afuera, lejos de las mesas, y la gente que come no queda atrapada entre filas.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Zona sentada al centro o enfrente</h3>
+        <p>El bloque de mesas picnic se concentra como un food court: la gente compra en el perímetro y se mueve al centro a comer. Ese flujo radial es el que mejor reparte la multitud.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Pasillo de 3 m frente a cada truck</h3>
+        <p>Espacio reservado para que la fila exista sin invadir la circulación general. Es la franja que más se respeta y la primera que el organizador quiere recortar; no lo permitimos.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Mesas altas pegadas a los puestos</h3>
+        <p>Para consumo rápido junto a la comida, sin ocupar la zona sentada. Aceleran la rotación y descongestionan las mesas largas. Cómo se reparte todo esto lo detallamos en la guía de <a href="/blog/catering-food-trucks-mesas-picnic-eventos/">catering y food trucks</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Flujo de filas y circulación de la multitud</h2>
+
+    <p>Una vez colocado el mobiliario, el flujo de gente debería sentirse natural. No lo es por casualidad: se diseña. La pregunta que nos hacemos en cada plano es "¿hacia dónde se mueve la gente y dónde se va a juntar?". Las filas de los food trucks, las barras y los baños son los tres imanes de multitud, y el mobiliario tiene que dejarles espacio sin que se conviertan en tapones.</p>
+
+    <p>El principio rector es que las filas nunca crucen las rutas de circulación principal. Una fila de cuarenta personas para el truck de tacos es normal y esperable; lo que no puede pasar es que esa fila atraviese el pasillo por donde toda la gente camina hacia el escenario o, peor, hacia una salida de emergencia. Por eso orientamos cada puesto para que su fila se acumule en una franja muerta —contra una pared, hacia una esquina— y no en la arteria central. El mobiliario refuerza ese diseño: una hilera de mesas bien puesta funciona como guía que encauza el paso sin necesidad de vallas.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table art__table--compare">
+        <thead>
+          <tr>
+            <th>Punto de congestión</th>
+            <th class="th-accent">Riesgo</th>
+            <th>Solución logística</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Fila de food truck</strong></td>
+            <td class="td-accent">Invade pasillo central</td>
+            <td>Orientar fila hacia franja muerta, 3 m de reserva</td>
+          </tr>
+          <tr>
+            <td><strong>Cuello entre bloques de mesas</strong></td>
+            <td class="td-accent">Tapón de circulación</td>
+            <td>Pasillos de 1.8 m mínimo entre bloques</td>
+          </tr>
+          <tr>
+            <td><strong>Acceso a barras</strong></td>
+            <td class="td-accent">Aglomeración móvil</td>
+            <td>Mesas altas cercanas para liberar la barra rápido</td>
+          </tr>
+          <tr>
+            <td><strong>Ruta de evacuación</strong></td>
+            <td class="td-accent">Bloqueo por mobiliario</td>
+            <td>Despeje total y señalización visible, sin excepción</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="art__cta-inline">
+    <div class="art__cta-inline-content">
+      <h3>¿Quieres que coordinemos el montaje de tu festival?</h3>
+      <p>Pásanos fecha, sede y aforo. Armamos cronograma, distribución y plan de recolección, y te pasamos precio el mismo día.</p>
+      <div class="art__cta-inline-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+coordinar+el+montaje+y+log%C3%ADstica+de+mi+festival." target="_blank" rel="noopener" class="art__btn art__btn--wa" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Coordinar por WhatsApp
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--outline">Ir al formulario de cotización →</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">Limpieza y rotación durante el evento</h2>
+
+    <p>El montaje termina cuando abren puertas, pero la logística no. Durante el festival, las mesas son un recurso vivo: se ocupan, se ensucian, se liberan y se vuelven a ocupar. Si nadie las atiende, en una hora la zona sentada se llena de charolas, vasos y servilletas, y aunque haya lugares físicamente libres, nadie quiere sentarse en una mesa cochina. Una mesa sucia es una mesa fuera de servicio.</p>
+
+    <p>Por eso operamos un esquema de limpieza por rondas. Una cuadrilla recorre la zona sentada en circuito continuo: retira charolas, limpia superficies y deja la mesa lista para el siguiente comensal. Ese trabajo, que parece menor, es lo que sostiene la rotación que hace posible montar menos mobiliario del que el aforo total sugeriría. Sin limpieza activa, la rotación se cae y de pronto faltan mesas que en realidad están ahí, solo que ocupadas por basura. En festivales con organizador propio, definimos antes quién hace cada ronda para que no quede en tierra de nadie.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Recolección: desmontar sin que se vuelva caos</h2>
+
+    <p>La desmontada es donde muchos eventos arruinan una noche por lo demás perfecta. Después de horas de festival, el equipo está cansado, el venue quiere cerrar y la tentación es apilar todo de cualquier manera. Nosotros lo planeamos con el mismo cuidado que el montaje, porque una recolección desordenada se traduce en piezas dañadas, conteos que no cuadran y un venue molesto.</p>
+
+    <p>La estrategia es recoger por zonas conforme se liberan, no esperar a que termine todo para empezar. Cuando una sección de mesas deja de usarse —porque el público migró al escenario, por ejemplo— esa zona empieza a desmontarse mientras el resto sigue activo. Así, al cierre, ya hay medio recinto recogido y la maniobra final es manejable en lugar de una avalancha a medianoche. El plan de recolección, con horario y modalidad, se cierra desde la cotización para que nadie se lleve sorpresas. Para festivales fuera de la ciudad, como las <a href="/blog/ferias-eventos-masivos-valle-de-bravo/">ferias y eventos masivos en Valle de Bravo</a>, ese plan se ajusta a los tiempos de traslado, que cambian por completo la ecuación.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Checklist logístico del festival, paso a paso</h2>
+
+    <p>Este es el mismo recorrido que hacemos internamente antes, durante y después de cada festival. Te sirve para coordinar con tu equipo o para revisar que la cotización que recibas cubra todo lo que de verdad importa.</p>
+
+    <ol class="art__steps">
+      <li class="art__step">
+        <span class="art__step-num">01</span>
+        <div class="art__step-body">
+          <h3>Plano y conteo confirmados</h3>
+          <p>Número final de mesas y bancas por zona, plano con pasillos y rutas de evacuación, y aprobación de Protección Civil si aplica. Nada se carga hasta que el plano está cerrado.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">02</span>
+        <div class="art__step-body">
+          <h3>Acceso y descarga resueltos</h3>
+          <p>Por dónde entra el camión, dónde descarga, y descarga organizada por zona para que cada cuadrilla tenga su mobiliario a la mano. La descarga ordenada ahorra una hora.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">03</span>
+        <div class="art__step-body">
+          <h3>Montaje por cuadrillas en secuencia</h3>
+          <p>Marcar piso, montar mesas por zona en paralelo, colocar bancas, nivelar y alinear. Cada fase arranca cuando la anterior está lista, no antes.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">04</span>
+        <div class="art__step-body">
+          <h3>Food trucks y verificación de flujo</h3>
+          <p>Trucks en posición de perímetro, anchos de fila y pasillos verificados, rutas de evacuación despejadas. Última revisión antes de abrir puertas.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">05</span>
+        <div class="art__step-body">
+          <h3>Rondas de limpieza durante el evento</h3>
+          <p>Cuadrilla en circuito continuo despejando y limpiando mesas para sostener la rotación. Definir antes quién cubre cada ronda si hay equipos mezclados.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">06</span>
+        <div class="art__step-body">
+          <h3>Recolección por zonas y conteo final</h3>
+          <p>Desmontar las secciones liberadas sin esperar al cierre total, conteo de piezas, y entrega del recinto limpio. Horario y modalidad cerrados desde la cotización.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Dónde montamos</h2>
+
+    <p>Entregamos, montamos, mantenemos y recogemos en toda la Ciudad de México y los municipios del Estado de México, con operación de gran volumen para festivales y ferias gastronómicas.</p>
+
+    <div class="art__coverage-grid">
+      <div class="art__coverage-col">
+        <h3>Ciudad de México</h3>
+        <ul class="art__coverage-list">
+          <li>Centro Histórico y Reforma</li>
+          <li>Roma, Condesa y Juárez</li>
+          <li>Parques de Coyoacán, Tlalpan y la Magdalena Contreras</li>
+          <li>Chapultepec y Polanco</li>
+          <li>Iztapalapa, Xochimilco y zona sur</li>
+        </ul>
+      </div>
+      <div class="art__coverage-col">
+        <h3>Estado de México y fuera de la ciudad</h3>
+        <ul class="art__coverage-list">
+          <li>Corredor Toluca y Metepec (ferias regionales)</li>
+          <li>Naucalpan, Tlalnepantla y Atizapán</li>
+          <li>Texcoco y Chalco</li>
+          <li>Huixquilucan e Interlomas</li>
+          <li>Valle de Bravo (festivales con cargo por distancia)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Preguntas que nos hacen seguido</h2>
+
+    <div class="art__faqs">
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuánto tiempo toma montar las mesas de un festival gastronómico?</summary>
+        <p class="art__faq-a">Depende del volumen y del modelo, pero un equipo entrenado levanta una zona de 50 a 80 mesas en una ventana de 90 minutos cuando se usan modelos plegables como la biergarten. Para montajes de cientos de mesas dividimos en cuadrillas por zona y trabajamos en paralelo. La clave no es ir rápido, sino seguir la secuencia: primero marcar, luego mesas, después bancas, al final ajustes y limpieza previa.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cómo se distribuyen los food trucks respecto a las mesas?</summary>
+        <p class="art__faq-a">Los food trucks van en perímetro o en hilera, con la zona de comensales al centro o enfrente, nunca mezclados entre las mesas. Así la fila de cada puesto crece hacia afuera sin invadir el área donde la gente come. Dejamos un pasillo de al menos 3 m frente a cada truck para que la fila no bloquee la circulación general del festival.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Quién se encarga de limpiar las mesas durante el evento?</summary>
+        <p class="art__faq-a">En festivales coordinamos un esquema de limpieza por rondas: una cuadrilla recorre la zona sentada despejando charolas y limpiando superficies para acelerar la rotación. En eventos con organizador propio, definimos antes quién hace qué para que ninguna mesa se quede ocupada por basura mientras hay gente buscando lugar. Una mesa sucia es una mesa que nadie usa.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿A qué hora se recoge el mobiliario después de un festival?</summary>
+        <p class="art__faq-a">El plan de recolección se cierra desde la cotización. Lo más común es desmontar esa misma noche al cierre, o al día siguiente temprano si el venue lo permite y es más seguro. En festivales grandes empezamos a recoger por zonas conforme se liberan, sin esperar a que termine todo, para que la desmontada no se acumule en una sola maniobra caótica a medianoche.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Necesito permisos o coordinación con Protección Civil?</summary>
+        <p class="art__faq-a">Para eventos masivos sí, y el mobiliario es parte de eso: los pasillos, las rutas de evacuación y la densidad que entreguemos deben respetar lo que Protección Civil aprueba. Nosotros montamos respetando esos anchos y ubicaciones; el permiso del evento lo tramita el organizador, pero coordinamos para que el montaje real coincida con el plano autorizado.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Coordinan logística de festivales fuera de la Ciudad de México?</summary>
+        <p class="art__faq-a">Sí. Cubrimos toda la CDMX y los municipios del Estado de México sin cobrar flete, incluido el corredor Toluca–Metepec. Para festivales y ferias en Valle de Bravo y destinos más lejanos aplica un cargo por distancia, y ajustamos el cronograma de montaje y recolección a los tiempos de traslado de ese tipo de evento, todo aclarado en la cotización.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Galería: la operación en marcha</h2>
+    <div class="art__gallery-strip">
+      <img src="/img/cine-aire-libre-mesas-picnic-festival-02.avif" alt="Montaje de mesas picnic en festival de cine al aire libre" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-feria-gastronomica-multitud.avif" alt="Zona de comensales en feria gastronómica con mesas picnic" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-evento-masivo-dia.avif" alt="Evento masivo de día con mesas picnic montadas y gran aforo" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-festival-masivo-luces.avif" alt="Festival masivo de noche con mesas picnic iluminadas" loading="lazy" width="350" height="220" />
+    </div>
+  </section>
+
+  <div class="art__cta-final">
+    <div class="art__cta-final-inner">
+      <h2>Cuéntanos de tu festival y armamos la operación completa</h2>
+      <p>Sin compromiso. Pásanos fecha, sede y aforo esperado. Coordinamos cronograma de montaje, distribución de food trucks y mesas, plan de flujo, limpieza y recolección, y te pasamos precio final el mismo día.</p>
+      <div class="art__cta-final-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+cotizar+la+log%C3%ADstica+de+mesas+picnic+para+un+festival+gastron%C3%B3mico." target="_blank" rel="noopener" class="art__btn art__btn--wa art__btn--lg" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--primary art__btn--lg">Formulario de cotización →</a>
+        <a href="/servicios/festivales/" class="art__btn art__btn--ghost art__btn--lg">Ver servicio de festivales</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</BlogLayout>

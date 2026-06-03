@@ -1,0 +1,467 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import '../../styles/blog-article.css';
+---
+
+<BlogLayout
+  title="Mobiliario para Festivales y Ferias: Cómo Calcular Capacidad en Eventos Masivos | MESPIC"
+  description="¿Cuántas mesas y bancas necesitas para un festival de mil personas? Te damos las fórmulas reales de capacidad, m² por asistente y rotación que usamos al montar eventos masivos en CDMX y Edomex."
+  ogImage="/img/mesa-picnic-feria-gastronomica-multitud.avif"
+  heroTitle="Mobiliario para Festivales y Ferias: Cómo Calcular Capacidad en Eventos Masivos"
+  heroBadge="Blog · Festivales · Capacidad"
+  heroDescription="Cuando el aforo se cuenta por miles, el mobiliario deja de ser decoración y se vuelve ingeniería. Aquí están las fórmulas de capacidad, los metros cuadrados por persona y la lógica de rotación que aplicamos al montar mesas picnic en festivales y ferias masivas."
+  heroSeo1="Hay una pregunta que nos llega cada temporada de festivales y que casi nadie sabe responder con números: ¿cuánto mobiliario necesita de verdad un evento masivo? La intuición falla feo en estas escalas. Pensar 'pongo muchas mesas y ya' es la receta para que la mitad del aforo coma de pie mientras la otra mitad ocupa lugares vacíos en una zona mal ubicada. Calcular capacidad para multitudes no es estimar a ojo: es repartir aforo entre zonas, prever rotación de comensales y dejar pasillos que la gente y, sobre todo, Protección Civil puedan recorrer."
+  heroSeo2="En esta guía desarmamos el cálculo pieza por pieza, con las mismas fórmulas que usamos al cotizar un festival gastronómico o una feria de food trucks. Vas a ver cuántos metros cuadrados ocupa una persona sentada frente a una de pie, cómo traducir asistentes en mesas, bancas y superficie, por qué la rotación cambia todo cuando nadie permanece sentado la noche entera, y dónde la seguridad —salidas, anchos de pasillo, densidad— pone los límites que ningún diseño bonito debería cruzar."
+  heroMetrics={[
+    { value: "1.2 m²", label: "Por comensal sentado" },
+    { value: "8 min", label: "Tiempo de lectura" },
+    { value: "CDMX + Edomex", label: "Cobertura sin flete" },
+  ]}
+  datePublished="2026-06-03"
+  articleSection="Festivales"
+  breadcrumbs={[
+    { label: "Inicio", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Mobiliario para Festivales y Ferias" },
+  ]}
+  sidebarProducts={[
+    { name: "Mesa Biergarten", cap: "Plegable · Eventos masivos", href: "/catalogo/mesa-biergarten-madera/", img: "/img/catalogo/mesa-biergarten-madera-festival-01.webp" },
+    { name: "Mesa Grande 2.40m", cap: "10–12 personas · Imperial", href: "/catalogo/mesa-picnic-grande/", img: "/img/mesa-picnic-grande-evento-16.avif" },
+    { name: "Mesa Picnic XL 3m", cap: "14–16 personas · Líneas largas", href: "/catalogo/mesa-picnic-xl/", img: "/img/catalogo/mesa-picnic-xl-extra-larga-3m-16-personas-01.webp" },
+  ]}
+  sidebarArticles={[
+    { title: "Logística de Mesas Picnic en Festivales Gastronómicos", meta: "Festivales · 8 min", href: "/blog/logistica-mesas-picnic-festivales-gastronomicos-montaje/", img: "/img/mesa-picnic-feria-food-trucks-multitud.webp" },
+    { title: "Mesas Picnic para Festivales y Ferias Gastronómicas", meta: "Festivales · 8 min", href: "/blog/mesas-picnic-festivales-ferias-gastronomicas/", img: "/img/mesa-picnic-festival-masivo-luces.avif" },
+    { title: "Catering, Food Trucks y Mesas Picnic en Eventos", meta: "Eventos · 7 min", href: "/blog/catering-food-trucks-mesas-picnic-eventos/", img: "/img/mesa-picnic-evento-masivo-dia.avif" },
+  ]}
+  sidebarServices={[
+    { name: "Festivales", desc: "Montaje de gran volumen", href: "/servicios/festivales/" },
+    { name: "Ferias Gastronómicas", desc: "Food trucks + comensales", href: "/servicios/festivales/" },
+    { name: "Eventos Masivos", desc: "Aforos de miles", href: "/servicios/festivales/" },
+    { name: "Valle de Bravo", desc: "Ferias y eventos fuera de la ciudad", href: "/blog/ferias-eventos-masivos-valle-de-bravo/" },
+  ]}
+  sidebarCtaTitle="¿Cuánto aforo esperas?"
+  sidebarCtaText="Dinos asistentes, superficie disponible y tipo de festival. Te devolvemos el cálculo de mesas, bancas y metros cuadrados con precio el mismo día."
+  sidebarCtaWa="Hola%2C+quiero+calcular+mobiliario+para+un+festival+o+feria+masiva."
+  sidebarServicesTitle="Servicios para tu festival"
+  faqs={[
+    { q: "¿Cuántos metros cuadrados ocupa una persona sentada en un festival?", a: "Como regla operativa usamos 1.2 m² por comensal sentado en mesa picnic: ahí entra su lugar en la banca, su parte de la mesa y el espacio para entrar y salir sin empujar al vecino. Para zonas de pie el número baja a 0.5–0.6 m² por persona, pero esa densidad solo se sostiene en áreas de paso, nunca donde la gente va a comer con plato y bebida en mano." },
+    { q: "¿Cómo calculo cuántas mesas picnic necesito para X asistentes?", a: "Primero define qué porcentaje del aforo querrá estar sentado a la vez. En un festival con rotación rara vez es el 100%: entre 35% y 50% es lo realista. Divide ese número entre la capacidad por mesa (6, 8, 10 o 16 según modelo) y le sumas un 10% de colchón. Para 1,000 asistentes con 40% sentado simultáneo y mesas de 8, salen unas 55 mesas redondeando hacia arriba." },
+    { q: "¿Qué es la rotación de comensales y por qué cambia el cálculo?", a: "La rotación es cuántas veces se desocupa y vuelve a ocuparse un mismo lugar durante el evento. En un festival la gente come, se levanta, recorre stands y otra persona toma su sitio. Por eso no necesitas asientos para todo el aforo al mismo tiempo: necesitas para el pico de comensales simultáneos. Una buena rotación puede reducir el mobiliario requerido entre un 40% y un 60% frente a sentar a todos a la vez." },
+    { q: "¿Qué ancho deben tener los pasillos entre mesas en un evento masivo?", a: "Mínimo 1.2 m entre filas de mesas para circulación normal, y 1.8 a 2.4 m en los pasillos principales que conectan con salidas de emergencia. Estos anchos no son decorativos: Protección Civil los revisa y son la diferencia entre una evacuación ordenada y un cuello de botella. Siempre dejamos los pasillos despejados de bancas, cables y anclajes." },
+    { q: "¿Conviene mezclar zona sentada y zona de pie en un festival?", a: "Casi siempre sí. Una zona de mesas para quien quiere sentarse a comer, y áreas de mesas altas o de pie cerca de los food trucks para consumo rápido. Esa mezcla mejora la rotación, evita que las mesas se vuelvan campamento y reparte la densidad de gente para que ninguna zona se sature. Es la configuración que mejor fluye en ferias gastronómicas." },
+    { q: "¿Llegan a montar festivales fuera de la Ciudad de México?", a: "Sí. Cubrimos toda la CDMX y los municipios del Estado de México sin cobrar flete, incluido el corredor Toluca–Metepec donde se hacen muchas ferias regionales. Para eventos en Valle de Bravo y destinos más lejanos aplica un cargo por distancia que te decimos claro en la cotización, junto con la logística de montaje de gran volumen que ese tipo de evento exige." },
+  ]}
+>
+
+<div class="art">
+
+  <p class="art__lead">
+    Montar mobiliario para diez invitados es sentido común. Montarlo para diez mil es matemática. En cuanto un evento cruza el umbral de las multitudes, la pregunta deja de ser "¿qué mesa se ve mejor?" y pasa a ser "¿cuántas caben, cuántas hacen falta y dónde van para que la gente fluya sin amontonarse?". Esta guía es el cuaderno de cálculo que usamos cada temporada de festivales, traducido a fórmulas que puedes correr tú mismo antes de pedir una cotización.
+  </p>
+
+  <div class="art__author">
+    <div class="art__author-badge">M</div>
+    <div class="art__author-meta">
+      <span class="art__author-name">Equipo MESPIC · Montaje de eventos masivos</span>
+      <span class="art__author-role">Cálculo de capacidad y montaje de gran volumen para festivales, ferias y eventos masivos en CDMX y Estado de México</span>
+      <span class="art__author-stamp">Tiempo de lectura: 8 min · Basado en festivales y ferias con aforos de miles de personas</span>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">Por qué la intuición falla en eventos masivos</h2>
+
+    <p>El error más caro que vemos en organizadores primerizos es escalar a ojo. Funciona pensar "para 50 personas pongo 8 mesas, entonces para 1,000 pongo 160". Pero no es lineal, por una razón que cambia todo: en un evento masivo nadie permanece sentado las cuatro o cinco horas que dura. La gente come, se para, recorre los stands, regresa por otra cosa, se sienta en otro lado. Esa <strong>rotación</strong> hace que jamás necesites asientos para el aforo completo al mismo tiempo.</p>
+
+    <p>El otro factor que la intuición ignora es la <strong>seguridad</strong>. Una vez que metes miles de personas en un espacio, los pasillos, las salidas y la densidad por metro cuadrado dejan de ser un detalle estético y se vuelven el límite real de cuánto mobiliario puedes colocar. Por eso, antes de calcular cuántas mesas caben, conviene fijar una sola definición de la que cuelga todo lo demás.</p>
+
+    <div class="art__definition">
+      <span class="art__definition-term">Definición · Capacidad de mobiliario en evento masivo</span>
+      <p>Es el número de comensales que pueden estar sentados o consumiendo de forma simultánea y segura en un espacio, no el aforo total del evento. Se calcula a partir de la superficie útil disponible, el porcentaje de asistentes que se quiere acomodar en el pico de consumo, los metros cuadrados que ocupa cada persona según esté sentada o de pie, y los pasillos de circulación y evacuación que la normativa de Protección Civil exige dejar libres. Capacidad y aforo no son lo mismo: el aforo es cuánta gente entra; la capacidad de mobiliario es cuánta puede sentarse a la vez.</p>
+    </div>
+
+    <p>Con esa distinción clara, empecemos por la unidad básica de todo el cálculo: cuánto espacio ocupa una sola persona.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">El número que lo gobierna todo: metros cuadrados por persona</h2>
+
+    <p>Todo cálculo de capacidad arranca aquí. No es lo mismo una persona sentada comiendo con plato, bebida y mochila que una persona de pie con un taco en la mano camino al siguiente stand. La diferencia de superficie entre esos dos escenarios es enorme, y mezclarlos en el cálculo es la causa número uno de eventos que se sienten apretados aunque "los números cuadraban".</p>
+
+    <p>Esta tabla recoge los valores de referencia que usamos. Son conservadores a propósito: preferimos que sobre medio metro a que la gente coma con los codos pegados.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table art__table--compare">
+        <thead>
+          <tr>
+            <th>Tipo de zona</th>
+            <th class="th-accent">m² por persona</th>
+            <th>Densidad</th>
+            <th>Dónde usarla</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Sentado en mesa picnic</strong></td>
+            <td class="td-accent">1.2 m²</td>
+            <td>Baja</td>
+            <td>Zona de comida principal</td>
+          </tr>
+          <tr>
+            <td><strong>De pie con mesa alta</strong></td>
+            <td class="td-accent">0.8 m²</td>
+            <td>Media</td>
+            <td>Junto a barras y food trucks</td>
+          </tr>
+          <tr>
+            <td><strong>De pie, consumo rápido</strong></td>
+            <td class="td-accent">0.5–0.6 m²</td>
+            <td>Alta</td>
+            <td>Áreas de paso y filas</td>
+          </tr>
+          <tr>
+            <td><strong>Mixta (mesas + circulación)</strong></td>
+            <td class="td-accent">1.5 m²</td>
+            <td>Realista</td>
+            <td>Cálculo de zona completa con pasillos</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Fíjate en la última fila: cuando calculas una zona completa —no una persona aislada— hay que incluir el espacio de pasillos, esquinas perdidas y márgenes. Por eso el número operativo sube a 1.5 m² por comensal sentado una vez que cuentas la circulación. Es el dato que de verdad usas para repartir el espacio disponible.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Las tres fórmulas que necesitas</h2>
+
+    <p>Con el metro cuadrado por persona definido, el cálculo se reduce a tres operaciones encadenadas. No hace falta software: una calculadora y el plano del recinto bastan. Vamos en orden.</p>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>1 · Comensales simultáneos</h3>
+        <p>Aforo total × porcentaje sentado en el pico. En un festival con rotación, ese porcentaje va del 35% al 50%. Para 1,000 asistentes con 40%, son 400 comensales simultáneos. Ese es el número que de verdad tienes que sentar.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>2 · Número de mesas</h3>
+        <p>Comensales simultáneos ÷ capacidad por mesa, más 10% de colchón. Con 400 comensales y mesas de 8 lugares: 400 ÷ 8 = 50, más colchón = 55 mesas. Si usas mesas de 6 sube a 73; de 16 (modelo XL) baja a 28.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>3 · Superficie requerida</h3>
+        <p>Comensales simultáneos × 1.5 m² (zona con circulación). Esos 400 comensales piden unos 600 m² solo para la zona sentada. Compáralo con tu superficie útil: si no cabe, ajustas el porcentaje sentado o subes la rotación.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>El cruce de realidad</h3>
+        <p>Si la superficie requerida supera la disponible, no metas mesas a la fuerza: reduce el porcentaje sentado y añade zonas de pie. La seguridad manda sobre el deseo de sentar a todos.</p>
+      </div>
+    </div>
+
+    <p>Este encadenamiento es exactamente el que aplicamos cuando alguien nos pide cotizar un <a href="/servicios/festivales/">festival o evento masivo</a>: primero el aforo y la rotación, luego las mesas, al final el cruce con la superficie real. Saltarse el orden es lo que produce esas cotizaciones infladas donde sobran mesas que nadie va a ocupar.</p>
+  </section>
+
+  <figure class="art__figure">
+    <img
+      src="/img/mesa-picnic-feria-gastronomica-multitud.avif"
+      alt="Multitud comiendo en mesas picnic de madera durante una feria gastronómica masiva"
+      loading="lazy"
+      width="900"
+      height="560"
+    />
+    <figcaption>Zona de comida en una feria gastronómica: mesas picnic agrupadas, pasillos despejados y rotación constante de comensales.</figcaption>
+  </figure>
+
+  <section class="art__section">
+    <h2 class="art__h2">Tabla maestra: de asistentes a mesas, bancas y m²</h2>
+
+    <p>Para que no tengas que correr las fórmulas a mano cada vez, aquí va la tabla que más usamos. Supone un escenario realista de festival: <strong>40% del aforo sentado en el pico</strong>, mesas de 8 lugares (mesa picnic estándar con sus dos bancas), y el coeficiente de 1.5 m² por comensal con circulación incluida. Es un punto de partida sólido que después afinamos según tu evento.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Asistentes</th>
+            <th class="th-accent">Comensales pico (40%)</th>
+            <th>Mesas (cap. 8)</th>
+            <th>Bancas</th>
+            <th>m² zona sentada</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>250</strong></td>
+            <td class="td-accent">100</td>
+            <td>14</td>
+            <td>28</td>
+            <td>150 m²</td>
+          </tr>
+          <tr>
+            <td><strong>500</strong></td>
+            <td class="td-accent">200</td>
+            <td>28</td>
+            <td>56</td>
+            <td>300 m²</td>
+          </tr>
+          <tr>
+            <td><strong>1,000</strong></td>
+            <td class="td-accent">400</td>
+            <td>55</td>
+            <td>110</td>
+            <td>600 m²</td>
+          </tr>
+          <tr>
+            <td><strong>2,500</strong></td>
+            <td class="td-accent">1,000</td>
+            <td>138</td>
+            <td>276</td>
+            <td>1,500 m²</td>
+          </tr>
+          <tr>
+            <td><strong>5,000</strong></td>
+            <td class="td-accent">2,000</td>
+            <td>275</td>
+            <td>550</td>
+            <td>3,000 m²</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="art__tip">
+      <div class="art__tip-icon">💡</div>
+      <div>
+        <strong>Dos perillas que cambian la tabla entera:</strong> si tu festival tiene poca rotación —una cena de gala, un evento donde la gente se queda sentada— sube el porcentaje al 70–80% y las mesas casi se duplican. Si en cambio es un festival de food trucks de mucho movimiento, baja al 30% y añade zonas de pie. El número de asientos no se calcula sobre el aforo, sino sobre cuánta gente quiere estar sentada al mismo tiempo.
+      </div>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Rotación de comensales: el multiplicador oculto</h2>
+
+    <p>Si hay un concepto que separa un montaje eficiente de uno desperdiciado, es la rotación. En un salón de bodas la gente se sienta y ahí se queda; en un festival, cada lugar se usa varias veces a lo largo de la noche. Entender esa dinámica es lo que te permite montar menos mobiliario sin que a nadie le falte dónde comer.</p>
+
+    <h3>Cómo estimarla sin adivinar</h3>
+
+    <p>La rotación depende del formato. En una feria gastronómica donde la gracia es probar muchos puestos, la gente come en rondas cortas de 15 a 20 minutos y libera el lugar. En un festival con escenario, en cambio, mucha gente come una vez y se va a ver el show, dejando las mesas libres por horas. La pregunta clave no es "¿cuánta gente viene?", sino "¿cuánta querrá estar sentada en el peor momento?", que suele ser la hora del platillo fuerte o el atardecer.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table art__table--compare">
+        <thead>
+          <tr>
+            <th>Formato de evento</th>
+            <th class="th-accent">Rotación</th>
+            <th>% sentado pico</th>
+            <th>Estrategia de mobiliario</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Feria de food trucks</strong></td>
+            <td class="td-accent">Alta</td>
+            <td>30–35%</td>
+            <td>Mezcla sentado + mucho de pie</td>
+          </tr>
+          <tr>
+            <td><strong>Festival gastronómico</strong></td>
+            <td class="td-accent">Media-alta</td>
+            <td>35–45%</td>
+            <td>Zonas sentadas amplias por food court</td>
+          </tr>
+          <tr>
+            <td><strong>Festival con escenario</strong></td>
+            <td class="td-accent">Media</td>
+            <td>40–50%</td>
+            <td>Sentado concentrado lejos del escenario</td>
+          </tr>
+          <tr>
+            <td><strong>Cena masiva / gala</strong></td>
+            <td class="td-accent">Baja</td>
+            <td>90–100%</td>
+            <td>Asiento garantizado para todos</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>La lección práctica: una rotación alta puede recortar el mobiliario necesario entre un 40% y un 60% frente a sentar a todos a la vez. Eso es menos costo, menos montaje y más espacio libre para circular. Cuando además sumas <a href="/blog/catering-food-trucks-mesas-picnic-eventos/">food trucks y barras de catering</a> bien ubicados, la rotación se acelera sola porque la gente se mueve hacia la comida en vez de aferrarse a un lugar.</p>
+  </section>
+
+  <div class="art__cta-inline">
+    <div class="art__cta-inline-content">
+      <h3>¿Quieres el cálculo hecho para tu evento?</h3>
+      <p>Pásanos aforo esperado, superficie disponible y tipo de festival. Te devolvemos cuántas mesas, bancas y metros cuadrados necesitas, con precio el mismo día.</p>
+      <div class="art__cta-inline-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+el+c%C3%A1lculo+de+capacidad+de+mobiliario+para+mi+festival." target="_blank" rel="noopener" class="art__btn art__btn--wa" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Pedir el cálculo por WhatsApp
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--outline">Ir al formulario de cotización →</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">Zonas de consumo: repartir el aforo con cabeza</h2>
+
+    <p>Una vez que tienes el número de mesas, viene la parte que distingue un buen montaje: dónde va cada cosa. Tirar todas las mesas en un solo bloque gigante es tan malo como ponerlas pocas. En eventos masivos pensamos por zonas, cada una con su propósito y su densidad.</p>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>Zona sentada principal</h3>
+        <p>El grueso de las mesas picnic, en bloques de 6 a 8 mesas separados por pasillos. Aquí va el coeficiente de 1.5 m². La ubicas lejos de la fuente de ruido para que la gente quiera quedarse a comer.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Zona de pie junto a food trucks</h3>
+        <p>Mesas altas y barras de apoyo pegadas a los puestos. Densidad mayor, consumo rápido, rotación altísima. Es el área que más descongestiona la zona sentada.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Mesas largas comunitarias</h3>
+        <p>Líneas de mesas grandes de 2.40 m o XL de 3 m para grupos. La <a href="/catalogo/mesa-biergarten-madera/">mesa biergarten plegable</a> es ideal aquí: capacidad alta, montaje rápido y ese ambiente de feria que invita a sentarse con desconocidos.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Pasillos y vacíos a propósito</h3>
+        <p>No todo el espacio se llena. Los pasillos anchos y las zonas de respiro no son desperdicio: son lo que mantiene el flujo y lo que Protección Civil exige. Diséñalos primero, no al final.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Seguridad y flujo: el límite que no se negocia</h2>
+
+    <p>Aquí cambiamos de chip. Hasta ahora hablamos de cuánto cabe; ahora de cuánto es seguro. En un evento masivo, el mobiliario mal colocado puede convertir una emergencia menor en un problema serio. Estos son los parámetros que respetamos siempre, sin excepción, aunque signifiquen meter menos mesas.</p>
+
+    <h3>Anchos de pasillo y salidas</h3>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Elemento</th>
+            <th class="th-accent">Ancho mínimo</th>
+            <th>Para qué</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Pasillo entre filas de mesas</strong></td>
+            <td class="td-accent">1.2 m</td>
+            <td>Circulación normal, paso de una persona con charola</td>
+          </tr>
+          <tr>
+            <td><strong>Pasillo principal</strong></td>
+            <td class="td-accent">1.8–2.4 m</td>
+            <td>Flujo de multitud en dos sentidos</td>
+          </tr>
+          <tr>
+            <td><strong>Ruta de evacuación</strong></td>
+            <td class="td-accent">2.4 m o más</td>
+            <td>Salida hacia puntos de emergencia, siempre despejada</td>
+          </tr>
+          <tr>
+            <td><strong>Acceso a food trucks</strong></td>
+            <td class="td-accent">3.0 m</td>
+            <td>Filas sin invadir la circulación general</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Más allá de los números, hay tres reglas de oro que cuidamos en cada montaje masivo. Primero: ninguna mesa, banca o anclaje bloquea jamás una ruta de evacuación, ni siquiera "un ratito". Segundo: las salidas de emergencia se mantienen visibles y libres desde cualquier punto de la zona sentada. Tercero: los cables, las extensiones y los anclajes de carpa van canalizados o tapados, porque en una multitud un tropiezo no es un susto, es una caída en cadena. La densidad bonita en el render no vale una sola persona lastimada.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Montaje de gran volumen: cuando hablamos de cientos de mesas</h2>
+
+    <p>Calcular es la mitad del trabajo; montarlo a tiempo es la otra. Cuando un festival pide 100, 200 o más mesas, el montaje deja de ser "armar y acomodar" y se vuelve una operación con cronograma, cuadrillas y secuencia. Aquí entra de lleno la <a href="/blog/logistica-mesas-picnic-festivales-gastronomicos-montaje/">logística de montaje y flujo</a> que detallamos en su propia guía, pero el principio para el cálculo de capacidad es este: el mobiliario que elijas afecta el tiempo de montaje.</p>
+
+    <p>Una mesa biergarten plegable se arma en segundos y permite levantar zonas enormes en poco tiempo, ideal cuando tienes una ventana corta para montar antes de abrir puertas. Una mesa premium ensamblada se ve mejor pero pide más maniobra. Por eso, en eventos masivos, muchas veces la decisión no es solo cuántas mesas sino qué modelo permite cumplir el cronograma sin sacrificar capacidad ni seguridad. Esa conversación la tenemos siempre antes de cerrar la cotización.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Dónde montamos</h2>
+
+    <p>Entregamos, montamos y recogemos en toda la Ciudad de México y los municipios del Estado de México, con capacidad para montajes de gran volumen en festivales, ferias y eventos masivos.</p>
+
+    <div class="art__coverage-grid">
+      <div class="art__coverage-col">
+        <h3>Ciudad de México</h3>
+        <ul class="art__coverage-list">
+          <li>Centro Histórico y Reforma</li>
+          <li>Roma, Condesa y Juárez</li>
+          <li>Parques y deportivos de Coyoacán y Tlalpan</li>
+          <li>Chapultepec y Polanco</li>
+          <li>Iztapalapa, Xochimilco y zona sur</li>
+        </ul>
+      </div>
+      <div class="art__coverage-col">
+        <h3>Estado de México y fuera de la ciudad</h3>
+        <ul class="art__coverage-list">
+          <li>Corredor Toluca y Metepec (ferias regionales)</li>
+          <li>Naucalpan, Tlalnepantla y Atizapán</li>
+          <li>Texcoco y Chalco</li>
+          <li>Huixquilucan e Interlomas</li>
+          <li>Valle de Bravo (eventos y ferias con cargo por distancia)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Preguntas que nos hacen seguido</h2>
+
+    <div class="art__faqs">
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cuántos metros cuadrados ocupa una persona sentada en un festival?</summary>
+        <p class="art__faq-a">Como regla operativa usamos 1.2 m² por comensal sentado en mesa picnic: ahí entra su lugar en la banca, su parte de la mesa y el espacio para entrar y salir sin empujar al vecino. Para zonas de pie el número baja a 0.5–0.6 m² por persona, pero esa densidad solo se sostiene en áreas de paso, nunca donde la gente va a comer con plato y bebida en mano.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cómo calculo cuántas mesas picnic necesito para X asistentes?</summary>
+        <p class="art__faq-a">Primero define qué porcentaje del aforo querrá estar sentado a la vez. En un festival con rotación rara vez es el 100%: entre 35% y 50% es lo realista. Divide ese número entre la capacidad por mesa (6, 8, 10 o 16 según modelo) y le sumas un 10% de colchón. Para 1,000 asistentes con 40% sentado simultáneo y mesas de 8, salen unas 55 mesas redondeando hacia arriba.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué es la rotación de comensales y por qué cambia el cálculo?</summary>
+        <p class="art__faq-a">La rotación es cuántas veces se desocupa y vuelve a ocuparse un mismo lugar durante el evento. En un festival la gente come, se levanta, recorre stands y otra persona toma su sitio. Por eso no necesitas asientos para todo el aforo al mismo tiempo: necesitas para el pico de comensales simultáneos. Una buena rotación puede reducir el mobiliario requerido entre un 40% y un 60% frente a sentar a todos a la vez.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué ancho deben tener los pasillos entre mesas en un evento masivo?</summary>
+        <p class="art__faq-a">Mínimo 1.2 m entre filas de mesas para circulación normal, y 1.8 a 2.4 m en los pasillos principales que conectan con salidas de emergencia. Estos anchos no son decorativos: Protección Civil los revisa y son la diferencia entre una evacuación ordenada y un cuello de botella. Siempre dejamos los pasillos despejados de bancas, cables y anclajes.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Conviene mezclar zona sentada y zona de pie en un festival?</summary>
+        <p class="art__faq-a">Casi siempre sí. Una zona de mesas para quien quiere sentarse a comer, y áreas de mesas altas o de pie cerca de los food trucks para consumo rápido. Esa mezcla mejora la rotación, evita que las mesas se vuelvan campamento y reparte la densidad de gente para que ninguna zona se sature. Es la configuración que mejor fluye en ferias gastronómicas.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Llegan a montar festivales fuera de la Ciudad de México?</summary>
+        <p class="art__faq-a">Sí. Cubrimos toda la CDMX y los municipios del Estado de México sin cobrar flete, incluido el corredor Toluca–Metepec donde se hacen muchas ferias regionales. Para eventos en Valle de Bravo y destinos más lejanos aplica un cargo por distancia que te decimos claro en la cotización, junto con la logística de montaje de gran volumen que ese tipo de evento exige.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Galería: capacidad en acción</h2>
+    <div class="art__gallery-strip">
+      <img src="/img/cine-aire-libre-mesas-picnic-festival-01.avif" alt="Mesas picnic distribuidas en festival de cine al aire libre" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-feria-food-trucks-multitud.webp" alt="Multitud en feria de food trucks con mesas picnic de madera" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-evento-masivo-dia.avif" alt="Evento masivo de día con mesas picnic y gran aforo" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-festival-masivo-luces.avif" alt="Festival masivo de noche con mesas picnic iluminadas" loading="lazy" width="350" height="220" />
+    </div>
+  </section>
+
+  <div class="art__cta-final">
+    <div class="art__cta-final-inner">
+      <h2>Pásanos los números y te devolvemos el plano de capacidad</h2>
+      <p>Sin compromiso. Dinos aforo esperado, superficie disponible y tipo de festival. Te proponemos cuántas mesas, bancas y metros cuadrados necesitas, con la mezcla de zonas que mejor fluye, y te pasamos precio final el mismo día.</p>
+      <div class="art__cta-final-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+cotizar+mobiliario+para+un+festival+o+evento+masivo." target="_blank" rel="noopener" class="art__btn art__btn--wa art__btn--lg" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--primary art__btn--lg">Formulario de cotización →</a>
+        <a href="/servicios/festivales/" class="art__btn art__btn--ghost art__btn--lg">Ver servicio de festivales</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</BlogLayout>

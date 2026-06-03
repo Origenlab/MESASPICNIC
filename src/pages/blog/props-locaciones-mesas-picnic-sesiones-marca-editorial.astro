@@ -1,0 +1,366 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import '../../styles/blog-article.css';
+---
+
+<BlogLayout
+  title="Props y Locaciones: Cómo Usar Mesas Picnic en Sesiones Editoriales y de Marca | MESPIC"
+  description="Cómo convertir una mesa de madera en prop de styling para sesiones de marca. Combinaciones por concepto —lifestyle, gastronómico, moda—, locaciones recomendadas y tabla concepto-prop-locación. CDMX y Edomex."
+  ogImage="/img/mesa-picnic-decoracion-elegante-champagne.webp"
+  heroTitle="Props y Locaciones: Cómo Usar Mesas Picnic en Sesiones Editoriales y de Marca"
+  heroBadge="Blog · Producciones · Styling"
+  heroDescription="Una mesa de madera puede ser mucho más que una superficie: bien usada, es un prop que define el concepto de una sesión completa. Aquí va cómo la convertimos en herramienta de styling, qué combinaciones funcionan por concepto y en qué locaciones lucen mejor, con la mirada puesta en sesiones editoriales y de marca."
+  heroSeo1="Cuando un director de arte piensa en props, rara vez incluye el mobiliario en la lista. Y es un error, porque la mesa es el elemento más grande del cuadro y el que ancla todo lo demás. Una mesa de madera natural no solo sostiene los objetos: aporta textura, define la paleta y, según cómo la vistas, puede mandar el concepto entero hacia lo rústico, lo editorial limpio o lo gastronómico cálido. Es styling de fondo, y bien resuelto se nota."
+  heroSeo2="En esta guía tratamos la mesa como lo que es en una producción de marca: un prop protagónico. Vamos a ver cómo usarla para construir un concepto, qué combinaciones de objetos y acabados funcionan para lifestyle, gastronómico y moda, y qué locaciones —de estudio a bosque— sacan lo mejor de cada idea. Cerramos con una tabla que cruza concepto, props y locación para que llegues a tu junta de preproducción con un plan claro."
+  heroMetrics={[
+    { value: "3 conceptos", label: "Lifestyle · Gastronómico · Moda" },
+    { value: "9 min", label: "Tiempo de lectura" },
+    { value: "CDMX + Edomex", label: "Cobertura sin flete" },
+  ]}
+  datePublished="2026-06-03"
+  articleSection="Producciones"
+  breadcrumbs={[
+    { label: "Inicio", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Props y Locaciones para Sesiones de Marca" },
+  ]}
+  sidebarProducts={[
+    { name: "Mesa Rústica", cap: "Veta marcada · Carácter", href: "/catalogo/mesa-picnic-rustica/", img: "/img/mesa-picnic-rustica-patio-mexicano.webp" },
+    { name: "Mesa Premium", cap: "Sin nudos · Editorial", href: "/catalogo/mesa-picnic-premium/", img: "/img/mesa-picnic-premium-23.avif" },
+    { name: "Mesa Redonda", cap: "Composición · Cenital", href: "/catalogo/mesa-redonda-madera/", img: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
+  ]}
+  sidebarArticles={[
+    { title: "Mobiliario de Madera para Producciones y Sesiones de Foto", meta: "Producciones · 9 min", href: "/blog/mobiliario-madera-producciones-sesiones-foto-guia-fotografos/", img: "/img/mesa-picnic-romantica-vinedo-atardecer.webp" },
+    { title: "Sesiones Fotográficas con Mesas Picnic para Producciones", meta: "Producciones · 9 min", href: "/blog/sesiones-fotograficas-mesas-picnic-producciones/", img: "/img/mesa-picnic-decoracion-elegante-champagne.webp" },
+    { title: "Sesiones en Valle de Bravo: Bosque y Lago", meta: "Locaciones · 8 min", href: "/blog/sesiones-fotograficas-valle-de-bravo-bosque-lago/", img: "/img/boda-bosque-encantado-1.avif" },
+  ]}
+  sidebarServices={[
+    { name: "Sesiones Fotográficas", desc: "Editorial · E-commerce · Video", href: "/servicios/sesiones-fotograficas/" },
+    { name: "Activaciones de Marca", desc: "Brand experiences · Pop-ups", href: "/servicios/eventos-corporativos/activaciones/" },
+    { name: "Festivales y Ferias", desc: "Eventos masivos · Bazares", href: "/servicios/festivales/" },
+    { name: "Eventos al Aire Libre", desc: "Todas las variantes", href: "/servicios/" },
+  ]}
+  sidebarCtaTitle="¿Estás armando un concepto?"
+  sidebarCtaText="Cuéntanos la idea, el mood y la locación. Te decimos qué modelo funciona como prop y coordinamos la entrega al horario de tu producción."
+  sidebarCtaWa="Hola%2C+estoy+armando+una+sesi%C3%B3n+de+marca+y+quiero+usar+mesas+picnic+como+prop."
+  sidebarServicesTitle="Servicios para producciones"
+  faqs={[
+    { q: "¿Una mesa de madera realmente funciona como prop y no solo como mueble?", a: "Funciona, y a menudo es el prop más importante del cuadro porque es el más grande y el que ancla la composición. La superficie de madera define la paleta, aporta textura de fondo y, según cómo la vistas con caminos, vajilla u objetos, manda el concepto hacia lo rústico, lo editorial limpio o lo gastronómico. Bien usada, hace la mitad del trabajo de styling." },
+    { q: "¿Qué combinación de props va con un concepto lifestyle?", a: "Para lifestyle buscamos calidez y naturalidad: mesa rústica de veta marcada, textiles de lino o yute, cerámica artesanal, fruta de temporada y algo de follaje o flores de campo. La idea es que se sienta vivido y auténtico, no montado. Funciona muy bien con luz natural lateral y un poco de desorden controlado sobre la superficie." },
+    { q: "¿Cómo se usa la mesa en una sesión de moda?", a: "En moda la mesa ancla al talento sin competir con el look. Solemos ir con la estándar o premium de líneas limpias, props mínimos y un acabado mate que no genere reflejos cerca del rostro. La madera aporta una base cálida y editorial que contrasta bien con prendas estructuradas y deja al estilismo como protagonista." },
+    { q: "¿Qué locación recomiendan para un concepto gastronómico?", a: "Depende del mood. Para un gastronómico cálido y rústico, un patio con cantera o un jardín con luz de tarde; para algo más editorial y limpio, un estudio con fondo neutro y luz controlada. La mesa redonda o estándar abre composiciones cenitales muy fotogénicas para platillos, y el tono de la madera realza alimentos sin alterar su color." },
+    { q: "¿Pueden llevar las mesas a locaciones de bosque o naturaleza?", a: "Sí. Cubrimos CDMX y Estado de México sin flete, y llegamos a locaciones de naturaleza como Valle de Bravo, Malinalco o Tepoztlán con un cargo por distancia que dejamos claro en la cotización. El bosque y el lago son escenarios donde la madera natural se integra de forma casi orgánica, ideal para conceptos earthy y editoriales de exterior." },
+    { q: "¿Cómo coordinan la entrega para que no afecte el tiempo de set?", a: "Trabajamos desde tu call time hacia atrás: llegamos antes a montar y nivelar para que la mesa esté lista cuando el equipo de arte empiece el styling. Confirmamos accesos de la locación en preproducción y dejamos el retiro coordinado para que no choque con ninguna toma. Manejamos esquemas por bloque de horas, medio día o jornada completa según lo pida la producción." },
+  ]}
+>
+
+<div class="art">
+
+  <p class="art__lead">
+    En una sesión de marca, los props pequeños se llevan toda la atención en la junta de preproducción: la vajilla, las flores, los objetos de marca. Pero el elemento que más define el cuadro suele pasar inadvertido en esa conversación: la mesa. Es el prop más grande, el que ancla la composición y el que, bien vestido, manda el concepto hacia donde quieres. Esta guía es para directores de arte, estilistas y productores que quieren usar el mobiliario de madera como herramienta de styling, no como simple superficie.
+  </p>
+
+  <div class="art__author">
+    <div class="art__author-badge">M</div>
+    <div class="art__author-meta">
+      <span class="art__author-name">Equipo MESPIC · Mobiliario para producciones</span>
+      <span class="art__author-role">Renta de mesas de madera como props para sesiones editoriales y de marca en CDMX y Estado de México</span>
+      <span class="art__author-stamp">Tiempo de lectura: 9 min · Basado en montajes para foto y video de marca</span>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">La mesa como prop protagónico, no como mueble de fondo</h2>
+
+    <p>Cambiar la forma de pensar la mesa cambia el resultado. Si la ves como un mueble que solo sostiene cosas, la usas mal: la dejas vacía o la saturas. Si la ves como un prop —el más grande del set— empiezas a vestirla con intención. La superficie de madera define la paleta base de la imagen, su textura aporta detalle de fondo que se lee en cualquier encuadre y la forma en que dispones los objetos sobre ella cuenta una historia: ordenada y mínima para editorial limpio, vivida y abundante para lifestyle cálido.</p>
+
+    <p>La madera natural tiene una ventaja sobre otros muebles para esto: su tono cálido neutro convive con casi cualquier paleta sin imponerse, así que no pelea con el estilismo ni con los colores de la marca. Eso la vuelve un lienzo versátil. Antes de elegir props, conviene resolver la base sobre la que van a vivir, y ahí es donde el modelo importa. Si quieres entender primero cómo se comporta cada acabado frente a la cámara, lo desarrollamos en nuestra <a href="/blog/mobiliario-madera-producciones-sesiones-foto-guia-fotografos/">guía de mobiliario de madera para producciones y sesiones de foto</a>.</p>
+
+    <div class="art__definition">
+      <span class="art__definition-term">Definición · Prop de styling de fondo</span>
+      <p>Es el elemento que estructura visualmente una toma sin ser el sujeto: define la paleta, aporta textura y organiza el espacio donde viven los objetos protagónicos. En sesiones de marca, una mesa de madera bien vestida cumple este rol —ancla la composición, refuerza el concepto y guía la lectura de la imagen— a diferencia de un mueble neutro que solo ocupa lugar.</p>
+    </div>
+
+    <p>Con ese marco, conviene tener claro qué aporta y qué no aporta la mesa como prop antes de empezar a vestirla.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table art__table--compare">
+        <thead>
+          <tr>
+            <th>Función en el set</th>
+            <th class="th-accent">Madera como prop</th>
+            <th>Mueble neutro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Define la paleta</strong></td>
+            <td class="td-accent">Sí, tono cálido base</td>
+            <td>Aporta poco color</td>
+          </tr>
+          <tr>
+            <td><strong>Aporta textura</strong></td>
+            <td class="td-accent">Veta legible en cuadro</td>
+            <td>Plano, sin detalle</td>
+          </tr>
+          <tr>
+            <td><strong>Refuerza el concepto</strong></td>
+            <td class="td-accent">Rústico, editorial o gastro</td>
+            <td>Concepto neutro</td>
+          </tr>
+          <tr>
+            <td><strong>Ancla la composición</strong></td>
+            <td class="td-accent">Elemento más grande del set</td>
+            <td>Ocupa lugar sin guiar</td>
+          </tr>
+          <tr>
+            <td><strong>Trabaja con el styling</strong></td>
+            <td class="td-accent">Hace media historia sola</td>
+            <td>Depende del props</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Con eso claro, lo siguiente es elegir las combinaciones por concepto. Cada idea pide una mezcla distinta de modelo, acabado y objetos.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Combinaciones por concepto</h2>
+
+    <p>Un mismo modelo de mesa puede contar tres historias completamente distintas según cómo lo vistas. Estas son las tres que más nos piden las marcas, con la receta de props que mejor funciona para cada una.</p>
+
+    <h3>Lifestyle: calidez y naturalidad</h3>
+    <p>El concepto lifestyle busca que la imagen se sienta vivida, no montada. Aquí la mesa rústica de veta marcada es la base ideal: su carácter artesanal ya cuenta historia. Encima, textiles de lino o yute, cerámica hecha a mano, fruta de temporada, una taza a medio terminar, follaje suelto. La clave es un desorden controlado y luz natural lateral que marque la textura de la madera. Funciona para marcas de alimentos, hogar, bienestar y café.</p>
+
+    <h3>Gastronómico: la madera que realza el platillo</h3>
+    <p>En gastronómico la madera trabaja a favor de la comida: su tono cálido realza alimentos y vajilla sin alterar su color real. La mesa redonda o estándar abre composiciones cenitales preciosas para platillos. Sobre ella, vajilla sobria, cubertería sencilla, ingredientes crudos como atrezzo y quizá una copa de vino o una botella. Menos es más: deja que el platillo sea el héroe y que la madera lo enmarque con su grano.</p>
+
+    <h3>Moda: la base editorial que no compite</h3>
+    <p>En moda la mesa ancla al talento sin robarle cámara. Aquí van las líneas limpias de la estándar o premium, acabado mate para evitar reflejos cerca del rostro, y props mínimos —o ninguno—. La madera aporta una base cálida y editorial que contrasta bien con prendas estructuradas. El estilismo manda; la mesa solo da peso y dirección a la composición.</p>
+
+    <div class="art__tip">
+      <div class="art__tip-icon">💡</div>
+      <div>
+        <strong>Regla de oro del styling sobre madera:</strong> deja respirar la superficie. La veta es un prop en sí misma, así que reservar espacio negativo de madera vista casi siempre se ve más editorial que llenar cada centímetro. Si dudas, quita un objeto en lugar de agregar uno.
+      </div>
+    </div>
+  </section>
+
+  <figure class="art__figure">
+    <img
+      src="/img/mesa-picnic-decoracion-elegante-champagne.webp"
+      alt="Mesa de madera vestida con props elegantes para sesión editorial de marca"
+      loading="lazy"
+      width="900"
+      height="560"
+    />
+    <figcaption>Styling editorial sobre madera: espacio negativo, props seleccionados y la veta como textura protagónica.</figcaption>
+  </figure>
+
+  <section class="art__section">
+    <h2 class="art__h2">Locaciones recomendadas por concepto</h2>
+
+    <p>El prop y la locación tienen que conversar. Una mesa rústica earthy pide un entorno que la acompañe, y una base editorial limpia pide control de fondo. Esto es lo que solemos recomendar.</p>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>Estudio con fondo neutro</h3>
+        <p>Para conceptos editoriales limpios y e-commerce de marca. Control total de luz y fondo, ideal para moda y producto donde la mesa aporta calidez sin distracción.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Patio de cantera o jardín</h3>
+        <p>Para lifestyle y gastronómico cálido. La luz de tarde marca la textura de la madera y el entorno suma autenticidad sin que tengas que vestir mucho.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Bosque y lago</h3>
+        <p>Para conceptos earthy y editoriales de exterior. En Valle de Bravo la madera se integra de forma casi orgánica al paisaje; perfecto para marcas con narrativa natural.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Terraza o rooftop urbano</h3>
+        <p>Para lifestyle contemporáneo con la ciudad de fondo. La madera contrasta con concreto y cristal y aporta el toque cálido que un rooftop suele pedir.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Tabla: concepto, props y locación</h2>
+
+    <p>Lleva esta tabla a tu junta de preproducción. Cruza cada concepto con el modelo de mesa, los props que mejor funcionan y la locación que lo potencia.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Concepto</th>
+            <th class="th-accent">Modelo de mesa</th>
+            <th>Props clave</th>
+            <th>Locación ideal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Lifestyle</strong></td>
+            <td class="td-accent">Mesa rústica</td>
+            <td>Lino, cerámica, fruta, follaje</td>
+            <td>Patio de cantera o jardín</td>
+          </tr>
+          <tr>
+            <td><strong>Gastronómico</strong></td>
+            <td class="td-accent">Mesa redonda</td>
+            <td>Vajilla sobria, ingredientes, copa</td>
+            <td>Estudio o patio con luz de tarde</td>
+          </tr>
+          <tr>
+            <td><strong>Moda</strong></td>
+            <td class="td-accent">Mesa estándar / premium</td>
+            <td>Props mínimos, mate sin reflejos</td>
+            <td>Estudio con fondo neutro</td>
+          </tr>
+          <tr>
+            <td><strong>Earthy / natural</strong></td>
+            <td class="td-accent">Mesa rústica / grande</td>
+            <td>Texturas crudas, flores de campo</td>
+            <td>Bosque y lago (Valle de Bravo)</td>
+          </tr>
+          <tr>
+            <td><strong>Urbano contemporáneo</strong></td>
+            <td class="td-accent">Mesa premium</td>
+            <td>Vajilla blanca, líneas limpias</td>
+            <td>Terraza o rooftop</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="art__cta-inline">
+    <div class="art__cta-inline-content">
+      <h3>¿Tienes el concepto pero no la base?</h3>
+      <p>Mándanos la idea, el mood board y la locación. Te decimos qué modelo de mesa funciona como prop para ese concepto y coordinamos la entrega a tu horario de set.</p>
+      <div class="art__cta-inline-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+estoy+armando+una+sesi%C3%B3n+de+marca+y+quiero+asesor%C3%ADa+de+props+y+mesas+de+madera." target="_blank" rel="noopener" class="art__btn art__btn--wa" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Asesoría por WhatsApp
+        </a>
+        <a href="/servicios/sesiones-fotograficas/" class="art__btn art__btn--outline">Ver servicio de sesiones →</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">Errores de styling que arruinan la toma</h2>
+
+    <p>Después de muchos sets hemos visto los mismos tropiezos repetirse. Anotarlos te ahorra retomas y horas de postproducción.</p>
+
+    <p>El primero es <strong>saturar la mesa</strong>. La tentación de llenar cada hueco es fuerte, pero la veta de la madera es un prop en sí misma y necesita aire. El segundo es <strong>mezclar acabados que no coinciden</strong>: si rentas varias mesas, deben venir del mismo lote barnizado para que el color match no se complique. Por eso trabajamos con piezas parejas, sobre todo cuando la marca pide un look impecable; una <a href="/catalogo/mesa-picnic-rustica/">mesa rústica de veta consistente</a> rinde mejor que dos piezas dispares que pelean en cuadro.</p>
+
+    <p>El tercer error es <strong>olvidar la dirección de luz al elegir el acabado</strong>. Una superficie demasiado brillante cerca de una ventana grande devuelve un hotspot que arruina el plano; un mate parejo evita ese problema. Y el cuarto, menos obvio, es <strong>no nivelar antes del styling</strong>: si el equipo de arte vistió la mesa y luego hay que moverla para nivelar, se cae medio set. Por eso entregamos y nivelamos antes de que empiece el dressing.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Logística pensada para set, no para fiesta</h2>
+
+    <p>La diferencia entre rentar para un evento social y rentar para una producción está en el respeto al tiempo de set. Nosotros coordinamos al revés de una fiesta: partimos de tu call time y trabajamos hacia atrás para que el mobiliario esté en posición y nivelado cuando el equipo de arte llegue a vestir. Confirmamos los accesos de la locación en preproducción —puertas, escaleras, elevador, permisos de carga— para que la maniobra no sorprenda a nadie el día del rodaje.</p>
+
+    <p>Manejamos esquemas por bloque de horas, medio día y jornada completa, porque una sesión de producto no dura lo mismo que un comercial. Y dejamos el retiro coordinado para un momento que no choque con ninguna toma, normalmente al wrap. La idea es simple: que el mobiliario sume al concepto y reste cero a tu tiempo de luz.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Dónde llevamos props para tu sesión</h2>
+
+    <p>Entregamos, montamos y retiramos mobiliario para sesiones de marca en toda la Ciudad de México y los municipios del Estado de México, además de las locaciones de naturaleza que tan bien funcionan para conceptos earthy.</p>
+
+    <div class="art__coverage-grid">
+      <div class="art__coverage-col">
+        <h3>Ciudad de México</h3>
+        <ul class="art__coverage-list">
+          <li>Roma, Condesa y Juárez</li>
+          <li>Polanco y Lomas de Chapultepec</li>
+          <li>Coyoacán y San Ángel</li>
+          <li>Cuajimalpa y Santa Fe</li>
+          <li>Estudios de foto y sets urbanos</li>
+        </ul>
+      </div>
+      <div class="art__coverage-col">
+        <h3>Estado de México</h3>
+        <ul class="art__coverage-list">
+          <li>Huixquilucan e Interlomas</li>
+          <li>Naucalpan y Atizapán</li>
+          <li>Metepec y corredor Toluca</li>
+          <li>Texcoco y Tepotzotlán</li>
+          <li>Patios y haciendas de Calimaya</li>
+        </ul>
+      </div>
+      <div class="art__coverage-col">
+        <h3>Locaciones de naturaleza</h3>
+        <ul class="art__coverage-list">
+          <li>Valle de Bravo (bosque y lago)</li>
+          <li>Malinalco y alrededores</li>
+          <li>Tepoztlán y zona boscosa</li>
+          <li>Desierto de los Leones</li>
+          <li>Parques y reservas del Edomex</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Preguntas que nos hacen las marcas</h2>
+
+    <div class="art__faqs">
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Una mesa de madera realmente funciona como prop y no solo como mueble?</summary>
+        <p class="art__faq-a">Funciona, y a menudo es el prop más importante del cuadro porque es el más grande y el que ancla la composición. La superficie de madera define la paleta, aporta textura de fondo y, según cómo la vistas con caminos, vajilla u objetos, manda el concepto hacia lo rústico, lo editorial limpio o lo gastronómico. Bien usada, hace la mitad del trabajo de styling.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué combinación de props va con un concepto lifestyle?</summary>
+        <p class="art__faq-a">Para lifestyle buscamos calidez y naturalidad: mesa rústica de veta marcada, textiles de lino o yute, cerámica artesanal, fruta de temporada y algo de follaje o flores de campo. La idea es que se sienta vivido y auténtico, no montado. Funciona muy bien con luz natural lateral y un poco de desorden controlado sobre la superficie.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cómo se usa la mesa en una sesión de moda?</summary>
+        <p class="art__faq-a">En moda la mesa ancla al talento sin competir con el look. Solemos ir con la estándar o premium de líneas limpias, props mínimos y un acabado mate que no genere reflejos cerca del rostro. La madera aporta una base cálida y editorial que contrasta bien con prendas estructuradas y deja al estilismo como protagonista.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué locación recomiendan para un concepto gastronómico?</summary>
+        <p class="art__faq-a">Depende del mood. Para un gastronómico cálido y rústico, un patio con cantera o un jardín con luz de tarde; para algo más editorial y limpio, un estudio con fondo neutro y luz controlada. La mesa redonda o estándar abre composiciones cenitales muy fotogénicas para platillos, y el tono de la madera realza alimentos sin alterar su color.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Pueden llevar las mesas a locaciones de bosque o naturaleza?</summary>
+        <p class="art__faq-a">Sí. Cubrimos CDMX y Estado de México sin flete, y llegamos a locaciones de naturaleza como Valle de Bravo, Malinalco o Tepoztlán con un cargo por distancia que dejamos claro en la cotización. El bosque y el lago son escenarios donde la madera natural se integra de forma casi orgánica, ideal para conceptos earthy y editoriales de exterior.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cómo coordinan la entrega para que no afecte el tiempo de set?</summary>
+        <p class="art__faq-a">Trabajamos desde tu call time hacia atrás: llegamos antes a montar y nivelar para que la mesa esté lista cuando el equipo de arte empiece el styling. Confirmamos accesos de la locación en preproducción y dejamos el retiro coordinado para que no choque con ninguna toma. Manejamos esquemas por bloque de horas, medio día o jornada completa según lo pida la producción.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Galería: la mesa vestida por concepto</h2>
+    <div class="art__gallery-strip">
+      <img src="/img/mesa-picnic-romantica-vinedo-champagne.webp" alt="Styling lifestyle con champagne sobre mesa de madera" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-rustica-patio-mexicano.webp" alt="Mesa rústica en patio mexicano para concepto earthy" loading="lazy" width="350" height="220" />
+      <img src="/img/boda-vinedo-elegante-1.avif" alt="Mesa de madera elegante en locación de viñedo" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-cena-romantica-atardecer.webp" alt="Concepto gastronómico al atardecer sobre mesa de madera" loading="lazy" width="350" height="220" />
+    </div>
+  </section>
+
+  <div class="art__cta-final">
+    <div class="art__cta-final-inner">
+      <h2>Llévanos tu mood board y armamos la base</h2>
+      <p>Sin compromiso. Danos el concepto, la locación, la fecha y tu call time. Te proponemos el modelo de mesa que funciona como prop para esa idea y coordinamos la entrega a tu horario de set.</p>
+      <div class="art__cta-final-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+estoy+armando+una+sesi%C3%B3n+de+marca+y+quiero+cotizar+mesas+picnic+como+prop." target="_blank" rel="noopener" class="art__btn art__btn--wa art__btn--lg" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+        <a href="/servicios/sesiones-fotograficas/" class="art__btn art__btn--primary art__btn--lg">Ver servicio de sesiones →</a>
+        <a href="/blog/mobiliario-madera-producciones-sesiones-foto-guia-fotografos/" class="art__btn art__btn--ghost art__btn--lg">Guía de mobiliario para foto</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</BlogLayout>
