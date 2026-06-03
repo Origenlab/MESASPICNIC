@@ -8,7 +8,7 @@ const SITE = "https://mesaspicnic.com";
 export default defineConfig({
   site: SITE,
   output: "static",
-  trailingSlash: "never",
+  trailingSlash: "ignore",
   compressHTML: true,
   build: {
     inlineStylesheets: "auto",
@@ -22,6 +22,9 @@ export default defineConfig({
         !page.includes("/gracias") &&
         !page.includes("/404"),
       serialize(item) {
+        // trailingSlash:"ignore" puede emitir slash final; lo quitamos (salvo raíz)
+        // para que el sitemap coincida con los canonical sin slash.
+        item.url = item.url.replace(/^(https?:\/\/[^/]+\/.+?)\/$/, "$1");
         const path = item.url.replace(SITE, "");
 
         // L1 Homepage

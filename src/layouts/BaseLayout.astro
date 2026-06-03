@@ -25,7 +25,11 @@ const {
   schema,
 } = Astro.props;
 
-const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toString();
+// trailingSlash:"ignore" tolera el slash final en dev; aquí normalizamos el
+// canonical para que NUNCA lleve slash final (salvo la raíz) y el SEO quede
+// idéntico al sitio desplegado.
+const _rawCanonical = canonical || new URL(Astro.url.pathname, Astro.site).toString();
+const canonicalURL = _rawCanonical.replace(/^(https?:\/\/[^/]+\/.+?)\/$/, "$1");
 const siteUrl = "https://mesaspicnic.com";
 const siteName = "MESPIC — Renta de Mesas Picnic";
 const ogImageAbs = ogImage.startsWith("http") ? ogImage : `${siteUrl}${ogImage}`;
