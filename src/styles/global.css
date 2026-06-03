@@ -20,7 +20,9 @@
   /* ── Layout ── */
   --header-height: 92px;
   --topbar-height: 36px;
-  --container: 1400px;
+  --container: 1600px;          /* tope amplio para pantallas grandes */
+  --container-px: clamp(1rem, 4vw, 3rem); /* padding lateral fluido (%) */
+  --section-py: 5rem;           /* padding vertical de sección, responsive */
 
   /* ── Radii ── */
   --radius-sm: 8px;
@@ -76,12 +78,22 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .container {
+  width: 100%;
   max-width: var(--container);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding-left: var(--container-px);
+  padding-right: var(--container-px);
 }
 
-.section { padding: 5rem 0; }
+/* Safe-area iOS (notch / dynamic island) — el padding nunca baja del fluido */
+@supports (padding: max(0px)) {
+  .container {
+    padding-left: max(var(--container-px), env(safe-area-inset-left));
+    padding-right: max(var(--container-px), env(safe-area-inset-right));
+  }
+}
+
+.section { padding: var(--section-py) 0; }
 .section-alt { background: var(--c-bg-alt); }
 
 .btn {
@@ -107,10 +119,23 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .btn-wa { background: #25D366; color: #fff; transition: background 0.2s var(--ease); }
 .btn-wa:hover { background: #1fb855; }
 
+/* ── Tokens responsive — el header sticky y las secciones se ajustan por viewport ── */
+@media (max-width: 1024px) {
+  :root { --header-height: 76px; --section-py: 4rem; }
+}
 @media (max-width: 768px) {
-  .section { padding: 3.5rem 0; }
+  :root { --header-height: 72px; --section-py: 3.5rem; }
   /* Evita que el StickyMobileNav tape el final del contenido */
-  main { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px) + 16px); }
+  main { padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 16px); }
+}
+@media (max-width: 640px) {
+  :root { --topbar-height: 32px; --header-height: 66px; --section-py: 3rem; }
+}
+@media (max-width: 480px) {
+  :root { --section-py: 2.5rem; }
+}
+@media (max-width: 380px) {
+  :root { --header-height: 62px; }
 }
 
 /* ── Skip-link accesible (WCAG 2.4.1) ── */

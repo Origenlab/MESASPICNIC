@@ -1,0 +1,183 @@
+/* ════════════════════════════════════════════════════════════════
+   mobile.css — Overhaul responsive central (MESPIC)
+   ----------------------------------------------------------------
+   Hoja única que vive al final del cascade (importada en BaseLayout
+   DESPUÉS de global.css). Usa !important quirúrgico solo donde una
+   hoja scoped por página podría ganar la cascada.
+
+   Breakpoints unificados: 1024 / 768 / 640 / 480 / 380
+   Filosofía: ancho fluido (%), grids que colapsan a 1 columna en
+   teléfonos, touch targets ≥44px, cero overflow horizontal.
+   ════════════════════════════════════════════════════════════════ */
+
+/* ─── 0. Anti-overflow horizontal global ─────────────────────────── */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+img, svg, video, canvas, iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Nada se desborda del viewport por un ancho rígido */
+.container, main, section, footer, header {
+  min-width: 0;
+}
+
+/* ─── 1. Container fluido reforzado ──────────────────────────────── */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   ≤ 1024px — tablets / laptops chicas
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  /* Grids de 4 que aún no colapsan → 2 columnas */
+  .grid-4,
+  .config-grid,
+  .spec-grid,
+  .blog-grid,
+  .art__feature-grid,
+  .art__service-grid,
+  .art__format-grid,
+  .art__style-grid,
+  .art__zone-grid,
+  .art__element-grid,
+  .art__elements-grid,
+  .art__gallery-grid,
+  .art__links-grid,
+  .art__coverage-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   ≤ 768px — móviles grandes / tablets retrato
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Grids de 3 → 2 columnas */
+  .grid-3,
+  .grid-3-testimonios {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Toda fila de formulario apila */
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* CTAs lado a lado → full width apilado */
+  .hero__ctas,
+  .ft-cta__actions {
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .hero__cta-primary,
+  .hero__cta-secondary,
+  .ft-cta__btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   ≤ 640px — la mayoría de teléfonos
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  /* TODAS las grids de tarjetas → 1 columna */
+  .grid-4,
+  .grid-3,
+  .grid-3-testimonios,
+  .config-grid,
+  .spec-grid,
+  .blog-grid,
+  .cat-grid--grid,
+  .proceso-cards,
+  .cotizar-grid,
+  .art__feature-grid,
+  .art__service-grid,
+  .art__format-grid,
+  .art__style-grid,
+  .art__zone-grid,
+  .art__element-grid,
+  .art__elements-grid,
+  .art__gallery-grid,
+  .art__links-grid,
+  .art__coverage-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Inputs a 16px reales → iOS no hace zoom al enfocar */
+  input,
+  select,
+  textarea,
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px !important;
+    min-height: 48px;
+  }
+  textarea {
+    min-height: 96px;
+  }
+
+  /* Stats del footer en 2×2 legible */
+  .ft-stats__grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.25rem 1rem !important;
+  }
+  .ft-stats__divider {
+    display: none !important;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   ≤ 480px — teléfonos chicos
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  /* Proceso con muchos pasos (repeat 6) → 1 columna garantizada */
+  .proceso-cards {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Títulos no se desbordan */
+  h1, h2 {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   ≤ 380px — iPhone SE / Android compactos
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width: 380px) {
+  :root {
+    --container-px: 0.875rem;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   Touch targets ≥ 44px (Apple HIG / WCAG 2.5.5) — solo en táctil
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .btn,
+  .hero__cta-primary,
+  .hero__cta-secondary,
+  .ft-cta__btn,
+  .hdr__panel-link,
+  .hdr__drop-link,
+  button[type="submit"] {
+    min-height: 44px;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   Pulido táctil — quita el flash gris al tocar links/botones en iOS
+   ════════════════════════════════════════════════════════════════ */
+a, button, [role="button"] {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.04);
+}
