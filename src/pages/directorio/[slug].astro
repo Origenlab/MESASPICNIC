@@ -33,12 +33,14 @@ const venueSchema: any = {
   "name": espacio.nombre,
   "description": espacio.descripcion,
   "url": `https://mesaspicnic.com/directorio/${espacio.slug}/`,
+  "image": `https://mesaspicnic.com${espacio.imagenPrincipal}`,
   "address": {
     "@type": "PostalAddress",
     "addressLocality": espacio.alcaldia,
     "addressRegion": "Ciudad de México",
     "addressCountry": "MX"
-  }
+  },
+  "areaServed": { "@type": "City", "name": `${espacio.alcaldia}, Ciudad de México` }
 };
 if (espacio.capacidadNum) venueSchema.maximumAttendeeCapacity = espacio.capacidadNum;
 
@@ -69,6 +71,7 @@ const comparativa = [
 // Campos enriquecidos opcionales por venue (fallback si no existen)
 const acerca: string[] = espacio.acerca && espacio.acerca.length ? espacio.acerca : [espacio.descripcion];
 const puntosInteres: string[] = espacio.puntosInteres || [];
+const comercialHook: string = espacio.comercialHook || `En ${espacio.nombre}, las mesas de madera de MESPIC le dan a tu evento la calidez que el plástico no logra.`;
 const resena = espacio.resena || {
   rating: '4.9',
   eventos: '+500',
@@ -76,13 +79,35 @@ const resena = espacio.resena || {
   autor: 'Clientes MESPIC',
   contexto: 'Promedio de satisfacción en eventos al aire libre',
 };
+
+// ── SEO: título y meta humanizados (fallback si el venue no los trae) ──
+const seoTitle = espacio.seoTitle || `${espacio.nombre} en ${espacio.alcaldia} — Jardín de Eventos y Mesas Picnic | MESPIC`;
+const seoDesc = espacio.seoDesc || `¿Tu evento es en ${espacio.nombre}, ${espacio.alcaldia}? MESPIC monta mesas picnic de madera en el jardín, con bancas incluidas y sin cargos extra. Cotiza fácil.`;
+
+// ── FAQ (se usa para render y para schema FAQPage) ──
+const faqItems = [
+  { question: `¿${espacio.nombre} incluye mesas y mobiliario?`, answer: `Por lo general no. Como casi todos los jardines de eventos, ${espacio.nombre} se renta solo como espacio. Nosotros nos encargamos de esa parte: llevamos las mesas picnic de madera, las montamos en el jardín y las recogemos al final. Tú reservas el lugar y MESPIC pone el mobiliario.` },
+  { question: `¿Cuántas mesas necesito para mi evento en ${espacio.nombre}?`, answer: `Depende de cuántos invitados sean. Una mesa estándar acomoda 6 personas y la grande de 10 a 12. Dinos tu número aproximado y te calculamos las mesas exactas sin costo, para que no te quedes corto ni pagues de más.` },
+  { question: `¿MESPIC lleva y monta el mobiliario hasta ${espacio.alcaldia}?`, answer: `Sí. Cubrimos ${espacio.alcaldia} y todas las alcaldías de la Ciudad de México. Llegamos, montamos y al terminar recogemos, sin cobrarte extra por el traslado dentro de la cobertura.` },
+  { question: `¿Cómo aparto la fecha en ${espacio.nombre}?`, answer: `La fecha del espacio se aparta directamente con el recinto. En cuanto la tengas confirmada, escríbenos con el número de invitados y te cotizamos el mobiliario de madera para ese día.` },
+  { question: `¿Qué incluye la renta de mesas picnic de MESPIC?`, answer: `El precio incluye entrega, montaje y recolección. Las mesas vienen con bancas integradas, así que no rentas sillas aparte, y lo que cotizamos es el precio final: sin cargos ocultos ni cobros por tiempo extra.` },
+];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map((f) => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
 ---
 
 <BaseLayout
-  title={`${espacio.nombre} — ${tipoLabel} en ${espacio.alcaldia}, CDMX | MESPIC`}
-  description={`${espacio.nombre}: ${tipoLabel.toLowerCase()} para eventos en ${espacio.alcaldia}, Ciudad de México. ${espacio.capacidad}. Réntalo con mobiliario de madera MESPIC — entrega y montaje incluidos en CDMX.`}
+  title={seoTitle}
+  description={seoDesc}
   ogImage={espacio.imagenPrincipal}
-  schema={venueSchema}
+  schema={[venueSchema, faqSchema]}
 >
 
 <Fragment slot="breadcrumbs">
@@ -140,6 +165,10 @@ const resena = espacio.resena || {
           </div>
           <a href="/cotizar/" class="esp-datos__cta">Cotizar mobiliario para este espacio →</a>
           <p class="esp-datos__nota">Reservas la locación con el recinto; MESPIC pone el mobiliario de madera y lo monta en tu evento.</p>
+          <p class="esp-datos__ref">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            Información de referencia recopilada de fuentes públicas. Confirma disponibilidad, capacidad y datos de contacto directamente con el recinto.
+          </p>
         </div>
 
         <!-- Acerca del espacio y la zona -->
@@ -165,6 +194,7 @@ const resena = espacio.resena || {
           <div class="esp-comercial__body">
             <span class="esp-comercial__eyebrow">Renta de mesas picnic con MESPIC</span>
             <h2 class="esp-comercial__title">Renta mesas picnic de madera para tu evento en {espacio.nombre}</h2>
+            <p class="esp-comercial__hook">{comercialHook}</p>
             <p class="esp-comercial__text">
               ¿Vas a celebrar en {espacio.nombre}? El espacio te da el jardín; MESPIC te da el mobiliario. Llevamos
               <strong> mesas picnic de madera de pino natural</strong>, lijadas y barnizadas a mano, y las montamos
@@ -319,24 +349,7 @@ const resena = espacio.resena || {
     whatsapp="5564328954"
     schedule="Lun–Dom 8:00–20:00"
     waMessage={waMessage}
-    items={[
-      {
-        question: `¿${espacio.nombre} incluye mesas y mobiliario?`,
-        answer: `Por lo general no. Como la mayoría de los jardines de eventos, ${espacio.nombre} se renta como locación. MESPIC complementa tu evento con mesas picnic y bancas de madera, montadas directamente en el espacio. Tú reservas el lugar y nosotros llevamos el mobiliario.`
-      },
-      {
-        question: `¿Cuánto mobiliario necesito para un evento en ${espacio.nombre}?`,
-        answer: `Depende de tu número de invitados. Una mesa estándar acomoda 6 personas; la grande, 10-12. Cotiza con MESPIC según tu aforo real y te calculamos la cantidad exacta de mesas y bancas sin costo.`
-      },
-      {
-        question: `¿MESPIC monta en ${espacio.alcaldia}?`,
-        answer: `Sí. Cubrimos ${espacio.alcaldia} y todas las alcaldías de la Ciudad de México. Llevamos, montamos y recogemos el mobiliario en el espacio, sin cargos adicionales por traslado dentro de la cobertura.`
-      },
-      {
-        question: "¿Cómo reservo la fecha en este espacio?",
-        answer: `La reservación de la locación se hace directamente con el recinto. Una vez que tengas tu fecha confirmada en ${espacio.nombre}, escríbenos a MESPIC con el número de invitados y cotizamos el mobiliario para ese día.`
-      }
-    ]}
+    items={faqItems}
   />
 </section>
 
@@ -405,6 +418,8 @@ const resena = espacio.resena || {
   .esp-datos__cta { display: inline-flex; align-items: center; justify-content: center; background: var(--c-primary, #2C5530); color: #fff; padding: 0.85rem 1.5rem; border-radius: 8px; font-size: 0.95rem; font-weight: 700; text-decoration: none; transition: background 0.18s ease; }
   .esp-datos__cta:hover { background: var(--c-primary-light, #3D7A45); }
   .esp-datos__nota { font-size: 0.78rem; color: var(--c-text-muted, #78716C); line-height: 1.5; margin-top: 0.85rem; }
+  .esp-datos__ref { display: flex; gap: 0.45rem; align-items: flex-start; font-size: 0.74rem; color: var(--c-text-muted, #9a948c); line-height: 1.45; margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px dashed var(--c-border, #E7E0D8); }
+  .esp-datos__ref svg { flex-shrink: 0; margin-top: 1px; color: var(--c-secondary, #8B6F4E); }
 
   /* ── Heading local en columna ── */
   .esp-h { margin-bottom: 1.25rem; }
@@ -443,7 +458,8 @@ const resena = espacio.resena || {
   /* ── Comercial ── */
   .esp-comercial { background: linear-gradient(155deg, #1B3B20 0%, #2C5530 100%); border-radius: 16px; padding: 2rem 2.1rem; margin-bottom: 3rem; color: #fff; }
   .esp-comercial__eyebrow { display: inline-block; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--c-accent-light, #E8C9A8); margin-bottom: 0.6rem; }
-  .esp-comercial__title { font-family: var(--font-head); font-size: clamp(1.3rem, 2.6vw, 1.7rem); font-weight: 800; line-height: 1.2; color: #fff; margin-bottom: 0.9rem; }
+  .esp-comercial__title { font-family: var(--font-head); font-size: clamp(1.3rem, 2.6vw, 1.7rem); font-weight: 800; line-height: 1.2; color: #fff; margin-bottom: 0.7rem; }
+  .esp-comercial__hook { font-size: 1rem; font-weight: 600; line-height: 1.5; color: var(--c-accent-light, #E8C9A8); margin-bottom: 0.9rem; font-style: italic; }
   .esp-comercial__text { font-size: 0.92rem; line-height: 1.75; color: rgba(255,255,255,0.86); margin-bottom: 1.1rem; }
   .esp-comercial__text strong { color: #fff; }
   .esp-comercial__list { list-style: none; display: grid; gap: 0.5rem; margin-bottom: 1.5rem; }

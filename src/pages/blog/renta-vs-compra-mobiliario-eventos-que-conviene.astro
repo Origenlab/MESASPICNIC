@@ -1,0 +1,411 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import '../../styles/blog-article.css';
+---
+
+<BlogLayout
+  title="Renta vs. Compra de Mobiliario para Eventos: Qué Conviene y Cuándo | MESPIC"
+  description="¿Rentar o comprar mesas para eventos? Comparamos el costo total real —incluyendo almacenaje, mantenimiento, transporte y depreciación— y te decimos honestamente qué conviene según tu perfil y frecuencia. CDMX y Edomex."
+  ogImage="/img/bodega-almacen-mesas-picnic-madera.webp"
+  heroTitle="Renta vs. Compra de Mobiliario para Eventos: Qué Conviene y Cuándo"
+  heroBadge="Blog · Logística · Decisión de compra"
+  heroDescription="La cuenta no es tan simple como precio de renta contra precio de compra. Aquí desglosamos el costo total honesto de cada camino —almacenaje, mantenimiento, transporte y desgaste incluidos— y te ayudamos a decidir según cuántos eventos haces al año."
+  heroSeo1="Es una de las preguntas que más nos llegan por WhatsApp, y casi siempre viene con la misma lógica: alguien hizo una cuenta rápida, vio que comprar diez mesas cuesta lo mismo que rentarlas tres o cuatro veces, y concluyó que comprar es lo inteligente. Tiene sentido en la servilleta. El problema es que esa cuenta deja fuera la mitad de la historia: dónde vas a guardar esas mesas el resto del año, quién las va a barnizar cuando se rayen, cómo las vas a mover el día del evento y cuánto valdrán cuando quieras venderlas. Cuando sumas todo eso, el panorama cambia."
+  heroSeo2="En este artículo hacemos esa cuenta completa, sin agenda. No vamos a decirte que rentar siempre gana, porque no es verdad: hay perfiles para quienes comprar es claramente la mejor decisión. Vamos a darte el marco para que decidas tú, con números reales y criterios que rara vez aparecen en una cotización: el costo por evento a lo largo del tiempo, el peso oculto del almacenaje, el mantenimiento que sí o sí toca hacer, y qué tan seguido tienes que usar el mobiliario para que la compra empiece a tener sentido."
+  heroMetrics={[
+    { value: "7 criterios", label: "Comparados lado a lado" },
+    { value: "9 min", label: "Tiempo de lectura" },
+    { value: "CDMX + Edomex", label: "Cobertura sin flete" },
+  ]}
+  datePublished="2026-06-04"
+  articleSection="Logística"
+  breadcrumbs={[
+    { label: "Inicio", href: "/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Renta vs. Compra de Mobiliario" },
+  ]}
+  sidebarProducts={[
+    { name: "Mesa Estándar 1.80m", cap: "6 personas · El caballo de batalla", href: "/catalogo/mesa-picnic-estandar/", img: "/img/renta-mesa-picnic-madera-pino-cdmx-01.avif" },
+    { name: "Mesa Grande 2.40m", cap: "10–12 personas · Imperial", href: "/catalogo/mesa-picnic-grande/", img: "/img/mesa-picnic-madera-renta-cdmx-05.avif" },
+    { name: "Mesa Premium", cap: "Sin nudos · Eventos VIP", href: "/catalogo/mesa-picnic-premium/", img: "/img/mesa-picnic-boda-elegante-decoracion.avif" },
+  ]}
+  sidebarArticles={[
+    { title: "Cuánto Cuesta Rentar Mesas Picnic en CDMX", meta: "Precios · 8 min", href: "/blog/cuanto-cuesta-rentar-mesas-picnic-cdmx/", img: "/img/renta-mesa-picnic-madera-pino-cdmx-01.avif" },
+    { title: "Mesa Picnic vs. Sillas Tiffany vs. Tablón", meta: "Comparativa · 9 min", href: "/blog/mesa-picnic-vs-sillas-tiffany-vs-tablon-comparativa/", img: "/img/mesa-picnic-madera-renta-cdmx-05.avif" },
+    { title: "Cuántas Mesas Picnic Necesitas según Invitados", meta: "Planeación · 7 min", href: "/blog/cuantas-mesas-picnic-necesitas-segun-invitados/", img: "/img/entrega-mesa-picnic-evento-hacienda.webp" },
+  ]}
+  sidebarServices={[
+    { name: "Eventos Corporativos", desc: "Empresas · Activaciones", href: "/servicios/eventos-corporativos/" },
+    { name: "Bodas", desc: "Jardines · Haciendas · Terrazas", href: "/servicios/bodas/" },
+    { name: "Paquetes de Renta", desc: "Básico · Estándar · Premium", href: "/paquetes/" },
+    { name: "Todos los servicios", desc: "Renta integral en CDMX y Edomex", href: "/servicios/" },
+  ]}
+  sidebarCtaTitle="¿Renta o compra? Te ayudamos a decidir"
+  sidebarCtaText="Cuéntanos cuántos eventos haces al año y qué tamaño tienen. Te decimos honestamente qué te conviene y, si es renta, te pasamos precio el mismo día."
+  sidebarCtaWa="Hola%2C+quiero+ayuda+para+decidir+si+me+conviene+rentar+o+comprar+mobiliario+para+eventos."
+  sidebarServicesTitle="Servicios y paquetes"
+  faqs={[
+    { q: "¿Es más barato comprar o rentar mesas para eventos?", a: "Depende de cuántas veces al año las uses. Si haces uno o dos eventos al año, rentar casi siempre sale más barato en costo total, porque comprar te obliga a pagar almacenaje, mantenimiento y transporte el resto del año aunque las mesas estén guardadas. Si haces eventos cada semana —un salón, un food park, una empresa con activaciones constantes— la compra empieza a amortizarse y puede convenir. El punto de equilibrio no es el precio de la mesa, es el costo total a lo largo del tiempo." },
+    { q: "¿Qué costos ocultos tiene comprar mobiliario para eventos?", a: "Los cuatro grandes son: almacenaje (una bodega o un espacio en casa que ocupa metros todo el año), mantenimiento (la madera se raya, se decolora con el sol y necesita rebarnizado), transporte (camioneta o flete cada vez que la mueves, más maniobra de carga y descarga) y depreciación (lo que pierde de valor con cada uso). Ninguno aparece en el precio de compra, pero todos suman al costo real por evento." },
+    { q: "¿La renta incluye entrega y montaje o eso se cobra aparte?", a: "En MESPIC el servicio es integral: entrega, montaje y recolección están incluidos en el precio, sin cargos ocultos. No tienes que conseguir camioneta, cargar nada ni preocuparte por devolver las mesas. Llegamos, montamos, y al terminar el evento volvemos por todo. Ese es justamente uno de los costos que la compra te traslada a ti y la renta absorbe." },
+    { q: "¿A quién le conviene comprar en lugar de rentar?", a: "A quien usa el mobiliario con mucha frecuencia y tiene resuelta la logística: salones de eventos con calendario lleno, food parks o jardines de fiestas con uso semanal, y empresas que hacen activaciones constantes y ya cuentan con bodega y transporte. Para ese perfil, la inversión se reparte entre tantos usos que el costo por evento baja por debajo de la renta. Para todos los demás, la renta suele ganar." },
+    { q: "¿Qué pasa con el mantenimiento si compro las mesas?", a: "La madera de pino barnizada es muy noble, pero no es eterna sin cuidado. Con el uso aparecen rayones, manchas de bebida y decoloración por sol; cada cierto número de eventos toca lijar y rebarnizar para que sigan presentables. Eso es tiempo, materiales y, a veces, mano de obra especializada. Cuando rentas, ese mantenimiento corre por nuestra cuenta: cada mesa que llega a tu evento ya viene revisada y en buen estado." },
+    { q: "¿Cubren CDMX y Estado de México sin cobrar flete?", a: "Sí. Entregamos, montamos y recogemos en toda la Ciudad de México y los municipios del Estado de México sin cobrar flete dentro de esa cobertura. Para destinos más lejanos sí puede aplicar un cargo por distancia, pero te lo decimos claro en la cotización, nunca el día del evento. Esa cobertura sin flete es parte de por qué, para la mayoría, la renta sale mejor: el transporte ya está incluido." },
+  ]}
+>
+
+<div class="art">
+
+  <p class="art__lead">
+    Antes de decidir si rentas o compras el mobiliario para tus eventos, vale la pena hacer la cuenta completa —no la de la servilleta. Comprar diez mesas puede parecer una ganga frente a rentarlas varias veces, hasta que sumas dónde las guardas, quién las mantiene, cómo las mueves y cuánto valen cuando ya no las quieres. En esta guía desarmamos esa decisión con honestidad: ni la renta gana siempre ni la compra es un mal negocio. Todo depende de un dato que casi nadie mide bien.
+  </p>
+
+  <div class="art__author">
+    <div class="art__author-badge">M</div>
+    <div class="art__author-meta">
+      <span class="art__author-name">Equipo MESPIC · Logística de eventos</span>
+      <span class="art__author-role">Renta integral de mesas picnic de madera para eventos en CDMX y Estado de México</span>
+      <span class="art__author-stamp">Tiempo de lectura: 9 min · Basado en años de operación y miles de entregas</span>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">La cuenta que casi todos hacen mal</h2>
+
+    <p>La trampa es seductora porque es matemática y se siente sólida. Una mesa picnic de madera de calidad cuesta cierto monto; rentarla cuesta una fracción de eso. Divides, te da que en tres o cuatro eventos "ya te la pagaste", y de ahí en adelante todo es ganancia. Si haces varios eventos, comprar parece obvio. El error no está en la aritmética: está en lo que la aritmética no incluye.</p>
+
+    <p>Porque una mesa no termina su trabajo el día del evento. Sigue costándote dinero los otros 360 días del año: ocupa espacio que pagas (en renta de bodega o en metros de tu casa o negocio que dejas de usar para otra cosa), pierde acabado que tienes que reponer, exige una camioneta cada vez que la mueves y va perdiendo valor de reventa con cada montaje. Ese es el costo total de propiedad, y es la única cifra que de verdad sirve para comparar contra la renta.</p>
+
+    <p>Por eso conviene empezar por entender qué cubre realmente cada modelo antes de comparar precios. Si todavía estás resolviendo lo básico de cómo funciona este servicio, te puede servir leer primero <a href="/blog/cuanto-cuesta-rentar-mesas-picnic-cdmx/">cuánto cuesta rentar mesas picnic en CDMX</a> para tener una referencia clara del lado de la renta. Pero antes de los números, dejemos una definición sobre la mesa.</p>
+
+    <div class="art__definition">
+      <span class="art__definition-term">Definición · Costo total de propiedad (TCO)</span>
+      <p>Es la suma de todo lo que cuesta tener un mobiliario a lo largo de su vida útil, no solo lo que pagas al comprarlo. Incluye el precio inicial más almacenaje, mantenimiento, transporte, seguros, reparaciones y la pérdida de valor (depreciación). Comparado contra el costo total de rentar —donde muchos de esos rubros vienen incluidos en una sola tarifa—, es la forma honesta de saber qué camino sale más barato según cuántas veces lo uses.</p>
+    </div>
+
+    <p>Con esa lente puesta, veamos los dos caminos uno frente al otro.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Renta vs. compra, criterio por criterio</h2>
+
+    <p>Esta es la comparación que importa: no precio contra precio, sino cómo se comporta cada opción en los siete frentes que realmente mueven la decisión. Léela de corrido y casi sola te dice de qué lado estás.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table art__table--compare">
+        <thead>
+          <tr>
+            <th>Criterio</th>
+            <th class="th-accent">Renta</th>
+            <th>Compra</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Costo inicial</strong></td>
+            <td class="td-accent">Bajo (pagas por evento)</td>
+            <td>Alto (inversión completa de entrada)</td>
+          </tr>
+          <tr>
+            <td><strong>Costo por evento (a largo plazo)</strong></td>
+            <td class="td-accent">Estable y predecible</td>
+            <td>Baja con cada uso, si usas mucho</td>
+          </tr>
+          <tr>
+            <td><strong>Almacenaje</strong></td>
+            <td class="td-accent">No aplica (lo guardamos nosotros)</td>
+            <td>A tu cargo todo el año</td>
+          </tr>
+          <tr>
+            <td><strong>Mantenimiento</strong></td>
+            <td class="td-accent">Incluido (llega revisado)</td>
+            <td>A tu cargo (lijado, rebarnizado)</td>
+          </tr>
+          <tr>
+            <td><strong>Transporte y montaje</strong></td>
+            <td class="td-accent">Incluido, sin flete en cobertura</td>
+            <td>Tú resuelves camioneta y maniobra</td>
+          </tr>
+          <tr>
+            <td><strong>Variedad de modelos</strong></td>
+            <td class="td-accent">+20 modelos, eliges por evento</td>
+            <td>Fija a lo que compraste</td>
+          </tr>
+          <tr>
+            <td><strong>Riesgo (daño, desuso, depreciación)</strong></td>
+            <td class="td-accent">Mínimo, lo asumimos nosotros</td>
+            <td>Tuyo (daño, obsolescencia, reventa)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>La lectura honesta de la tabla es esta: la renta gana en casi todos los frentes salvo en uno —el costo por evento a largo plazo, que la compra puede ganar si usas el mobiliario lo suficiente. Todo se reduce a esa palabra: suficiente. Veamos qué significa en números de comportamiento.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Los cuatro costos que la compra esconde</h2>
+
+    <p>Cuando compras, el precio de la mesa es solo la entrada. Estos cuatro rubros son los que rara vez se calculan y los que, sumados, suelen inclinar la balanza. Vale la pena verlos uno por uno antes de firmar nada.</p>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>Almacenaje: el costo silencioso</h3>
+        <p>Diez o veinte mesas ocupan espacio real. Si rentas bodega, es un gasto fijo mensual los doce meses; si las guardas en casa o en tu negocio, son metros que dejas de usar para otra cosa. Y guardar madera mal —humedad, sol, apiladas sin cuidado— las arruina antes de tiempo.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Mantenimiento: la madera pide cariño</h3>
+        <p>El pino barnizado es noble, pero con el uso se raya, se mancha y se decolora. Cada cierto número de eventos toca lijar y rebarnizar para que sigan presentables. Eso es tiempo, materiales y, a veces, mano de obra. No es opcional si quieres que luzcan.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Transporte: mover es caro</h3>
+        <p>Cada evento implica camioneta de ida y vuelta, gasolina, casetas y al menos un par de personas para cargar y descargar. Una mesa grande pesa y no entra en cualquier cajuela. Ese costo —y ese dolor de espalda— corre por tu cuenta cuando compras.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Depreciación: pierde valor con cada uso</h3>
+        <p>El mobiliario se desgasta y, si algún día quieres venderlo, vale bastante menos de lo que pagaste. Sumas el riesgo de que un modelo pase de moda o que tus eventos cambien de estilo y te quedes con mesas que ya no usas. Ese capital queda atrapado.</p>
+      </div>
+    </div>
+
+    <div class="art__tip">
+      <div class="art__tip-icon">💡</div>
+      <div>
+        <strong>El ejercicio honesto:</strong> antes de decidir comprar, súmale al precio de las mesas un estimado anual de bodega, un fondo de rebarnizado y el costo de mover todo cada evento. Divídelo entre los eventos que de verdad harás al año —no los que imaginas— y compáralo contra la tarifa de renta. Muchas veces la cuenta que parecía obvia se voltea.
+      </div>
+    </div>
+  </section>
+
+  <figure class="art__figure">
+    <img
+      src="/img/bodega-almacen-mesas-picnic-grande.webp"
+      alt="Bodega con mesas picnic de madera almacenadas y organizadas para renta de eventos"
+      loading="lazy"
+      width="900"
+      height="560"
+    />
+    <figcaption>Guardar mobiliario el resto del año tiene un costo real en espacio y cuidado. Cuando rentas, ese problema —y esa bodega— son nuestros, no tuyos.</figcaption>
+  </figure>
+
+  <section class="art__section">
+    <h2 class="art__h2">Qué te conviene según tu perfil</h2>
+
+    <p>No hay una respuesta única, hay una respuesta para ti. Lo que cambia todo es cuántos eventos haces al año y si ya tienes resuelta la logística de bodega y transporte. Esta tabla cruza los perfiles que más vemos con la recomendación honesta para cada uno.</p>
+
+    <div class="art__table-wrap">
+      <table class="art__table">
+        <thead>
+          <tr>
+            <th>Perfil</th>
+            <th class="th-accent">Frecuencia típica</th>
+            <th>Qué conviene</th>
+            <th>Por qué</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Particular (fiesta, boda, cumple)</strong></td>
+            <td class="td-accent">1–2 eventos al año</td>
+            <td>Renta</td>
+            <td>Comprar te deja con bodega y mantenimiento todo el año por usar las mesas un día</td>
+          </tr>
+          <tr>
+            <td><strong>Wedding / event planner</strong></td>
+            <td class="td-accent">Variable, distintos estilos</td>
+            <td>Renta</td>
+            <td>Necesitas variedad y modelos distintos por cliente; comprar te ata a un solo catálogo</td>
+          </tr>
+          <tr>
+            <td><strong>Salón o jardín de eventos</strong></td>
+            <td class="td-accent">Semanal, alto volumen</td>
+            <td>Compra (o mixto)</td>
+            <td>Uso constante amortiza la inversión; conviene si ya tienes bodega y personal</td>
+          </tr>
+          <tr>
+            <td><strong>Empresa con activaciones</strong></td>
+            <td class="td-accent">Esporádico a frecuente</td>
+            <td>Renta o mixto</td>
+            <td>Si son pocas al año, renta; si hay calendario fijo y logística propia, evalúa comprar parte</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Fíjate en el patrón: la frontera no es el tipo de cliente, es la frecuencia más la logística. Un <a href="/servicios/eventos-corporativos/">evento corporativo</a> aislado se renta sin pensarlo; una empresa con activaciones cada mes y bodega propia quizá compre una parte y rente los picos. Y para quien organiza <a href="/servicios/bodas/">bodas</a> y eventos sociales que cambian de estilo cada vez, la renta da algo que la compra no puede: poder elegir modelo distinto en cada montaje.</p>
+  </section>
+
+  <div class="art__cta-inline">
+    <div class="art__cta-inline-content">
+      <h3>¿No tienes claro de qué lado estás?</h3>
+      <p>Cuéntanos cuántos eventos haces al año, de qué tamaño y si ya cuentas con bodega y transporte. Te damos una recomendación honesta —aunque sea no rentarnos— y, si la renta es lo tuyo, te pasamos precio el mismo día.</p>
+      <div class="art__cta-inline-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+ayuda+para+decidir+si+me+conviene+rentar+o+comprar+mobiliario+para+mis+eventos." target="_blank" rel="noopener" class="art__btn art__btn--wa" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Pedir asesoría por WhatsApp
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--outline">Ir al formulario de cotización →</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="art__section">
+    <h2 class="art__h2">Qué resuelve la renta que la compra te deja a ti</h2>
+
+    <p>Más allá de los números, hay una diferencia de fondo en cómo vives el evento. Comprar significa que tú te conviertes en el área de logística; rentar bien significa que esa parte simplemente no existe en tu lista de pendientes. Esto es lo que en MESPIC ya viene incluido en el servicio integral, sin cargos ocultos:</p>
+
+    <div class="art__feature-grid">
+      <div class="art__feature-card">
+        <h3>Entrega, montaje y recolección</h3>
+        <p>Llegamos, armamos todo en su lugar y, al terminar el evento, volvemos por las mesas. No tienes que conseguir camioneta, cargar nada ni coordinar una devolución.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Cero almacenaje y cero mantenimiento</h3>
+        <p>Las mesas viven en nuestra bodega y se mantienen entre eventos. No ocupas espacio en casa ni te toca lijar ni rebarnizar nada nunca.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Más de 20 modelos para elegir</h3>
+        <p>Estándar, grande, premium, rústica, alta cocktail, infantil y más. Eliges por evento según el estilo, sin quedarte atado a una sola compra.</p>
+      </div>
+      <div class="art__feature-card">
+        <h3>Cobertura sin flete</h3>
+        <p>Toda la CDMX y los municipios del Estado de México, sin cobrar transporte dentro de esa zona. El costo que más pesa al comprar, aquí ya está incluido.</p>
+      </div>
+    </div>
+
+    <p>Si quieres ver cómo se traduce todo esto en una propuesta concreta, nuestros <a href="/paquetes/">paquetes de renta</a> agrupan mobiliario por tipo de evento, desde lo más sencillo hasta montajes premium. Y si todavía estás definiendo el tamaño del evento, la guía de <a href="/blog/cuantas-mesas-picnic-necesitas-segun-invitados/">cuántas mesas necesitas según tus invitados</a> te ayuda a dimensionar antes de cotizar.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Cuándo sí conviene comprar (lo decimos en serio)</h2>
+
+    <p>No queremos venderte una historia donde rentar siempre gana, porque no sería honesto. Hay un perfil para el que comprar es la decisión correcta, y vale la pena nombrarlo con claridad: quien usa el mobiliario con tanta frecuencia que la inversión se reparte entre decenas o cientos de usos al año, y que además ya tiene resuelta la parte molesta —bodega, transporte y alguien que dé mantenimiento.</p>
+
+    <p>Para un salón de eventos con calendario lleno, un food park con mesas fijas o una empresa que monta activaciones cada semana, comprar baja el costo por evento por debajo de cualquier renta y da control total sobre la disponibilidad. En esos casos, lo inteligente no es preguntarse si comprar, sino qué comprar y cuánto. Y muchas veces la respuesta más fina es mixta: compras un núcleo de mesas para el uso de base y rentas los picos de temporada alta, para no inmovilizar capital en inventario que solo usarías unas semanas al año.</p>
+
+    <p>Si te interesa entender cómo se comparan las mesas picnic frente a otras opciones de mobiliario antes de comprometer una compra grande, te servirá la comparativa entre <a href="/blog/mesa-picnic-vs-sillas-tiffany-vs-tablon-comparativa/">mesa picnic, sillas Tiffany y tablón</a>, porque el modelo que elijas comprar es una decisión que vivirás muchos años.</p>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Cómo decidir, en cuatro pasos</h2>
+
+    <p>Este es el mismo razonamiento que seguimos cuando alguien nos pregunta directamente si le conviene rentarnos o comprar. Puedes hacerlo en una hoja en diez minutos.</p>
+
+    <ol class="art__steps">
+      <li class="art__step">
+        <span class="art__step-num">01</span>
+        <div class="art__step-body">
+          <h3>Cuenta tus eventos reales del año</h3>
+          <p>No los que imaginas que harás, los que de verdad haces. Sé conservador. Ese número es la variable que más pesa en toda la decisión.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">02</span>
+        <div class="art__step-body">
+          <h3>Calcula el costo total de comprar</h3>
+          <p>Precio de las mesas más almacenaje anual, fondo de mantenimiento y costo de transporte por evento. Esa suma, no el precio de etiqueta, es lo que comparas.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">03</span>
+        <div class="art__step-body">
+          <h3>Divídelo entre tus usos y compáralo</h3>
+          <p>Reparte ese costo total entre los eventos reales al año y ponlo frente a la tarifa de renta. Si la renta es más barata por evento, ya tienes respuesta.</p>
+        </div>
+      </li>
+      <li class="art__step">
+        <span class="art__step-num">04</span>
+        <div class="art__step-body">
+          <h3>Suma lo que no se mide en dinero</h3>
+          <p>Tiempo, espacio, dolores de cabeza logísticos y flexibilidad de cambiar de modelo. Para la mayoría, ese intangible termina de inclinar la balanza hacia la renta.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Dónde operamos</h2>
+
+    <p>Entregamos, montamos y recogemos en toda la Ciudad de México y los municipios del Estado de México sin cobrar flete dentro de esa cobertura. Esa logística incluida es, justamente, uno de los costos que la compra te trasladaría a ti.</p>
+
+    <div class="art__coverage-grid">
+      <div class="art__coverage-col">
+        <h3>Ciudad de México</h3>
+        <ul class="art__coverage-list">
+          <li>Coyoacán y San Ángel</li>
+          <li>Roma, Condesa y Juárez</li>
+          <li>Polanco y Lomas de Chapultepec</li>
+          <li>Tlalpan, Xochimilco y Milpa Alta</li>
+          <li>Cuajimalpa y Santa Fe</li>
+        </ul>
+      </div>
+      <div class="art__coverage-col">
+        <h3>Estado de México</h3>
+        <ul class="art__coverage-list">
+          <li>Naucalpan y Atizapán</li>
+          <li>Huixquilucan e Interlomas</li>
+          <li>Tlalnepantla y Ecatepec</li>
+          <li>Metepec y corredor Toluca</li>
+          <li>Texcoco, Tepotzotlán y Calimaya</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Preguntas que nos hacen seguido</h2>
+
+    <div class="art__faqs">
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Es más barato comprar o rentar mesas para eventos?</summary>
+        <p class="art__faq-a">Depende de cuántas veces al año las uses. Si haces uno o dos eventos al año, rentar casi siempre sale más barato en costo total, porque comprar te obliga a pagar almacenaje, mantenimiento y transporte el resto del año aunque las mesas estén guardadas. Si haces eventos cada semana —un salón, un food park, una empresa con activaciones constantes— la compra empieza a amortizarse y puede convenir. El punto de equilibrio no es el precio de la mesa, es el costo total a lo largo del tiempo.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué costos ocultos tiene comprar mobiliario para eventos?</summary>
+        <p class="art__faq-a">Los cuatro grandes son: almacenaje (una bodega o un espacio en casa que ocupa metros todo el año), mantenimiento (la madera se raya, se decolora con el sol y necesita rebarnizado), transporte (camioneta o flete cada vez que la mueves, más maniobra de carga y descarga) y depreciación (lo que pierde de valor con cada uso). Ninguno aparece en el precio de compra, pero todos suman al costo real por evento.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿La renta incluye entrega y montaje o eso se cobra aparte?</summary>
+        <p class="art__faq-a">En MESPIC el servicio es integral: entrega, montaje y recolección están incluidos en el precio, sin cargos ocultos. No tienes que conseguir camioneta, cargar nada ni preocuparte por devolver las mesas. Llegamos, montamos, y al terminar el evento volvemos por todo. Ese es justamente uno de los costos que la compra te traslada a ti y la renta absorbe.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿A quién le conviene comprar en lugar de rentar?</summary>
+        <p class="art__faq-a">A quien usa el mobiliario con mucha frecuencia y tiene resuelta la logística: salones de eventos con calendario lleno, food parks o jardines de fiestas con uso semanal, y empresas que hacen activaciones constantes y ya cuentan con bodega y transporte. Para ese perfil, la inversión se reparte entre tantos usos que el costo por evento baja por debajo de la renta. Para todos los demás, la renta suele ganar.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Qué pasa con el mantenimiento si compro las mesas?</summary>
+        <p class="art__faq-a">La madera de pino barnizada es muy noble, pero no es eterna sin cuidado. Con el uso aparecen rayones, manchas de bebida y decoloración por sol; cada cierto número de eventos toca lijar y rebarnizar para que sigan presentables. Eso es tiempo, materiales y, a veces, mano de obra especializada. Cuando rentas, ese mantenimiento corre por nuestra cuenta: cada mesa que llega a tu evento ya viene revisada y en buen estado.</p>
+      </details>
+      <details class="art__faq">
+        <summary class="art__faq-q">¿Cubren CDMX y Estado de México sin cobrar flete?</summary>
+        <p class="art__faq-a">Sí. Entregamos, montamos y recogemos en toda la Ciudad de México y los municipios del Estado de México sin cobrar flete dentro de esa cobertura. Para destinos más lejanos sí puede aplicar un cargo por distancia, pero te lo decimos claro en la cotización, nunca el día del evento. Esa cobertura sin flete es parte de por qué, para la mayoría, la renta sale mejor: el transporte ya está incluido.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="art__section">
+    <h2 class="art__h2">Galería: la operación detrás de la renta</h2>
+    <div class="art__gallery-strip">
+      <img src="/img/bodega-almacen-mesas-picnic-madera.webp" alt="Almacén de mesas picnic de madera para renta de eventos en CDMX" loading="lazy" width="350" height="220" />
+      <img src="/img/equipo-logistica-mesas-picnic.webp" alt="Equipo de logística cargando mesas picnic para entrega de evento" loading="lazy" width="350" height="220" />
+      <img src="/img/entrega-mesa-picnic-evento-hacienda.webp" alt="Entrega y montaje de mesa picnic de madera en evento" loading="lazy" width="350" height="220" />
+      <img src="/img/mesa-picnic-madera-renta-cdmx-05.avif" alt="Mesa picnic de madera lista y montada para evento en CDMX" loading="lazy" width="350" height="220" />
+    </div>
+  </section>
+
+  <div class="art__cta-final">
+    <div class="art__cta-final-inner">
+      <h2>Cuéntanos tu caso y hacemos la cuenta contigo</h2>
+      <p>Sin compromiso. Danos cuántos eventos haces al año y de qué tamaño, y te decimos con honestidad si te conviene rentar o comprar. Si la renta es el camino, te pasamos precio final el mismo día —entrega, montaje y recolección incluidos.</p>
+      <div class="art__cta-final-btns">
+        <a href="https://wa.me/5564328954?text=Hola%2C+quiero+cotizar+renta+de+mesas+picnic+para+mis+eventos." target="_blank" rel="noopener" class="art__btn art__btn--wa art__btn--lg" onclick="if(window.openMespicChat){event.preventDefault();openMespicChat();}">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+        <a href="/cotizar/" class="art__btn art__btn--primary art__btn--lg">Formulario de cotización →</a>
+        <a href="/catalogo/" class="art__btn art__btn--ghost art__btn--lg">Ver catálogo completo</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</BlogLayout>

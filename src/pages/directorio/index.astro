@@ -246,18 +246,32 @@ const itemListSchema = {
       if (empty) empty.hidden = visibles !== 0;
     }
 
+    function activar(valor) {
+      var encontrado = false;
+      for (var c = 0; c < chips.length; c++) {
+        var match = chips[c].getAttribute('data-filtro') === valor;
+        chips[c].classList.toggle('dir-chip--active', match);
+        if (match) encontrado = true;
+      }
+      filtro = encontrado ? valor : 'todas';
+      if (!encontrado) { for (var d = 0; d < chips.length; d++) if (chips[d].getAttribute('data-filtro') === 'todas') chips[d].classList.add('dir-chip--active'); }
+      apply();
+    }
+
     for (var i = 0; i < chips.length; i++) {
       chips[i].addEventListener('click', function () {
-        filtro = this.getAttribute('data-filtro');
-        for (var c = 0; c < chips.length; c++) chips[c].classList.remove('dir-chip--active');
-        this.classList.add('dir-chip--active');
-        apply();
+        activar(this.getAttribute('data-filtro'));
+        history.replaceState(null, '', filtro === 'todas' ? location.pathname : location.pathname + '?a=' + encodeURIComponent(filtro));
       });
     }
     if (input) input.addEventListener('input', function () {
       q = this.value.trim().toLowerCase();
       apply();
     });
+
+    // Deep-link: /directorio/?a=Alcaldía llega pre-filtrado
+    var par = new URLSearchParams(location.search).get('a');
+    if (par) activar(par);
   })();
 </script>
 
