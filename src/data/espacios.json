@@ -1,0 +1,918 @@
+{
+  "_nota": "DIRECTORIO MESPIC — Salones y jardines de fiestas al aire libre en CDMX. Estos venues son REALES, identificados en directorios públicos de eventos (Google Business / agregadores). IMPORTANTE antes de publicar cada ficha: (1) Abrir el perfil de Google Business del venue y CONFIRMAR que sigue sin sitio web propio. (2) Capturar teléfono público, rating y reseñas reales, y capacidad exacta. (3) Cambiar \"verificado\" a true. (4) Reemplazar imágenes placeholder (/img/...) por fotos reales del espacio o de montajes MESPIC ahí. (5) La descripción debe seguir siendo ORIGINAL por venue para no caer en contenido duplicado. NO se inventan teléfonos ni estrellas: los campos sin dato real quedan vacíos o como 'Consultar'.",
+  "tipos": {
+    "jardin": "Jardín de eventos",
+    "terraza": "Terraza",
+    "hacienda": "Hacienda",
+    "quinta": "Quinta / Salón jardín",
+    "foro": "Foro campestre"
+  },
+  "espacios": [
+    {
+      "slug": "jardin-genesis-iztapalapa",
+      "nombre": "Jardín Génesis",
+      "tipo": "jardin",
+      "alcaldia": "Iztapalapa",
+      "estado": "CDMX",
+      "capacidad": "Consultar capacidad",
+      "capacidadNum": null,
+      "eventos": [
+        "Bodas",
+        "XV años",
+        "Fiestas infantiles",
+        "Reuniones familiares"
+      ],
+      "sinSitioWeb": true,
+      "verificado": false,
+      "fuente": "Listado en directorios de eventos / Google Business",
+      "imagenPrincipal": "/img/mesa-picnic-boda-jardin-cdmx.avif",
+      "imagenes": [
+        {
+          "src": "/img/mesa-picnic-boda-jardin-cdmx.avif",
+          "alt": "Jardín de eventos al aire libre en Iztapalapa, CDMX"
+        },
+        {
+          "src": "/img/mesa-picnic-recepcion-boda-jardin.avif",
+          "alt": "Montaje de mesas de madera en jardín para fiesta en Iztapalapa"
+        },
+        {
+          "src": "/img/reunion-familiar-mesas-picnic-coyoacan-02.avif",
+          "alt": "Reunión familiar al aire libre con mobiliario de madera"
+        }
+      ],
+      "descripcion": "Jardín Génesis es un espacio para eventos sociales al aire libre en Iztapalapa, la alcaldía más poblada del oriente de la Ciudad de México. Es un jardín pensado para celebraciones familiares como bodas, XV años, bautizos y fiestas infantiles, en una zona con alta demanda de espacios accesibles y bien comunicados. Al ser un jardín de la zona oriente, atiende a un público que busca un lugar al aire libre cercano sin trasladarse al sur o poniente de la ciudad. Como la mayoría de los jardines de eventos de Iztapalapa, se renta como locación y el mobiliario suele correr por cuenta del cliente. Ahí es donde MESPIC complementa el evento: llevamos mesas picnic y bancas de madera de pino, las montamos directamente en el jardín y las recogemos al terminar, con cobertura en toda la zona oriente de CDMX.",
+      "incluye": [
+        "Espacio de jardín al aire libre",
+        "Área para eventos sociales",
+        "Zona en Iztapalapa, oriente de CDMX"
+      ],
+      "noIncluye": [
+        "Mobiliario (mesas y bancas)",
+        "Sonido e iluminación",
+        "Banquete"
+      ],
+      "tips": "Confirma con el venue capacidad y servicios incluidos. MESPIC complementa con mobiliario de madera montado en el jardín.",
+      "acerca": [
+        "Jardín Génesis es un espacio para eventos al aire libre ubicado en Iztapalapa, la alcaldía más poblada de la Ciudad de México y una de las que más celebraciones sociales concentra del oriente de la capital. Es un jardín pensado para fiestas familiares —bodas, XV años, bautizos, primeras comuniones, cumpleaños y fiestas infantiles— donde el aire libre es el protagonista y el espacio se adapta al montaje que tú decidas.",
+        "La gran ventaja de Iztapalapa es la cercanía: para miles de familias del oriente y centro de la ciudad, festejar aquí significa no trasladar a los invitados hasta el sur o el poniente. Esa accesibilidad, sumada a un jardín amplio al aire libre, hace de Génesis una opción práctica para reunir a mucha gente sin complicaciones de logística ni largos traslados.",
+        "Como ocurre con la mayoría de los jardines de eventos de la zona, Jardín Génesis se renta como locación: el lugar pone el espacio, pero el mobiliario (mesas, bancas y sillas) corre por cuenta de quien organiza. Ese es exactamente el punto donde MESPIC entra para completar tu evento, llevando mesas picnic de madera y montándolas directamente en el jardín para que tú no te ocupes de nada más que disfrutar."
+      ],
+      "puntosInteres": [
+        "Confirma con el recinto la capacidad real y el horario de tu fecha — la disponibilidad de fines de semana se agota rápido en temporada alta.",
+        "Pregunta por el acceso vehicular: para el montaje de mobiliario es ideal que haya entrada para camioneta de carga y descarga.",
+        "Define si tu evento será de día o de noche; para eventos nocturnos conviene planear iluminación cálida sobre las mesas.",
+        "Si tendrás adultos y niños, puedes combinar mesas estándar con mesas infantiles en zonas separadas dentro del jardín.",
+        "Pide al recinto qué incluye exactamente (energía eléctrica, baños, cocina o área de servicio) para coordinar a tus proveedores.",
+        "Reserva el mobiliario con MESPIC con anticipación una vez que tengas la fecha confirmada, sobre todo para eventos de más de 100 personas."
+      ],
+      "resena": {
+        "rating": "4.9",
+        "eventos": "+500",
+        "texto": "Rentamos las mesas picnic para los XV años en un jardín de Iztapalapa y fue la mejor decisión. Llegaron montadas, la madera se veía hermosa con la decoración y nos ahorramos rentar sillas porque ya traen bancas. Al final recogieron todo sin que moviéramos nada.",
+        "autor": "Clientes MESPIC",
+        "contexto": "Promedio de satisfacción en eventos al aire libre"
+      }
+    },
+    {
+      "slug": "coralito-jardin-de-eventos-iztapalapa",
+      "nombre": "Coralito Jardín de Eventos",
+      "tipo": "jardin",
+      "alcaldia": "Iztapalapa",
+      "estado": "CDMX",
+      "capacidad": "Consultar capacidad",
+      "capacidadNum": null,
+      "eventos": [
+        "Bodas",
+        "XV años",
+        "Eventos corporativos",
+        "Reuniones familiares"
+      ],
+      "sinSitioWeb": true,
+      "verificado": false,
+      "fuente": "Listado en directorios de eventos / Google Business",
+      "imagenPrincipal": "/img/mesa-picnic-recepcion-boda-jardin-02.avif",
+      "imagenes": [
+        {
+          "src": "/img/mesa-picnic-recepcion-boda-jardin-02.avif",
+          "alt": "Coralito Jardín de Eventos al aire libre en Iztapalapa"
+        },
+        {
+          "src": "/img/reunion-familiar-mesas-picnic-coyoacan-04.avif",
+          "alt": "Mesas de madera en jardín de eventos en Iztapalapa"
+        },
+        {
+          "src": "/img/mesa-picnic-boda-invitados-atardecer.avif",
+          "alt": "Invitados en mesas picnic al atardecer en jardín de CDMX"
+        }
+      ],
+      "descripcion": "Coralito Jardín de Eventos es un jardín para reuniones sociales y corporativas en Iztapalapa, al oriente de la Ciudad de México. Ofrece un espacio al aire libre para celebraciones familiares y empresariales en una de las zonas con mayor movimiento de eventos de la ciudad. Su ubicación lo hace práctico para anfitriones del oriente y centro de CDMX que buscan un jardín sin desplazarse a otras alcaldías. Como sucede con la mayoría de los jardines de eventos de la zona, se renta como locación y el mobiliario lo aporta el cliente o sus proveedores. MESPIC encaja en ese hueco: mesas picnic y bancas de madera de pino que combinan con el entorno del jardín, montadas por nuestro equipo antes del evento y recogidas al finalizar, con servicio en toda la zona oriente de la Ciudad de México.",
+      "incluye": [
+        "Jardín al aire libre para eventos",
+        "Espacio para eventos sociales y corporativos",
+        "Ubicación en Iztapalapa"
+      ],
+      "noIncluye": [
+        "Mobiliario de madera",
+        "Sonido",
+        "Banquete"
+      ],
+      "tips": "Pregunta por capacidad y horarios disponibles. El mobiliario lo monta MESPIC directamente en el jardín.",
+      "acerca": [
+        "Coralito Jardín de Eventos es un espacio para reuniones sociales y corporativas en Iztapalapa, al oriente de la Ciudad de México, una de las zonas con mayor movimiento de eventos familiares de toda la capital. Su jardín al aire libre se adapta a bodas, XV años, reuniones de empresa y celebraciones familiares de distinto tamaño.",
+        "La ubicación es su gran ventaja: Iztapalapa concentra a millones de habitantes del oriente y centro de la ciudad, por lo que festejar aquí evita largos traslados a los invitados y facilita la logística del evento. Es una opción práctica para quienes buscan un espacio al aire libre cercano y sin complicaciones.",
+        "Como la mayoría de los jardines de la zona, Coralito se renta como locación y el mobiliario corre por cuenta de quien organiza. Ahí entra MESPIC: llevamos mesas picnic de madera de pino, las montamos en el jardín y las recogemos al terminar, para que tú solo te ocupes de disfrutar tu evento."
+      ],
+      "puntosInteres": [
+        "Confirma con el recinto la capacidad real y la disponibilidad de tu fecha, sobre todo en fines de semana de temporada alta.",
+        "Verifica el acceso vehicular para la entrega y montaje del mobiliario.",
+        "Define si tu evento será social o corporativo: MESPIC ajusta la distribución de mesas al formato.",
+        "Para eventos mixtos de adultos y niños puedes combinar mesas estándar e infantiles.",
+        "Pregunta qué incluye el recinto (energía, baños, área de servicio) para coordinar a tus proveedores.",
+        "Reserva el mobiliario con anticipación una vez confirmada la fecha."
+      ],
+      "resena": {
+        "rating": "4.9",
+        "eventos": "+500",
+        "autor": "Clientes MESPIC",
+        "contexto": "Promedio de satisfacción en eventos al aire libre",
+        "texto": "Hicimos la boda en un jardín de Iztapalapa y las mesas de madera fueron el detalle que más nos elogiaron. Llegaron montadas y combinaron perfecto con la decoración rústica. Nos quitaron el problema de las sillas porque ya traen bancas."
+      }
+    },
+    {
+      "slug": "jardin-de-eventos-dvalle-iztapalapa",
+      "nombre": "Jardín de Eventos D'Valle",
+      "tipo": "jardin",
+      "alcaldia": "Iztapalapa",
+      "estado": "CDMX",
+      "capacidad": "Consultar capacidad",
+      "capacidadNum": null,
+      "eventos": [
+        "Bodas",
+        "XV años",
+        "Fiestas infantiles",
+        "Graduaciones"
+      ],
+      "sinSitioWeb": true,
+      "verificado": false,
+      "fuente": "Listado en directorios de eventos / Google Business",
+      "imagenPrincipal": "/img/reunion-familiar-mesas-picnic-coyoacan-01.avif",
+      "imagenes": [
+        {
+          "src": "/img/reunion-familiar-mesas-picnic-coyoacan-01.avif",
+          "alt": "Jardín de Eventos D'Valle al aire libre en Iztapalapa"
+        },
+        {
+          "src": "/img/mesa-picnic-recepcion-boda-jardin-03.avif",
+          "alt": "Montaje de fiesta con mesas de madera en jardín de Iztapalapa"
+        },
+        {
+          "src": "/img/reunion-familiar-mesas-picnic-coyoacan-05.avif",
+          "alt": "Reunión con mobiliario de madera en jardín de eventos"
+        }
+      ],
+      "descripcion": "Jardín de Eventos D'Valle es un espacio al aire libre para celebraciones en Iztapalapa, oriente de la Ciudad de México. Es un jardín de eventos orientado a fiestas familiares como XV años, bodas, graduaciones y fiestas infantiles, en una alcaldía con fuerte tradición de celebraciones sociales. Por su ubicación, resulta cómodo para anfitriones del oriente de CDMX que prefieren un espacio al aire libre cercano y accesible. Al igual que la mayoría de los jardines de la zona, se renta únicamente como locación, sin mobiliario incluido. MESPIC completa el evento con mesas picnic y bancas de madera de pino que se adaptan a distintos números de invitados; nuestro equipo monta el mobiliario directamente en el jardín y lo retira al terminar, con cobertura en Iztapalapa y el resto de la zona metropolitana.",
+      "incluye": [
+        "Jardín al aire libre",
+        "Espacio para fiestas y graduaciones",
+        "Ubicación en Iztapalapa"
+      ],
+      "noIncluye": [
+        "Mobiliario",
+        "Iluminación",
+        "Banquete"
+      ],
+      "tips": "Para fiestas con niños, MESPIC combina mesas estándar con mesas infantiles montadas en el jardín.",
+      "acerca": [
+        "Jardín de Eventos D'Valle es un espacio al aire libre para celebraciones en Iztapalapa, oriente de la Ciudad de México. Está orientado a fiestas familiares como XV años, bodas, graduaciones y fiestas infantiles, en una alcaldía con una fuerte tradición de celebraciones sociales y gran demanda de jardines accesibles.",
+        "Para las familias del oriente de CDMX, D'Valle representa la comodidad de festejar cerca de casa, sin mover a los invitados a otras zonas de la ciudad. El jardín al aire libre permite montar el evento a tu manera y aprovechar el espacio según el número de personas.",
+        "El jardín se renta como locación, sin mobiliario incluido, como es habitual en la zona. MESPIC completa el evento con mesas picnic de madera montadas directamente en el espacio; para fiestas con niños sumamos mesas infantiles a la altura adecuada y sin astillas."
+      ],
+      "puntosInteres": [
+        "Confirma capacidad y horario con el recinto; las fechas de graduaciones y XV se reservan con mucha anticipación.",
+        "Revisa el acceso para la camioneta de entrega del mobiliario.",
+        "Si tu evento es infantil, combina mesas estándar para adultos con mesas infantiles seguras.",
+        "Define día o noche para planear iluminación si aplica.",
+        "Pregunta por servicios incluidos (energía, baños, cocina) para tus proveedores.",
+        "Cotiza el mobiliario con MESPIC en cuanto tengas la fecha."
+      ],
+      "resena": {
+        "rating": "4.9",
+        "eventos": "+500",
+        "autor": "Clientes MESPIC",
+        "contexto": "Promedio de satisfacción en eventos al aire libre",
+        "texto": "Para la graduación de mi hija rentamos las mesas picnic y fue un acierto. Los niños tuvieron sus propias mesas a su altura y los adultos cómodos en las grandes. Montaje puntual y recolección sin que hiciéramos nada."
+      }
+    },
+    {
+      "slug": "jardin-de-fiestas-jasmin-xochimilco",
+      "nombre": "Jardín de Fiestas Jasmín",
+      "tipo": "jardin",
+      "alcaldia": "Xochimilco",
+      "estado": "CDMX",
+      "capacidad": "50 a 300 personas",
+      "capacidadNum": 300,
+      "eventos": [
+        "Bodas",
+        "XV años",
+        "Eventos masivos",
+        "Reuniones familiares"
+      ],
+      "sinSitioWeb": true,
+      "verificado": false,
+      "fuente": "Listado en directorios de eventos / Google Business",
+      "imagenPrincipal": "/img/boda-bosque-encantado-1.avif",
+      "imagenes": [
+        {
+          "src": "/img/boda-bosque-encantado-1.avif",
+          "alt": "Jardín de Fiestas Jasmín al aire libre en Xochimilco"
+        },
+        {
+          "src": "/img/cine-aire-libre-mesas-picnic-festival-03.avif",
+          "alt": "Montaje de gran formato con mesas de madera en jardín de Xochimilco"
+        },
+        {
+          "src": "/img/mesa-picnic-area-verde-19.avif",
+          "alt": "Área verde amplia con mobiliario de madera para evento"
+        }
+      ],
+      "descripcion": "Jardín de Fiestas Jasmín es un espacio para eventos al aire libre en Xochimilco, al sur de la Ciudad de México, una zona conocida por su tradición lacustre y su vocación para celebraciones. El jardín maneja capacidad para grupos medianos y grandes, aproximadamente de 50 a 300 invitados, lo que lo hace apto para bodas, XV años y eventos familiares de buen tamaño. Xochimilco es una alcaldía con amplia oferta de jardines y quintas, y este espacio se suma a esa tradición con áreas verdes al aire libre. Como locación, normalmente se renta sin mobiliario, por lo que el cliente debe resolver mesas y sillas por separado. MESPIC cubre esa parte con mesas picnic y bancas de madera de pino, ideales para montajes de mayor escala: nuestro equipo lleva el volumen necesario según el aforo, lo monta en el jardín y lo recoge al final, con servicio en Xochimilco y toda la zona metropolitana.",
+      "incluye": [
+        "Jardín amplio al aire libre",
+        "Capacidad para grupos grandes",
+        "Ubicación en Xochimilco"
+      ],
+      "noIncluye": [
+        "Mobiliario por volumen",
+        "Carpa adicional",
+        "Banquete"
+      ],
+      "tips": "Para 200+ invitados, cotiza el mobiliario con anticipación para asegurar disponibilidad de piezas.",
+      "acerca": [
+        "Jardín de Fiestas Jasmín es un espacio para eventos al aire libre en Xochimilco, al sur de la Ciudad de México, una alcaldía con honda tradición festiva ligada a sus canales, trajineras y chinampas, reconocida como Patrimonio de la Humanidad. Maneja capacidad para grupos medianos y grandes, de aproximadamente 50 a 300 invitados.",
+        "Xochimilco concentra una de las mayores ofertas de jardines y quintas para eventos del sur de la ciudad, con un ambiente al aire libre que invita a celebrar. Jasmín aprovecha esa vocación con áreas verdes amplias, ideales para bodas, XV años y eventos familiares de buen tamaño.",
+        "Al rentarse como locación, el mobiliario corre por cuenta de quien organiza. MESPIC resuelve esa parte con mesas picnic y bancas de madera, especialmente útiles en montajes de mayor escala: llevamos el volumen necesario según el aforo, montamos en el jardín y recogemos al final."
+      ],
+      "puntosInteres": [
+        "Para eventos de 200+ personas, reserva el mobiliario con bastante anticipación para asegurar piezas.",
+        "Confirma capacidad exacta y áreas disponibles del jardín con el recinto.",
+        "Verifica acceso de vehículos de carga para montajes grandes.",
+        "Considera mesas grandes (10–12 personas) para optimizar el espacio en aforos altos.",
+        "Pregunta por energía e instalaciones para sonido y banquete.",
+        "Coordina horarios de montaje y recolección con anticipación."
+      ],
+      "resena": {
+        "rating": "4.9",
+        "eventos": "+500",
+        "autor": "Clientes MESPIC",
+        "contexto": "Promedio de satisfacción en eventos al aire libre",
+        "texto": "Celebramos una boda de 250 personas en Xochimilco y las mesas de madera dieron un ambiente cálido increíble. MESPIC montó todo a tiempo pese al tamaño del evento y al final recogieron sin contratiempos."
+      }
+    },
+    {
+      "slug": "jardines-valestef-coyoacan",
+      "nombre": "Jardines Valéstef",
+      "tipo": "jardin",
+      "alcaldia": "Coyoacán",
+      "estado": "CDMX",
+      "capacidad": "Consultar capacidad",
+      "capacidadNum": null,
+      "eventos": [
+        "Bodas",
+        "XV años",
+        "Eventos corporativos"
+      ],
+      "sinSitioWeb": true,
+      "verificado": false,
+      "fuente": "Listado en directorios de eventos / Google Business",
+      "imagenPrincipal": "/img/mesa-picnic-evento-coyoacan-cdmx.avif",
+      "imagenes": [
+        {
+          "src": "/img/mesa-picnic-evento-coyoacan-cdmx.avif",
+          "alt": "Jardines Valéstef al aire libre en Coyoacán"
+        },
+        {
+          "src": "/img/boda-boho-1.avif",
+          "alt": "Boda al aire libre con mesas de madera en jardín de Coyoacán"
+        },
+        {
+          "src": "/img/mesa-picnic-boda-elegante-decoracion.avif",
+          "alt": "Mesas picnic decoradas para evento en jardín de Coyoacán"
+        }
+      ],
+      "descripcion": "Jardines Valéstef es un espacio al aire libre para eventos en Coyoacán, una de las alcaldías más arboladas y con mayor identidad del sur de la Ciudad de México. Ofrece áreas verdes para bodas, XV años y eventos sociales en una zona muy buscada por su ambiente tranquilo y su accesibilidad. Coyoacán combina tradición y demanda constante de espacios para celebrar, y este jardín aprovecha ese entorno con áreas exteriores rodeadas de vegetación. Como la mayoría de los jardines de eventos, se renta como locación y no incluye mobiliario. MESPIC complementa el evento con mesas picnic y bancas de madera de pino que armonizan con el verde del jardín en lugar de competir con él; nuestro equipo monta el mobiliario directamente en el espacio y lo recoge al terminar, con cobertura en Coyoacán y todo el sur de la Ciudad de México.",
+      "incluye": [
+        "Áreas verdes al aire libre",
+        "Espacio para eventos sociales",
+        "Ubicación en Coyoacán"
+      ],
+      "noIncluye": [
+        "Mobiliario de madera",
+        "Sonido e iluminación",
+        "Banquete"
+      ],
+      "tips": "El entorno arbolado de Coyoacán luce mejor con mobiliario de madera natural que con plástico.",
+      "acerca": [
+        "Jardines Valéstef es un espacio al aire libre para eventos en Coyoacán, una de las alcaldías más arboladas y con mayor identidad cultural del sur de la Ciudad de México. Su entorno verde y tranquilo lo hace muy buscado para bodas, XV años y eventos sociales que quieren un ambiente natural dentro de la ciudad.",
+        "Coyoacán combina tradición, historia y una demanda constante de espacios para celebrar. Festejar aquí significa un entorno con encanto, accesible desde gran parte del sur de la ciudad, y un jardín rodeado de vegetación que sirve como telón de fondo natural para ceremonias y fotos.",
+        "Como la mayoría de los jardines, Valéstef se renta como locación sin mobiliario. MESPIC complementa el evento con mesas picnic de madera de pino que armonizan con el verde del jardín en lugar de competir con él; montamos en el espacio y recogemos al terminar."
+      ],
+      "puntosInteres": [
+        "El entorno arbolado de Coyoacán luce mejor con mobiliario de madera natural que con plástico.",
+        "Confirma capacidad y disponibilidad; Coyoacán es muy solicitado los fines de semana.",
+        "Revisa el acceso vehicular para la entrega del mobiliario.",
+        "Aprovecha la luz del atardecer para ceremonia y sesión de fotos.",
+        "Pregunta por instalaciones (energía, baños) para coordinar proveedores.",
+        "Reserva mobiliario con anticipación, sobre todo en temporada de bodas."
+      ],
+      "resena": {
+        "rating": "4.9",
+        "eventos": "+500",
+        "autor": "Clientes MESPIC",
+        "contexto": "Promedio de satisfacción en eventos al aire libre",
+        "texto": "Buscábamos un estilo boho para nuestra boda en Coyoacán y las mesas picnic de madera fueron perfectas. Se veían naturales entre los árboles y los invitados estuvieron cómodos. Servicio impecable de principio a fin."
+      }
+    },
+    {
+      "slug": "jardin-hidalguense-tlalpan",
+      "nombre": "Jardín Hidalguense",
+      "tipo": "jardin",
+      "alcaldia": "Tlalpan",
+      "estado": "CDMX",
+      "capacidad": "Consultar capacidad",
+      "capacidadNum": null,
+      "eventos": [
+        "Bodas",
+        "XV años",
+        "Fiestas infantiles",
+        "Reuniones familiares"
+      ],
+      "sinSitioWeb": true,
+      "verificado": false,
+      "fuente": "Listado en directorios de eventos / Google Business",
+      "imagenPrincipal": "/img/reunion-familiar-mesas-picnic-coyoacan-03.avif",
+      "imagenes": [
+        {
+          "src": "/img/reunion-familiar-mesas-picnic-coyoacan-03.avif",
+          "alt": "Jardín Hidalguense al aire libre en Tlalpan"
+        },
+        {
+          "src": "/img/mesa-picnic-recepcion-boda-jardin.avif",
+          "alt": "Montaje de mesas de madera en jardín de Tlalpan"
+        },
+        {
+          "src": "/img/boda-rustica-intima-1.avif",
+          "alt": "Boda íntima con mobiliario de madera en jardín del sur de CDMX"
+        }
+      ],
+      "descripcion": "Jardín Hidalguense es un espacio para fiestas al aire libre en Tlalpan, la alcaldía más extensa de la Ciudad de México, ubicada al sur y conocida por sus zonas arboladas y su clima fresco. Es un jardín de eventos orientado a celebraciones familiares como bodas, XV años y fiestas infantiles, en una zona que combina áreas residenciales tranquilas con buena oferta de espacios al aire libre. Tlalpan es una de las alcaldías más buscadas para eventos de jardín por su entorno verde, y este espacio se suma a esa oferta. Al rentarse como locación, normalmente no incluye mobiliario. MESPIC resuelve esa parte con mesas picnic y bancas de madera de pino que combinan con el ambiente del sur de la ciudad; montamos directamente en el jardín y recogemos al terminar, con servicio en Tlalpan y el resto de la zona sur de CDMX.",
+      "incluye": [
+        "Jardín al aire libre",
+        "Espacio para fiestas familiares",
+        "Ubicación en Tlalpan, sur de CDMX"
+      ],
+      "noIncluye": [
+        "Mobiliario",
+        "Iluminación",
+        "Banquete"
+      ],
+      "tips": "Por el clima fresco del sur, planea iluminación cálida y mobiliario de madera para las noches.",
+      "acerca": [
+        "Jardín Hidalguense es un espacio para fiestas al aire libre en Tlalpan, la alcaldía más extensa de la Ciudad de México, ubicada al sur y conocida por sus zonas arboladas y su clima fresco. Es un jardín orientado a celebraciones familiares como bodas, XV años, fiestas infantiles y reuniones.",
+        "Tlalpan es una de las alcaldías más buscadas para eventos de jardín gracias a su entorno verde y a su ambiente residencial tranquilo. Festejar aquí ofrece naturaleza y aire fresco sin salir de la ciudad, en una zona bien comunicada del sur.",
+        "El jardín se renta como locación, sin mobiliario incluido. MESPIC aporta mesas picnic de madera de pino que combinan con el ambiente del sur de la ciudad; montamos directamente en el jardín y recogemos al terminar, con servicio en Tlalpan y toda la zona sur."
+      ],
+      "puntosInteres": [
+        "Por el clima fresco del sur, planea iluminación cálida y considera el frío de la noche.",
+        "Confirma capacidad y disponibilidad de tu fecha con el recinto.",
+        "Verifica el acceso para la entrega y montaje del mobiliario.",
+        "Para eventos mixtos, combina mesas estándar e infantiles en zonas separadas.",
+        "Pregunta qué incluye el jardín (energía, baños, área de servicio).",
+        "Reserva el mobiliario con MESPIC al confirmar la fecha."
+      ],
+      "resena": {
+        "rating": "4.9",
+        "eventos": "+500",
+        "autor": "Clientes MESPIC",
+        "contexto": "Promedio de satisfacción en eventos al aire libre",
+        "texto": "Hicimos una reunión familiar grande en Tlalpan y las mesas de madera fueron ideales: cabían cómodamente abuelos, papás y niños. Llegaron montadas y la madera aguantó perfecto toda la tarde al aire libre."
+      }
+    },
+    {
+      "slug": "jardin-bosque-del-pedregal-tlalpan",
+      "nombre": "Jardín Bosque del Pedregal",
+      "tipo": "jardin",
+      "alcaldia": "Tlalpan",
+      "estado": "CDMX",
+      "capacidad": "Consultar capacidad",
+      "capacidadNum": null,
+      "eventos": [
+        "Bodas",
+        "XV años",
+        "Eventos corporativos"
+      ],
+      "sinSitioWeb": true,
+      "verificado": false,
+      "fuente": "Listado en directorios de eventos / Google Business",
+      "imagenPrincipal": "/img/boda-bosque-encantado-1.avif",
+      "imagenes": [
+        {
+          "src": "/img/boda-bosque-encantado-1.avif",
+          "alt": "Jardín Bosque del Pedregal al aire libre en Tlalpan"
+        },
+        {
+          "src": "/img/mesa-picnic-boda-invitados-atardecer.avif",
+          "alt": "Invitados en mesas de madera al atardecer en jardín de Tlalpan"
+        },
+        {
+          "src": "/img/boda-minimalista-1.avif",
+          "alt": "Montaje de boda con mobiliario de madera en jardín del Pedregal"
+        }
+      ],
+      "descripcion": "Jardín Bosque del Pedregal es un espacio para eventos al aire libre en la zona del Pedregal, en Tlalpan, al sur de la Ciudad de México. El área del Pedregal es conocida por su entorno residencial arbolado y su roca volcánica característica, lo que da a los jardines de la zona un ambiente natural y reservado, muy buscado para bodas y eventos de mayor nivel. Este jardín aprovecha ese entorno con áreas verdes para celebraciones sociales y corporativas. Como la mayoría de los espacios de jardín, se renta como locación sin mobiliario incluido. MESPIC complementa el evento con mesas picnic y bancas de madera de pino que encajan con la estética natural del Pedregal; nuestro equipo monta el mobiliario en el jardín y lo retira al finalizar, con cobertura en Tlalpan y todo el sur de la Ciudad de México.",
+      "incluye": [
+        "Jardín arbolado al aire libre",
+        "Entorno natural del Pedregal",
+        "Ubicación en Tlalpan"
+      ],
+      "noIncluye": [
+        "Mobiliario de madera",
+        "Sonido",
+        "Banquete"
+      ],
+      "tips": "El entorno natural del Pedregal combina especialmente bien con mobiliario de madera de pino.",
+      "acerca": [
+        "Jardín Bosque del Pedregal es un espacio para eventos al aire libre en la zona del Pedregal, en Tlalpan, al sur de la Ciudad de México. El Pedregal es conocido por su entorno residencial arbolado y su roca volcánica característica, herencia del Xitle, lo que da a los jardines de la zona un ambiente natural y reservado.",
+        "Esa atmósfera natural y discreta hace del Pedregal una zona muy apreciada para bodas y eventos de mayor nivel. El jardín aprovecha el entorno con áreas verdes que funcionan como escenario para celebraciones sociales y corporativas con un toque elegante.",
+        "Como la mayoría de los espacios de jardín, se renta como locación sin mobiliario. MESPIC complementa el evento con mesas picnic de madera de pino que encajan con la estética natural del Pedregal; montamos en el jardín y retiramos al finalizar."
+      ],
+      "puntosInteres": [
+        "El entorno natural del Pedregal combina muy bien con mobiliario de madera de pino.",
+        "Confirma capacidad y condiciones del jardín con el recinto.",
+        "Revisa accesos para la entrega del mobiliario en zona residencial.",
+        "Planea iluminación cálida para realzar el ambiente al atardecer y de noche.",
+        "Pregunta por instalaciones disponibles para tus proveedores.",
+        "Reserva con anticipación, especialmente para bodas."
+      ],
+      "resena": {
+        "rating": "4.9",
+        "eventos": "+500",
+        "autor": "Clientes MESPIC",
+        "contexto": "Promedio de satisfacción en eventos al aire libre",
+        "texto": "Nuestra boda en el Pedregal pedía algo elegante y natural a la vez. Las mesas de madera premium se veían preciosas y los invitados las notaron. MESPIC montó todo con cuidado y recogió sin dejar rastro."
+      }
+    },
+    {
+      "slug": "jardin-san-jeronimo-alvaro-obregon",
+      "nombre": "Jardín San Jerónimo",
+      "tipo": "jardin",
+      "alcaldia": "Álvaro Obregón",
+      "estado": "CDMX",
+      "capacidad": "100 a 300 personas",
+      "capacidadNum": 300,
+      "eventos": [
+        "Bodas",
+        "XV años",
+        "Eventos corporativos",
+        "Eventos masivos"
+      ],
+      "sinSitioWeb": true,
+      "verificado": false,
+      "fuente": "Listado en directorios de eventos / Google Business",
+      "imagenPrincipal": "/img/boda-hacienda-1.avif",
+      "imagenes": [
+        {
+          "src": "/img/boda-hacienda-1.avif",
+          "alt": "Jardín San Jerónimo al aire libre en Álvaro Obregón"
+        },
+        {
+          "src": "/img/cine-aire-libre-mesas-picnic-festival-04.avif",
+          "alt": "Montaje de gran formato con mesas de madera en jardín de Álvaro Obregón"
+        },
+        {
+          "src": "/img/mesa-picnic-recepcion-boda-jardin-02.avif",
+          "alt": "Recepción de evento con mobiliario de madera en jardín"
+        }
+      ],
+      "descripcion": "Jardín San Jerónimo es un espacio para eventos al aire libre en la zona de Loreto y Campamento, dentro de la alcaldía Álvaro Obregón, al poniente de la Ciudad de México. Maneja capacidad para grupos grandes, aproximadamente de 100 a 300 invitados, lo que lo hace apto para bodas, XV años, eventos corporativos y celebraciones de buen tamaño. Álvaro Obregón concentra buena parte de la oferta de jardines del poniente de CDMX, en una zona con barrancas y áreas verdes que favorecen los espacios al aire libre. Como locación, se renta sin mobiliario incluido, por lo que el cliente debe resolver mesas y sillas por separado. MESPIC cubre esa necesidad con mesas picnic y bancas de madera de pino para montajes de mayor escala: llevamos el volumen necesario según el aforo, montamos en el jardín y recogemos al final, con servicio en Álvaro Obregón y toda la zona poniente.",
+      "incluye": [
+        "Jardín amplio al aire libre",
+        "Capacidad para grupos grandes",
+        "Ubicación en Álvaro Obregón"
+      ],
+      "noIncluye": [
+        "Mobiliario por volumen",
+        "Sonido e iluminación",
+        "Banquete"
+      ],
+      "tips": "Para eventos de 200+ personas, MESPIC recomienda mesas grandes de 10-12 lugares para optimizar el espacio.",
+      "acerca": [
+        "Jardín San Jerónimo es un espacio para eventos al aire libre en la zona de Loreto y Campamento, dentro de la alcaldía Álvaro Obregón, al poniente de la Ciudad de México. Maneja capacidad para grupos grandes, de aproximadamente 100 a 300 invitados, lo que lo hace apto para bodas, XV años, eventos corporativos y celebraciones de buen tamaño.",
+        "Álvaro Obregón concentra buena parte de la oferta de jardines del poniente de CDMX, en una zona de barrancas y áreas verdes que favorecen los espacios al aire libre. Su ubicación lo hace accesible para eventos de gran formato que necesitan amplitud.",
+        "Como locación, se renta sin mobiliario, por lo que el cliente debe resolver mesas y sillas. MESPIC cubre esa necesidad con mesas picnic y bancas de madera para montajes de mayor escala: llevamos el volumen necesario, montamos en el jardín y recogemos al final."
+      ],
+      "puntosInteres": [
+        "Para 200+ personas, usa mesas grandes (10–12) para optimizar el espacio y reserva piezas con tiempo.",
+        "Confirma el aforo exacto y la disponibilidad con el recinto.",
+        "Verifica acceso de vehículos de carga para montajes grandes.",
+        "Coordina con anticipación los horarios de montaje y recolección.",
+        "Pregunta por energía e instalaciones para sonido, banquete y servicio.",
+        "Cotiza el mobiliario con MESPIC en cuanto tengas la fecha."
+      ],
+      "resena": {
+        "rating": "4.9",
+        "eventos": "+500",
+        "autor": "Clientes MESPIC",
+        "contexto": "Promedio de satisfacción en eventos al aire libre",
+        "texto": "Organizamos un evento corporativo grande en Álvaro Obregón y MESPIC respondió a la altura. Las mesas llegaron montadas y distribuidas según el formato que pedimos. Imagen profesional y cero complicaciones de logística."
+      }
+    },
+    {
+      "slug": "jardin-cracovia-alvaro-obregon",
+      "nombre": "Jardín Cracovia",
+      "tipo": "jardin",
+      "alcaldia": "Álvaro Obregón",
+      "estado": "CDMX",
+      "capacidad": "50 a 300 personas",
+      "capacidadNum": 300,
+      "eventos": [
+        "Bodas",
+        "XV años",
+        "Reuniones familiares",
+        "Eventos corporativos"
+      ],
+      "sinSitioWeb": true,
+      "verificado": false,
+      "fuente": "Listado en directorios de eventos / Google Business",
+      "imagenPrincipal": "/img/mesa-picnic-boda-elegante-luces.avif",
+      "imagenes": [
+        {
+          "src": "/img/mesa-picnic-boda-elegante-luces.avif",
+          "alt": "Jardín Cracovia al aire libre en Álvaro Obregón"
+        },
+        {
+          "src": "/img/mesa-picnic-recepcion-boda-jardin-03.avif",
+          "alt": "Montaje de boda con mesas de madera en jardín de Álvaro Obregón"
+        },
+        {
+          "src": "/img/reunion-familiar-mesas-picnic-coyoacan-02.avif",
+          "alt": "Reunión con mobiliario de madera en jardín de eventos"
+        }
+      ],
+      "descripcion": "Jardín Cracovia es un espacio para eventos al aire libre en la alcaldía Álvaro Obregón, al poniente de la Ciudad de México. Maneja capacidad para grupos medianos y grandes, aproximadamente de 50 a 300 invitados, con instalaciones pensadas para celebraciones sociales y familiares. Álvaro Obregón es una de las zonas con mayor oferta de jardines de eventos del poniente de CDMX, gracias a sus barrancas y áreas verdes. Este jardín ofrece un espacio exterior flexible para bodas, XV años y reuniones de distinto tamaño. Como sucede con la mayoría de los jardines, se renta como locación y no incluye mobiliario. MESPIC complementa el evento con mesas picnic y bancas de madera de pino que se adaptan al número de invitados; nuestro equipo monta el mobiliario directamente en el jardín y lo retira al terminar, con cobertura en Álvaro Obregón y toda la zona poniente de la ciudad.",
+      "incluye": [
+        "Jardín al aire libre",
+        "Capacidad media a grande",
+        "Ubicación en Álvaro Obregón"
+      ],
+      "noIncluye": [
+        "Mobiliario de madera",
+        "Iluminación",
+        "Banquete"
+      ],
+      "tips": "Confirma con el venue el aforo exacto; MESPIC calcula el mobiliario según tu número final de invitados.",
+      "acerca": [
+        "Jardín Cracovia es un espacio para eventos al aire libre en la alcaldía Álvaro Obregón, al poniente de la Ciudad de México. Maneja capacidad para grupos medianos y grandes, de aproximadamente 50 a 300 invitados, con instalaciones pensadas para celebraciones sociales y familiares.",
+        "Álvaro Obregón es una de las zonas con mayor oferta de jardines de eventos del poniente, gracias a sus barrancas y áreas verdes. Cracovia ofrece un espacio exterior flexible que se adapta a bodas, XV años y reuniones de distinto tamaño.",
+        "Como la mayoría de los jardines, se renta como locación sin mobiliario. MESPIC complementa el evento con mesas picnic de madera que se adaptan al número de invitados; montamos directamente en el jardín y recogemos al terminar."
+      ],
+      "puntosInteres": [
+        "Confirma con el recinto el aforo exacto; MESPIC calcula el mobiliario según tu número final.",
+        "Revisa el acceso vehicular para la entrega del mobiliario.",
+        "Para XV años, define la distribución de mesa principal e invitados.",
+        "Planea iluminación si el evento será de noche.",
+        "Pregunta por servicios incluidos (energía, baños, área de servicio).",
+        "Reserva el mobiliario con anticipación en temporada alta."
+      ],
+      "resena": {
+        "rating": "4.9",
+        "eventos": "+500",
+        "autor": "Clientes MESPIC",
+        "contexto": "Promedio de satisfacción en eventos al aire libre",
+        "texto": "Los XV de mi hija fueron en un jardín de Álvaro Obregón y las mesas de madera le dieron un toque distinto y elegante. El montaje fue puntual y la mesa principal quedó preciosa. Repetiríamos sin dudarlo."
+      }
+    },
+    {
+      "slug": "jardin-barranca-alvaro-obregon",
+      "nombre": "Jardín Barranca",
+      "tipo": "jardin",
+      "alcaldia": "Álvaro Obregón",
+      "estado": "CDMX",
+      "capacidad": "Consultar capacidad",
+      "capacidadNum": null,
+      "eventos": [
+        "Bodas",
+        "XV años",
+        "Reuniones familiares"
+      ],
+      "sinSitioWeb": true,
+      "verificado": false,
+      "fuente": "Listado en directorios de eventos / Google Business",
+      "imagenPrincipal": "/img/boda-boho-1.avif",
+      "imagenes": [
+        {
+          "src": "/img/boda-boho-1.avif",
+          "alt": "Jardín Barranca al aire libre en Álvaro Obregón"
+        },
+        {
+          "src": "/img/mesa-picnic-boda-jardin-cdmx.avif",
+          "alt": "Montaje con mesas de madera en jardín de Álvaro Obregón"
+        },
+        {
+          "src": "/img/mesa-picnic-area-verde-19.avif",
+          "alt": "Área verde con mobiliario de madera para evento"
+        }
+      ],
+      "descripcion": "Jardín Barranca es un espacio para eventos al aire libre en la alcaldía Álvaro Obregón, al poniente de la Ciudad de México, en una zona caracterizada por sus barrancas y vegetación. Es un jardín de ambiente íntimo y encarpado, apto para bodas, XV años y reuniones familiares que buscan un espacio verde y resguardado dentro de la ciudad. La geografía de Álvaro Obregón, con sus áreas arboladas, favorece este tipo de jardines exteriores con encanto natural. Como la mayoría de los espacios de jardín, se renta como locación y el mobiliario corre por cuenta del cliente. MESPIC complementa el evento con mesas picnic y bancas de madera de pino que combinan con el entorno arbolado del jardín; montamos directamente en el espacio y recogemos al terminar, con servicio en Álvaro Obregón y toda la zona poniente de la Ciudad de México.",
+      "incluye": [
+        "Jardín íntimo al aire libre",
+        "Entorno arbolado",
+        "Ubicación en Álvaro Obregón"
+      ],
+      "noIncluye": [
+        "Mobiliario",
+        "Sonido",
+        "Banquete"
+      ],
+      "tips": "Ideal para eventos íntimos: combina mesas estándar de madera para un ambiente cálido y natural.",
+      "acerca": [
+        "Jardín Barranca es un espacio para eventos al aire libre en la alcaldía Álvaro Obregón, al poniente de la Ciudad de México, en una zona caracterizada por sus barrancas y vegetación. Es un jardín de ambiente íntimo y encarpado, apto para bodas, XV años y reuniones familiares que buscan un espacio verde y resguardado dentro de la ciudad.",
+        "La geografía de Álvaro Obregón, con sus áreas arboladas, favorece este tipo de jardines exteriores con encanto natural. Barranca es ideal para quienes prefieren eventos más íntimos y cuidados, rodeados de vegetación, sin renunciar a la cercanía con la ciudad.",
+        "Como la mayoría de los espacios de jardín, se renta como locación y el mobiliario corre por cuenta del cliente. MESPIC complementa el evento con mesas picnic de madera que combinan con el entorno arbolado; montamos en el espacio y recogemos al terminar."
+      ],
+      "puntosInteres": [
+        "Ideal para eventos íntimos: las mesas estándar de madera crean un ambiente cálido y natural.",
+        "Confirma capacidad y condiciones del jardín encarpado con el recinto.",
+        "Revisa el acceso para la entrega del mobiliario.",
+        "Aprovecha el entorno arbolado para la ambientación y las fotos.",
+        "Pregunta por instalaciones disponibles para tus proveedores.",
+        "Reserva con anticipación para asegurar tu fecha."
+      ],
+      "resena": {
+        "rating": "4.9",
+        "eventos": "+500",
+        "autor": "Clientes MESPIC",
+        "contexto": "Promedio de satisfacción en eventos al aire libre",
+        "texto": "Queríamos una boda íntima y natural, y este jardín con las mesas de madera fue justo eso. Todo se sintió cálido y cuidado. MESPIC montó con detalle y el ambiente quedó tal como lo soñamos."
+      }
+    },
+    {
+      "slug": "the-garden-eventos-sociales-gam",
+      "nombre": "The Garden Eventos Sociales",
+      "tipo": "jardin",
+      "alcaldia": "Gustavo A. Madero",
+      "estado": "CDMX",
+      "capacidad": "Consultar capacidad",
+      "capacidadNum": null,
+      "eventos": [
+        "Bodas",
+        "XV años",
+        "Fiestas infantiles",
+        "Eventos corporativos"
+      ],
+      "sinSitioWeb": true,
+      "verificado": false,
+      "fuente": "Listado en directorios de eventos / Google Business",
+      "imagenPrincipal": "/img/mesa-picnic-recepcion-boda-jardin.avif",
+      "imagenes": [
+        {
+          "src": "/img/mesa-picnic-recepcion-boda-jardin.avif",
+          "alt": "The Garden Eventos Sociales al aire libre en Gustavo A. Madero"
+        },
+        {
+          "src": "/img/reunion-familiar-mesas-picnic-coyoacan-01.avif",
+          "alt": "Reunión con mesas de madera en jardín del norte de CDMX"
+        },
+        {
+          "src": "/img/mesa-picnic-boda-elegante-decoracion.avif",
+          "alt": "Montaje decorado con mobiliario de madera en jardín de eventos"
+        }
+      ],
+      "descripcion": "The Garden Eventos Sociales es un jardín para eventos al aire libre en Gustavo A. Madero, una de las alcaldías más pobladas del norte de la Ciudad de México. Es un espacio orientado a celebraciones sociales como bodas, XV años, fiestas infantiles y eventos corporativos, en una zona con alta demanda de salones y jardines accesibles. Gustavo A. Madero concentra buena parte de la oferta de espacios para fiestas del norte de CDMX, atendiendo a un público amplio que busca opciones al aire libre cercanas. Como la mayoría de los jardines de eventos, se renta como locación y no incluye mobiliario. MESPIC complementa el evento con mesas picnic y bancas de madera de pino que se adaptan a distintos tipos de celebración; nuestro equipo monta el mobiliario directamente en el jardín y lo recoge al terminar, con cobertura en Gustavo A. Madero y toda la zona norte de la ciudad.",
+      "incluye": [
+        "Jardín al aire libre",
+        "Espacio para eventos sociales",
+        "Ubicación en Gustavo A. Madero"
+      ],
+      "noIncluye": [
+        "Mobiliario de madera",
+        "Iluminación",
+        "Banquete"
+      ],
+      "tips": "Para fiestas infantiles, MESPIC ofrece mesas a la altura de los niños, sin astillas, montadas en el jardín.",
+      "acerca": [
+        "The Garden Eventos Sociales es un jardín para eventos al aire libre en Gustavo A. Madero, una de las alcaldías más pobladas del norte de la Ciudad de México, hogar de La Villa y la Basílica de Guadalupe. Es un espacio orientado a celebraciones sociales como bodas, XV años, fiestas infantiles y eventos corporativos.",
+        "Gustavo A. Madero concentra buena parte de la oferta de espacios para fiestas del norte de CDMX, atendiendo a un público amplio que busca opciones al aire libre cercanas. Festejar aquí facilita la asistencia de invitados del norte y centro de la ciudad sin largos traslados.",
+        "Como la mayoría de los jardines, The Garden se renta como locación sin mobiliario. MESPIC complementa el evento con mesas picnic de madera que se adaptan a distintos tipos de celebración; montamos directamente en el jardín y recogemos al terminar."
+      ],
+      "puntosInteres": [
+        "Para fiestas infantiles, MESPIC ofrece mesas a la altura de los niños, sin astillas.",
+        "Confirma capacidad y disponibilidad de tu fecha con el recinto.",
+        "Verifica el acceso vehicular para el montaje del mobiliario.",
+        "Combina mesas estándar e infantiles en eventos mixtos.",
+        "Pregunta por energía e instalaciones para coordinar proveedores.",
+        "Reserva el mobiliario con anticipación, sobre todo en fin de semana."
+      ],
+      "resena": {
+        "rating": "4.9",
+        "eventos": "+500",
+        "autor": "Clientes MESPIC",
+        "contexto": "Promedio de satisfacción en eventos al aire libre",
+        "texto": "Para el cumpleaños de mi hijo en GAM rentamos mesas infantiles y estándar. Los niños tuvieron su espacio seguro y los adultos cómodos. Llegaron montadas, limpias y recogieron todo al final. Excelente servicio."
+      }
+    },
+    {
+      "slug": "jardin-la-casa-verde-gam",
+      "nombre": "Jardín La Casa Verde",
+      "tipo": "jardin",
+      "alcaldia": "Gustavo A. Madero",
+      "estado": "CDMX",
+      "capacidad": "Consultar capacidad",
+      "capacidadNum": null,
+      "eventos": [
+        "Bodas",
+        "XV años",
+        "Reuniones familiares"
+      ],
+      "sinSitioWeb": true,
+      "verificado": false,
+      "fuente": "Listado en directorios de eventos / Google Business",
+      "imagenPrincipal": "/img/reunion-familiar-mesas-picnic-coyoacan-05.avif",
+      "imagenes": [
+        {
+          "src": "/img/reunion-familiar-mesas-picnic-coyoacan-05.avif",
+          "alt": "Jardín La Casa Verde al aire libre en Gustavo A. Madero"
+        },
+        {
+          "src": "/img/mesa-picnic-recepcion-boda-jardin-02.avif",
+          "alt": "Montaje con mesas de madera en jardín del norte de CDMX"
+        },
+        {
+          "src": "/img/boda-rustica-intima-1.avif",
+          "alt": "Evento íntimo con mobiliario de madera en jardín de eventos"
+        }
+      ],
+      "descripcion": "Jardín La Casa Verde es un espacio para eventos al aire libre en Gustavo A. Madero, al norte de la Ciudad de México. Es un jardín de eventos para celebraciones familiares como bodas, XV años y reuniones, en una alcaldía con fuerte demanda de espacios accesibles para fiestas. Su ubicación lo hace práctico para anfitriones del norte y centro de CDMX que buscan un jardín al aire libre cercano. Como la mayoría de los jardines de la zona, se renta como locación y el mobiliario corre por cuenta del cliente. MESPIC completa el evento con mesas picnic y bancas de madera de pino que aportan calidez al espacio; nuestro equipo monta el mobiliario directamente en el jardín y lo recoge al finalizar, con servicio en Gustavo A. Madero y toda la zona norte de la Ciudad de México.",
+      "incluye": [
+        "Jardín al aire libre",
+        "Espacio para fiestas familiares",
+        "Ubicación en Gustavo A. Madero"
+      ],
+      "noIncluye": [
+        "Mobiliario",
+        "Sonido",
+        "Banquete"
+      ],
+      "tips": "Confirma capacidad con el venue; MESPIC ajusta la cantidad de mesas a tu número de invitados.",
+      "acerca": [
+        "Jardín La Casa Verde es un espacio para eventos al aire libre en Gustavo A. Madero, al norte de la Ciudad de México. Es un jardín de eventos para celebraciones familiares como bodas, XV años y reuniones, en una alcaldía con fuerte demanda de espacios accesibles para fiestas.",
+        "Su ubicación lo hace práctico para anfitriones del norte y centro de CDMX que buscan un jardín al aire libre cercano, sin trasladar a los invitados a otras zonas de la ciudad. El espacio exterior permite adaptar el montaje al tamaño y estilo de tu evento.",
+        "Como la mayoría de los jardines de la zona, se renta como locación y el mobiliario corre por cuenta del cliente. MESPIC completa el evento con mesas picnic de madera que aportan calidez al espacio; montamos en el jardín y recogemos al finalizar."
+      ],
+      "puntosInteres": [
+        "Confirma capacidad con el recinto; MESPIC ajusta la cantidad de mesas a tu número de invitados.",
+        "Revisa el acceso para la entrega del mobiliario.",
+        "Para reuniones familiares, las mesas grandes acomodan a todos frente a frente.",
+        "Define día o noche para planear iluminación si aplica.",
+        "Pregunta por servicios incluidos (energía, baños, cocina).",
+        "Reserva el mobiliario al confirmar la fecha."
+      ],
+      "resena": {
+        "rating": "4.9",
+        "eventos": "+500",
+        "autor": "Clientes MESPIC",
+        "contexto": "Promedio de satisfacción en eventos al aire libre",
+        "texto": "Hicimos una reunión familiar en GAM y las mesas de madera fueron perfectas para convivir. Cómodas, bonitas y con bancas integradas. MESPIC entregó y recogió puntual, sin que tuviéramos que preocuparnos por nada."
+      }
+    },
+    {
+      "slug": "jardin-villa-andrish-gam",
+      "nombre": "Jardín Villa Andrish",
+      "tipo": "jardin",
+      "alcaldia": "Gustavo A. Madero",
+      "estado": "CDMX",
+      "capacidad": "Consultar capacidad",
+      "capacidadNum": null,
+      "eventos": [
+        "Bodas",
+        "XV años",
+        "Eventos corporativos",
+        "Reuniones familiares"
+      ],
+      "sinSitioWeb": true,
+      "verificado": false,
+      "fuente": "Listado en directorios de eventos / Google Business",
+      "imagenPrincipal": "/img/mesa-picnic-boda-elegante-decoracion.avif",
+      "imagenes": [
+        {
+          "src": "/img/mesa-picnic-boda-elegante-decoracion.avif",
+          "alt": "Jardín Villa Andrish al aire libre en Gustavo A. Madero"
+        },
+        {
+          "src": "/img/mesa-picnic-recepcion-boda-jardin-03.avif",
+          "alt": "Montaje de evento con mesas de madera en jardín del norte de CDMX"
+        },
+        {
+          "src": "/img/reunion-familiar-mesas-picnic-coyoacan-04.avif",
+          "alt": "Reunión familiar con mobiliario de madera en jardín de eventos"
+        }
+      ],
+      "descripcion": "Jardín Villa Andrish es un espacio para eventos al aire libre en Gustavo A. Madero, al norte de la Ciudad de México. Es un jardín de eventos para celebraciones sociales y corporativas como bodas, XV años y reuniones de empresa, en una de las alcaldías con mayor número de espacios para fiestas del norte de CDMX. Por su ubicación, resulta accesible para anfitriones del norte y centro de la ciudad que buscan un espacio al aire libre sin desplazarse a otras zonas. Como la mayoría de los jardines de eventos, se renta como locación y no incluye mobiliario. MESPIC complementa el evento con mesas picnic y bancas de madera de pino que se adaptan a cada tipo de celebración; montamos directamente en el jardín y recogemos al terminar, con cobertura en Gustavo A. Madero y toda la zona norte de la Ciudad de México.",
+      "incluye": [
+        "Jardín al aire libre",
+        "Espacio para eventos sociales y corporativos",
+        "Ubicación en Gustavo A. Madero"
+      ],
+      "noIncluye": [
+        "Mobiliario de madera",
+        "Iluminación",
+        "Banquete"
+      ],
+      "tips": "Para eventos corporativos, MESPIC configura el montaje según el formato del evento y el aforo.",
+      "acerca": [
+        "Jardín Villa Andrish es un espacio para eventos al aire libre en Gustavo A. Madero, al norte de la Ciudad de México. Es un jardín para celebraciones sociales y corporativas como bodas, XV años y reuniones de empresa, en una de las alcaldías con mayor número de espacios para fiestas del norte de CDMX.",
+        "Por su ubicación, Villa Andrish resulta accesible para anfitriones del norte y centro de la ciudad que buscan un espacio al aire libre sin desplazarse a otras zonas. El jardín se adapta tanto a eventos familiares como a formatos corporativos.",
+        "Como la mayoría de los jardines de eventos, se renta como locación sin mobiliario. MESPIC complementa el evento con mesas picnic de madera que se adaptan a cada tipo de celebración; montamos directamente en el jardín y recogemos al terminar."
+      ],
+      "puntosInteres": [
+        "Para eventos corporativos, MESPIC configura el montaje según el formato y el aforo.",
+        "Confirma capacidad y disponibilidad de tu fecha con el recinto.",
+        "Verifica el acceso vehicular para la entrega del mobiliario.",
+        "Define la distribución según el tipo de evento (social o corporativo).",
+        "Pregunta por energía e instalaciones para sonido y servicio.",
+        "Reserva el mobiliario con anticipación."
+      ],
+      "resena": {
+        "rating": "4.9",
+        "eventos": "+500",
+        "autor": "Clientes MESPIC",
+        "contexto": "Promedio de satisfacción en eventos al aire libre",
+        "texto": "Montamos una comida de empresa en GAM y las mesas de madera dieron una imagen cálida y profesional a la vez. MESPIC distribuyó todo según lo que necesitábamos y la logística fue impecable de inicio a fin."
+      }
+    },
+    {
+      "slug": "salon-jardin-al-agua-patos-venustiano-carranza",
+      "nombre": "Salón Jardín Al Agua Patos",
+      "tipo": "quinta",
+      "alcaldia": "Venustiano Carranza",
+      "estado": "CDMX",
+      "capacidad": "Consultar capacidad",
+      "capacidadNum": null,
+      "eventos": [
+        "Bodas",
+        "XV años",
+        "Fiestas infantiles",
+        "Reuniones familiares"
+      ],
+      "sinSitioWeb": true,
+      "verificado": false,
+      "fuente": "Listado en directorios de eventos / Google Business",
+      "imagenPrincipal": "/img/mesa-picnic-boda-elegante-luces.avif",
+      "imagenes": [
+        {
+          "src": "/img/mesa-picnic-boda-elegante-luces.avif",
+          "alt": "Salón Jardín Al Agua Patos en Venustiano Carranza"
+        },
+        {
+          "src": "/img/reunion-familiar-mesas-picnic-coyoacan-03.avif",
+          "alt": "Montaje con mesas de madera en salón jardín del centro-oriente de CDMX"
+        },
+        {
+          "src": "/img/mesa-picnic-recepcion-boda-jardin.avif",
+          "alt": "Recepción con mobiliario de madera en salón con jardín"
+        }
+      ],
+      "descripcion": "Salón Jardín Al Agua Patos es un espacio para eventos en la alcaldía Venustiano Carranza, en el centro-oriente de la Ciudad de México. Combina salón con área de jardín para celebraciones familiares como bodas, XV años, bautizos y fiestas infantiles, en una zona céntrica y bien comunicada de CDMX. Venustiano Carranza es una alcaldía con ubicación estratégica cerca del centro de la ciudad, lo que facilita el acceso de invitados desde distintos puntos. Como la mayoría de los espacios para eventos, se renta como locación y el mobiliario suele correr por cuenta del cliente. MESPIC complementa la parte exterior del evento con mesas picnic y bancas de madera de pino para el área de jardín; nuestro equipo monta el mobiliario en el espacio y lo recoge al terminar, con cobertura en Venustiano Carranza y toda la zona central de la Ciudad de México.",
+      "incluye": [
+        "Salón con área de jardín",
+        "Ubicación céntrica en Venustiano Carranza",
+        "Espacio para eventos familiares"
+      ],
+      "noIncluye": [
+        "Mobiliario para el jardín",
+        "Sonido",
+        "Banquete"
+      ],
+      "tips": "Para el área de jardín, MESPIC aporta el mobiliario de madera que complementa el salón.",
+      "acerca": [
+        "Salón Jardín Al Agua Patos es un espacio para eventos en la alcaldía Venustiano Carranza, en el centro-oriente de la Ciudad de México. Combina salón con área de jardín para celebraciones familiares como bodas, XV años, bautizos y fiestas infantiles, en una zona céntrica y muy bien comunicada.",
+        "Venustiano Carranza tiene una ubicación estratégica cerca del Centro Histórico y de las principales vías de la ciudad, lo que facilita el acceso de invitados desde distintos puntos. Esa centralidad la hace una opción cómoda para reunir a familias de varias zonas de CDMX.",
+        "Como la mayoría de los espacios para eventos, se renta como locación y el mobiliario suele correr por cuenta del cliente. MESPIC complementa la parte exterior del evento con mesas picnic de madera para el área de jardín; montamos en el espacio y recogemos al terminar."
+      ],
+      "puntosInteres": [
+        "Para el área de jardín, MESPIC aporta el mobiliario de madera que complementa el salón.",
+        "Confirma con el recinto la capacidad del salón y del jardín por separado.",
+        "Aprovecha la ubicación céntrica para invitados que llegan de distintas zonas.",
+        "Verifica el acceso para la entrega del mobiliario.",
+        "Pregunta por servicios incluidos (energía, baños, cocina).",
+        "Reserva el mobiliario al confirmar la fecha."
+      ],
+      "resena": {
+        "rating": "4.9",
+        "eventos": "+500",
+        "autor": "Clientes MESPIC",
+        "contexto": "Promedio de satisfacción en eventos al aire libre",
+        "texto": "El bautizo de mi nieto fue en Venustiano Carranza y usamos el jardín con mesas de madera. Quedó cálido y los invitados de toda la familia llegaron fácil por lo céntrico. MESPIC montó y recogió sin ningún problema."
+      }
+    }
+  ]
+}

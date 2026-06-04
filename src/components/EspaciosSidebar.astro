@@ -1,0 +1,249 @@
+---
+/**
+ * EspaciosSidebar — Directorio MESPIC
+ * Sidebar sticky con todos los enlaces: empresas del directorio (por alcaldía),
+ * servicios, catálogo, paquetes y artículos del blog.
+ * Props:
+ *   espacios: array de venues (de espacios.json)
+ *   tipos: mapa de tipos
+ *   activeSlug?: slug del venue activo (para resaltar en fichas)
+ */
+interface Props {
+  espacios: any[];
+  tipos: Record<string, string>;
+  activeSlug?: string;
+}
+const { espacios, tipos, activeSlug } = Astro.props;
+
+// Agrupar empresas por alcaldía
+const porAlcaldia: Record<string, any[]> = {};
+for (const e of espacios) {
+  (porAlcaldia[e.alcaldia] ||= []).push(e);
+}
+const alcaldias = Object.keys(porAlcaldia).sort();
+
+const servicios = [
+  { label: 'Bodas al Aire Libre', href: '/servicios/bodas/' },
+  { label: 'Eventos Corporativos', href: '/servicios/eventos-corporativos/' },
+  { label: 'Fiestas Infantiles', href: '/servicios/fiestas-infantiles/' },
+  { label: 'Picnic Romántico', href: '/servicios/picnic-romantico/' },
+  { label: 'Fiestas Temáticas', href: '/servicios/fiestas-tematicas/' },
+  { label: 'Reuniones Familiares', href: '/servicios/reuniones-familiares/' },
+  { label: 'Festivales y Ferias', href: '/servicios/festivales/' },
+  { label: 'Sesiones Fotográficas', href: '/servicios/sesiones-fotograficas/' },
+];
+
+const catalogo = [
+  { label: 'Catálogo completo', href: '/catalogo/' },
+  { label: 'Mesa Estándar · 6 pax', href: '/catalogo/mesa-picnic-estandar/' },
+  { label: 'Mesa Grande · 10-12 pax', href: '/catalogo/mesa-picnic-grande/' },
+  { label: 'Mesa Infantil', href: '/catalogo/mesa-picnic-infantil/' },
+  { label: 'Mesa Premium', href: '/catalogo/mesa-picnic-premium/' },
+  { label: 'Set Picnic Completo', href: '/catalogo/set-picnic-completo/' },
+];
+
+const paquetes = [
+  { label: 'Básico · hasta 24 pax', href: '/paquetes/basico/' },
+  { label: 'Estándar · hasta 36 pax', href: '/paquetes/estandar/' },
+  { label: 'Premium · hasta 60 pax', href: '/paquetes/premium/' },
+];
+
+const articulos = [
+  { label: 'Cómo organizar un evento al aire libre en CDMX', href: '/blog/como-organizar-evento-al-aire-libre-cdmx-guia-completa/' },
+  { label: '¿Cuántas mesas necesitas según tus invitados?', href: '/blog/cuantas-mesas-picnic-necesitas-segun-invitados/' },
+  { label: '¿Cuánto cuesta rentar mesas picnic en CDMX?', href: '/blog/cuanto-cuesta-rentar-mesas-picnic-cdmx/' },
+  { label: 'Permisos para eventos en parques públicos CDMX', href: '/blog/permisos-eventos-parques-publicos-cdmx/' },
+  { label: 'Distribución de mesas en boda al aire libre', href: '/blog/distribucion-mesas-boda-aire-libre-layout-capacidad/' },
+  { label: 'Checklist 90 días antes de tu evento', href: '/blog/checklist-90-dias-antes-evento-aire-libre/' },
+];
+---
+
+<aside class="sb" aria-label="Navegación del directorio">
+  <!-- CTA -->
+  <div class="sb-cta">
+    <span class="sb-cta__eyebrow">Directorio MESPIC</span>
+    <p class="sb-cta__title">¿Ya tienes tu espacio?</p>
+    <p class="sb-cta__text">Cotiza el mobiliario de madera y lo montamos en tu locación.</p>
+    <a href="/cotizar/" class="sb-cta__btn">Cotizar mobiliario →</a>
+  </div>
+
+  <!-- Empresas del directorio -->
+  <nav class="sb-box" aria-label="Empresas del directorio">
+    <h3 class="sb-box__title">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
+      Empresas del directorio
+      <span class="sb-box__count">{espacios.length}</span>
+    </h3>
+    {alcaldias.map((a) => (
+      <div class="sb-group">
+        <span class="sb-group__name">{a}</span>
+        <ul class="sb-list">
+          {porAlcaldia[a].map((e: any) => (
+            <li>
+              <a
+                href={`/directorio/${e.slug}/`}
+                class:list={['sb-link', { 'sb-link--active': e.slug === activeSlug }]}
+                aria-current={e.slug === activeSlug ? 'page' : undefined}
+              >
+                {e.nombre}
+                <span class="sb-link__tag">{tipos[e.tipo]}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+    <a href="/directorio/" class="sb-box__all">Ver directorio completo →</a>
+  </nav>
+
+  <!-- Servicios -->
+  <nav class="sb-box" aria-label="Servicios">
+    <h3 class="sb-box__title">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+      Servicios
+    </h3>
+    <ul class="sb-list sb-list--flat">
+      {servicios.map((s) => (
+        <li><a href={s.href} class="sb-link">{s.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+
+  <!-- Catálogo -->
+  <nav class="sb-box" aria-label="Catálogo de mobiliario">
+    <h3 class="sb-box__title">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Catálogo
+    </h3>
+    <ul class="sb-list sb-list--flat">
+      {catalogo.map((c) => (
+        <li><a href={c.href} class="sb-link">{c.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+
+  <!-- Paquetes -->
+  <nav class="sb-box" aria-label="Paquetes">
+    <h3 class="sb-box__title">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+      Paquetes
+    </h3>
+    <ul class="sb-list sb-list--flat">
+      {paquetes.map((p) => (
+        <li><a href={p.href} class="sb-link">{p.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+
+  <!-- Artículos del blog -->
+  <nav class="sb-box" aria-label="Artículos del blog">
+    <h3 class="sb-box__title">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      Artículos del blog
+    </h3>
+    <ul class="sb-list sb-list--flat">
+      {articulos.map((a) => (
+        <li><a href={a.href} class="sb-link sb-link--art">{a.label}</a></li>
+      ))}
+    </ul>
+    <a href="/blog/" class="sb-box__all">Ver todos los artículos →</a>
+  </nav>
+</aside>
+
+<style>
+  .sb {
+    position: sticky;
+    top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 1.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* CTA */
+  .sb-cta {
+    background: linear-gradient(155deg, #1B3B20 0%, #2C5530 100%);
+    border-radius: var(--radius-md, 12px);
+    padding: 1.4rem 1.5rem 1.5rem;
+    color: #fff;
+  }
+  .sb-cta__eyebrow {
+    font-size: 0.66rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--c-accent-light, #E8C9A8);
+    display: block; margin-bottom: 0.5rem;
+  }
+  .sb-cta__title { font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; line-height: 1.2; margin-bottom: 0.35rem; }
+  .sb-cta__text { font-size: 0.8rem; color: rgba(255,255,255,0.82); line-height: 1.5; margin-bottom: 1rem; }
+  .sb-cta__btn {
+    display: flex; align-items: center; justify-content: center;
+    background: #fff; color: var(--c-primary-dark, #1B3B20);
+    font-size: 0.85rem; font-weight: 700; text-decoration: none;
+    padding: 0.7rem 1rem; border-radius: 8px; transition: background 0.18s ease;
+  }
+  .sb-cta__btn:hover { background: var(--c-accent-light, #E8C9A8); }
+
+  /* Box */
+  .sb-box {
+    background: #fff;
+    border: 1px solid var(--c-border, #E7E0D8);
+    border-radius: var(--radius-md, 12px);
+    padding: 1.2rem 1.3rem 1.3rem;
+  }
+  .sb-box__title {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-size: 0.82rem; font-weight: 800; letter-spacing: 0.02em;
+    text-transform: uppercase; color: var(--c-text, #1C1917);
+    padding-bottom: 0.7rem; margin-bottom: 0.85rem;
+    border-bottom: 2px solid var(--c-primary, #2C5530);
+  }
+  .sb-box__title svg { color: var(--c-primary, #2C5530); flex-shrink: 0; }
+  .sb-box__count {
+    margin-left: auto; font-size: 0.7rem; font-weight: 700;
+    color: #fff; background: var(--c-primary, #2C5530);
+    border-radius: 999px; padding: 0.1rem 0.5rem; letter-spacing: 0;
+  }
+
+  /* Grupos por alcaldía */
+  .sb-group + .sb-group { margin-top: 0.9rem; }
+  .sb-group__name {
+    display: block; font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--c-secondary, #8B6F4E); margin-bottom: 0.35rem;
+  }
+
+  .sb-list { list-style: none; display: flex; flex-direction: column; gap: 0.1rem; }
+  .sb-list--flat { gap: 0.1rem; }
+
+  .sb-link {
+    display: flex; align-items: center; gap: 0.4rem;
+    font-size: 0.83rem; color: var(--c-text-muted, #78716C);
+    line-height: 1.4; padding: 0.4rem 0.5rem; border-radius: 7px;
+    transition: background 0.14s ease, color 0.14s ease;
+  }
+  .sb-link:hover { background: var(--c-bg-alt, #F7F4F0); color: var(--c-primary, #2C5530); }
+
+  .sb-link--active {
+    background: color-mix(in srgb, var(--c-primary, #2C5530) 10%, transparent);
+    color: var(--c-primary, #2C5530);
+    font-weight: 700;
+  }
+
+  .sb-link__tag {
+    margin-left: auto; flex-shrink: 0;
+    font-size: 0.6rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.03em; color: var(--c-text-muted, #9a948c);
+  }
+  .sb-link--active .sb-link__tag { color: var(--c-primary, #2C5530); }
+
+  .sb-link--art { line-height: 1.35; }
+
+  .sb-box__all {
+    display: inline-block; margin-top: 0.85rem;
+    font-size: 0.78rem; font-weight: 700; color: var(--c-primary, #2C5530);
+  }
+  .sb-box__all:hover { color: var(--c-primary-light, #3D7A45); }
+
+  /* En móvil/tablet el sidebar deja de ser sticky */
+  @media (max-width: 1024px) {
+    .sb { position: static; max-height: none; overflow: visible; }
+  }
+</style>

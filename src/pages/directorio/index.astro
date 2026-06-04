@@ -1,0 +1,335 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Hero from '../../components/Hero.astro';
+import CtaBar from '../../components/CtaBar.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import NextStep from '../../components/NextStep.astro';
+import ExploreMore from '../../components/ExploreMore.astro';
+import EspaciosSidebar from '../../components/EspaciosSidebar.astro';
+import VenueCard from '../../components/VenueCard.astro';
+import data from '../../data/espacios.json';
+
+const tipos: Record<string, string> = data.tipos;
+const espacios = data.espacios;
+
+const totalEspacios = espacios.length;
+const alcaldias = [...new Set(espacios.map((e: any) => e.alcaldia))].sort();
+
+const conteoAlcaldia: Record<string, number> = {};
+for (const e of espacios) conteoAlcaldia[e.alcaldia] = (conteoAlcaldia[e.alcaldia] || 0) + 1;
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Directorio de Salones y Jardines de Fiestas al Aire Libre en CDMX — MESPIC",
+  "numberOfItems": espacios.length,
+  "itemListElement": espacios.map((e: any, i: number) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "url": `https://mesaspicnic.com/directorio/${e.slug}/`,
+    "name": e.nombre
+  }))
+};
+---
+
+<BaseLayout
+  title="Directorio de Salones y Jardines de Fiestas al Aire Libre en CDMX | MESPIC"
+  description="Directorio profesional de salones y jardines de fiestas con áreas al aire libre en la Ciudad de México, organizados por alcaldía. Encuentra tu espacio para boda, XV años o fiesta y móntalo con mobiliario de madera MESPIC."
+  ogImage="/img/mesa-picnic-boda-jardin-cdmx.avif"
+  schema={itemListSchema}
+>
+
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Directorio de Espacios" }
+  ]} />
+</Fragment>
+
+<Hero
+  badge="Directorio CDMX"
+  title="Salones y Jardines de Fiestas al Aire Libre en CDMX"
+  description="Un directorio profesional de jardines y salones con áreas al aire libre en la Ciudad de México, organizados por alcaldía. Encuentra tu espacio y móntalo con mobiliario de madera MESPIC."
+  ctaPrimary={null}
+  ctaSecondary={null}
+  seoParagraph1="Muchos de los mejores jardines y salones de fiestas de la Ciudad de México operan por recomendación y por Google, sin sitio web propio, lo que los hace difíciles de encontrar y comparar. Este directorio de MESPIC reúne espacios al aire libre para eventos —jardines de fiestas, salones con jardín y quintas— organizados por alcaldía, para que ubiques rápido opciones para tu boda, XV años, fiesta infantil o evento social."
+  seoParagraph2="La mayoría de estos espacios se rentan solo como locación: el mobiliario corre por tu cuenta. Ahí entra MESPIC. Llevamos mesas picnic y bancas de madera de pino, las montamos en el jardín que elijas y las recogemos al terminar, sin cargos extra y con cobertura en toda la Ciudad de México. Así combinas el espacio al aire libre que más te guste con mobiliario que armoniza con el entorno, en un solo proceso."
+  dark={true}
+  metrics={[
+    { value: `${totalEspacios}`, label: 'espacios en CDMX' },
+    { value: `${alcaldias.length}`, label: 'alcaldías' },
+    { value: 'Sin sitio web', label: 'solo Google Business' },
+  ]}
+/>
+
+<CtaBar />
+
+<!-- ═══════════════════════════════════════════════════════
+     DIRECTORIO — Sidebar + Main
+═══════════════════════════════════════════════════════ -->
+<section class="section" id="directorio">
+  <SectionHeader
+    tag="h2"
+    badge={`${totalEspacios} espacios · Ciudad de México`}
+    title="Directorio de Espacios al Aire Libre"
+    paragraph1="Jardines y salones de fiestas con áreas al aire libre en CDMX, agrupados por alcaldía. Cada espacio se renta como locación; el mobiliario de madera lo pones con MESPIC. Usa el buscador o filtra por alcaldía para encontrar opciones en tu zona."
+    paragraph2="¿Tienes un jardín o salón al aire libre en CDMX y quieres aparecer aquí sin costo? Escríbenos por WhatsApp y lo agregamos al directorio."
+  />
+
+  <div class="container">
+    <div class="esp-layout">
+      <!-- Main -->
+      <div class="esp-main">
+        <!-- Toolbar: búsqueda + conteo -->
+        <div class="dir-toolbar">
+          <div class="dir-search">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="search" id="dir-q" placeholder="Buscar por nombre, alcaldía o tipo…" aria-label="Buscar espacios" autocomplete="off" />
+          </div>
+          <p class="dir-count"><strong id="dir-shown">{totalEspacios}</strong> de {totalEspacios} espacios</p>
+        </div>
+
+        <!-- Filtros por alcaldía -->
+        <div class="dir-filtros" role="list" aria-label="Filtrar por alcaldía">
+          <button class="dir-chip dir-chip--active" data-filtro="todas" role="listitem" type="button">
+            Todas <span class="dir-chip__n">{totalEspacios}</span>
+          </button>
+          {alcaldias.map((a: string) => (
+            <button class="dir-chip" data-filtro={a} role="listitem" type="button">
+              {a} <span class="dir-chip__n">{conteoAlcaldia[a]}</span>
+            </button>
+          ))}
+        </div>
+
+        <!-- Grid de cards -->
+        <div class="dir-grid" id="dir-grid">
+          {espacios.map((e: any) => (
+            <VenueCard e={e} tipos={tipos} />
+          ))}
+        </div>
+
+        <p class="dir-empty" id="dir-empty" hidden>No hay espacios que coincidan. <a href="/cotizar/">Escríbenos</a> y te ayudamos a encontrar uno.</p>
+      </div>
+
+      <!-- Sidebar (derecha) -->
+      <EspaciosSidebar espacios={espacios} tipos={tipos} />
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section class="section section-alt" id="como-funciona">
+  <SectionHeader
+    tag="h2"
+    badge="Cómo funciona"
+    title="Encuentra el Espacio, Nosotros Ponemos el Mobiliario"
+    paragraph1="Este directorio conecta los jardines y salones al aire libre de CDMX con el mobiliario que necesitan. Tú eliges la locación; MESPIC se encarga de las mesas, bancas, entrega, montaje y recolección."
+    paragraph2="La mayoría de estos espacios se rentan sin mobiliario. En lugar de buscar mesas por separado, cotizas todo con nosotros y llegamos a montar directamente en el espacio que reservaste."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard index={0} title="1. Filtra o Busca" description="Elige tu alcaldía de CDMX o usa el buscador para encontrar jardines y salones al aire libre. Cada ficha incluye alcaldía, tipo de espacio, capacidad y eventos ideales." />
+      <FeatureCard index={1} title="2. Elige tu Locación" description="Selecciona el espacio que mejor encaje con tu evento y número de invitados. Contacta directamente al recinto para confirmar fecha y disponibilidad." />
+      <FeatureCard index={2} title="3. Cotiza el Mobiliario" description="Escríbenos el espacio que elegiste y cuántos invitados serán. Te decimos cuántas mesas y bancas necesitas y te pasamos el precio final, sin cargos ocultos." />
+      <FeatureCard index={3} title="4. Nosotros Montamos" description="Llegamos al espacio, montamos el mobiliario de madera antes de tu evento y lo recogemos al terminar. Entrega, montaje y recolección incluidos en CDMX." />
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ MADERA -->
+<section class="section" id="por-que-madera">
+  <SectionHeader
+    tag="h2"
+    badge="Por qué madera"
+    title="Mobiliario de Madera para Jardines de CDMX"
+    paragraph1="La madera natural es el complemento ideal para jardines y salones al aire libre: armoniza con el verde en lugar de competir con él, como sí pasa con el plástico. El mobiliario de MESPIC encaja con cualquier espacio del directorio."
+    paragraph2="Con más de 500 eventos desde 2017, conocemos la logística de montar al aire libre en toda la Ciudad de México: protección de la madera, distribución según el terreno y tiempos de entrega por alcaldía."
+    stats={[
+      { value: '500+',   label: 'eventos al aire libre' },
+      { value: '100%',   label: 'madera de pino natural' },
+      { value: 'CDMX',   label: 'cobertura por alcaldía' },
+    ]}
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard index={0} title="Armoniza con el Entorno" description="La veta y el tono cálido del pino combinan con jardines y áreas verdes sin romper la estética del lugar. Funciona con cualquier estilo: rústico, boho, clásico o minimalista." />
+      <FeatureCard index={1} title="Sin Mobiliario en el Recinto" description="La mayoría de jardines de CDMX se rentan sin mobiliario. MESPIC resuelve esa parte: tú reservas el espacio y nosotros llevamos las mesas y bancas que necesitas." />
+      <FeatureCard index={2} title="Montaje en tu Locación" description="Llevamos, montamos y recogemos en el espacio que elijas, cubriendo todas las alcaldías de la Ciudad de México. Sin cargos por traslado ni maniobras." />
+      <FeatureCard index={3} title="Precio Final sin Sorpresas" description="Lo que cotizamos incluye entrega, montaje y recolección. Combina la renta del espacio con el mobiliario de MESPIC y planea tu presupuesto sin cargos ocultos." />
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt" id="faq-espacios">
+  <SectionHeader
+    tag="h2"
+    badge="Preguntas frecuentes"
+    title="Preguntas sobre el Directorio"
+    paragraph1="Las dudas más comunes sobre cómo usar el directorio y rentar mobiliario para tu evento al aire libre en CDMX."
+    paragraph2="¿No está tu pregunta aquí? Escríbenos por WhatsApp y te respondemos de inmediato."
+  />
+  <FaqSection
+    phone="55 6432 8954"
+    whatsapp="5564328954"
+    schedule="Lun–Dom 8:00–20:00"
+    waMessage="Hola, vi el directorio de espacios y quiero cotizar mobiliario para mi evento."
+    items={[
+      {
+        question: "¿MESPIC renta los espacios o solo el mobiliario?",
+        answer: "MESPIC renta el mobiliario de madera (mesas picnic y bancas) y lo monta en el espacio que elijas. Los jardines y salones del directorio se rentan directamente con cada recinto; nosotros te ayudamos a montar tu evento ahí con el mobiliario adecuado. Es decir: tú reservas la locación y nosotros ponemos las mesas."
+      },
+      {
+        question: "¿Por qué muchos de estos jardines no tienen sitio web?",
+        answer: "Muchos de los mejores jardines y salones de fiestas de CDMX operan solo por recomendación y por su perfil de Google, sin página web propia. Por eso son difíciles de encontrar y comparar. Este directorio los reúne en un solo lugar, organizados por alcaldía."
+      },
+      {
+        question: "¿Cómo reservo uno de los espacios del directorio?",
+        answer: "La reservación de la locación se hace directamente con el recinto. Cada ficha incluye los datos de referencia del espacio. Una vez que tengas fecha confirmada, escríbenos a MESPIC con el espacio y el número de invitados y cotizamos el mobiliario para ese lugar."
+      },
+      {
+        question: "¿En qué alcaldías de CDMX dan servicio?",
+        answer: "Cubrimos todas las alcaldías de la Ciudad de México, incluyendo Iztapalapa, Tlalpan, Coyoacán, Álvaro Obregón, Gustavo A. Madero, Xochimilco y Venustiano Carranza, además de municipios del Estado de México. Si tu espacio está dentro de esta cobertura, llevamos y montamos el mobiliario sin cargo extra por traslado."
+      },
+      {
+        question: "Tengo un jardín o salón al aire libre, ¿puedo aparecer en el directorio?",
+        answer: "Sí, sin costo. Si tienes un jardín, terraza, quinta o salón con área al aire libre en CDMX, escríbenos por WhatsApp con fotos y datos del espacio y lo agregamos al directorio. Buscamos espacios reales que se renten para eventos."
+      }
+    ]}
+  />
+</section>
+
+<ExploreMore
+  title="Sigue explorando MESPIC"
+  subtitle="Todo lo que necesitas para tu evento en un solo lugar"
+  items={[
+    { href: '/servicios/', label: 'Todos los servicios', sub: 'Bodas, corporativos, infantiles y más', badge: 'Paso 1', isEmoji: true, icon: '🎪' },
+    { href: '/catalogo/', label: 'Catálogo completo', sub: '20 modelos con fichas técnicas y fotos', badge: 'Paso 2', isEmoji: true, icon: '🪵' },
+    { href: '/paquetes/', label: 'Nuestros paquetes', sub: 'Básico · Estándar · Premium', badge: 'Paso 3', isEmoji: true, icon: '📦' },
+  ]}
+/>
+
+<NextStep
+  titulo="¿Ya elegiste tu espacio al aire libre?"
+  subtitulo="Escríbenos el espacio y tu número de invitados. Te decimos cuántas mesas necesitas y montamos el mobiliario directo en tu locación."
+  href="/cotizar/"
+  btnLabel="Cotizar mobiliario →"
+  secondBtn={{ label: 'Ver servicios', href: '/servicios/' }}
+/>
+
+</BaseLayout>
+
+<!-- Buscador + filtro por alcaldía -->
+<script is:inline>
+  (function () {
+    var chips = document.querySelectorAll('.dir-chip');
+    var cards = document.querySelectorAll('.vcard');
+    var empty = document.getElementById('dir-empty');
+    var shown = document.getElementById('dir-shown');
+    var input = document.getElementById('dir-q');
+    var filtro = 'todas';
+    var q = '';
+
+    function apply() {
+      var visibles = 0;
+      for (var k = 0; k < cards.length; k++) {
+        var okA = (filtro === 'todas') || (cards[k].getAttribute('data-alcaldia') === filtro);
+        var okQ = (q === '') || (cards[k].getAttribute('data-nombre').indexOf(q) !== -1);
+        var show = okA && okQ;
+        cards[k].style.display = show ? '' : 'none';
+        if (show) visibles++;
+      }
+      if (shown) shown.textContent = visibles;
+      if (empty) empty.hidden = visibles !== 0;
+    }
+
+    for (var i = 0; i < chips.length; i++) {
+      chips[i].addEventListener('click', function () {
+        filtro = this.getAttribute('data-filtro');
+        for (var c = 0; c < chips.length; c++) chips[c].classList.remove('dir-chip--active');
+        this.classList.add('dir-chip--active');
+        apply();
+      });
+    }
+    if (input) input.addEventListener('input', function () {
+      q = this.value.trim().toLowerCase();
+      apply();
+    });
+  })();
+</script>
+
+<style>
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+
+  /* ── Layout sidebar + main ── */
+  .esp-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2.5rem;
+    align-items: start;
+  }
+  .esp-main { min-width: 0; }
+
+  /* ── Toolbar ── */
+  .dir-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+  }
+  .dir-search {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex: 1;
+    min-width: 240px;
+    background: #fff;
+    border: 1px solid var(--c-border, #E7E0D8);
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+  }
+  .dir-search:focus-within { border-color: var(--c-primary, #2C5530); box-shadow: 0 0 0 3px rgba(44,85,48,0.08); }
+  .dir-search svg { color: var(--c-text-muted, #78716C); flex-shrink: 0; }
+  .dir-search input {
+    border: none; outline: none; background: transparent;
+    font-family: inherit; font-size: 0.95rem; color: var(--c-text, #1C1917);
+    width: 100%;
+  }
+  .dir-count { font-size: 0.85rem; color: var(--c-text-muted, #78716C); white-space: nowrap; }
+  .dir-count strong { color: var(--c-primary, #2C5530); }
+
+  /* ── Filtros ── */
+  .dir-filtros { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.75rem; }
+  .dir-chip {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-size: 0.8125rem; font-weight: 600; color: var(--c-text, #1C1917);
+    background: #fff; border: 1px solid var(--c-border, #E7E0D8);
+    border-radius: 999px; padding: 0.45rem 0.95rem; cursor: pointer;
+    font-family: inherit; transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+  .dir-chip:hover { border-color: var(--c-primary, #2C5530); color: var(--c-primary, #2C5530); }
+  .dir-chip--active { color: #fff; background: var(--c-primary, #2C5530); border-color: var(--c-primary, #2C5530); }
+  .dir-chip__n { font-size: 0.7rem; font-weight: 700; background: rgba(0,0,0,0.07); border-radius: 999px; padding: 0.05rem 0.45rem; line-height: 1.4; }
+  .dir-chip--active .dir-chip__n { background: rgba(255,255,255,0.22); }
+
+  /* ── Grid de cards (2 col dentro del main) ── */
+  .dir-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+
+  .dir-empty { text-align: center; color: var(--c-text-muted, #78716C); font-size: 0.95rem; margin-top: 2rem; padding: 2rem; }
+  .dir-empty a { color: var(--c-primary, #2C5530); font-weight: 600; }
+
+  /* ── Responsive ── */
+  @media (max-width: 1024px) {
+    .esp-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .dir-grid { grid-template-columns: 1fr; }
+    .grid-4 { grid-template-columns: 1fr; }
+  }
+</style>
