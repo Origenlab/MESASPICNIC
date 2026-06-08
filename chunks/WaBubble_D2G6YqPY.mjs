@@ -8,7 +8,7 @@ const $$WaBubble = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$WaBubble;
   const {
-    whatsapp = "5564328954",
+    whatsapp = "5547868402",
     message = "Hola, quiero cotizar mesas picnic para mi evento."
   } = Astro2.props;
   const href = `https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`;

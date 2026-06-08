@@ -13,14 +13,14 @@
 | Canal | Dato |
 |---|---|
 | **WhatsApp** | +52 55 1234 5678 |
-| **Teléfono real** | 55 3128 1706 |
-| **WA real** | 5531281706 |
+| **Teléfono real** | 55 4786 8402 |
+| **WA real** | 5547868402 |
 | **Email** | mesaspicnick@gmail.com |
 | **Horario atención** | Lun–Dom 8:00–20:00 |
 | **Horario oficina** | Lun–Vie 9:00–18:00 / Sáb 9:00–14:00 |
 | **Cobertura** | CDMX y Estado de México |
 
-> ⚠️ **Nota:** Hay discrepancia entre el teléfono en index.html (`55 1234 5678`) y el teléfono real del sitio (`55 3128 1706`). Verificar cuál es el correcto.
+> ⚠️ **Nota:** Hay discrepancia entre el teléfono en index.html (`55 1234 5678`) y el teléfono real del sitio (`55 4786 8402`). Verificar cuál es el correcto.
 
 ---
 

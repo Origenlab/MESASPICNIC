@@ -23,7 +23,7 @@ MESPIC es empresa mexicana líder en **renta de mesas picnic y mobiliario de mad
 - Mesas picnic de madera natural de pino, lijadas y barnizadas
 - Servicio integral: transporte, entrega, montaje y recolección
 - Atención Lun–Dom 8:00–20:00
-- Teléfono: 55 6432 8954
+- Teléfono: 55 4786 8402
 
 ## Tipos de eventos que atiende
 

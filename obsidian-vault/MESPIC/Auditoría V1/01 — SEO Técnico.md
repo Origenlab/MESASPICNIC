@@ -139,7 +139,7 @@ const localBusinessSchema = {
   "@id": "https://mesaspicnic.com/#organization",
   "name": "MESPIC — Renta de Mesas Picnic",
   "url": siteUrl,
-  "telephone": "+52 55 6432 8954",
+  "telephone": "+52 55 4786 8402",
   "email": "hola@mesaspicnic.com",
   "description": "Renta de mesas picnic...",
   "priceRange": "$$",
