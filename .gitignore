@@ -4,3 +4,8 @@
 node_modules
 dist
 .cache
+
+# Artefactos transitorios del entorno (no commitear)
+.fuse_hidden*
+*.probe
+_wtest_root.tmp

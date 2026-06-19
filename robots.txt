@@ -1,5 +1,20 @@
 User-agent: *
 Allow: /
 Disallow: /_astro/
+Disallow: /api/
+Disallow: /gracias
+Disallow: /gracias/
+Disallow: /*?*utm_
+Disallow: /*?*fbclid
+Disallow: /*?*gclid
+
+# Respeto extra a bots de scraping agresivo
+User-agent: GPTBot
+Allow: /
+Disallow: /gracias
+Disallow: /cotizar
+
+User-agent: CCBot
+Disallow: /
 
 Sitemap: https://mesaspicnic.com/sitemap-index.xml

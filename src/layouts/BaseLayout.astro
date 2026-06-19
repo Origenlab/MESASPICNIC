@@ -145,10 +145,8 @@ const extraSchemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet" />
 
-  <!-- 3rd-party preconnects (chat widget + analytics) -->
-  <link rel="preconnect" href="https://api.dmchamp.com" crossorigin />
+  <!-- 3rd-party preconnects (analytics) -->
   <link rel="preconnect" href="https://app.truconversion.com" crossorigin />
-  <link rel="dns-prefetch" href="https://api.dmchamp.com" />
   <link rel="dns-prefetch" href="https://app.truconversion.com" />
 
   <!-- ExactDN (ewww.io) image CDN -->
@@ -195,45 +193,5 @@ const extraSchemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
   <Footer />
 
   <!-- Sticky Mobile Navigation Funnel — REMOVED (sin nada fijo en mobile) -->
-
-  <!-- DMChamp Chat Widget — Subcuenta Mesas (Bot IA – Mesas) -->
-  <script is:inline async src="https://api.dmchamp.com/v1/chat-widget/F4AelJWcHcHpPjjhC6sd"></script>
-
-  <!-- Embudo MESPIC — todos los contactos pasan por DMChamp (con queue + fallback) -->
-  <script is:inline>
-    (function () {
-      var WA_FALLBACK = 'https://wa.me/5547868402?text=' + encodeURIComponent('Hola, quiero cotizar mesas picnic para mi evento.');
-
-      function tryOpen() {
-        var bubble = document.querySelector('.wai-chat-bubble');
-        if (bubble) { bubble.click(); return true; }
-        return false;
-      }
-
-      function openMespicChat() {
-        if (tryOpen()) return;
-        // queue + retry (max ~5s) con fallback a wa.me
-        var attempts = 0;
-        var interval = setInterval(function () {
-          attempts++;
-          if (tryOpen() || attempts > 25) {
-            clearInterval(interval);
-            if (attempts > 25) window.open(WA_FALLBACK, '_blank', 'noopener');
-          }
-        }, 200);
-      }
-
-      window.openMespicChat = openMespicChat;
-
-      document.addEventListener('click', function (e) {
-        var link = e.target.closest('a[href*="wa.me"]');
-        if (!link) return;
-        // Opt-out explícito: <a data-no-intercept="true" href="wa.me/...">
-        if (link.dataset && link.dataset.noIntercept === 'true') return;
-        e.preventDefault();
-        openMespicChat();
-      }, true);
-    })();
-  </script>
 </body>
 </html>

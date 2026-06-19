@@ -117,12 +117,8 @@ const faqSchema = {
     var msg = document.getElementById('faqMsg').value.trim();
     var text = 'Hola, soy ' + name + '. Estoy interesado en mesas picnic para ' + event.toLowerCase() + '.';
     if (msg) text += ' Mi pregunta: ' + msg;
-    if (window.openMespicChat) {
-      openMespicChat();
-    } else {
-      var wa = 'https://wa.me/5547868402?text=' + encodeURIComponent(text);
-      window.open(wa, '_blank', 'noopener');
-    }
+    var wa = 'https://wa.me/5547868402?text=' + encodeURIComponent(text);
+    window.open(wa, '_blank', 'noopener');
   });
 </script>
 
