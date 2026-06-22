@@ -17,13 +17,13 @@ interface Props {
 const {
   headline = "¿Listo para tu evento?",
   subtext = "Cuéntanos fecha y número de invitados — cotización con precio y disponibilidad el mismo día hábil.",
-  phone = "55 4786 8402",
-  whatsapp = "5547868402",
+  phone = "55 6432 8954",
+  whatsapp = "5564328954",
   waMessage = "Hola, quiero cotizar mesas picnic para mi evento.",
   cotizarHref = "/cotizar/",
 } = Astro.props;
 
-const waHref = `https://wa.me/${whatsapp}?text=${encodeURIComponent(waMessage)}`;
+const waHref = `https://wa.me/52${whatsapp}?text=${encodeURIComponent(waMessage)}`;
 ---
 
 <section class="ctaf" aria-label="Contacto">

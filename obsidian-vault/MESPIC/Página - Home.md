@@ -58,7 +58,7 @@
 ### 8. CTA Final
 - "¿Listo para tu evento?"
 - Cotiza sin compromiso. Te respondemos en minutos.
-- Tel: 55 4786 8402 | WA: 5547868402
+- Tel: 55 6432 8954 | WA: 5564328954
 
 ---
 

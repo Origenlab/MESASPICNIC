@@ -50,8 +50,8 @@ Estas páginas están referenciadas en el menú de navegación, el footer o la e
 
 ## ⚠️ Inconsistencias Detectadas
 
-1. **Teléfono inconsistente:** index.html muestra `55 1234 5678` pero el sitio real y el footer usan `55 4786 8402`. Verificar cuál es el correcto.
-2. **WhatsApp en contacto.astro:** link apunta a `5215512345678` (número diferente al del footer `5547868402`)
+1. **Teléfono inconsistente:** index.html muestra `55 6432 8954` pero el sitio real y el footer usan `55 6432 8954`. Verificar cuál es el correcto.
+2. **WhatsApp en contacto.astro:** link apunta a `525564328954` (número diferente al del footer `5564328954`)
 3. Las páginas de Catálogo y Paquetes **ya fueron implementadas** (7 páginas catálogo + 4 páginas paquetes). Pendiente: sección `/cobertura/`.
 
 ---

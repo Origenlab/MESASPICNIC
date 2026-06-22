@@ -48,7 +48,7 @@ Este script carga síncrono (no tiene `defer` ni `async`), y dado que está en `
 
 <script is:inline>
   (function () {
-    var WA_FALLBACK = 'https://wa.me/5547868402?text=' + encodeURIComponent('Hola, quiero cotizar mesas picnic para mi evento.');
+    var WA_FALLBACK = 'https://wa.me/525564328954?text=' + encodeURIComponent('Hola, quiero cotizar mesas picnic para mi evento.');
     var pendingOpen = false;
 
     function tryOpen() {

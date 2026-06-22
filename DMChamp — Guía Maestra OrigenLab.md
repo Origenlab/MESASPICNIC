@@ -313,8 +313,8 @@ Agente humano da seguimiento si es necesario
 | Workspace doc ID | `c6323f64-8497-4c02-9e68-5f130f96f533` |
 | Campaña IA | Asistente MESPIC - Mesas Picnic |
 | Agente | Sofia |
-| Teléfono WA | 55 4786 8402 |
-| Número WA en links | 5547868402 |
+| Teléfono WA | 55 6432 8954 |
+| Número WA en links | 5564328954 |
 | Sitio | mesaspicnic.com |
 | Repo | github.com/Frankoropeza/mesaspicnic |
 | Dev | `npm run dev` → localhost:4321 |

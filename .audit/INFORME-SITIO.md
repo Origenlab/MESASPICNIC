@@ -99,7 +99,7 @@ Logo (MESPIC) → index.html
 └── Contacto → contacto.html
 
 CTAs:
-├── Llamar → tel:+525512345678
+├── Llamar → tel:+525564328954
 └── Cotizar → WhatsApp
 ```
 
@@ -129,7 +129,7 @@ Legal:
 
 ### 3.3 Botón WhatsApp Flotante
 - Ubicación: Esquina inferior derecha (fixed)
-- Enlace: wa.me/5215512345678
+- Enlace: wa.me/525564328954
 - Mensaje predeterminado: "Hola, me interesa información sobre renta de mesas picnic"
 
 ---
@@ -238,8 +238,8 @@ Cada página incluye:
 
 | Campo | Valor |
 |-------|-------|
-| Teléfono | +52 55 1234 5678 |
-| WhatsApp | +52 1 55 1234 5678 |
+| Teléfono | +52 55 6432 8954 |
+| WhatsApp | +52 1 55 6432 8954 |
 | Email | contacto@mesaspicnic.com |
 | Dirección | Av. Principal 123, Col. Centro, CDMX 06600 |
 | Horario | Lun-Vie: 9am-6pm, Sáb: 9am-2pm |

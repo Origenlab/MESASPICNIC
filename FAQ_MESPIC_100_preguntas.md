@@ -38,7 +38,7 @@ A: Puedes consultar nuestra galería en mesaspicnic.com, donde publicamos fotogr
 ---
 
 Q: ¿Cómo puedo comunicarme con MESPIC para resolver dudas o solicitar información?
-A: La forma más rápida es por WhatsApp al 55 4786 8402, donde respondemos en menos de 10 minutos en horario de atención. También puedes enviarnos un mensaje desde el formulario de contacto en mesaspicnic.com o llamarnos directamente al mismo número. Si prefieres cotizar en línea, visita mesaspicnic.com/cotizar.
+A: La forma más rápida es por WhatsApp al 55 6432 8954, donde respondemos en menos de 10 minutos en horario de atención. También puedes enviarnos un mensaje desde el formulario de contacto en mesaspicnic.com o llamarnos directamente al mismo número. Si prefieres cotizar en línea, visita mesaspicnic.com/cotizar.
 
 ---
 
@@ -204,7 +204,7 @@ A: Sí. Aunque el mobiliario está pensado para exteriores, funciona perfectamen
 ---
 
 Q: ¿Cómo obtengo una cotización para mi evento?
-A: La forma más rápida de cotizar es por WhatsApp al 55 4786 8402. También puedes solicitarla desde el formulario en mesaspicnic.com/cotizar. Para darte disponibilidad y precio en un solo mensaje, compártenos tres datos: la fecha del evento, la zona o municipio donde se realizará y el número aproximado de invitados. Con esa información te respondemos en menos de 10 minutos en horario de atención.
+A: La forma más rápida de cotizar es por WhatsApp al 55 6432 8954. También puedes solicitarla desde el formulario en mesaspicnic.com/cotizar. Para darte disponibilidad y precio en un solo mensaje, compártenos tres datos: la fecha del evento, la zona o municipio donde se realizará y el número aproximado de invitados. Con esa información te respondemos en menos de 10 minutos en horario de atención.
 
 ---
 
@@ -248,7 +248,7 @@ A: Sí. Para reservar solo necesitas la zona general o municipio del evento. La 
 ---
 
 Q: ¿Cuánto cuesta rentar una mesa picnic en la Ciudad de México?
-A: El precio varía según el modelo de banca, la cantidad de piezas y la zona de entrega. Los paquetes arrancan con un mínimo de 4 bancas estándar. Para darte un precio exacto con disponibilidad confirmada para tu fecha, escríbenos por WhatsApp al 55 4786 8402 con los detalles de tu evento.
+A: El precio varía según el modelo de banca, la cantidad de piezas y la zona de entrega. Los paquetes arrancan con un mínimo de 4 bancas estándar. Para darte un precio exacto con disponibilidad confirmada para tu fecha, escríbenos por WhatsApp al 55 6432 8954 con los detalles de tu evento.
 
 ---
 

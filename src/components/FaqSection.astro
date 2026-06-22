@@ -20,14 +20,14 @@ interface Props {
 
 const {
   items,
-  phone = "55 4786 8402",
-  whatsapp = "5547868402",
+  phone = "55 6432 8954",
+  whatsapp = "5564328954",
   waMessage = "Hola, tengo una duda sobre el servicio de mesas picnic.",
   email = "",
   schedule = "Lun–Dom 8:00–20:00",
 } = Astro.props;
 
-const waHref = `https://wa.me/${whatsapp}?text=${encodeURIComponent(waMessage)}`;
+const waHref = `https://wa.me/52${whatsapp}?text=${encodeURIComponent(waMessage)}`;
 
 // ── FAQPage Schema JSON-LD ──
 const faqSchema = {
@@ -117,7 +117,7 @@ const faqSchema = {
     var msg = document.getElementById('faqMsg').value.trim();
     var text = 'Hola, soy ' + name + '. Estoy interesado en mesas picnic para ' + event.toLowerCase() + '.';
     if (msg) text += ' Mi pregunta: ' + msg;
-    var wa = 'https://wa.me/5547868402?text=' + encodeURIComponent(text);
+    var wa = 'https://wa.me/525564328954?text=' + encodeURIComponent(text);
     window.open(wa, '_blank', 'noopener');
   });
 </script>
