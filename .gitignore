@@ -8,4 +8,4 @@ dist
 # Artefactos transitorios del entorno (no commitear)
 .fuse_hidden*
 *.probe
-_wtest_root.tmp
+_wtest_root.tmp*.cfbak
