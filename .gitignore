@@ -9,3 +9,7 @@ dist
 .fuse_hidden*
 *.probe
 _wtest_root.tmp*.cfbak
+.astro/
+_astro/
+graphify-out/
+.DS_Store
