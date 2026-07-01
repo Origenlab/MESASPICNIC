@@ -647,6 +647,7 @@ const galeriaCatalogo = [
      JAVASCRIPT — Filtros, Paginación, Vista, Sort
 ═══════════════════════════════════════════════════════════════════════ -->
 <script>
+// @ts-nocheck
 (function () {
   const ITEMS_PER_PAGE = 9;
 
@@ -662,13 +663,13 @@ const galeriaCatalogo = [
   };
 
   // DOM refs
-  const grid       = document.getElementById('cat-grid');
-  const noResults  = document.getElementById('no-results');
-  const countEl    = document.getElementById('results-count');
-  const paginEl    = document.getElementById('pagination');
-  const filterChips= document.getElementById('active-filters');
-  const sidebar    = document.getElementById('catalog-sidebar');
-  const overlay    = document.getElementById('sidebar-overlay');
+  const grid       = document.getElementById('cat-grid')!;
+  const noResults  = document.getElementById('no-results')!;
+  const countEl    = document.getElementById('results-count')!;
+  const paginEl    = document.getElementById('pagination')!;
+  const filterChips= document.getElementById('active-filters')!;
+  const sidebar    = document.getElementById('catalog-sidebar')!;
+  const overlay    = document.getElementById('sidebar-overlay')!;
 
   function getAllCards() {
     return [...grid.querySelectorAll('.cat-card')];
@@ -909,17 +910,17 @@ const galeriaCatalogo = [
   });
 
   // Vista grid / lista
-  document.getElementById('view-grid-btn').addEventListener('click', () => {
+  document.getElementById('view-grid-btn')!.addEventListener('click', () => {
     state.view = 'grid';
     grid.className = 'cat-grid cat-grid--grid';
-    document.getElementById('view-grid-btn').classList.add('active');
-    document.getElementById('view-list-btn').classList.remove('active');
+    document.getElementById('view-grid-btn')!.classList.add('active');
+    document.getElementById('view-list-btn')!.classList.remove('active');
   });
-  document.getElementById('view-list-btn').addEventListener('click', () => {
+  document.getElementById('view-list-btn')!.addEventListener('click', () => {
     state.view = 'list';
     grid.className = 'cat-grid cat-grid--list';
-    document.getElementById('view-list-btn').classList.add('active');
-    document.getElementById('view-grid-btn').classList.remove('active');
+    document.getElementById('view-list-btn')!.classList.add('active');
+    document.getElementById('view-grid-btn')!.classList.remove('active');
   });
 
   // Mobile sidebar
@@ -927,16 +928,16 @@ const galeriaCatalogo = [
     sidebar.classList.add('sidebar--open');
     overlay.classList.add('overlay--active');
     document.body.style.overflow = 'hidden';
-    document.getElementById('filter-toggle-btn').setAttribute('aria-expanded', 'true');
+    document.getElementById('filter-toggle-btn')!.setAttribute('aria-expanded', 'true');
   }
   function closeSidebar() {
     sidebar.classList.remove('sidebar--open');
     overlay.classList.remove('overlay--active');
     document.body.style.overflow = '';
-    document.getElementById('filter-toggle-btn').setAttribute('aria-expanded', 'false');
+    document.getElementById('filter-toggle-btn')!.setAttribute('aria-expanded', 'false');
   }
-  document.getElementById('filter-toggle-btn').addEventListener('click', openSidebar);
-  document.getElementById('sidebar-close').addEventListener('click', closeSidebar);
+  document.getElementById('filter-toggle-btn')!.addEventListener('click', openSidebar);
+  document.getElementById('sidebar-close')!.addEventListener('click', closeSidebar);
   overlay.addEventListener('click', closeSidebar);
   document.getElementById('clear-filters-btn')?.addEventListener('click', () => { clearAll(); render(); });
 

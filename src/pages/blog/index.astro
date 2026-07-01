@@ -810,12 +810,12 @@ const catColor: Record<string, string> = {
     page: 1,
   };
 
-  const grid      = document.querySelector('.blog-grid');
-  const paginEl   = document.getElementById('blog-pagination');
-  const countEl   = document.getElementById('blog-count');
+  const grid      = document.querySelector<HTMLElement>('.blog-grid')!;
+  const paginEl   = document.getElementById('blog-pagination')!;
+  const countEl   = document.getElementById('blog-count')!;
 
   function getAllCards() {
-    return [...grid.querySelectorAll('.blog-card')];
+    return [...grid.querySelectorAll<HTMLElement>('.blog-card')];
   }
 
   // ── Render principal ─────────────────────────────
@@ -846,7 +846,7 @@ const catColor: Record<string, string> = {
   }
 
   // ── Paginación ───────────────────────────────────
-  function renderPagination(totalPages, totalItems, rangeStart, rangeEnd) {
+  function renderPagination(totalPages: number, totalItems: number, rangeStart: number, rangeEnd: number) {
     if (totalPages <= 1 || totalItems === 0) { paginEl.innerHTML = ''; return; }
 
     const progress = Math.round((state.page / totalPages) * 100);
@@ -886,19 +886,19 @@ const catColor: Record<string, string> = {
         </div>
       </div>`;
 
-    paginEl.querySelectorAll('[data-page]:not([disabled])').forEach(btn => {
+    paginEl.querySelectorAll<HTMLElement>('[data-page]:not([disabled])').forEach(btn => {
       btn.addEventListener('click', () => {
-        state.page = parseInt(btn.dataset.page);
+        state.page = parseInt(btn.dataset.page!);
         render();
-        document.getElementById('articulos').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.getElementById('articulos')!.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
   }
 
   // ── Filtros de categoría ──────────────────────────
-  document.querySelectorAll('.cat-filter[data-cat]').forEach(btn => {
+  document.querySelectorAll<HTMLElement>('.cat-filter[data-cat]').forEach(btn => {
     btn.addEventListener('click', () => {
-      state.cat  = btn.dataset.cat;
+      state.cat  = btn.dataset.cat!;
       state.page = 1;
       document.querySelectorAll('.cat-filter[data-cat]').forEach(b => {
         b.classList.toggle('cat-filter--active', b === btn);
