@@ -13,3 +13,6 @@ _wtest_root.tmp*.cfbak
 _astro/
 graphify-out/
 .DS_Store
+*.log
+.env
+.wrangler
