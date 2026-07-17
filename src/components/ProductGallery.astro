@@ -32,9 +32,16 @@ const {
 <div class="pg container">
   <!-- Grid de imágenes -->
   <div class="pg__gallery">
-    {images.map((img) => (
+    {images.map((img, i) => (
       <div class="pg__item">
-        <img src={img.src} alt={img.alt} loading="lazy" width="400" height="225" />
+        <img
+          src={img.src}
+          alt={img.alt}
+          loading={i === 0 ? "eager" : "lazy"}
+          fetchpriority={i === 0 ? "high" : undefined}
+          width="400"
+          height="225"
+        />
       </div>
     ))}
   </div>

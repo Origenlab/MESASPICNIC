@@ -84,22 +84,13 @@ const faqItems = [
   { question: `¿Cómo aparto la fecha en ${espacio.nombre}?`, answer: `La fecha del espacio se aparta directamente con el recinto. En cuanto la tengas confirmada, escríbenos con el número de invitados y te cotizamos el mobiliario de madera para ese día.` },
   { question: `¿Qué incluye la renta de mesas picnic de MESPIC?`, answer: `El precio incluye entrega, montaje y recolección. Las mesas vienen con bancas integradas, así que no rentas sillas aparte, y lo que cotizamos es el precio final: sin cargos ocultos ni cobros por tiempo extra.` },
 ];
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqItems.map((f) => ({
-    "@type": "Question",
-    "name": f.question,
-    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
-  }))
-};
 ---
 
 <BaseLayout
   title={seoTitle}
   description={seoDesc}
   ogImage={espacio.imagenPrincipal}
-  schema={[venueSchema, faqSchema]}
+  schema={venueSchema}
 >
 
 <Fragment slot="breadcrumbs">

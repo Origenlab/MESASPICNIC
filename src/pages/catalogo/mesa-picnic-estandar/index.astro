@@ -336,7 +336,8 @@ import ExploreMore from '../../../components/ExploreMore.astro';
     "brand": { "@type": "Brand", "name": "MESPIC" },
     "category": "Mobiliario para eventos — Renta",
     "offers": {
-      "@type": "Offer",
+      "@type": "AggregateOffer",
+      "lowPrice": "850",
       "priceCurrency": "MXN",
       "availability": "https://schema.org/InStock",
       "seller": {
@@ -350,22 +351,6 @@ import ExploreMore from '../../../components/ExploreMore.astro';
         ]
       }
     }
-  })} />
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Cuántas personas caben en la Mesa Picnic Estándar?",
-        "acceptedAnswer": { "@type": "Answer", "text": "La Mesa Estándar acomoda 6 personas cómodamente: 3 en cada banca lateral." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cuántas mesas picnic necesito para 50 invitados?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Para 50 invitados necesitas entre 8 y 9 mesas estándar. Para 100 invitados, 17 a 18 mesas." }
-      }
-    ]
   })} />
 </Fragment>
 

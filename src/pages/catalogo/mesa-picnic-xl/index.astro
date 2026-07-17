@@ -151,7 +151,7 @@ import ExploreMore from '../../../components/ExploreMore.astro';
   secondBtn={{ label: 'Ver catálogo', href: '/catalogo/' }}
 />
 <Fragment slot="head">
-  <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Mesa Picnic XL — Renta MESPIC", "description": "Mesa picnic XL de 3.00 × 1.50 m de pino nacional reforzado para renta. Capacidad 14-16 personas. Incluye 4 bancas. Carga máxima 800 kg. La mesa más grande del catálogo MESPIC para banquetes masivos, bodas grandes y festivales en CDMX y Edomex.", "brand": { "@type": "Brand", "name": "MESPIC" }, "category": "Mobiliario para eventos — Renta", "offers": { "@type": "Offer", "priceCurrency": "MXN", "availability": "https://schema.org/InStock" } })} />
+  <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Mesa Picnic XL — Renta MESPIC", "description": "Mesa picnic XL de 3.00 × 1.50 m de pino nacional reforzado para renta. Capacidad 14-16 personas. Incluye 4 bancas. Carga máxima 800 kg. La mesa más grande del catálogo MESPIC para banquetes masivos, bodas grandes y festivales en CDMX y Edomex.", "brand": { "@type": "Brand", "name": "MESPIC" }, "category": "Mobiliario para eventos — Renta", "offers": { "@type": "AggregateOffer", "lowPrice": "1500", "priceCurrency": "MXN", "availability": "https://schema.org/InStock" } })} />
 </Fragment>
 </BaseLayout>
 <style>

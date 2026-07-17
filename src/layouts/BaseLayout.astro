@@ -5,6 +5,9 @@ import Footer from '../components/Footer.astro';
 import CtaFlujo from '../components/CtaFlujo.astro';
 import WaBubble from '../components/WaBubble.astro';
 // import StickyMobileNav from '../components/StickyMobileNav.astro'; // removed: no fixed mobile nav
+import '@fontsource/plus-jakarta-sans/500.css';
+import '@fontsource/plus-jakarta-sans/700.css';
+import '@fontsource/plus-jakarta-sans/800.css';
 import '../styles/global.css';
 import '../styles/mobile.css'; // overrides responsive globales — debe cargar después de global.css
 
@@ -138,10 +141,7 @@ const extraSchemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
   <link rel="apple-touch-icon" href="/icon.png" />
   <meta name="theme-color" content="#2C5530" />
 
-  <!-- Fonts: Geist / system-ui (Inter removido) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet" />
+  <!-- Fonts: Plus Jakarta Sans self-hosted vía @fontsource (importada en frontmatter) -->
 
   <!-- 3rd-party preconnects (analytics) -->
   <link rel="preconnect" href="https://app.truconversion.com" crossorigin />
