@@ -4,6 +4,10 @@
  * Grid de imágenes. Sin animaciones.
  * El título se maneja externamente con SectionHeader.
  */
+import { cdnUrl, cdnSrcset } from '../lib/cdn';
+
+const resizable = (src: string) => !src.endsWith('.avif');
+
 interface Props {
   images: Array<{ src: string; alt: string }>;
   id?: string;
@@ -16,7 +20,15 @@ const { images, id } = Astro.props;
   <div class="gallery__grid">
     {images.map((img) => (
       <div class="gallery__item">
-        <img src={img.src} alt={img.alt} loading="lazy" width="560" height="315" />
+        <img
+          src={resizable(img.src) ? cdnUrl(img.src, { w: 800 }) : cdnUrl(img.src)}
+          srcset={resizable(img.src) ? cdnSrcset(img.src, [400, 800, 1120]) : undefined}
+          sizes={resizable(img.src) ? "(max-width: 640px) 100vw, 400px" : undefined}
+          alt={img.alt}
+          loading="lazy"
+          width="560"
+          height="315"
+        />
       </div>
     ))}
   </div>

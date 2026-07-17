@@ -3,7 +3,13 @@
  * ProductGallery — OrigenLab Standard
  * Grid 4×2 de imágenes + Sidebar con productos recomendados.
  * Sin animaciones. Código limpio.
+ * Imágenes responsive vía CDN (?w=) — los .avif no se redimensionan
+ * en el CDN, así que van sin srcset.
  */
+import { cdnUrl, cdnSrcset } from '../lib/cdn';
+
+const resizable = (src: string) => !src.endsWith('.avif');
+
 interface GalleryImage {
   src: string;
   alt: string;
@@ -35,7 +41,9 @@ const {
     {images.map((img, i) => (
       <div class="pg__item">
         <img
-          src={img.src}
+          src={resizable(img.src) ? cdnUrl(img.src, { w: 640 }) : cdnUrl(img.src)}
+          srcset={resizable(img.src) ? cdnSrcset(img.src, [320, 640, 960]) : undefined}
+          sizes={resizable(img.src) ? "(max-width: 768px) 100vw, 300px" : undefined}
           alt={img.alt}
           loading={i === 0 ? "eager" : "lazy"}
           fetchpriority={i === 0 ? "high" : undefined}
