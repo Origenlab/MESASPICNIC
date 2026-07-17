@@ -53,7 +53,7 @@ const $$Index = createComponent(($$result, $$props, $$slots) => {
     { value: "6", label: "preguntas con respuesta inmediata" },
     { value: "< 5 min", label: "tiempo de respuesta por WhatsApp" },
     { value: "lun\u2013dom", label: "8:00 a 20:00 hrs" }
-  ], "data-astro-cid-hezqo47o": true })} ${renderComponent($$result2, "FaqSection", $$FaqSection, { "phone": "55 6432 8954", "whatsapp": "5564328954", "schedule": "Lun\u2013Dom 8:00\u201320:00", "items": [
+  ], "data-astro-cid-hezqo47o": true })} ${renderComponent($$result2, "FaqSection", $$FaqSection, { "phone": "55 3068 2988", "whatsapp": "5530682988", "schedule": "Lun\u2013Dom 8:00\u201320:00", "items": [
     {
       question: "\xBFCu\xE1l es la diferencia entre los servicios?",
       answer: "La diferencia est\xE1 en el tipo de montaje y la asesor\xEDa. Para una boda te ayudamos con la distribuci\xF3n en el jard\xEDn y el estilo del armado. Para un corporativo configuramos seg\xFAn el formato del evento. Para un festival preparamos volumen de bancas con resistencia para todo el d\xEDa. El mobiliario es el mismo; la log\xEDstica y el acompa\xF1amiento cambian."
@@ -78,14 +78,14 @@ const $$Index = createComponent(($$result, $$props, $$slots) => {
       question: "\xBFEl servicio de picnic rom\xE1ntico incluye decoraci\xF3n?",
       answer: "S\xED. El picnic rom\xE1ntico incluye banca decorada, manteler\xEDa, cojines y ambientaci\xF3n b\xE1sica. Si quieres agregar flores, velas, menaje especial o una cesta de picnic, lo cotizamos por separado seg\xFAn tus preferencias."
     }
-  ], "data-astro-cid-hezqo47o": true })} </section>  ${renderComponent($$result2, "CtaBarFinal", $$CtaBarFinal, { "headline": "\xBFYa sabes qu\xE9 servicio necesitas?", "subtext": "Cotiza sin compromiso. Te asesoramos seg\xFAn tu evento y presupuesto.", "phone": "55 6432 8954", "whatsapp": "5564328954", "waMessage": "Hola, quiero cotizar un servicio de mesas picnic para mi evento.", "cotizarHref": "/cotizar/", "data-astro-cid-hezqo47o": true })}   `, "head": ($$result2) => renderTemplate`${renderComponent($$result2, "Fragment", Fragment, { "slot": "head" }, { "default": ($$result3) => renderTemplate(_a || (_a = __template([' <script type="application/ld+json">', '<\/script> <script type="application/ld+json">', "<\/script> "])), unescapeHTML(JSON.stringify({
+  ], "data-astro-cid-hezqo47o": true })} </section>  ${renderComponent($$result2, "CtaBarFinal", $$CtaBarFinal, { "headline": "\xBFYa sabes qu\xE9 servicio necesitas?", "subtext": "Cotiza sin compromiso. Te asesoramos seg\xFAn tu evento y presupuesto.", "phone": "55 3068 2988", "whatsapp": "5530682988", "waMessage": "Hola, quiero cotizar un servicio de mesas picnic para mi evento.", "cotizarHref": "/cotizar/", "data-astro-cid-hezqo47o": true })}   `, "head": ($$result2) => renderTemplate`${renderComponent($$result2, "Fragment", Fragment, { "slot": "head" }, { "default": ($$result3) => renderTemplate(_a || (_a = __template([' <script type="application/ld+json">', '<\/script> <script type="application/ld+json">', "<\/script> "])), unescapeHTML(JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Renta de Mesas Picnic para Eventos \u2014 MESPIC",
     "provider": {
       "@type": "LocalBusiness",
       "name": "MESPIC \u2014 Renta de Mesas Picnic",
-      "telephone": "+52-55-6432-8954",
+      "telephone": "+52-55-3068-2988",
       "url": "https://mesaspicnic.com",
       "areaServed": [
         { "@type": "City", "name": "Ciudad de M\xE9xico" },

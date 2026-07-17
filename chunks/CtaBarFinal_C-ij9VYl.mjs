@@ -10,8 +10,8 @@ const $$CtaBarFinal = createComponent(($$result, $$props, $$slots) => {
   const {
     headline = "\xBFListo para tu evento?",
     subtext = "Cotiza sin compromiso. Te respondemos en minutos.",
-    phone = "55 6432 8954",
-    whatsapp = "5564328954",
+    phone = "55 3068 2988",
+    whatsapp = "5530682988",
     waMessage = "Hola, quiero cotizar mesas picnic para mi evento.",
     cotizarHref = "/cotizar/"
   } = Astro2.props;

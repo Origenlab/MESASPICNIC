@@ -60,7 +60,7 @@ const $$Index = createComponent(($$result, $$props, $$slots) => {
     { value: "8", label: "preguntas con respuesta inmediata" },
     { value: "< 5 min", label: "tiempo de respuesta por WhatsApp" },
     { value: "lun\u2013dom", label: "8:00 a 20:00 hrs" }
-  ], "data-astro-cid-j7pv25f6": true })} ${renderComponent($$result2, "FaqSection", $$FaqSection, { "phone": "55 6432 8954", "whatsapp": "5564328954", "schedule": "Lun\u2013Dom 8:00\u201320:00", "items": [
+  ], "data-astro-cid-j7pv25f6": true })} ${renderComponent($$result2, "FaqSection", $$FaqSection, { "phone": "55 3068 2988", "whatsapp": "5530682988", "schedule": "Lun\u2013Dom 8:00\u201320:00", "items": [
     { question: "\xBFQu\xE9 incluye el servicio de renta?", answer: "Entrega en tu ubicaci\xF3n, montaje profesional, uso sin l\xEDmite de tiempo y recolecci\xF3n al terminar. El precio que cotizamos es el precio final: sin cargos por traslado, maniobras ni tiempo extra." },
     { question: "\xBFCu\xE1nto cuesta rentar una mesa picnic?", answer: "El precio depende del modelo y la cantidad. Cotizamos sin compromiso por WhatsApp con disponibilidad para tu fecha. Los paquetes arrancan desde 4 bancas est\xE1ndar para 24 personas." },
     { question: "\xBFEn qu\xE9 zonas entregan?", answer: "Cubrimos todas las alcald\xEDas de la Ciudad de M\xE9xico y municipios del Estado de M\xE9xico como Naucalpan, Huixquilucan, Atizap\xE1n, Tlalnepantla e Interlomas. El tiempo de entrega promedio es de 2 a 3 horas." },
@@ -69,13 +69,13 @@ const $$Index = createComponent(($$result, $$props, $$slots) => {
     { question: "\xBFPuedo decorar las bancas?", answer: "La madera natural combina con todo: manteles, flores, velas, centros de mesa, telas o cualquier elemento. Muchos clientes nos mandan fotos de referencia y adaptamos el montaje a su estilo." },
     { question: "\xBFQu\xE9 pasa si llueve el d\xEDa del evento?", answer: "Si tu evento se cancela por clima, puedes reagendar sin costo adicional. Si el evento es en un espacio techado o con carpa, no hay problema: las bancas funcionan igual en interiores." },
     { question: "\xBFCu\xE1ntas personas caben por banca?", answer: "La mesa est\xE1ndar mide 1.80 \xD7 1.50 m y acomoda 6 personas. La mesa grande mide 2.40 \xD7 1.50 m para 10-12 personas. La infantil es de 1.20 \xD7 1.00 m para 8-10 ni\xF1os." }
-  ], "data-astro-cid-j7pv25f6": true })} </section>  ${renderComponent($$result2, "CtaBarFinal", $$CtaBarFinal, { "headline": "\xBFListo para tu evento?", "subtext": "Cotiza sin compromiso. Te respondemos en minutos.", "phone": "55 6432 8954", "whatsapp": "5564328954", "waMessage": "Hola, quiero cotizar mesas picnic para mi evento.", "cotizarHref": "/cotizar/", "data-astro-cid-j7pv25f6": true })}   `, "head": ($$result2) => renderTemplate`${renderComponent($$result2, "Fragment", Fragment, { "slot": "head" }, { "default": ($$result3) => renderTemplate(_a || (_a = __template([' <script type="application/ld+json">', '<\/script> <script type="application/ld+json">', "<\/script> "])), unescapeHTML(JSON.stringify({
+  ], "data-astro-cid-j7pv25f6": true })} </section>  ${renderComponent($$result2, "CtaBarFinal", $$CtaBarFinal, { "headline": "\xBFListo para tu evento?", "subtext": "Cotiza sin compromiso. Te respondemos en minutos.", "phone": "55 3068 2988", "whatsapp": "5530682988", "waMessage": "Hola, quiero cotizar mesas picnic para mi evento.", "cotizarHref": "/cotizar/", "data-astro-cid-j7pv25f6": true })}   `, "head": ($$result2) => renderTemplate`${renderComponent($$result2, "Fragment", Fragment, { "slot": "head" }, { "default": ($$result3) => renderTemplate(_a || (_a = __template([' <script type="application/ld+json">', '<\/script> <script type="application/ld+json">', "<\/script> "])), unescapeHTML(JSON.stringify({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "MESPIC \u2014 Renta de Mesas Picnic",
     "description": "Renta de mobiliario de madera para eventos al aire libre en Ciudad de M\xE9xico y Estado de M\xE9xico.",
     "url": "https://mesaspicnic.com",
-    "telephone": "+52-55-6432-8954",
+    "telephone": "+52-55-3068-2988",
     "priceRange": "$$",
     "areaServed": [
       { "@type": "City", "name": "Ciudad de M\xE9xico" },

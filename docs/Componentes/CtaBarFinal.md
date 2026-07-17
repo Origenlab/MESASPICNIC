@@ -22,8 +22,8 @@ updated: 2026-04-17
 |------|------|---------|-------------|
 | `headline` | `string` | `"¿Listo para tu evento?"` | Título del CTA |
 | `subtext` | `string` | `"Cotiza sin compromiso..."` | Subtexto |
-| `phone` | `string` | `"55 6432 8954"` | Número de teléfono visible |
-| `whatsapp` | `string` | `"5564328954"` | Número para el link wa.me |
+| `phone` | `string` | `"55 3068 2988"` | Número de teléfono visible |
+| `whatsapp` | `string` | `"5530682988"` | Número para el link wa.me |
 | `waMessage` | `string` | `"Hola, quiero cotizar..."` | Mensaje pre-llenado de WhatsApp |
 | `cotizarHref` | `string` | `"/cotizar/"` | URL del botón "Cotizar en línea" |
 

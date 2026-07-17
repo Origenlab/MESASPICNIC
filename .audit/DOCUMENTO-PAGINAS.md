@@ -1119,7 +1119,7 @@ MESASPICNIC/
 
 Para dudas sobre el desarrollo del sitio MESPIC:
 - Email: contacto@mesaspicnic.com
-- WhatsApp: +52 55 6432 8954
+- WhatsApp: +52 55 3068 2988
 
 ---
 

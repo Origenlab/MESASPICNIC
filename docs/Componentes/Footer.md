@@ -57,8 +57,8 @@ updated: 2026-04-17
 
 | Elemento | Valor |
 |----------|-------|
-| Teléfono | `tel:+525564328954` → "55 6432 8954" |
-| WhatsApp | `wa.me/525564328954` — color `#25D366` |
+| Teléfono | `tel:+525530682988` → "55 3068 2988" |
+| WhatsApp | `wa.me/525530682988` — color `#25D366` |
 | Horario | Lun–Dom 8:00–20:00 |
 
 ---

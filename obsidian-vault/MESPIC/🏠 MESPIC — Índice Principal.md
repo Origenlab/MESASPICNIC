@@ -15,8 +15,8 @@
 | **Fundación** | 2017 |
 | **Ubicación** | Ciudad de México (Polanco, Miguel Hidalgo, CDMX 11560) |
 | **Cobertura** | CDMX + Estado de México |
-| **Teléfono** | 55 6432 8954 |
-| **WhatsApp** | 5564328954 |
+| **Teléfono** | 55 3068 2988 |
+| **WhatsApp** | 5530682988 |
 | **Email** | mesaspicnick@gmail.com |
 | **Horario atención** | Lun–Dom 8:00–20:00 |
 | **Horario oficina** | Lun–Vie 9:00–18:00 / Sáb 9:00–14:00 |

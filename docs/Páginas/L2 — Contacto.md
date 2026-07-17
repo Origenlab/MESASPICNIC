@@ -22,8 +22,8 @@ updated: 2026-04-17
 
 | Canal | Valor |
 |-------|-------|
-| Teléfono | `55 6432 8954` |
-| WhatsApp | `5564328954` |
+| Teléfono | `55 3068 2988` |
+| WhatsApp | `5530682988` |
 | Horario | Lun–Dom 8:00–20:00 |
 | Cobertura | CDMX + Edomex |
 

@@ -12,8 +12,8 @@ enabled: true
 promo: "Mesas Picnic — Renta para Eventos en CDMX y Edomex"
 
 # Datos de contacto
-phone: "55 6432 8954"
-whatsapp: "5564328954"
+phone: "55 3068 2988"
+whatsapp: "5530682988"
 waMessage: "Hola MESPIC, quiero cotizar mesas picnic para mi evento."
 email: ""
 

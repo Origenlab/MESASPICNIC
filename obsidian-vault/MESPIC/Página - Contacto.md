@@ -12,15 +12,15 @@
 
 | Canal | Dato |
 |---|---|
-| **WhatsApp** | +52 55 6432 8954 |
-| **Teléfono real** | 55 6432 8954 |
-| **WA real** | 5564328954 |
+| **WhatsApp** | +52 55 3068 2988 |
+| **Teléfono real** | 55 3068 2988 |
+| **WA real** | 5530682988 |
 | **Email** | mesaspicnick@gmail.com |
 | **Horario atención** | Lun–Dom 8:00–20:00 |
 | **Horario oficina** | Lun–Vie 9:00–18:00 / Sáb 9:00–14:00 |
 | **Cobertura** | CDMX y Estado de México |
 
-> ⚠️ **Nota:** Hay discrepancia entre el teléfono en index.html (`55 6432 8954`) y el teléfono real del sitio (`55 6432 8954`). Verificar cuál es el correcto.
+> ⚠️ **Nota:** Hay discrepancia entre el teléfono en index.html (`55 3068 2988`) y el teléfono real del sitio (`55 3068 2988`). Verificar cuál es el correcto.
 
 ---
 

@@ -40,8 +40,8 @@ const $$FaqSection = createComponent(($$result, $$props, $$slots) => {
   Astro2.self = $$FaqSection;
   const {
     items,
-    phone = "55 6432 8954",
-    whatsapp = "5564328954",
+    phone = "55 3068 2988",
+    whatsapp = "5530682988",
     waMessage = "Hola, tengo una duda sobre el servicio de mesas picnic.",
     email = "",
     schedule = "Lun\u2013Dom 8:00\u201320:00"
@@ -56,7 +56,7 @@ Enviar por WhatsApp
     var msg = document.getElementById('faqMsg').value.trim();
     var text = 'Hola, soy ' + name + '. Estoy interesado en mesas picnic para ' + event.toLowerCase() + '.';
     if (msg) text += ' Mi pregunta: ' + msg;
-    var wa = 'https://wa.me/525564328954?text=' + encodeURIComponent(text);
+    var wa = 'https://wa.me/525530682988?text=' + encodeURIComponent(text);
     window.open(wa, '_blank');
   });
 <\/script> `])), maybeRenderHead(), items.map((item) => renderTemplate`<details class="faq-item" data-astro-cid-4j5dlmku> <summary class="faq-item__q" data-astro-cid-4j5dlmku>${item.question}</summary> <div class="faq-item__a" data-astro-cid-4j5dlmku> <p data-astro-cid-4j5dlmku>${item.answer}</p> </div> </details>`), addAttribute(`tel:+52${whatsapp}`, "href"), phone, schedule);
@@ -69,8 +69,8 @@ const $$CtaBarFinal = createComponent(($$result, $$props, $$slots) => {
   const {
     headline = "\xBFListo para tu evento?",
     subtext = "Cotiza sin compromiso. Te respondemos en minutos.",
-    phone = "55 6432 8954",
-    whatsapp = "5564328954",
+    phone = "55 3068 2988",
+    whatsapp = "5530682988",
     waMessage = "Hola, quiero cotizar mesas picnic para mi evento.",
     cotizarHref = "/cotizar/"
   } = Astro2.props;

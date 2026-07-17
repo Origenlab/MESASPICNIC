@@ -200,7 +200,7 @@ import BlogLayout from '../../layouts/BlogLayout.astro';
       <h3>[Pregunta]</h3>
       <p>[Texto]</p>
       <div class="art__cta-inline-btns">
-        <a href="https://wa.me/525564328954?text=..." class="art__btn art__btn--wa">Cotizar por WhatsApp</a>
+        <a href="https://wa.me/525530682988?text=..." class="art__btn art__btn--wa">Cotizar por WhatsApp</a>
         <a href="/cotizar/" class="art__btn art__btn--outline">Formulario →</a>
       </div>
     </div>
@@ -223,7 +223,7 @@ import BlogLayout from '../../layouts/BlogLayout.astro';
       <h2>[Título CTA]</h2>
       <p>[Texto]</p>
       <div class="art__cta-final-btns">
-        <a href="https://wa.me/525564328954?text=..." class="art__btn art__btn--wa art__btn--lg">Cotizar por WhatsApp</a>
+        <a href="https://wa.me/525530682988?text=..." class="art__btn art__btn--wa art__btn--lg">Cotizar por WhatsApp</a>
         <a href="/cotizar/" class="art__btn art__btn--primary art__btn--lg">Formulario →</a>
         <a href="/servicios/[servicio]/" class="art__btn art__btn--ghost art__btn--lg">Ver servicio</a>
       </div>
