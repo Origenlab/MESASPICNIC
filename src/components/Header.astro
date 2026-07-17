@@ -536,22 +536,30 @@ function isActive(href: string, children?: { href: string }[]): boolean {
     var topbar  = document.querySelector('.topbar');
 
     /* ── Mobile menu ── */
+    /* Cerrado: inert bloquea foco/teclado dentro del panel oculto (a11y) */
+    if (panel) panel.inert = true;
+
     function open() {
       toggle.classList.add('hdr__toggle--open');
       toggle.setAttribute('aria-expanded', 'true');
+      panel.inert = false;
       panel.classList.add('hdr__panel--open');
       panel.setAttribute('aria-hidden', 'false');
       overlay.classList.add('hdr__overlay--visible');
       document.body.style.overflow = 'hidden';
+      if (close) close.focus();
     }
 
     function shut() {
       toggle.classList.remove('hdr__toggle--open');
       toggle.setAttribute('aria-expanded', 'false');
+      var hadFocus = panel.contains(document.activeElement);
       panel.classList.remove('hdr__panel--open');
       panel.setAttribute('aria-hidden', 'true');
+      panel.inert = true;
       overlay.classList.remove('hdr__overlay--visible');
       document.body.style.overflow = '';
+      if (hadFocus) toggle.focus();
     }
 
     if (toggle) toggle.addEventListener('click', function () {
@@ -559,6 +567,11 @@ function isActive(href: string, children?: { href: string }[]): boolean {
     });
     if (close)   close.addEventListener('click', shut);
     if (overlay) overlay.addEventListener('click', shut);
+
+    /* Escape cierra el menú */
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && panel && panel.classList.contains('hdr__panel--open')) shut();
+    });
 
     /* Close on link click */
     if (panel) {

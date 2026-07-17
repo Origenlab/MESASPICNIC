@@ -155,17 +155,17 @@ import ExploreMore from '../components/ExploreMore.astro';
             <div class="cform__row">
               <div class="cform__group">
                 <label for="cf-name" class="cform__label">Nombre completo <span class="cform__req">*</span></label>
-                <input type="text" id="cf-name" name="name" required placeholder="Tu nombre completo" class="cform__input" />
+                <input type="text" id="cf-name" name="name" autocomplete="name" required placeholder="Tu nombre completo" class="cform__input" />
               </div>
               <div class="cform__group">
                 <label for="cf-phone" class="cform__label">WhatsApp / Teléfono <span class="cform__req">*</span></label>
-                <input type="tel" id="cf-phone" name="phone" required placeholder="55 3068 2988" class="cform__input" />
+                <input type="tel" id="cf-phone" name="phone" autocomplete="tel" required placeholder="55 3068 2988" class="cform__input" />
               </div>
             </div>
 
             <div class="cform__group">
               <label for="cf-email" class="cform__label">Correo electrónico</label>
-              <input type="email" id="cf-email" name="email" placeholder="tu@correo.com" class="cform__input" />
+              <input type="email" id="cf-email" name="email" autocomplete="email" placeholder="tu@correo.com" class="cform__input" />
             </div>
 
             <div class="cform__row">

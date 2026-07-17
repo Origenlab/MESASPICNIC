@@ -30,7 +30,7 @@ interface Props {
   heroMetrics?: Array<{ value: string; label: string }>;
   heroCta?: { label: string; href: string };
   heroCtaSecondary?: { label: string; href: string };
-  datePublished?: string;          // ISO: "2026-06-03"
+  datePublished: string;           // ISO, requerido: "2026-06-03"
   dateModified?: string;
   articleSection?: string;         // categoría temática
   faqs?: Array<{ q: string; a: string }>;  // genera FAQPage schema (SEO/GEO)
@@ -57,7 +57,7 @@ const {
   heroMetrics,
   heroCta = { label: "Cotizar sin compromiso →", href: "/cotizar/" },
   heroCtaSecondary = { label: "Ver catálogo", href: "/catalogo/" },
-  datePublished = "2026-06-03",
+  datePublished,
   dateModified,
   articleSection = "Eventos",
   faqs = [],

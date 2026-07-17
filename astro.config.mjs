@@ -1,6 +1,5 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
-import mdx from "@astrojs/mdx";
 import { exactdnRewriter } from "./src/integrations/exactdn.ts";
 
 const SITE = "https://mesaspicnic.com";
@@ -14,7 +13,6 @@ export default defineConfig({
     inlineStylesheets: "auto",
   },
   integrations: [
-    mdx(),
     exactdnRewriter(),
     sitemap({
       filter: (page) =>
