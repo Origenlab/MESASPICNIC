@@ -8,7 +8,7 @@ const SITE = "https://mesaspicnic.com";
 export default defineConfig({
   site: SITE,
   output: "static",
-  trailingSlash: "ignore",
+  trailingSlash: "always",
   compressHTML: true,
   build: {
     inlineStylesheets: "auto",
@@ -22,9 +22,11 @@ export default defineConfig({
         !page.includes("/gracias") &&
         !page.includes("/404"),
       serialize(item) {
-        // trailingSlash:"ignore" puede emitir slash final; lo quitamos (salvo raíz)
-        // para que el sitemap coincida con los canonical sin slash.
-        item.url = item.url.replace(/^(https?:\/\/[^/]+\/.+?)\/$/, "$1");
+        // Cloudflare Pages sirve CON slash final (308 desde la versión sin
+        // slash); el sitemap y los canonical llevan slash para coincidir.
+        if (!/\.[a-z0-9]+$/i.test(item.url) && !item.url.endsWith("/")) {
+          item.url = `${item.url}/`;
+        }
         const path = item.url.replace(SITE, "");
 
         // L1 Homepage

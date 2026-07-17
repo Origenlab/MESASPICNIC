@@ -8,7 +8,8 @@ dist
 # Artefactos transitorios del entorno (no commitear)
 .fuse_hidden*
 *.probe
-_wtest_root.tmp*.cfbak
+_wtest_root.tmp
+*.cfbak
 .astro/
 _astro/
 graphify-out/

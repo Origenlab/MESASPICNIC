@@ -93,8 +93,8 @@ const crumbs = breadcrumbs.length > 0 ? breadcrumbs : defaultBreadcrumbs;
 
 // ── Schema SEO/GEO: BlogPosting + FAQPage ──
 const _siteUrl = "https://mesaspicnic.com";
-const _canonical = (canonical || new URL(Astro.url.pathname, Astro.site).toString())
-  .replace(/^(https?:\/\/[^/]+\/.+?)\/$/, "$1");
+const _rawC = canonical || new URL(Astro.url.pathname, Astro.site).toString();
+const _canonical = _rawC.endsWith("/") ? _rawC : `${_rawC}/`;
 const _img = ogImage
   ? (ogImage.startsWith("http") ? ogImage : `${_siteUrl}${ogImage}`)
   : `${_siteUrl}/img/mesa-picnic-boda-elegante-decoracion.avif`;

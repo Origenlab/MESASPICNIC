@@ -72,14 +72,6 @@ const comparativa = [
 const acerca: string[] = espacio.acerca && espacio.acerca.length ? espacio.acerca : [espacio.descripcion];
 const puntosInteres: string[] = espacio.puntosInteres || [];
 const comercialHook: string = espacio.comercialHook || `En ${espacio.nombre}, las mesas de madera de MESPIC le dan a tu evento la calidez que el plástico no logra.`;
-const resena = espacio.resena || {
-  rating: '4.9',
-  eventos: '+500',
-  texto: 'Las mesas de madera llegaron montadas y a tiempo. Se veían increíbles en el jardín y nos ahorramos rentar sillas porque ya traen bancas. El equipo recogió todo al final sin que nosotros moviéramos un dedo.',
-  autor: 'Clientes MESPIC',
-  contexto: 'Promedio de satisfacción en eventos al aire libre',
-};
-
 // ── SEO: título y meta humanizados (fallback si el venue no los trae) ──
 const seoTitle = espacio.seoTitle || `${espacio.nombre} en ${espacio.alcaldia} — Jardín de Eventos y Mesas Picnic | MESPIC`;
 const seoDesc = espacio.seoDesc || `¿Tu evento es en ${espacio.nombre}, ${espacio.alcaldia}? MESPIC monta mesas picnic de madera en el jardín, con bancas incluidas y sin cargos extra. Cotiza fácil.`;
@@ -299,23 +291,6 @@ const faqSchema = {
           </table>
         </div>
 
-        <!-- Reseña de mesas picnic -->
-        <header class="esp-h">
-          <span class="esp-h__badge"><span class="esp-h__dot"></span>Reseña</span>
-          <h2 class="esp-h__title">La Experiencia de Rentar Mesas Picnic</h2>
-        </header>
-        <div class="esp-resena">
-          <div class="esp-resena__score">
-            <span class="esp-resena__num">{resena.rating}</span>
-            <span class="esp-resena__stars" aria-label={`${resena.rating} de 5`}>★★★★★</span>
-            <span class="esp-resena__meta">{resena.eventos} eventos</span>
-          </div>
-          <div class="esp-resena__body">
-            <p class="esp-resena__quote">“{resena.texto}”</p>
-            <p class="esp-resena__autor">— {resena.autor} · <span>{resena.contexto}</span></p>
-          </div>
-        </div>
-
         <!-- Eventos ideales -->
         <header class="esp-h">
           <span class="esp-h__badge"><span class="esp-h__dot"></span>Eventos ideales</span>
@@ -481,15 +456,6 @@ const faqSchema = {
   .esp-tabla-nota { font-size: 0.82rem; color: var(--c-text-muted, #78716C); margin: -0.5rem 0 2.5rem; }
 
   /* ── Reseña ── */
-  .esp-resena { display: flex; gap: 1.5rem; align-items: stretch; background: #fff; border: 1px solid var(--c-border, #E7E0D8); border-left: 4px solid var(--c-accent, #C8956C); border-radius: var(--radius-md, 12px); padding: 1.6rem 1.75rem; margin-bottom: 3rem; }
-  .esp-resena__score { display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; padding-right: 1.5rem; border-right: 1px solid var(--c-border, #E7E0D8); }
-  .esp-resena__num { font-family: var(--font-head); font-size: 2.4rem; font-weight: 800; color: var(--c-primary, #2C5530); line-height: 1; }
-  .esp-resena__stars { color: var(--c-star, #F59E0B); font-size: 0.95rem; letter-spacing: 0.05em; margin: 0.25rem 0; }
-  .esp-resena__meta { font-size: 0.72rem; color: var(--c-text-muted, #78716C); font-weight: 600; }
-  .esp-resena__body { display: flex; flex-direction: column; justify-content: center; }
-  .esp-resena__quote { font-size: 0.95rem; line-height: 1.7; color: var(--c-text, #1C1917); font-style: italic; margin-bottom: 0.6rem; }
-  .esp-resena__autor { font-size: 0.8rem; font-weight: 700; color: var(--c-text, #1C1917); }
-  .esp-resena__autor span { font-weight: 400; color: var(--c-text-muted, #78716C); }
 
   /* ── Cards directorio (otros) ── */
   .dir-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
@@ -519,8 +485,6 @@ const faqSchema = {
     .esp-datos__grid { grid-template-columns: 1fr 1fr; }
     .esp-incluye-grid { grid-template-columns: 1fr; }
     .esp-ev-grid { grid-template-columns: 1fr; }
-    .esp-resena { flex-direction: column; gap: 1rem; }
-    .esp-resena__score { flex-direction: row; gap: 0.6rem; padding-right: 0; padding-bottom: 1rem; border-right: none; border-bottom: 1px solid var(--c-border, #E7E0D8); width: 100%; justify-content: flex-start; }
     .esp-interes__list { grid-template-columns: 1fr; }
     .dir-grid { grid-template-columns: 1fr; }
   }

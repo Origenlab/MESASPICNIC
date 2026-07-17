@@ -26,11 +26,13 @@ const {
   schema,
 } = Astro.props;
 
-// trailingSlash:"ignore" tolera el slash final en dev; aquí normalizamos el
-// canonical para que NUNCA lleve slash final (salvo la raíz) y el SEO quede
-// idéntico al sitio desplegado.
+// Cloudflare Pages sirve las páginas CON slash final (308 desde la versión
+// sin slash), así que el canonical se normaliza para llevar SIEMPRE slash
+// final y coincidir con la URL realmente servida (y con el sitemap).
 const _rawCanonical = canonical || new URL(Astro.url.pathname, Astro.site).toString();
-const canonicalURL = _rawCanonical.replace(/^(https?:\/\/[^/]+\/.+?)\/$/, "$1");
+const canonicalURL = /\.[a-z0-9]+$/i.test(_rawCanonical) || _rawCanonical.endsWith("/")
+  ? _rawCanonical
+  : `${_rawCanonical}/`;
 const siteUrl = "https://mesaspicnic.com";
 const siteName = "MESPIC — Renta de Mesas Picnic";
 const ogImageAbs = ogImage.startsWith("http") ? ogImage : `${siteUrl}${ogImage}`;
@@ -52,11 +54,6 @@ const localBusinessSchema = {
     "addressRegion": "CDMX",
     "postalCode": "11800",
     "addressCountry": "MX"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "ratingCount": "500"
   },
   "geo": {
     "@type": "GeoCoordinates",

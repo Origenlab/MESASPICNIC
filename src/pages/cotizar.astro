@@ -105,6 +105,35 @@ import CtaBar from '../components/CtaBar.astro';
 
 </BaseLayout>
 
+<script is:inline>
+  // Formulario de cotización → WhatsApp con datos del evento
+  var cotizarForm = document.getElementById('cotizarForm');
+  if (cotizarForm) {
+    cotizarForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var nombre    = document.getElementById('nombre').value.trim();
+      var telefono  = document.getElementById('telefono').value.trim();
+      var email     = document.getElementById('email').value.trim();
+      var tipo      = document.getElementById('tipo-evento').value;
+      var fecha     = document.getElementById('fecha').value;
+      var invitados = document.getElementById('invitados').value;
+      var ubicacion = document.getElementById('ubicacion').value.trim();
+      var detalles  = document.getElementById('detalles').value.trim();
+
+      var text = 'Hola, me llamo ' + nombre + ' y quiero cotizar mesas picnic.';
+      if (tipo)      text += ' Evento: ' + tipo + '.';
+      if (fecha)     text += ' Fecha: ' + fecha + '.';
+      if (invitados) text += ' Invitados: ' + invitados + '.';
+      if (ubicacion) text += ' Ubicación: ' + ubicacion + '.';
+      if (telefono)  text += ' Mi teléfono: ' + telefono + '.';
+      if (email)     text += ' Correo: ' + email + '.';
+      if (detalles)  text += ' Detalles: ' + detalles;
+
+      window.open('https://wa.me/525530682988?text=' + encodeURIComponent(text), '_blank', 'noopener');
+    });
+  }
+</script>
+
 <style>
   .cotizar-grid {
     display: grid;
